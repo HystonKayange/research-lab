@@ -1,0 +1,963 @@
+{
+  "tool": {
+    "name": "mthandizi_tokenizer_prior_art_matrix",
+    "version": "0.1.0"
+  },
+  "generated_at": "2026-08-11T09:01:35Z",
+  "rules": {
+    "primary_sources_only": true,
+    "unknown_if_not_in_source": true,
+    "no_novelty_from_language_alone": true,
+    "morphology_holdout_accessed": false,
+    "lm_test_evaluations": 0,
+    "tokenizer_implementation": false
+  },
+  "must_include_papers": [
+    {
+      "paper_id": "asgari-etal-2026-morphbpe",
+      "citation": "Asgari et al., 2026. MorphBPE: Morphology-Aware Tokenization for Efficient LLM Training. Findings of ACL 2026.",
+      "year": 2026,
+      "acl_anthology_id": "2026.findings-acl.2068",
+      "url": "https://aclanthology.org/2026.findings-acl.2068/",
+      "verified_primary_source": true,
+      "languages": [
+        "English",
+        "Russian",
+        "Hungarian",
+        "Arabic"
+      ],
+      "morphology_type": "concatenative and non-concatenative; morphologically rich languages emphasized",
+      "supervised_unsupervised_weak": "supervised_or_annotated_boundaries_during_tokenizer_training",
+      "amount_type_morphological_supervision": "Morpheme boundaries required for the training corpus during MorphBPE merge training; source of boundaries per language UNKNOWN from abstract/method sketch beyond 'available morphological annotations'. Inference needs no morphology.",
+      "base_tokenizer": "BPE",
+      "how_morphology_affects_tokenization": "During tokenizer training, merge candidates that would cross morpheme boundaries are disallowed; frequency ranking otherwise unchanged.",
+      "morphology_affects_vocabulary_learning": true,
+      "morphology_affects_inference_segmentation": false,
+      "fallback_mechanism": "Standard BPE behavior at inference; no special morphology runtime. UNKNOWN residual character policy beyond standard BPE.",
+      "vocabulary_size": "Matched across conditions; exact size UNKNOWN from abstract (controlled identical sizes in experiments).",
+      "evaluation_metrics": [
+        "Morphological Consistency F1",
+        "Morphological Edit Distance",
+        "fertility",
+        "LM cross-entropy",
+        "Belebele reading comprehension"
+      ],
+      "lm_evaluation": "Decoder-only LMs 300M and 1B trained from scratch; reports reduced cross-entropy vs BPE under matched vocab/settings.",
+      "downstream_evaluation": "Belebele; significant gains for Russian and Arabic.",
+      "morphology_evaluation": "Intrinsic Morph Consistency F1 and Morph Edit Distance.",
+      "main_result": "MorphBPE improves morphological coherence and LM cross-entropy without materially shorter tokens; downstream gains on morphologically rich languages.",
+      "limitations": "Requires morpheme boundaries for full training corpus (not available for Chichewa at scale). BPE-centric (our strongest Chichewa LM baseline is Unigram). No Chichewa/Bantu evaluation. Gold-boundary quality and annotation cost UNKNOWN for low-resource settings.",
+      "applicability_to_chichewa": "MEDIUM for idea transfer (constrained merges); LOW for direct reuse without a corpus-scale morphological analyzer or large labeled set.",
+      "overlap_with_candidate_designs": [
+        "3_morphology_constrained_BPE (HIGH)",
+        "1_presegmentation_plus_subword (related but MorphBPE integrates constraint into BPE training rather than pure pre-tokenization)"
+      ],
+      "notes": "Primary overlap risk for Candidate 3."
+    },
+    {
+      "paper_id": "hudspeth-etal-2026-contextual",
+      "citation": "Hudspeth, Burns & O'Connor, 2026. Contextual morphologically-guided tokenization for Latin encoder models. EACL 2026.",
+      "year": 2026,
+      "acl_anthology_id": "2026.eacl-long.270",
+      "url": "https://aclanthology.org/2026.eacl-long.270/",
+      "verified_primary_source": true,
+      "languages": [
+        "Latin"
+      ],
+      "morphology_type": "morphologically rich; medium pretraining data, high curated lexical resources",
+      "supervised_unsupervised_weak": "resource-guided / morphologically-guided (curated lexical resources)",
+      "amount_type_morphological_supervision": "Curated lexical/morphological resources for Latin; exact runtime vs train-time use details beyond abstract: UNKNOWN for full algorithm.",
+      "base_tokenizer": "UNKNOWN (morphologically-guided tokenization for encoder models; not claimed as plain BPE/Unigram-only in abstract)",
+      "how_morphology_affects_tokenization": "Morphologically-guided tokenization improves morphological alignment vs compression-only goals.",
+      "morphology_affects_vocabulary_learning": "UNKNOWN",
+      "morphology_affects_inference_segmentation": "UNKNOWN",
+      "fallback_mechanism": "UNKNOWN",
+      "vocabulary_size": "UNKNOWN",
+      "evaluation_metrics": [
+        "four downstream tasks",
+        "OOD generalization emphasized"
+      ],
+      "lm_evaluation": "Encoder LM pretraining setting (not our decoder LM BPC protocol).",
+      "downstream_evaluation": "Four downstream tasks; strongest gains OOD.",
+      "morphology_evaluation": "UNKNOWN exact intrinsic morph metrics from abstract.",
+      "main_result": "Morphologically-guided tokenization improves overall downstream performance for Latin; resources can substitute for large pretraining data.",
+      "limitations": "Depends on high-quality lexical/morphological resources that Chichewa lacks at Latin scale. Encoder focus differs from our decoder LM BPC criteria.",
+      "applicability_to_chichewa": "LOW–MEDIUM conceptually (resource-vs-data tradeoff); LOW practically without analogous lexical resources.",
+      "overlap_with_candidate_designs": [
+        "1_presegmentation",
+        "4_hybrid_affix_stem_vocab",
+        "resource-heavy morph guidance generally"
+      ],
+      "notes": "Important caution: medium-data + high-resource lexical setting ≠ low-resource African language setting."
+    },
+    {
+      "paper_id": "teklehaymanot-etal-2025-movoc",
+      "citation": "Teklehaymanot, Fazlija & Nejdl, 2025. MoVoC: Morphology-Aware Subword Construction for Ge’ez Script Languages. Findings of EMNLP 2025.",
+      "year": 2025,
+      "acl_anthology_id": "2025.findings-emnlp.706",
+      "url": "https://aclanthology.org/2025.findings-emnlp.706/",
+      "verified_primary_source": true,
+      "languages": [
+        "Ge'ez script languages (four with morpheme annotation; vocab for two)"
+      ],
+      "morphology_type": "morphologically complex, low-resource African languages (Ge'ez script)",
+      "supervised_unsupervised_weak": "supervised morphological analysis integrated into vocabulary construction",
+      "amount_type_morphological_supervision": "Manually annotated morpheme data for four languages; morpheme-aware vocabulary released for two.",
+      "base_tokenizer": "Hybrid morpheme-based units + BPE",
+      "how_morphology_affects_tokenization": "Integrates supervised morphological analysis into subword vocabulary construction; hybrid segmentation combining morpheme tokens and BPE.",
+      "morphology_affects_vocabulary_learning": true,
+      "morphology_affects_inference_segmentation": true,
+      "fallback_mechanism": "BPE components of hybrid vocabulary (exact residual policy details UNKNOWN beyond hybrid description).",
+      "vocabulary_size": "UNKNOWN exact sizes from abstract",
+      "evaluation_metrics": [
+        "MorphoScore",
+        "Boundary Precision",
+        "MT automatic metrics"
+      ],
+      "lm_evaluation": "Not primary; MT-focused evaluation.",
+      "downstream_evaluation": "Machine translation; no significant automatic MT quality gains reported.",
+      "morphology_evaluation": "Intrinsic MorphoScore and Boundary Precision improve.",
+      "main_result": "Morphology-aware vocab improves linguistic fidelity and token efficiency intrinsically; MT BLEU not significantly improved.",
+      "limitations": "Requires supervised morph annotation campaigns. MT gains not significant. Not Chichewa; not Unigram-primary. Script/family differs (Ge'ez vs Latin-script Bantu).",
+      "applicability_to_chichewa": "MEDIUM for African low-resource motivation; LOW for direct method (we forbid training supervised morph segmenter on 195 gold labels as default).",
+      "overlap_with_candidate_designs": [
+        "1_presegmentation",
+        "4_hybrid_affix_stem_vocab",
+        "3_constrained_subword_construction"
+      ],
+      "notes": "Closest African morphology-aware vocabulary construction work among must-include set."
+    },
+    {
+      "paper_id": "saleva-lignos-2021-effectiveness",
+      "citation": "Saleva & Lignos, 2021. The Effectiveness of Morphology-aware Segmentation in Low-Resource Neural Machine Translation. EACL SRW 2021.",
+      "year": 2021,
+      "acl_anthology_id": "2021.eacl-srw.22",
+      "url": "https://aclanthology.org/2021.eacl-srw.22/",
+      "verified_primary_source": true,
+      "languages": [
+        "Nepali",
+        "Sinhala",
+        "Kazakh",
+        "English (paired)"
+      ],
+      "morphology_type": "low-resource morphologically complex (varies by language)",
+      "supervised_unsupervised_weak": "morphologically-based segmentations from LMVR and MORSEL vs BPE",
+      "amount_type_morphological_supervision": "Method-dependent (LMVR/MORSEL); not a large manual gold morph corpus described as primary; treat as morphology-aware algorithms rather than full analyzers—details of training supervision: UNKNOWN beyond method names.",
+      "base_tokenizer": "BPE (token/sentence level) vs LMVR vs MORSEL",
+      "how_morphology_affects_tokenization": "Morphology-aware segmenters replace or compare against BPE segmentation for NMT inputs.",
+      "morphology_affects_vocabulary_learning": "UNKNOWN (segmentation methods produce units used as NMT vocabulary/input)",
+      "morphology_affects_inference_segmentation": true,
+      "fallback_mechanism": "UNKNOWN",
+      "vocabulary_size": "UNKNOWN",
+      "evaluation_metrics": [
+        "NMT BLEU",
+        "statistical significance of differences"
+      ],
+      "lm_evaluation": false,
+      "downstream_evaluation": "Low-resource NMT",
+      "morphology_evaluation": "Indirect via NMT; not primary boundary F1 report in abstract.",
+      "main_result": "No consistent reliable advantage of morphology-aware segmentation over BPE; best method varies; often statistically indistinguishable.",
+      "limitations": "Negative/mixed result warns against assuming morphology-aware segmentation always helps downstream. Different task (NMT) and languages.",
+      "applicability_to_chichewa": "HIGH as cautionary evidence for SC interpretation (PARTIAL/NEGATIVE possible).",
+      "overlap_with_candidate_designs": [
+        "1_presegmentation",
+        "morphology-aware vs BPE comparison broadly"
+      ],
+      "notes": "Critical prior for not overselling morphology-aware methods."
+    },
+    {
+      "paper_id": "richburg-etal-2020-evaluation",
+      "citation": "Richburg et al., 2020. An Evaluation of Subword Segmentation Strategies for Neural Machine Translation of Morphologically Rich Languages. WiNLP 2020.",
+      "year": 2020,
+      "acl_anthology_id": "2020.winlp-1.40",
+      "url": "https://aclanthology.org/2020.winlp-1.40/",
+      "verified_primary_source": true,
+      "languages": [
+        "Swahili",
+        "Turkish",
+        "English (target)"
+      ],
+      "morphology_type": "morphologically rich; Swahili is Bantu (agglutinative)",
+      "supervised_unsupervised_weak": "unsupervised statistical subword methods compared (BPE vs Unigram LM)",
+      "amount_type_morphological_supervision": "None required for BPE/Unigram comparison.",
+      "base_tokenizer": "BPE vs Unigram LM (Kudo 2018)",
+      "how_morphology_affects_tokenization": "Does not inject explicit morphology; compares data-driven strategies on morphologically rich languages.",
+      "morphology_affects_vocabulary_learning": false,
+      "morphology_affects_inference_segmentation": false,
+      "fallback_mechanism": "Standard SentencePiece/BPE behavior (UNKNOWN exact residual).",
+      "vocabulary_size": "UNKNOWN",
+      "evaluation_metrics": [
+        "BLEU",
+        "rare source word translation recall"
+      ],
+      "lm_evaluation": false,
+      "downstream_evaluation": "NMT to English",
+      "morphology_evaluation": "Indirect via rare-word translation behavior.",
+      "main_result": "Unigram yields comparable BLEU and better recall for rare source words than BPE for Swahili and Turkish→English.",
+      "limitations": "NMT not LM BPC; small workshop paper; no morphology gold evaluation.",
+      "applicability_to_chichewa": "HIGH: Bantu language (Swahili) evidence that Unigram is a strong default—aligns with our Unigram-8000 primary baseline.",
+      "overlap_with_candidate_designs": [
+        "supports choosing Unigram over BPE as backbone",
+        "8_stochastic_segmentation related via Unigram sampling literature"
+      ],
+      "notes": "Key Bantu-relevant empirical result among must-include set."
+    },
+    {
+      "paper_id": "kudo-2018-subword",
+      "citation": "Kudo, 2018. Subword Regularization: Improving Neural Network Translation Models with Multiple Subword Candidates. ACL 2018.",
+      "year": 2018,
+      "acl_anthology_id": "P18-1007",
+      "url": "https://aclanthology.org/P18-1007/",
+      "verified_primary_source": true,
+      "languages": [
+        "multiple NMT corpora (paper experiments; language list details treated as multi-corpus)"
+      ],
+      "morphology_type": "general; motivated by open vocabulary and segmentation ambiguity",
+      "supervised_unsupervised_weak": "unsupervised Unigram LM segmentation + probabilistic regularization",
+      "amount_type_morphological_supervision": "None.",
+      "base_tokenizer": "Unigram language model subword segmentation (SentencePiece lineage)",
+      "how_morphology_affects_tokenization": "No explicit morphology; probabilistic multi-segmentation training.",
+      "morphology_affects_vocabulary_learning": false,
+      "morphology_affects_inference_segmentation": "Optional sampling at train; deterministic MAP segmentation typically at inference (common practice; exact inference default: UNKNOWN if paper-specific).",
+      "fallback_mechanism": "Character-level units in Unigram vocabulary construction (standard).",
+      "vocabulary_size": "Configurable; paper experiments use various sizes (UNKNOWN exact list without full table extract).",
+      "evaluation_metrics": [
+        "NMT BLEU",
+        "robustness low-resource/OOD"
+      ],
+      "lm_evaluation": "NMT models; not our BPC protocol.",
+      "downstream_evaluation": "NMT",
+      "morphology_evaluation": false,
+      "main_result": "Subword regularization with Unigram sampling improves NMT especially low-resource/OOD.",
+      "limitations": "Not morphology-aware by design. Stochastic training complicates strict determinism preference.",
+      "applicability_to_chichewa": "HIGH as foundational algorithm of our Unigram-8000 baseline and Candidate 8.",
+      "overlap_with_candidate_designs": [
+        "2_boundary_biased_Unigram (base)",
+        "8_stochastic_segmentation (HIGH)",
+        "9_character_fallback (base Unigram includes chars)"
+      ],
+      "notes": "Foundational reference for Unigram + sampling."
+    },
+    {
+      "paper_id": "mager-etal-2022-bpe",
+      "citation": "Mager et al., 2022. BPE vs. Morphological Segmentation: A Case Study on Machine Translation of Four Polysynthetic Languages. Findings of ACL 2022.",
+      "year": 2022,
+      "acl_anthology_id": "2022.findings-acl.78",
+      "url": "https://aclanthology.org/2022.findings-acl.78/",
+      "verified_primary_source": true,
+      "languages": [
+        "Nahuatl",
+        "Raramuri",
+        "Shipibo-Konibo",
+        "Wixarika",
+        "Spanish"
+      ],
+      "morphology_type": "polysynthetic",
+      "supervised_unsupervised_weak": "supervised and unsupervised morphological segmentation vs BPE",
+      "amount_type_morphological_supervision": "Supervised morph methods use labeled morph data; unsupervised morph algorithms also evaluated; new morph datasets contributed for two languages.",
+      "base_tokenizer": "BPE vs multiple morph segmenters",
+      "how_morphology_affects_tokenization": "Morph segmentations used as MT input units vs BPE.",
+      "morphology_affects_vocabulary_learning": "Via segmentation-derived units",
+      "morphology_affects_inference_segmentation": true,
+      "fallback_mechanism": "UNKNOWN",
+      "vocabulary_size": "UNKNOWN",
+      "evaluation_metrics": [
+        "morph segmentation scores",
+        "MT quality"
+      ],
+      "lm_evaluation": false,
+      "downstream_evaluation": "MT to/from Spanish",
+      "morphology_evaluation": "Segmentation scores; supervised better at segmentation, worse at MT.",
+      "main_result": "For all pairs except Nahuatl, unsupervised morphological segmentation outperforms BPE consistently in MT; supervised segmenters score better morphologically but underperform in MT.",
+      "limitations": "Polysynthetic ≠ Bantu agglutination. MT not LM. Supervised morph better on morph metrics ≠ better for neural sequence models.",
+      "applicability_to_chichewa": "MEDIUM: unsupervised morph can beat BPE; supervised morph gold may not help LM/MT.",
+      "overlap_with_candidate_designs": [
+        "1_presegmentation",
+        "5_statistical_affix",
+        "supports unsupervised over heavy supervised morph"
+      ],
+      "notes": "Supports using unsupervised signals rather than memorizing small gold sets."
+    },
+    {
+      "paper_id": "lundin-etal-2026-token",
+      "citation": "Lundin et al., 2026. The Token Tax: Systematic Bias in Multilingual Tokenization. AfricaNLP 2026.",
+      "year": 2026,
+      "acl_anthology_id": "2026.africanlp-main.10",
+      "url": "https://aclanthology.org/2026.africanlp-main.10/",
+      "verified_primary_source": true,
+      "languages": [
+        "16 African languages on AfriMMLU"
+      ],
+      "morphology_type": "morphologically complex, low-resource African languages (broad)",
+      "supervised_unsupervised_weak": "analysis of existing LLM tokenizers (not a new morph tokenizer)",
+      "amount_type_morphological_supervision": "None (diagnostic study).",
+      "base_tokenizer": "Tokenizers of 10 LLMs (proprietary/open; not a new method)",
+      "how_morphology_affects_tokenization": "N/A — measures fertility bias consequences.",
+      "morphology_affects_vocabulary_learning": false,
+      "morphology_affects_inference_segmentation": false,
+      "fallback_mechanism": "N/A",
+      "vocabulary_size": "N/A (existing LLM vocabs)",
+      "evaluation_metrics": [
+        "token fertility",
+        "AfriMMLU accuracy",
+        "cost scaling arguments"
+      ],
+      "lm_evaluation": "Uses pretrained LLMs; fertility predicts accuracy.",
+      "downstream_evaluation": "AfriMMLU (5 subjects, 16 African languages)",
+      "morphology_evaluation": false,
+      "main_result": "Higher fertility predicts lower accuracy; motivates morphologically aware tokenization and fair pricing for African languages.",
+      "limitations": "Does not propose a tokenizer algorithm. Does not isolate Chichewa. Does not evaluate under fixed small LM budgets.",
+      "applicability_to_chichewa": "HIGH as motivation for SC4/SC5 and African low-resource framing.",
+      "overlap_with_candidate_designs": [
+        "motivational for all morph-aware candidates; not method-overlapping"
+      ],
+      "notes": "Problem statement paper, not a competitor method."
+    }
+  ],
+  "additional_verified_papers": [
+    {
+      "paper_id": "bostrom-durrett-2020-byte",
+      "citation": "Bostrom & Durrett, 2020. Byte Pair Encoding is Suboptimal for Language Model Pretraining. Findings of EMNLP 2020.",
+      "year": 2020,
+      "acl_anthology_id": "2020.findings-emnlp.414",
+      "url": "https://aclanthology.org/2020.findings-emnlp.414/",
+      "verified_primary_source": true,
+      "languages": [
+        "English",
+        "Japanese"
+      ],
+      "morphology_type": "general LM pretraining; morphology alignment analysis",
+      "supervised_unsupervised_weak": "unsupervised BPE vs Unigram",
+      "amount_type_morphological_supervision": "None.",
+      "base_tokenizer": "BPE vs Unigram LM",
+      "how_morphology_affects_tokenization": "Analysis finds Unigram recovers units closer to morphology than BPE.",
+      "morphology_affects_vocabulary_learning": false,
+      "morphology_affects_inference_segmentation": false,
+      "fallback_mechanism": "Standard",
+      "vocabulary_size": "UNKNOWN",
+      "evaluation_metrics": [
+        "morphological alignment analysis",
+        "downstream fine-tuning tasks"
+      ],
+      "lm_evaluation": "Masked LM pretraining + fine-tuning",
+      "downstream_evaluation": "Multiple tasks",
+      "morphology_evaluation": "Qualitative/quantitative alignment with morphology",
+      "main_result": "Unigram matches or outperforms BPE; better morphological alignment.",
+      "limitations": "Not Chichewa; not decoder LM BPC under our matrix.",
+      "applicability_to_chichewa": "HIGH for choosing Unigram backbone over BPE for morphology-sensitive settings.",
+      "overlap_with_candidate_designs": [
+        "supports Unigram-centric candidates 2,5,8 over pure BPE candidate 3"
+      ],
+      "notes": "Additional verified paper."
+    },
+    {
+      "paper_id": "meyer-buys-2022-subword",
+      "citation": "Meyer & Buys, 2022. Subword Segmental Language Modelling for Nguni Languages. Findings of EMNLP 2022.",
+      "year": 2022,
+      "acl_anthology_id": "2022.findings-emnlp.494",
+      "url": "https://aclanthology.org/2022.findings-emnlp.494/",
+      "verified_primary_source": true,
+      "languages": [
+        "isiZulu",
+        "isiXhosa",
+        "isiNdebele",
+        "Siswati (Nguni Bantu)"
+      ],
+      "morphology_type": "low-resource agglutinative Bantu (Nguni)",
+      "supervised_unsupervised_weak": "unsupervised joint segmentation + LM (SSLM)",
+      "amount_type_morphological_supervision": "None for main SSLM; evaluated on unsupervised morphological segmentation benchmarks.",
+      "base_tokenizer": "Joint subword segmental LM (not fixed BPE/Unigram preprocess)",
+      "how_morphology_affects_tokenization": "Learns segmentation end-to-end with LM objective; discovers morpheme-like units.",
+      "morphology_affects_vocabulary_learning": true,
+      "morphology_affects_inference_segmentation": true,
+      "fallback_mechanism": "UNKNOWN",
+      "vocabulary_size": "UNKNOWN",
+      "evaluation_metrics": [
+        "LM performance",
+        "unsupervised morphological segmentation"
+      ],
+      "lm_evaluation": "Autoregressive LM on Nguni languages; beats BPE-based approaches on average.",
+      "downstream_evaluation": "UNKNOWN beyond LM/morph segmentation",
+      "morphology_evaluation": "Unsupervised morphological segmentation; large gains in word-level sequence model mode.",
+      "main_result": "Joint learning of subword segmentation with LM improves LM and morph segmentation for Nguni Bantu languages.",
+      "limitations": "Changes modeling stack (segmental LM) rather than drop-in tokenizer under fixed architecture comparison. Different from our frozen fixed-tokenizer-then-LM protocol.",
+      "applicability_to_chichewa": "HIGH linguistic relevance (Bantu agglutination); MEDIUM method transfer (architecture differs from our fixed LM matrix).",
+      "overlap_with_candidate_designs": [
+        "joint segmentation learning (outside pure preprocess families)",
+        "Bantu morphology motivation"
+      ],
+      "notes": "Strongest Bantu-specific LM+segmentation paper found in additional search."
+    },
+    {
+      "paper_id": "garcia-etal-2025-exploring",
+      "citation": "García, Przybyła & Wanner, 2025. Exploring morphology-aware tokenization: A case study on Spanish language modeling. EMNLP 2025.",
+      "year": 2025,
+      "acl_anthology_id": "2025.emnlp-main.1552",
+      "url": "https://aclanthology.org/2025.emnlp-main.1552/",
+      "verified_primary_source": true,
+      "languages": [
+        "Spanish"
+      ],
+      "morphology_type": "fusional",
+      "supervised_unsupervised_weak": "semi-supervised morphological segmentation; train tokenizer on morphologically segmented data",
+      "amount_type_morphological_supervision": "Gold-standard datasets built to guide/evaluate semi-supervised segmenter.",
+      "base_tokenizer": "Tokenizer trained on morphologically segmented text (vs standard BPE baseline)",
+      "how_morphology_affects_tokenization": "Pretrain tokenizer on morph-segmented data.",
+      "morphology_affects_vocabulary_learning": true,
+      "morphology_affects_inference_segmentation": true,
+      "fallback_mechanism": "UNKNOWN",
+      "vocabulary_size": "UNKNOWN",
+      "evaluation_metrics": [
+        "downstream tasks after MLM pretraining"
+      ],
+      "lm_evaluation": "Masked LM pretraining",
+      "downstream_evaluation": "Several downstream tasks; improvements over standard tokenizer baseline.",
+      "morphology_evaluation": "Segmentation model evaluated with gold datasets.",
+      "main_result": "Morphology-aware tokenization improves Spanish LM/downstream vs standard tokenizer.",
+      "limitations": "Spanish not low-resource African; fusional ≠ Bantu; uses semi-supervised morph resources.",
+      "applicability_to_chichewa": "MEDIUM as existence proof of morph-aware tokenization helping LM; LOW for resource assumptions.",
+      "overlap_with_candidate_designs": [
+        "1_presegmentation",
+        "4_hybrid"
+      ],
+      "notes": "Additional verified paper."
+    }
+  ],
+  "all_papers": [
+    {
+      "paper_id": "asgari-etal-2026-morphbpe",
+      "citation": "Asgari et al., 2026. MorphBPE: Morphology-Aware Tokenization for Efficient LLM Training. Findings of ACL 2026.",
+      "year": 2026,
+      "acl_anthology_id": "2026.findings-acl.2068",
+      "url": "https://aclanthology.org/2026.findings-acl.2068/",
+      "verified_primary_source": true,
+      "languages": [
+        "English",
+        "Russian",
+        "Hungarian",
+        "Arabic"
+      ],
+      "morphology_type": "concatenative and non-concatenative; morphologically rich languages emphasized",
+      "supervised_unsupervised_weak": "supervised_or_annotated_boundaries_during_tokenizer_training",
+      "amount_type_morphological_supervision": "Morpheme boundaries required for the training corpus during MorphBPE merge training; source of boundaries per language UNKNOWN from abstract/method sketch beyond 'available morphological annotations'. Inference needs no morphology.",
+      "base_tokenizer": "BPE",
+      "how_morphology_affects_tokenization": "During tokenizer training, merge candidates that would cross morpheme boundaries are disallowed; frequency ranking otherwise unchanged.",
+      "morphology_affects_vocabulary_learning": true,
+      "morphology_affects_inference_segmentation": false,
+      "fallback_mechanism": "Standard BPE behavior at inference; no special morphology runtime. UNKNOWN residual character policy beyond standard BPE.",
+      "vocabulary_size": "Matched across conditions; exact size UNKNOWN from abstract (controlled identical sizes in experiments).",
+      "evaluation_metrics": [
+        "Morphological Consistency F1",
+        "Morphological Edit Distance",
+        "fertility",
+        "LM cross-entropy",
+        "Belebele reading comprehension"
+      ],
+      "lm_evaluation": "Decoder-only LMs 300M and 1B trained from scratch; reports reduced cross-entropy vs BPE under matched vocab/settings.",
+      "downstream_evaluation": "Belebele; significant gains for Russian and Arabic.",
+      "morphology_evaluation": "Intrinsic Morph Consistency F1 and Morph Edit Distance.",
+      "main_result": "MorphBPE improves morphological coherence and LM cross-entropy without materially shorter tokens; downstream gains on morphologically rich languages.",
+      "limitations": "Requires morpheme boundaries for full training corpus (not available for Chichewa at scale). BPE-centric (our strongest Chichewa LM baseline is Unigram). No Chichewa/Bantu evaluation. Gold-boundary quality and annotation cost UNKNOWN for low-resource settings.",
+      "applicability_to_chichewa": "MEDIUM for idea transfer (constrained merges); LOW for direct reuse without a corpus-scale morphological analyzer or large labeled set.",
+      "overlap_with_candidate_designs": [
+        "3_morphology_constrained_BPE (HIGH)",
+        "1_presegmentation_plus_subword (related but MorphBPE integrates constraint into BPE training rather than pure pre-tokenization)"
+      ],
+      "notes": "Primary overlap risk for Candidate 3."
+    },
+    {
+      "paper_id": "hudspeth-etal-2026-contextual",
+      "citation": "Hudspeth, Burns & O'Connor, 2026. Contextual morphologically-guided tokenization for Latin encoder models. EACL 2026.",
+      "year": 2026,
+      "acl_anthology_id": "2026.eacl-long.270",
+      "url": "https://aclanthology.org/2026.eacl-long.270/",
+      "verified_primary_source": true,
+      "languages": [
+        "Latin"
+      ],
+      "morphology_type": "morphologically rich; medium pretraining data, high curated lexical resources",
+      "supervised_unsupervised_weak": "resource-guided / morphologically-guided (curated lexical resources)",
+      "amount_type_morphological_supervision": "Curated lexical/morphological resources for Latin; exact runtime vs train-time use details beyond abstract: UNKNOWN for full algorithm.",
+      "base_tokenizer": "UNKNOWN (morphologically-guided tokenization for encoder models; not claimed as plain BPE/Unigram-only in abstract)",
+      "how_morphology_affects_tokenization": "Morphologically-guided tokenization improves morphological alignment vs compression-only goals.",
+      "morphology_affects_vocabulary_learning": "UNKNOWN",
+      "morphology_affects_inference_segmentation": "UNKNOWN",
+      "fallback_mechanism": "UNKNOWN",
+      "vocabulary_size": "UNKNOWN",
+      "evaluation_metrics": [
+        "four downstream tasks",
+        "OOD generalization emphasized"
+      ],
+      "lm_evaluation": "Encoder LM pretraining setting (not our decoder LM BPC protocol).",
+      "downstream_evaluation": "Four downstream tasks; strongest gains OOD.",
+      "morphology_evaluation": "UNKNOWN exact intrinsic morph metrics from abstract.",
+      "main_result": "Morphologically-guided tokenization improves overall downstream performance for Latin; resources can substitute for large pretraining data.",
+      "limitations": "Depends on high-quality lexical/morphological resources that Chichewa lacks at Latin scale. Encoder focus differs from our decoder LM BPC criteria.",
+      "applicability_to_chichewa": "LOW–MEDIUM conceptually (resource-vs-data tradeoff); LOW practically without analogous lexical resources.",
+      "overlap_with_candidate_designs": [
+        "1_presegmentation",
+        "4_hybrid_affix_stem_vocab",
+        "resource-heavy morph guidance generally"
+      ],
+      "notes": "Important caution: medium-data + high-resource lexical setting ≠ low-resource African language setting."
+    },
+    {
+      "paper_id": "teklehaymanot-etal-2025-movoc",
+      "citation": "Teklehaymanot, Fazlija & Nejdl, 2025. MoVoC: Morphology-Aware Subword Construction for Ge’ez Script Languages. Findings of EMNLP 2025.",
+      "year": 2025,
+      "acl_anthology_id": "2025.findings-emnlp.706",
+      "url": "https://aclanthology.org/2025.findings-emnlp.706/",
+      "verified_primary_source": true,
+      "languages": [
+        "Ge'ez script languages (four with morpheme annotation; vocab for two)"
+      ],
+      "morphology_type": "morphologically complex, low-resource African languages (Ge'ez script)",
+      "supervised_unsupervised_weak": "supervised morphological analysis integrated into vocabulary construction",
+      "amount_type_morphological_supervision": "Manually annotated morpheme data for four languages; morpheme-aware vocabulary released for two.",
+      "base_tokenizer": "Hybrid morpheme-based units + BPE",
+      "how_morphology_affects_tokenization": "Integrates supervised morphological analysis into subword vocabulary construction; hybrid segmentation combining morpheme tokens and BPE.",
+      "morphology_affects_vocabulary_learning": true,
+      "morphology_affects_inference_segmentation": true,
+      "fallback_mechanism": "BPE components of hybrid vocabulary (exact residual policy details UNKNOWN beyond hybrid description).",
+      "vocabulary_size": "UNKNOWN exact sizes from abstract",
+      "evaluation_metrics": [
+        "MorphoScore",
+        "Boundary Precision",
+        "MT automatic metrics"
+      ],
+      "lm_evaluation": "Not primary; MT-focused evaluation.",
+      "downstream_evaluation": "Machine translation; no significant automatic MT quality gains reported.",
+      "morphology_evaluation": "Intrinsic MorphoScore and Boundary Precision improve.",
+      "main_result": "Morphology-aware vocab improves linguistic fidelity and token efficiency intrinsically; MT BLEU not significantly improved.",
+      "limitations": "Requires supervised morph annotation campaigns. MT gains not significant. Not Chichewa; not Unigram-primary. Script/family differs (Ge'ez vs Latin-script Bantu).",
+      "applicability_to_chichewa": "MEDIUM for African low-resource motivation; LOW for direct method (we forbid training supervised morph segmenter on 195 gold labels as default).",
+      "overlap_with_candidate_designs": [
+        "1_presegmentation",
+        "4_hybrid_affix_stem_vocab",
+        "3_constrained_subword_construction"
+      ],
+      "notes": "Closest African morphology-aware vocabulary construction work among must-include set."
+    },
+    {
+      "paper_id": "saleva-lignos-2021-effectiveness",
+      "citation": "Saleva & Lignos, 2021. The Effectiveness of Morphology-aware Segmentation in Low-Resource Neural Machine Translation. EACL SRW 2021.",
+      "year": 2021,
+      "acl_anthology_id": "2021.eacl-srw.22",
+      "url": "https://aclanthology.org/2021.eacl-srw.22/",
+      "verified_primary_source": true,
+      "languages": [
+        "Nepali",
+        "Sinhala",
+        "Kazakh",
+        "English (paired)"
+      ],
+      "morphology_type": "low-resource morphologically complex (varies by language)",
+      "supervised_unsupervised_weak": "morphologically-based segmentations from LMVR and MORSEL vs BPE",
+      "amount_type_morphological_supervision": "Method-dependent (LMVR/MORSEL); not a large manual gold morph corpus described as primary; treat as morphology-aware algorithms rather than full analyzers—details of training supervision: UNKNOWN beyond method names.",
+      "base_tokenizer": "BPE (token/sentence level) vs LMVR vs MORSEL",
+      "how_morphology_affects_tokenization": "Morphology-aware segmenters replace or compare against BPE segmentation for NMT inputs.",
+      "morphology_affects_vocabulary_learning": "UNKNOWN (segmentation methods produce units used as NMT vocabulary/input)",
+      "morphology_affects_inference_segmentation": true,
+      "fallback_mechanism": "UNKNOWN",
+      "vocabulary_size": "UNKNOWN",
+      "evaluation_metrics": [
+        "NMT BLEU",
+        "statistical significance of differences"
+      ],
+      "lm_evaluation": false,
+      "downstream_evaluation": "Low-resource NMT",
+      "morphology_evaluation": "Indirect via NMT; not primary boundary F1 report in abstract.",
+      "main_result": "No consistent reliable advantage of morphology-aware segmentation over BPE; best method varies; often statistically indistinguishable.",
+      "limitations": "Negative/mixed result warns against assuming morphology-aware segmentation always helps downstream. Different task (NMT) and languages.",
+      "applicability_to_chichewa": "HIGH as cautionary evidence for SC interpretation (PARTIAL/NEGATIVE possible).",
+      "overlap_with_candidate_designs": [
+        "1_presegmentation",
+        "morphology-aware vs BPE comparison broadly"
+      ],
+      "notes": "Critical prior for not overselling morphology-aware methods."
+    },
+    {
+      "paper_id": "richburg-etal-2020-evaluation",
+      "citation": "Richburg et al., 2020. An Evaluation of Subword Segmentation Strategies for Neural Machine Translation of Morphologically Rich Languages. WiNLP 2020.",
+      "year": 2020,
+      "acl_anthology_id": "2020.winlp-1.40",
+      "url": "https://aclanthology.org/2020.winlp-1.40/",
+      "verified_primary_source": true,
+      "languages": [
+        "Swahili",
+        "Turkish",
+        "English (target)"
+      ],
+      "morphology_type": "morphologically rich; Swahili is Bantu (agglutinative)",
+      "supervised_unsupervised_weak": "unsupervised statistical subword methods compared (BPE vs Unigram LM)",
+      "amount_type_morphological_supervision": "None required for BPE/Unigram comparison.",
+      "base_tokenizer": "BPE vs Unigram LM (Kudo 2018)",
+      "how_morphology_affects_tokenization": "Does not inject explicit morphology; compares data-driven strategies on morphologically rich languages.",
+      "morphology_affects_vocabulary_learning": false,
+      "morphology_affects_inference_segmentation": false,
+      "fallback_mechanism": "Standard SentencePiece/BPE behavior (UNKNOWN exact residual).",
+      "vocabulary_size": "UNKNOWN",
+      "evaluation_metrics": [
+        "BLEU",
+        "rare source word translation recall"
+      ],
+      "lm_evaluation": false,
+      "downstream_evaluation": "NMT to English",
+      "morphology_evaluation": "Indirect via rare-word translation behavior.",
+      "main_result": "Unigram yields comparable BLEU and better recall for rare source words than BPE for Swahili and Turkish→English.",
+      "limitations": "NMT not LM BPC; small workshop paper; no morphology gold evaluation.",
+      "applicability_to_chichewa": "HIGH: Bantu language (Swahili) evidence that Unigram is a strong default—aligns with our Unigram-8000 primary baseline.",
+      "overlap_with_candidate_designs": [
+        "supports choosing Unigram over BPE as backbone",
+        "8_stochastic_segmentation related via Unigram sampling literature"
+      ],
+      "notes": "Key Bantu-relevant empirical result among must-include set."
+    },
+    {
+      "paper_id": "kudo-2018-subword",
+      "citation": "Kudo, 2018. Subword Regularization: Improving Neural Network Translation Models with Multiple Subword Candidates. ACL 2018.",
+      "year": 2018,
+      "acl_anthology_id": "P18-1007",
+      "url": "https://aclanthology.org/P18-1007/",
+      "verified_primary_source": true,
+      "languages": [
+        "multiple NMT corpora (paper experiments; language list details treated as multi-corpus)"
+      ],
+      "morphology_type": "general; motivated by open vocabulary and segmentation ambiguity",
+      "supervised_unsupervised_weak": "unsupervised Unigram LM segmentation + probabilistic regularization",
+      "amount_type_morphological_supervision": "None.",
+      "base_tokenizer": "Unigram language model subword segmentation (SentencePiece lineage)",
+      "how_morphology_affects_tokenization": "No explicit morphology; probabilistic multi-segmentation training.",
+      "morphology_affects_vocabulary_learning": false,
+      "morphology_affects_inference_segmentation": "Optional sampling at train; deterministic MAP segmentation typically at inference (common practice; exact inference default: UNKNOWN if paper-specific).",
+      "fallback_mechanism": "Character-level units in Unigram vocabulary construction (standard).",
+      "vocabulary_size": "Configurable; paper experiments use various sizes (UNKNOWN exact list without full table extract).",
+      "evaluation_metrics": [
+        "NMT BLEU",
+        "robustness low-resource/OOD"
+      ],
+      "lm_evaluation": "NMT models; not our BPC protocol.",
+      "downstream_evaluation": "NMT",
+      "morphology_evaluation": false,
+      "main_result": "Subword regularization with Unigram sampling improves NMT especially low-resource/OOD.",
+      "limitations": "Not morphology-aware by design. Stochastic training complicates strict determinism preference.",
+      "applicability_to_chichewa": "HIGH as foundational algorithm of our Unigram-8000 baseline and Candidate 8.",
+      "overlap_with_candidate_designs": [
+        "2_boundary_biased_Unigram (base)",
+        "8_stochastic_segmentation (HIGH)",
+        "9_character_fallback (base Unigram includes chars)"
+      ],
+      "notes": "Foundational reference for Unigram + sampling."
+    },
+    {
+      "paper_id": "mager-etal-2022-bpe",
+      "citation": "Mager et al., 2022. BPE vs. Morphological Segmentation: A Case Study on Machine Translation of Four Polysynthetic Languages. Findings of ACL 2022.",
+      "year": 2022,
+      "acl_anthology_id": "2022.findings-acl.78",
+      "url": "https://aclanthology.org/2022.findings-acl.78/",
+      "verified_primary_source": true,
+      "languages": [
+        "Nahuatl",
+        "Raramuri",
+        "Shipibo-Konibo",
+        "Wixarika",
+        "Spanish"
+      ],
+      "morphology_type": "polysynthetic",
+      "supervised_unsupervised_weak": "supervised and unsupervised morphological segmentation vs BPE",
+      "amount_type_morphological_supervision": "Supervised morph methods use labeled morph data; unsupervised morph algorithms also evaluated; new morph datasets contributed for two languages.",
+      "base_tokenizer": "BPE vs multiple morph segmenters",
+      "how_morphology_affects_tokenization": "Morph segmentations used as MT input units vs BPE.",
+      "morphology_affects_vocabulary_learning": "Via segmentation-derived units",
+      "morphology_affects_inference_segmentation": true,
+      "fallback_mechanism": "UNKNOWN",
+      "vocabulary_size": "UNKNOWN",
+      "evaluation_metrics": [
+        "morph segmentation scores",
+        "MT quality"
+      ],
+      "lm_evaluation": false,
+      "downstream_evaluation": "MT to/from Spanish",
+      "morphology_evaluation": "Segmentation scores; supervised better at segmentation, worse at MT.",
+      "main_result": "For all pairs except Nahuatl, unsupervised morphological segmentation outperforms BPE consistently in MT; supervised segmenters score better morphologically but underperform in MT.",
+      "limitations": "Polysynthetic ≠ Bantu agglutination. MT not LM. Supervised morph better on morph metrics ≠ better for neural sequence models.",
+      "applicability_to_chichewa": "MEDIUM: unsupervised morph can beat BPE; supervised morph gold may not help LM/MT.",
+      "overlap_with_candidate_designs": [
+        "1_presegmentation",
+        "5_statistical_affix",
+        "supports unsupervised over heavy supervised morph"
+      ],
+      "notes": "Supports using unsupervised signals rather than memorizing small gold sets."
+    },
+    {
+      "paper_id": "lundin-etal-2026-token",
+      "citation": "Lundin et al., 2026. The Token Tax: Systematic Bias in Multilingual Tokenization. AfricaNLP 2026.",
+      "year": 2026,
+      "acl_anthology_id": "2026.africanlp-main.10",
+      "url": "https://aclanthology.org/2026.africanlp-main.10/",
+      "verified_primary_source": true,
+      "languages": [
+        "16 African languages on AfriMMLU"
+      ],
+      "morphology_type": "morphologically complex, low-resource African languages (broad)",
+      "supervised_unsupervised_weak": "analysis of existing LLM tokenizers (not a new morph tokenizer)",
+      "amount_type_morphological_supervision": "None (diagnostic study).",
+      "base_tokenizer": "Tokenizers of 10 LLMs (proprietary/open; not a new method)",
+      "how_morphology_affects_tokenization": "N/A — measures fertility bias consequences.",
+      "morphology_affects_vocabulary_learning": false,
+      "morphology_affects_inference_segmentation": false,
+      "fallback_mechanism": "N/A",
+      "vocabulary_size": "N/A (existing LLM vocabs)",
+      "evaluation_metrics": [
+        "token fertility",
+        "AfriMMLU accuracy",
+        "cost scaling arguments"
+      ],
+      "lm_evaluation": "Uses pretrained LLMs; fertility predicts accuracy.",
+      "downstream_evaluation": "AfriMMLU (5 subjects, 16 African languages)",
+      "morphology_evaluation": false,
+      "main_result": "Higher fertility predicts lower accuracy; motivates morphologically aware tokenization and fair pricing for African languages.",
+      "limitations": "Does not propose a tokenizer algorithm. Does not isolate Chichewa. Does not evaluate under fixed small LM budgets.",
+      "applicability_to_chichewa": "HIGH as motivation for SC4/SC5 and African low-resource framing.",
+      "overlap_with_candidate_designs": [
+        "motivational for all morph-aware candidates; not method-overlapping"
+      ],
+      "notes": "Problem statement paper, not a competitor method."
+    },
+    {
+      "paper_id": "bostrom-durrett-2020-byte",
+      "citation": "Bostrom & Durrett, 2020. Byte Pair Encoding is Suboptimal for Language Model Pretraining. Findings of EMNLP 2020.",
+      "year": 2020,
+      "acl_anthology_id": "2020.findings-emnlp.414",
+      "url": "https://aclanthology.org/2020.findings-emnlp.414/",
+      "verified_primary_source": true,
+      "languages": [
+        "English",
+        "Japanese"
+      ],
+      "morphology_type": "general LM pretraining; morphology alignment analysis",
+      "supervised_unsupervised_weak": "unsupervised BPE vs Unigram",
+      "amount_type_morphological_supervision": "None.",
+      "base_tokenizer": "BPE vs Unigram LM",
+      "how_morphology_affects_tokenization": "Analysis finds Unigram recovers units closer to morphology than BPE.",
+      "morphology_affects_vocabulary_learning": false,
+      "morphology_affects_inference_segmentation": false,
+      "fallback_mechanism": "Standard",
+      "vocabulary_size": "UNKNOWN",
+      "evaluation_metrics": [
+        "morphological alignment analysis",
+        "downstream fine-tuning tasks"
+      ],
+      "lm_evaluation": "Masked LM pretraining + fine-tuning",
+      "downstream_evaluation": "Multiple tasks",
+      "morphology_evaluation": "Qualitative/quantitative alignment with morphology",
+      "main_result": "Unigram matches or outperforms BPE; better morphological alignment.",
+      "limitations": "Not Chichewa; not decoder LM BPC under our matrix.",
+      "applicability_to_chichewa": "HIGH for choosing Unigram backbone over BPE for morphology-sensitive settings.",
+      "overlap_with_candidate_designs": [
+        "supports Unigram-centric candidates 2,5,8 over pure BPE candidate 3"
+      ],
+      "notes": "Additional verified paper."
+    },
+    {
+      "paper_id": "meyer-buys-2022-subword",
+      "citation": "Meyer & Buys, 2022. Subword Segmental Language Modelling for Nguni Languages. Findings of EMNLP 2022.",
+      "year": 2022,
+      "acl_anthology_id": "2022.findings-emnlp.494",
+      "url": "https://aclanthology.org/2022.findings-emnlp.494/",
+      "verified_primary_source": true,
+      "languages": [
+        "isiZulu",
+        "isiXhosa",
+        "isiNdebele",
+        "Siswati (Nguni Bantu)"
+      ],
+      "morphology_type": "low-resource agglutinative Bantu (Nguni)",
+      "supervised_unsupervised_weak": "unsupervised joint segmentation + LM (SSLM)",
+      "amount_type_morphological_supervision": "None for main SSLM; evaluated on unsupervised morphological segmentation benchmarks.",
+      "base_tokenizer": "Joint subword segmental LM (not fixed BPE/Unigram preprocess)",
+      "how_morphology_affects_tokenization": "Learns segmentation end-to-end with LM objective; discovers morpheme-like units.",
+      "morphology_affects_vocabulary_learning": true,
+      "morphology_affects_inference_segmentation": true,
+      "fallback_mechanism": "UNKNOWN",
+      "vocabulary_size": "UNKNOWN",
+      "evaluation_metrics": [
+        "LM performance",
+        "unsupervised morphological segmentation"
+      ],
+      "lm_evaluation": "Autoregressive LM on Nguni languages; beats BPE-based approaches on average.",
+      "downstream_evaluation": "UNKNOWN beyond LM/morph segmentation",
+      "morphology_evaluation": "Unsupervised morphological segmentation; large gains in word-level sequence model mode.",
+      "main_result": "Joint learning of subword segmentation with LM improves LM and morph segmentation for Nguni Bantu languages.",
+      "limitations": "Changes modeling stack (segmental LM) rather than drop-in tokenizer under fixed architecture comparison. Different from our frozen fixed-tokenizer-then-LM protocol.",
+      "applicability_to_chichewa": "HIGH linguistic relevance (Bantu agglutination); MEDIUM method transfer (architecture differs from our fixed LM matrix).",
+      "overlap_with_candidate_designs": [
+        "joint segmentation learning (outside pure preprocess families)",
+        "Bantu morphology motivation"
+      ],
+      "notes": "Strongest Bantu-specific LM+segmentation paper found in additional search."
+    },
+    {
+      "paper_id": "garcia-etal-2025-exploring",
+      "citation": "García, Przybyła & Wanner, 2025. Exploring morphology-aware tokenization: A case study on Spanish language modeling. EMNLP 2025.",
+      "year": 2025,
+      "acl_anthology_id": "2025.emnlp-main.1552",
+      "url": "https://aclanthology.org/2025.emnlp-main.1552/",
+      "verified_primary_source": true,
+      "languages": [
+        "Spanish"
+      ],
+      "morphology_type": "fusional",
+      "supervised_unsupervised_weak": "semi-supervised morphological segmentation; train tokenizer on morphologically segmented data",
+      "amount_type_morphological_supervision": "Gold-standard datasets built to guide/evaluate semi-supervised segmenter.",
+      "base_tokenizer": "Tokenizer trained on morphologically segmented text (vs standard BPE baseline)",
+      "how_morphology_affects_tokenization": "Pretrain tokenizer on morph-segmented data.",
+      "morphology_affects_vocabulary_learning": true,
+      "morphology_affects_inference_segmentation": true,
+      "fallback_mechanism": "UNKNOWN",
+      "vocabulary_size": "UNKNOWN",
+      "evaluation_metrics": [
+        "downstream tasks after MLM pretraining"
+      ],
+      "lm_evaluation": "Masked LM pretraining",
+      "downstream_evaluation": "Several downstream tasks; improvements over standard tokenizer baseline.",
+      "morphology_evaluation": "Segmentation model evaluated with gold datasets.",
+      "main_result": "Morphology-aware tokenization improves Spanish LM/downstream vs standard tokenizer.",
+      "limitations": "Spanish not low-resource African; fusional ≠ Bantu; uses semi-supervised morph resources.",
+      "applicability_to_chichewa": "MEDIUM as existence proof of morph-aware tokenization helping LM; LOW for resource assumptions.",
+      "overlap_with_candidate_designs": [
+        "1_presegmentation",
+        "4_hybrid"
+      ],
+      "notes": "Additional verified paper."
+    }
+  ],
+  "bantu_or_african_relevant": [
+    {
+      "paper_id": "richburg-etal-2020-evaluation",
+      "note": "Swahili NMT subword comparison"
+    },
+    {
+      "paper_id": "meyer-buys-2022-subword",
+      "note": "Nguni Bantu SSLM + morph segmentation"
+    },
+    {
+      "paper_id": "teklehaymanot-etal-2025-movoc",
+      "note": "African Ge'ez-script morph-aware vocab"
+    },
+    {
+      "paper_id": "lundin-etal-2026-token",
+      "note": "AfriMMLU token fertility / token tax"
+    }
+  ],
+  "candidate_family_novelty": [
+    {
+      "id": 1,
+      "name": "pre_segmentation_plus_Unigram_fallback",
+      "novelty_risk": "HIGH",
+      "novelty_risk_rationale": "Classic pipeline: morphological pre-segmentation then statistical subword (Morfessor-style / MoVoC hybrid / Otani-style). MorphBPE related work explicitly discusses pre-tokenization morph + subword. Saleva & Lignos and Mager et al. extensively study this family for MT.",
+      "strongest_overlap": [
+        "teklehaymanot-etal-2025-movoc",
+        "mager-etal-2022-bpe",
+        "saleva-lignos-2021-effectiveness",
+        "asgari-etal-2026-morphbpe (related work pre-tokenization)"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "boundary_biased_Unigram",
+      "novelty_risk": "MEDIUM",
+      "novelty_risk_rationale": "Unigram itself is Kudo 2018 / Bostrom-Durrett 2020 / Richburg 2020. Explicit boundary bias inside Unigram training (soft or hard constraints without full morph analyzer) is less standardized than MorphBPE's hard BPE constraint, but still close in spirit to morphology-constrained training.",
+      "strongest_overlap": [
+        "kudo-2018-subword",
+        "bostrom-durrett-2020-byte",
+        "asgari-etal-2026-morphbpe (constraint idea on different base)"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "morphology_constrained_BPE",
+      "novelty_risk": "HIGH",
+      "novelty_risk_rationale": "Directly overlaps MorphBPE (Asgari et al. 2026): disallow merges crossing morpheme boundaries during BPE training; inference standard BPE. 'First for Chichewa' is not sufficient novelty.",
+      "strongest_overlap": [
+        "asgari-etal-2026-morphbpe"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "hybrid_affix_stem_vocabulary",
+      "novelty_risk": "HIGH",
+      "novelty_risk_rationale": "MoVoC integrates supervised morpheme units into vocab with BPE. Hybrid affix/stem lexica are long-standing in morphologically motivated tokenizers and analyzers.",
+      "strongest_overlap": [
+        "teklehaymanot-etal-2025-movoc",
+        "hudspeth-etal-2026-contextual"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "statistical_affix_plus_character_fallback",
+      "novelty_risk": "MEDIUM",
+      "novelty_risk_rationale": "Unsupervised affix/stem induction (Morfessor lineage, Mager unsupervised morph) + character residual is a known toolkit pattern; less packaged as a modern 8k Unigram competitor under fixed LM budgets for Bantu.",
+      "strongest_overlap": [
+        "mager-etal-2022-bpe",
+        "meyer-buys-2022-subword (affix discovery pressure)",
+        "kudo-2018-subword (char fallback)"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "whole_word_memorization_regularization",
+      "novelty_risk": "MEDIUM",
+      "novelty_risk_rationale": "Vocabulary allocation / whole-word retention is a common engineering lever in multilingual tokenization; not morphology-specific novelty. Limited distinct morphology story for SC4.",
+      "strongest_overlap": [
+        "general SentencePiece user practices; not a single dominant morph paper in must-include set"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "word_family_consistency_regularization",
+      "novelty_risk": "MEDIUM",
+      "novelty_risk_rationale": "MorphBPE Morph Consistency F1 formalizes related goals; Marco & Fraser (cited by MorphBPE) study consistency. Distinct algorithm may exist but concept is published.",
+      "strongest_overlap": [
+        "asgari-etal-2026-morphbpe (consistency metrics/motivation)"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "stochastic_segmentation",
+      "novelty_risk": "HIGH",
+      "novelty_risk_rationale": "Kudo 2018 subword regularization is the canonical method. BPE-Dropout is related. Claiming novelty for stochastic segmentation alone is unsupported.",
+      "strongest_overlap": [
+        "kudo-2018-subword"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "character_byte_fallback",
+      "novelty_risk": "HIGH",
+      "novelty_risk_rationale": "Standard in Unigram/BPE/character baselines; our character baseline already exists. Not a standalone novel method.",
+      "strongest_overlap": [
+        "kudo-2018-subword",
+        "character baseline in project"
+      ]
+    }
+  ],
+  "summary_counts": {
+    "must_include": 8,
+    "additional_verified": 3,
+    "total_verified_primary": 11,
+    "high_novelty_risk_families": [
+      1,
+      3,
+      4,
+      8,
+      9
+    ],
+    "medium_novelty_risk_families": [
+      2,
+      5,
+      6,
+      7
+    ]
+  }
+}

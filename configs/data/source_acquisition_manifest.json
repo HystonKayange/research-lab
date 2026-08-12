@@ -1,0 +1,68 @@
+{
+  "version": "0.1.0",
+  "description": "Non-executing manual source acquisition manifest. Records URLs and expected artifacts for human download only. Does not fetch data.",
+  "auto_download": false,
+  "warning": "Do not implement silent automatic downloads against this file without an explicit separate design review. /latest/ Wikimedia URLs are moving targets.",
+  "sources": [
+    {
+      "source_id": "wikipedia",
+      "acquisition_method": "manual",
+      "artifacts": [
+        {
+          "filename": "nywiki-latest-pages-articles.xml.bz2",
+          "url": "https://dumps.wikimedia.org/nywiki/latest/nywiki-latest-pages-articles.xml.bz2",
+          "url_class": "moving_latest",
+          "preferred_alternative": "https://dumps.wikimedia.org/nywiki/YYYYMMDD/nywiki-YYYYMMDD-pages-articles.xml.bz2 (replace YYYYMMDD with the dump date actually used)",
+          "expected_sha256": null,
+          "expected_sha256_status": "unknown_archive_not_retained_in_repository",
+          "notes": "Prefer a dated dump directory over /latest/ for bit-reproducible re-acquisition."
+        }
+      ],
+      "project_url": "https://ny.wikipedia.org/",
+      "dump_index": "https://dumps.wikimedia.org/nywiki/",
+      "stated_download_date": "2026-04-03",
+      "local_extracted_text": "data/raw/wikipedia/wiki_clean.txt",
+      "local_extracted_text_sha256": "cf7c5ba6d8c0d4770eee3306bab9f4be1dfc9570930a9aa7f3613c0ffb4587b7",
+      "verification_commands": [
+        "sha256sum nywiki-*-pages-articles.xml.bz2",
+        "bunzip2 -c nywiki-*-pages-articles.xml.bz2 | head -n 40",
+        "sha256sum data/raw/wikipedia/wiki_clean.txt"
+      ]
+    },
+    {
+      "source_id": "bible",
+      "acquisition_method": "manual",
+      "artifacts": [
+        {
+          "filename": "nya_vpl.zip",
+          "url": "https://ebible.org/Scriptures/nya_vpl.zip",
+          "url_class": "stable_product_url",
+          "source_page": "https://ebible.org/details.php?id=nya",
+          "expected_sha256": null,
+          "expected_sha256_status": "unknown_archive_not_retained_in_repository",
+          "source_page_date": "2025-05-20",
+          "notes": "VPL format (verse-per-line). Extract nya_vpl.txt from the zip after download."
+        }
+      ],
+      "local_extracted_text": "data/raw/bible/bible_clean.txt",
+      "local_extracted_text_sha256": "55445a0e0a5359e243f1773de623af1716bf4d3cd835afd83c4407cbaf85fc89",
+      "verification_commands": [
+        "sha256sum nya_vpl.zip",
+        "unzip -l nya_vpl.zip",
+        "sha256sum data/raw/bible/bible_clean.txt"
+      ]
+    },
+    {
+      "source_id": "existing_corpus",
+      "acquisition_method": "legacy_local_composite",
+      "include_in_processed_corpus": false,
+      "notes": "Do not re-acquire as an independent training source. Redundant composite of Bible and Wikipedia."
+    }
+  ],
+  "future_researcher_notes": [
+    "Both primary sources were fetched manually; this repository does not auto-download them.",
+    "Record dump YYYYMMDD and archive SHA-256 at acquisition time.",
+    "Keep original archives under a versioned offline store if legal/compliance requires bit-identity of the dump.",
+    "Re-run scripts/data/build_inventory.py after placing raw text; do not edit files under data/raw/ in place."
+  ]
+}

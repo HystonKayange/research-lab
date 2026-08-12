@@ -1,0 +1,1178 @@
+{
+  "generated_at": "2026-08-04T04:05:42.596146Z",
+  "tool": {
+    "name": "clean_sources",
+    "version": "1.0.0"
+  },
+  "config": {
+    "version": "1.0.0",
+    "path": "configs/data/cleaning.json",
+    "random_seed": 42
+  },
+  "output": {
+    "interim_root": "data/interim/cleaning"
+  },
+  "pre_checksums": {
+    "bible": "55445a0e0a5359e243f1773de623af1716bf4d3cd835afd83c4407cbaf85fc89",
+    "wikipedia": "cf7c5ba6d8c0d4770eee3306bab9f4be1dfc9570930a9aa7f3613c0ffb4587b7"
+  },
+  "post_checksums": {
+    "bible": "55445a0e0a5359e243f1773de623af1716bf4d3cd835afd83c4407cbaf85fc89",
+    "wikipedia": "cf7c5ba6d8c0d4770eee3306bab9f4be1dfc9570930a9aa7f3613c0ffb4587b7"
+  },
+  "raw_files_unchanged": true,
+  "sources": {
+    "bible": {
+      "source_id": "bible",
+      "input_path": "data/raw/bible/bible_clean.txt",
+      "output_dir": "data/interim/cleaning/bible",
+      "cleaned_path": "data/interim/cleaning/bible/cleaned.txt",
+      "removal_log_path": "data/interim/cleaning/bible/removal_log.jsonl",
+      "transform_log_path": "data/interim/cleaning/bible/transform_log.jsonl",
+      "notes": "Light-touch cleaning. Bible is relatively homogeneous; avoid aggressive language filters.",
+      "raw_sha256": "55445a0e0a5359e243f1773de623af1716bf4d3cd835afd83c4407cbaf85fc89",
+      "cleaned_sha256": "55445a0e0a5359e243f1773de623af1716bf4d3cd835afd83c4407cbaf85fc89",
+      "before": {
+        "total_lines": 31099,
+        "blank_lines": 0,
+        "non_empty_lines": 31099,
+        "unique_exact_nonempty": 30876,
+        "duplicate_line_percentage": 1.1222,
+        "character_count_estimate": 4172214,
+        "estimated_word_token_count": 575455,
+        "min_line_length": 13,
+        "max_line_length": 437,
+        "mean_line_length": 133.1591,
+        "median_line_length": 124,
+        "line_length_percentiles": {
+          "p50": 124.0,
+          "p90": 212.0,
+          "p95": 241.0,
+          "p99": 296.0
+        },
+        "very_short_lines": 21,
+        "very_long_lines": 0,
+        "url_containing_lines": 0,
+        "digit_only_lines": 0,
+        "language_signals": {
+          "disclaimer": "Heuristic term-list signals only — not authoritative language labels.",
+          "counts": {
+            "chichewa_signal": 25904,
+            "english_signal": 0,
+            "german_signal": 0,
+            "mixed_signal": 0,
+            "insufficient_signal": 5195
+          },
+          "percentages": {
+            "chichewa_signal": 83.2953,
+            "english_signal": 0.0,
+            "german_signal": 0.0,
+            "mixed_signal": 0.0,
+            "insufficient_signal": 16.7047
+          }
+        },
+        "boilerplate_matching_lines": {
+          "category_prefix": 0,
+          "wikipedia_muzinenero": 0,
+          "mu_nkhani": 0,
+          "wikipedia_word": 0,
+          "wikimedia": 0,
+          "url_http": 0,
+          "url_www": 0,
+          "in_german_meta": 0
+        }
+      },
+      "after": {
+        "total_lines": 31099,
+        "blank_lines": 0,
+        "non_empty_lines": 31099,
+        "unique_exact_nonempty": 30876,
+        "duplicate_line_percentage": 1.1222,
+        "character_count_estimate": 4172214,
+        "estimated_word_token_count": 575455,
+        "min_line_length": 13,
+        "max_line_length": 437,
+        "mean_line_length": 133.1591,
+        "median_line_length": 124,
+        "line_length_percentiles": {
+          "p50": 124.0,
+          "p90": 212.0,
+          "p95": 241.0,
+          "p99": 296.0
+        },
+        "very_short_lines": 21,
+        "very_long_lines": 0,
+        "url_containing_lines": 0,
+        "digit_only_lines": 0,
+        "language_signals": {
+          "disclaimer": "Heuristic term-list signals only — not authoritative language labels.",
+          "counts": {
+            "chichewa_signal": 25904,
+            "english_signal": 0,
+            "german_signal": 0,
+            "mixed_signal": 0,
+            "insufficient_signal": 5195
+          },
+          "percentages": {
+            "chichewa_signal": 83.2953,
+            "english_signal": 0.0,
+            "german_signal": 0.0,
+            "mixed_signal": 0.0,
+            "insufficient_signal": 16.7047
+          }
+        },
+        "boilerplate_matching_lines": {
+          "category_prefix": 0,
+          "wikipedia_muzinenero": 0,
+          "mu_nkhani": 0,
+          "wikipedia_word": 0,
+          "wikimedia": 0,
+          "url_http": 0,
+          "url_www": 0,
+          "in_german_meta": 0
+        }
+      },
+      "removed_line_count": 0,
+      "transform_event_count": 0,
+      "kept_line_count": 31099,
+      "rule_counts": {},
+      "rules_configured": [
+        {
+          "id": "drop_blank",
+          "type": "drop_blank",
+          "enabled": true,
+          "description": "Remove empty or whitespace-only lines"
+        },
+        {
+          "id": "drop_digit_only",
+          "type": "drop_digit_only",
+          "enabled": true,
+          "description": "Remove lines that contain only digits (and optional surrounding whitespace)"
+        },
+        {
+          "id": "strip_edges",
+          "type": "transform_strip",
+          "enabled": true,
+          "description": "Strip leading/trailing whitespace on kept lines (does not collapse internal spaces)"
+        }
+      ],
+      "removal_samples": []
+    },
+    "wikipedia": {
+      "source_id": "wikipedia",
+      "input_path": "data/raw/wikipedia/wiki_clean.txt",
+      "output_dir": "data/interim/cleaning/wikipedia",
+      "cleaned_path": "data/interim/cleaning/wikipedia/cleaned.txt",
+      "removal_log_path": "data/interim/cleaning/wikipedia/removal_log.jsonl",
+      "transform_log_path": "data/interim/cleaning/wikipedia/transform_log.jsonl",
+      "notes": "Stronger filters for navigation, categories, URLs, foreign-signal lines, and within-source exact duplicates.",
+      "raw_sha256": "cf7c5ba6d8c0d4770eee3306bab9f4be1dfc9570930a9aa7f3613c0ffb4587b7",
+      "cleaned_sha256": "aa5550fd242069a13ce146756d1aa883d1b3ae8a82e90506d92fa6a6040db332",
+      "before": {
+        "total_lines": 20579,
+        "blank_lines": 208,
+        "non_empty_lines": 20371,
+        "unique_exact_nonempty": 18078,
+        "duplicate_line_percentage": 14.3046,
+        "character_count_estimate": 1928042,
+        "estimated_word_token_count": 273158,
+        "min_line_length": 1,
+        "max_line_length": 3055,
+        "mean_line_length": 93.626,
+        "median_line_length": 75,
+        "line_length_percentiles": {
+          "p50": 75.0,
+          "p90": 198.0,
+          "p95": 240.0,
+          "p99": 355.2999999999993
+        },
+        "very_short_lines": 3818,
+        "very_long_lines": 77,
+        "url_containing_lines": 74,
+        "digit_only_lines": 111,
+        "language_signals": {
+          "disclaimer": "Heuristic term-list signals only — not authoritative language labels.",
+          "counts": {
+            "chichewa_signal": 9611,
+            "english_signal": 446,
+            "german_signal": 2,
+            "mixed_signal": 276,
+            "insufficient_signal": 10036
+          },
+          "percentages": {
+            "chichewa_signal": 47.1798,
+            "english_signal": 2.1894,
+            "german_signal": 0.0098,
+            "mixed_signal": 1.3549,
+            "insufficient_signal": 49.2661
+          }
+        },
+        "boilerplate_matching_lines": {
+          "category_prefix": 1547,
+          "wikipedia_muzinenero": 1,
+          "mu_nkhani": 6,
+          "wikipedia_word": 72,
+          "wikimedia": 40,
+          "url_http": 69,
+          "url_www": 34,
+          "in_german_meta": 3
+        }
+      },
+      "after": {
+        "total_lines": 14398,
+        "blank_lines": 0,
+        "non_empty_lines": 14398,
+        "unique_exact_nonempty": 14388,
+        "duplicate_line_percentage": 0.1389,
+        "character_count_estimate": 1648965,
+        "estimated_word_token_count": 233168,
+        "min_line_length": 18,
+        "max_line_length": 499,
+        "mean_line_length": 113.5274,
+        "median_line_length": 102.0,
+        "line_length_percentiles": {
+          "p50": 102.0,
+          "p90": 208.0,
+          "p95": 247.0,
+          "p99": 335.03000000000065
+        },
+        "very_short_lines": 98,
+        "very_long_lines": 0,
+        "url_containing_lines": 0,
+        "digit_only_lines": 0,
+        "language_signals": {
+          "disclaimer": "Heuristic term-list signals only — not authoritative language labels.",
+          "counts": {
+            "chichewa_signal": 9326,
+            "english_signal": 0,
+            "german_signal": 0,
+            "mixed_signal": 0,
+            "insufficient_signal": 5072
+          },
+          "percentages": {
+            "chichewa_signal": 64.7729,
+            "english_signal": 0.0,
+            "german_signal": 0.0,
+            "mixed_signal": 0.0,
+            "insufficient_signal": 35.2271
+          }
+        },
+        "boilerplate_matching_lines": {
+          "category_prefix": 0,
+          "wikipedia_muzinenero": 0,
+          "mu_nkhani": 0,
+          "wikipedia_word": 29,
+          "wikimedia": 0,
+          "url_http": 0,
+          "url_www": 0,
+          "in_german_meta": 0
+        }
+      },
+      "removed_line_count": 6181,
+      "transform_event_count": 1425,
+      "kept_line_count": 14398,
+      "rule_counts": {
+        "drop_mu_nkhani": 6,
+        "drop_blank": 208,
+        "transform:strip_edges": 1425,
+        "drop_wikipedia_muzinenero": 1,
+        "drop_wikimedia": 34,
+        "drop_min_length": 3167,
+        "drop_category": 1547,
+        "drop_english_signal": 413,
+        "drop_mixed_signal": 267,
+        "drop_max_length": 56,
+        "drop_url": 74,
+        "drop_digit_only": 111,
+        "drop_german_signal": 2,
+        "dedupe_exact": 292,
+        "drop_in_german_meta": 3
+      },
+      "rules_configured": [
+        {
+          "id": "drop_blank",
+          "type": "drop_blank",
+          "enabled": true,
+          "description": "Remove empty or whitespace-only lines"
+        },
+        {
+          "id": "drop_category",
+          "type": "drop_regex",
+          "enabled": true,
+          "description": "Remove Wikipedia Category: lines"
+        },
+        {
+          "id": "drop_mu_nkhani",
+          "type": "drop_regex",
+          "enabled": true,
+          "description": "Remove article-contents navigation headers"
+        },
+        {
+          "id": "drop_wikipedia_muzinenero",
+          "type": "drop_regex",
+          "enabled": true,
+          "description": "Remove other-languages navigation"
+        },
+        {
+          "id": "drop_wikimedia",
+          "type": "drop_regex",
+          "enabled": true,
+          "description": "Remove Wikimedia project chrome lines"
+        },
+        {
+          "id": "drop_in_german_meta",
+          "type": "drop_regex",
+          "enabled": true,
+          "description": "Remove explicit German meta markers"
+        },
+        {
+          "id": "drop_image_meta",
+          "type": "drop_regex",
+          "enabled": true,
+          "description": "Remove image metadata parentheticals"
+        },
+        {
+          "id": "drop_html_tags",
+          "type": "drop_regex",
+          "enabled": true,
+          "description": "Remove lines containing HTML tag remnants"
+        },
+        {
+          "id": "drop_wiki_brackets",
+          "type": "drop_regex",
+          "enabled": true,
+          "description": "Remove lines with wiki double-bracket links"
+        },
+        {
+          "id": "drop_url",
+          "type": "drop_url",
+          "enabled": true,
+          "description": "Remove lines containing http(s) or www. URLs"
+        },
+        {
+          "id": "drop_digit_only",
+          "type": "drop_digit_only",
+          "enabled": true,
+          "description": "Remove digit-only lines"
+        },
+        {
+          "id": "drop_min_length",
+          "type": "drop_min_length",
+          "enabled": true,
+          "description": "Remove very short lines (length < 20)"
+        },
+        {
+          "id": "drop_max_length",
+          "type": "drop_max_length",
+          "enabled": true,
+          "description": "Remove extremely long lines (length > 500)"
+        },
+        {
+          "id": "drop_english_signal",
+          "type": "drop_language_signal",
+          "enabled": true,
+          "description": "Remove lines with heuristic english_signal (not authoritative LID)"
+        },
+        {
+          "id": "drop_german_signal",
+          "type": "drop_language_signal",
+          "enabled": true,
+          "description": "Remove lines with heuristic german_signal"
+        },
+        {
+          "id": "drop_mixed_signal",
+          "type": "drop_language_signal",
+          "enabled": true,
+          "description": "Remove lines with mixed-language heuristic signal"
+        },
+        {
+          "id": "dedupe_exact",
+          "type": "dedupe_exact",
+          "enabled": true,
+          "description": "Drop exact duplicate lines within this source (keep first occurrence)"
+        },
+        {
+          "id": "strip_edges",
+          "type": "transform_strip",
+          "enabled": true,
+          "description": "Strip leading/trailing whitespace on kept lines"
+        }
+      ],
+      "removal_samples": [
+        {
+          "source_id": "wikipedia",
+          "line_number": 9351,
+          "rule_id": "dedupe_exact",
+          "rule_type": "dedupe_exact",
+          "rule_description": "Drop exact duplicate lines within this source (keep first occurrence)",
+          "excerpt": "Zizindikiro zinanso zingakhale monga kusokonezeka maganizo kapena bongo kusiya kugwira ntchito moyenera, kusanza, ndi...",
+          "metrics": {
+            "length": 165
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 9395,
+          "rule_id": "dedupe_exact",
+          "rule_type": "dedupe_exact",
+          "rule_description": "Drop exact duplicate lines within this source (keep first occurrence)",
+          "excerpt": "Miliri ina yocheperapo ya matendawa imabukanso m'madera osiyanasiyana padziko lapansili.",
+          "metrics": {
+            "length": 88
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 9403,
+          "rule_id": "dedupe_exact",
+          "rule_type": "dedupe_exact",
+          "rule_description": "Drop exact duplicate lines within this source (keep first occurrence)",
+          "excerpt": "Weekly epidemiological record.",
+          "metrics": {
+            "length": 30
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 9697,
+          "rule_id": "dedupe_exact",
+          "rule_type": "dedupe_exact",
+          "rule_description": "Drop exact duplicate lines within this source (keep first occurrence)",
+          "excerpt": "doi:10.1016/S0140-6736(14)61682-2.",
+          "metrics": {
+            "length": 34
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 17502,
+          "rule_id": "dedupe_exact",
+          "rule_type": "dedupe_exact",
+          "rule_description": "Drop exact duplicate lines within this source (keep first occurrence)",
+          "excerpt": "A British adakana kupereka ndalama zosamukira ku Lilongwe.",
+          "metrics": {
+            "length": 58
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 5556,
+          "rule_id": "drop_blank",
+          "rule_type": "drop_blank",
+          "rule_description": "Remove empty or whitespace-only lines",
+          "excerpt": "",
+          "metrics": {
+            "length": 1
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 5558,
+          "rule_id": "drop_blank",
+          "rule_type": "drop_blank",
+          "rule_description": "Remove empty or whitespace-only lines",
+          "excerpt": "",
+          "metrics": {
+            "length": 1
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 5969,
+          "rule_id": "drop_blank",
+          "rule_type": "drop_blank",
+          "rule_description": "Remove empty or whitespace-only lines",
+          "excerpt": "",
+          "metrics": {
+            "length": 1
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 6334,
+          "rule_id": "drop_blank",
+          "rule_type": "drop_blank",
+          "rule_description": "Remove empty or whitespace-only lines",
+          "excerpt": "",
+          "metrics": {
+            "length": 1
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 13453,
+          "rule_id": "drop_blank",
+          "rule_type": "drop_blank",
+          "rule_description": "Remove empty or whitespace-only lines",
+          "excerpt": "",
+          "metrics": {
+            "length": 1
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 382,
+          "rule_id": "drop_category",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove Wikipedia Category: lines",
+          "excerpt": "Category:Nyasa zinenero",
+          "metrics": {
+            "length": 23,
+            "pattern": "Category\\s*:"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 481,
+          "rule_id": "drop_category",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove Wikipedia Category: lines",
+          "excerpt": "Category:ziPani za ndale za ku Malaŵi",
+          "metrics": {
+            "length": 37,
+            "pattern": "Category\\s*:"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 8534,
+          "rule_id": "drop_category",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove Wikipedia Category: lines",
+          "excerpt": "Category:Anthu amoyo",
+          "metrics": {
+            "length": 20,
+            "pattern": "Category\\s*:"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 13714,
+          "rule_id": "drop_category",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove Wikipedia Category: lines",
+          "excerpt": "Category:1939 Kubadwa",
+          "metrics": {
+            "length": 21,
+            "pattern": "Category\\s*:"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 16185,
+          "rule_id": "drop_category",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove Wikipedia Category: lines",
+          "excerpt": "Category:Boma la United Kingdom",
+          "metrics": {
+            "length": 31,
+            "pattern": "Category\\s*:"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 3849,
+          "rule_id": "drop_digit_only",
+          "rule_type": "drop_digit_only",
+          "rule_description": "Remove digit-only lines",
+          "excerpt": "1983",
+          "metrics": {
+            "length": 5
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 8334,
+          "rule_id": "drop_digit_only",
+          "rule_type": "drop_digit_only",
+          "rule_description": "Remove digit-only lines",
+          "excerpt": "2005",
+          "metrics": {
+            "length": 6
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 8940,
+          "rule_id": "drop_digit_only",
+          "rule_type": "drop_digit_only",
+          "rule_description": "Remove digit-only lines",
+          "excerpt": "3",
+          "metrics": {
+            "length": 1
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 16816,
+          "rule_id": "drop_digit_only",
+          "rule_type": "drop_digit_only",
+          "rule_description": "Remove digit-only lines",
+          "excerpt": "2",
+          "metrics": {
+            "length": 2
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 16833,
+          "rule_id": "drop_digit_only",
+          "rule_type": "drop_digit_only",
+          "rule_description": "Remove digit-only lines",
+          "excerpt": "3",
+          "metrics": {
+            "length": 2
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 3532,
+          "rule_id": "drop_english_signal",
+          "rule_type": "drop_language_signal",
+          "rule_description": "Remove lines with heuristic english_signal (not authoritative LID)",
+          "excerpt": "6/6:\"Data sources: UNICEF global databases, 2014, based on Demographic and Health Surveys (DHS), Multiple Indicator C...",
+          "metrics": {
+            "length": 194,
+            "category": "english_signal",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 3,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 12942,
+          "rule_id": "drop_english_signal",
+          "rule_type": "drop_language_signal",
+          "rule_description": "Remove lines with heuristic english_signal (not authoritative LID)",
+          "excerpt": "Guidelines for Sabbath Observance, document voted by the General Conference Session of 1990",
+          "metrics": {
+            "length": 92,
+            "category": "english_signal",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 4,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 16298,
+          "rule_id": "drop_english_signal",
+          "rule_type": "drop_language_signal",
+          "rule_description": "Remove lines with heuristic english_signal (not authoritative LID)",
+          "excerpt": "Petersburg Faculty of Physics and Mathematics komanso pa Academy of Petersburg Arts.",
+          "metrics": {
+            "length": 84,
+            "category": "english_signal",
+            "term_hits": {
+              "chichewa": 1,
+              "english": 3,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 18853,
+          "rule_id": "drop_english_signal",
+          "rule_type": "drop_language_signal",
+          "rule_description": "Remove lines with heuristic english_signal (not authoritative LID)",
+          "excerpt": "Mwayi Kumwenda (1989- ), a netball player for the Malawi national team.",
+          "metrics": {
+            "length": 71,
+            "category": "english_signal",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 2,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 18867,
+          "rule_id": "drop_english_signal",
+          "rule_type": "drop_language_signal",
+          "rule_description": "Remove lines with heuristic english_signal (not authoritative LID)",
+          "excerpt": "USAID - Aid from the American People",
+          "metrics": {
+            "length": 36,
+            "category": "english_signal",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 2,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 1806,
+          "rule_id": "drop_german_signal",
+          "rule_type": "drop_language_signal",
+          "rule_description": "Remove lines with heuristic german_signal",
+          "excerpt": "\"Towards a unified slavic language\", Fourth Language Creation Conference, Groningen.MEYER, Anna-Maria (2012): \"Slavis...",
+          "metrics": {
+            "length": 153,
+            "category": "german_signal",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 0,
+              "german": 2
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 18984,
+          "rule_id": "drop_german_signal",
+          "rule_type": "drop_language_signal",
+          "rule_description": "Remove lines with heuristic german_signal",
+          "excerpt": "Tsygankov, Daniel Beruf, Verbannung, Schicksal: Iwan Iljin und Deutschland // Archiv fuer Rechts- und Sozialphilosophie.",
+          "metrics": {
+            "length": 120,
+            "category": "german_signal",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 0,
+              "german": 2
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 13924,
+          "rule_id": "drop_in_german_meta",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove explicit German meta markers",
+          "excerpt": "(in German) In: Rathauskorrespondenz, 27 May 2009Edita Gruberova ausgezeichnet (image) In: Rathauskorrespondenz, 27 M...",
+          "metrics": {
+            "length": 124,
+            "pattern": "\\(in German\\)"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 13928,
+          "rule_id": "drop_in_german_meta",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove explicit German meta markers",
+          "excerpt": "Juni 2014 (in German) Musiktheaterpreis, retrieved 4 April 2015",
+          "metrics": {
+            "length": 63,
+            "pattern": "\\(in German\\)"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 13929,
+          "rule_id": "drop_in_german_meta",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove explicit German meta markers",
+          "excerpt": "2016: Ehrenplakette of the in Garmisch-PartenkirchenEröffnungsprogramm der Richard-Strauss-Festivals 2016 (in German)...",
+          "metrics": {
+            "length": 167,
+            "pattern": "\\(in German\\)"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 3946,
+          "rule_id": "drop_max_length",
+          "rule_type": "drop_max_length",
+          "rule_description": "Remove extremely long lines (length > 500)",
+          "excerpt": "Mapulogalamu ena akhalapo kwa zaka zoposa 2,000 ndipo adasintha kwambiri kuyambira nthawi imeneyo monga chinenero (ch...",
+          "metrics": {
+            "length": 514
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 7891,
+          "rule_id": "drop_max_length",
+          "rule_type": "drop_max_length",
+          "rule_description": "Remove extremely long lines (length > 500)",
+          "excerpt": "Nick Lorena 2002 Mkazi wa Lehi Kelly Filimu yochepa 2003 Carolina Christen 2007 Tortilla Kumwamba Chicana 2008 Wing'o...",
+          "metrics": {
+            "length": 517
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 8566,
+          "rule_id": "drop_max_length",
+          "rule_type": "drop_max_length",
+          "rule_description": "Remove extremely long lines (length > 500)",
+          "excerpt": "+ Televizioni Chaka Mutu Udindo Mfundo 2000-01 Jardins Proibidos Sara Kutayidwa Kwakukulu Chisipanishi sopo opera yof...",
+          "metrics": {
+            "length": 1260
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 12936,
+          "rule_id": "drop_max_length",
+          "rule_type": "drop_max_length",
+          "rule_description": "Remove extremely long lines (length > 500)",
+          "excerpt": "Sabata ndichimodzi mwazomwe zimafotokozedwa m'mipingo yamasiku achisanu ndi chiwiri, kuphatikiza a Baptisti a Seventh...",
+          "metrics": {
+            "length": 578
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 14984,
+          "rule_id": "drop_max_length",
+          "rule_type": "drop_max_length",
+          "rule_description": "Remove extremely long lines (length > 500)",
+          "excerpt": "25px • Somali Republic (1960–1969) • 20px 1 Aden Adde 1960 1960 1967 SYL 2 Abdirashid Shermarke 1967 1967 1969 SYL — ...",
+          "metrics": {
+            "length": 1594
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 1001,
+          "rule_id": "drop_min_length",
+          "rule_type": "drop_min_length",
+          "rule_description": "Remove very short lines (length < 20)",
+          "excerpt": "CZ Czechia",
+          "metrics": {
+            "length": 11
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 3064,
+          "rule_id": "drop_min_length",
+          "rule_type": "drop_min_length",
+          "rule_description": "Remove very short lines (length < 20)",
+          "excerpt": "Switzerland (de.",
+          "metrics": {
+            "length": 16
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 4626,
+          "rule_id": "drop_min_length",
+          "rule_type": "drop_min_length",
+          "rule_description": "Remove very short lines (length < 20)",
+          "excerpt": "Riemer Faber",
+          "metrics": {
+            "length": 12
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 13871,
+          "rule_id": "drop_min_length",
+          "rule_type": "drop_min_length",
+          "rule_description": "Remove very short lines (length < 20)",
+          "excerpt": "Zolemba",
+          "metrics": {
+            "length": 8
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 19925,
+          "rule_id": "drop_min_length",
+          "rule_type": "drop_min_length",
+          "rule_description": "Remove very short lines (length < 20)",
+          "excerpt": "Vermilya, Daniel J.",
+          "metrics": {
+            "length": 19
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 1769,
+          "rule_id": "drop_mixed_signal",
+          "rule_type": "drop_language_signal",
+          "rule_description": "Remove lines with mixed-language heuristic signal",
+          "excerpt": "Matenda a Ebola anapezeka koyamba m’dziko la Sudan kenako m’dziko la Democratic Republic of the Congo.",
+          "metrics": {
+            "length": 102,
+            "category": "mixed_signal",
+            "term_hits": {
+              "chichewa": 2,
+              "english": 2,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 9335,
+          "rule_id": "drop_mixed_signal",
+          "rule_type": "drop_language_signal",
+          "rule_description": "Remove lines with mixed-language heuristic signal",
+          "excerpt": "Ndpo katemerayu ali pagulu la mankhwala ofunika kwambiri otchedwa World Health Organization's List of Essential Medic...",
+          "metrics": {
+            "length": 215,
+            "category": "mixed_signal",
+            "term_hits": {
+              "chichewa": 4,
+              "english": 2,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 11453,
+          "rule_id": "drop_mixed_signal",
+          "rule_type": "drop_language_signal",
+          "rule_description": "Remove lines with mixed-language heuristic signal",
+          "excerpt": "Maudindo omwe amapezeka mumafomu a Game & Watch amasiyanasiyana kuchokera ku Mickey Mouse mpaka Balloon Fight, kuphat...",
+          "metrics": {
+            "length": 201,
+            "category": "mixed_signal",
+            "term_hits": {
+              "chichewa": 3,
+              "english": 2,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 13604,
+          "rule_id": "drop_mixed_signal",
+          "rule_type": "drop_language_signal",
+          "rule_description": "Remove lines with mixed-language heuristic signal",
+          "excerpt": "Anali membala wa Academy of Fine Arts and History 'Institución Fernán González'.",
+          "metrics": {
+            "length": 80,
+            "category": "mixed_signal",
+            "term_hits": {
+              "chichewa": 2,
+              "english": 2,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 20038,
+          "rule_id": "drop_mixed_signal",
+          "rule_type": "drop_language_signal",
+          "rule_description": "Remove lines with mixed-language heuristic signal",
+          "excerpt": "Palo Alto: Mayfield Malinga ndi Chipangano Chatsopano, Yohane anaweruzidwa kuti aphedwe ndipo kenako anadulidwa mutu ...",
+          "metrics": {
+            "length": 350,
+            "category": "mixed_signal",
+            "term_hits": {
+              "chichewa": 6,
+              "english": 3,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 2,
+          "rule_id": "drop_mu_nkhani",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove article-contents navigation headers",
+          "excerpt": "Mu nkhani",
+          "metrics": {
+            "length": 9,
+            "pattern": "Mu\\s+nkhani"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 1908,
+          "rule_id": "drop_mu_nkhani",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove article-contents navigation headers",
+          "excerpt": "Mu nkhani ya United States - ndipo malinga ndi US Census Bureau matanthauzo - kudera ndi: New England, Mid-Atlantic, ...",
+          "metrics": {
+            "length": 283,
+            "pattern": "Mu\\s+nkhani"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 7597,
+          "rule_id": "drop_mu_nkhani",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove article-contents navigation headers",
+          "excerpt": "Chigumula chimayambira koyamba kupyola pakati pa Halo: Combat Evolved , mu nkhani ya \"343 Guilty Spark\".",
+          "metrics": {
+            "length": 104,
+            "pattern": "Mu\\s+nkhani"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 7885,
+          "rule_id": "drop_mu_nkhani",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove article-contents navigation headers",
+          "excerpt": "Mu nkhani ya USA Today , Ortiz amanenanso kuti malo otsiriza ochokera ku Ugly Betty ndi mutu wakuti \" Mmene Betty Ana...",
+          "metrics": {
+            "length": 303,
+            "pattern": "Mu\\s+nkhani"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 8100,
+          "rule_id": "drop_mu_nkhani",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove article-contents navigation headers",
+          "excerpt": "Kuwonanso gawo mu nkhaniyi ndi chigumula chomwe chimadziwika kuti \" Gravemind \".",
+          "metrics": {
+            "length": 80,
+            "pattern": "Mu\\s+nkhani"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 9894,
+          "rule_id": "drop_url",
+          "rule_type": "drop_url",
+          "rule_description": "Remove lines containing http(s) or www. URLs",
+          "excerpt": "She has gained recognition and multiple awards from Born n Bred \"Recognition award\" in 2012, Mosi Lager Zambian Music...",
+          "metrics": {
+            "length": 449
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 11510,
+          "rule_id": "drop_url",
+          "rule_type": "drop_url",
+          "rule_description": "Remove lines containing http(s) or www. URLs",
+          "excerpt": "mu 1847 kuchokera ku zitsanzo zomwe zidapezeka ku Liberia.https://onlinelibrary.wiley.com/doi/abs/10.1002/evan.20203 ...",
+          "metrics": {
+            "length": 577
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 11951,
+          "rule_id": "drop_url",
+          "rule_type": "drop_url",
+          "rule_description": "Remove lines containing http(s) or www. URLs",
+          "excerpt": "Nyimbo za Bach zimaimbidwa, kuphunzira ndikusangalala padziko lonse lapansi.https://www.oxfordmusiconline.com/grovemu...",
+          "metrics": {
+            "length": 404
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 15173,
+          "rule_id": "drop_url",
+          "rule_type": "drop_url",
+          "rule_description": "Remove lines containing http(s) or www. URLs",
+          "excerpt": "link https://en.wikipedia.org/wiki/File:Cataratas_Victoria,_Zambia-Zimbabue,_2018-07-27,_DD_16-20_PAN.jpg center thum...",
+          "metrics": {
+            "length": 128
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 15892,
+          "rule_id": "drop_url",
+          "rule_type": "drop_url",
+          "rule_description": "Remove lines containing http(s) or www. URLs",
+          "excerpt": "GK1 Aleksandar StojanovićRB2 Nikola JovanovićLB3 Milan JovinRM4 Slavoljub MuslinCB5 Dragan MiletovićCB6 Ivan JurišićC...",
+          "metrics": {
+            "length": 686
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 3926,
+          "rule_id": "drop_wikimedia",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove Wikimedia project chrome lines",
+          "excerpt": "Ndilo buku lalikulu kwambiri komanso lodziwika bwino lomwe likuwonekera pa intaneti, ndipo ndi imodzi mwa malo otchuk...",
+          "metrics": {
+            "length": 329,
+            "pattern": "\\bWikimedia\\b"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 5117,
+          "rule_id": "drop_wikimedia",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove Wikimedia project chrome lines",
+          "excerpt": "Zigawo za Wikipedia zakhala zikuchitika ku Wikimedia chapitukulu, maphunziro ovomerezedwa monga Sonoma State Universi...",
+          "metrics": {
+            "length": 254,
+            "pattern": "\\bWikimedia\\b"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 6547,
+          "rule_id": "drop_wikimedia",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove Wikimedia project chrome lines",
+          "excerpt": "Amaphatikizapo Wikimedia Foundation wiki, MediaWiki wiki, Test Wikipedia, Wikimedia Incubator, Bugzilla, ndi Wikimani...",
+          "metrics": {
+            "length": 124,
+            "pattern": "\\bWikimedia\\b"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 6552,
+          "rule_id": "drop_wikimedia",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove Wikimedia project chrome lines",
+          "excerpt": "Popeza anthu amatha kulemba ma wikis, Wikimedia amapanga kugwiritsa ntchito.",
+          "metrics": {
+            "length": 76,
+            "pattern": "\\bWikimedia\\b"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 12460,
+          "rule_id": "drop_wikimedia",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove Wikimedia project chrome lines",
+          "excerpt": "Ndi ntchito ya Wikimedia Foundation.",
+          "metrics": {
+            "length": 36,
+            "pattern": "\\bWikimedia\\b"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 14,
+          "rule_id": "drop_wikipedia_muzinenero",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove other-languages navigation",
+          "excerpt": "Wikipedia Muzinenero Zina",
+          "metrics": {
+            "length": 26,
+            "pattern": "Wikipedia\\s+Muzinenero\\s+Zina"
+          }
+        }
+      ]
+    }
+  },
+  "disclaimers": [
+    "Interim cleaned outputs are not final processed training data.",
+    "Licensing and allowed_for_training remain unresolved until human review.",
+    "Language-signal filters are transparent heuristics, not authoritative language identification.",
+    "Raw files under data/raw/ must remain byte-identical."
+  ],
+  "warnings": [
+    "Language-signal filters are heuristics, not language identification.",
+    "Interim outputs must not be treated as licensed training data.",
+    "existing_corpus is intentionally not cleaned here (redundant composite)."
+  ]
+}

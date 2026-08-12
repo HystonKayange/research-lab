@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-08-04T08:27:25.965848Z",
+  "annotation_status": "pending_human_labels",
+  "dataset_role": "blind_holdout",
+  "development_set_role": "development_validation",
+  "n_records": 250,
+  "n_labeled": 0,
+  "n_unlabeled": 250,
+  "note": "Run summarize_cleaning_holdout.py after human labeling.",
+  "sample_path": "data/reports/cleaning_holdout_sample.jsonl",
+  "manifest_path": "data/reports/cleaning_holdout_manifest.json"
+}

@@ -1,0 +1,33 @@
+{
+  "tool": {
+    "name": "audit_tokenizer_failures",
+    "version": "0.1.0"
+  },
+  "generated_at": "2026-08-05T23:57:57.578073Z",
+  "output_dir": "data/reports/tokenizer_failure_audit_v0_1",
+  "n_candidates": 2500,
+  "test_split_accessed": false,
+  "stats_summary": {
+    "n_words_compared": 12055,
+    "n_bpe_unigram_disagree_in_pool": 6436,
+    "n_candidates_emitted": 2500,
+    "tag_counts": {
+      "bpe_unigram_disagree": 2500,
+      "vocab_size_sensitive": 2500,
+      "high_fragmentation": 2455,
+      "split_validation": 1843,
+      "unseen_in_train": 1774,
+      "source_bible": 1317,
+      "long_word": 1311,
+      "source_wikipedia": 1183,
+      "rare_train": 680,
+      "split_train": 657,
+      "fertility_asymmetric": 549,
+      "mixed_orthography_heuristic": 422,
+      "family_stem_hit": 73,
+      "contains_w_hat": 69,
+      "family_segmentation_inconsistent": 39,
+      "whole_word_single_token": 10
+    }
+  }
+}

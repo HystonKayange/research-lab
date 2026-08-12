@@ -1,0 +1,5006 @@
+{
+  "tool": {
+    "name": "audit_lm_validation_results",
+    "version": "0.1.0"
+  },
+  "generated_at": "2026-08-05T08:49:45.189225Z",
+  "experiment_version": "lm_baselines_v0.1",
+  "matrix_id": "lm_baselines_v0_1_final_matrix_r2",
+  "matrix_config": "configs/models/lm_baselines_v0_1_final_matrix_r2.json",
+  "matrix_config_checksum": "7956fea6eaf8c2f81e25a09e30d4e532dab6ef57d596be96eb8bca0de066891a",
+  "number_of_expected_runs": 36,
+  "number_of_valid_runs": 36,
+  "number_of_failed_audit_runs": 0,
+  "failed_runs": [],
+  "excluded_artifacts": {
+    "canary": "systems_validation_only",
+    "calibration": "budget_selection_only",
+    "pilots": "pipeline_pilot_only",
+    "r1_4m_paths": "excluded_by_path_slug"
+  },
+  "groups": [
+    {
+      "track": "architecture_matched",
+      "budget_policy": "fixed_characters",
+      "tokenizers": {
+        "character": {
+          "seeds": {
+            "42": {
+              "validation_bpc": 1.485549631910996,
+              "validation_bpb": 1.4711614914597635,
+              "best_step": 17137,
+              "best_effective_epochs": 30.00003979411735,
+              "final_budget_bpc": 1.485549631910996,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 138714154.0,
+              "optimizer_steps": 17137,
+              "effective_epochs": 30.00003979411735,
+              "runtime_s": 401.03550416699727,
+              "peak_vram_gb": 0.3834528923034668,
+              "total_parameters": 3459328,
+              "embedding_parameters": 299776,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.4855200668232151,
+                "combined_validation_bpb": 1.4711322127216448,
+                "bible_validation_bpc": 1.306288772962748,
+                "bible_validation_bpb": 1.2922598203026925,
+                "wikipedia_validation_bpc": 1.9448657452974139,
+                "wikipedia_validation_bpb": 1.9313221420101718
+              }
+            },
+            "1337": {
+              "validation_bpc": 1.4717174719617532,
+              "validation_bpb": 1.457463301494302,
+              "best_step": 17137,
+              "best_effective_epochs": 30.000065530530197,
+              "final_budget_bpc": 1.4717174719617532,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 138714273.0,
+              "optimizer_steps": 17137,
+              "effective_epochs": 30.000065530530197,
+              "runtime_s": 409.3885940230102,
+              "peak_vram_gb": 0.3834528923034668,
+              "total_parameters": 3459328,
+              "embedding_parameters": 299776,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.4717130962307645,
+                "combined_validation_bpb": 1.4574589681440124,
+                "bible_validation_bpc": 1.2963667276047348,
+                "bible_validation_bpb": 1.2824443332398279,
+                "wikipedia_validation_bpc": 1.9208122962792895,
+                "wikipedia_validation_bpb": 1.9074361957474324
+              }
+            },
+            "2026": {
+              "validation_bpc": 1.4762954087385072,
+              "validation_bpb": 1.4619968991282188,
+              "best_step": 17137,
+              "best_effective_epochs": 30.00006812579872,
+              "final_budget_bpc": 1.4762954087385072,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 138714285.0,
+              "optimizer_steps": 17137,
+              "effective_epochs": 30.00006812579872,
+              "runtime_s": 406.9474825649959,
+              "peak_vram_gb": 0.3834528923034668,
+              "total_parameters": 3459328,
+              "embedding_parameters": 299776,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.4762535832907302,
+                "combined_validation_bpb": 1.461955478776579,
+                "bible_validation_bpc": 1.3013280391106277,
+                "bible_validation_bpb": 1.287352362496276,
+                "wikipedia_validation_bpc": 1.925907766556155,
+                "wikipedia_validation_bpb": 1.9124961823266913
+              }
+            }
+          },
+          "mean_validation_bpc": {
+            "n": 3,
+            "mean": 1.4778541708704187,
+            "stdev": 0.007046592563308197,
+            "median": 1.4762954087385072,
+            "min": 1.4717174719617532,
+            "max": 1.485549631910996,
+            "values": [
+              1.485549631910996,
+              1.4717174719617532,
+              1.4762954087385072
+            ]
+          },
+          "mean_validation_bpb": {
+            "n": 3,
+            "mean": 1.4635405640274282,
+            "stdev": 0.006978343504962767,
+            "median": 1.4619968991282188,
+            "min": 1.457463301494302,
+            "max": 1.4711614914597635,
+            "values": [
+              1.4711614914597635,
+              1.457463301494302,
+              1.4619968991282188
+            ]
+          },
+          "mean_final_budget_bpc": {
+            "n": 3,
+            "mean": 1.4778541708704187,
+            "stdev": 0.007046592563308197,
+            "median": 1.4762954087385072,
+            "min": 1.4717174719617532,
+            "max": 1.485549631910996,
+            "values": [
+              1.485549631910996,
+              1.4717174719617532,
+              1.4762954087385072
+            ]
+          },
+          "mean_best_vs_final_bpc_gap": {
+            "n": 3,
+            "mean": 0.0,
+            "stdev": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "mean_runtime_s": {
+            "n": 3,
+            "mean": 405.7905269183345,
+            "stdev": 4.295047998790346,
+            "median": 406.9474825649959,
+            "min": 401.03550416699727,
+            "max": 409.3885940230102,
+            "values": [
+              401.03550416699727,
+              409.3885940230102,
+              406.9474825649959
+            ]
+          },
+          "mean_peak_vram_gb": {
+            "n": 3,
+            "mean": 0.3834528923034668,
+            "stdev": 0.0,
+            "median": 0.3834528923034668,
+            "min": 0.3834528923034668,
+            "max": 0.3834528923034668,
+            "values": [
+              0.3834528923034668,
+              0.3834528923034668,
+              0.3834528923034668
+            ]
+          },
+          "mean_best_checkpoint_step": {
+            "n": 3,
+            "mean": 17137.0,
+            "stdev": 0.0,
+            "median": 17137.0,
+            "min": 17137.0,
+            "max": 17137.0,
+            "values": [
+              17137.0,
+              17137.0,
+              17137.0
+            ]
+          },
+          "mean_best_checkpoint_effective_epoch": {
+            "n": 3,
+            "mean": 30.00005781681542,
+            "stdev": 1.5661963128757e-05,
+            "median": 30.000065530530197,
+            "min": 30.00003979411735,
+            "max": 30.00006812579872,
+            "values": [
+              30.00003979411735,
+              30.000065530530197,
+              30.00006812579872
+            ]
+          },
+          "mean_characters_processed": {
+            "n": 3,
+            "mean": 138714237.33333334,
+            "stdev": 72.41776945842321,
+            "median": 138714273.0,
+            "min": 138714154.0,
+            "max": 138714285.0,
+            "values": [
+              138714154.0,
+              138714273.0,
+              138714285.0
+            ]
+          },
+          "mean_optimizer_updates": {
+            "n": 3,
+            "mean": 17137.0,
+            "stdev": 0.0,
+            "median": 17137.0,
+            "min": 17137.0,
+            "max": 17137.0,
+            "values": [
+              17137.0,
+              17137.0,
+              17137.0
+            ]
+          },
+          "mean_effective_epochs": {
+            "n": 3,
+            "mean": 30.00005781681542,
+            "stdev": 1.5661963128757e-05,
+            "median": 30.000065530530197,
+            "min": 30.00003979411735,
+            "max": 30.00006812579872,
+            "values": [
+              30.00003979411735,
+              30.000065530530197,
+              30.00006812579872
+            ]
+          },
+          "total_parameters": 3459328,
+          "embedding_parameters": 299776,
+          "non_embedding_parameters": 3159552,
+          "n_seeds": 3
+        },
+        "bpe_8000": {
+          "seeds": {
+            "42": {
+              "validation_bpc": 1.4400530683309323,
+              "validation_bpb": 1.4261055802367644,
+              "best_step": 3435,
+              "best_effective_epochs": 26.00079803849089,
+              "final_budget_bpc": 1.442717331351503,
+              "best_vs_final_bpc_gap": 0.0026642630205706563,
+              "characters_processed": 138740485.8706122,
+              "optimizer_steps": 3964,
+              "effective_epochs": 30.00573465036266,
+              "runtime_s": 105.57412761599699,
+              "peak_vram_gb": 0.7370014190673828,
+              "total_parameters": 5273088,
+              "embedding_parameters": 2113536,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.4400458121489457,
+                "combined_validation_bpb": 1.4260983943337933,
+                "bible_validation_bpc": 1.2478525718951303,
+                "bible_validation_bpb": 1.2344511976965753,
+                "wikipedia_validation_bpc": 1.9327007572534785,
+                "wikipedia_validation_bpb": 1.91924186817978
+              }
+            },
+            "1337": {
+              "validation_bpc": 1.439966637183555,
+              "validation_bpb": 1.4260199862095084,
+              "best_step": 3964,
+              "best_effective_epochs": 30.005467073063038,
+              "final_budget_bpc": 1.439966637183555,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 138739248.6469618,
+              "optimizer_steps": 3964,
+              "effective_epochs": 30.005467073063038,
+              "runtime_s": 107.89569042201038,
+              "peak_vram_gb": 0.7370014190673828,
+              "total_parameters": 5273088,
+              "embedding_parameters": 2113536,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.4399368130643915,
+                "combined_validation_bpb": 1.4259904509488295,
+                "bible_validation_bpc": 1.2459930145625115,
+                "bible_validation_bpb": 1.2326116111715817,
+                "wikipedia_validation_bpc": 1.9387051953151393,
+                "wikipedia_validation_bpb": 1.925204492698647
+              }
+            },
+            "2026": {
+              "validation_bpc": 1.4367888941333573,
+              "validation_bpb": 1.42287302086767,
+              "best_step": 3435,
+              "best_effective_epochs": 26.00138167508046,
+              "final_budget_bpc": 1.4397538713933238,
+              "best_vs_final_bpc_gap": 0.0029649772599664725,
+              "characters_processed": 138740935.46807444,
+              "optimizer_steps": 3964,
+              "effective_epochs": 30.00583188587446,
+              "runtime_s": 112.74944135401165,
+              "peak_vram_gb": 0.7370014190673828,
+              "total_parameters": 5273088,
+              "embedding_parameters": 2113536,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.4367416309534498,
+                "combined_validation_bpb": 1.422826215450503,
+                "bible_validation_bpc": 1.2459617944978891,
+                "bible_validation_bpb": 1.2325807263963822,
+                "wikipedia_validation_bpc": 1.9267082632642984,
+                "wikipedia_validation_bpb": 1.9132911045575867
+              }
+            }
+          },
+          "mean_validation_bpc": {
+            "n": 3,
+            "mean": 1.438936199882615,
+            "stdev": 0.0018601234021981589,
+            "median": 1.439966637183555,
+            "min": 1.4367888941333573,
+            "max": 1.4400530683309323,
+            "values": [
+              1.4400530683309323,
+              1.439966637183555,
+              1.4367888941333573
+            ]
+          },
+          "mean_validation_bpb": {
+            "n": 3,
+            "mean": 1.4249995291046476,
+            "stdev": 0.001842107365444659,
+            "median": 1.4260199862095084,
+            "min": 1.42287302086767,
+            "max": 1.4261055802367644,
+            "values": [
+              1.4261055802367644,
+              1.4260199862095084,
+              1.42287302086767
+            ]
+          },
+          "mean_final_budget_bpc": {
+            "n": 3,
+            "mean": 1.4408126133094605,
+            "stdev": 0.0016529611111984293,
+            "median": 1.439966637183555,
+            "min": 1.4397538713933238,
+            "max": 1.442717331351503,
+            "values": [
+              1.442717331351503,
+              1.439966637183555,
+              1.4397538713933238
+            ]
+          },
+          "mean_best_vs_final_bpc_gap": {
+            "n": 3,
+            "mean": 0.0018764134268457096,
+            "stdev": 0.0016319628594974199,
+            "median": 0.0026642630205706563,
+            "min": 0.0,
+            "max": 0.0029649772599664725,
+            "values": [
+              0.0026642630205706563,
+              0.0,
+              0.0029649772599664725
+            ]
+          },
+          "mean_runtime_s": {
+            "n": 3,
+            "mean": 108.73975313067301,
+            "stdev": 3.661367668215208,
+            "median": 107.89569042201038,
+            "min": 105.57412761599699,
+            "max": 112.74944135401165,
+            "values": [
+              105.57412761599699,
+              107.89569042201038,
+              112.74944135401165
+            ]
+          },
+          "mean_peak_vram_gb": {
+            "n": 3,
+            "mean": 0.7370014190673828,
+            "stdev": 0.0,
+            "median": 0.7370014190673828,
+            "min": 0.7370014190673828,
+            "max": 0.7370014190673828,
+            "values": [
+              0.7370014190673828,
+              0.7370014190673828,
+              0.7370014190673828
+            ]
+          },
+          "mean_best_checkpoint_step": {
+            "n": 3,
+            "mean": 3611.3333333333335,
+            "stdev": 305.41829240131204,
+            "median": 3435.0,
+            "min": 3435.0,
+            "max": 3964.0,
+            "values": [
+              3435.0,
+              3964.0,
+              3435.0
+            ]
+          },
+          "mean_best_checkpoint_effective_epoch": {
+            "n": 3,
+            "mean": 27.335882262211463,
+            "stdev": 2.3119282821716163,
+            "median": 26.00138167508046,
+            "min": 26.00079803849089,
+            "max": 30.005467073063038,
+            "values": [
+              26.00079803849089,
+              30.005467073063038,
+              26.00138167508046
+            ]
+          },
+          "mean_characters_processed": {
+            "n": 3,
+            "mean": 138740223.32854947,
+            "stdev": 873.5202444870525,
+            "median": 138740485.8706122,
+            "min": 138739248.6469618,
+            "max": 138740935.46807444,
+            "values": [
+              138740485.8706122,
+              138739248.6469618,
+              138740935.46807444
+            ]
+          },
+          "mean_optimizer_updates": {
+            "n": 3,
+            "mean": 3964.0,
+            "stdev": 0.0,
+            "median": 3964.0,
+            "min": 3964.0,
+            "max": 3964.0,
+            "values": [
+              3964.0,
+              3964.0,
+              3964.0
+            ]
+          },
+          "mean_effective_epochs": {
+            "n": 3,
+            "mean": 30.005677869766718,
+            "stdev": 0.0001889182995397506,
+            "median": 30.00573465036266,
+            "min": 30.005467073063038,
+            "max": 30.00583188587446,
+            "values": [
+              30.00573465036266,
+              30.005467073063038,
+              30.00583188587446
+            ]
+          },
+          "total_parameters": 5273088,
+          "embedding_parameters": 2113536,
+          "non_embedding_parameters": 3159552,
+          "n_seeds": 3
+        },
+        "unigram_8000": {
+          "seeds": {
+            "42": {
+              "validation_bpc": 1.4309637303326443,
+              "validation_bpb": 1.4171042761007715,
+              "best_step": 3146,
+              "best_effective_epochs": 24.002401075285686,
+              "final_budget_bpc": 1.4337089829146474,
+              "best_vs_final_bpc_gap": 0.002745252582003088,
+              "characters_processed": 138739337.72928843,
+              "optimizer_steps": 3933,
+              "effective_epochs": 30.005486339109556,
+              "runtime_s": 111.7792781600001,
+              "peak_vram_gb": 0.7370014190673828,
+              "total_parameters": 5273088,
+              "embedding_parameters": 2113536,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.43093593221877,
+                "combined_validation_bpb": 1.4170767472227128,
+                "bible_validation_bpc": 1.2388910431890237,
+                "bible_validation_bpb": 1.2255859117696932,
+                "wikipedia_validation_bpc": 1.9223021060123708,
+                "wikipedia_validation_bpb": 1.9089156307839328
+              }
+            },
+            "1337": {
+              "validation_bpc": 1.432025169918867,
+              "validation_bpb": 1.418155435221422,
+              "best_step": 3408,
+              "best_effective_epochs": 26.002059722825503,
+              "final_budget_bpc": 1.4359300991196389,
+              "best_vs_final_bpc_gap": 0.0039049292007717895,
+              "characters_processed": 138744608.41731519,
+              "optimizer_steps": 3933,
+              "effective_epochs": 30.00662624333696,
+              "runtime_s": 112.41534798200883,
+              "peak_vram_gb": 0.7370014190673828,
+              "total_parameters": 5273088,
+              "embedding_parameters": 2113536,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.432012027310644,
+                "combined_validation_bpb": 1.418142419904599,
+                "bible_validation_bpc": 1.2379232028353886,
+                "bible_validation_bpb": 1.2246284655852377,
+                "wikipedia_validation_bpc": 1.9273337077405508,
+                "wikipedia_validation_bpb": 1.9139121935805719
+              }
+            },
+            "2026": {
+              "validation_bpc": 1.4309492399904677,
+              "validation_bpb": 1.417089926103336,
+              "best_step": 3671,
+              "best_effective_epochs": 28.007156357593697,
+              "final_budget_bpc": 1.4368191124426801,
+              "best_vs_final_bpc_gap": 0.005869872452212377,
+              "characters_processed": 138738950.75758886,
+              "optimizer_steps": 3933,
+              "effective_epochs": 30.0054026478203,
+              "runtime_s": 107.9119371889974,
+              "peak_vram_gb": 0.7370014190673828,
+              "total_parameters": 5273088,
+              "embedding_parameters": 2113536,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.4309133863033896,
+                "combined_validation_bpb": 1.4170544196735115,
+                "bible_validation_bpc": 1.2356266624666021,
+                "bible_validation_bpb": 1.2223565890249308,
+                "wikipedia_validation_bpc": 1.93116765495893,
+                "wikipedia_validation_bpb": 1.9177194420613775
+              }
+            }
+          },
+          "mean_validation_bpc": {
+            "n": 3,
+            "mean": 1.4313127134139931,
+            "stdev": 0.000617047968967632,
+            "median": 1.4309637303326443,
+            "min": 1.4309492399904677,
+            "max": 1.432025169918867,
+            "values": [
+              1.4309637303326443,
+              1.432025169918867,
+              1.4309492399904677
+            ]
+          },
+          "mean_validation_bpb": {
+            "n": 3,
+            "mean": 1.4174498791418433,
+            "stdev": 0.0006110716133806374,
+            "median": 1.4171042761007715,
+            "min": 1.417089926103336,
+            "max": 1.418155435221422,
+            "values": [
+              1.4171042761007715,
+              1.418155435221422,
+              1.417089926103336
+            ]
+          },
+          "mean_final_budget_bpc": {
+            "n": 3,
+            "mean": 1.4354860648256555,
+            "stdev": 0.0016019055093731993,
+            "median": 1.4359300991196389,
+            "min": 1.4337089829146474,
+            "max": 1.4368191124426801,
+            "values": [
+              1.4337089829146474,
+              1.4359300991196389,
+              1.4368191124426801
+            ]
+          },
+          "mean_best_vs_final_bpc_gap": {
+            "n": 3,
+            "mean": 0.004173351411662418,
+            "stdev": 0.001579509479490781,
+            "median": 0.0039049292007717895,
+            "min": 0.002745252582003088,
+            "max": 0.005869872452212377,
+            "values": [
+              0.002745252582003088,
+              0.0039049292007717895,
+              0.005869872452212377
+            ]
+          },
+          "mean_runtime_s": {
+            "n": 3,
+            "mean": 110.70218777700211,
+            "stdev": 2.437266904241927,
+            "median": 111.7792781600001,
+            "min": 107.9119371889974,
+            "max": 112.41534798200883,
+            "values": [
+              111.7792781600001,
+              112.41534798200883,
+              107.9119371889974
+            ]
+          },
+          "mean_peak_vram_gb": {
+            "n": 3,
+            "mean": 0.7370014190673828,
+            "stdev": 0.0,
+            "median": 0.7370014190673828,
+            "min": 0.7370014190673828,
+            "max": 0.7370014190673828,
+            "values": [
+              0.7370014190673828,
+              0.7370014190673828,
+              0.7370014190673828
+            ]
+          },
+          "mean_best_checkpoint_step": {
+            "n": 3,
+            "mean": 3408.3333333333335,
+            "stdev": 262.50015873011074,
+            "median": 3408.0,
+            "min": 3146.0,
+            "max": 3671.0,
+            "values": [
+              3146.0,
+              3408.0,
+              3671.0
+            ]
+          },
+          "mean_best_checkpoint_effective_epoch": {
+            "n": 3,
+            "mean": 26.003872385234963,
+            "stdev": 2.002378256499565,
+            "median": 26.002059722825503,
+            "min": 24.002401075285686,
+            "max": 28.007156357593697,
+            "values": [
+              24.002401075285686,
+              26.002059722825503,
+              28.007156357593697
+            ]
+          },
+          "mean_characters_processed": {
+            "n": 3,
+            "mean": 138740965.63473082,
+            "stdev": 3160.6701016951242,
+            "median": 138739337.72928843,
+            "min": 138738950.75758886,
+            "max": 138744608.41731519,
+            "values": [
+              138739337.72928843,
+              138744608.41731519,
+              138738950.75758886
+            ]
+          },
+          "mean_optimizer_updates": {
+            "n": 3,
+            "mean": 3933.0,
+            "stdev": 0.0,
+            "median": 3933.0,
+            "min": 3933.0,
+            "max": 3933.0,
+            "values": [
+              3933.0,
+              3933.0,
+              3933.0
+            ]
+          },
+          "mean_effective_epochs": {
+            "n": 3,
+            "mean": 30.005838410088938,
+            "stdev": 0.0006835656354660504,
+            "median": 30.005486339109556,
+            "min": 30.0054026478203,
+            "max": 30.00662624333696,
+            "values": [
+              30.005486339109556,
+              30.00662624333696,
+              30.0054026478203
+            ]
+          },
+          "total_parameters": 5273088,
+          "embedding_parameters": 2113536,
+          "non_embedding_parameters": 3159552,
+          "n_seeds": 3
+        }
+      },
+      "paired_seed_differences": {
+        "bpe_minus_character": {
+          "pairs": [
+            {
+              "seed": 42,
+              "diff": -0.04549656358006371
+            },
+            {
+              "seed": 1337,
+              "diff": -0.03175083477819807
+            },
+            {
+              "seed": 2026,
+              "diff": -0.03950651460514987
+            }
+          ],
+          "mean_diff": {
+            "n": 3,
+            "mean": -0.038917970987803883,
+            "stdev": 0.006891738007625412,
+            "median": -0.03950651460514987,
+            "min": -0.04549656358006371,
+            "max": -0.03175083477819807,
+            "values": [
+              -0.04549656358006371,
+              -0.03175083477819807,
+              -0.03950651460514987
+            ]
+          },
+          "note": "negative mean_diff => first tokenizer lower BPC (better)"
+        },
+        "unigram_minus_character": {
+          "pairs": [
+            {
+              "seed": 42,
+              "diff": -0.05458590157835164
+            },
+            {
+              "seed": 1337,
+              "diff": -0.039692302042886096
+            },
+            {
+              "seed": 2026,
+              "diff": -0.04534616874803943
+            }
+          ],
+          "mean_diff": {
+            "n": 3,
+            "mean": -0.04654145745642572,
+            "stdev": 0.007518401632195614,
+            "median": -0.04534616874803943,
+            "min": -0.05458590157835164,
+            "max": -0.039692302042886096,
+            "values": [
+              -0.05458590157835164,
+              -0.039692302042886096,
+              -0.04534616874803943
+            ]
+          },
+          "note": "negative mean_diff => first tokenizer lower BPC (better)"
+        },
+        "unigram_minus_bpe": {
+          "pairs": [
+            {
+              "seed": 42,
+              "diff": -0.009089337998287927
+            },
+            {
+              "seed": 1337,
+              "diff": -0.007941467264688029
+            },
+            {
+              "seed": 2026,
+              "diff": -0.005839654142889561
+            }
+          ],
+          "mean_diff": {
+            "n": 3,
+            "mean": -0.007623486468621839,
+            "stdev": 0.0016480124787177323,
+            "median": -0.007941467264688029,
+            "min": -0.009089337998287927,
+            "max": -0.005839654142889561,
+            "values": [
+              -0.009089337998287927,
+              -0.007941467264688029,
+              -0.005839654142889561
+            ]
+          },
+          "note": "negative mean_diff => first tokenizer lower BPC (better)"
+        }
+      },
+      "provisional_validation_leader": "unigram_8000",
+      "provisional_validation_leader_mean_bpc": 1.4313127134139931,
+      "caution": "Provisional validation leader only; test evaluation still required."
+    },
+    {
+      "track": "architecture_matched",
+      "budget_policy": "fixed_updates",
+      "tokenizers": {
+        "character": {
+          "seeds": {
+            "42": {
+              "validation_bpc": 1.8772380253125969,
+              "validation_bpb": 1.8590562266110302,
+              "best_step": 4000,
+              "best_effective_epochs": 7.002409490550952,
+              "final_budget_bpc": 1.8772380253125969,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 32377734.0,
+              "optimizer_steps": 4000,
+              "effective_epochs": 7.002409490550952,
+              "runtime_s": 95.61218333400029,
+              "peak_vram_gb": 0.3834528923034668,
+              "total_parameters": 3459328,
+              "embedding_parameters": 299776,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.8772052469694167,
+                "combined_validation_bpb": 1.859023765739172,
+                "bible_validation_bpc": 1.6707496412545824,
+                "bible_validation_bpb": 1.652806543136389,
+                "wikipedia_validation_bpc": 2.410513425398427,
+                "wikipedia_validation_bpb": 2.3937271574356607
+              }
+            },
+            "1337": {
+              "validation_bpc": 1.8843258181818257,
+              "validation_bpb": 1.8660753713805245,
+              "best_step": 4000,
+              "best_effective_epochs": 7.002412085819475,
+              "final_budget_bpc": 1.8843258181818257,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 32377746.0,
+              "optimizer_steps": 4000,
+              "effective_epochs": 7.002412085819475,
+              "runtime_s": 104.36300158599624,
+              "peak_vram_gb": 0.3834528923034668,
+              "total_parameters": 3459328,
+              "embedding_parameters": 299776,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.8842340142666179,
+                "combined_validation_bpb": 1.8659844566228365,
+                "bible_validation_bpc": 1.6766673467000863,
+                "bible_validation_bpb": 1.658660695092596,
+                "wikipedia_validation_bpc": 2.4198348451450573,
+                "wikipedia_validation_bpb": 2.4029836649324725
+              }
+            },
+            "2026": {
+              "validation_bpc": 1.8987876179076932,
+              "validation_bpb": 1.8803971028103463,
+              "best_step": 4000,
+              "best_effective_epochs": 7.0024084091890675,
+              "final_budget_bpc": 1.8987876179076932,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 32377729.0,
+              "optimizer_steps": 4000,
+              "effective_epochs": 7.0024084091890675,
+              "runtime_s": 94.91602137200243,
+              "peak_vram_gb": 0.3834528923034668,
+              "total_parameters": 3459328,
+              "embedding_parameters": 299776,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.898757358582774,
+                "combined_validation_bpb": 1.8803671365590526,
+                "bible_validation_bpc": 1.689790637249417,
+                "bible_validation_bpb": 1.6716430474162667,
+                "wikipedia_validation_bpc": 2.437770911374966,
+                "wikipedia_validation_bpb": 2.420794828471212
+              }
+            }
+          },
+          "mean_validation_bpc": {
+            "n": 3,
+            "mean": 1.886783820467372,
+            "stdev": 0.010983058166124363,
+            "median": 1.8843258181818257,
+            "min": 1.8772380253125969,
+            "max": 1.8987876179076932,
+            "values": [
+              1.8772380253125969,
+              1.8843258181818257,
+              1.8987876179076932
+            ]
+          },
+          "mean_validation_bpb": {
+            "n": 3,
+            "mean": 1.868509566933967,
+            "stdev": 0.010876682869006244,
+            "median": 1.8660753713805245,
+            "min": 1.8590562266110302,
+            "max": 1.8803971028103463,
+            "values": [
+              1.8590562266110302,
+              1.8660753713805245,
+              1.8803971028103463
+            ]
+          },
+          "mean_final_budget_bpc": {
+            "n": 3,
+            "mean": 1.886783820467372,
+            "stdev": 0.010983058166124363,
+            "median": 1.8843258181818257,
+            "min": 1.8772380253125969,
+            "max": 1.8987876179076932,
+            "values": [
+              1.8772380253125969,
+              1.8843258181818257,
+              1.8987876179076932
+            ]
+          },
+          "mean_best_vs_final_bpc_gap": {
+            "n": 3,
+            "mean": 0.0,
+            "stdev": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "mean_runtime_s": {
+            "n": 3,
+            "mean": 98.29706876399966,
+            "stdev": 5.2647712315033015,
+            "median": 95.61218333400029,
+            "min": 94.91602137200243,
+            "max": 104.36300158599624,
+            "values": [
+              95.61218333400029,
+              104.36300158599624,
+              94.91602137200243
+            ]
+          },
+          "mean_peak_vram_gb": {
+            "n": 3,
+            "mean": 0.3834528923034668,
+            "stdev": 0.0,
+            "median": 0.3834528923034668,
+            "min": 0.3834528923034668,
+            "max": 0.3834528923034668,
+            "values": [
+              0.3834528923034668,
+              0.3834528923034668,
+              0.3834528923034668
+            ]
+          },
+          "mean_best_checkpoint_step": {
+            "n": 3,
+            "mean": 4000.0,
+            "stdev": 0.0,
+            "median": 4000.0,
+            "min": 4000.0,
+            "max": 4000.0,
+            "values": [
+              4000.0,
+              4000.0,
+              4000.0
+            ]
+          },
+          "mean_best_checkpoint_effective_epoch": {
+            "n": 3,
+            "mean": 7.002409995186498,
+            "stdev": 1.889549037107563e-06,
+            "median": 7.002409490550952,
+            "min": 7.0024084091890675,
+            "max": 7.002412085819475,
+            "values": [
+              7.002409490550952,
+              7.002412085819475,
+              7.0024084091890675
+            ]
+          },
+          "mean_characters_processed": {
+            "n": 3,
+            "mean": 32377736.333333332,
+            "stdev": 8.736894948054104,
+            "median": 32377734.0,
+            "min": 32377729.0,
+            "max": 32377746.0,
+            "values": [
+              32377734.0,
+              32377746.0,
+              32377729.0
+            ]
+          },
+          "mean_optimizer_updates": {
+            "n": 3,
+            "mean": 4000.0,
+            "stdev": 0.0,
+            "median": 4000.0,
+            "min": 4000.0,
+            "max": 4000.0,
+            "values": [
+              4000.0,
+              4000.0,
+              4000.0
+            ]
+          },
+          "mean_effective_epochs": {
+            "n": 3,
+            "mean": 7.002409995186498,
+            "stdev": 1.889549037107563e-06,
+            "median": 7.002409490550952,
+            "min": 7.0024084091890675,
+            "max": 7.002412085819475,
+            "values": [
+              7.002409490550952,
+              7.002412085819475,
+              7.0024084091890675
+            ]
+          },
+          "total_parameters": 3459328,
+          "embedding_parameters": 299776,
+          "non_embedding_parameters": 3159552,
+          "n_seeds": 3
+        },
+        "bpe_8000": {
+          "seeds": {
+            "42": {
+              "validation_bpc": 1.4584313829247735,
+              "validation_bpb": 1.4443058935266084,
+              "best_step": 4000,
+              "best_effective_epochs": 30.280593972967942,
+              "final_budget_bpc": 1.4584313829247735,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 140011380.1316152,
+              "optimizer_steps": 4000,
+              "effective_epochs": 30.280593972967942,
+              "runtime_s": 108.79017849698721,
+              "peak_vram_gb": 0.7370014190673828,
+              "total_parameters": 5273088,
+              "embedding_parameters": 2113536,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.4584050800908896,
+                "combined_validation_bpb": 1.4442798454461572,
+                "bible_validation_bpc": 1.271429256374142,
+                "bible_validation_bpb": 1.2577746792106048,
+                "wikipedia_validation_bpc": 1.938426909660229,
+                "wikipedia_validation_bpb": 1.9249281449618265
+              }
+            },
+            "1337": {
+              "validation_bpc": 1.4563571521032426,
+              "validation_bpb": 1.4422517524575484,
+              "best_step": 4000,
+              "best_effective_epochs": 30.278992841124346,
+              "final_budget_bpc": 1.4563571521032426,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 140003976.8197979,
+              "optimizer_steps": 4000,
+              "effective_epochs": 30.278992841124346,
+              "runtime_s": 109.88703215699934,
+              "peak_vram_gb": 0.7370014190673828,
+              "total_parameters": 5273088,
+              "embedding_parameters": 2113536,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.4563323687733256,
+                "combined_validation_bpb": 1.4422272091640624,
+                "bible_validation_bpc": 1.2706370472343573,
+                "bible_validation_bpb": 1.2569909780399222,
+                "wikipedia_validation_bpc": 1.9345344153708868,
+                "wikipedia_validation_bpb": 1.921062757118562
+              }
+            },
+            "2026": {
+              "validation_bpc": 1.45532197350949,
+              "validation_bpb": 1.4412265999811864,
+              "best_step": 4000,
+              "best_effective_epochs": 30.277308214660117,
+              "final_budget_bpc": 1.45532197350949,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 139996187.44563723,
+              "optimizer_steps": 4000,
+              "effective_epochs": 30.277308214660117,
+              "runtime_s": 115.85757203999674,
+              "peak_vram_gb": 0.7370014190673828,
+              "total_parameters": 5273088,
+              "embedding_parameters": 2113536,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.4553184169893358,
+                "combined_validation_bpb": 1.4412230779073478,
+                "bible_validation_bpc": 1.2689082025135998,
+                "bible_validation_bpb": 1.2552807003322526,
+                "wikipedia_validation_bpc": 1.9343379892251007,
+                "wikipedia_validation_bpb": 1.920867698839838
+              }
+            }
+          },
+          "mean_validation_bpc": {
+            "n": 3,
+            "mean": 1.4567035028458353,
+            "stdev": 0.0015833748310600108,
+            "median": 1.4563571521032426,
+            "min": 1.45532197350949,
+            "max": 1.4584313829247735,
+            "values": [
+              1.4584313829247735,
+              1.4563571521032426,
+              1.45532197350949
+            ]
+          },
+          "mean_validation_bpb": {
+            "n": 3,
+            "mean": 1.4425947486551145,
+            "stdev": 0.001568039214553634,
+            "median": 1.4422517524575484,
+            "min": 1.4412265999811864,
+            "max": 1.4443058935266084,
+            "values": [
+              1.4443058935266084,
+              1.4422517524575484,
+              1.4412265999811864
+            ]
+          },
+          "mean_final_budget_bpc": {
+            "n": 3,
+            "mean": 1.4567035028458353,
+            "stdev": 0.0015833748310600108,
+            "median": 1.4563571521032426,
+            "min": 1.45532197350949,
+            "max": 1.4584313829247735,
+            "values": [
+              1.4584313829247735,
+              1.4563571521032426,
+              1.45532197350949
+            ]
+          },
+          "mean_best_vs_final_bpc_gap": {
+            "n": 3,
+            "mean": 0.0,
+            "stdev": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "mean_runtime_s": {
+            "n": 3,
+            "mean": 111.51159423132776,
+            "stdev": 3.803473980843421,
+            "median": 109.88703215699934,
+            "min": 108.79017849698721,
+            "max": 115.85757203999674,
+            "values": [
+              108.79017849698721,
+              109.88703215699934,
+              115.85757203999674
+            ]
+          },
+          "mean_peak_vram_gb": {
+            "n": 3,
+            "mean": 0.7370014190673828,
+            "stdev": 0.0,
+            "median": 0.7370014190673828,
+            "min": 0.7370014190673828,
+            "max": 0.7370014190673828,
+            "values": [
+              0.7370014190673828,
+              0.7370014190673828,
+              0.7370014190673828
+            ]
+          },
+          "mean_best_checkpoint_step": {
+            "n": 3,
+            "mean": 4000.0,
+            "stdev": 0.0,
+            "median": 4000.0,
+            "min": 4000.0,
+            "max": 4000.0,
+            "values": [
+              4000.0,
+              4000.0,
+              4000.0
+            ]
+          },
+          "mean_best_checkpoint_effective_epoch": {
+            "n": 3,
+            "mean": 30.278965009584134,
+            "stdev": 0.0016430559516747432,
+            "median": 30.278992841124346,
+            "min": 30.277308214660117,
+            "max": 30.280593972967942,
+            "values": [
+              30.280593972967942,
+              30.278992841124346,
+              30.277308214660117
+            ]
+          },
+          "mean_characters_processed": {
+            "n": 3,
+            "mean": 140003848.13235012,
+            "stdev": 7597.160466298137,
+            "median": 140003976.8197979,
+            "min": 139996187.44563723,
+            "max": 140011380.1316152,
+            "values": [
+              140011380.1316152,
+              140003976.8197979,
+              139996187.44563723
+            ]
+          },
+          "mean_optimizer_updates": {
+            "n": 3,
+            "mean": 4000.0,
+            "stdev": 0.0,
+            "median": 4000.0,
+            "min": 4000.0,
+            "max": 4000.0,
+            "values": [
+              4000.0,
+              4000.0,
+              4000.0
+            ]
+          },
+          "mean_effective_epochs": {
+            "n": 3,
+            "mean": 30.278965009584134,
+            "stdev": 0.0016430559516747432,
+            "median": 30.278992841124346,
+            "min": 30.277308214660117,
+            "max": 30.280593972967942,
+            "values": [
+              30.280593972967942,
+              30.278992841124346,
+              30.277308214660117
+            ]
+          },
+          "total_parameters": 5273088,
+          "embedding_parameters": 2113536,
+          "non_embedding_parameters": 3159552,
+          "n_seeds": 3
+        },
+        "unigram_8000": {
+          "seeds": {
+            "42": {
+              "validation_bpc": 1.4423002957801767,
+              "validation_bpb": 1.4283310423922275,
+              "best_step": 4000,
+              "best_effective_epochs": 30.51596971801875,
+              "final_budget_bpc": 1.4423002957801767,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 141099710.26620537,
+              "optimizer_steps": 4000,
+              "effective_epochs": 30.51596971801875,
+              "runtime_s": 113.3609640620125,
+              "peak_vram_gb": 0.7370014190673828,
+              "total_parameters": 5273088,
+              "embedding_parameters": 2113536,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.4422799366292007,
+                "combined_validation_bpb": 1.4283108804277456,
+                "bible_validation_bpc": 1.255080622416735,
+                "bible_validation_bpb": 1.2416016222133555,
+                "wikipedia_validation_bpc": 1.9211091358188803,
+                "wikipedia_validation_bpb": 1.9077309681638948
+              }
+            },
+            "1337": {
+              "validation_bpc": 1.4448921445269196,
+              "validation_bpb": 1.4308977880505271,
+              "best_step": 4000,
+              "best_effective_epochs": 30.517614632016798,
+              "final_budget_bpc": 1.4448921445269196,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 141107316.01790464,
+              "optimizer_steps": 4000,
+              "effective_epochs": 30.517614632016798,
+              "runtime_s": 108.00926914101001,
+              "peak_vram_gb": 0.7370014190673828,
+              "total_parameters": 5273088,
+              "embedding_parameters": 2113536,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.4448874869169344,
+                "combined_validation_bpb": 1.4308931755513516,
+                "bible_validation_bpc": 1.2557535879143225,
+                "bible_validation_bpb": 1.2422673603648133,
+                "wikipedia_validation_bpc": 1.9277256637780684,
+                "wikipedia_validation_bpb": 1.9143014201252744
+              }
+            },
+            "2026": {
+              "validation_bpc": 1.4428717481894078,
+              "validation_bpb": 1.4288969600570456,
+              "best_step": 4000,
+              "best_effective_epochs": 30.51726168894272,
+              "final_budget_bpc": 1.4428717481894078,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 141105684.08007166,
+              "optimizer_steps": 4000,
+              "effective_epochs": 30.51726168894272,
+              "runtime_s": 111.84359674000007,
+              "peak_vram_gb": 0.7370014190673828,
+              "total_parameters": 5273088,
+              "embedding_parameters": 2113536,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.4428797905495336,
+                "combined_validation_bpb": 1.4289049245237073,
+                "bible_validation_bpc": 1.254543902161975,
+                "bible_validation_bpb": 1.2410706660922248,
+                "wikipedia_validation_bpc": 1.9247590874386598,
+                "wikipedia_validation_bpb": 1.9113555023496558
+              }
+            }
+          },
+          "mean_validation_bpc": {
+            "n": 3,
+            "mean": 1.4433547294988347,
+            "stdev": 0.0013617537187171512,
+            "median": 1.4428717481894078,
+            "min": 1.4423002957801767,
+            "max": 1.4448921445269196,
+            "values": [
+              1.4423002957801767,
+              1.4448921445269196,
+              1.4428717481894078
+            ]
+          },
+          "mean_validation_bpb": {
+            "n": 3,
+            "mean": 1.4293752634999335,
+            "stdev": 0.0013485645910406927,
+            "median": 1.4288969600570456,
+            "min": 1.4283310423922275,
+            "max": 1.4308977880505271,
+            "values": [
+              1.4283310423922275,
+              1.4308977880505271,
+              1.4288969600570456
+            ]
+          },
+          "mean_final_budget_bpc": {
+            "n": 3,
+            "mean": 1.4433547294988347,
+            "stdev": 0.0013617537187171512,
+            "median": 1.4428717481894078,
+            "min": 1.4423002957801767,
+            "max": 1.4448921445269196,
+            "values": [
+              1.4423002957801767,
+              1.4448921445269196,
+              1.4428717481894078
+            ]
+          },
+          "mean_best_vs_final_bpc_gap": {
+            "n": 3,
+            "mean": 0.0,
+            "stdev": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "mean_runtime_s": {
+            "n": 3,
+            "mean": 111.0712766476742,
+            "stdev": 2.7581730140853473,
+            "median": 111.84359674000007,
+            "min": 108.00926914101001,
+            "max": 113.3609640620125,
+            "values": [
+              113.3609640620125,
+              108.00926914101001,
+              111.84359674000007
+            ]
+          },
+          "mean_peak_vram_gb": {
+            "n": 3,
+            "mean": 0.7370014190673828,
+            "stdev": 0.0,
+            "median": 0.7370014190673828,
+            "min": 0.7370014190673828,
+            "max": 0.7370014190673828,
+            "values": [
+              0.7370014190673828,
+              0.7370014190673828,
+              0.7370014190673828
+            ]
+          },
+          "mean_best_checkpoint_step": {
+            "n": 3,
+            "mean": 4000.0,
+            "stdev": 0.0,
+            "median": 4000.0,
+            "min": 4000.0,
+            "max": 4000.0,
+            "values": [
+              4000.0,
+              4000.0,
+              4000.0
+            ]
+          },
+          "mean_best_checkpoint_effective_epoch": {
+            "n": 3,
+            "mean": 30.51694867965942,
+            "stdev": 0.0008659772651854308,
+            "median": 30.51726168894272,
+            "min": 30.51596971801875,
+            "max": 30.517614632016798,
+            "values": [
+              30.51596971801875,
+              30.517614632016798,
+              30.51726168894272
+            ]
+          },
+          "mean_characters_processed": {
+            "n": 3,
+            "mean": 141104236.78806055,
+            "stdev": 4004.104812786807,
+            "median": 141105684.08007166,
+            "min": 141099710.26620537,
+            "max": 141107316.01790464,
+            "values": [
+              141099710.26620537,
+              141107316.01790464,
+              141105684.08007166
+            ]
+          },
+          "mean_optimizer_updates": {
+            "n": 3,
+            "mean": 4000.0,
+            "stdev": 0.0,
+            "median": 4000.0,
+            "min": 4000.0,
+            "max": 4000.0,
+            "values": [
+              4000.0,
+              4000.0,
+              4000.0
+            ]
+          },
+          "mean_effective_epochs": {
+            "n": 3,
+            "mean": 30.51694867965942,
+            "stdev": 0.0008659772651854308,
+            "median": 30.51726168894272,
+            "min": 30.51596971801875,
+            "max": 30.517614632016798,
+            "values": [
+              30.51596971801875,
+              30.517614632016798,
+              30.51726168894272
+            ]
+          },
+          "total_parameters": 5273088,
+          "embedding_parameters": 2113536,
+          "non_embedding_parameters": 3159552,
+          "n_seeds": 3
+        }
+      },
+      "paired_seed_differences": {
+        "bpe_minus_character": {
+          "pairs": [
+            {
+              "seed": 42,
+              "diff": -0.4188066423878234
+            },
+            {
+              "seed": 1337,
+              "diff": -0.4279686660785831
+            },
+            {
+              "seed": 2026,
+              "diff": -0.44346564439820324
+            }
+          ],
+          "mean_diff": {
+            "n": 3,
+            "mean": -0.4300803176215366,
+            "stdev": 0.012464385232177428,
+            "median": -0.4279686660785831,
+            "min": -0.44346564439820324,
+            "max": -0.4188066423878234,
+            "values": [
+              -0.4188066423878234,
+              -0.4279686660785831,
+              -0.44346564439820324
+            ]
+          },
+          "note": "negative mean_diff => first tokenizer lower BPC (better)"
+        },
+        "unigram_minus_character": {
+          "pairs": [
+            {
+              "seed": 42,
+              "diff": -0.43493772953242016
+            },
+            {
+              "seed": 1337,
+              "diff": -0.43943367365490604
+            },
+            {
+              "seed": 2026,
+              "diff": -0.45591586971828546
+            }
+          ],
+          "mean_diff": {
+            "n": 3,
+            "mean": -0.4434290909685372,
+            "stdev": 0.011045049164535303,
+            "median": -0.43943367365490604,
+            "min": -0.45591586971828546,
+            "max": -0.43493772953242016,
+            "values": [
+              -0.43493772953242016,
+              -0.43943367365490604,
+              -0.45591586971828546
+            ]
+          },
+          "note": "negative mean_diff => first tokenizer lower BPC (better)"
+        },
+        "unigram_minus_bpe": {
+          "pairs": [
+            {
+              "seed": 42,
+              "diff": -0.016131087144596767
+            },
+            {
+              "seed": 1337,
+              "diff": -0.01146500757632296
+            },
+            {
+              "seed": 2026,
+              "diff": -0.01245022532008222
+            }
+          ],
+          "mean_diff": {
+            "n": 3,
+            "mean": -0.01334877334700065,
+            "stdev": 0.0024593934316970963,
+            "median": -0.01245022532008222,
+            "min": -0.016131087144596767,
+            "max": -0.01146500757632296,
+            "values": [
+              -0.016131087144596767,
+              -0.01146500757632296,
+              -0.01245022532008222
+            ]
+          },
+          "note": "negative mean_diff => first tokenizer lower BPC (better)"
+        }
+      },
+      "provisional_validation_leader": "unigram_8000",
+      "provisional_validation_leader_mean_bpc": 1.4433547294988347,
+      "caution": "Provisional validation leader only; test evaluation still required."
+    },
+    {
+      "track": "parameter_matched",
+      "budget_policy": "fixed_characters",
+      "tokenizers": {
+        "character": {
+          "seeds": {
+            "42": {
+              "validation_bpc": 1.485549631910996,
+              "validation_bpb": 1.4711614914597635,
+              "best_step": 17137,
+              "best_effective_epochs": 30.00003979411735,
+              "final_budget_bpc": 1.485549631910996,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 138714154.0,
+              "optimizer_steps": 17137,
+              "effective_epochs": 30.00003979411735,
+              "runtime_s": 414.7658493589988,
+              "peak_vram_gb": 0.3834528923034668,
+              "total_parameters": 3459328,
+              "embedding_parameters": 299776,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.4855200668232151,
+                "combined_validation_bpb": 1.4711322127216448,
+                "bible_validation_bpc": 1.306288772962748,
+                "bible_validation_bpb": 1.2922598203026925,
+                "wikipedia_validation_bpc": 1.9448657452974139,
+                "wikipedia_validation_bpb": 1.9313221420101718
+              }
+            },
+            "1337": {
+              "validation_bpc": 1.4717174719617532,
+              "validation_bpb": 1.457463301494302,
+              "best_step": 17137,
+              "best_effective_epochs": 30.000065530530197,
+              "final_budget_bpc": 1.4717174719617532,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 138714273.0,
+              "optimizer_steps": 17137,
+              "effective_epochs": 30.000065530530197,
+              "runtime_s": 408.36905903699517,
+              "peak_vram_gb": 0.3834528923034668,
+              "total_parameters": 3459328,
+              "embedding_parameters": 299776,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.4717130962307645,
+                "combined_validation_bpb": 1.4574589681440124,
+                "bible_validation_bpc": 1.2963667276047348,
+                "bible_validation_bpb": 1.2824443332398279,
+                "wikipedia_validation_bpc": 1.9208122962792895,
+                "wikipedia_validation_bpb": 1.9074361957474324
+              }
+            },
+            "2026": {
+              "validation_bpc": 1.4762954087385072,
+              "validation_bpb": 1.4619968991282188,
+              "best_step": 17137,
+              "best_effective_epochs": 30.00006812579872,
+              "final_budget_bpc": 1.4762954087385072,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 138714285.0,
+              "optimizer_steps": 17137,
+              "effective_epochs": 30.00006812579872,
+              "runtime_s": 427.27654166500724,
+              "peak_vram_gb": 0.3834528923034668,
+              "total_parameters": 3459328,
+              "embedding_parameters": 299776,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.4762535832907302,
+                "combined_validation_bpb": 1.461955478776579,
+                "bible_validation_bpc": 1.3013280391106277,
+                "bible_validation_bpb": 1.287352362496276,
+                "wikipedia_validation_bpc": 1.925907766556155,
+                "wikipedia_validation_bpb": 1.9124961823266913
+              }
+            }
+          },
+          "mean_validation_bpc": {
+            "n": 3,
+            "mean": 1.4778541708704187,
+            "stdev": 0.007046592563308197,
+            "median": 1.4762954087385072,
+            "min": 1.4717174719617532,
+            "max": 1.485549631910996,
+            "values": [
+              1.485549631910996,
+              1.4717174719617532,
+              1.4762954087385072
+            ]
+          },
+          "mean_validation_bpb": {
+            "n": 3,
+            "mean": 1.4635405640274282,
+            "stdev": 0.006978343504962767,
+            "median": 1.4619968991282188,
+            "min": 1.457463301494302,
+            "max": 1.4711614914597635,
+            "values": [
+              1.4711614914597635,
+              1.457463301494302,
+              1.4619968991282188
+            ]
+          },
+          "mean_final_budget_bpc": {
+            "n": 3,
+            "mean": 1.4778541708704187,
+            "stdev": 0.007046592563308197,
+            "median": 1.4762954087385072,
+            "min": 1.4717174719617532,
+            "max": 1.485549631910996,
+            "values": [
+              1.485549631910996,
+              1.4717174719617532,
+              1.4762954087385072
+            ]
+          },
+          "mean_best_vs_final_bpc_gap": {
+            "n": 3,
+            "mean": 0.0,
+            "stdev": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "mean_runtime_s": {
+            "n": 3,
+            "mean": 416.8038166870004,
+            "stdev": 9.617078972049988,
+            "median": 414.7658493589988,
+            "min": 408.36905903699517,
+            "max": 427.27654166500724,
+            "values": [
+              414.7658493589988,
+              408.36905903699517,
+              427.27654166500724
+            ]
+          },
+          "mean_peak_vram_gb": {
+            "n": 3,
+            "mean": 0.3834528923034668,
+            "stdev": 0.0,
+            "median": 0.3834528923034668,
+            "min": 0.3834528923034668,
+            "max": 0.3834528923034668,
+            "values": [
+              0.3834528923034668,
+              0.3834528923034668,
+              0.3834528923034668
+            ]
+          },
+          "mean_best_checkpoint_step": {
+            "n": 3,
+            "mean": 17137.0,
+            "stdev": 0.0,
+            "median": 17137.0,
+            "min": 17137.0,
+            "max": 17137.0,
+            "values": [
+              17137.0,
+              17137.0,
+              17137.0
+            ]
+          },
+          "mean_best_checkpoint_effective_epoch": {
+            "n": 3,
+            "mean": 30.00005781681542,
+            "stdev": 1.5661963128757e-05,
+            "median": 30.000065530530197,
+            "min": 30.00003979411735,
+            "max": 30.00006812579872,
+            "values": [
+              30.00003979411735,
+              30.000065530530197,
+              30.00006812579872
+            ]
+          },
+          "mean_characters_processed": {
+            "n": 3,
+            "mean": 138714237.33333334,
+            "stdev": 72.41776945842321,
+            "median": 138714273.0,
+            "min": 138714154.0,
+            "max": 138714285.0,
+            "values": [
+              138714154.0,
+              138714273.0,
+              138714285.0
+            ]
+          },
+          "mean_optimizer_updates": {
+            "n": 3,
+            "mean": 17137.0,
+            "stdev": 0.0,
+            "median": 17137.0,
+            "min": 17137.0,
+            "max": 17137.0,
+            "values": [
+              17137.0,
+              17137.0,
+              17137.0
+            ]
+          },
+          "mean_effective_epochs": {
+            "n": 3,
+            "mean": 30.00005781681542,
+            "stdev": 1.5661963128757e-05,
+            "median": 30.000065530530197,
+            "min": 30.00003979411735,
+            "max": 30.00006812579872,
+            "values": [
+              30.00003979411735,
+              30.000065530530197,
+              30.00006812579872
+            ]
+          },
+          "total_parameters": 3459328,
+          "embedding_parameters": 299776,
+          "non_embedding_parameters": 3159552,
+          "n_seeds": 3
+        },
+        "bpe_8000": {
+          "seeds": {
+            "42": {
+              "validation_bpc": 1.4446522104461974,
+              "validation_bpb": 1.4306601778270347,
+              "best_step": 3964,
+              "best_effective_epochs": 30.00573465036266,
+              "final_budget_bpc": 1.4446522104461974,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 138740485.8706122,
+              "optimizer_steps": 3964,
+              "effective_epochs": 30.00573465036266,
+              "runtime_s": 111.34329532399715,
+              "peak_vram_gb": 0.6693544387817383,
+              "total_parameters": 3364992,
+              "embedding_parameters": 1585152,
+              "non_embedding_parameters": 1779840,
+              "source_validation": {
+                "combined_validation_bpc": 1.4446114458984725,
+                "combined_validation_bpb": 1.4306198081002068,
+                "bible_validation_bpc": 1.2529637503391207,
+                "bible_validation_bpb": 1.2395074843877527,
+                "wikipedia_validation_bpc": 1.9389522541611954,
+                "wikipedia_validation_bpb": 1.9254498310830166
+              }
+            },
+            "1337": {
+              "validation_bpc": 1.4464671984757287,
+              "validation_bpb": 1.4324575869738918,
+              "best_step": 3964,
+              "best_effective_epochs": 30.005467073063038,
+              "final_budget_bpc": 1.4464671984757287,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 138739248.6469618,
+              "optimizer_steps": 3964,
+              "effective_epochs": 30.005467073063038,
+              "runtime_s": 107.88134526800422,
+              "peak_vram_gb": 0.6693544387817383,
+              "total_parameters": 3364992,
+              "embedding_parameters": 1585152,
+              "non_embedding_parameters": 1779840,
+              "source_validation": {
+                "combined_validation_bpc": 1.4464472269083732,
+                "combined_validation_bpb": 1.4324378088391287,
+                "bible_validation_bpc": 1.255704928899027,
+                "bible_validation_bpb": 1.2422192239254108,
+                "wikipedia_validation_bpc": 1.9371359550050005,
+                "wikipedia_validation_bpb": 1.9236461802215856
+              }
+            },
+            "2026": {
+              "validation_bpc": 1.447723194028557,
+              "validation_bpb": 1.4337014177090446,
+              "best_step": 3964,
+              "best_effective_epochs": 30.00583188587446,
+              "final_budget_bpc": 1.447723194028557,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 138740935.46807444,
+              "optimizer_steps": 3964,
+              "effective_epochs": 30.00583188587446,
+              "runtime_s": 104.51657904099557,
+              "peak_vram_gb": 0.6693544387817383,
+              "total_parameters": 3364992,
+              "embedding_parameters": 1585152,
+              "non_embedding_parameters": 1779840,
+              "source_validation": {
+                "combined_validation_bpc": 1.4477111635210633,
+                "combined_validation_bpb": 1.4336895037218123,
+                "bible_validation_bpc": 1.2588160046685448,
+                "bible_validation_bpb": 1.2452968881433668,
+                "wikipedia_validation_bpc": 1.9328865689587587,
+                "wikipedia_validation_bpb": 1.9194263859345506
+              }
+            }
+          },
+          "mean_validation_bpc": {
+            "n": 3,
+            "mean": 1.446280867650161,
+            "stdev": 0.0015439476750195326,
+            "median": 1.4464671984757287,
+            "min": 1.4446522104461974,
+            "max": 1.447723194028557,
+            "values": [
+              1.4446522104461974,
+              1.4464671984757287,
+              1.447723194028557
+            ]
+          },
+          "mean_validation_bpb": {
+            "n": 3,
+            "mean": 1.432273060836657,
+            "stdev": 0.0015289939262384147,
+            "median": 1.4324575869738918,
+            "min": 1.4306601778270347,
+            "max": 1.4337014177090446,
+            "values": [
+              1.4306601778270347,
+              1.4324575869738918,
+              1.4337014177090446
+            ]
+          },
+          "mean_final_budget_bpc": {
+            "n": 3,
+            "mean": 1.446280867650161,
+            "stdev": 0.0015439476750195326,
+            "median": 1.4464671984757287,
+            "min": 1.4446522104461974,
+            "max": 1.447723194028557,
+            "values": [
+              1.4446522104461974,
+              1.4464671984757287,
+              1.447723194028557
+            ]
+          },
+          "mean_best_vs_final_bpc_gap": {
+            "n": 3,
+            "mean": 0.0,
+            "stdev": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "mean_runtime_s": {
+            "n": 3,
+            "mean": 107.91373987766565,
+            "stdev": 3.4134734304226084,
+            "median": 107.88134526800422,
+            "min": 104.51657904099557,
+            "max": 111.34329532399715,
+            "values": [
+              111.34329532399715,
+              107.88134526800422,
+              104.51657904099557
+            ]
+          },
+          "mean_peak_vram_gb": {
+            "n": 3,
+            "mean": 0.6693544387817383,
+            "stdev": 0.0,
+            "median": 0.6693544387817383,
+            "min": 0.6693544387817383,
+            "max": 0.6693544387817383,
+            "values": [
+              0.6693544387817383,
+              0.6693544387817383,
+              0.6693544387817383
+            ]
+          },
+          "mean_best_checkpoint_step": {
+            "n": 3,
+            "mean": 3964.0,
+            "stdev": 0.0,
+            "median": 3964.0,
+            "min": 3964.0,
+            "max": 3964.0,
+            "values": [
+              3964.0,
+              3964.0,
+              3964.0
+            ]
+          },
+          "mean_best_checkpoint_effective_epoch": {
+            "n": 3,
+            "mean": 30.005677869766718,
+            "stdev": 0.0001889182995397506,
+            "median": 30.00573465036266,
+            "min": 30.005467073063038,
+            "max": 30.00583188587446,
+            "values": [
+              30.00573465036266,
+              30.005467073063038,
+              30.00583188587446
+            ]
+          },
+          "mean_characters_processed": {
+            "n": 3,
+            "mean": 138740223.32854947,
+            "stdev": 873.5202444870525,
+            "median": 138740485.8706122,
+            "min": 138739248.6469618,
+            "max": 138740935.46807444,
+            "values": [
+              138740485.8706122,
+              138739248.6469618,
+              138740935.46807444
+            ]
+          },
+          "mean_optimizer_updates": {
+            "n": 3,
+            "mean": 3964.0,
+            "stdev": 0.0,
+            "median": 3964.0,
+            "min": 3964.0,
+            "max": 3964.0,
+            "values": [
+              3964.0,
+              3964.0,
+              3964.0
+            ]
+          },
+          "mean_effective_epochs": {
+            "n": 3,
+            "mean": 30.005677869766718,
+            "stdev": 0.0001889182995397506,
+            "median": 30.00573465036266,
+            "min": 30.005467073063038,
+            "max": 30.00583188587446,
+            "values": [
+              30.00573465036266,
+              30.005467073063038,
+              30.00583188587446
+            ]
+          },
+          "total_parameters": 3364992,
+          "embedding_parameters": 1585152,
+          "non_embedding_parameters": 1779840,
+          "n_seeds": 3
+        },
+        "unigram_8000": {
+          "seeds": {
+            "42": {
+              "validation_bpc": 1.4377220985956776,
+              "validation_bpb": 1.4237971868727182,
+              "best_step": 3933,
+              "best_effective_epochs": 30.005486339109556,
+              "final_budget_bpc": 1.4377220985956776,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 138739337.72928843,
+              "optimizer_steps": 3933,
+              "effective_epochs": 30.005486339109556,
+              "runtime_s": 102.09860359699815,
+              "peak_vram_gb": 0.6693544387817383,
+              "total_parameters": 3364992,
+              "embedding_parameters": 1585152,
+              "non_embedding_parameters": 1779840,
+              "source_validation": {
+                "combined_validation_bpc": 1.4377003454649757,
+                "combined_validation_bpb": 1.4237756444297598,
+                "bible_validation_bpc": 1.2463249938292171,
+                "bible_validation_bpb": 1.2329400251305904,
+                "wikipedia_validation_bpc": 1.927220187307196,
+                "wikipedia_validation_bpb": 1.9137994636777294
+              }
+            },
+            "1337": {
+              "validation_bpc": 1.436836690240743,
+              "validation_bpb": 1.4229203540507,
+              "best_step": 3933,
+              "best_effective_epochs": 30.00662624333696,
+              "final_budget_bpc": 1.436836690240743,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 138744608.41731519,
+              "optimizer_steps": 3933,
+              "effective_epochs": 30.00662624333696,
+              "runtime_s": 104.40601917399908,
+              "peak_vram_gb": 0.6693544387817383,
+              "total_parameters": 3364992,
+              "embedding_parameters": 1585152,
+              "non_embedding_parameters": 1779840,
+              "source_validation": {
+                "combined_validation_bpc": 1.4368012021154886,
+                "combined_validation_bpb": 1.4228852096420872,
+                "bible_validation_bpc": 1.2441668762782983,
+                "bible_validation_bpb": 1.2308050847894763,
+                "wikipedia_validation_bpc": 1.9298418292363824,
+                "wikipedia_validation_bpb": 1.916402849088009
+              }
+            },
+            "2026": {
+              "validation_bpc": 1.436624633552363,
+              "validation_bpb": 1.4227103512158907,
+              "best_step": 3933,
+              "best_effective_epochs": 30.0054026478203,
+              "final_budget_bpc": 1.436624633552363,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 138738950.75758886,
+              "optimizer_steps": 3933,
+              "effective_epochs": 30.0054026478203,
+              "runtime_s": 104.58706976499525,
+              "peak_vram_gb": 0.6693544387817383,
+              "total_parameters": 3364992,
+              "embedding_parameters": 1585152,
+              "non_embedding_parameters": 1779840,
+              "source_validation": {
+                "combined_validation_bpc": 1.4366147765961956,
+                "combined_validation_bpb": 1.4227005897282736,
+                "bible_validation_bpc": 1.246030464571455,
+                "bible_validation_bpb": 1.2326486589843084,
+                "wikipedia_validation_bpc": 1.9258258490338775,
+                "wikipedia_validation_bpb": 1.912414835259432
+              }
+            }
+          },
+          "mean_validation_bpc": {
+            "n": 3,
+            "mean": 1.4370611407962612,
+            "stdev": 0.000582143383736956,
+            "median": 1.436836690240743,
+            "min": 1.436624633552363,
+            "max": 1.4377220985956776,
+            "values": [
+              1.4377220985956776,
+              1.436836690240743,
+              1.436624633552363
+            ]
+          },
+          "mean_validation_bpb": {
+            "n": 3,
+            "mean": 1.423142630713103,
+            "stdev": 0.0005765050929737048,
+            "median": 1.4229203540507,
+            "min": 1.4227103512158907,
+            "max": 1.4237971868727182,
+            "values": [
+              1.4237971868727182,
+              1.4229203540507,
+              1.4227103512158907
+            ]
+          },
+          "mean_final_budget_bpc": {
+            "n": 3,
+            "mean": 1.4370611407962612,
+            "stdev": 0.000582143383736956,
+            "median": 1.436836690240743,
+            "min": 1.436624633552363,
+            "max": 1.4377220985956776,
+            "values": [
+              1.4377220985956776,
+              1.436836690240743,
+              1.436624633552363
+            ]
+          },
+          "mean_best_vs_final_bpc_gap": {
+            "n": 3,
+            "mean": 0.0,
+            "stdev": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "mean_runtime_s": {
+            "n": 3,
+            "mean": 103.69723084533082,
+            "stdev": 1.3874082450593999,
+            "median": 104.40601917399908,
+            "min": 102.09860359699815,
+            "max": 104.58706976499525,
+            "values": [
+              102.09860359699815,
+              104.40601917399908,
+              104.58706976499525
+            ]
+          },
+          "mean_peak_vram_gb": {
+            "n": 3,
+            "mean": 0.6693544387817383,
+            "stdev": 0.0,
+            "median": 0.6693544387817383,
+            "min": 0.6693544387817383,
+            "max": 0.6693544387817383,
+            "values": [
+              0.6693544387817383,
+              0.6693544387817383,
+              0.6693544387817383
+            ]
+          },
+          "mean_best_checkpoint_step": {
+            "n": 3,
+            "mean": 3933.0,
+            "stdev": 0.0,
+            "median": 3933.0,
+            "min": 3933.0,
+            "max": 3933.0,
+            "values": [
+              3933.0,
+              3933.0,
+              3933.0
+            ]
+          },
+          "mean_best_checkpoint_effective_epoch": {
+            "n": 3,
+            "mean": 30.005838410088938,
+            "stdev": 0.0006835656354660504,
+            "median": 30.005486339109556,
+            "min": 30.0054026478203,
+            "max": 30.00662624333696,
+            "values": [
+              30.005486339109556,
+              30.00662624333696,
+              30.0054026478203
+            ]
+          },
+          "mean_characters_processed": {
+            "n": 3,
+            "mean": 138740965.63473082,
+            "stdev": 3160.6701016951242,
+            "median": 138739337.72928843,
+            "min": 138738950.75758886,
+            "max": 138744608.41731519,
+            "values": [
+              138739337.72928843,
+              138744608.41731519,
+              138738950.75758886
+            ]
+          },
+          "mean_optimizer_updates": {
+            "n": 3,
+            "mean": 3933.0,
+            "stdev": 0.0,
+            "median": 3933.0,
+            "min": 3933.0,
+            "max": 3933.0,
+            "values": [
+              3933.0,
+              3933.0,
+              3933.0
+            ]
+          },
+          "mean_effective_epochs": {
+            "n": 3,
+            "mean": 30.005838410088938,
+            "stdev": 0.0006835656354660504,
+            "median": 30.005486339109556,
+            "min": 30.0054026478203,
+            "max": 30.00662624333696,
+            "values": [
+              30.005486339109556,
+              30.00662624333696,
+              30.0054026478203
+            ]
+          },
+          "total_parameters": 3364992,
+          "embedding_parameters": 1585152,
+          "non_embedding_parameters": 1779840,
+          "n_seeds": 3
+        }
+      },
+      "paired_seed_differences": {
+        "bpe_minus_character": {
+          "pairs": [
+            {
+              "seed": 42,
+              "diff": -0.04089742146479858
+            },
+            {
+              "seed": 1337,
+              "diff": -0.025250273486024488
+            },
+            {
+              "seed": 2026,
+              "diff": -0.028572214709950083
+            }
+          ],
+          "mean_diff": {
+            "n": 3,
+            "mean": -0.03157330322025772,
+            "stdev": 0.008243980176616079,
+            "median": -0.028572214709950083,
+            "min": -0.04089742146479858,
+            "max": -0.025250273486024488,
+            "values": [
+              -0.04089742146479858,
+              -0.025250273486024488,
+              -0.028572214709950083
+            ]
+          },
+          "note": "negative mean_diff => first tokenizer lower BPC (better)"
+        },
+        "unigram_minus_character": {
+          "pairs": [
+            {
+              "seed": 42,
+              "diff": -0.047827533315318416
+            },
+            {
+              "seed": 1337,
+              "diff": -0.03488078172101017
+            },
+            {
+              "seed": 2026,
+              "diff": -0.03967077518614426
+            }
+          ],
+          "mean_diff": {
+            "n": 3,
+            "mean": -0.04079303007415761,
+            "stdev": 0.0065459289819271025,
+            "median": -0.03967077518614426,
+            "min": -0.047827533315318416,
+            "max": -0.03488078172101017,
+            "values": [
+              -0.047827533315318416,
+              -0.03488078172101017,
+              -0.03967077518614426
+            ]
+          },
+          "note": "negative mean_diff => first tokenizer lower BPC (better)"
+        },
+        "unigram_minus_bpe": {
+          "pairs": [
+            {
+              "seed": 42,
+              "diff": -0.006930111850519838
+            },
+            {
+              "seed": 1337,
+              "diff": -0.00963050823498568
+            },
+            {
+              "seed": 2026,
+              "diff": -0.011098560476194175
+            }
+          ],
+          "mean_diff": {
+            "n": 3,
+            "mean": -0.009219726853899898,
+            "stdev": 0.0021143668067548317,
+            "median": -0.00963050823498568,
+            "min": -0.011098560476194175,
+            "max": -0.006930111850519838,
+            "values": [
+              -0.006930111850519838,
+              -0.00963050823498568,
+              -0.011098560476194175
+            ]
+          },
+          "note": "negative mean_diff => first tokenizer lower BPC (better)"
+        }
+      },
+      "provisional_validation_leader": "unigram_8000",
+      "provisional_validation_leader_mean_bpc": 1.4370611407962612,
+      "caution": "Provisional validation leader only; test evaluation still required."
+    },
+    {
+      "track": "parameter_matched",
+      "budget_policy": "fixed_updates",
+      "tokenizers": {
+        "character": {
+          "seeds": {
+            "42": {
+              "validation_bpc": 1.8772380253125969,
+              "validation_bpb": 1.8590562266110302,
+              "best_step": 4000,
+              "best_effective_epochs": 7.002409490550952,
+              "final_budget_bpc": 1.8772380253125969,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 32377734.0,
+              "optimizer_steps": 4000,
+              "effective_epochs": 7.002409490550952,
+              "runtime_s": 103.56652733300871,
+              "peak_vram_gb": 0.3834528923034668,
+              "total_parameters": 3459328,
+              "embedding_parameters": 299776,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.8772052469694167,
+                "combined_validation_bpb": 1.859023765739172,
+                "bible_validation_bpc": 1.6707496412545824,
+                "bible_validation_bpb": 1.652806543136389,
+                "wikipedia_validation_bpc": 2.410513425398427,
+                "wikipedia_validation_bpb": 2.3937271574356607
+              }
+            },
+            "1337": {
+              "validation_bpc": 1.8843258181818257,
+              "validation_bpb": 1.8660753713805245,
+              "best_step": 4000,
+              "best_effective_epochs": 7.002412085819475,
+              "final_budget_bpc": 1.8843258181818257,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 32377746.0,
+              "optimizer_steps": 4000,
+              "effective_epochs": 7.002412085819475,
+              "runtime_s": 102.90551399999822,
+              "peak_vram_gb": 0.3834528923034668,
+              "total_parameters": 3459328,
+              "embedding_parameters": 299776,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.8842340142666179,
+                "combined_validation_bpb": 1.8659844566228365,
+                "bible_validation_bpc": 1.6766673467000863,
+                "bible_validation_bpb": 1.658660695092596,
+                "wikipedia_validation_bpc": 2.4198348451450573,
+                "wikipedia_validation_bpb": 2.4029836649324725
+              }
+            },
+            "2026": {
+              "validation_bpc": 1.8987876179076932,
+              "validation_bpb": 1.8803971028103463,
+              "best_step": 4000,
+              "best_effective_epochs": 7.0024084091890675,
+              "final_budget_bpc": 1.8987876179076932,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 32377729.0,
+              "optimizer_steps": 4000,
+              "effective_epochs": 7.0024084091890675,
+              "runtime_s": 106.14631065500726,
+              "peak_vram_gb": 0.3834528923034668,
+              "total_parameters": 3459328,
+              "embedding_parameters": 299776,
+              "non_embedding_parameters": 3159552,
+              "source_validation": {
+                "combined_validation_bpc": 1.898757358582774,
+                "combined_validation_bpb": 1.8803671365590526,
+                "bible_validation_bpc": 1.689790637249417,
+                "bible_validation_bpb": 1.6716430474162667,
+                "wikipedia_validation_bpc": 2.437770911374966,
+                "wikipedia_validation_bpb": 2.420794828471212
+              }
+            }
+          },
+          "mean_validation_bpc": {
+            "n": 3,
+            "mean": 1.886783820467372,
+            "stdev": 0.010983058166124363,
+            "median": 1.8843258181818257,
+            "min": 1.8772380253125969,
+            "max": 1.8987876179076932,
+            "values": [
+              1.8772380253125969,
+              1.8843258181818257,
+              1.8987876179076932
+            ]
+          },
+          "mean_validation_bpb": {
+            "n": 3,
+            "mean": 1.868509566933967,
+            "stdev": 0.010876682869006244,
+            "median": 1.8660753713805245,
+            "min": 1.8590562266110302,
+            "max": 1.8803971028103463,
+            "values": [
+              1.8590562266110302,
+              1.8660753713805245,
+              1.8803971028103463
+            ]
+          },
+          "mean_final_budget_bpc": {
+            "n": 3,
+            "mean": 1.886783820467372,
+            "stdev": 0.010983058166124363,
+            "median": 1.8843258181818257,
+            "min": 1.8772380253125969,
+            "max": 1.8987876179076932,
+            "values": [
+              1.8772380253125969,
+              1.8843258181818257,
+              1.8987876179076932
+            ]
+          },
+          "mean_best_vs_final_bpc_gap": {
+            "n": 3,
+            "mean": 0.0,
+            "stdev": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "mean_runtime_s": {
+            "n": 3,
+            "mean": 104.20611732933806,
+            "stdev": 1.712453579614021,
+            "median": 103.56652733300871,
+            "min": 102.90551399999822,
+            "max": 106.14631065500726,
+            "values": [
+              103.56652733300871,
+              102.90551399999822,
+              106.14631065500726
+            ]
+          },
+          "mean_peak_vram_gb": {
+            "n": 3,
+            "mean": 0.3834528923034668,
+            "stdev": 0.0,
+            "median": 0.3834528923034668,
+            "min": 0.3834528923034668,
+            "max": 0.3834528923034668,
+            "values": [
+              0.3834528923034668,
+              0.3834528923034668,
+              0.3834528923034668
+            ]
+          },
+          "mean_best_checkpoint_step": {
+            "n": 3,
+            "mean": 4000.0,
+            "stdev": 0.0,
+            "median": 4000.0,
+            "min": 4000.0,
+            "max": 4000.0,
+            "values": [
+              4000.0,
+              4000.0,
+              4000.0
+            ]
+          },
+          "mean_best_checkpoint_effective_epoch": {
+            "n": 3,
+            "mean": 7.002409995186498,
+            "stdev": 1.889549037107563e-06,
+            "median": 7.002409490550952,
+            "min": 7.0024084091890675,
+            "max": 7.002412085819475,
+            "values": [
+              7.002409490550952,
+              7.002412085819475,
+              7.0024084091890675
+            ]
+          },
+          "mean_characters_processed": {
+            "n": 3,
+            "mean": 32377736.333333332,
+            "stdev": 8.736894948054104,
+            "median": 32377734.0,
+            "min": 32377729.0,
+            "max": 32377746.0,
+            "values": [
+              32377734.0,
+              32377746.0,
+              32377729.0
+            ]
+          },
+          "mean_optimizer_updates": {
+            "n": 3,
+            "mean": 4000.0,
+            "stdev": 0.0,
+            "median": 4000.0,
+            "min": 4000.0,
+            "max": 4000.0,
+            "values": [
+              4000.0,
+              4000.0,
+              4000.0
+            ]
+          },
+          "mean_effective_epochs": {
+            "n": 3,
+            "mean": 7.002409995186498,
+            "stdev": 1.889549037107563e-06,
+            "median": 7.002409490550952,
+            "min": 7.0024084091890675,
+            "max": 7.002412085819475,
+            "values": [
+              7.002409490550952,
+              7.002412085819475,
+              7.0024084091890675
+            ]
+          },
+          "total_parameters": 3459328,
+          "embedding_parameters": 299776,
+          "non_embedding_parameters": 3159552,
+          "n_seeds": 3
+        },
+        "bpe_8000": {
+          "seeds": {
+            "42": {
+              "validation_bpc": 1.4975025557896113,
+              "validation_bpb": 1.482998646505164,
+              "best_step": 4000,
+              "best_effective_epochs": 30.280593972967942,
+              "final_budget_bpc": 1.4975025557896113,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 140011380.1316152,
+              "optimizer_steps": 4000,
+              "effective_epochs": 30.280593972967942,
+              "runtime_s": 106.51322835500468,
+              "peak_vram_gb": 0.6693544387817383,
+              "total_parameters": 3364992,
+              "embedding_parameters": 1585152,
+              "non_embedding_parameters": 1779840,
+              "source_validation": {
+                "combined_validation_bpc": 1.4974730840191937,
+                "combined_validation_bpb": 1.4829694601805932,
+                "bible_validation_bpc": 1.3090724058253613,
+                "bible_validation_bpb": 1.2950135582029816,
+                "wikipedia_validation_bpc": 1.9833817719096223,
+                "wikipedia_validation_bpb": 1.969569951761706
+              }
+            },
+            "1337": {
+              "validation_bpc": 1.4983353760942155,
+              "validation_bpb": 1.4838234006130855,
+              "best_step": 4000,
+              "best_effective_epochs": 30.278992841124346,
+              "final_budget_bpc": 1.4983353760942155,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 140003976.8197979,
+              "optimizer_steps": 4000,
+              "effective_epochs": 30.278992841124346,
+              "runtime_s": 105.60191278500133,
+              "peak_vram_gb": 0.6693544387817383,
+              "total_parameters": 3364992,
+              "embedding_parameters": 1585152,
+              "non_embedding_parameters": 1779840,
+              "source_validation": {
+                "combined_validation_bpc": 1.498295756679915,
+                "combined_validation_bpb": 1.4837841649286083,
+                "bible_validation_bpc": 1.3111988537280475,
+                "bible_validation_bpb": 1.2971171690136107,
+                "wikipedia_validation_bpc": 1.9802392043118582,
+                "wikipedia_validation_bpb": 1.9664492682908798
+              }
+            },
+            "2026": {
+              "validation_bpc": 1.5004037337025877,
+              "validation_bpb": 1.4858717253533977,
+              "best_step": 4000,
+              "best_effective_epochs": 30.277308214660117,
+              "final_budget_bpc": 1.5004037337025877,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 139996187.44563723,
+              "optimizer_steps": 4000,
+              "effective_epochs": 30.277308214660117,
+              "runtime_s": 106.79925808800908,
+              "peak_vram_gb": 0.6693544387817383,
+              "total_parameters": 3364992,
+              "embedding_parameters": 1585152,
+              "non_embedding_parameters": 1779840,
+              "source_validation": {
+                "combined_validation_bpc": 1.500378701526369,
+                "combined_validation_bpb": 1.4858469356237856,
+                "bible_validation_bpc": 1.312823544912294,
+                "bible_validation_bpb": 1.2987244117468084,
+                "wikipedia_validation_bpc": 1.98301551496156,
+                "wikipedia_validation_bpb": 1.9692062453438373
+              }
+            }
+          },
+          "mean_validation_bpc": {
+            "n": 3,
+            "mean": 1.4987472218621383,
+            "stdev": 0.0014937941702598716,
+            "median": 1.4983353760942155,
+            "min": 1.4975025557896113,
+            "max": 1.5004037337025877,
+            "values": [
+              1.4975025557896113,
+              1.4983353760942155,
+              1.5004037337025877
+            ]
+          },
+          "mean_validation_bpb": {
+            "n": 3,
+            "mean": 1.4842312574905492,
+            "stdev": 0.0014793261781678318,
+            "median": 1.4838234006130855,
+            "min": 1.482998646505164,
+            "max": 1.4858717253533977,
+            "values": [
+              1.482998646505164,
+              1.4838234006130855,
+              1.4858717253533977
+            ]
+          },
+          "mean_final_budget_bpc": {
+            "n": 3,
+            "mean": 1.4987472218621383,
+            "stdev": 0.0014937941702598716,
+            "median": 1.4983353760942155,
+            "min": 1.4975025557896113,
+            "max": 1.5004037337025877,
+            "values": [
+              1.4975025557896113,
+              1.4983353760942155,
+              1.5004037337025877
+            ]
+          },
+          "mean_best_vs_final_bpc_gap": {
+            "n": 3,
+            "mean": 0.0,
+            "stdev": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "mean_runtime_s": {
+            "n": 3,
+            "mean": 106.3047997426717,
+            "stdev": 0.6252925783087234,
+            "median": 106.51322835500468,
+            "min": 105.60191278500133,
+            "max": 106.79925808800908,
+            "values": [
+              106.51322835500468,
+              105.60191278500133,
+              106.79925808800908
+            ]
+          },
+          "mean_peak_vram_gb": {
+            "n": 3,
+            "mean": 0.6693544387817383,
+            "stdev": 0.0,
+            "median": 0.6693544387817383,
+            "min": 0.6693544387817383,
+            "max": 0.6693544387817383,
+            "values": [
+              0.6693544387817383,
+              0.6693544387817383,
+              0.6693544387817383
+            ]
+          },
+          "mean_best_checkpoint_step": {
+            "n": 3,
+            "mean": 4000.0,
+            "stdev": 0.0,
+            "median": 4000.0,
+            "min": 4000.0,
+            "max": 4000.0,
+            "values": [
+              4000.0,
+              4000.0,
+              4000.0
+            ]
+          },
+          "mean_best_checkpoint_effective_epoch": {
+            "n": 3,
+            "mean": 30.278965009584134,
+            "stdev": 0.0016430559516747432,
+            "median": 30.278992841124346,
+            "min": 30.277308214660117,
+            "max": 30.280593972967942,
+            "values": [
+              30.280593972967942,
+              30.278992841124346,
+              30.277308214660117
+            ]
+          },
+          "mean_characters_processed": {
+            "n": 3,
+            "mean": 140003848.13235012,
+            "stdev": 7597.160466298137,
+            "median": 140003976.8197979,
+            "min": 139996187.44563723,
+            "max": 140011380.1316152,
+            "values": [
+              140011380.1316152,
+              140003976.8197979,
+              139996187.44563723
+            ]
+          },
+          "mean_optimizer_updates": {
+            "n": 3,
+            "mean": 4000.0,
+            "stdev": 0.0,
+            "median": 4000.0,
+            "min": 4000.0,
+            "max": 4000.0,
+            "values": [
+              4000.0,
+              4000.0,
+              4000.0
+            ]
+          },
+          "mean_effective_epochs": {
+            "n": 3,
+            "mean": 30.278965009584134,
+            "stdev": 0.0016430559516747432,
+            "median": 30.278992841124346,
+            "min": 30.277308214660117,
+            "max": 30.280593972967942,
+            "values": [
+              30.280593972967942,
+              30.278992841124346,
+              30.277308214660117
+            ]
+          },
+          "total_parameters": 3364992,
+          "embedding_parameters": 1585152,
+          "non_embedding_parameters": 1779840,
+          "n_seeds": 3
+        },
+        "unigram_8000": {
+          "seeds": {
+            "42": {
+              "validation_bpc": 1.4800099138122642,
+              "validation_bpb": 1.4656754277394195,
+              "best_step": 4000,
+              "best_effective_epochs": 30.51596971801875,
+              "final_budget_bpc": 1.4800099138122642,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 141099710.26620537,
+              "optimizer_steps": 4000,
+              "effective_epochs": 30.51596971801875,
+              "runtime_s": 105.73153642599937,
+              "peak_vram_gb": 0.6693544387817383,
+              "total_parameters": 3364992,
+              "embedding_parameters": 1585152,
+              "non_embedding_parameters": 1779840,
+              "source_validation": {
+                "combined_validation_bpc": 1.4799737496178536,
+                "combined_validation_bpb": 1.46563961380965,
+                "bible_validation_bpc": 1.2933190022183536,
+                "bible_validation_bpb": 1.2794293390504465,
+                "wikipedia_validation_bpc": 1.9574333205350274,
+                "wikipedia_validation_bpb": 1.9438021995084698
+              }
+            },
+            "1337": {
+              "validation_bpc": 1.4808837805435897,
+              "validation_bpb": 1.466540830723055,
+              "best_step": 4000,
+              "best_effective_epochs": 30.517614632016798,
+              "final_budget_bpc": 1.4808837805435897,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 141107316.01790464,
+              "optimizer_steps": 4000,
+              "effective_epochs": 30.517614632016798,
+              "runtime_s": 103.92724207800347,
+              "peak_vram_gb": 0.6693544387817383,
+              "total_parameters": 3364992,
+              "embedding_parameters": 1585152,
+              "non_embedding_parameters": 1779840,
+              "source_validation": {
+                "combined_validation_bpc": 1.480854381445101,
+                "combined_validation_bpb": 1.466511716366556,
+                "bible_validation_bpc": 1.293839442652974,
+                "bible_validation_bpb": 1.2799441901893684,
+                "wikipedia_validation_bpc": 1.96057351057678,
+                "wikipedia_validation_bpb": 1.9469205219800445
+              }
+            },
+            "2026": {
+              "validation_bpc": 1.4770234366722568,
+              "validation_bpb": 1.4627178758211765,
+              "best_step": 4000,
+              "best_effective_epochs": 30.51726168894272,
+              "final_budget_bpc": 1.4770234366722568,
+              "best_vs_final_bpc_gap": 0.0,
+              "characters_processed": 141105684.08007166,
+              "optimizer_steps": 4000,
+              "effective_epochs": 30.51726168894272,
+              "runtime_s": 106.79564303100051,
+              "peak_vram_gb": 0.6693544387817383,
+              "total_parameters": 3364992,
+              "embedding_parameters": 1585152,
+              "non_embedding_parameters": 1779840,
+              "source_validation": {
+                "combined_validation_bpc": 1.4769945352663716,
+                "combined_validation_bpb": 1.4626892543369299,
+                "bible_validation_bpc": 1.2919738174708049,
+                "bible_validation_bpb": 1.278098600980794,
+                "wikipedia_validation_bpc": 1.9519843299012514,
+                "wikipedia_validation_bpb": 1.9383911544077663
+              }
+            }
+          },
+          "mean_validation_bpc": {
+            "n": 3,
+            "mean": 1.4793057103427036,
+            "stdev": 0.00202422592517248,
+            "median": 1.4800099138122642,
+            "min": 1.4770234366722568,
+            "max": 1.4808837805435897,
+            "values": [
+              1.4800099138122642,
+              1.4808837805435897,
+              1.4770234366722568
+            ]
+          },
+          "mean_validation_bpb": {
+            "n": 3,
+            "mean": 1.464978044761217,
+            "stdev": 0.0020046204900589205,
+            "median": 1.4656754277394195,
+            "min": 1.4627178758211765,
+            "max": 1.466540830723055,
+            "values": [
+              1.4656754277394195,
+              1.466540830723055,
+              1.4627178758211765
+            ]
+          },
+          "mean_final_budget_bpc": {
+            "n": 3,
+            "mean": 1.4793057103427036,
+            "stdev": 0.00202422592517248,
+            "median": 1.4800099138122642,
+            "min": 1.4770234366722568,
+            "max": 1.4808837805435897,
+            "values": [
+              1.4800099138122642,
+              1.4808837805435897,
+              1.4770234366722568
+            ]
+          },
+          "mean_best_vs_final_bpc_gap": {
+            "n": 3,
+            "mean": 0.0,
+            "stdev": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "mean_runtime_s": {
+            "n": 3,
+            "mean": 105.48480717833445,
+            "stdev": 1.45003017142008,
+            "median": 105.73153642599937,
+            "min": 103.92724207800347,
+            "max": 106.79564303100051,
+            "values": [
+              105.73153642599937,
+              103.92724207800347,
+              106.79564303100051
+            ]
+          },
+          "mean_peak_vram_gb": {
+            "n": 3,
+            "mean": 0.6693544387817383,
+            "stdev": 0.0,
+            "median": 0.6693544387817383,
+            "min": 0.6693544387817383,
+            "max": 0.6693544387817383,
+            "values": [
+              0.6693544387817383,
+              0.6693544387817383,
+              0.6693544387817383
+            ]
+          },
+          "mean_best_checkpoint_step": {
+            "n": 3,
+            "mean": 4000.0,
+            "stdev": 0.0,
+            "median": 4000.0,
+            "min": 4000.0,
+            "max": 4000.0,
+            "values": [
+              4000.0,
+              4000.0,
+              4000.0
+            ]
+          },
+          "mean_best_checkpoint_effective_epoch": {
+            "n": 3,
+            "mean": 30.51694867965942,
+            "stdev": 0.0008659772651854308,
+            "median": 30.51726168894272,
+            "min": 30.51596971801875,
+            "max": 30.517614632016798,
+            "values": [
+              30.51596971801875,
+              30.517614632016798,
+              30.51726168894272
+            ]
+          },
+          "mean_characters_processed": {
+            "n": 3,
+            "mean": 141104236.78806055,
+            "stdev": 4004.104812786807,
+            "median": 141105684.08007166,
+            "min": 141099710.26620537,
+            "max": 141107316.01790464,
+            "values": [
+              141099710.26620537,
+              141107316.01790464,
+              141105684.08007166
+            ]
+          },
+          "mean_optimizer_updates": {
+            "n": 3,
+            "mean": 4000.0,
+            "stdev": 0.0,
+            "median": 4000.0,
+            "min": 4000.0,
+            "max": 4000.0,
+            "values": [
+              4000.0,
+              4000.0,
+              4000.0
+            ]
+          },
+          "mean_effective_epochs": {
+            "n": 3,
+            "mean": 30.51694867965942,
+            "stdev": 0.0008659772651854308,
+            "median": 30.51726168894272,
+            "min": 30.51596971801875,
+            "max": 30.517614632016798,
+            "values": [
+              30.51596971801875,
+              30.517614632016798,
+              30.51726168894272
+            ]
+          },
+          "total_parameters": 3364992,
+          "embedding_parameters": 1585152,
+          "non_embedding_parameters": 1779840,
+          "n_seeds": 3
+        }
+      },
+      "paired_seed_differences": {
+        "bpe_minus_character": {
+          "pairs": [
+            {
+              "seed": 42,
+              "diff": -0.37973546952298554
+            },
+            {
+              "seed": 1337,
+              "diff": -0.38599044208761013
+            },
+            {
+              "seed": 2026,
+              "diff": -0.3983838842051055
+            }
+          ],
+          "mean_diff": {
+            "n": 3,
+            "mean": -0.3880365986052337,
+            "stdev": 0.009491096349212618,
+            "median": -0.38599044208761013,
+            "min": -0.3983838842051055,
+            "max": -0.37973546952298554,
+            "values": [
+              -0.37973546952298554,
+              -0.38599044208761013,
+              -0.3983838842051055
+            ]
+          },
+          "note": "negative mean_diff => first tokenizer lower BPC (better)"
+        },
+        "unigram_minus_character": {
+          "pairs": [
+            {
+              "seed": 42,
+              "diff": -0.39722811150033266
+            },
+            {
+              "seed": 1337,
+              "diff": -0.40344203763823594
+            },
+            {
+              "seed": 2026,
+              "diff": -0.42176418123543646
+            }
+          ],
+          "mean_diff": {
+            "n": 3,
+            "mean": -0.40747811012466834,
+            "stdev": 0.012756256909778501,
+            "median": -0.40344203763823594,
+            "min": -0.42176418123543646,
+            "max": -0.39722811150033266,
+            "values": [
+              -0.39722811150033266,
+              -0.40344203763823594,
+              -0.42176418123543646
+            ]
+          },
+          "note": "negative mean_diff => first tokenizer lower BPC (better)"
+        },
+        "unigram_minus_bpe": {
+          "pairs": [
+            {
+              "seed": 42,
+              "diff": -0.017492641977347123
+            },
+            {
+              "seed": 1337,
+              "diff": -0.01745159555062581
+            },
+            {
+              "seed": 2026,
+              "diff": -0.023380297030330954
+            }
+          ],
+          "mean_diff": {
+            "n": 3,
+            "mean": -0.01944151151943463,
+            "stdev": 0.003411150052097059,
+            "median": -0.017492641977347123,
+            "min": -0.023380297030330954,
+            "max": -0.01745159555062581,
+            "values": [
+              -0.017492641977347123,
+              -0.01745159555062581,
+              -0.023380297030330954
+            ]
+          },
+          "note": "negative mean_diff => first tokenizer lower BPC (better)"
+        }
+      },
+      "provisional_validation_leader": "unigram_8000",
+      "provisional_validation_leader_mean_bpc": 1.4793057103427036,
+      "caution": "Provisional validation leader only; test evaluation still required."
+    }
+  ],
+  "source_specific_aggregates": {
+    "by_group": {
+      "architecture_matched__fixed_characters": {
+        "track": "architecture_matched",
+        "budget_policy": "fixed_characters",
+        "tokenizers": {
+          "character": {
+            "combined_validation": {
+              "n": 3,
+              "mean": 1.4778289154482367,
+              "stdev": 0.007036999558764688,
+              "median": 1.4762535832907302,
+              "min": 1.4717130962307645,
+              "max": 1.4855200668232151,
+              "values": [
+                1.4855200668232151,
+                1.4717130962307645,
+                1.4762535832907302
+              ]
+            },
+            "bible_validation": {
+              "n": 3,
+              "mean": 1.30132784655937,
+              "stdev": 0.004961022681809101,
+              "median": 1.3013280391106277,
+              "min": 1.2963667276047348,
+              "max": 1.306288772962748,
+              "values": [
+                1.306288772962748,
+                1.2963667276047348,
+                1.3013280391106277
+              ]
+            },
+            "wikipedia_validation": {
+              "n": 3,
+              "mean": 1.9305286027109527,
+              "stdev": 0.012675022583569283,
+              "median": 1.925907766556155,
+              "min": 1.9208122962792895,
+              "max": 1.9448657452974139,
+              "values": [
+                1.9448657452974139,
+                1.9208122962792895,
+                1.925907766556155
+              ]
+            }
+          },
+          "bpe_8000": {
+            "combined_validation": {
+              "n": 3,
+              "mean": 1.438908085388929,
+              "stdev": 0.0018769959552071692,
+              "median": 1.4399368130643915,
+              "min": 1.4367416309534498,
+              "max": 1.4400458121489457,
+              "values": [
+                1.4400458121489457,
+                1.4399368130643915,
+                1.4367416309534498
+              ]
+            },
+            "bible_validation": {
+              "n": 3,
+              "mean": 1.2466024603185104,
+              "stdev": 0.0010827409148121475,
+              "median": 1.2459930145625115,
+              "min": 1.2459617944978891,
+              "max": 1.2478525718951303,
+              "values": [
+                1.2478525718951303,
+                1.2459930145625115,
+                1.2459617944978891
+              ]
+            },
+            "wikipedia_validation": {
+              "n": 3,
+              "mean": 1.9327047386109721,
+              "stdev": 0.005998467016374159,
+              "median": 1.9327007572534785,
+              "min": 1.9267082632642984,
+              "max": 1.9387051953151393,
+              "values": [
+                1.9327007572534785,
+                1.9387051953151393,
+                1.9267082632642984
+              ]
+            }
+          },
+          "unigram_8000": {
+            "combined_validation": {
+              "n": 3,
+              "mean": 1.4312871152776012,
+              "stdev": 0.0006278934394567149,
+              "median": 1.43093593221877,
+              "min": 1.4309133863033896,
+              "max": 1.432012027310644,
+              "values": [
+                1.43093593221877,
+                1.432012027310644,
+                1.4309133863033896
+              ]
+            },
+            "bible_validation": {
+              "n": 3,
+              "mean": 1.237480302830338,
+              "stdev": 0.0016766531203813721,
+              "median": 1.2379232028353886,
+              "min": 1.2356266624666021,
+              "max": 1.2388910431890237,
+              "values": [
+                1.2388910431890237,
+                1.2379232028353886,
+                1.2356266624666021
+              ]
+            },
+            "wikipedia_validation": {
+              "n": 3,
+              "mean": 1.9269344895706173,
+              "stdev": 0.004446236711125843,
+              "median": 1.9273337077405508,
+              "min": 1.9223021060123708,
+              "max": 1.93116765495893,
+              "values": [
+                1.9223021060123708,
+                1.9273337077405508,
+                1.93116765495893
+              ]
+            }
+          }
+        },
+        "leaders_by_source": {
+          "combined_validation": "unigram_8000",
+          "bible_validation": "unigram_8000",
+          "wikipedia_validation": "unigram_8000"
+        }
+      },
+      "architecture_matched__fixed_updates": {
+        "track": "architecture_matched",
+        "budget_policy": "fixed_updates",
+        "tokenizers": {
+          "character": {
+            "combined_validation": {
+              "n": 3,
+              "mean": 1.8867322066062695,
+              "stdev": 0.010991091959995269,
+              "median": 1.8842340142666179,
+              "min": 1.8772052469694167,
+              "max": 1.898757358582774,
+              "values": [
+                1.8772052469694167,
+                1.8842340142666179,
+                1.898757358582774
+              ]
+            },
+            "bible_validation": {
+              "n": 3,
+              "mean": 1.6790692084013619,
+              "stdev": 0.009745080135271698,
+              "median": 1.6766673467000863,
+              "min": 1.6707496412545824,
+              "max": 1.689790637249417,
+              "values": [
+                1.6707496412545824,
+                1.6766673467000863,
+                1.689790637249417
+              ]
+            },
+            "wikipedia_validation": {
+              "n": 3,
+              "mean": 2.422706393972817,
+              "stdev": 0.013853771325634104,
+              "median": 2.4198348451450573,
+              "min": 2.410513425398427,
+              "max": 2.437770911374966,
+              "values": [
+                2.410513425398427,
+                2.4198348451450573,
+                2.437770911374966
+              ]
+            }
+          },
+          "bpe_8000": {
+            "combined_validation": {
+              "n": 3,
+              "mean": 1.4566852886178503,
+              "stdev": 0.0015733043533016678,
+              "median": 1.4563323687733256,
+              "min": 1.4553184169893358,
+              "max": 1.4584050800908896,
+              "values": [
+                1.4584050800908896,
+                1.4563323687733256,
+                1.4553184169893358
+              ]
+            },
+            "bible_validation": {
+              "n": 3,
+              "mean": 1.270324835374033,
+              "stdev": 0.0012891994904723205,
+              "median": 1.2706370472343573,
+              "min": 1.2689082025135998,
+              "max": 1.271429256374142,
+              "values": [
+                1.271429256374142,
+                1.2706370472343573,
+                1.2689082025135998
+              ]
+            },
+            "wikipedia_validation": {
+              "n": 3,
+              "mean": 1.9357664380854054,
+              "stdev": 0.002306128261398258,
+              "median": 1.9345344153708868,
+              "min": 1.9343379892251007,
+              "max": 1.938426909660229,
+              "values": [
+                1.938426909660229,
+                1.9345344153708868,
+                1.9343379892251007
+              ]
+            }
+          },
+          "unigram_8000": {
+            "combined_validation": {
+              "n": 3,
+              "mean": 1.4433490713652228,
+              "stdev": 0.0013656492920019491,
+              "median": 1.4428797905495336,
+              "min": 1.4422799366292007,
+              "max": 1.4448874869169344,
+              "values": [
+                1.4422799366292007,
+                1.4448874869169344,
+                1.4428797905495336
+              ]
+            },
+            "bible_validation": {
+              "n": 3,
+              "mean": 1.2551260374976776,
+              "stdev": 0.0006061202867755002,
+              "median": 1.255080622416735,
+              "min": 1.254543902161975,
+              "max": 1.2557535879143225,
+              "values": [
+                1.255080622416735,
+                1.2557535879143225,
+                1.254543902161975
+              ]
+            },
+            "wikipedia_validation": {
+              "n": 3,
+              "mean": 1.924531295678536,
+              "stdev": 0.0033141405180173965,
+              "median": 1.9247590874386598,
+              "min": 1.9211091358188803,
+              "max": 1.9277256637780684,
+              "values": [
+                1.9211091358188803,
+                1.9277256637780684,
+                1.9247590874386598
+              ]
+            }
+          }
+        },
+        "leaders_by_source": {
+          "combined_validation": "unigram_8000",
+          "bible_validation": "unigram_8000",
+          "wikipedia_validation": "unigram_8000"
+        }
+      },
+      "parameter_matched__fixed_characters": {
+        "track": "parameter_matched",
+        "budget_policy": "fixed_characters",
+        "tokenizers": {
+          "character": {
+            "combined_validation": {
+              "n": 3,
+              "mean": 1.4778289154482367,
+              "stdev": 0.007036999558764688,
+              "median": 1.4762535832907302,
+              "min": 1.4717130962307645,
+              "max": 1.4855200668232151,
+              "values": [
+                1.4855200668232151,
+                1.4717130962307645,
+                1.4762535832907302
+              ]
+            },
+            "bible_validation": {
+              "n": 3,
+              "mean": 1.30132784655937,
+              "stdev": 0.004961022681809101,
+              "median": 1.3013280391106277,
+              "min": 1.2963667276047348,
+              "max": 1.306288772962748,
+              "values": [
+                1.306288772962748,
+                1.2963667276047348,
+                1.3013280391106277
+              ]
+            },
+            "wikipedia_validation": {
+              "n": 3,
+              "mean": 1.9305286027109527,
+              "stdev": 0.012675022583569283,
+              "median": 1.925907766556155,
+              "min": 1.9208122962792895,
+              "max": 1.9448657452974139,
+              "values": [
+                1.9448657452974139,
+                1.9208122962792895,
+                1.925907766556155
+              ]
+            }
+          },
+          "bpe_8000": {
+            "combined_validation": {
+              "n": 3,
+              "mean": 1.446256612109303,
+              "stdev": 0.0015586253033261512,
+              "median": 1.4464472269083732,
+              "min": 1.4446114458984725,
+              "max": 1.4477111635210633,
+              "values": [
+                1.4446114458984725,
+                1.4464472269083732,
+                1.4477111635210633
+              ]
+            },
+            "bible_validation": {
+              "n": 3,
+              "mean": 1.2558282279688975,
+              "stdev": 0.0029280748247849037,
+              "median": 1.255704928899027,
+              "min": 1.2529637503391207,
+              "max": 1.2588160046685448,
+              "values": [
+                1.2529637503391207,
+                1.255704928899027,
+                1.2588160046685448
+              ]
+            },
+            "wikipedia_validation": {
+              "n": 3,
+              "mean": 1.9363249260416515,
+              "stdev": 0.003113111020877391,
+              "median": 1.9371359550050005,
+              "min": 1.9328865689587587,
+              "max": 1.9389522541611954,
+              "values": [
+                1.9389522541611954,
+                1.9371359550050005,
+                1.9328865689587587
+              ]
+            }
+          },
+          "unigram_8000": {
+            "combined_validation": {
+              "n": 3,
+              "mean": 1.4370387747255533,
+              "stdev": 0.000580470069000847,
+              "median": 1.4368012021154886,
+              "min": 1.4366147765961956,
+              "max": 1.4377003454649757,
+              "values": [
+                1.4377003454649757,
+                1.4368012021154886,
+                1.4366147765961956
+              ]
+            },
+            "bible_validation": {
+              "n": 3,
+              "mean": 1.2455074448929901,
+              "stdev": 0.0011702692121653801,
+              "median": 1.246030464571455,
+              "min": 1.2441668762782983,
+              "max": 1.2463249938292171,
+              "values": [
+                1.2463249938292171,
+                1.2441668762782983,
+                1.246030464571455
+              ]
+            },
+            "wikipedia_validation": {
+              "n": 3,
+              "mean": 1.9276292885258186,
+              "stdev": 0.0020390064006855393,
+              "median": 1.927220187307196,
+              "min": 1.9258258490338775,
+              "max": 1.9298418292363824,
+              "values": [
+                1.927220187307196,
+                1.9298418292363824,
+                1.9258258490338775
+              ]
+            }
+          }
+        },
+        "leaders_by_source": {
+          "combined_validation": "unigram_8000",
+          "bible_validation": "unigram_8000",
+          "wikipedia_validation": "unigram_8000"
+        }
+      },
+      "parameter_matched__fixed_updates": {
+        "track": "parameter_matched",
+        "budget_policy": "fixed_updates",
+        "tokenizers": {
+          "character": {
+            "combined_validation": {
+              "n": 3,
+              "mean": 1.8867322066062695,
+              "stdev": 0.010991091959995269,
+              "median": 1.8842340142666179,
+              "min": 1.8772052469694167,
+              "max": 1.898757358582774,
+              "values": [
+                1.8772052469694167,
+                1.8842340142666179,
+                1.898757358582774
+              ]
+            },
+            "bible_validation": {
+              "n": 3,
+              "mean": 1.6790692084013619,
+              "stdev": 0.009745080135271698,
+              "median": 1.6766673467000863,
+              "min": 1.6707496412545824,
+              "max": 1.689790637249417,
+              "values": [
+                1.6707496412545824,
+                1.6766673467000863,
+                1.689790637249417
+              ]
+            },
+            "wikipedia_validation": {
+              "n": 3,
+              "mean": 2.422706393972817,
+              "stdev": 0.013853771325634104,
+              "median": 2.4198348451450573,
+              "min": 2.410513425398427,
+              "max": 2.437770911374966,
+              "values": [
+                2.410513425398427,
+                2.4198348451450573,
+                2.437770911374966
+              ]
+            }
+          },
+          "bpe_8000": {
+            "combined_validation": {
+              "n": 3,
+              "mean": 1.4987158474084925,
+              "stdev": 0.001497668334337917,
+              "median": 1.498295756679915,
+              "min": 1.4974730840191937,
+              "max": 1.500378701526369,
+              "values": [
+                1.4974730840191937,
+                1.498295756679915,
+                1.500378701526369
+              ]
+            },
+            "bible_validation": {
+              "n": 3,
+              "mean": 1.3110316014885677,
+              "stdev": 0.0018811541925336257,
+              "median": 1.3111988537280475,
+              "min": 1.3090724058253613,
+              "max": 1.312823544912294,
+              "values": [
+                1.3090724058253613,
+                1.3111988537280475,
+                1.312823544912294
+              ]
+            },
+            "wikipedia_validation": {
+              "n": 3,
+              "mean": 1.9822121637276802,
+              "stdev": 0.001718418656894017,
+              "median": 1.98301551496156,
+              "min": 1.9802392043118582,
+              "max": 1.9833817719096223,
+              "values": [
+                1.9833817719096223,
+                1.9802392043118582,
+                1.98301551496156
+              ]
+            }
+          },
+          "unigram_8000": {
+            "combined_validation": {
+              "n": 3,
+              "mean": 1.4792742221097754,
+              "stdev": 0.0020227721527106006,
+              "median": 1.4799737496178536,
+              "min": 1.4769945352663716,
+              "max": 1.480854381445101,
+              "values": [
+                1.4799737496178536,
+                1.480854381445101,
+                1.4769945352663716
+              ]
+            },
+            "bible_validation": {
+              "n": 3,
+              "mean": 1.2930440874473774,
+              "stdev": 0.0009627164320616718,
+              "median": 1.2933190022183536,
+              "min": 1.2919738174708049,
+              "max": 1.293839442652974,
+              "values": [
+                1.2933190022183536,
+                1.293839442652974,
+                1.2919738174708049
+              ]
+            },
+            "wikipedia_validation": {
+              "n": 3,
+              "mean": 1.9566637203376862,
+              "stdev": 0.004346000404628328,
+              "median": 1.9574333205350274,
+              "min": 1.9519843299012514,
+              "max": 1.96057351057678,
+              "values": [
+                1.9574333205350274,
+                1.96057351057678,
+                1.9519843299012514
+              ]
+            }
+          }
+        },
+        "leaders_by_source": {
+          "combined_validation": "unigram_8000",
+          "bible_validation": "unigram_8000",
+          "wikipedia_validation": "unigram_8000"
+        }
+      }
+    },
+    "ranking_notes": [
+      "architecture_matched/fixed_characters: unigram_8000 performed better on both Bible and Wikipedia validation under this configuration (provisional; test evaluation is still required).",
+      "architecture_matched/fixed_updates: unigram_8000 performed better on both Bible and Wikipedia validation under this configuration (provisional; test evaluation is still required).",
+      "parameter_matched/fixed_characters: unigram_8000 performed better on both Bible and Wikipedia validation under this configuration (provisional; test evaluation is still required).",
+      "parameter_matched/fixed_updates: unigram_8000 performed better on both Bible and Wikipedia validation under this configuration (provisional; test evaluation is still required)."
+    ]
+  },
+  "figure_paths": [
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/validation_bpc_arch_fixed_characters.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/validation_bpc_arch_fixed_characters.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/validation_bpb_arch_fixed_characters.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/validation_bpb_arch_fixed_characters.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/validation_bpc_arch_fixed_updates.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/validation_bpc_arch_fixed_updates.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/validation_bpb_arch_fixed_updates.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/validation_bpb_arch_fixed_updates.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/validation_bpc_param_fixed_characters.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/validation_bpc_param_fixed_characters.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/validation_bpb_param_fixed_characters.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/validation_bpb_param_fixed_characters.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/validation_bpc_param_fixed_updates.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/validation_bpc_param_fixed_updates.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/validation_bpb_param_fixed_updates.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/validation_bpb_param_fixed_updates.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/validation_bpc_bible_vs_wikipedia.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/validation_bpc_bible_vs_wikipedia.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/best_checkpoint_effective_epoch.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/best_checkpoint_effective_epoch.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/best_vs_final_bpc_gap.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/best_vs_final_bpc_gap.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/runtime_by_tokenizer.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/runtime_by_tokenizer.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/peak_vram_by_tokenizer.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/peak_vram_by_tokenizer.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/total_parameters_by_track.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/total_parameters_by_track.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/characters_processed_by_budget.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/characters_processed_by_budget.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/optimizer_updates_by_budget.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/optimizer_updates_by_budget.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/learning_curves_arch_fixed_characters.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/learning_curves_arch_fixed_characters.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/learning_curves_arch_fixed_updates.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/learning_curves_arch_fixed_updates.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/learning_curves_param_fixed_characters.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/learning_curves_param_fixed_characters.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/learning_curves_param_fixed_updates.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/final_validation/learning_curves_param_fixed_updates.svg"
+  ],
+  "required_figures": [
+    "validation_bpc_arch_fixed_characters",
+    "validation_bpc_arch_fixed_updates",
+    "validation_bpc_param_fixed_characters",
+    "validation_bpc_param_fixed_updates",
+    "validation_bpb_arch_fixed_characters",
+    "validation_bpb_arch_fixed_updates",
+    "validation_bpb_param_fixed_characters",
+    "validation_bpb_param_fixed_updates",
+    "validation_bpc_bible_vs_wikipedia",
+    "best_checkpoint_effective_epoch",
+    "best_vs_final_bpc_gap",
+    "runtime_by_tokenizer",
+    "peak_vram_by_tokenizer",
+    "total_parameters_by_track",
+    "characters_processed_by_budget",
+    "optimizer_updates_by_budget",
+    "learning_curves_arch_fixed_characters",
+    "learning_curves_param_fixed_characters",
+    "learning_curves_arch_fixed_updates",
+    "learning_curves_param_fixed_updates"
+  ],
+  "figure_dir": "data/reports/figures/lm_baselines_v0.1/final_validation",
+  "calibration_figures_untouched": "data/reports/figures/lm_baselines_v0.1/calibration",
+  "audit_status": "pass",
+  "test_readiness": {
+    "all_36_completed": true,
+    "all_36_audited": true,
+    "all_manifests_valid": true,
+    "all_selection_locks_valid": true,
+    "all_checkpoint_checksums_valid": true,
+    "all_budget_exposures_valid": true,
+    "no_nan_inf": true,
+    "no_test_access_detected": true,
+    "canary_excluded": true,
+    "calibration_excluded": true,
+    "pilots_excluded": true,
+    "validation_aggregation_complete": true,
+    "source_validation_complete": true,
+    "figures_complete": true,
+    "checkpoint_reload_ok_all": true,
+    "test_ready": true,
+    "generated_at": "2026-08-05T08:49:45.189208Z",
+    "matrix_id": "lm_baselines_v0_1_final_matrix_r2",
+    "n_expected": 36,
+    "n_valid": 36,
+    "n_failed_audit": 0,
+    "failed_run_ids": [],
+    "tool": {
+      "name": "audit_lm_validation_results",
+      "version": "0.1.0"
+    }
+  },
+  "seed_level_records": [
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__character__seed42__chars_e30",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/character/seed_42/final/fixed_characters_e30",
+      "tokenizer_id": "character",
+      "seed": 42,
+      "track": "architecture_matched",
+      "budget_policy": "fixed_characters",
+      "budget_path_slug": "fixed_characters_e30",
+      "best_validation_bpc": 1.485549631910996,
+      "best_validation_bpb": 1.4711614914597635,
+      "best_step": 17137,
+      "best_effective_epochs": 30.00003979411735,
+      "best_characters_processed": 138714154.0,
+      "final_budget_bpc": 1.485549631910996,
+      "final_budget_bpb": 1.4711614914597635,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 138714154.0,
+      "optimizer_steps": 17137,
+      "effective_epochs": 30.00003979411735,
+      "runtime_s": 401.03550416699727,
+      "peak_vram_gb": 0.3834528923034668,
+      "total_parameters": 3459328,
+      "embedding_parameters": 299776,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.4855200668232151,
+        "combined_validation_bpb": 1.4711322127216448,
+        "bible_validation_bpc": 1.306288772962748,
+        "bible_validation_bpb": 1.2922598203026925,
+        "wikipedia_validation_bpc": 1.9448657452974139,
+        "wikipedia_validation_bpb": 1.9313221420101718
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__character__seed42__updates_u4000",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/character/seed_42/final/fixed_updates_u4000",
+      "tokenizer_id": "character",
+      "seed": 42,
+      "track": "architecture_matched",
+      "budget_policy": "fixed_updates",
+      "budget_path_slug": "fixed_updates_u4000",
+      "best_validation_bpc": 1.8772380253125969,
+      "best_validation_bpb": 1.8590562266110302,
+      "best_step": 4000,
+      "best_effective_epochs": 7.002409490550952,
+      "best_characters_processed": 32377734.0,
+      "final_budget_bpc": 1.8772380253125969,
+      "final_budget_bpb": 1.8590562266110302,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 32377734.0,
+      "optimizer_steps": 4000,
+      "effective_epochs": 7.002409490550952,
+      "runtime_s": 95.61218333400029,
+      "peak_vram_gb": 0.3834528923034668,
+      "total_parameters": 3459328,
+      "embedding_parameters": 299776,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.8772052469694167,
+        "combined_validation_bpb": 1.859023765739172,
+        "bible_validation_bpc": 1.6707496412545824,
+        "bible_validation_bpb": 1.652806543136389,
+        "wikipedia_validation_bpc": 2.410513425398427,
+        "wikipedia_validation_bpb": 2.3937271574356607
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__character__seed1337__chars_e30",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/character/seed_1337/final/fixed_characters_e30",
+      "tokenizer_id": "character",
+      "seed": 1337,
+      "track": "architecture_matched",
+      "budget_policy": "fixed_characters",
+      "budget_path_slug": "fixed_characters_e30",
+      "best_validation_bpc": 1.4717174719617532,
+      "best_validation_bpb": 1.457463301494302,
+      "best_step": 17137,
+      "best_effective_epochs": 30.000065530530197,
+      "best_characters_processed": 138714273.0,
+      "final_budget_bpc": 1.4717174719617532,
+      "final_budget_bpb": 1.457463301494302,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 138714273.0,
+      "optimizer_steps": 17137,
+      "effective_epochs": 30.000065530530197,
+      "runtime_s": 409.3885940230102,
+      "peak_vram_gb": 0.3834528923034668,
+      "total_parameters": 3459328,
+      "embedding_parameters": 299776,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.4717130962307645,
+        "combined_validation_bpb": 1.4574589681440124,
+        "bible_validation_bpc": 1.2963667276047348,
+        "bible_validation_bpb": 1.2824443332398279,
+        "wikipedia_validation_bpc": 1.9208122962792895,
+        "wikipedia_validation_bpb": 1.9074361957474324
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__character__seed1337__updates_u4000",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/character/seed_1337/final/fixed_updates_u4000",
+      "tokenizer_id": "character",
+      "seed": 1337,
+      "track": "architecture_matched",
+      "budget_policy": "fixed_updates",
+      "budget_path_slug": "fixed_updates_u4000",
+      "best_validation_bpc": 1.8843258181818257,
+      "best_validation_bpb": 1.8660753713805245,
+      "best_step": 4000,
+      "best_effective_epochs": 7.002412085819475,
+      "best_characters_processed": 32377746.0,
+      "final_budget_bpc": 1.8843258181818257,
+      "final_budget_bpb": 1.8660753713805245,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 32377746.0,
+      "optimizer_steps": 4000,
+      "effective_epochs": 7.002412085819475,
+      "runtime_s": 104.36300158599624,
+      "peak_vram_gb": 0.3834528923034668,
+      "total_parameters": 3459328,
+      "embedding_parameters": 299776,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.8842340142666179,
+        "combined_validation_bpb": 1.8659844566228365,
+        "bible_validation_bpc": 1.6766673467000863,
+        "bible_validation_bpb": 1.658660695092596,
+        "wikipedia_validation_bpc": 2.4198348451450573,
+        "wikipedia_validation_bpb": 2.4029836649324725
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__character__seed2026__chars_e30",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/character/seed_2026/final/fixed_characters_e30",
+      "tokenizer_id": "character",
+      "seed": 2026,
+      "track": "architecture_matched",
+      "budget_policy": "fixed_characters",
+      "budget_path_slug": "fixed_characters_e30",
+      "best_validation_bpc": 1.4762954087385072,
+      "best_validation_bpb": 1.4619968991282188,
+      "best_step": 17137,
+      "best_effective_epochs": 30.00006812579872,
+      "best_characters_processed": 138714285.0,
+      "final_budget_bpc": 1.4762954087385072,
+      "final_budget_bpb": 1.4619968991282188,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 138714285.0,
+      "optimizer_steps": 17137,
+      "effective_epochs": 30.00006812579872,
+      "runtime_s": 406.9474825649959,
+      "peak_vram_gb": 0.3834528923034668,
+      "total_parameters": 3459328,
+      "embedding_parameters": 299776,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.4762535832907302,
+        "combined_validation_bpb": 1.461955478776579,
+        "bible_validation_bpc": 1.3013280391106277,
+        "bible_validation_bpb": 1.287352362496276,
+        "wikipedia_validation_bpc": 1.925907766556155,
+        "wikipedia_validation_bpb": 1.9124961823266913
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__character__seed2026__updates_u4000",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/character/seed_2026/final/fixed_updates_u4000",
+      "tokenizer_id": "character",
+      "seed": 2026,
+      "track": "architecture_matched",
+      "budget_policy": "fixed_updates",
+      "budget_path_slug": "fixed_updates_u4000",
+      "best_validation_bpc": 1.8987876179076932,
+      "best_validation_bpb": 1.8803971028103463,
+      "best_step": 4000,
+      "best_effective_epochs": 7.0024084091890675,
+      "best_characters_processed": 32377729.0,
+      "final_budget_bpc": 1.8987876179076932,
+      "final_budget_bpb": 1.8803971028103463,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 32377729.0,
+      "optimizer_steps": 4000,
+      "effective_epochs": 7.0024084091890675,
+      "runtime_s": 94.91602137200243,
+      "peak_vram_gb": 0.3834528923034668,
+      "total_parameters": 3459328,
+      "embedding_parameters": 299776,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.898757358582774,
+        "combined_validation_bpb": 1.8803671365590526,
+        "bible_validation_bpc": 1.689790637249417,
+        "bible_validation_bpb": 1.6716430474162667,
+        "wikipedia_validation_bpc": 2.437770911374966,
+        "wikipedia_validation_bpb": 2.420794828471212
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__bpe_8000__seed42__chars_e30",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/bpe_8000/seed_42/final/fixed_characters_e30",
+      "tokenizer_id": "bpe_8000",
+      "seed": 42,
+      "track": "architecture_matched",
+      "budget_policy": "fixed_characters",
+      "budget_path_slug": "fixed_characters_e30",
+      "best_validation_bpc": 1.4400530683309323,
+      "best_validation_bpb": 1.4261055802367644,
+      "best_step": 3435,
+      "best_effective_epochs": 26.00079803849089,
+      "best_characters_processed": 120222463.96957614,
+      "final_budget_bpc": 1.442717331351503,
+      "final_budget_bpb": 1.4287440388077794,
+      "best_vs_final_bpc_gap": 0.0026642630205706563,
+      "characters_processed": 138740485.8706122,
+      "optimizer_steps": 3964,
+      "effective_epochs": 30.00573465036266,
+      "runtime_s": 105.57412761599699,
+      "peak_vram_gb": 0.7370014190673828,
+      "total_parameters": 5273088,
+      "embedding_parameters": 2113536,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.4400458121489457,
+        "combined_validation_bpb": 1.4260983943337933,
+        "bible_validation_bpc": 1.2478525718951303,
+        "bible_validation_bpb": 1.2344511976965753,
+        "wikipedia_validation_bpc": 1.9327007572534785,
+        "wikipedia_validation_bpb": 1.91924186817978
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__bpe_8000__seed42__updates_u4000",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/bpe_8000/seed_42/final/fixed_updates_u4000",
+      "tokenizer_id": "bpe_8000",
+      "seed": 42,
+      "track": "architecture_matched",
+      "budget_policy": "fixed_updates",
+      "budget_path_slug": "fixed_updates_u4000",
+      "best_validation_bpc": 1.4584313829247735,
+      "best_validation_bpb": 1.4443058935266084,
+      "best_step": 4000,
+      "best_effective_epochs": 30.280593972967942,
+      "best_characters_processed": 140011380.1316152,
+      "final_budget_bpc": 1.4584313829247735,
+      "final_budget_bpb": 1.4443058935266084,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 140011380.1316152,
+      "optimizer_steps": 4000,
+      "effective_epochs": 30.280593972967942,
+      "runtime_s": 108.79017849698721,
+      "peak_vram_gb": 0.7370014190673828,
+      "total_parameters": 5273088,
+      "embedding_parameters": 2113536,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.4584050800908896,
+        "combined_validation_bpb": 1.4442798454461572,
+        "bible_validation_bpc": 1.271429256374142,
+        "bible_validation_bpb": 1.2577746792106048,
+        "wikipedia_validation_bpc": 1.938426909660229,
+        "wikipedia_validation_bpb": 1.9249281449618265
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__bpe_8000__seed1337__chars_e30",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/bpe_8000/seed_1337/final/fixed_characters_e30",
+      "tokenizer_id": "bpe_8000",
+      "seed": 1337,
+      "track": "architecture_matched",
+      "budget_policy": "fixed_characters",
+      "budget_path_slug": "fixed_characters_e30",
+      "best_validation_bpc": 1.439966637183555,
+      "best_validation_bpb": 1.4260199862095084,
+      "best_step": 3964,
+      "best_effective_epochs": 30.005467073063038,
+      "best_characters_processed": 138739248.6469618,
+      "final_budget_bpc": 1.439966637183555,
+      "final_budget_bpb": 1.4260199862095084,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 138739248.6469618,
+      "optimizer_steps": 3964,
+      "effective_epochs": 30.005467073063038,
+      "runtime_s": 107.89569042201038,
+      "peak_vram_gb": 0.7370014190673828,
+      "total_parameters": 5273088,
+      "embedding_parameters": 2113536,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.4399368130643915,
+        "combined_validation_bpb": 1.4259904509488295,
+        "bible_validation_bpc": 1.2459930145625115,
+        "bible_validation_bpb": 1.2326116111715817,
+        "wikipedia_validation_bpc": 1.9387051953151393,
+        "wikipedia_validation_bpb": 1.925204492698647
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__bpe_8000__seed1337__updates_u4000",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/bpe_8000/seed_1337/final/fixed_updates_u4000",
+      "tokenizer_id": "bpe_8000",
+      "seed": 1337,
+      "track": "architecture_matched",
+      "budget_policy": "fixed_updates",
+      "budget_path_slug": "fixed_updates_u4000",
+      "best_validation_bpc": 1.4563571521032426,
+      "best_validation_bpb": 1.4422517524575484,
+      "best_step": 4000,
+      "best_effective_epochs": 30.278992841124346,
+      "best_characters_processed": 140003976.8197979,
+      "final_budget_bpc": 1.4563571521032426,
+      "final_budget_bpb": 1.4422517524575484,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 140003976.8197979,
+      "optimizer_steps": 4000,
+      "effective_epochs": 30.278992841124346,
+      "runtime_s": 109.88703215699934,
+      "peak_vram_gb": 0.7370014190673828,
+      "total_parameters": 5273088,
+      "embedding_parameters": 2113536,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.4563323687733256,
+        "combined_validation_bpb": 1.4422272091640624,
+        "bible_validation_bpc": 1.2706370472343573,
+        "bible_validation_bpb": 1.2569909780399222,
+        "wikipedia_validation_bpc": 1.9345344153708868,
+        "wikipedia_validation_bpb": 1.921062757118562
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__bpe_8000__seed2026__chars_e30",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/bpe_8000/seed_2026/final/fixed_characters_e30",
+      "tokenizer_id": "bpe_8000",
+      "seed": 2026,
+      "track": "architecture_matched",
+      "budget_policy": "fixed_characters",
+      "budget_path_slug": "fixed_characters_e30",
+      "best_validation_bpc": 1.4367888941333573,
+      "best_validation_bpb": 1.42287302086767,
+      "best_step": 3435,
+      "best_effective_epochs": 26.00138167508046,
+      "best_characters_processed": 120225162.58785535,
+      "final_budget_bpc": 1.4397538713933238,
+      "final_budget_bpb": 1.4258092811407819,
+      "best_vs_final_bpc_gap": 0.0029649772599664725,
+      "characters_processed": 138740935.46807444,
+      "optimizer_steps": 3964,
+      "effective_epochs": 30.00583188587446,
+      "runtime_s": 112.74944135401165,
+      "peak_vram_gb": 0.7370014190673828,
+      "total_parameters": 5273088,
+      "embedding_parameters": 2113536,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.4367416309534498,
+        "combined_validation_bpb": 1.422826215450503,
+        "bible_validation_bpc": 1.2459617944978891,
+        "bible_validation_bpb": 1.2325807263963822,
+        "wikipedia_validation_bpc": 1.9267082632642984,
+        "wikipedia_validation_bpb": 1.9132911045575867
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__bpe_8000__seed2026__updates_u4000",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/bpe_8000/seed_2026/final/fixed_updates_u4000",
+      "tokenizer_id": "bpe_8000",
+      "seed": 2026,
+      "track": "architecture_matched",
+      "budget_policy": "fixed_updates",
+      "budget_path_slug": "fixed_updates_u4000",
+      "best_validation_bpc": 1.45532197350949,
+      "best_validation_bpb": 1.4412265999811864,
+      "best_step": 4000,
+      "best_effective_epochs": 30.277308214660117,
+      "best_characters_processed": 139996187.44563723,
+      "final_budget_bpc": 1.45532197350949,
+      "final_budget_bpb": 1.4412265999811864,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 139996187.44563723,
+      "optimizer_steps": 4000,
+      "effective_epochs": 30.277308214660117,
+      "runtime_s": 115.85757203999674,
+      "peak_vram_gb": 0.7370014190673828,
+      "total_parameters": 5273088,
+      "embedding_parameters": 2113536,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.4553184169893358,
+        "combined_validation_bpb": 1.4412230779073478,
+        "bible_validation_bpc": 1.2689082025135998,
+        "bible_validation_bpb": 1.2552807003322526,
+        "wikipedia_validation_bpc": 1.9343379892251007,
+        "wikipedia_validation_bpb": 1.920867698839838
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__unigram_8000__seed42__chars_e30",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/unigram_8000/seed_42/final/fixed_characters_e30",
+      "tokenizer_id": "unigram_8000",
+      "seed": 42,
+      "track": "architecture_matched",
+      "budget_policy": "fixed_characters",
+      "budget_path_slug": "fixed_characters_e30",
+      "best_validation_bpc": 1.4309637303326443,
+      "best_validation_bpb": 1.4171042761007715,
+      "best_step": 3146,
+      "best_effective_epochs": 24.002401075285686,
+      "best_characters_processed": 110982278.08950488,
+      "final_budget_bpc": 1.4337089829146474,
+      "final_budget_bpb": 1.4198229398170272,
+      "best_vs_final_bpc_gap": 0.002745252582003088,
+      "characters_processed": 138739337.72928843,
+      "optimizer_steps": 3933,
+      "effective_epochs": 30.005486339109556,
+      "runtime_s": 111.7792781600001,
+      "peak_vram_gb": 0.7370014190673828,
+      "total_parameters": 5273088,
+      "embedding_parameters": 2113536,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.43093593221877,
+        "combined_validation_bpb": 1.4170767472227128,
+        "bible_validation_bpc": 1.2388910431890237,
+        "bible_validation_bpb": 1.2255859117696932,
+        "wikipedia_validation_bpc": 1.9223021060123708,
+        "wikipedia_validation_bpb": 1.9089156307839328
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__unigram_8000__seed42__updates_u4000",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/unigram_8000/seed_42/final/fixed_updates_u4000",
+      "tokenizer_id": "unigram_8000",
+      "seed": 42,
+      "track": "architecture_matched",
+      "budget_policy": "fixed_updates",
+      "budget_path_slug": "fixed_updates_u4000",
+      "best_validation_bpc": 1.4423002957801767,
+      "best_validation_bpb": 1.4283310423922275,
+      "best_step": 4000,
+      "best_effective_epochs": 30.51596971801875,
+      "best_characters_processed": 141099710.26620537,
+      "final_budget_bpc": 1.4423002957801767,
+      "final_budget_bpb": 1.4283310423922275,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 141099710.26620537,
+      "optimizer_steps": 4000,
+      "effective_epochs": 30.51596971801875,
+      "runtime_s": 113.3609640620125,
+      "peak_vram_gb": 0.7370014190673828,
+      "total_parameters": 5273088,
+      "embedding_parameters": 2113536,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.4422799366292007,
+        "combined_validation_bpb": 1.4283108804277456,
+        "bible_validation_bpc": 1.255080622416735,
+        "bible_validation_bpb": 1.2416016222133555,
+        "wikipedia_validation_bpc": 1.9211091358188803,
+        "wikipedia_validation_bpb": 1.9077309681638948
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__unigram_8000__seed1337__chars_e30",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/unigram_8000/seed_1337/final/fixed_characters_e30",
+      "tokenizer_id": "unigram_8000",
+      "seed": 1337,
+      "track": "architecture_matched",
+      "budget_policy": "fixed_characters",
+      "budget_path_slug": "fixed_characters_e30",
+      "best_validation_bpc": 1.432025169918867,
+      "best_validation_bpb": 1.418155435221422,
+      "best_step": 3408,
+      "best_effective_epochs": 26.002059722825503,
+      "best_characters_processed": 120228297.74434084,
+      "final_budget_bpc": 1.4359300991196389,
+      "final_budget_bpb": 1.4220225436260479,
+      "best_vs_final_bpc_gap": 0.0039049292007717895,
+      "characters_processed": 138744608.41731519,
+      "optimizer_steps": 3933,
+      "effective_epochs": 30.00662624333696,
+      "runtime_s": 112.41534798200883,
+      "peak_vram_gb": 0.7370014190673828,
+      "total_parameters": 5273088,
+      "embedding_parameters": 2113536,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.432012027310644,
+        "combined_validation_bpb": 1.418142419904599,
+        "bible_validation_bpc": 1.2379232028353886,
+        "bible_validation_bpb": 1.2246284655852377,
+        "wikipedia_validation_bpc": 1.9273337077405508,
+        "wikipedia_validation_bpb": 1.9139121935805719
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__unigram_8000__seed1337__updates_u4000",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/unigram_8000/seed_1337/final/fixed_updates_u4000",
+      "tokenizer_id": "unigram_8000",
+      "seed": 1337,
+      "track": "architecture_matched",
+      "budget_policy": "fixed_updates",
+      "budget_path_slug": "fixed_updates_u4000",
+      "best_validation_bpc": 1.4448921445269196,
+      "best_validation_bpb": 1.4308977880505271,
+      "best_step": 4000,
+      "best_effective_epochs": 30.517614632016798,
+      "best_characters_processed": 141107316.01790464,
+      "final_budget_bpc": 1.4448921445269196,
+      "final_budget_bpb": 1.4308977880505271,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 141107316.01790464,
+      "optimizer_steps": 4000,
+      "effective_epochs": 30.517614632016798,
+      "runtime_s": 108.00926914101001,
+      "peak_vram_gb": 0.7370014190673828,
+      "total_parameters": 5273088,
+      "embedding_parameters": 2113536,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.4448874869169344,
+        "combined_validation_bpb": 1.4308931755513516,
+        "bible_validation_bpc": 1.2557535879143225,
+        "bible_validation_bpb": 1.2422673603648133,
+        "wikipedia_validation_bpc": 1.9277256637780684,
+        "wikipedia_validation_bpb": 1.9143014201252744
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__unigram_8000__seed2026__chars_e30",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/unigram_8000/seed_2026/final/fixed_characters_e30",
+      "tokenizer_id": "unigram_8000",
+      "seed": 2026,
+      "track": "architecture_matched",
+      "budget_policy": "fixed_characters",
+      "budget_path_slug": "fixed_characters_e30",
+      "best_validation_bpc": 1.4309492399904677,
+      "best_validation_bpb": 1.417089926103336,
+      "best_step": 3671,
+      "best_effective_epochs": 28.007156357593697,
+      "best_characters_processed": 129499461.55908538,
+      "final_budget_bpc": 1.4368191124426801,
+      "final_budget_bpb": 1.4229029465006195,
+      "best_vs_final_bpc_gap": 0.005869872452212377,
+      "characters_processed": 138738950.75758886,
+      "optimizer_steps": 3933,
+      "effective_epochs": 30.0054026478203,
+      "runtime_s": 107.9119371889974,
+      "peak_vram_gb": 0.7370014190673828,
+      "total_parameters": 5273088,
+      "embedding_parameters": 2113536,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.4309133863033896,
+        "combined_validation_bpb": 1.4170544196735115,
+        "bible_validation_bpc": 1.2356266624666021,
+        "bible_validation_bpb": 1.2223565890249308,
+        "wikipedia_validation_bpc": 1.93116765495893,
+        "wikipedia_validation_bpb": 1.9177194420613775
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__unigram_8000__seed2026__updates_u4000",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/unigram_8000/seed_2026/final/fixed_updates_u4000",
+      "tokenizer_id": "unigram_8000",
+      "seed": 2026,
+      "track": "architecture_matched",
+      "budget_policy": "fixed_updates",
+      "budget_path_slug": "fixed_updates_u4000",
+      "best_validation_bpc": 1.4428717481894078,
+      "best_validation_bpb": 1.4288969600570456,
+      "best_step": 4000,
+      "best_effective_epochs": 30.51726168894272,
+      "best_characters_processed": 141105684.08007166,
+      "final_budget_bpc": 1.4428717481894078,
+      "final_budget_bpb": 1.4288969600570456,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 141105684.08007166,
+      "optimizer_steps": 4000,
+      "effective_epochs": 30.51726168894272,
+      "runtime_s": 111.84359674000007,
+      "peak_vram_gb": 0.7370014190673828,
+      "total_parameters": 5273088,
+      "embedding_parameters": 2113536,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.4428797905495336,
+        "combined_validation_bpb": 1.4289049245237073,
+        "bible_validation_bpc": 1.254543902161975,
+        "bible_validation_bpb": 1.2410706660922248,
+        "wikipedia_validation_bpc": 1.9247590874386598,
+        "wikipedia_validation_bpb": 1.9113555023496558
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__character__seed42__chars_e30",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/character/seed_42/final/fixed_characters_e30",
+      "tokenizer_id": "character",
+      "seed": 42,
+      "track": "parameter_matched",
+      "budget_policy": "fixed_characters",
+      "budget_path_slug": "fixed_characters_e30",
+      "best_validation_bpc": 1.485549631910996,
+      "best_validation_bpb": 1.4711614914597635,
+      "best_step": 17137,
+      "best_effective_epochs": 30.00003979411735,
+      "best_characters_processed": 138714154.0,
+      "final_budget_bpc": 1.485549631910996,
+      "final_budget_bpb": 1.4711614914597635,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 138714154.0,
+      "optimizer_steps": 17137,
+      "effective_epochs": 30.00003979411735,
+      "runtime_s": 414.7658493589988,
+      "peak_vram_gb": 0.3834528923034668,
+      "total_parameters": 3459328,
+      "embedding_parameters": 299776,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.4855200668232151,
+        "combined_validation_bpb": 1.4711322127216448,
+        "bible_validation_bpc": 1.306288772962748,
+        "bible_validation_bpb": 1.2922598203026925,
+        "wikipedia_validation_bpc": 1.9448657452974139,
+        "wikipedia_validation_bpb": 1.9313221420101718
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__character__seed42__updates_u4000",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/character/seed_42/final/fixed_updates_u4000",
+      "tokenizer_id": "character",
+      "seed": 42,
+      "track": "parameter_matched",
+      "budget_policy": "fixed_updates",
+      "budget_path_slug": "fixed_updates_u4000",
+      "best_validation_bpc": 1.8772380253125969,
+      "best_validation_bpb": 1.8590562266110302,
+      "best_step": 4000,
+      "best_effective_epochs": 7.002409490550952,
+      "best_characters_processed": 32377734.0,
+      "final_budget_bpc": 1.8772380253125969,
+      "final_budget_bpb": 1.8590562266110302,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 32377734.0,
+      "optimizer_steps": 4000,
+      "effective_epochs": 7.002409490550952,
+      "runtime_s": 103.56652733300871,
+      "peak_vram_gb": 0.3834528923034668,
+      "total_parameters": 3459328,
+      "embedding_parameters": 299776,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.8772052469694167,
+        "combined_validation_bpb": 1.859023765739172,
+        "bible_validation_bpc": 1.6707496412545824,
+        "bible_validation_bpb": 1.652806543136389,
+        "wikipedia_validation_bpc": 2.410513425398427,
+        "wikipedia_validation_bpb": 2.3937271574356607
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__character__seed1337__chars_e30",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/character/seed_1337/final/fixed_characters_e30",
+      "tokenizer_id": "character",
+      "seed": 1337,
+      "track": "parameter_matched",
+      "budget_policy": "fixed_characters",
+      "budget_path_slug": "fixed_characters_e30",
+      "best_validation_bpc": 1.4717174719617532,
+      "best_validation_bpb": 1.457463301494302,
+      "best_step": 17137,
+      "best_effective_epochs": 30.000065530530197,
+      "best_characters_processed": 138714273.0,
+      "final_budget_bpc": 1.4717174719617532,
+      "final_budget_bpb": 1.457463301494302,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 138714273.0,
+      "optimizer_steps": 17137,
+      "effective_epochs": 30.000065530530197,
+      "runtime_s": 408.36905903699517,
+      "peak_vram_gb": 0.3834528923034668,
+      "total_parameters": 3459328,
+      "embedding_parameters": 299776,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.4717130962307645,
+        "combined_validation_bpb": 1.4574589681440124,
+        "bible_validation_bpc": 1.2963667276047348,
+        "bible_validation_bpb": 1.2824443332398279,
+        "wikipedia_validation_bpc": 1.9208122962792895,
+        "wikipedia_validation_bpb": 1.9074361957474324
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__character__seed1337__updates_u4000",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/character/seed_1337/final/fixed_updates_u4000",
+      "tokenizer_id": "character",
+      "seed": 1337,
+      "track": "parameter_matched",
+      "budget_policy": "fixed_updates",
+      "budget_path_slug": "fixed_updates_u4000",
+      "best_validation_bpc": 1.8843258181818257,
+      "best_validation_bpb": 1.8660753713805245,
+      "best_step": 4000,
+      "best_effective_epochs": 7.002412085819475,
+      "best_characters_processed": 32377746.0,
+      "final_budget_bpc": 1.8843258181818257,
+      "final_budget_bpb": 1.8660753713805245,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 32377746.0,
+      "optimizer_steps": 4000,
+      "effective_epochs": 7.002412085819475,
+      "runtime_s": 102.90551399999822,
+      "peak_vram_gb": 0.3834528923034668,
+      "total_parameters": 3459328,
+      "embedding_parameters": 299776,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.8842340142666179,
+        "combined_validation_bpb": 1.8659844566228365,
+        "bible_validation_bpc": 1.6766673467000863,
+        "bible_validation_bpb": 1.658660695092596,
+        "wikipedia_validation_bpc": 2.4198348451450573,
+        "wikipedia_validation_bpb": 2.4029836649324725
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__character__seed2026__chars_e30",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/character/seed_2026/final/fixed_characters_e30",
+      "tokenizer_id": "character",
+      "seed": 2026,
+      "track": "parameter_matched",
+      "budget_policy": "fixed_characters",
+      "budget_path_slug": "fixed_characters_e30",
+      "best_validation_bpc": 1.4762954087385072,
+      "best_validation_bpb": 1.4619968991282188,
+      "best_step": 17137,
+      "best_effective_epochs": 30.00006812579872,
+      "best_characters_processed": 138714285.0,
+      "final_budget_bpc": 1.4762954087385072,
+      "final_budget_bpb": 1.4619968991282188,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 138714285.0,
+      "optimizer_steps": 17137,
+      "effective_epochs": 30.00006812579872,
+      "runtime_s": 427.27654166500724,
+      "peak_vram_gb": 0.3834528923034668,
+      "total_parameters": 3459328,
+      "embedding_parameters": 299776,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.4762535832907302,
+        "combined_validation_bpb": 1.461955478776579,
+        "bible_validation_bpc": 1.3013280391106277,
+        "bible_validation_bpb": 1.287352362496276,
+        "wikipedia_validation_bpc": 1.925907766556155,
+        "wikipedia_validation_bpb": 1.9124961823266913
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__character__seed2026__updates_u4000",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/character/seed_2026/final/fixed_updates_u4000",
+      "tokenizer_id": "character",
+      "seed": 2026,
+      "track": "parameter_matched",
+      "budget_policy": "fixed_updates",
+      "budget_path_slug": "fixed_updates_u4000",
+      "best_validation_bpc": 1.8987876179076932,
+      "best_validation_bpb": 1.8803971028103463,
+      "best_step": 4000,
+      "best_effective_epochs": 7.0024084091890675,
+      "best_characters_processed": 32377729.0,
+      "final_budget_bpc": 1.8987876179076932,
+      "final_budget_bpb": 1.8803971028103463,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 32377729.0,
+      "optimizer_steps": 4000,
+      "effective_epochs": 7.0024084091890675,
+      "runtime_s": 106.14631065500726,
+      "peak_vram_gb": 0.3834528923034668,
+      "total_parameters": 3459328,
+      "embedding_parameters": 299776,
+      "non_embedding_parameters": 3159552,
+      "source_validation": {
+        "combined_validation_bpc": 1.898757358582774,
+        "combined_validation_bpb": 1.8803671365590526,
+        "bible_validation_bpc": 1.689790637249417,
+        "bible_validation_bpb": 1.6716430474162667,
+        "wikipedia_validation_bpc": 2.437770911374966,
+        "wikipedia_validation_bpb": 2.420794828471212
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__bpe_8000__seed42__chars_e30",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/bpe_8000/seed_42/final/fixed_characters_e30",
+      "tokenizer_id": "bpe_8000",
+      "seed": 42,
+      "track": "parameter_matched",
+      "budget_policy": "fixed_characters",
+      "budget_path_slug": "fixed_characters_e30",
+      "best_validation_bpc": 1.4446522104461974,
+      "best_validation_bpb": 1.4306601778270347,
+      "best_step": 3964,
+      "best_effective_epochs": 30.00573465036266,
+      "best_characters_processed": 138740485.8706122,
+      "final_budget_bpc": 1.4446522104461974,
+      "final_budget_bpb": 1.4306601778270347,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 138740485.8706122,
+      "optimizer_steps": 3964,
+      "effective_epochs": 30.00573465036266,
+      "runtime_s": 111.34329532399715,
+      "peak_vram_gb": 0.6693544387817383,
+      "total_parameters": 3364992,
+      "embedding_parameters": 1585152,
+      "non_embedding_parameters": 1779840,
+      "source_validation": {
+        "combined_validation_bpc": 1.4446114458984725,
+        "combined_validation_bpb": 1.4306198081002068,
+        "bible_validation_bpc": 1.2529637503391207,
+        "bible_validation_bpb": 1.2395074843877527,
+        "wikipedia_validation_bpc": 1.9389522541611954,
+        "wikipedia_validation_bpb": 1.9254498310830166
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__bpe_8000__seed42__updates_u4000",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/bpe_8000/seed_42/final/fixed_updates_u4000",
+      "tokenizer_id": "bpe_8000",
+      "seed": 42,
+      "track": "parameter_matched",
+      "budget_policy": "fixed_updates",
+      "budget_path_slug": "fixed_updates_u4000",
+      "best_validation_bpc": 1.4975025557896113,
+      "best_validation_bpb": 1.482998646505164,
+      "best_step": 4000,
+      "best_effective_epochs": 30.280593972967942,
+      "best_characters_processed": 140011380.1316152,
+      "final_budget_bpc": 1.4975025557896113,
+      "final_budget_bpb": 1.482998646505164,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 140011380.1316152,
+      "optimizer_steps": 4000,
+      "effective_epochs": 30.280593972967942,
+      "runtime_s": 106.51322835500468,
+      "peak_vram_gb": 0.6693544387817383,
+      "total_parameters": 3364992,
+      "embedding_parameters": 1585152,
+      "non_embedding_parameters": 1779840,
+      "source_validation": {
+        "combined_validation_bpc": 1.4974730840191937,
+        "combined_validation_bpb": 1.4829694601805932,
+        "bible_validation_bpc": 1.3090724058253613,
+        "bible_validation_bpb": 1.2950135582029816,
+        "wikipedia_validation_bpc": 1.9833817719096223,
+        "wikipedia_validation_bpb": 1.969569951761706
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__bpe_8000__seed1337__chars_e30",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/bpe_8000/seed_1337/final/fixed_characters_e30",
+      "tokenizer_id": "bpe_8000",
+      "seed": 1337,
+      "track": "parameter_matched",
+      "budget_policy": "fixed_characters",
+      "budget_path_slug": "fixed_characters_e30",
+      "best_validation_bpc": 1.4464671984757287,
+      "best_validation_bpb": 1.4324575869738918,
+      "best_step": 3964,
+      "best_effective_epochs": 30.005467073063038,
+      "best_characters_processed": 138739248.6469618,
+      "final_budget_bpc": 1.4464671984757287,
+      "final_budget_bpb": 1.4324575869738918,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 138739248.6469618,
+      "optimizer_steps": 3964,
+      "effective_epochs": 30.005467073063038,
+      "runtime_s": 107.88134526800422,
+      "peak_vram_gb": 0.6693544387817383,
+      "total_parameters": 3364992,
+      "embedding_parameters": 1585152,
+      "non_embedding_parameters": 1779840,
+      "source_validation": {
+        "combined_validation_bpc": 1.4464472269083732,
+        "combined_validation_bpb": 1.4324378088391287,
+        "bible_validation_bpc": 1.255704928899027,
+        "bible_validation_bpb": 1.2422192239254108,
+        "wikipedia_validation_bpc": 1.9371359550050005,
+        "wikipedia_validation_bpb": 1.9236461802215856
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__bpe_8000__seed1337__updates_u4000",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/bpe_8000/seed_1337/final/fixed_updates_u4000",
+      "tokenizer_id": "bpe_8000",
+      "seed": 1337,
+      "track": "parameter_matched",
+      "budget_policy": "fixed_updates",
+      "budget_path_slug": "fixed_updates_u4000",
+      "best_validation_bpc": 1.4983353760942155,
+      "best_validation_bpb": 1.4838234006130855,
+      "best_step": 4000,
+      "best_effective_epochs": 30.278992841124346,
+      "best_characters_processed": 140003976.8197979,
+      "final_budget_bpc": 1.4983353760942155,
+      "final_budget_bpb": 1.4838234006130855,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 140003976.8197979,
+      "optimizer_steps": 4000,
+      "effective_epochs": 30.278992841124346,
+      "runtime_s": 105.60191278500133,
+      "peak_vram_gb": 0.6693544387817383,
+      "total_parameters": 3364992,
+      "embedding_parameters": 1585152,
+      "non_embedding_parameters": 1779840,
+      "source_validation": {
+        "combined_validation_bpc": 1.498295756679915,
+        "combined_validation_bpb": 1.4837841649286083,
+        "bible_validation_bpc": 1.3111988537280475,
+        "bible_validation_bpb": 1.2971171690136107,
+        "wikipedia_validation_bpc": 1.9802392043118582,
+        "wikipedia_validation_bpb": 1.9664492682908798
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__bpe_8000__seed2026__chars_e30",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/bpe_8000/seed_2026/final/fixed_characters_e30",
+      "tokenizer_id": "bpe_8000",
+      "seed": 2026,
+      "track": "parameter_matched",
+      "budget_policy": "fixed_characters",
+      "budget_path_slug": "fixed_characters_e30",
+      "best_validation_bpc": 1.447723194028557,
+      "best_validation_bpb": 1.4337014177090446,
+      "best_step": 3964,
+      "best_effective_epochs": 30.00583188587446,
+      "best_characters_processed": 138740935.46807444,
+      "final_budget_bpc": 1.447723194028557,
+      "final_budget_bpb": 1.4337014177090446,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 138740935.46807444,
+      "optimizer_steps": 3964,
+      "effective_epochs": 30.00583188587446,
+      "runtime_s": 104.51657904099557,
+      "peak_vram_gb": 0.6693544387817383,
+      "total_parameters": 3364992,
+      "embedding_parameters": 1585152,
+      "non_embedding_parameters": 1779840,
+      "source_validation": {
+        "combined_validation_bpc": 1.4477111635210633,
+        "combined_validation_bpb": 1.4336895037218123,
+        "bible_validation_bpc": 1.2588160046685448,
+        "bible_validation_bpb": 1.2452968881433668,
+        "wikipedia_validation_bpc": 1.9328865689587587,
+        "wikipedia_validation_bpb": 1.9194263859345506
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__bpe_8000__seed2026__updates_u4000",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/bpe_8000/seed_2026/final/fixed_updates_u4000",
+      "tokenizer_id": "bpe_8000",
+      "seed": 2026,
+      "track": "parameter_matched",
+      "budget_policy": "fixed_updates",
+      "budget_path_slug": "fixed_updates_u4000",
+      "best_validation_bpc": 1.5004037337025877,
+      "best_validation_bpb": 1.4858717253533977,
+      "best_step": 4000,
+      "best_effective_epochs": 30.277308214660117,
+      "best_characters_processed": 139996187.44563723,
+      "final_budget_bpc": 1.5004037337025877,
+      "final_budget_bpb": 1.4858717253533977,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 139996187.44563723,
+      "optimizer_steps": 4000,
+      "effective_epochs": 30.277308214660117,
+      "runtime_s": 106.79925808800908,
+      "peak_vram_gb": 0.6693544387817383,
+      "total_parameters": 3364992,
+      "embedding_parameters": 1585152,
+      "non_embedding_parameters": 1779840,
+      "source_validation": {
+        "combined_validation_bpc": 1.500378701526369,
+        "combined_validation_bpb": 1.4858469356237856,
+        "bible_validation_bpc": 1.312823544912294,
+        "bible_validation_bpb": 1.2987244117468084,
+        "wikipedia_validation_bpc": 1.98301551496156,
+        "wikipedia_validation_bpb": 1.9692062453438373
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__unigram_8000__seed42__chars_e30",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/unigram_8000/seed_42/final/fixed_characters_e30",
+      "tokenizer_id": "unigram_8000",
+      "seed": 42,
+      "track": "parameter_matched",
+      "budget_policy": "fixed_characters",
+      "budget_path_slug": "fixed_characters_e30",
+      "best_validation_bpc": 1.4377220985956776,
+      "best_validation_bpb": 1.4237971868727182,
+      "best_step": 3933,
+      "best_effective_epochs": 30.005486339109556,
+      "best_characters_processed": 138739337.72928843,
+      "final_budget_bpc": 1.4377220985956776,
+      "final_budget_bpb": 1.4237971868727182,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 138739337.72928843,
+      "optimizer_steps": 3933,
+      "effective_epochs": 30.005486339109556,
+      "runtime_s": 102.09860359699815,
+      "peak_vram_gb": 0.6693544387817383,
+      "total_parameters": 3364992,
+      "embedding_parameters": 1585152,
+      "non_embedding_parameters": 1779840,
+      "source_validation": {
+        "combined_validation_bpc": 1.4377003454649757,
+        "combined_validation_bpb": 1.4237756444297598,
+        "bible_validation_bpc": 1.2463249938292171,
+        "bible_validation_bpb": 1.2329400251305904,
+        "wikipedia_validation_bpc": 1.927220187307196,
+        "wikipedia_validation_bpb": 1.9137994636777294
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__unigram_8000__seed42__updates_u4000",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/unigram_8000/seed_42/final/fixed_updates_u4000",
+      "tokenizer_id": "unigram_8000",
+      "seed": 42,
+      "track": "parameter_matched",
+      "budget_policy": "fixed_updates",
+      "budget_path_slug": "fixed_updates_u4000",
+      "best_validation_bpc": 1.4800099138122642,
+      "best_validation_bpb": 1.4656754277394195,
+      "best_step": 4000,
+      "best_effective_epochs": 30.51596971801875,
+      "best_characters_processed": 141099710.26620537,
+      "final_budget_bpc": 1.4800099138122642,
+      "final_budget_bpb": 1.4656754277394195,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 141099710.26620537,
+      "optimizer_steps": 4000,
+      "effective_epochs": 30.51596971801875,
+      "runtime_s": 105.73153642599937,
+      "peak_vram_gb": 0.6693544387817383,
+      "total_parameters": 3364992,
+      "embedding_parameters": 1585152,
+      "non_embedding_parameters": 1779840,
+      "source_validation": {
+        "combined_validation_bpc": 1.4799737496178536,
+        "combined_validation_bpb": 1.46563961380965,
+        "bible_validation_bpc": 1.2933190022183536,
+        "bible_validation_bpb": 1.2794293390504465,
+        "wikipedia_validation_bpc": 1.9574333205350274,
+        "wikipedia_validation_bpb": 1.9438021995084698
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__unigram_8000__seed1337__chars_e30",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/unigram_8000/seed_1337/final/fixed_characters_e30",
+      "tokenizer_id": "unigram_8000",
+      "seed": 1337,
+      "track": "parameter_matched",
+      "budget_policy": "fixed_characters",
+      "budget_path_slug": "fixed_characters_e30",
+      "best_validation_bpc": 1.436836690240743,
+      "best_validation_bpb": 1.4229203540507,
+      "best_step": 3933,
+      "best_effective_epochs": 30.00662624333696,
+      "best_characters_processed": 138744608.41731519,
+      "final_budget_bpc": 1.436836690240743,
+      "final_budget_bpb": 1.4229203540507,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 138744608.41731519,
+      "optimizer_steps": 3933,
+      "effective_epochs": 30.00662624333696,
+      "runtime_s": 104.40601917399908,
+      "peak_vram_gb": 0.6693544387817383,
+      "total_parameters": 3364992,
+      "embedding_parameters": 1585152,
+      "non_embedding_parameters": 1779840,
+      "source_validation": {
+        "combined_validation_bpc": 1.4368012021154886,
+        "combined_validation_bpb": 1.4228852096420872,
+        "bible_validation_bpc": 1.2441668762782983,
+        "bible_validation_bpb": 1.2308050847894763,
+        "wikipedia_validation_bpc": 1.9298418292363824,
+        "wikipedia_validation_bpb": 1.916402849088009
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__unigram_8000__seed1337__updates_u4000",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/unigram_8000/seed_1337/final/fixed_updates_u4000",
+      "tokenizer_id": "unigram_8000",
+      "seed": 1337,
+      "track": "parameter_matched",
+      "budget_policy": "fixed_updates",
+      "budget_path_slug": "fixed_updates_u4000",
+      "best_validation_bpc": 1.4808837805435897,
+      "best_validation_bpb": 1.466540830723055,
+      "best_step": 4000,
+      "best_effective_epochs": 30.517614632016798,
+      "best_characters_processed": 141107316.01790464,
+      "final_budget_bpc": 1.4808837805435897,
+      "final_budget_bpb": 1.466540830723055,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 141107316.01790464,
+      "optimizer_steps": 4000,
+      "effective_epochs": 30.517614632016798,
+      "runtime_s": 103.92724207800347,
+      "peak_vram_gb": 0.6693544387817383,
+      "total_parameters": 3364992,
+      "embedding_parameters": 1585152,
+      "non_embedding_parameters": 1779840,
+      "source_validation": {
+        "combined_validation_bpc": 1.480854381445101,
+        "combined_validation_bpb": 1.466511716366556,
+        "bible_validation_bpc": 1.293839442652974,
+        "bible_validation_bpb": 1.2799441901893684,
+        "wikipedia_validation_bpc": 1.96057351057678,
+        "wikipedia_validation_bpb": 1.9469205219800445
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__unigram_8000__seed2026__chars_e30",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/unigram_8000/seed_2026/final/fixed_characters_e30",
+      "tokenizer_id": "unigram_8000",
+      "seed": 2026,
+      "track": "parameter_matched",
+      "budget_policy": "fixed_characters",
+      "budget_path_slug": "fixed_characters_e30",
+      "best_validation_bpc": 1.436624633552363,
+      "best_validation_bpb": 1.4227103512158907,
+      "best_step": 3933,
+      "best_effective_epochs": 30.0054026478203,
+      "best_characters_processed": 138738950.75758886,
+      "final_budget_bpc": 1.436624633552363,
+      "final_budget_bpb": 1.4227103512158907,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 138738950.75758886,
+      "optimizer_steps": 3933,
+      "effective_epochs": 30.0054026478203,
+      "runtime_s": 104.58706976499525,
+      "peak_vram_gb": 0.6693544387817383,
+      "total_parameters": 3364992,
+      "embedding_parameters": 1585152,
+      "non_embedding_parameters": 1779840,
+      "source_validation": {
+        "combined_validation_bpc": 1.4366147765961956,
+        "combined_validation_bpb": 1.4227005897282736,
+        "bible_validation_bpc": 1.246030464571455,
+        "bible_validation_bpb": 1.2326486589843084,
+        "wikipedia_validation_bpc": 1.9258258490338775,
+        "wikipedia_validation_bpb": 1.912414835259432
+      }
+    },
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__unigram_8000__seed2026__updates_u4000",
+      "ok": true,
+      "failures": [],
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/unigram_8000/seed_2026/final/fixed_updates_u4000",
+      "tokenizer_id": "unigram_8000",
+      "seed": 2026,
+      "track": "parameter_matched",
+      "budget_policy": "fixed_updates",
+      "budget_path_slug": "fixed_updates_u4000",
+      "best_validation_bpc": 1.4770234366722568,
+      "best_validation_bpb": 1.4627178758211765,
+      "best_step": 4000,
+      "best_effective_epochs": 30.51726168894272,
+      "best_characters_processed": 141105684.08007166,
+      "final_budget_bpc": 1.4770234366722568,
+      "final_budget_bpb": 1.4627178758211765,
+      "best_vs_final_bpc_gap": 0.0,
+      "characters_processed": 141105684.08007166,
+      "optimizer_steps": 4000,
+      "effective_epochs": 30.51726168894272,
+      "runtime_s": 106.79564303100051,
+      "peak_vram_gb": 0.6693544387817383,
+      "total_parameters": 3364992,
+      "embedding_parameters": 1585152,
+      "non_embedding_parameters": 1779840,
+      "source_validation": {
+        "combined_validation_bpc": 1.4769945352663716,
+        "combined_validation_bpb": 1.4626892543369299,
+        "bible_validation_bpc": 1.2919738174708049,
+        "bible_validation_bpb": 1.278098600980794,
+        "wikipedia_validation_bpc": 1.9519843299012514,
+        "wikipedia_validation_bpb": 1.9383911544077663
+      }
+    }
+  ]
+}

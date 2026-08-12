@@ -1,0 +1,54 @@
+{
+  "mechanisms": [
+    {
+      "failure_class": "bpe_unigram_disagree",
+      "count_in_candidate_bank": 2500,
+      "interpretation": "Surface evidence that two strong unsupervised methods choose different segmentations; morphology is one possible explanation among several.",
+      "proposed_mechanism": "Hybrid constraints: prefer inventory-backed boundaries when annotation supports them; otherwise keep Unigram/BPE backbone.",
+      "evaluation": "Family agreement and human boundary F1 on annotated sample; val BPC."
+    },
+    {
+      "failure_class": "family_segmentation_inconsistent",
+      "count_in_candidate_bank": 39,
+      "interpretation": "Within surface stem families, stem string is not consistently realized as a piece.",
+      "proposed_mechanism": "Shared stem piece inventory with optional forced merges.",
+      "evaluation": "Per-family shared-piece rate; no large fertility regression."
+    },
+    {
+      "failure_class": "high_fragmentation",
+      "count_in_candidate_bank": 2455,
+      "interpretation": "Many pieces per word — sequence cost and weaker type sharing risk.",
+      "proposed_mechanism": "Productive affix/stem pieces instead of character-like shatter.",
+      "evaluation": "Fertility on rare/unseen-validation; LM val BPC under fixed updates."
+    },
+    {
+      "failure_class": "whole_word_single_token",
+      "count_in_candidate_bank": 10,
+      "interpretation": "Opaque whole-word tokens may hurt generalization to unseen forms.",
+      "proposed_mechanism": "Discourage low-count whole-word pieces; favour composition.",
+      "evaluation": "Unseen-validation fertility; paradigm completion diagnostics."
+    },
+    {
+      "failure_class": "unseen_in_train",
+      "count_in_candidate_bank": 1774,
+      "interpretation": "Validation-only types stress compositional generalization.",
+      "proposed_mechanism": "Composition-first segmentation for OOV types.",
+      "evaluation": "Val OOV subset BPC (validation only); never test for design."
+    },
+    {
+      "failure_class": "contains_w_hat",
+      "count_in_candidate_bank": 69,
+      "interpretation": "Orthographic edge case; may be representation, not morphology.",
+      "proposed_mechanism": "Preserve identity normalization; retain ŵ in inventory.",
+      "evaluation": "No fertility regression on ŵ subset vs Unigram-8000."
+    },
+    {
+      "failure_class": "mixed_orthography_heuristic",
+      "count_in_candidate_bank": 422,
+      "interpretation": "Heuristic mixed orthography / loan-like surfaces (not language ID).",
+      "proposed_mechanism": "Fallback to backbone; optional bilingual piece seeds if justified.",
+      "evaluation": "Domain-stratified val metrics; avoid English-centric vocab bloat."
+    }
+  ],
+  "caution": "Automatic tags are not morphological gold labels. human_phenomenon_tags remain null until annotation."
+}

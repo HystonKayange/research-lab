@@ -1,0 +1,16 @@
+###############################################################################
+# RESIDUAL CANDIDATES — REVIEW ONLY
+#
+# Source: data/raw/existing_corpus/chichewa_corpus.txt
+# After subtracting lines attributable to Bible and Wikipedia
+#   (comparison mode configured in residual_analysis.json).
+#
+# STATUS:
+#   - UNCLEANED
+#   - UNLICENSED (provenance/license not verified)
+#   - NOT APPROVED FOR TRAINING
+#   - GENERATED ONLY FOR HUMAN REVIEW
+#
+# Do not use this file as training data.
+# Do not treat this as a cleaned or final corpus.
+###############################################################################

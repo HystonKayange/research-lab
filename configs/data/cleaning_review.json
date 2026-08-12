@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+  "description": "Deterministic human-review sampling for Wikipedia interim cleaning validation. Does not modify raw/interim cleaning outputs or cleaning rules.",
+  "source_id": "wikipedia",
+  "random_seed": 42,
+  "excerpt_length": 200,
+  "include_uncertain_in_precision": false,
+  "paths": {
+    "raw": "data/raw/wikipedia/wiki_clean.txt",
+    "cleaned": "data/interim/cleaning/wikipedia/cleaned.txt",
+    "removal_log": "data/interim/cleaning/wikipedia/removal_log.jsonl",
+    "cleaning_config": "configs/data/cleaning.json",
+    "sample_output": "data/reports/cleaning_review_sample.jsonl",
+    "instructions_output": "data/reports/cleaning_review_instructions.md",
+    "validation_json": "data/metadata/cleaning_validation.json",
+    "validation_report": "data/reports/cleaning_validation_report.md"
+  },
+  "priority_rule_samples": {
+    "drop_min_length": 40,
+    "drop_english_signal": 40,
+    "drop_mixed_signal": 40,
+    "drop_max_length": 30
+  },
+  "other_rule_samples": {
+    "drop_category": 25,
+    "drop_url": 25,
+    "drop_digit_only": 20,
+    "dedupe_exact": 25,
+    "drop_blank": 10,
+    "drop_wikimedia": 20,
+    "drop_mu_nkhani": 6,
+    "drop_in_german_meta": 3,
+    "drop_german_signal": 2,
+    "drop_wikipedia_muzinenero": 1,
+    "drop_html_tags": 10,
+    "drop_wiki_brackets": 10,
+    "drop_image_meta": 5
+  },
+  "kept_sample_size": 80,
+  "allowed_labels": [
+    "valid_chichewa",
+    "useful_mixed_chichewa",
+    "boilerplate_or_noise",
+    "foreign_language",
+    "duplicate",
+    "uncertain"
+  ],
+  "false_removal_labels": [
+    "valid_chichewa",
+    "useful_mixed_chichewa"
+  ],
+  "correct_removal_labels": [
+    "boilerplate_or_noise",
+    "foreign_language",
+    "duplicate"
+  ],
+  "useful_kept_labels": [
+    "valid_chichewa",
+    "useful_mixed_chichewa"
+  ],
+  "noise_kept_labels": [
+    "boilerplate_or_noise",
+    "duplicate"
+  ],
+  "foreign_kept_labels": [
+    "foreign_language"
+  ],
+  "boilerplate_kept_labels": [
+    "boilerplate_or_noise"
+  ]
+}

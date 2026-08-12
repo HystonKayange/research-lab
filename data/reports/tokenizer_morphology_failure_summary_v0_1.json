@@ -1,0 +1,1237 @@
+{
+  "tool": {
+    "name": "analyze_baseline_morphology_failures",
+    "version": "0.1.0"
+  },
+  "generated_at": "2026-08-06T00:06:36.591504Z",
+  "frozen_split_verified": true,
+  "test_split_accessed": false,
+  "n_words_analyzed": 15000,
+  "n_bpe_unigram_disagree": 9087,
+  "segmentation_disagreement_rate": 0.6058,
+  "diagnostics": {
+    "token_count_per_word": {
+      "bpe_8000_mean": 3.4699333333333335,
+      "unigram_8000_mean": 3.5561333333333334,
+      "evidence_type": "statistical"
+    },
+    "characters_per_token": {
+      "bpe_8000_mean": 2.5862303664169235,
+      "unigram_8000_mean": 2.5830144631249827,
+      "evidence_type": "statistical"
+    },
+    "whole_word_token_rate": {
+      "bpe_8000": 0.005933333333333333,
+      "unigram_8000": 0.003933333333333333,
+      "evidence_type": "statistical"
+    },
+    "single_character_fragment_rate": {
+      "bpe_8000": 0.31447290053603333,
+      "unigram_8000": 0.3143301713471561,
+      "evidence_type": "statistical"
+    },
+    "short_fragment_rate_len_le_2": {
+      "bpe_8000": 0.6668331764299026,
+      "unigram_8000": 0.732162273630535,
+      "evidence_type": "statistical"
+    },
+    "rare_fragment_rate_singleton_piece_types": {
+      "bpe_8000_singleton_types": 798,
+      "unigram_8000_singleton_types": 870,
+      "bpe_8000_fraction_of_types": 0.2393521295740852,
+      "unigram_8000_fraction_of_types": 0.29591836734693877,
+      "evidence_type": "statistical"
+    },
+    "segmentation_disagreement_rate": {
+      "rate": 0.6058,
+      "count": 9087,
+      "n": 15000,
+      "evidence_type": "statistical"
+    },
+    "validation_unseen_form_fragmentation": {
+      "n_unseen_in_sample": 1659,
+      "mean_bpe_fertility": 3.5033152501506932,
+      "mean_unigram_fertility": 3.619047619047619,
+      "evidence_type": "statistical"
+    },
+    "recurring_initial_string_consistency": {
+      "bpe_8000": {
+        "n_prefix_groups": 583,
+        "mean_mode_rate": 0.851907335920829,
+        "low_consistency_examples": [
+          {
+            "initial_string": "187",
+            "n_members_sampled": 8,
+            "mode_first_piece": "187",
+            "mode_rate": 0.625,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "199",
+            "n_members_sampled": 40,
+            "mode_first_piece": "199",
+            "mode_rate": 0.675,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "200",
+            "n_members_sampled": 40,
+            "mode_first_piece": "200",
+            "mode_rate": 0.375,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "201",
+            "n_members_sampled": 40,
+            "mode_first_piece": "2013",
+            "mode_rate": 0.275,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "202",
+            "n_members_sampled": 27,
+            "mode_first_piece": "202",
+            "mode_rate": 0.48148148148148145,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "ach",
+            "n_members_sampled": 32,
+            "mode_first_piece": "a",
+            "mode_rate": 0.5,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "aka",
+            "n_members_sampled": 40,
+            "mode_first_piece": "aka",
+            "mode_rate": 0.675,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "ame",
+            "n_members_sampled": 20,
+            "mode_first_piece": "america",
+            "mode_rate": 0.4,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "ami",
+            "n_members_sampled": 12,
+            "mode_first_piece": "ami",
+            "mode_rate": 0.5833333333333334,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "aba",
+            "n_members_sampled": 9,
+            "mode_first_piece": "aba",
+            "mode_rate": 0.4444444444444444,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "abr",
+            "n_members_sampled": 9,
+            "mode_first_piece": "ab",
+            "mode_rate": 0.5555555555555556,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "abu",
+            "n_members_sampled": 6,
+            "mode_first_piece": "a",
+            "mode_rate": 0.5,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "abw",
+            "n_members_sampled": 12,
+            "mode_first_piece": "a",
+            "mode_rate": 0.6666666666666666,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "adz",
+            "n_members_sampled": 40,
+            "mode_first_piece": "adza",
+            "mode_rate": 0.625,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "afi",
+            "n_members_sampled": 8,
+            "mode_first_piece": "a",
+            "mode_rate": 0.625,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "afr",
+            "n_members_sampled": 9,
+            "mode_first_piece": "africa",
+            "mode_rate": 0.3333333333333333,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "aha",
+            "n_members_sampled": 6,
+            "mode_first_piece": "aha",
+            "mode_rate": 0.6666666666666666,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "ais",
+            "n_members_sampled": 5,
+            "mode_first_piece": "ai",
+            "mode_rate": 0.6,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "aku",
+            "n_members_sampled": 40,
+            "mode_first_piece": "aku",
+            "mode_rate": 0.575,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "ale",
+            "n_members_sampled": 21,
+            "mode_first_piece": "ale",
+            "mode_rate": 0.6666666666666666,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "amo",
+            "n_members_sampled": 5,
+            "mode_first_piece": "a",
+            "mode_rate": 0.4,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "amu",
+            "n_members_sampled": 10,
+            "mode_first_piece": "a",
+            "mode_rate": 0.6,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "and",
+            "n_members_sampled": 25,
+            "mode_first_piece": "an",
+            "mode_rate": 0.56,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "ane",
+            "n_members_sampled": 6,
+            "mode_first_piece": "a",
+            "mode_rate": 0.6666666666666666,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "ang",
+            "n_members_sampled": 21,
+            "mode_first_piece": "a",
+            "mode_rate": 0.6190476190476191,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "ant",
+            "n_members_sampled": 23,
+            "mode_first_piece": "anti",
+            "mode_rate": 0.5652173913043478,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "apo",
+            "n_members_sampled": 9,
+            "mode_first_piece": "apo",
+            "mode_rate": 0.6666666666666666,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "ara",
+            "n_members_sampled": 8,
+            "mode_first_piece": "ara",
+            "mode_rate": 0.5,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "asa",
+            "n_members_sampled": 40,
+            "mode_first_piece": "a",
+            "mode_rate": 0.45,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "ase",
+            "n_members_sampled": 8,
+            "mode_first_piece": "a",
+            "mode_rate": 0.5,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          }
+        ],
+        "evidence_type": "statistical",
+        "linguistic_interpretation": "requires_human_review"
+      },
+      "unigram_8000": {
+        "n_prefix_groups": 583,
+        "mean_mode_rate": 0.8482982393557144,
+        "low_consistency_examples": [
+          {
+            "initial_string": "192",
+            "n_members_sampled": 18,
+            "mode_first_piece": "19",
+            "mode_rate": 0.6666666666666666,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "193",
+            "n_members_sampled": 24,
+            "mode_first_piece": "19",
+            "mode_rate": 0.4166666666666667,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "194",
+            "n_members_sampled": 40,
+            "mode_first_piece": "19",
+            "mode_rate": 0.3,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "195",
+            "n_members_sampled": 36,
+            "mode_first_piece": "19",
+            "mode_rate": 0.3055555555555556,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "196",
+            "n_members_sampled": 40,
+            "mode_first_piece": "1964",
+            "mode_rate": 0.3,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "197",
+            "n_members_sampled": 33,
+            "mode_first_piece": "1973",
+            "mode_rate": 0.24242424242424243,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "198",
+            "n_members_sampled": 35,
+            "mode_first_piece": "1980",
+            "mode_rate": 0.2,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "199",
+            "n_members_sampled": 40,
+            "mode_first_piece": "1994",
+            "mode_rate": 0.225,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "200",
+            "n_members_sampled": 40,
+            "mode_first_piece": "2003",
+            "mode_rate": 0.325,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "201",
+            "n_members_sampled": 40,
+            "mode_first_piece": "2011",
+            "mode_rate": 0.325,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "202",
+            "n_members_sampled": 27,
+            "mode_first_piece": "2022",
+            "mode_rate": 0.37037037037037035,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "ame",
+            "n_members_sampled": 20,
+            "mode_first_piece": "a",
+            "mode_rate": 0.45,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "aba",
+            "n_members_sampled": 9,
+            "mode_first_piece": "a",
+            "mode_rate": 0.5555555555555556,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "abe",
+            "n_members_sampled": 12,
+            "mode_first_piece": "ab",
+            "mode_rate": 0.5,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "abr",
+            "n_members_sampled": 9,
+            "mode_first_piece": "ab",
+            "mode_rate": 0.5555555555555556,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "abu",
+            "n_members_sampled": 6,
+            "mode_first_piece": "a",
+            "mode_rate": 0.5,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "ado",
+            "n_members_sampled": 13,
+            "mode_first_piece": "ad",
+            "mode_rate": 0.6923076923076923,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "afr",
+            "n_members_sampled": 9,
+            "mode_first_piece": "africa",
+            "mode_rate": 0.3333333333333333,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "ais",
+            "n_members_sampled": 5,
+            "mode_first_piece": "aisraeli",
+            "mode_rate": 0.6,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "alb",
+            "n_members_sampled": 9,
+            "mode_first_piece": "al",
+            "mode_rate": 0.5555555555555556,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "all",
+            "n_members_sampled": 8,
+            "mode_first_piece": "all",
+            "mode_rate": 0.5,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "alu",
+            "n_members_sampled": 7,
+            "mode_first_piece": "a",
+            "mode_rate": 0.5714285714285714,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "and",
+            "n_members_sampled": 25,
+            "mode_first_piece": "a",
+            "mode_rate": 0.52,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "ane",
+            "n_members_sampled": 6,
+            "mode_first_piece": "a",
+            "mode_rate": 0.6666666666666666,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "ang",
+            "n_members_sampled": 21,
+            "mode_first_piece": "a",
+            "mode_rate": 0.6666666666666666,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "ara",
+            "n_members_sampled": 8,
+            "mode_first_piece": "ar",
+            "mode_rate": 0.375,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "aus",
+            "n_members_sampled": 9,
+            "mode_first_piece": "a",
+            "mode_rate": 0.5555555555555556,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "ayi",
+            "n_members_sampled": 15,
+            "mode_first_piece": "ayi",
+            "mode_rate": 0.6666666666666666,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "bab",
+            "n_members_sampled": 6,
+            "mode_first_piece": "ba",
+            "mode_rate": 0.5,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          },
+          {
+            "initial_string": "buk",
+            "n_members_sampled": 6,
+            "mode_first_piece": "b",
+            "mode_rate": 0.6666666666666666,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring initial string only."
+          }
+        ],
+        "evidence_type": "statistical",
+        "linguistic_interpretation": "requires_human_review"
+      }
+    },
+    "recurring_final_string_consistency": {
+      "bpe_8000": {
+        "n_suffix_groups": 543,
+        "mean_mode_rate": 0.7517000656865007,
+        "low_consistency_examples": [
+          {
+            "final_string": "nda",
+            "n_members_sampled": 40,
+            "mode_last_piece": "anda",
+            "mode_rate": 0.15,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "oni",
+            "n_members_sampled": 40,
+            "mode_last_piece": "oni",
+            "mode_rate": 0.45,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "awa",
+            "n_members_sampled": 40,
+            "mode_last_piece": "wa",
+            "mode_rate": 0.45,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "kwa",
+            "n_members_sampled": 10,
+            "mode_last_piece": "kwa",
+            "mode_rate": 0.5,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ena",
+            "n_members_sampled": 31,
+            "mode_last_piece": "ena",
+            "mode_rate": 0.6129032258064516,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "017",
+            "n_members_sampled": 7,
+            "mode_last_piece": "7",
+            "mode_rate": 0.5714285714285714,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "aka",
+            "n_members_sampled": 29,
+            "mode_last_piece": "aka",
+            "mode_rate": 0.2413793103448276,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ton",
+            "n_members_sampled": 38,
+            "mode_last_piece": "ton",
+            "mode_rate": 0.631578947368421,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "uka",
+            "n_members_sampled": 40,
+            "mode_last_piece": "tuluka",
+            "mode_rate": 0.15,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ary",
+            "n_members_sampled": 21,
+            "mode_last_piece": "ry",
+            "mode_rate": 0.42857142857142855,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "olo",
+            "n_members_sampled": 18,
+            "mode_last_piece": "olo",
+            "mode_rate": 0.3333333333333333,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ndi",
+            "n_members_sampled": 9,
+            "mode_last_piece": "kondi",
+            "mode_rate": 0.2222222222222222,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ali",
+            "n_members_sampled": 40,
+            "mode_last_piece": "ali",
+            "mode_rate": 0.425,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "alo",
+            "n_members_sampled": 23,
+            "mode_last_piece": "malo",
+            "mode_rate": 0.391304347826087,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ana",
+            "n_members_sampled": 40,
+            "mode_last_piece": "ana",
+            "mode_rate": 0.175,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "iro",
+            "n_members_sampled": 27,
+            "mode_last_piece": "iro",
+            "mode_rate": 0.25925925925925924,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ula",
+            "n_members_sampled": 40,
+            "mode_last_piece": "sula",
+            "mode_rate": 0.1,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "and",
+            "n_members_sampled": 25,
+            "mode_last_piece": "land",
+            "mode_rate": 0.52,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "mbo",
+            "n_members_sampled": 28,
+            "mode_last_piece": "mbo",
+            "mode_rate": 0.5357142857142857,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "era",
+            "n_members_sampled": 40,
+            "mode_last_piece": "bwera",
+            "mode_rate": 0.125,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ani",
+            "n_members_sampled": 40,
+            "mode_last_piece": "ani",
+            "mode_rate": 0.15,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ard",
+            "n_members_sampled": 18,
+            "mode_last_piece": "ard",
+            "mode_rate": 0.5,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ulu",
+            "n_members_sampled": 24,
+            "mode_last_piece": "ulu",
+            "mode_rate": 0.3333333333333333,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ert",
+            "n_members_sampled": 18,
+            "mode_last_piece": "bert",
+            "mode_rate": 0.5,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ngu",
+            "n_members_sampled": 16,
+            "mode_last_piece": "ingu",
+            "mode_rate": 0.25,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ngs",
+            "n_members_sampled": 5,
+            "mode_last_piece": "ngs",
+            "mode_rate": 0.6,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ala",
+            "n_members_sampled": 40,
+            "mode_last_piece": "khala",
+            "mode_rate": 0.25,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "awi",
+            "n_members_sampled": 10,
+            "mode_last_piece": "wi",
+            "mode_rate": 0.4,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "iti",
+            "n_members_sampled": 22,
+            "mode_last_piece": "ti",
+            "mode_rate": 0.5909090909090909,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "nza",
+            "n_members_sampled": 18,
+            "mode_last_piece": "za",
+            "mode_rate": 0.4444444444444444,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          }
+        ],
+        "evidence_type": "statistical",
+        "linguistic_interpretation": "requires_human_review"
+      },
+      "unigram_8000": {
+        "n_suffix_groups": 543,
+        "mean_mode_rate": 0.7736142086346313,
+        "low_consistency_examples": [
+          {
+            "final_string": "000",
+            "n_members_sampled": 40,
+            "mode_last_piece": "0,000",
+            "mode_rate": 0.4,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ors",
+            "n_members_sampled": 8,
+            "mode_last_piece": "s",
+            "mode_rate": 0.625,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "nda",
+            "n_members_sampled": 40,
+            "mode_last_piece": "nda",
+            "mode_rate": 0.15,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "oni",
+            "n_members_sampled": 40,
+            "mode_last_piece": "ni",
+            "mode_rate": 0.525,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "awa",
+            "n_members_sampled": 40,
+            "mode_last_piece": "wa",
+            "mode_rate": 0.475,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "kwa",
+            "n_members_sampled": 10,
+            "mode_last_piece": "kwa",
+            "mode_rate": 0.4,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ena",
+            "n_members_sampled": 31,
+            "mode_last_piece": "na",
+            "mode_rate": 0.5161290322580645,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "aka",
+            "n_members_sampled": 29,
+            "mode_last_piece": "ka",
+            "mode_rate": 0.3103448275862069,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ian",
+            "n_members_sampled": 40,
+            "mode_last_piece": "an",
+            "mode_rate": 0.425,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "uka",
+            "n_members_sampled": 40,
+            "mode_last_piece": "tuluka",
+            "mode_rate": 0.15,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "tin",
+            "n_members_sampled": 7,
+            "mode_last_piece": "n",
+            "mode_rate": 0.5714285714285714,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "alo",
+            "n_members_sampled": 23,
+            "mode_last_piece": "lo",
+            "mode_rate": 0.43478260869565216,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "yan",
+            "n_members_sampled": 5,
+            "mode_last_piece": "n",
+            "mode_rate": 0.6,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ana",
+            "n_members_sampled": 40,
+            "mode_last_piece": "na",
+            "mode_rate": 0.15,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "iro",
+            "n_members_sampled": 27,
+            "mode_last_piece": "ro",
+            "mode_rate": 0.5555555555555556,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ula",
+            "n_members_sampled": 40,
+            "mode_last_piece": "dula",
+            "mode_rate": 0.1,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "and",
+            "n_members_sampled": 25,
+            "mode_last_piece": "land",
+            "mode_rate": 0.56,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "era",
+            "n_members_sampled": 40,
+            "mode_last_piece": "bwera",
+            "mode_rate": 0.1,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ani",
+            "n_members_sampled": 40,
+            "mode_last_piece": "ni",
+            "mode_rate": 0.55,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ulu",
+            "n_members_sampled": 24,
+            "mode_last_piece": "lu",
+            "mode_rate": 0.2916666666666667,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ert",
+            "n_members_sampled": 18,
+            "mode_last_piece": "rt",
+            "mode_rate": 0.5,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "der",
+            "n_members_sampled": 12,
+            "mode_last_piece": "der",
+            "mode_rate": 0.5,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "yce",
+            "n_members_sampled": 6,
+            "mode_last_piece": "e",
+            "mode_rate": 0.6666666666666666,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ted",
+            "n_members_sampled": 13,
+            "mode_last_piece": "d",
+            "mode_rate": 0.46153846153846156,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ala",
+            "n_members_sampled": 40,
+            "mode_last_piece": "khala",
+            "mode_rate": 0.175,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "awi",
+            "n_members_sampled": 10,
+            "mode_last_piece": "malawi",
+            "mode_rate": 0.4,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "nza",
+            "n_members_sampled": 18,
+            "mode_last_piece": "nza",
+            "mode_rate": 0.3888888888888889,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ord",
+            "n_members_sampled": 8,
+            "mode_last_piece": "ford",
+            "mode_rate": 0.625,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "ino",
+            "n_members_sampled": 16,
+            "mode_last_piece": "no",
+            "mode_rate": 0.5,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          },
+          {
+            "final_string": "mba",
+            "n_members_sampled": 40,
+            "mode_last_piece": "mba",
+            "mode_rate": 0.225,
+            "evidence_type": "statistical",
+            "note": "Not a morpheme label; recurring final string only."
+          }
+        ],
+        "evidence_type": "statistical",
+        "linguistic_interpretation": "requires_human_review"
+      }
+    },
+    "automatic_word_family_consistency": {
+      "bpe_8000": {
+        "n_families": 2,
+        "mean_stem_piece_rate": 0.425,
+        "lowest_consistency_families": [
+          {
+            "surface_family_key": "chita",
+            "n_members": 10,
+            "n_sampled": 10,
+            "stem_as_single_piece_rate": 0.1,
+            "evidence_type": "statistical",
+            "note": "surface_family_key is not a verified morpheme"
+          },
+          {
+            "surface_family_key": "panga",
+            "n_members": 4,
+            "n_sampled": 4,
+            "stem_as_single_piece_rate": 0.75,
+            "evidence_type": "statistical",
+            "note": "surface_family_key is not a verified morpheme"
+          }
+        ],
+        "evidence_type": "statistical",
+        "linguistic_interpretation": "requires_human_review"
+      },
+      "unigram_8000": {
+        "n_families": 2,
+        "mean_stem_piece_rate": 0.55,
+        "lowest_consistency_families": [
+          {
+            "surface_family_key": "chita",
+            "n_members": 10,
+            "n_sampled": 10,
+            "stem_as_single_piece_rate": 0.1,
+            "evidence_type": "statistical",
+            "note": "surface_family_key is not a verified morpheme"
+          },
+          {
+            "surface_family_key": "panga",
+            "n_members": 4,
+            "n_sampled": 4,
+            "stem_as_single_piece_rate": 1.0,
+            "evidence_type": "statistical",
+            "note": "surface_family_key is not a verified morpheme"
+          }
+        ],
+        "evidence_type": "statistical",
+        "linguistic_interpretation": "requires_human_review"
+      },
+      "caution": "surface_family_key is not a verified morpheme"
+    },
+    "vocabulary_utilization_proxy": {
+      "bpe_8000": {
+        "vocab_size": 8000,
+        "pieces_observed_on_sample": 1866,
+        "utilization_proxy": 0.23325,
+        "evidence_type": "statistical",
+        "note": "Proxy from word sample, not full corpus encode."
+      },
+      "unigram_8000": {
+        "vocab_size": 8000,
+        "pieces_observed_on_sample": 1635,
+        "utilization_proxy": 0.204375,
+        "evidence_type": "statistical",
+        "note": "Proxy from word sample, not full corpus encode."
+      }
+    },
+    "frequency_sensitivity": {
+      "bands": {
+        "common_21_100": {
+          "n": 3,
+          "mean_bpe_fertility": 1.0,
+          "mean_unigram_fertility": 1.0
+        },
+        "frequent_100p": {
+          "n": 1,
+          "mean_bpe_fertility": 1.0,
+          "mean_unigram_fertility": 1.0
+        },
+        "mid_4_20": {
+          "n": 94,
+          "mean_bpe_fertility": 3.4893617021276597,
+          "mean_unigram_fertility": 2.6808510638297873
+        },
+        "rare_1_3": {
+          "n": 13243,
+          "mean_bpe_fertility": 3.4663595861964813,
+          "mean_unigram_fertility": 3.5552367288378766
+        },
+        "unseen": {
+          "n": 1659,
+          "mean_bpe_fertility": 3.5033152501506932,
+          "mean_unigram_fertility": 3.619047619047619
+        }
+      },
+      "evidence_type": "statistical"
+    },
+    "source_sensitivity": {
+      "by_source": {
+        "bible": {
+          "n": 4964,
+          "mean_bpe_fertility": 2.8736905721192585
+        },
+        "wikipedia": {
+          "n": 10036,
+          "mean_bpe_fertility": 3.7648465524113193
+        }
+      },
+      "evidence_type": "statistical"
+    },
+    "correlation_log_frequency_vs_fertility": {
+      "bpe_8000_pearson": -0.0848250901527604,
+      "unigram_8000_pearson": -0.09416338835262936,
+      "evidence_type": "statistical"
+    },
+    "correlation_word_length_vs_fertility": {
+      "bpe_8000_pearson": 0.649021336411969,
+      "unigram_8000_pearson": 0.60414667026207,
+      "evidence_type": "statistical"
+    }
+  },
+  "evidence_taxonomy": {
+    "orthographic": [
+      "Unicode surface forms as written in corpus",
+      "Presence of ŵ / mixed scripts",
+      "Word length in characters"
+    ],
+    "statistical": [
+      "Fertility, disagreement rates, correlations, consistency rates",
+      "Frequency bands and source aggregates"
+    ],
+    "linguistic_interpretation_requires_human_review": [
+      "Whether a prefix/suffix string is a morpheme",
+      "Whether disagreement is morphologically meaningful",
+      "Noun-class, tense/aspect, object marking claims"
+    ]
+  },
+  "dominant_automatic_patterns": [
+    {
+      "pattern": "high_bpe_unigram_disagreement_on_prioritized_sample",
+      "rate": 0.6058,
+      "evidence_type": "statistical"
+    },
+    {
+      "pattern": "fertility_increases_for_unseen_and_rare_bands",
+      "detail": {
+        "common_21_100": {
+          "n": 3,
+          "mean_bpe_fertility": 1.0,
+          "mean_unigram_fertility": 1.0
+        },
+        "frequent_100p": {
+          "n": 1,
+          "mean_bpe_fertility": 1.0,
+          "mean_unigram_fertility": 1.0
+        },
+        "mid_4_20": {
+          "n": 94,
+          "mean_bpe_fertility": 3.4893617021276597,
+          "mean_unigram_fertility": 2.6808510638297873
+        },
+        "rare_1_3": {
+          "n": 13243,
+          "mean_bpe_fertility": 3.4663595861964813,
+          "mean_unigram_fertility": 3.5552367288378766
+        },
+        "unseen": {
+          "n": 1659,
+          "mean_bpe_fertility": 3.5033152501506932,
+          "mean_unigram_fertility": 3.619047619047619
+        }
+      },
+      "evidence_type": "statistical"
+    },
+    {
+      "pattern": "incomplete_stem_piece_sharing_in_surface_families",
+      "bpe_mean_stem_piece_rate": 0.425,
+      "unigram_mean_stem_piece_rate": 0.55,
+      "evidence_type": "statistical",
+      "linguistic_interpretation": "requires_human_review"
+    }
+  ],
+  "lm_test_evaluations_executed": 0,
+  "mthandizi_implementation_executed": false
+}

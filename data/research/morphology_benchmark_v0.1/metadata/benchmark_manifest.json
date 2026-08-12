@@ -1,0 +1,65 @@
+{
+  "tool": {
+    "name": "build_morphology_benchmark",
+    "version": "0.1.0"
+  },
+  "generated_at": "2026-08-06T00:06:42.711523Z",
+  "benchmark_version": "morphology_benchmark_v0.1",
+  "development": {
+    "n_items": 200,
+    "path": "data/research/morphology_benchmark_v0.1/development/",
+    "strata_distribution": {
+      "rare_word": 159,
+      "unseen_or_low_frequency": 148,
+      "apparent_singular_plural_contrast": 120,
+      "bpe_unigram_disagreement": 110,
+      "apparent_subject_or_agreement_prefix": 96,
+      "apparent_noun_class_contrast": 73,
+      "apparent_object_marking": 65,
+      "long_agglutinative_looking": 52,
+      "apparent_derivational_suffix": 50,
+      "apparent_locative": 20,
+      "apparent_negation": 19,
+      "apparent_tense_aspect": 16,
+      "mixed_language_form": 16,
+      "apparent_whole_word_memorization": 14,
+      "frequent_word_family": 13,
+      "contains_w_hat": 12
+    },
+    "split_counts": {
+      "train": 200
+    },
+    "source_counts": {
+      "bible": 125,
+      "wikipedia": 75
+    },
+    "human_labels_present": false
+  },
+  "locked_holdout": {
+    "n_items": 80,
+    "released": false,
+    "path": "data/research/morphology_benchmark_v0.1/locked/",
+    "strata_distribution": {
+      "unseen_or_low_frequency": 80,
+      "bpe_unigram_disagreement": 50,
+      "apparent_singular_plural_contrast": 46,
+      "apparent_subject_or_agreement_prefix": 39,
+      "rare_word": 32,
+      "apparent_noun_class_contrast": 29,
+      "apparent_object_marking": 21,
+      "apparent_derivational_suffix": 21,
+      "long_agglutinative_looking": 17,
+      "apparent_locative": 11,
+      "apparent_tense_aspect": 9,
+      "apparent_negation": 7,
+      "mixed_language_form": 6,
+      "apparent_whole_word_memorization": 6,
+      "contains_w_hat": 5
+    },
+    "payload_sha256": "363b0b6b59193d15c023478ea045432f7681abe6c4eea547290f4bbf42e57102"
+  },
+  "overlap_dev_holdout_surfaces": 0,
+  "test_split_accessed": false,
+  "fake_gold_morphology": false,
+  "research_config": "configs/research/mthandizi_tokenizer_research_v0_1.json"
+}

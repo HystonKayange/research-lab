@@ -1,0 +1,261 @@
+{
+  "version": "0.1.0",
+  "criteria_id": "mthandizi_success_criteria_v0_1",
+  "approval_status": "frozen_pre_implementation",
+  "frozen_at": "2026-08-11",
+  "frozen_before": [
+    "mthandizi_tokenizer_method_selection",
+    "mthandizi_tokenizer_implementation",
+    "mthandizi_tokenizer_training",
+    "hyperparameter_search_for_proposed_tokenizer"
+  ],
+  "approved_by": "human_research_lead",
+  "decision_log_entry": "D-0008",
+  "decision_log": "docs/research/MTHANDIZI_TOKENIZER_DECISION_LOG.md",
+  "document": "docs/research/MTHANDIZI_TOKENIZER_SUCCESS_CRITERIA_v0_1.md",
+  "silent_revision_forbidden": true,
+  "registered_before_method_implementation": true,
+  "research_question": "Under fixed data, parameter, and compute conditions, can a morphology-aware tokenizer for Chichewa improve language-model efficiency/performance and morphological boundary quality compared with standard tokenization baselines?",
+  "baselines": {
+    "character": {
+      "role": "efficiency_and_fragmentation_diagnostic",
+      "morphology_baseline_equivalent": false
+    },
+    "bpe_8000": {
+      "role": "standard_subword_baseline",
+      "morphology_comparator": true,
+      "lm_comparator": true
+    },
+    "unigram_8000": {
+      "role": "primary_standard_subword_comparator",
+      "strongest_validation_lm_baseline": true,
+      "morphology_comparator": true,
+      "lm_comparator": true
+    }
+  },
+  "comparison_hierarchy": {
+    "primary": {
+      "id": "SC1",
+      "track": "parameter_matched",
+      "budget_policy": "fixed_characters",
+      "effective_epoch_budget": 30,
+      "train_characters": 138713970,
+      "frozen_corpus": "chichewa_corpus_v0.1",
+      "frozen_split": "v0.1_train_validation",
+      "same_model_family_as_baselines": true,
+      "seeds": [42, 1337, 2026],
+      "n_seeds": 3,
+      "primary_metric": "validation_bits_per_character",
+      "primary_baseline": "unigram_8000",
+      "other_baselines_report": ["character", "bpe_8000"],
+      "forbidden_primary_metrics": ["raw_token_perplexity"],
+      "lm_test_for_selection": false
+    },
+    "secondary": {
+      "SC2_architecture_matched_fixed_characters": {
+        "track": "architecture_matched",
+        "budget_policy": "fixed_characters",
+        "role": "robustness_secondary_not_primary_replacement",
+        "report": "mean_pm_std_over_3_seeds"
+      },
+      "SC3_fixed_updates": {
+        "conditions": [
+          {
+            "track": "parameter_matched",
+            "budget_policy": "fixed_updates"
+          },
+          {
+            "track": "architecture_matched",
+            "budget_policy": "fixed_updates"
+          }
+        ],
+        "role": "compute_tokenization_diagnostic_not_primary"
+      }
+    }
+  },
+  "criteria": {
+    "SC1_primary_lm": {
+      "id": "SC1",
+      "name": "primary_lm_comparison",
+      "condition": "parameter_matched_x_fixed_characters",
+      "baseline": "unigram_8000",
+      "metric": "validation_bpc",
+      "requirements": {
+        "mean_bpc_strictly_lower_than_baseline": true,
+        "min_seeds_individually_improved": 2,
+        "n_seeds": 3
+      },
+      "status": "frozen_pre_implementation"
+    },
+    "SC2_architecture_matched_robustness": {
+      "id": "SC2",
+      "name": "architecture_matched_robustness",
+      "condition": "architecture_matched_x_fixed_characters",
+      "role": "secondary_evidence",
+      "replaces_SC1": false,
+      "report": ["mean_validation_bpc", "std_validation_bpc", "per_seed"],
+      "status": "frozen_pre_implementation"
+    },
+    "SC3_fixed_update_diagnostic": {
+      "id": "SC3",
+      "name": "fixed_update_diagnostic",
+      "conditions": [
+        "parameter_matched_x_fixed_updates",
+        "architecture_matched_x_fixed_updates"
+      ],
+      "role": "diagnostic_not_primary",
+      "status": "frozen_pre_implementation"
+    },
+    "SC4_morphology_boundary_development": {
+      "id": "SC4",
+      "name": "morphological_boundary_quality",
+      "evidence_label": "DEVELOPMENT_set_evidence",
+      "gold_path": "data/research/morphology_benchmark_v0.1/development/annotations/annotator_a_active_195_v0_1.jsonl",
+      "n_active_items": 195,
+      "n_excluded_not_scored": 5,
+      "annotator": "annotator_a_single_native_speaker",
+      "holdout_accessible": false,
+      "metrics": [
+        "boundary_precision",
+        "boundary_recall",
+        "boundary_f1",
+        "exact_segmentation_match",
+        "boundary_jaccard"
+      ],
+      "comparators": ["bpe_8000", "unigram_8000", "mthandizi"],
+      "character_tokenizer": {
+        "report_descriptively": true,
+        "use_as_equivalent_morphology_baseline": false
+      },
+      "threshold": {
+        "type": "boundary_f1_exceeds_strongest_standard_subword_by_absolute",
+        "strongest_of": ["bpe_8000", "unigram_8000"],
+        "min_absolute_margin": 0.03
+      },
+      "status": "frozen_pre_implementation"
+    },
+    "SC5_tokenization_efficiency": {
+      "id": "SC5",
+      "name": "tokenization_efficiency",
+      "metrics": [
+        "tokens_per_character",
+        "word_fertility",
+        "sequence_length_expansion",
+        "single_character_fragment_rate",
+        "whole_word_rate"
+      ],
+      "threshold": {
+        "type": "max_relative_increase_tokens_per_character_vs_baseline",
+        "baseline": "unigram_8000",
+        "max_relative_increase": 0.10,
+        "exception": "only_if_SC1_improves_enough_and_exception_pre_logged_in_decision_log"
+      },
+      "on_threshold_exceeded_without_exception": "mark_SC5_failed",
+      "post_hoc_threshold_change_forbidden": true,
+      "status": "frozen_pre_implementation"
+    },
+    "SC6_source_robustness": {
+      "id": "SC6",
+      "name": "source_robustness",
+      "condition": "parameter_matched_x_fixed_characters",
+      "sources": ["bible", "wikipedia"],
+      "metric": "validation_bpc",
+      "threshold": {
+        "type": "max_absolute_regression_vs_baseline_per_source",
+        "baseline": "unigram_8000",
+        "max_absolute_bpc_regression": 0.02
+      },
+      "report_even_if_aggregate_improves": true,
+      "status": "frozen_pre_implementation"
+    },
+    "SC7_ablations": {
+      "id": "SC7",
+      "name": "ablations",
+      "required_if_multi_mechanism": true,
+      "invent_before_method_selection": false,
+      "example_components_if_present": [
+        "statistical_affix_discovery",
+        "morphology_boundary_bias",
+        "unigram_fallback",
+        "character_fallback"
+      ],
+      "holdout_for_ablations": false,
+      "lm_test_for_ablation_selection": false,
+      "status": "frozen_pre_implementation"
+    },
+    "SC8_morphology_holdout": {
+      "id": "SC8",
+      "name": "morphology_holdout_isolation",
+      "holdout_status_during_development": "locked",
+      "inaccessible_during": [
+        "method_design",
+        "hyperparameter_selection",
+        "development_benchmark_analysis",
+        "ablations"
+      ],
+      "unlock_once_after": [
+        "tokenizer_algorithm_frozen",
+        "hyperparameters_frozen"
+      ],
+      "unlock_requires_decision_log_entry": true,
+      "role_after_unlock": "confirmatory_morphology_evaluation_only",
+      "status": "frozen_pre_implementation"
+    },
+    "SC9_lm_test": {
+      "id": "SC9",
+      "name": "lm_test_isolation",
+      "test_status_during_development": "untouched",
+      "final_evaluation_only_after": [
+        "tokenizer_design_frozen",
+        "hyperparameters_frozen",
+        "ablations_complete",
+        "development_conclusions_written"
+      ],
+      "method_selection_on_test_forbidden": true,
+      "single_final_test_pass": true,
+      "status": "frozen_pre_implementation"
+    }
+  },
+  "outcomes": {
+    "STRONG_SUCCESS": {
+      "requires": ["SC1_pass", "SC4_pass", "SC5_pass", "SC6_pass"]
+    },
+    "PARTIAL_RESULT": {
+      "description": "Morphology improves substantially but LM BPC does not beat Unigram, OR LM BPC improves but morphology boundary quality does not"
+    },
+    "NEGATIVE_RESULT": {
+      "description": "Does not improve primary LM criterion and provides no convincing morphology/efficiency advantage",
+      "must_preserve_and_report": true,
+      "criteria_change_after_results_forbidden": true
+    }
+  },
+  "methodology_notes": {
+    "n_annotators_development": 1,
+    "annotator_id": "annotator_a",
+    "annotator_type": "native_chichewa_speaker",
+    "human_human_iaa": false,
+    "self_consistency_planned": true,
+    "self_consistency_is_not_human_human_iaa": true,
+    "confidence_metadata": {
+      "has_unresolved_raw_strings": true,
+      "used_as_evaluation_metric": false
+    },
+    "morphology_active_n": 195,
+    "morphology_excluded_n": 5,
+    "morphology_canonical_provenance_n": 200,
+    "morphology_holdout_n_approx": 80,
+    "morphology_holdout_locked": true,
+    "masakhner": {
+      "role": "later_external_downstream_only",
+      "part_of_tokenizer_development_success": false
+    }
+  },
+  "safety": {
+    "access_morphology_holdout": false,
+    "access_lm_test": false,
+    "implement_mthandizi_at_criteria_freeze": false,
+    "train_models_for_proposed_at_criteria_freeze": false,
+    "tune_thresholds_on_proposed_results": false,
+    "change_human_annotations": false
+  }
+}

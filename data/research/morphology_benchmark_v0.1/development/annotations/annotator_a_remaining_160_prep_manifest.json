@@ -1,0 +1,54 @@
+{
+  "tool": {
+    "name": "prepare_annotator_a_remaining_160",
+    "version": "0.1.0"
+  },
+  "generated_at": "2026-08-06T06:09:42.403023Z",
+  "annotator_id": "annotator_a",
+  "annotator_count": 1,
+  "development_benchmark_mode": "single_native_speaker",
+  "pilot_40": {
+    "path": "data/research/morphology_benchmark_v0.1/development/pilot_40.jsonl",
+    "annotations": "data/research/morphology_benchmark_v0.1/development/annotations/annotator_a_annotations.jsonl",
+    "n": 40,
+    "preserved": true,
+    "not_overwritten": true
+  },
+  "remaining_160": {
+    "path": "data/research/morphology_benchmark_v0.1/development/remaining_160.jsonl",
+    "annotation_csv": "data/research/morphology_benchmark_v0.1/development/annotations/annotator_a_remaining_160.csv",
+    "annotations_jsonl_target": "data/research/morphology_benchmark_v0.1/development/annotations/annotator_a_remaining_160_annotations.jsonl",
+    "n": 160,
+    "n_annotated_so_far": 0
+  },
+  "full_200": {
+    "jsonl": "data/research/morphology_benchmark_v0.1/development/annotations/annotator_a_full_200.jsonl",
+    "csv": "data/research/morphology_benchmark_v0.1/development/annotations/annotator_a_full_200.csv",
+    "n": 200,
+    "unique_ids": 200,
+    "n_pilot_filled": 40,
+    "n_remaining_filled": 0,
+    "status": "pilot_complete_remaining_pending"
+  },
+  "self_review_25": {
+    "path": "data/research/morphology_benchmark_v0.1/development/self_review_25_blinded.jsonl",
+    "n": 25,
+    "selection_seed": "self_review_v0_1_annotator_a",
+    "original_annotations_hidden": true,
+    "comparison_deferred_until_second_pass": true
+  },
+  "human_ai_pilot": {
+    "status": "exploratory_only",
+    "not_gold": true,
+    "exclude_from_final_development_benchmark_gold": true,
+    "note": "Claude/AI co-pilot chat data is not gold; Annotator A native labels are development labels."
+  },
+  "tokenizer_hints_in_annotation_csv": false,
+  "locked_holdout_released": false,
+  "lm_test_evaluations": 0,
+  "source_checksums": {
+    "annotation_candidates": "197b6ce6ec7adda09e4a51db9cb956a966b1d4d237ee1fab5e3f1474e16da877",
+    "pilot_40": "593d1bc9ffa3bd627ca550d76d0dc8225ef60cc1430ad8b506e4fb20ebbb27da",
+    "pilot_annotations": "410662851ec3833a83622f0de768ccadcc0451afa5279ec13253c5581483568e"
+  }
+}

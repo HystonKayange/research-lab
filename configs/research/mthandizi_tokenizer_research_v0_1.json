@@ -1,0 +1,109 @@
+{
+  "version": "0.1.0",
+  "research_id": "mthandizi_tokenizer_research_v0_1",
+  "title": "Morphology-aware hybrid tokenization for Chichewa LM — research design",
+  "status": "design_phase",
+  "implementation_executed": false,
+  "case_study_language": "Chichewa",
+  "do_not_generalize_to_all_bantu": true,
+  "core_research_question": "Under fixed data, parameter, and compute budgets: can a morphology-aware hybrid tokenization method improve Chichewa language modelling over SentencePiece Unigram and BPE while preserving efficient sequence lengths and generalization to unseen word forms?",
+  "assumptions": {
+    "proposed_method_is_better_a_priori": false,
+    "unigram_8000_is_provisional_validation_leader_only": true
+  },
+  "data": {
+    "corpus_version": "chichewa_corpus_v0.1",
+    "split_root": "data/splits/chichewa_corpus_v0.1",
+    "allowed_splits_for_design": ["train", "validation"],
+    "forbidden_splits_for_design": ["test"],
+    "tokenizer_experiment_root": "data/tokenizers/chichewa_corpus_v0.1/baselines_v0.1",
+    "lm_validation_summary": "data/reports/lm_baselines_v0_1_validation_summary.json"
+  },
+  "baselines": {
+    "tokenizers": ["character", "bpe_8000", "unigram_8000"],
+    "primary_lm_baseline_to_beat": "unigram_8000",
+    "metric_primary": "bits_per_character",
+    "metric_secondary": ["bits_per_byte", "fertility", "boundary_f1"],
+    "do_not_compare_raw_token_perplexity": true
+  },
+  "benchmark": {
+    "root": "data/research/morphology_benchmark_v0.1",
+    "development_size": 200,
+    "development_size_range": [160, 240],
+    "holdout_size": 80,
+    "holdout_released": false,
+    "fake_gold_forbidden": true
+  },
+  "lm_protocol": {
+    "reuse_matrix": "configs/models/lm_baselines_v0_1_final_matrix_r2.json",
+    "tracks": ["architecture_matched", "parameter_matched"],
+    "budgets": ["fixed_characters", "fixed_updates"],
+    "seeds": [42, 1337, 2026],
+    "test_isolation": true,
+    "test_ready_but_untouched": true
+  },
+  "success_criteria_status": "proposed_pending_human_approval",
+  "success_criteria_documents": {
+    "markdown": "docs/research/MTHANDIZI_TOKENIZER_SUCCESS_CRITERIA_v0_1.md",
+    "json": "configs/research/mthandizi_tokenizer_success_criteria_v0_1.json",
+    "note": "Authoritative proposed thresholds live in the JSON/MD pair. Do not revise after seeing proposed-method results without a decision-log entry."
+  },
+  "success_criteria_proposed": {
+    "note": "REQUIRES HUMAN APPROVAL before implementation. Do not revise after seeing proposed-method results.",
+    "primary_comparison": {
+      "track": "parameter_matched",
+      "budget_policy": "fixed_characters",
+      "effective_epochs": 30,
+      "seeds": [42, 1337, 2026],
+      "metric": "validation_bpc",
+      "baseline": "unigram_8000"
+    },
+    "lower_mean_validation_bpc_than_unigram_8000": true,
+    "improvement_direction_consistent_across_seeds": true,
+    "improvement_survives_parameter_matching": true,
+    "no_unacceptable_sequence_length_increase": {
+      "max_relative_tokens_per_character_increase_vs_unigram_8000": 0.10
+    },
+    "improved_morphology_boundary_metrics_on_human_reviewed_data": true,
+    "no_substantial_source_specific_regression": {
+      "max_bible_or_wiki_bpc_increase": 0.02
+    },
+    "final_evidence_on_lm_test_only_after_method_freeze": true
+  },
+  "annotation_workflow": {
+    "guidelines": "docs/research/MORPHOLOGY_ANNOTATION_GUIDELINES_v0_1.md",
+    "phase": "single_native_annotator",
+    "annotator_id": "annotator_a",
+    "annotator_count": 1,
+    "human_human_iaa_claim": false,
+    "human_ai_pilot": "exploratory_only_not_gold",
+    "pilot_items": "data/research/morphology_benchmark_v0.1/development/pilot_40.jsonl",
+    "pilot_n": 40,
+    "remaining_n": 160,
+    "full_development_n": 200,
+    "remaining_items": "data/research/morphology_benchmark_v0.1/development/remaining_160.jsonl",
+    "self_review_25": "data/research/morphology_benchmark_v0.1/development/self_review_25_blinded.jsonl",
+    "ui": "scripts/tokenizers/morphology_annotation_ui.py",
+    "merge_full_200": "scripts/tokenizers/merge_annotator_a_full_200.py",
+    "self_consistency": "scripts/tokenizers/measure_annotation_self_consistency.py",
+    "agreement": "scripts/tokenizers/measure_morphology_annotation_agreement.py",
+    "adjudication": "scripts/tokenizers/adjudicate_morphology_annotations.py",
+    "morphology_holdout_locked": true
+  },
+  "phases": {
+    "A_automatic_diagnostics": "scripts/tokenizers/analyze_baseline_morphology_failures.py",
+    "B_benchmark": "scripts/tokenizers/build_morphology_benchmark.py",
+    "C_design_space": "docs/research/MTHANDIZI_TOKENIZER_RESEARCH_BLUEPRINT_v0_1.md#phase-c",
+    "D_preregistered_eval": "docs/research/MTHANDIZI_TOKENIZER_RESEARCH_BLUEPRINT_v0_1.md#phase-d",
+    "E_ablations": "docs/research/MTHANDIZI_TOKENIZER_RESEARCH_BLUEPRINT_v0_1.md#phase-e",
+    "F_threats": "docs/research/MTHANDIZI_TOKENIZER_RESEARCH_BLUEPRINT_v0_1.md#phase-f",
+    "G_prior_art": "docs/research/MTHANDIZI_TOKENIZER_PRIOR_ART_PLAN.md"
+  },
+  "safety": {
+    "lm_test_evaluations_allowed": false,
+    "morphology_holdout_release_allowed": false,
+    "mthandizi_training_allowed": false,
+    "change_frozen_splits_allowed": false,
+    "change_baseline_tokenizers_allowed": false
+  }
+}

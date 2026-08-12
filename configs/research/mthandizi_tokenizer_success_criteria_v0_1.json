@@ -1,0 +1,9 @@
+{
+  "version": "0.1.0",
+  "note": "SUPERSEDED as the authoritative freeze location. Canonical frozen criteria live at configs/tokenizers/mthandizi_success_criteria_v0_1.json and docs/research/MTHANDIZI_TOKENIZER_SUCCESS_CRITERIA_v0_1.md (decision D-0008).",
+  "approval_status": "superseded_by_configs_tokenizers_mthandizi_success_criteria_v0_1",
+  "canonical_config": "configs/tokenizers/mthandizi_success_criteria_v0_1.json",
+  "canonical_document": "docs/research/MTHANDIZI_TOKENIZER_SUCCESS_CRITERIA_v0_1.md",
+  "decision_log_entry": "D-0008",
+  "previous_status": "proposed_pending_human_approval"
+}

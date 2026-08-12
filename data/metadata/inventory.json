@@ -1,0 +1,46 @@
+{
+  "inventory_generated_at": "2026-08-04T02:24:42.038078Z",
+  "raw_dir": "data/raw",
+  "file_count": 3,
+  "files": [
+    {
+      "source_id": "bible",
+      "relative_path": "data/raw/bible/bible_clean.txt",
+      "filename": "bible_clean.txt",
+      "size_bytes": 4218603,
+      "line_count": 31099,
+      "character_count": 4172215,
+      "sha256": "55445a0e0a5359e243f1773de623af1716bf4d3cd835afd83c4407cbaf85fc89",
+      "encoding": "utf-8",
+      "modification_timestamp": "2026-08-04T02:03:15.227145Z"
+    },
+    {
+      "source_id": "existing_corpus",
+      "relative_path": "data/raw/existing_corpus/chichewa_corpus.txt",
+      "filename": "chichewa_corpus.txt",
+      "size_bytes": 6103844,
+      "line_count": 50752,
+      "character_count": 6047673,
+      "sha256": "32e65edccb4c341d45e55de3d35edc1dd8768cd6e47cfafeb22d21216c2c8932",
+      "encoding": "utf-8",
+      "modification_timestamp": "2026-08-04T02:03:25.654767Z"
+    },
+    {
+      "source_id": "wikipedia",
+      "relative_path": "data/raw/wikipedia/wiki_clean.txt",
+      "filename": "wiki_clean.txt",
+      "size_bytes": 1938045,
+      "line_count": 20579,
+      "character_count": 1928043,
+      "sha256": "cf7c5ba6d8c0d4770eee3306bab9f4be1dfc9570930a9aa7f3613c0ffb4587b7",
+      "encoding": "utf-8",
+      "modification_timestamp": "2026-08-04T02:03:26.877224Z"
+    }
+  ],
+  "totals": {
+    "file_count": 3,
+    "size_bytes": 12260492,
+    "line_count": 102430,
+    "character_count": 12147931
+  }
+}

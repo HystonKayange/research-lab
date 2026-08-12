@@ -1,0 +1,87 @@
+{
+  "version": "0.1.0",
+  "corpus_name": "chichewa_corpus",
+  "corpus_version": "v0.1",
+  "description": "License-gated promotion of interim cleaning outputs into a versioned processed corpus. Refuses to run when eligibility is unresolved.",
+  "output": {
+    "processed_root": "data/processed",
+    "corpus_dirname": "chichewa_corpus_v0.1",
+    "exportable_subdir": "corpus",
+    "restricted_subdir": "corpus_restricted_local",
+    "restricted_notice_filename": "NON_REDISTRIBUTION_NOTICE.txt"
+  },
+  "eligibility_path": "data/metadata/source_eligibility.json",
+  "inventory_path": "data/metadata/inventory.json",
+  "deduplication_policy_path": "data/metadata/deduplication_policy_v0_1.json",
+  "gates": {
+    "require_provenance_verified": true,
+    "require_license_verified": true,
+    "require_allowed_for_training_true": true,
+    "require_include_in_processed_corpus_true": true,
+    "require_technical_output_exists": true,
+    "require_technical_checksum_match": true,
+    "require_raw_checksum_match_inventory": true,
+    "require_cleaning_config_checksum_match": true,
+    "block_redundant": true,
+    "block_excluded": true,
+    "block_holdout_only": true
+  },
+  "sources": {
+    "bible": {
+      "source_id": "bible",
+      "raw_relative_path": "data/raw/bible/bible_clean.txt",
+      "interim_cleaned_path": "data/interim/cleaning_v2/bible/cleaned.txt",
+      "interim_summary_path": "data/interim/cleaning_v2/summary.json",
+      "cleaning_config_path": "configs/data/cleaning_v2.json",
+      "expected_cleaning_config_sha256": "c2f734aa5115be3b7a4a5f5bce813018b189d9b08a69133b2991514ab0ad29cb",
+      "output_filename": "bible.txt",
+      "technical_status_expected": ["light_touch_clean", "cleaning_v2_validated"]
+    },
+    "wikipedia": {
+      "source_id": "wikipedia",
+      "raw_relative_path": "data/raw/wikipedia/wiki_clean.txt",
+      "interim_cleaned_path": "data/interim/cleaning_v2/wikipedia/cleaned.txt",
+      "interim_summary_path": "data/interim/cleaning_v2/summary.json",
+      "cleaning_config_path": "configs/data/cleaning_v2.json",
+      "expected_cleaning_config_sha256": "c2f734aa5115be3b7a4a5f5bce813018b189d9b08a69133b2991514ab0ad29cb",
+      "output_filename": "wikipedia.txt",
+      "technical_status_expected": ["cleaning_v2_validated"]
+    },
+    "existing_corpus": {
+      "source_id": "existing_corpus",
+      "raw_relative_path": "data/raw/existing_corpus/chichewa_corpus.txt",
+      "interim_cleaned_path": null,
+      "include_by_default": false,
+      "notes": "Redundant composite; must not be included as an independent source."
+    }
+  },
+  "deduplication": {
+    "within_source_exact": true,
+    "cross_source_exact": false,
+    "source_priority": ["bible", "wikipedia"]
+  },
+  "holdout_metrics_reference": {
+    "stage1_removal_precision": 0.975,
+    "stage1_false_removal_rate": 0.025,
+    "stage1_useful_text_retention": 0.955,
+    "combined_stage1_stage2_n_labels": 120,
+    "combined_removal_precision": 0.988,
+    "combined_false_removal_rate": 0.0125,
+    "combined_useful_text_retention": 0.955,
+    "stage1_design": "risk_stratified",
+    "stage2_design": "largely_straightforward_removal_categories",
+    "notes": "Provisional independent evidence only. Do not retune Cleaning Policy v2 on holdout. Stage 1 was risk-stratified; Stage 2 was largely straightforward removal categories—do not present combined metrics without that context. Useful-retention CI wide due to few useful examples (~22). Remaining holdout extension pool stays locked."
+  },
+  "provenance_paths": {
+    "eligibility": "data/metadata/source_eligibility.json",
+    "attribution_report": "data/reports/SOURCE_ATTRIBUTION.md",
+    "source_provenance_dir": "data/metadata/source_provenance",
+    "acquisition_manifest": "configs/data/source_acquisition_manifest.json"
+  },
+  "disclaimers": [
+    "Do not approve any source for training automatically.",
+    "Promotion requires explicit human eligibility decisions.",
+    "Training permission and redistribution permission are separate.",
+    "existing_corpus is excluded as a redundant composite."
+  ]
+}

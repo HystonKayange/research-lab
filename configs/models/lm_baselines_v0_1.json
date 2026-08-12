@@ -1,0 +1,143 @@
+{
+  "version": "0.1.0",
+  "experiment_id": "lm_baselines_v0.1",
+  "description": "Controlled decoder-only Transformer baselines comparing character, BPE-8000, and Unigram-8000 on frozen Chichewa splits. Tokenizer is the main variable.",
+  "corpus_version": "chichewa_corpus_v0.1",
+  "split_version": "v0.1",
+  "split_root": "data/splits/chichewa_corpus_v0.1",
+  "tokenizer_root": "data/tokenizers/chichewa_corpus_v0.1/baselines_v0.1",
+  "output_root": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1",
+  "metadata_path": "data/metadata/lm_baselines_v0_1.json",
+  "report_path": "data/reports/lm_baselines_v0_1.md",
+  "generation_review_path": "data/reports/lm_generation_review_v0_1.jsonl",
+  "hypotheses": {
+    "H1_character": "The character model may generalize well to unseen word forms but will require longer sequences and more computation.",
+    "H2_bpe_8000": "BPE may achieve stronger compression and faster optimization but may over-rely on frequent whole words and non-morphological merges.",
+    "H3_unigram_8000": "Unigram may provide similar efficiency to BPE while allowing more flexible subword segmentation.",
+    "locked": true,
+    "note": "Do not rewrite hypotheses after seeing results."
+  },
+  "tokenizers": {
+    "character": {
+      "tokenizer_id": "character",
+      "kind": "character",
+      "path": "data/tokenizers/chichewa_corpus_v0.1/baselines_v0.1/character"
+    },
+    "bpe_8000": {
+      "tokenizer_id": "bpe_8000",
+      "kind": "sentencepiece",
+      "path": "data/tokenizers/chichewa_corpus_v0.1/baselines_v0.1/bpe/vocab_8000"
+    },
+    "unigram_8000": {
+      "tokenizer_id": "unigram_8000",
+      "kind": "sentencepiece",
+      "path": "data/tokenizers/chichewa_corpus_v0.1/baselines_v0.1/unigram/vocab_8000"
+    }
+  },
+  "architecture_matched": {
+    "n_layer": 4,
+    "n_embd": 256,
+    "n_head": 4,
+    "n_inner": 1024,
+    "dropout": 0.1,
+    "context_length": 256,
+    "pre_ln": true,
+    "tie_embeddings": true,
+    "positional_encoding": "learned"
+  },
+  "parameter_matched": {
+    "description": "Adjust n_embd/n_inner for non-character models so total params within ~±5% of character model under architecture_matched base.",
+    "tolerance_fraction": 0.05,
+    "base_on": "character",
+    "overrides": {
+      "character": {
+        "n_layer": 4,
+        "n_embd": 256,
+        "n_head": 4,
+        "n_inner": 1024
+      },
+      "bpe_8000": {
+        "n_layer": 4,
+        "n_embd": 192,
+        "n_head": 4,
+        "n_inner": 768
+      },
+      "unigram_8000": {
+        "n_layer": 4,
+        "n_embd": 192,
+        "n_head": 4,
+        "n_inner": 768
+      }
+    },
+    "context_length": 256,
+    "dropout": 0.1,
+    "pre_ln": true,
+    "tie_embeddings": true,
+    "positional_encoding": "learned"
+  },
+  "training": {
+    "optimizer": "adamw",
+    "learning_rate": 3e-4,
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "weight_decay": 0.1,
+    "grad_clip": 1.0,
+    "warmup_steps": 50,
+    "schedule": "cosine",
+    "micro_batch_size": 16,
+    "grad_accum_steps": 2,
+    "dtype": "bfloat16",
+    "amp": true,
+    "log_every": 20,
+    "eval_every": 100,
+    "save_every": 200,
+    "packing": {
+      "method": "line_pack_with_eos",
+      "concatenate_lines": true,
+      "eos_between_lines": true,
+      "document_note": "Lines from combined.txt are packed in order with EOS between lines. Source boundaries within combined are not re-split; combined is bible then wikipedia concatenation from split builder."
+    }
+  },
+  "budget": {
+    "primary": "fixed_characters",
+    "pilot": {
+      "train_characters": 200000,
+      "max_optimizer_steps": 400,
+      "seeds": [42]
+    },
+    "final": {
+      "train_characters": 4000000,
+      "max_optimizer_steps": 8000,
+      "seeds": [42, 1337, 2026]
+    }
+  },
+  "evaluation": {
+    "primary_metric": "bits_per_character",
+    "secondary_confirm": "bits_per_byte",
+    "token_perplexity_not_cross_comparable": true,
+    "eval_batch_size": 16,
+    "sources": ["combined", "bible", "wikipedia"]
+  },
+  "generation": {
+    "prompts": [
+      "Malawi ndi",
+      "Anthu ambiri",
+      "M'boma la",
+      "Ndimakonda",
+      "Pa nkhani ya",
+      "Mulungu anapanga",
+      "Dziko la Malaŵi"
+    ],
+    "max_new_tokens": 64,
+    "greedy": true,
+    "temperature": 0.8,
+    "top_k": 40,
+    "top_p": 0.9
+  },
+  "tracks": ["architecture_matched"],
+  "tracks_note": "Pilot runs architecture_matched only. parameter_matched supported by code for final phase.",
+  "device": {
+    "prefer_cuda": true,
+    "cpu_smoke": false
+  }
+}

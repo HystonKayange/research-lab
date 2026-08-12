@@ -1,0 +1,28 @@
+{
+  "tool": {
+    "name": "plot_lm_learning_curves",
+    "version": "0.1.0"
+  },
+  "run_dir": "/home/cyai/projects/research/transformer-lab/data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/bpe_8000/seed_42/calibration/fixed_characters",
+  "n_curve_points": 9,
+  "n_train_log_points": 106,
+  "plots": [
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/calibration/val_bpc_vs_characters.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/calibration/val_bpc_vs_characters.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/calibration/val_bpc_vs_effective_epochs.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/calibration/val_bpc_vs_effective_epochs.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/calibration/val_bpb_vs_effective_epochs.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/calibration/val_bpb_vs_effective_epochs.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/calibration/chars_per_second_vs_characters.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/calibration/chars_per_second_vs_characters.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/calibration/tokens_per_second_vs_steps.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/calibration/tokens_per_second_vs_steps.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/calibration/train_loss_vs_steps.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/calibration/train_loss_vs_steps.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/calibration/lr_vs_steps.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/calibration/lr_vs_steps.svg",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/calibration/grad_norm_vs_steps.png",
+    "/home/cyai/projects/research/transformer-lab/data/reports/figures/lm_baselines_v0.1/calibration/grad_norm_vs_steps.svg"
+  ],
+  "note": "Points are raw logged measurements; no fabricated interpolations."
+}

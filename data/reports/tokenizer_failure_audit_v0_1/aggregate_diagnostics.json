@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "tool": {
+      "name": "audit_tokenizer_failures",
+      "version": "0.1.0"
+    },
+    "generated_at": "2026-08-05T23:57:57.578073Z",
+    "config": "configs/tokenizers/baselines_v0_1.json",
+    "config_sha256": "23e3ebb67bb21b51eb02126cca2d3a3b92452313c463386a47dcb694c79306f8",
+    "experiment_root": "data/tokenizers/chichewa_corpus_v0.1/baselines_v0.1",
+    "split_root": "data/splits/chichewa_corpus_v0.1",
+    "frozen_split_verified": true,
+    "models_loaded": [
+      "bpe_1000",
+      "bpe_2000",
+      "bpe_4000",
+      "bpe_8000",
+      "character",
+      "unigram_1000",
+      "unigram_2000",
+      "unigram_4000",
+      "unigram_8000"
+    ],
+    "n_morphology_probes": 80,
+    "thresholds": {
+      "high_fragmentation": 4,
+      "rare_train": 3,
+      "frequent_train": 50,
+      "long_word": 12,
+      "fertility_asymmetric": 2,
+      "max_candidates": 2500,
+      "context_chars": 180
+    },
+    "stems_surface_keys": [
+      "konda",
+      "panga",
+      "khala",
+      "chita",
+      "funa",
+      "pita",
+      "nena",
+      "gona",
+      "ona",
+      "bwera",
+      "yamba",
+      "tsata",
+      "mva",
+      "dya",
+      "gula",
+      "lemba",
+      "werenga",
+      "phunzira",
+      "thamanga",
+      "seka",
+      "lira",
+      "ima",
+      "yenda",
+      "tenga",
+      "pereka"
+    ],
+    "test_split_accessed": false,
+    "hybrid_tokenizer_implemented": false,
+    "lm_validation_linkage": {
+      "matrix_id": "lm_baselines_v0_1_final_matrix_r2",
+      "number_of_valid_runs": 36,
+      "groups": [
+        {
+          "track": "architecture_matched",
+          "budget_policy": "fixed_characters",
+          "provisional_validation_leader": "unigram_8000",
+          "provisional_validation_leader_mean_bpc": 1.4313127134139931,
+          "tokenizer_mean_bpc": {
+            "character": 1.4778541708704187,
+            "bpe_8000": 1.438936199882615,
+            "unigram_8000": 1.4313127134139931
+          }
+        },
+        {
+          "track": "architecture_matched",
+          "budget_policy": "fixed_updates",
+          "provisional_validation_leader": "unigram_8000",
+          "provisional_validation_leader_mean_bpc": 1.4433547294988347,
+          "tokenizer_mean_bpc": {
+            "character": 1.886783820467372,
+            "bpe_8000": 1.4567035028458353,
+            "unigram_8000": 1.4433547294988347
+          }
+        },
+        {
+          "track": "parameter_matched",
+          "budget_policy": "fixed_characters",
+          "provisional_validation_leader": "unigram_8000",
+          "provisional_validation_leader_mean_bpc": 1.4370611407962612,
+          "tokenizer_mean_bpc": {
+            "character": 1.4778541708704187,
+            "bpe_8000": 1.446280867650161,
+            "unigram_8000": 1.4370611407962612
+          }
+        },
+        {
+          "track": "parameter_matched",
+          "budget_policy": "fixed_updates",
+          "provisional_validation_leader": "unigram_8000",
+          "provisional_validation_leader_mean_bpc": 1.4793057103427036,
+          "tokenizer_mean_bpc": {
+            "character": 1.886783820467372,
+            "bpe_8000": 1.4987472218621383,
+            "unigram_8000": 1.4793057103427036
+          }
+        }
+      ]
+    },
+    "stats": {
+      "n_words_compared": 12055,
+      "n_candidates_emitted": 2500,
+      "n_bpe_unigram_disagree_in_bank": 2500,
+      "tag_counts": {
+        "bpe_unigram_disagree": 2500,
+        "vocab_size_sensitive": 2500,
+        "high_fragmentation": 2455,
+        "split_validation": 1843,
+        "unseen_in_train": 1774,
+        "source_bible": 1317,
+        "long_word": 1311,
+        "source_wikipedia": 1183,
+        "rare_train": 680,
+        "split_train": 657,
+        "fertility_asymmetric": 549,
+        "mixed_orthography_heuristic": 422,
+        "family_stem_hit": 73,
+        "contains_w_hat": 69,
+        "family_segmentation_inconsistent": 39,
+        "whole_word_single_token": 10
+      },
+      "mean_bpe_fertility_bank": 4.3712,
+      "mean_unigram_fertility_bank": 4.4592,
+      "split_counts": {
+        "train": 657,
+        "validation": 1843
+      },
+      "source_counts": {
+        "wikipedia": 1183,
+        "bible": 1317
+      },
+      "caution": "Automatic tags are not morphological gold labels. human_phenomenon_tags remain null until annotation.",
+      "n_bpe_unigram_disagree_in_pool": 6436,
+      "n_family_inconsistent_heuristic": 151
+    },
+    "outputs": {
+      "failure_candidates": "failure_candidates.jsonl",
+      "aggregate": "aggregate_diagnostics.json",
+      "mechanism_map": "mechanism_map.json",
+      "report": "FAILURE_AUDIT_REPORT.md"
+    },
+    "research_blueprint": "docs/tokenizers/MTHANDIZI_RESEARCH_BLUEPRINT.md"
+  },
+  "stats": {
+    "n_words_compared": 12055,
+    "n_candidates_emitted": 2500,
+    "n_bpe_unigram_disagree_in_bank": 2500,
+    "tag_counts": {
+      "bpe_unigram_disagree": 2500,
+      "vocab_size_sensitive": 2500,
+      "high_fragmentation": 2455,
+      "split_validation": 1843,
+      "unseen_in_train": 1774,
+      "source_bible": 1317,
+      "long_word": 1311,
+      "source_wikipedia": 1183,
+      "rare_train": 680,
+      "split_train": 657,
+      "fertility_asymmetric": 549,
+      "mixed_orthography_heuristic": 422,
+      "family_stem_hit": 73,
+      "contains_w_hat": 69,
+      "family_segmentation_inconsistent": 39,
+      "whole_word_single_token": 10
+    },
+    "mean_bpe_fertility_bank": 4.3712,
+    "mean_unigram_fertility_bank": 4.4592,
+    "split_counts": {
+      "train": 657,
+      "validation": 1843
+    },
+    "source_counts": {
+      "wikipedia": 1183,
+      "bible": 1317
+    },
+    "caution": "Automatic tags are not morphological gold labels. human_phenomenon_tags remain null until annotation.",
+    "n_bpe_unigram_disagree_in_pool": 6436,
+    "n_family_inconsistent_heuristic": 151
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "version": "0.1.0",
+  "matrix_id": "lm_baselines_v0_1_final_matrix",
+  "description": "Final multi-seed dual-budget dual-track LM matrix. Canary must pass before --stage full.",
+  "parent_config": "configs/models/lm_baselines_v0_1.json",
+  "experiment_id": "lm_baselines_v0.1",
+  "split_root": "data/splits/chichewa_corpus_v0.1",
+  "tokenizer_root": "data/tokenizers/chichewa_corpus_v0.1/baselines_v0.1",
+  "output_root": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1",
+  "status_path": "data/metadata/lm_baselines_v0_1_matrix_status.json",
+  "execution_plan_path": "data/reports/lm_baselines_v0_1_execution_plan.md",
+  "canary_report_path": "data/reports/lm_baselines_v0_1_canary_report.md",
+  "canary_acceptance_path": "data/metadata/lm_baselines_v0_1_canary_acceptance.json",
+  "parameter_report_path": "data/reports/lm_baselines_v0_1_parameter_matching.md",
+  "tokenizers": ["character", "bpe_8000", "unigram_8000"],
+  "seeds": [42, 1337, 2026],
+  "tracks": ["architecture_matched", "parameter_matched"],
+  "budget_policies": ["fixed_characters", "fixed_updates"],
+  "canary": {
+    "tokenizer": "bpe_8000",
+    "seed": 42,
+    "track": "architecture_matched",
+    "budget_policy": "fixed_characters",
+    "train_characters": 4000000,
+    "phase": "final"
+  },
+  "budgets": {
+    "fixed_characters": {
+      "train_characters": 4000000,
+      "character_overshoot_tolerance": 0.02,
+      "max_optimizer_steps_cap": 50000,
+      "validation_character_checkpoints": [250000, 500000, 1000000, 2000000, 3000000, 4000000],
+      "stop_policy": "stop_when_characters_ge_target_after_optimizer_step"
+    },
+    "fixed_updates": {
+      "optimizer_updates": 2000,
+      "validation_update_checkpoints": [100, 250, 500, 1000, 1500, 2000],
+      "stop_policy": "stop_when_updates_ge_target"
+    }
+  },
+  "architecture_matched": {
+    "n_layer": 4,
+    "n_embd": 256,
+    "n_head": 4,
+    "n_inner": 1024,
+    "dropout": 0.1,
+    "context_length": 256,
+    "pre_ln": true,
+    "tie_embeddings": true,
+    "positional_encoding": "learned"
+  },
+  "parameter_matched": {
+    "tolerance_fraction": 0.05,
+    "target_reference": "character_architecture_matched",
+    "overrides": {
+      "character": {"n_layer": 4, "n_embd": 256, "n_head": 4, "n_inner": 1024},
+      "bpe_8000": {"n_layer": 4, "n_embd": 192, "n_head": 4, "n_inner": 768},
+      "unigram_8000": {"n_layer": 4, "n_embd": 192, "n_head": 4, "n_inner": 768}
+    },
+    "context_length": 256,
+    "dropout": 0.1,
+    "pre_ln": true,
+    "tie_embeddings": true,
+    "positional_encoding": "learned"
+  },
+  "training": {
+    "optimizer": "adamw",
+    "learning_rate": 3e-4,
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "weight_decay": 0.1,
+    "grad_clip": 1.0,
+    "warmup_steps": 100,
+    "schedule": "cosine",
+    "micro_batch_size": 16,
+    "grad_accum_steps": 2,
+    "dtype": "bfloat16",
+    "amp": true,
+    "log_every": 20,
+    "packing": {
+      "method": "line_pack_with_eos",
+      "eos_between_lines": true,
+      "character_accounting": "proportional_per_content_token_plus_zero_for_eos_pad",
+      "document_note": "Lines packed in order with EOS between lines. Character exposure counts original line characters attributed proportionally to content tokens (EOS/PAD contribute 0)."
+    }
+  },
+  "evaluation": {
+    "eval_batch_size": 16,
+    "primary_metric": "bits_per_character",
+    "secondary_confirm": "bits_per_byte"
+  },
+  "launcher": {
+    "max_consecutive_systemic_failures": 3,
+    "allow_isolated_seed_failure": true,
+    "lock_file_name": ".run.lock",
+    "require_canary_acceptance_for_full": true,
+    "pilot_excluded_from_final_aggregation": true
+  },
+  "expected_run_count": 36,
+  "canary_run_count": 1,
+  "notes": [
+    "Do not launch full matrix until canary acceptance manifest exists.",
+    "Do not evaluate test until compare --authorize-test-evaluation.",
+    "Pilot artifacts must not be overwritten or merged into final stats."
+  ]
+}

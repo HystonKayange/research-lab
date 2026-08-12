@@ -1,0 +1,92 @@
+{
+  "version": "0.1.0",
+  "calibration_id": "lm_budget_calibration_v0_1",
+  "description": "Training-budget calibration for BPE-8000 before the full 36-run matrix. The canary (~0.87 epochs) did not plateau; this stage maps validation BPC vs effective epochs up to ~40 corpus passes.",
+  "parent_config": "configs/models/lm_baselines_v0_1.json",
+  "phase": "calibration",
+  "run": {
+    "tokenizer": "bpe_8000",
+    "seed": 42,
+    "track": "architecture_matched",
+    "budget_policy": "fixed_characters"
+  },
+  "corpus": {
+    "split_root": "data/splits/chichewa_corpus_v0.1",
+    "train_path": "data/splits/chichewa_corpus_v0.1/train/combined.txt",
+    "character_count_definition": "sum of len(line) over non-newline-stripped splitlines() — matches per-line character exposure credits (newlines not counted as content characters)",
+    "frozen_training_corpus_character_count": 4623799,
+    "note": "Canary used ~4,009,607 original characters ≈ 4,009,607 / 4,623,799 ≈ 0.867 effective epochs. Full-file len(text) including newlines is larger (~4,661,047) and is NOT the exposure denominator."
+  },
+  "effective_epochs": {
+    "formula": "effective_epochs = cumulative_original_characters_processed / frozen_training_corpus_character_count",
+    "primary_unit": "original_characters",
+    "epoch_is_derived_only": true
+  },
+  "budget": {
+    "policy": "fixed_characters",
+    "train_characters_max": 185000000,
+    "approximate_max_corpus_passes": 40,
+    "character_overshoot_tolerance": 0.02,
+    "max_optimizer_steps_cap": 500000,
+    "validation_effective_epoch_checkpoints": [1, 2, 5, 10, 15, 20, 30, 40],
+    "validation_character_checkpoints_derived": true,
+    "stop_policy": "stop_when_characters_ge_max_or_early_stop"
+  },
+  "early_stopping": {
+    "enabled": true,
+    "primary_metric": "validation_bpc",
+    "mode": "min",
+    "min_delta": 0.01,
+    "patience_evaluations": 3,
+    "restore_best_checkpoint": true,
+    "min_effective_epochs_before_stop": 5,
+    "notes": [
+      "Stop when validation BPC fails to improve by at least min_delta for patience consecutive scheduled evaluations after min_effective_epochs_before_stop.",
+      "Best checkpoint is the one with lowest validation BPC (ties: earlier step)."
+    ]
+  },
+  "output": {
+    "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/bpe_8000/seed_42/calibration/fixed_characters",
+    "report_path": "data/reports/lm_budget_calibration_v0_1.md",
+    "figures_dir": "data/reports/figures/lm_baselines_v0.1/calibration",
+    "learning_curve_jsonl": "learning_curve.jsonl",
+    "train_log_jsonl": "train_log.jsonl"
+  },
+  "architecture": {
+    "n_layer": 4,
+    "n_embd": 256,
+    "n_head": 4,
+    "n_inner": 1024,
+    "dropout": 0.1,
+    "context_length": 256,
+    "pre_ln": true,
+    "tie_embeddings": true,
+    "positional_encoding": "learned"
+  },
+  "training": {
+    "optimizer": "adamw",
+    "learning_rate": 3e-4,
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "weight_decay": 0.1,
+    "grad_clip": 1.0,
+    "warmup_steps": 200,
+    "schedule": "cosine",
+    "micro_batch_size": 16,
+    "grad_accum_steps": 2,
+    "dtype": "bfloat16",
+    "amp": true,
+    "log_every": 50
+  },
+  "evaluation": {
+    "eval_batch_size": 16,
+    "primary_metric": "bits_per_character",
+    "secondary_confirm": "bits_per_byte",
+    "test_access": false
+  },
+  "safety": {
+    "do_not_access_test": true,
+    "do_not_launch_full_matrix": true,
+    "do_not_auto_run_calibration": true
+  }
+}

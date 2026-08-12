@@ -1,0 +1,68 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Secrets / local env
+.env
+.env.*
+!.env.example
+
+# Model checkpoints & training outputs (large binaries)
+data/models/
+data/checkpoints/
+checkpoints/
+runs/
+wandb/
+lightning_logs/
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.onnx
+
+# Jupyter / IDE
+.ipynb_checkpoints/
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs & temp
+*.log
+*.tmp
+*.temp
+tmp/
+temp/
+/tmp/
+
+# Regenerable StatBound side tables (large; relearn from TRAIN + frozen code)
+data/tokenizers/**/statbound_unigram_v1/boundary_stats.json
+data/tokenizers/**/statbound_unigram_v1/*.tmp
+
+# Optional local experiment dumps
+outputs/
+artifacts/local/

@@ -1,0 +1,35 @@
+{
+  "type": "character",
+  "tokenizer_id": "character",
+  "special_tokens": {
+    "pad": "<pad>",
+    "unk": "<unk>",
+    "bos": "<bos>",
+    "eos": "<eos>",
+    "roles": {
+      "<pad>": "Padding for batching; not used during tokenizer training metrics.",
+      "<unk>": "Unknown character or subword fallback.",
+      "<bos>": "Beginning of sequence (optional at encode time).",
+      "<eos>": "End of sequence (optional at encode time)."
+    }
+  },
+  "unknown_behavior": "map_to_<unk>",
+  "whitespace": "preserve_as_characters",
+  "vocab_order": "specials_then_sorted_unicode_codepoints",
+  "normalization": {
+    "policy": "identity",
+    "lowercase": false,
+    "strip_accents": false,
+    "nfkc": false,
+    "preserve_case": true,
+    "preserve_punctuation": true,
+    "preserve_unicode": true,
+    "preserve_w_hat": true,
+    "notes": "No aggressive Chichewa normalization. Prefer identity. SentencePiece uses normalization_rule_name=identity."
+  },
+  "pad_id": 0,
+  "unk_id": 1,
+  "bos_id": 2,
+  "eos_id": 3,
+  "vocab_size": 915
+}

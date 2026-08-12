@@ -1,0 +1,119 @@
+{
+  "matrix_id": "lm_baselines_v0_1_final_matrix",
+  "updated_at": "2026-08-05T06:15:01.208346Z",
+  "runs": {
+    "lm_baselines_v0_1_final_matrix__final__arch__character__seed42__chars": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__arch__character__seed42__updates": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__arch__character__seed1337__chars": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__arch__character__seed1337__updates": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__arch__character__seed2026__chars": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__arch__character__seed2026__updates": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__arch__bpe_8000__seed42__chars": {
+      "status": "failed",
+      "finished_at": "2026-08-05T06:14:14.025926Z",
+      "exit_code": 1,
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/bpe_8000/seed_42/final/fixed_characters"
+    },
+    "lm_baselines_v0_1_final_matrix__final__arch__bpe_8000__seed42__updates": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__arch__bpe_8000__seed1337__chars": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__arch__bpe_8000__seed1337__updates": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__arch__bpe_8000__seed2026__chars": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__arch__bpe_8000__seed2026__updates": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__arch__unigram_8000__seed42__chars": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__arch__unigram_8000__seed42__updates": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__arch__unigram_8000__seed1337__chars": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__arch__unigram_8000__seed1337__updates": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__arch__unigram_8000__seed2026__chars": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__arch__unigram_8000__seed2026__updates": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__param__character__seed42__chars": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__param__character__seed42__updates": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__param__character__seed1337__chars": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__param__character__seed1337__updates": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__param__character__seed2026__chars": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__param__character__seed2026__updates": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__param__bpe_8000__seed42__chars": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__param__bpe_8000__seed42__updates": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__param__bpe_8000__seed1337__chars": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__param__bpe_8000__seed1337__updates": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__param__bpe_8000__seed2026__chars": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__param__bpe_8000__seed2026__updates": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__param__unigram_8000__seed42__chars": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__param__unigram_8000__seed42__updates": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__param__unigram_8000__seed1337__chars": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__param__unigram_8000__seed1337__updates": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__param__unigram_8000__seed2026__chars": {
+      "status": "pending"
+    },
+    "lm_baselines_v0_1_final_matrix__final__param__unigram_8000__seed2026__updates": {
+      "status": "pending"
+    }
+  },
+  "canary_accepted": false,
+  "currently_running": null
+}

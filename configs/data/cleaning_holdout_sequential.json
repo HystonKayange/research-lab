@@ -1,0 +1,100 @@
+{
+  "version": "1.0.0",
+  "description": "Sequential, risk-stratified evaluation of Cleaning Policy v2 on the blind holdout. Stage 1 is 80 records; remaining 170 are locked until released.",
+  "parent_holdout_path": "data/reports/cleaning_holdout_sample.jsonl",
+  "parent_manifest_path": "data/reports/cleaning_holdout_manifest.json",
+  "development_set_path": "data/reports/cleaning_review_sample.jsonl",
+  "cleaning_policy": "configs/data/cleaning_v2.json",
+  "random_seed": 20260804,
+  "wilson_z": 1.96,
+  "stage1": {
+    "removed_total": 40,
+    "kept_total": 40,
+    "sample_output": "data/reports/cleaning_holdout_stage1_sample.jsonl",
+    "instructions_output": "data/reports/cleaning_holdout_stage1_instructions.md",
+    "manifest_output": "data/reports/cleaning_holdout_stage1_manifest.json",
+    "validation_json": "data/metadata/cleaning_holdout_stage1_validation.json",
+    "validation_report": "data/reports/cleaning_holdout_stage1_validation_report.md",
+    "removed_priority_quotas": {
+      "drop_high_confidence_foreign": 12,
+      "drop_short_conditional": 10,
+      "drop_url_only": 8,
+      "drop_wikimedia_chrome": 5,
+      "drop_long_table_dump": 2,
+      "drop_category": 3
+    },
+    "removed_exclude_rules": [
+      "drop_blank",
+      "drop_digit_only",
+      "drop_blank_after_transform"
+    ],
+    "kept_priority_quotas": {
+      "mixed_signal": 10,
+      "insufficient_signal": 8,
+      "english_names_institutions": 6,
+      "near_threshold": 5,
+      "short_retained": 4,
+      "long_retained": 3,
+      "url_stripped_retained": 2,
+      "chichewa_signal": 2
+    },
+    "notes": "Deprioritize obvious blank/digit/Category chrome; oversample ambiguous foreign/short/URL/mixed cases."
+  },
+  "extension_pool": {
+    "path": "data/reports/cleaning_holdout_extension_pool.jsonl",
+    "manifest_output": "data/reports/cleaning_holdout_extension_manifest.json",
+    "locked": true,
+    "chunk_size": 40,
+    "notes": "Do not open or label until stage-1 stopping logic releases the next chunk."
+  },
+  "stopping_logic": {
+    "description": "After stage-1 labels are complete, evaluate metrics with Wilson CIs. Stop or release next 40 from the locked extension pool.",
+    "stop_if_all": [
+      {
+        "metric": "removal_precision",
+        "op": "ge",
+        "value": 0.9,
+        "ci_low_ge": 0.8
+      },
+      {
+        "metric": "false_removal_rate",
+        "op": "le",
+        "value": 0.1,
+        "ci_high_le": 0.2
+      },
+      {
+        "metric": "useful_text_retention",
+        "op": "ge",
+        "value": 0.9,
+        "ci_low_ge": 0.8
+      }
+    ],
+    "release_next_if": "any_target_unclear_or_missed",
+    "never_release_full_250_at_once": true,
+    "max_extension_chunks": 5
+  },
+  "generalization_targets": {
+    "removal_precision_ge": 0.9,
+    "false_removal_rate_le": 0.1,
+    "useful_text_retention_ge": 0.9
+  },
+  "allowed_labels": [
+    "valid_chichewa",
+    "useful_mixed_chichewa",
+    "boilerplate_or_noise",
+    "foreign_language",
+    "duplicate",
+    "uncertain"
+  ],
+  "false_removal_labels": ["valid_chichewa", "useful_mixed_chichewa"],
+  "correct_removal_labels": [
+    "boilerplate_or_noise",
+    "foreign_language",
+    "duplicate"
+  ],
+  "useful_kept_labels": ["valid_chichewa", "useful_mixed_chichewa"],
+  "noise_kept_labels": ["boilerplate_or_noise", "duplicate"],
+  "foreign_kept_labels": ["foreign_language"],
+  "boilerplate_kept_labels": ["boilerplate_or_noise"],
+  "include_uncertain_in_precision": false
+}

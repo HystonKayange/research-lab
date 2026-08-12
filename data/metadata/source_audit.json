@@ -1,0 +1,3246 @@
+{
+  "generated_at": "2026-08-04T03:35:32.782297Z",
+  "tool": {
+    "name": "audit_sources",
+    "version": "1.0.0"
+  },
+  "config": {
+    "version": "1.0.0",
+    "path": "/home/cyai/projects/research/transformer-lab/configs/data/source_audit.json",
+    "short_line_threshold": 20,
+    "long_line_threshold": 500,
+    "sample_count": 5,
+    "excerpt_length": 120,
+    "random_seed": 42,
+    "case_fold_comparison": true,
+    "language_signal": {
+      "min_matches_for_signal": 2,
+      "notes": "A line needs at least min_matches_for_signal hits from a term list to count as that language signal. Matching is case-insensitive whole-word. These are provisional heuristics, not language identification."
+    },
+    "shingles": {
+      "mode": "token",
+      "window_size": 5,
+      "stride": 1,
+      "min_tokens_in_unit": 5,
+      "notes": "Token shingles use Unicode alphanumeric tokenization. Used only for in-memory overlap diagnostics."
+    },
+    "term_list_disclaimer": "Chichewa, English, and German term lists are small, provisional, and must be reviewed by a native speaker / domain expert before being treated as reliable filters."
+  },
+  "raw_dir": "/home/cyai/projects/research/transformer-lab/data/raw",
+  "raw_checksums": {
+    "bible": "55445a0e0a5359e243f1773de623af1716bf4d3cd835afd83c4407cbaf85fc89",
+    "existing_corpus": "32e65edccb4c341d45e55de3d35edc1dd8768cd6e47cfafeb22d21216c2c8932",
+    "wikipedia": "cf7c5ba6d8c0d4770eee3306bab9f4be1dfc9570930a9aa7f3613c0ffb4587b7"
+  },
+  "sources": {
+    "bible": {
+      "source_id": "bible",
+      "source_name": "Chichewa Bible",
+      "file_path": "data/raw/bible/bible_clean.txt",
+      "size_bytes": 4218603,
+      "sha256": "55445a0e0a5359e243f1773de623af1716bf4d3cd835afd83c4407cbaf85fc89",
+      "structural": {
+        "total_characters": 4172215,
+        "total_lines": 31099,
+        "non_empty_lines": 31099,
+        "blank_lines": 0,
+        "unique_exact_lines": 30876,
+        "exact_duplicate_line_occurrences": 349,
+        "lines_appearing_more_than_once": 349,
+        "duplicate_line_percentage": 1.1222,
+        "min_line_length": 13,
+        "max_line_length": 437,
+        "mean_line_length": 133.1591,
+        "median_line_length": 124,
+        "line_length_percentiles": {
+          "p50": 124.0,
+          "p90": 212.0,
+          "p95": 241.0,
+          "p99": 296.0
+        },
+        "very_short_lines": 21,
+        "very_long_lines": 0,
+        "short_line_threshold": 20,
+        "long_line_threshold": 500,
+        "lines_only_digits": 0,
+        "lines_numeric_only_heuristic": 0,
+        "lines_containing_urls": 0,
+        "lines_containing_control_chars": 0,
+        "lines_containing_replacement_char": 0
+      },
+      "character_orthography": {
+        "ascii_characters": 4143128,
+        "non_ascii_characters": 29087,
+        "alphabetic_characters": 3483058,
+        "numeric_characters": 4742,
+        "whitespace_characters": 575402,
+        "punctuation_characters": 109011,
+        "other_characters": 2,
+        "chichewa_char_counts": {
+          "ŵ": 0,
+          "Ŵ": 0
+        },
+        "unusual_codepoints": [
+          {
+            "char": "ʼ",
+            "codepoint": "U+02BC",
+            "name": "MODIFIER LETTER APOSTROPHE",
+            "count": 11784
+          },
+          {
+            "char": "“",
+            "codepoint": "U+201C",
+            "name": "LEFT DOUBLE QUOTATION MARK",
+            "count": 7964
+          },
+          {
+            "char": "”",
+            "codepoint": "U+201D",
+            "name": "RIGHT DOUBLE QUOTATION MARK",
+            "count": 6176
+          },
+          {
+            "char": "‘",
+            "codepoint": "U+2018",
+            "name": "LEFT SINGLE QUOTATION MARK",
+            "count": 1742
+          },
+          {
+            "char": "’",
+            "codepoint": "U+2019",
+            "name": "RIGHT SINGLE QUOTATION MARK",
+            "count": 1417
+          },
+          {
+            "char": "—",
+            "codepoint": "U+2014",
+            "name": "EM DASH",
+            "count": 2
+          }
+        ],
+        "unusual_codepoint_types": 6,
+        "normalization_observations": {
+          "sampled_nonempty_lines": 5000,
+          "lines_differ_from_nfc": 0,
+          "lines_differ_from_nfd": 0,
+          "lines_differ_from_nfkc": 0,
+          "note": "Observations only; text was not normalized or rewritten. Counts reflect the first up-to-5000 non-empty lines."
+        },
+        "unusual_character_examples": [
+          {
+            "line_number": 3,
+            "excerpt": "Pamenepo Mulungu anati, “Kuwale” ndipo kunawaladi."
+          },
+          {
+            "line_number": 5,
+            "excerpt": "Mulungu anatcha kuwalako “usana” ndipo mdima anawutcha “usiku.” Ndipo panali madzulo ndiponso mmawa pa tsiku loyamba."
+          },
+          {
+            "line_number": 6,
+            "excerpt": "Kenaka Mulungu anati, “Pakhale thambo pakati pa madzi kuti lilekanitse madzi a mʼmwamba ndi madzi a pansi.”"
+          },
+          {
+            "line_number": 8,
+            "excerpt": "Mulungu anatcha thambo lija “kumwamba.” Ndipo panali madzulo ndiponso mmawa pa tsiku lachiwiri."
+          },
+          {
+            "line_number": 9,
+            "excerpt": "Mulungu anati, “Madzi a pansi pa thambo asonkhane pa malo amodzi kuti mtunda uwoneke,” ndipo zinachitikadi."
+          },
+          {
+            "line_number": 10,
+            "excerpt": "Mulungu anawutcha mtundawo “dziko,” madzi osonkhana pamodziwo anawatcha “nyanja.” Ndipo Mulungu anaona kuti zinali bw..."
+          },
+          {
+            "line_number": 11,
+            "excerpt": "Kenaka Mulungu anati, “Dziko libereke zomera zobala mbewu, mitengo yobala zipatso za mbewu, molingana ndi mitundu yak..."
+          },
+          {
+            "line_number": 12,
+            "excerpt": "Dziko linabereka zomera zokhala ndi mbewu monga mwa mitundu yake ndi mitengo yokhala ndi zipatso za mbewu mʼkati mwak..."
+          }
+        ]
+      },
+      "language_signals": {
+        "disclaimer": "Language categories are transparent term-list heuristics, not authoritative language identification. Short lines and shared function-word collisions can mislead. Requires human review.",
+        "min_matches_for_signal": 2,
+        "nonempty_lines_scored": 31099,
+        "counts": {
+          "chichewa_signal": 25904,
+          "english_signal": 0,
+          "german_signal": 0,
+          "mixed_signal": 0,
+          "insufficient_signal": 5195
+        },
+        "percentages": {
+          "chichewa_signal": 83.2953,
+          "english_signal": 0.0,
+          "german_signal": 0.0,
+          "mixed_signal": 0.0,
+          "insufficient_signal": 16.7047
+        },
+        "samples": {
+          "chichewa_signal": [
+            {
+              "line_number": 18666,
+              "excerpt": "Popeza Ambuye Yehova amandithandiza, sindidzachita manyazi. Tsono ndalimba mtima ngati msangalabwi, chifukwa ndikudzi...",
+              "term_hits": {
+                "chichewa": 2,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 22053,
+              "excerpt": "“Mfumu imene idzatenga malo ake idzatumiza wokhometsa msonkho kuti chuma cha ufumu wake chichuluke. Komabe mʼzaka zoc...",
+              "term_hits": {
+                "chichewa": 3,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 26063,
+              "excerpt": "Yohane anayankha ndi mawu a mneneri Yesaya kuti, “Ine ndi mawu a wofuwula mʼchipululu, ‘Wongolani njira ya Ambuye.’ ”",
+              "term_hits": {
+                "chichewa": 5,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 27000,
+              "excerpt": "Iye analumpha ndi kuyamba kuyenda. Kenaka analowa nawo pamodzi mʼbwalo la Nyumba ya Mulungu, akuyenda ndi kulumpha nd...",
+              "term_hits": {
+                "chichewa": 6,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 29107,
+              "excerpt": "Choncho iwo amene ali ndi chikhulupiriro ndi odalitsidwa pamodzi ndi Abrahamu, munthu wachikhulupiriro.",
+              "term_hits": {
+                "chichewa": 4,
+                "english": 0,
+                "german": 0
+              }
+            }
+          ],
+          "english_signal": [],
+          "german_signal": [],
+          "mixed_signal": [],
+          "insufficient_signal": [
+            {
+              "line_number": 1426,
+              "excerpt": "Farao anati kwa Yosefe, “Abambo ako ndi abale ako abwera kwa iwe.",
+              "term_hits": {
+                "chichewa": 1,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 3636,
+              "excerpt": "Chiwerengero cha anthu ochokera mʼfuko la Efereimu chinali 40,500.",
+              "term_hits": {
+                "chichewa": 1,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 6579,
+              "excerpt": "Aisraeli anatumikira ngati akapolo Egiloni mfumu ya Mowabu kwa zaka 18.",
+              "term_hits": {
+                "chichewa": 1,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 7221,
+              "excerpt": "Akupemphera choncho kwa Yehova, Eli ankamuyangʼana pakamwa.",
+              "term_hits": {
+                "chichewa": 0,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 24008,
+              "excerpt": "Opusawo anatenga nyale zawo koma sanatenge mafuta;",
+              "term_hits": {
+                "chichewa": 1,
+                "english": 0,
+                "german": 0
+              }
+            }
+          ]
+        },
+        "suspicious_non_chichewa_examples": []
+      },
+      "boilerplate": {
+        "category_prefix": {
+          "description": "Wikipedia-style Category lines",
+          "total_occurrences": 0,
+          "matching_lines": 0,
+          "examples": []
+        },
+        "wikipedia_muzinenero": {
+          "description": "Chichewa Wikipedia other-languages nav",
+          "total_occurrences": 0,
+          "matching_lines": 0,
+          "examples": []
+        },
+        "mu_nkhani": {
+          "description": "Chichewa Wikipedia article-contents nav",
+          "total_occurrences": 0,
+          "matching_lines": 0,
+          "examples": []
+        },
+        "wikipedia_word": {
+          "description": "Mentions of Wikipedia",
+          "total_occurrences": 0,
+          "matching_lines": 0,
+          "examples": []
+        },
+        "wikimedia": {
+          "description": "Wikimedia project mentions",
+          "total_occurrences": 0,
+          "matching_lines": 0,
+          "examples": []
+        },
+        "url_http": {
+          "description": "HTTP(S) URLs",
+          "total_occurrences": 0,
+          "matching_lines": 0,
+          "examples": []
+        },
+        "url_www": {
+          "description": "www. hostnames",
+          "total_occurrences": 0,
+          "matching_lines": 0,
+          "examples": []
+        },
+        "html_tag": {
+          "description": "Simple HTML tag remnants",
+          "total_occurrences": 0,
+          "matching_lines": 0,
+          "examples": []
+        },
+        "wiki_link_brackets": {
+          "description": "Wiki-style double-bracket links",
+          "total_occurrences": 0,
+          "matching_lines": 0,
+          "examples": []
+        },
+        "wiki_template": {
+          "description": "Wiki-style template braces",
+          "total_occurrences": 0,
+          "matching_lines": 0,
+          "examples": []
+        },
+        "in_german_meta": {
+          "description": "Explicit German-language meta marker",
+          "total_occurrences": 0,
+          "matching_lines": 0,
+          "examples": []
+        },
+        "image_meta": {
+          "description": "Image metadata parenthetical",
+          "total_occurrences": 0,
+          "matching_lines": 0,
+          "examples": []
+        }
+      },
+      "within_source_duplication": {
+        "repeated_exact_lines": 126,
+        "repeated_ws_normalized_lines": 126,
+        "repeated_casefold_lines": 136,
+        "top_repeated_exact_lines": [
+          {
+            "count": 43,
+            "excerpt": "Yehova anawuza Mose kuti,"
+          },
+          {
+            "count": 10,
+            "excerpt": "Yehova anandiyankhula nati:"
+          },
+          {
+            "count": 9,
+            "excerpt": "Yehova anandiyankhula kuti:"
+          },
+          {
+            "count": 8,
+            "excerpt": "mbale imodzi yagolide yolemera magalamu 110, yodzaza ndi lubani;"
+          },
+          {
+            "count": 7,
+            "excerpt": "Yehova anayankhula nane kuti,"
+          },
+          {
+            "count": 6,
+            "excerpt": "Pamenepo Yobu anayankha kuti,"
+          },
+          {
+            "count": 6,
+            "excerpt": "Yehova anati kwa Mose,"
+          },
+          {
+            "count": 5,
+            "excerpt": "Ndipo Yehova anati kwa Mose,"
+          },
+          {
+            "count": 5,
+            "excerpt": "mbuzi imodzi ya nsembe yopepesera machimo;"
+          },
+          {
+            "count": 4,
+            "excerpt": "Muziperekanso mbuzi imodzi yayimuna ya nsembe yopepesera machimo, powonjezera pa nsembe yopsereza ya tsiku ndi tsiku ..."
+          },
+          {
+            "count": 4,
+            "excerpt": "Yehova anawuza Mose ndi Aaroni kuti,"
+          },
+          {
+            "count": 4,
+            "excerpt": "Yehova anayankhula ndi Mose kuti,"
+          },
+          {
+            "count": 4,
+            "excerpt": "mbuzi yayimuna imodzi ya nsembe yopepesera machimo;"
+          },
+          {
+            "count": 3,
+            "excerpt": "Kenaka Yehova anati kwa Mose,"
+          },
+          {
+            "count": 3,
+            "excerpt": "Kumwamba ndi dziko lapansi zidzatha, koma mawu anga sadzatha.”"
+          }
+        ],
+        "top_repeated_ws_normalized_lines": [
+          {
+            "count": 43,
+            "excerpt": "Yehova anawuza Mose kuti,"
+          },
+          {
+            "count": 10,
+            "excerpt": "Yehova anandiyankhula nati:"
+          },
+          {
+            "count": 9,
+            "excerpt": "Yehova anandiyankhula kuti:"
+          },
+          {
+            "count": 8,
+            "excerpt": "mbale imodzi yagolide yolemera magalamu 110, yodzaza ndi lubani;"
+          },
+          {
+            "count": 7,
+            "excerpt": "Yehova anayankhula nane kuti,"
+          },
+          {
+            "count": 6,
+            "excerpt": "Pamenepo Yobu anayankha kuti,"
+          },
+          {
+            "count": 6,
+            "excerpt": "Yehova anati kwa Mose,"
+          },
+          {
+            "count": 5,
+            "excerpt": "Ndipo Yehova anati kwa Mose,"
+          },
+          {
+            "count": 5,
+            "excerpt": "mbuzi imodzi ya nsembe yopepesera machimo;"
+          },
+          {
+            "count": 4,
+            "excerpt": "Muziperekanso mbuzi imodzi yayimuna ya nsembe yopepesera machimo, powonjezera pa nsembe yopsereza ya tsiku ndi tsiku ..."
+          },
+          {
+            "count": 4,
+            "excerpt": "Yehova anawuza Mose ndi Aaroni kuti,"
+          },
+          {
+            "count": 4,
+            "excerpt": "Yehova anayankhula ndi Mose kuti,"
+          },
+          {
+            "count": 4,
+            "excerpt": "mbuzi yayimuna imodzi ya nsembe yopepesera machimo;"
+          },
+          {
+            "count": 3,
+            "excerpt": "Kenaka Yehova anati kwa Mose,"
+          },
+          {
+            "count": 3,
+            "excerpt": "Kumwamba ndi dziko lapansi zidzatha, koma mawu anga sadzatha.”"
+          }
+        ],
+        "repeated_exact_paragraphs": 0,
+        "repeated_ws_normalized_paragraphs": 0,
+        "top_repeated_paragraphs": []
+      },
+      "paragraph_count": 1,
+      "shingle_count": 451225,
+      "unique_shingle_count": 429052
+    },
+    "existing_corpus": {
+      "source_id": "existing_corpus",
+      "source_name": "Existing Chichewa Corpus",
+      "file_path": "data/raw/existing_corpus/chichewa_corpus.txt",
+      "size_bytes": 6103844,
+      "sha256": "32e65edccb4c341d45e55de3d35edc1dd8768cd6e47cfafeb22d21216c2c8932",
+      "structural": {
+        "total_characters": 6047673,
+        "total_lines": 50752,
+        "non_empty_lines": 50546,
+        "blank_lines": 206,
+        "unique_exact_lines": 48941,
+        "exact_duplicate_line_occurrences": 1989,
+        "lines_appearing_more_than_once": 1989,
+        "duplicate_line_percentage": 3.935,
+        "min_line_length": 1,
+        "max_line_length": 3055,
+        "mean_line_length": 118.6387,
+        "median_line_length": 111.0,
+        "line_length_percentiles": {
+          "p50": 111.0,
+          "p90": 208.0,
+          "p95": 241.75,
+          "p99": 315.0
+        },
+        "very_short_lines": 3648,
+        "very_long_lines": 77,
+        "short_line_threshold": 20,
+        "long_line_threshold": 500,
+        "lines_only_digits": 111,
+        "lines_numeric_only_heuristic": 133,
+        "lines_containing_urls": 74,
+        "lines_containing_control_chars": 0,
+        "lines_containing_replacement_char": 0
+      },
+      "character_orthography": {
+        "ascii_characters": 6011213,
+        "non_ascii_characters": 36460,
+        "alphabetic_characters": 4981764,
+        "numeric_characters": 63891,
+        "whitespace_characters": 838222,
+        "punctuation_characters": 163288,
+        "other_characters": 508,
+        "chichewa_char_counts": {
+          "ŵ": 310,
+          "Ŵ": 1
+        },
+        "unusual_codepoints": [
+          {
+            "char": "ʼ",
+            "codepoint": "U+02BC",
+            "name": "MODIFIER LETTER APOSTROPHE",
+            "count": 11738
+          },
+          {
+            "char": "“",
+            "codepoint": "U+201C",
+            "name": "LEFT DOUBLE QUOTATION MARK",
+            "count": 8000
+          },
+          {
+            "char": "”",
+            "codepoint": "U+201D",
+            "name": "RIGHT DOUBLE QUOTATION MARK",
+            "count": 6223
+          },
+          {
+            "char": "’",
+            "codepoint": "U+2019",
+            "name": "RIGHT SINGLE QUOTATION MARK",
+            "count": 1923
+          },
+          {
+            "char": "‘",
+            "codepoint": "U+2018",
+            "name": "LEFT SINGLE QUOTATION MARK",
+            "count": 1771
+          },
+          {
+            "char": "–",
+            "codepoint": "U+2013",
+            "name": "EN DASH",
+            "count": 714
+          },
+          {
+            "char": "ŵ",
+            "codepoint": "U+0175",
+            "name": "LATIN SMALL LETTER W WITH CIRCUMFLEX",
+            "count": 310
+          },
+          {
+            "char": "а",
+            "codepoint": "U+0430",
+            "name": "CYRILLIC SMALL LETTER A",
+            "count": 138
+          },
+          {
+            "char": "о",
+            "codepoint": "U+043E",
+            "name": "CYRILLIC SMALL LETTER O",
+            "count": 121
+          },
+          {
+            "char": "и",
+            "codepoint": "U+0438",
+            "name": "CYRILLIC SMALL LETTER I",
+            "count": 111
+          },
+          {
+            "char": "е",
+            "codepoint": "U+0435",
+            "name": "CYRILLIC SMALL LETTER IE",
+            "count": 93
+          },
+          {
+            "char": "н",
+            "codepoint": "U+043D",
+            "name": "CYRILLIC SMALL LETTER EN",
+            "count": 91
+          },
+          {
+            "char": "с",
+            "codepoint": "U+0441",
+            "name": "CYRILLIC SMALL LETTER ES",
+            "count": 89
+          },
+          {
+            "char": "—",
+            "codepoint": "U+2014",
+            "name": "EM DASH",
+            "count": 86
+          },
+          {
+            "char": "р",
+            "codepoint": "U+0440",
+            "name": "CYRILLIC SMALL LETTER ER",
+            "count": 83
+          },
+          {
+            "char": "к",
+            "codepoint": "U+043A",
+            "name": "CYRILLIC SMALL LETTER KA",
+            "count": 79
+          },
+          {
+            "char": "т",
+            "codepoint": "U+0442",
+            "name": "CYRILLIC SMALL LETTER TE",
+            "count": 69
+          },
+          {
+            "char": "•",
+            "codepoint": "U+2022",
+            "name": "BULLET",
+            "count": 68
+          },
+          {
+            "char": "л",
+            "codepoint": "U+043B",
+            "name": "CYRILLIC SMALL LETTER EL",
+            "count": 65
+          },
+          {
+            "char": "в",
+            "codepoint": "U+0432",
+            "name": "CYRILLIC SMALL LETTER VE",
+            "count": 57
+          },
+          {
+            "char": "ư",
+            "codepoint": "U+01B0",
+            "name": "LATIN SMALL LETTER U WITH HORN",
+            "count": 56
+          },
+          {
+            "char": "…",
+            "codepoint": "U+2026",
+            "name": "HORIZONTAL ELLIPSIS",
+            "count": 48
+          },
+          {
+            "char": "ć",
+            "codepoint": "U+0107",
+            "name": "LATIN SMALL LETTER C WITH ACUTE",
+            "count": 47
+          },
+          {
+            "char": "ớ",
+            "codepoint": "U+1EDB",
+            "name": "LATIN SMALL LETTER O WITH HORN AND ACUTE",
+            "count": 44
+          },
+          {
+            "char": "у",
+            "codepoint": "U+0443",
+            "name": "CYRILLIC SMALL LETTER U",
+            "count": 42
+          },
+          {
+            "char": "​",
+            "codepoint": "U+200B",
+            "name": "ZERO WIDTH SPACE",
+            "count": 42
+          },
+          {
+            "char": "đ",
+            "codepoint": "U+0111",
+            "name": "LATIN SMALL LETTER D WITH STROKE",
+            "count": 38
+          },
+          {
+            "char": "д",
+            "codepoint": "U+0434",
+            "name": "CYRILLIC SMALL LETTER DE",
+            "count": 35
+          },
+          {
+            "char": "м",
+            "codepoint": "U+043C",
+            "name": "CYRILLIC SMALL LETTER EM",
+            "count": 33
+          },
+          {
+            "char": "і",
+            "codepoint": "U+0456",
+            "name": "CYRILLIC SMALL LETTER BYELORUSSIAN-UKRAINIAN I",
+            "count": 33
+          },
+          {
+            "char": "ا",
+            "codepoint": "U+0627",
+            "name": "ARABIC LETTER ALEF",
+            "count": 31
+          },
+          {
+            "char": "я",
+            "codepoint": "U+044F",
+            "name": "CYRILLIC SMALL LETTER YA",
+            "count": 30
+          },
+          {
+            "char": "ō",
+            "codepoint": "U+014D",
+            "name": "LATIN SMALL LETTER O WITH MACRON",
+            "count": 28
+          },
+          {
+            "char": "ə",
+            "codepoint": "U+0259",
+            "name": "LATIN SMALL LETTER SCHWA",
+            "count": 27
+          },
+          {
+            "char": "ˈ",
+            "codepoint": "U+02C8",
+            "name": "MODIFIER LETTER VERTICAL LINE",
+            "count": 27
+          },
+          {
+            "char": "ā",
+            "codepoint": "U+0101",
+            "name": "LATIN SMALL LETTER A WITH MACRON",
+            "count": 26
+          },
+          {
+            "char": " ",
+            "codepoint": "U+200A",
+            "name": "HAIR SPACE",
+            "count": 25
+          },
+          {
+            "char": "й",
+            "codepoint": "U+0439",
+            "name": "CYRILLIC SMALL LETTER SHORT I",
+            "count": 24
+          },
+          {
+            "char": "ấ",
+            "codepoint": "U+1EA5",
+            "name": "LATIN SMALL LETTER A WITH CIRCUMFLEX AND ACUTE",
+            "count": 24
+          },
+          {
+            "char": "Р",
+            "codepoint": "U+0420",
+            "name": "CYRILLIC CAPITAL LETTER ER",
+            "count": 23
+          }
+        ],
+        "unusual_codepoint_types": 808,
+        "normalization_observations": {
+          "sampled_nonempty_lines": 5000,
+          "lines_differ_from_nfc": 0,
+          "lines_differ_from_nfd": 69,
+          "lines_differ_from_nfkc": 36,
+          "note": "Observations only; text was not normalized or rewritten. Counts reflect the first up-to-5000 non-empty lines."
+        },
+        "unusual_character_examples": [
+          {
+            "line_number": 1,
+            "excerpt": "Nyamukani! Tiyeni tizipita! Uyu wondipereka Ine wafika!”"
+          },
+          {
+            "line_number": 2,
+            "excerpt": "Ndinapatsidwa bango longa ndodo yoyezera ndipo ndinawuzidwa kuti, “Pita, kayeze Nyumba ya Mulungu ndi guwa lansembe, ..."
+          },
+          {
+            "line_number": 7,
+            "excerpt": "Chipani cha MCP chinatha mphamvu 1993 pamene kunachitika chisankho chomwe anthu ambiri anasankha kuti boma la Malaŵi ..."
+          },
+          {
+            "line_number": 8,
+            "excerpt": "Kwa mtsogoleri wa mayimbidwe. Salimo la Davide. Potsata mayimbidwe a “Akakombo.” Pulumutseni Inu Mulungu, pakuti madz..."
+          },
+          {
+            "line_number": 9,
+            "excerpt": "Tsono nkhosa zidzadya pamenepo ngati pabusa pawo; ana ankhosa adzadya mʼmabwinja a anthu olemera."
+          },
+          {
+            "line_number": 10,
+            "excerpt": "Pamene malawi a moto amakwera kumwamba kuchoka pa guwa, mngelo wa Yehova uja anakwera kumwamba mʼmalawi a motowo Mano..."
+          },
+          {
+            "line_number": 11,
+            "excerpt": "Isake anafunsa mwana wake, “Wayipeza msanga chotere bwanji mwana wanga?” Iye anayankha, “Yehova Mulungu wanu anandith..."
+          },
+          {
+            "line_number": 17,
+            "excerpt": "Amene amabera abambo ake kapena amayi ake namanena kuti “kumeneko sikulakwa,” ndi mnzake wa munthu amene amasakaza."
+          }
+        ]
+      },
+      "language_signals": {
+        "disclaimer": "Language categories are transparent term-list heuristics, not authoritative language identification. Short lines and shared function-word collisions can mislead. Requires human review.",
+        "min_matches_for_signal": 2,
+        "nonempty_lines_scored": 50546,
+        "counts": {
+          "chichewa_signal": 35276,
+          "english_signal": 440,
+          "german_signal": 2,
+          "mixed_signal": 276,
+          "insufficient_signal": 14552
+        },
+        "percentages": {
+          "chichewa_signal": 69.7899,
+          "english_signal": 0.8705,
+          "german_signal": 0.004,
+          "mixed_signal": 0.546,
+          "insufficient_signal": 28.7896
+        },
+        "samples": {
+          "chichewa_signal": [
+            {
+              "line_number": 14429,
+              "excerpt": "Anthu amenewa ndi amene akubweretsa mipatuko pakati panu, amatsatira nzeru zachibadwa ndipo alibe Mzimu Woyera.",
+              "term_hits": {
+                "chichewa": 3,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 24698,
+              "excerpt": "Pofika Seputembara 2022, Starlink ili ndi ma satelayiti ang'onoang'ono opitilira 3,000 opangidwa mochuluka mu low Ear...",
+              "term_hits": {
+                "chichewa": 3,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 26469,
+              "excerpt": "Ine sindinakhalepo mʼnyumba kuyambira tsiku limene ndinatulutsa Aisraeli mʼdziko la Igupto mpaka lero lino. Ndakhala ...",
+              "term_hits": {
+                "chichewa": 4,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 43518,
+              "excerpt": "Akumwa vinyo, anatamanda milungu yagolide ndi siliva, yamkuwa, chitsulo, yamtengo ndi mwala.",
+              "term_hits": {
+                "chichewa": 2,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 48230,
+              "excerpt": "A ku Ziyoni akuti “Ife tamva mbiri yawo, ndipo manja anthu alefukiratu. Nkhawa yatigwira, ndipo tikumva ululu ngati m...",
+              "term_hits": {
+                "chichewa": 5,
+                "english": 0,
+                "german": 0
+              }
+            }
+          ],
+          "english_signal": [
+            {
+              "line_number": 7963,
+              "excerpt": "Duke of NassauThird cousin of William III122x122pxGuillaume IV22 April 1852 –",
+              "term_hits": {
+                "chichewa": 0,
+                "english": 2,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 11928,
+              "excerpt": "Beyond music, she has advocated for more support, unity and has addressed the challenges faced by women and families ...",
+              "term_hits": {
+                "chichewa": 0,
+                "english": 18,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 35972,
+              "excerpt": "title Vacation from Marriage, as Dizzy Clayton",
+              "term_hits": {
+                "chichewa": 0,
+                "english": 2,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 38863,
+              "excerpt": "Shakespeare's Will from The National Archives",
+              "term_hits": {
+                "chichewa": 0,
+                "english": 2,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 41117,
+              "excerpt": "History of Tennis – An Authoritative Encyclopedia and Record Book (New Chapter Press, 2010)",
+              "term_hits": {
+                "chichewa": 0,
+                "english": 2,
+                "german": 0
+              }
+            }
+          ],
+          "german_signal": [
+            {
+              "line_number": 48577,
+              "excerpt": "Tsygankov, Daniel Beruf, Verbannung, Schicksal: Iwan Iljin und Deutschland // Archiv fuer Rechts- und Sozialphilosophie.",
+              "term_hits": {
+                "chichewa": 0,
+                "english": 0,
+                "german": 2
+              }
+            },
+            {
+              "line_number": 50505,
+              "excerpt": "\"Towards a unified slavic language\", Fourth Language Creation Conference, Groningen.MEYER, Anna-Maria (2012): \"Slavis...",
+              "term_hits": {
+                "chichewa": 0,
+                "english": 0,
+                "german": 2
+              }
+            }
+          ],
+          "mixed_signal": [
+            {
+              "line_number": 4015,
+              "excerpt": "Bungwe la World Health Organization ndiponso la Center for Disease Control and Prevention limalimbikitsa kuti ana ons...",
+              "term_hits": {
+                "chichewa": 2,
+                "english": 3,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 4386,
+              "excerpt": "(Mafuta pa kanvas, 98.1 ndi 129.9 sentimita (38.6 in × 51.1 in)).",
+              "term_hits": {
+                "chichewa": 2,
+                "english": 2,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 24053,
+              "excerpt": "Adali Purezidenti wa Movement for Democratic Change , ndipo kenako a Movement for Democratic Change - Tsvangirai (MDC...",
+              "term_hits": {
+                "chichewa": 3,
+                "english": 2,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 39597,
+              "excerpt": "Victoria Falls ( Lozi: Mosi-oa-Tunya, \"The Smoke That Thunders\"; Tonga: Shungu Namutitima, \"Boiling Water\") ndi mathi...",
+              "term_hits": {
+                "chichewa": 4,
+                "english": 2,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 47158,
+              "excerpt": "Iye adagwira ntchito ya woyang'anira nyimbo ku Zambia Awards Winning TV Drama Series: Love Games yomwe inakambidwa nd...",
+              "term_hits": {
+                "chichewa": 11,
+                "english": 5,
+                "german": 0
+              }
+            }
+          ],
+          "insufficient_signal": [
+            {
+              "line_number": 11310,
+              "excerpt": "Siliva (1980)",
+              "term_hits": {
+                "chichewa": 0,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 43424,
+              "excerpt": "Kupeza fuko",
+              "term_hits": {
+                "chichewa": 0,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 45068,
+              "excerpt": "Ngati munthu sangalandire thandizo, akhoza kukhala ndi matendawa kwa zaka zambiri.",
+              "term_hits": {
+                "chichewa": 1,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 47092,
+              "excerpt": "Iwowatu amangofuna zoyipa zokhazokha, amathamangira kukhetsa magazi.",
+              "term_hits": {
+                "chichewa": 0,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 50212,
+              "excerpt": "Efereimu, abambo awo, anawalira masiku ambiri, ndipo abale ake anabwera kudzamutonthoza.",
+              "term_hits": {
+                "chichewa": 1,
+                "english": 0,
+                "german": 0
+              }
+            }
+          ]
+        },
+        "suspicious_non_chichewa_examples": [
+          {
+            "category": "german_signal",
+            "line_number": 48577,
+            "excerpt": "Tsygankov, Daniel Beruf, Verbannung, Schicksal: Iwan Iljin und Deutschland // Archiv fuer Rechts- und Sozialphilosophie.",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 0,
+              "german": 2
+            }
+          },
+          {
+            "category": "german_signal",
+            "line_number": 50505,
+            "excerpt": "\"Towards a unified slavic language\", Fourth Language Creation Conference, Groningen.MEYER, Anna-Maria (2012): \"Slavis...",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 0,
+              "german": 2
+            }
+          },
+          {
+            "category": "english_signal",
+            "line_number": 17329,
+            "excerpt": "Country Head of stateMembers of the upper house Members of the lower house 5 3, 4 and 5 5 5 4 5 6 5 5 (President of F...",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 59,
+              "german": 0
+            }
+          },
+          {
+            "category": "english_signal",
+            "line_number": 34269,
+            "excerpt": "+Wikimania conferencesLogoConferenceDatePlaceAttendanceArchive of presentationsalt Logo of the Wikimania 2005 confere...",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 33,
+              "german": 0
+            }
+          },
+          {
+            "category": "english_signal",
+            "line_number": 16031,
+            "excerpt": "Dissatisfied 56 42 43 Angry 72 27 30 Satisfied 18 81 19 Enthusiastic 11 89 6 America's best days are In the future 40...",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 26,
+              "german": 0
+            }
+          },
+          {
+            "category": "english_signal",
+            "line_number": 44717,
+            "excerpt": "\"Therefore you also have by such admonition joined in close union the churches that were planted by Peter and Paul, t...",
+            "term_hits": {
+              "chichewa": 1,
+              "english": 25,
+              "german": 0
+            }
+          },
+          {
+            "category": "english_signal",
+            "line_number": 31051,
+            "excerpt": "+ Demographic subgroupTrumpHarris % oftotal voteIdeology Liberals 7 91 23 Moderates 40 57 42 Conservatives 90 9 34Par...",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 21,
+              "german": 0
+            }
+          },
+          {
+            "category": "english_signal",
+            "line_number": 19628,
+            "excerpt": "251–261: \"One of the great achievements of the past decade in the field of FGM is the shift in emphasis from the conc...",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 20,
+              "german": 0
+            }
+          }
+        ]
+      },
+      "boilerplate": {
+        "category_prefix": {
+          "description": "Wikipedia-style Category lines",
+          "total_occurrences": 1178,
+          "matching_lines": 1174,
+          "examples": [
+            {
+              "line_number": 6209,
+              "excerpt": "Category:Chaka chobadwira chikusowa (anthu amoyo)"
+            },
+            {
+              "line_number": 16612,
+              "excerpt": "Category:University of California, Los Angeles faculty"
+            },
+            {
+              "line_number": 20718,
+              "excerpt": "Category:Masewera a 2017"
+            },
+            {
+              "line_number": 46730,
+              "excerpt": "Category:Anabadwa mu 1958"
+            },
+            {
+              "line_number": 47539,
+              "excerpt": "Category: Tub ceev xwm kev kub ntxhov hauv Brazil"
+            }
+          ]
+        },
+        "wikipedia_muzinenero": {
+          "description": "Chichewa Wikipedia other-languages nav",
+          "total_occurrences": 1,
+          "matching_lines": 1,
+          "examples": [
+            {
+              "line_number": 29978,
+              "excerpt": "Wikipedia Muzinenero Zina"
+            }
+          ]
+        },
+        "mu_nkhani": {
+          "description": "Chichewa Wikipedia article-contents nav",
+          "total_occurrences": 6,
+          "matching_lines": 6,
+          "examples": [
+            {
+              "line_number": 1646,
+              "excerpt": "Mu nkhani ya United States - ndipo malinga ndi US Census Bureau matanthauzo - kudera ndi: New England, Mid-Atlantic, ..."
+            },
+            {
+              "line_number": 7887,
+              "excerpt": "Mu nkhani ya USA Today , Ortiz amanenanso kuti malo otsiriza ochokera ku Ugly Betty ndi mutu wakuti \" Mmene Betty Ana..."
+            },
+            {
+              "line_number": 14538,
+              "excerpt": "Pomaliza, nthawi ya Chingerezi (1385-1400) imathera mu Nkhani zaku Canterbury."
+            },
+            {
+              "line_number": 24213,
+              "excerpt": "Chigumula chimayambira koyamba kupyola pakati pa Halo: Combat Evolved , mu nkhani ya \"343 Guilty Spark\"."
+            },
+            {
+              "line_number": 28391,
+              "excerpt": "Kuwonanso gawo mu nkhaniyi ndi chigumula chomwe chimadziwika kuti \" Gravemind \"."
+            }
+          ]
+        },
+        "wikipedia_word": {
+          "description": "Mentions of Wikipedia",
+          "total_occurrences": 77,
+          "matching_lines": 72,
+          "examples": [
+            {
+              "line_number": 8768,
+              "excerpt": "Kusintha-ndi-thon (zinalembedwa ngati editathon kapena edit-a-thon mu chingerezi) ndi chochitika chokonzekera kumene ..."
+            },
+            {
+              "line_number": 22307,
+              "excerpt": "Mafayilo ochokera ku Wikimedia Commons atha kugwiritsidwa ntchito m'ma projekiti onse a Wikimedia m'zilankhulo zonse,..."
+            },
+            {
+              "line_number": 23016,
+              "excerpt": "GK1 Thomas WernersonDF2 Ruben SvenssonDF3 Glenn HysénDF4 Conny Karlsson (c)DF5 Stig FredrikssonMF6 Tord HolmgrenMF7 J..."
+            },
+            {
+              "line_number": 23018,
+              "excerpt": "GK1 Uli SteinRB2 Manfred KaltzCB3 Holger HieronymusCB4 Jürgen GrohLB5 Bernd WehmeyerMF6 Jimmy HartwigMF7 Caspar Memer..."
+            },
+            {
+              "line_number": 30990,
+              "excerpt": "thumb Wikipedia logo"
+            }
+          ]
+        },
+        "wikimedia": {
+          "description": "Wikimedia project mentions",
+          "total_occurrences": 46,
+          "matching_lines": 40,
+          "examples": [
+            {
+              "line_number": 12334,
+              "excerpt": "Chotsatiracho chinalichonso Wikimania yoyamba yomwe inakambidwa ndi Lima Tretikov, yemwe ndi Mtsogoleri wamkulu wa Wi..."
+            },
+            {
+              "line_number": 21380,
+              "excerpt": "Zigawo za Wikipedia zakhala zikuchitika ku Wikimedia chapitukulu, maphunziro ovomerezedwa monga Sonoma State Universi..."
+            },
+            {
+              "line_number": 24755,
+              "excerpt": "Ntchitoyi ikuphatikizapo Wikipedia, Wiktionary, Wikiquote, Wikisource, Wikinews, Wikibooks, Wikiversity, Wikimedia Co..."
+            },
+            {
+              "line_number": 43761,
+              "excerpt": "Pamsonkhanowu, Sue Gardner, mkulu wa bungwe la Wikimedia Foundation, adanena kuti mazikowo ndikutulutsa chiwerengero ..."
+            },
+            {
+              "line_number": 48389,
+              "excerpt": "Category:Wikimedia Foundation"
+            }
+          ]
+        },
+        "url_http": {
+          "description": "HTTP(S) URLs",
+          "total_occurrences": 86,
+          "matching_lines": 69,
+          "examples": [
+            {
+              "line_number": 2968,
+              "excerpt": "George Washington ndi mtsogoleri wa dziko la United States kuyambira 1789 mpaka 1797.https://www.mountvernon.org/libr..."
+            },
+            {
+              "line_number": 40313,
+              "excerpt": "GK1 Wolfgang KleffRB5 Rainer BonhofCB3 Ulrich SurauCB4 Berti VogtsLB2 Dietmar DannerCM10 Günter Netzer (c)CM6 Christi..."
+            },
+            {
+              "line_number": 49613,
+              "excerpt": "http://www.maplandia.com/bosnia-and-herzegovina/republika-srpska/siprage/ Maplandia"
+            },
+            {
+              "line_number": 49614,
+              "excerpt": "http://www.satellitecitymaps.com/europe-map/bosnia-and-herzegovina-map/federation-of-bosnia-and-herzegovina-map/%C5%A..."
+            },
+            {
+              "line_number": 49615,
+              "excerpt": "http://www.distancesfrom.com/distance-from-Siprage-to-Banja-Luka-Bosna-i-Hercegovina/DistanceHistory/5243320.aspx"
+            }
+          ]
+        },
+        "url_www": {
+          "description": "www. hostnames",
+          "total_occurrences": 41,
+          "matching_lines": 34,
+          "examples": [
+            {
+              "line_number": 4152,
+              "excerpt": "Robert Mugabe Gabriel ( Shona: muɡaɓe 21 February 1924 - 6 September 2019) anali Zimbabwe chosintha ndi wandale amene..."
+            },
+            {
+              "line_number": 11800,
+              "excerpt": "Ku Ukraine, mayinawa amadziwika kuti Temporary occupation of the Autonomous Republic of Crimea ndi Sevastopol ndi Rus..."
+            },
+            {
+              "line_number": 12942,
+              "excerpt": "Pa Zambiri za nyengo ya ku Malawi,chitani click apa www.bbc.com/weather ."
+            },
+            {
+              "line_number": 27073,
+              "excerpt": "mu 1847 kuchokera ku zitsanzo zomwe zidapezeka ku Liberia.https://onlinelibrary.wiley.com/doi/abs/10.1002/evan.20203 ..."
+            },
+            {
+              "line_number": 42481,
+              "excerpt": "http://www.health.gov.sk.ca/."
+            }
+          ]
+        },
+        "html_tag": {
+          "description": "Simple HTML tag remnants",
+          "total_occurrences": 0,
+          "matching_lines": 0,
+          "examples": []
+        },
+        "wiki_link_brackets": {
+          "description": "Wiki-style double-bracket links",
+          "total_occurrences": 0,
+          "matching_lines": 0,
+          "examples": []
+        },
+        "wiki_template": {
+          "description": "Wiki-style template braces",
+          "total_occurrences": 0,
+          "matching_lines": 0,
+          "examples": []
+        },
+        "in_german_meta": {
+          "description": "Explicit German-language meta marker",
+          "total_occurrences": 3,
+          "matching_lines": 3,
+          "examples": [
+            {
+              "line_number": 3,
+              "excerpt": "(in German) In: Rathauskorrespondenz, 27 May 2009Edita Gruberova ausgezeichnet (image) In: Rathauskorrespondenz, 27 M..."
+            },
+            {
+              "line_number": 26865,
+              "excerpt": "Juni 2014 (in German) Musiktheaterpreis, retrieved 4 April 2015"
+            },
+            {
+              "line_number": 26866,
+              "excerpt": "2016: Ehrenplakette of the in Garmisch-PartenkirchenEröffnungsprogramm der Richard-Strauss-Festivals 2016 (in German)..."
+            }
+          ]
+        },
+        "image_meta": {
+          "description": "Image metadata parenthetical",
+          "total_occurrences": 1,
+          "matching_lines": 1,
+          "examples": [
+            {
+              "line_number": 3,
+              "excerpt": "(in German) In: Rathauskorrespondenz, 27 May 2009Edita Gruberova ausgezeichnet (image) In: Rathauskorrespondenz, 27 M..."
+            }
+          ]
+        }
+      },
+      "within_source_duplication": {
+        "repeated_exact_lines": 384,
+        "repeated_ws_normalized_lines": 392,
+        "repeated_casefold_lines": 397,
+        "top_repeated_exact_lines": [
+          {
+            "count": 146,
+            "excerpt": "Zolemba"
+          },
+          {
+            "count": 114,
+            "excerpt": "Zolemba"
+          },
+          {
+            "count": 82,
+            "excerpt": "Category:Anthu amoyo"
+          },
+          {
+            "count": 76,
+            "excerpt": "Zolemba"
+          },
+          {
+            "count": 53,
+            "excerpt": "thumb"
+          },
+          {
+            "count": 47,
+            "excerpt": "Malifalensi"
+          },
+          {
+            "count": 36,
+            "excerpt": "() •"
+          },
+          {
+            "count": 36,
+            "excerpt": "Category:Oimba"
+          },
+          {
+            "count": 34,
+            "excerpt": "Link"
+          },
+          {
+            "count": 30,
+            "excerpt": "Category:Boma"
+          },
+          {
+            "count": 29,
+            "excerpt": "Category:Malaŵi"
+          },
+          {
+            "count": 25,
+            "excerpt": "pl."
+          },
+          {
+            "count": 24,
+            "excerpt": "Mbiri"
+          },
+          {
+            "count": 21,
+            "excerpt": "Category:2021 imfa"
+          },
+          {
+            "count": 20,
+            "excerpt": "Demographics"
+          }
+        ],
+        "top_repeated_ws_normalized_lines": [
+          {
+            "count": 342,
+            "excerpt": "Zolemba"
+          },
+          {
+            "count": 82,
+            "excerpt": "Category:Anthu amoyo"
+          },
+          {
+            "count": 60,
+            "excerpt": "thumb"
+          },
+          {
+            "count": 53,
+            "excerpt": "() •"
+          },
+          {
+            "count": 50,
+            "excerpt": "Link"
+          },
+          {
+            "count": 49,
+            "excerpt": "Malifalensi"
+          },
+          {
+            "count": 42,
+            "excerpt": "Mbiri"
+          },
+          {
+            "count": 36,
+            "excerpt": "Category:Oimba"
+          },
+          {
+            "count": 30,
+            "excerpt": "Category:Boma"
+          },
+          {
+            "count": 29,
+            "excerpt": "Category:Malaŵi"
+          },
+          {
+            "count": 28,
+            "excerpt": "Demographics"
+          },
+          {
+            "count": 27,
+            "excerpt": "pl."
+          },
+          {
+            "count": 24,
+            "excerpt": "Moyo wakuubwana"
+          },
+          {
+            "count": 23,
+            "excerpt": "-"
+          },
+          {
+            "count": 21,
+            "excerpt": "Category:2021 imfa"
+          }
+        ],
+        "repeated_exact_paragraphs": 1,
+        "repeated_ws_normalized_paragraphs": 1,
+        "top_repeated_paragraphs": [
+          {
+            "count": 3,
+            "excerpt": "External links"
+          }
+        ]
+      },
+      "paragraph_count": 90,
+      "shingle_count": 648788,
+      "unique_shingle_count": 621933
+    },
+    "wikipedia": {
+      "source_id": "wikipedia",
+      "source_name": "Chichewa Wikipedia",
+      "file_path": "data/raw/wikipedia/wiki_clean.txt",
+      "size_bytes": 1938045,
+      "sha256": "cf7c5ba6d8c0d4770eee3306bab9f4be1dfc9570930a9aa7f3613c0ffb4587b7",
+      "structural": {
+        "total_characters": 1928043,
+        "total_lines": 20579,
+        "non_empty_lines": 20371,
+        "blank_lines": 208,
+        "unique_exact_lines": 18078,
+        "exact_duplicate_line_occurrences": 2914,
+        "lines_appearing_more_than_once": 2914,
+        "duplicate_line_percentage": 14.3046,
+        "min_line_length": 1,
+        "max_line_length": 3055,
+        "mean_line_length": 93.626,
+        "median_line_length": 75,
+        "line_length_percentiles": {
+          "p50": 75.0,
+          "p90": 198.0,
+          "p95": 240.0,
+          "p99": 355.2999999999993
+        },
+        "very_short_lines": 3818,
+        "very_long_lines": 77,
+        "short_line_threshold": 20,
+        "long_line_threshold": 500,
+        "lines_only_digits": 111,
+        "lines_numeric_only_heuristic": 133,
+        "lines_containing_urls": 74,
+        "lines_containing_control_chars": 0,
+        "lines_containing_replacement_char": 0
+      },
+      "character_orthography": {
+        "ascii_characters": 1920497,
+        "non_ascii_characters": 7546,
+        "alphabetic_characters": 1542392,
+        "numeric_characters": 59745,
+        "whitespace_characters": 269683,
+        "punctuation_characters": 55717,
+        "other_characters": 506,
+        "chichewa_char_counts": {
+          "ŵ": 382,
+          "Ŵ": 1
+        },
+        "unusual_codepoints": [
+          {
+            "char": "–",
+            "codepoint": "U+2013",
+            "name": "EN DASH",
+            "count": 717
+          },
+          {
+            "char": "’",
+            "codepoint": "U+2019",
+            "name": "RIGHT SINGLE QUOTATION MARK",
+            "count": 521
+          },
+          {
+            "char": "ŵ",
+            "codepoint": "U+0175",
+            "name": "LATIN SMALL LETTER W WITH CIRCUMFLEX",
+            "count": 382
+          },
+          {
+            "char": "а",
+            "codepoint": "U+0430",
+            "name": "CYRILLIC SMALL LETTER A",
+            "count": 138
+          },
+          {
+            "char": "о",
+            "codepoint": "U+043E",
+            "name": "CYRILLIC SMALL LETTER O",
+            "count": 121
+          },
+          {
+            "char": "и",
+            "codepoint": "U+0438",
+            "name": "CYRILLIC SMALL LETTER I",
+            "count": 111
+          },
+          {
+            "char": "е",
+            "codepoint": "U+0435",
+            "name": "CYRILLIC SMALL LETTER IE",
+            "count": 93
+          },
+          {
+            "char": "н",
+            "codepoint": "U+043D",
+            "name": "CYRILLIC SMALL LETTER EN",
+            "count": 91
+          },
+          {
+            "char": "с",
+            "codepoint": "U+0441",
+            "name": "CYRILLIC SMALL LETTER ES",
+            "count": 89
+          },
+          {
+            "char": "—",
+            "codepoint": "U+2014",
+            "name": "EM DASH",
+            "count": 84
+          },
+          {
+            "char": "р",
+            "codepoint": "U+0440",
+            "name": "CYRILLIC SMALL LETTER ER",
+            "count": 83
+          },
+          {
+            "char": "к",
+            "codepoint": "U+043A",
+            "name": "CYRILLIC SMALL LETTER KA",
+            "count": 79
+          },
+          {
+            "char": "т",
+            "codepoint": "U+0442",
+            "name": "CYRILLIC SMALL LETTER TE",
+            "count": 69
+          },
+          {
+            "char": "•",
+            "codepoint": "U+2022",
+            "name": "BULLET",
+            "count": 68
+          },
+          {
+            "char": "л",
+            "codepoint": "U+043B",
+            "name": "CYRILLIC SMALL LETTER EL",
+            "count": 65
+          },
+          {
+            "char": "”",
+            "codepoint": "U+201D",
+            "name": "RIGHT DOUBLE QUOTATION MARK",
+            "count": 58
+          },
+          {
+            "char": "в",
+            "codepoint": "U+0432",
+            "name": "CYRILLIC SMALL LETTER VE",
+            "count": 57
+          },
+          {
+            "char": "ư",
+            "codepoint": "U+01B0",
+            "name": "LATIN SMALL LETTER U WITH HORN",
+            "count": 56
+          },
+          {
+            "char": "“",
+            "codepoint": "U+201C",
+            "name": "LEFT DOUBLE QUOTATION MARK",
+            "count": 51
+          },
+          {
+            "char": "…",
+            "codepoint": "U+2026",
+            "name": "HORIZONTAL ELLIPSIS",
+            "count": 48
+          },
+          {
+            "char": "ć",
+            "codepoint": "U+0107",
+            "name": "LATIN SMALL LETTER C WITH ACUTE",
+            "count": 47
+          },
+          {
+            "char": "ớ",
+            "codepoint": "U+1EDB",
+            "name": "LATIN SMALL LETTER O WITH HORN AND ACUTE",
+            "count": 44
+          },
+          {
+            "char": "у",
+            "codepoint": "U+0443",
+            "name": "CYRILLIC SMALL LETTER U",
+            "count": 42
+          },
+          {
+            "char": "​",
+            "codepoint": "U+200B",
+            "name": "ZERO WIDTH SPACE",
+            "count": 42
+          },
+          {
+            "char": "đ",
+            "codepoint": "U+0111",
+            "name": "LATIN SMALL LETTER D WITH STROKE",
+            "count": 38
+          },
+          {
+            "char": "д",
+            "codepoint": "U+0434",
+            "name": "CYRILLIC SMALL LETTER DE",
+            "count": 35
+          },
+          {
+            "char": "м",
+            "codepoint": "U+043C",
+            "name": "CYRILLIC SMALL LETTER EM",
+            "count": 33
+          },
+          {
+            "char": "і",
+            "codepoint": "U+0456",
+            "name": "CYRILLIC SMALL LETTER BYELORUSSIAN-UKRAINIAN I",
+            "count": 33
+          },
+          {
+            "char": "ا",
+            "codepoint": "U+0627",
+            "name": "ARABIC LETTER ALEF",
+            "count": 31
+          },
+          {
+            "char": "‘",
+            "codepoint": "U+2018",
+            "name": "LEFT SINGLE QUOTATION MARK",
+            "count": 31
+          },
+          {
+            "char": "я",
+            "codepoint": "U+044F",
+            "name": "CYRILLIC SMALL LETTER YA",
+            "count": 30
+          },
+          {
+            "char": "ō",
+            "codepoint": "U+014D",
+            "name": "LATIN SMALL LETTER O WITH MACRON",
+            "count": 28
+          },
+          {
+            "char": "ə",
+            "codepoint": "U+0259",
+            "name": "LATIN SMALL LETTER SCHWA",
+            "count": 27
+          },
+          {
+            "char": "ˈ",
+            "codepoint": "U+02C8",
+            "name": "MODIFIER LETTER VERTICAL LINE",
+            "count": 27
+          },
+          {
+            "char": "ā",
+            "codepoint": "U+0101",
+            "name": "LATIN SMALL LETTER A WITH MACRON",
+            "count": 26
+          },
+          {
+            "char": " ",
+            "codepoint": "U+200A",
+            "name": "HAIR SPACE",
+            "count": 25
+          },
+          {
+            "char": "й",
+            "codepoint": "U+0439",
+            "name": "CYRILLIC SMALL LETTER SHORT I",
+            "count": 24
+          },
+          {
+            "char": "ấ",
+            "codepoint": "U+1EA5",
+            "name": "LATIN SMALL LETTER A WITH CIRCUMFLEX AND ACUTE",
+            "count": 24
+          },
+          {
+            "char": "Р",
+            "codepoint": "U+0420",
+            "name": "CYRILLIC CAPITAL LETTER ER",
+            "count": 23
+          },
+          {
+            "char": "п",
+            "codepoint": "U+043F",
+            "name": "CYRILLIC SMALL LETTER PE",
+            "count": 23
+          }
+        ],
+        "unusual_codepoint_types": 808,
+        "normalization_observations": {
+          "sampled_nonempty_lines": 5000,
+          "lines_differ_from_nfc": 0,
+          "lines_differ_from_nfd": 341,
+          "lines_differ_from_nfkc": 202,
+          "note": "Observations only; text was not normalized or rewritten. Counts reflect the first up-to-5000 non-empty lines."
+        },
+        "unusual_character_examples": [
+          {
+            "line_number": 27,
+            "excerpt": "Dziko la Malaŵi"
+          },
+          {
+            "line_number": 28,
+            "excerpt": "lomwe kale linkatchulidwa kuti Nyasaland, ndi dziko la demokilase lomwe lili ndi anthu ambiri ndipo lili cha ku m’mwe..."
+          },
+          {
+            "line_number": 29,
+            "excerpt": "Dzikoli linayandikana ndi Zambia cha ku m'madzulo, Tanzania cha ku mpoto ndi Mozambique kuzungulira kum’mawa, kum'mwe..."
+          },
+          {
+            "line_number": 30,
+            "excerpt": "Chiyambi cha dzina loti Malawi sichidziwika bwino bwino, koma anthu ofufuza amakhulupilira kuti dzinali linachokela k..."
+          },
+          {
+            "line_number": 38,
+            "excerpt": "Iyeyu anafika ku chigwa cha kumpoto cha Nyanja ya Malawi mchaka cha 1859 ndipo ma tchalitchi a chi Sikotishi anatsati..."
+          },
+          {
+            "line_number": 42,
+            "excerpt": "Mu zaka za m’ma 1950, nkhani yofuna ufulu wodzilamulira inakula, maka maka pamene dziko la Britain linakhazikitsa Chi..."
+          },
+          {
+            "line_number": 48,
+            "excerpt": "Ku msonkhano wokambirana za malamulo olamurira dziko ku London m’mwezi wa Novembala mu chaka cha 1962, boma la Britai..."
+          },
+          {
+            "line_number": 51,
+            "excerpt": "Malamulo a tsopano olamulira dziko anakhazikitsidwa m’mwezi wa Meyi 1963, ndipo chitaganya chinathetsedwa pa 31 Disem..."
+          }
+        ]
+      },
+      "language_signals": {
+        "disclaimer": "Language categories are transparent term-list heuristics, not authoritative language identification. Short lines and shared function-word collisions can mislead. Requires human review.",
+        "min_matches_for_signal": 2,
+        "nonempty_lines_scored": 20371,
+        "counts": {
+          "chichewa_signal": 9611,
+          "english_signal": 446,
+          "german_signal": 2,
+          "mixed_signal": 276,
+          "insufficient_signal": 10036
+        },
+        "percentages": {
+          "chichewa_signal": 47.1798,
+          "english_signal": 2.1894,
+          "german_signal": 0.0098,
+          "mixed_signal": 1.3549,
+          "insufficient_signal": 49.2661
+        },
+        "samples": {
+          "chichewa_signal": [
+            {
+              "line_number": 2213,
+              "excerpt": "Moscow ndi boma lina la dziko la Russia.",
+              "term_hits": {
+                "chichewa": 2,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 5424,
+              "excerpt": "Kugwirizana ndi Teddy Wilson kunapangitsa kuti \"Kodi Kuwala Kwakukulu Kwambiri Kungathe Bwanji\", komwe kunayambira mu...",
+              "term_hits": {
+                "chichewa": 3,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 7654,
+              "excerpt": "Chikumbutso chinakonzedweratu chifukwa cha Xbox One monga gawo la Halo: Master Master Collection mu 2014.",
+              "term_hits": {
+                "chichewa": 2,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 17092,
+              "excerpt": "Likulu la boma la Juneau ndi mzinda wachiwiri waukulu kwambiri ku United States ndi dera, lomwe lili ndi magawo ambir...",
+              "term_hits": {
+                "chichewa": 5,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 20355,
+              "excerpt": "Fenerbahçe Basketball, yomwe nthawi zambiri imatchedwa Fenerbahçe (m’mawu a Chilatini: feˈnæɾbahtʃe ) kapena Fenerbah...",
+              "term_hits": {
+                "chichewa": 7,
+                "english": 0,
+                "german": 0
+              }
+            }
+          ],
+          "english_signal": [
+            {
+              "line_number": 6904,
+              "excerpt": "The Prime Minister (1941) as Miss Sheridan (uncredited)",
+              "term_hits": {
+                "chichewa": 0,
+                "english": 2,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 9936,
+              "excerpt": "She is also a Commonwealth PHD Scholar, Data and ICT Expert, Gender Researcher and community change Champion.",
+              "term_hits": {
+                "chichewa": 0,
+                "english": 3,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 12905,
+              "excerpt": "The Alternative for Germany (AfD) idagwa kuchoka malo achitatu mpaka achisanu ndi 10.3%, kutsika kwa 2.3 peresenti.",
+              "term_hits": {
+                "chichewa": 1,
+                "english": 2,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 14824,
+              "excerpt": "Anapatsidwa mphoto ya North Harbour's 2013 Māori Colts Senior Player of the Year adakali pasukulu.",
+              "term_hits": {
+                "chichewa": 1,
+                "english": 2,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 20034,
+              "excerpt": "Akatswiri ambiri a Baibulo amavomereza kuti Yohane anabatiza Yesu,Jesus as a figure in history: how modern historians...",
+              "term_hits": {
+                "chichewa": 1,
+                "english": 4,
+                "german": 0
+              }
+            }
+          ],
+          "german_signal": [
+            {
+              "line_number": 1806,
+              "excerpt": "\"Towards a unified slavic language\", Fourth Language Creation Conference, Groningen.MEYER, Anna-Maria (2012): \"Slavis...",
+              "term_hits": {
+                "chichewa": 0,
+                "english": 0,
+                "german": 2
+              }
+            },
+            {
+              "line_number": 18984,
+              "excerpt": "Tsygankov, Daniel Beruf, Verbannung, Schicksal: Iwan Iljin und Deutschland // Archiv fuer Rechts- und Sozialphilosophie.",
+              "term_hits": {
+                "chichewa": 0,
+                "english": 0,
+                "german": 2
+              }
+            }
+          ],
+          "mixed_signal": [
+            {
+              "line_number": 13162,
+              "excerpt": "Membala wa Nyumba Yamalamulo, adagwirapo kale ngati Minister of Foreign Affairs kuyambira 2012 mpaka 2017 ndipo ngati...",
+              "term_hits": {
+                "chichewa": 3,
+                "english": 2,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 14476,
+              "excerpt": "Leagueyi idakhazikitsidwa ndi Board of Control for Cricket in India (BCCI) mu 2007.",
+              "term_hits": {
+                "chichewa": 2,
+                "english": 3,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 14511,
+              "excerpt": "Mu 1954, Crimea Oblast inasamutsidwa kuchoka ku Russian SFSR kupita ku Ukraine SSR ndi lamulo la Presidium of the Sup...",
+              "term_hits": {
+                "chichewa": 8,
+                "english": 4,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 17889,
+              "excerpt": "Wotchedwa \"Benjamin Franklin Presidential Practice Professor\", Biden adatsogolera zokambirana za mbiri yakale ndi nda...",
+              "term_hits": {
+                "chichewa": 3,
+                "english": 2,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 20016,
+              "excerpt": "Yohane akutchulidwa ndi wolemba mbiri Wachiroma Josephus,Flavius Josephus, Antiquities of the Jews 18.5.2 ndipo amale...",
+              "term_hits": {
+                "chichewa": 2,
+                "english": 2,
+                "german": 0
+              }
+            }
+          ],
+          "insufficient_signal": [
+            {
+              "line_number": 241,
+              "excerpt": "1 Samueli",
+              "term_hits": {
+                "chichewa": 0,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 1526,
+              "excerpt": "thumb Karonga",
+              "term_hits": {
+                "chichewa": 0,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 8933,
+              "excerpt": "10",
+              "term_hits": {
+                "chichewa": 0,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 11802,
+              "excerpt": "PosTeamPldWDLGFGAGDPts1321020+272311143+143311132+144301215−41",
+              "term_hits": {
+                "chichewa": 0,
+                "english": 0,
+                "german": 0
+              }
+            },
+            {
+              "line_number": 17452,
+              "excerpt": "Mphamvu yoteroyo ikadagwiritsidwa ntchito kumenya ngakhalenso kugonjetsa Kumadzulo.",
+              "term_hits": {
+                "chichewa": 1,
+                "english": 0,
+                "german": 0
+              }
+            }
+          ]
+        },
+        "suspicious_non_chichewa_examples": [
+          {
+            "category": "german_signal",
+            "line_number": 1806,
+            "excerpt": "\"Towards a unified slavic language\", Fourth Language Creation Conference, Groningen.MEYER, Anna-Maria (2012): \"Slavis...",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 0,
+              "german": 2
+            }
+          },
+          {
+            "category": "german_signal",
+            "line_number": 18984,
+            "excerpt": "Tsygankov, Daniel Beruf, Verbannung, Schicksal: Iwan Iljin und Deutschland // Archiv fuer Rechts- und Sozialphilosophie.",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 0,
+              "german": 2
+            }
+          },
+          {
+            "category": "english_signal",
+            "line_number": 10673,
+            "excerpt": "Country Head of stateMembers of the upper house Members of the lower house 5 3, 4 and 5 5 5 4 5 6 5 5 (President of F...",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 59,
+              "german": 0
+            }
+          },
+          {
+            "category": "english_signal",
+            "line_number": 8331,
+            "excerpt": "+Wikimania conferencesLogoConferenceDatePlaceAttendanceArchive of presentationsalt Logo of the Wikimania 2005 confere...",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 33,
+              "german": 0
+            }
+          },
+          {
+            "category": "english_signal",
+            "line_number": 19228,
+            "excerpt": "Dissatisfied 56 42 43 Angry 72 27 30 Satisfied 18 81 19 Enthusiastic 11 89 6 America's best days are In the future 40...",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 26,
+              "german": 0
+            }
+          },
+          {
+            "category": "english_signal",
+            "line_number": 4538,
+            "excerpt": "\"Therefore you also have by such admonition joined in close union the churches that were planted by Peter and Paul, t...",
+            "term_hits": {
+              "chichewa": 1,
+              "english": 25,
+              "german": 0
+            }
+          },
+          {
+            "category": "english_signal",
+            "line_number": 19227,
+            "excerpt": "+ Demographic subgroupTrumpHarris % oftotal voteIdeology Liberals 7 91 23 Moderates 40 57 42 Conservatives 90 9 34Par...",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 21,
+              "german": 0
+            }
+          },
+          {
+            "category": "english_signal",
+            "line_number": 3528,
+            "excerpt": "251–261: \"One of the great achievements of the past decade in the field of FGM is the shift in emphasis from the conc...",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 20,
+              "german": 0
+            }
+          }
+        ]
+      },
+      "boilerplate": {
+        "category_prefix": {
+          "description": "Wikipedia-style Category lines",
+          "total_occurrences": 1551,
+          "matching_lines": 1547,
+          "examples": [
+            {
+              "line_number": 220,
+              "excerpt": "Category:Malaŵi"
+            },
+            {
+              "line_number": 2384,
+              "excerpt": "Category:China"
+            },
+            {
+              "line_number": 2608,
+              "excerpt": "Category:Poland"
+            },
+            {
+              "line_number": 6345,
+              "excerpt": "Category:Mood disorders"
+            },
+            {
+              "line_number": 7411,
+              "excerpt": "Category:Anthu amoyo"
+            }
+          ]
+        },
+        "wikipedia_muzinenero": {
+          "description": "Chichewa Wikipedia other-languages nav",
+          "total_occurrences": 1,
+          "matching_lines": 1,
+          "examples": [
+            {
+              "line_number": 14,
+              "excerpt": "Wikipedia Muzinenero Zina"
+            }
+          ]
+        },
+        "mu_nkhani": {
+          "description": "Chichewa Wikipedia article-contents nav",
+          "total_occurrences": 6,
+          "matching_lines": 6,
+          "examples": [
+            {
+              "line_number": 2,
+              "excerpt": "Mu nkhani"
+            },
+            {
+              "line_number": 7597,
+              "excerpt": "Chigumula chimayambira koyamba kupyola pakati pa Halo: Combat Evolved , mu nkhani ya \"343 Guilty Spark\"."
+            },
+            {
+              "line_number": 7885,
+              "excerpt": "Mu nkhani ya USA Today , Ortiz amanenanso kuti malo otsiriza ochokera ku Ugly Betty ndi mutu wakuti \" Mmene Betty Ana..."
+            },
+            {
+              "line_number": 8100,
+              "excerpt": "Kuwonanso gawo mu nkhaniyi ndi chigumula chomwe chimadziwika kuti \" Gravemind \"."
+            },
+            {
+              "line_number": 11348,
+              "excerpt": "Pomaliza, nthawi ya Chingerezi (1385-1400) imathera mu Nkhani zaku Canterbury."
+            }
+          ]
+        },
+        "wikipedia_word": {
+          "description": "Mentions of Wikipedia",
+          "total_occurrences": 77,
+          "matching_lines": 72,
+          "examples": [
+            {
+              "line_number": 1315,
+              "excerpt": "Wikipedia"
+            },
+            {
+              "line_number": 3929,
+              "excerpt": "– multilingual portal (contains links to all language editions) (wikipedia.com still redirects here)"
+            },
+            {
+              "line_number": 6078,
+              "excerpt": "Category:Wikipedia"
+            },
+            {
+              "line_number": 6545,
+              "excerpt": "Ntchitoyi ikuphatikizapo Wikipedia, Wiktionary, Wikiquote, Wikisource, Wikinews, Wikibooks, Wikiversity, Wikimedia Co..."
+            },
+            {
+              "line_number": 8328,
+              "excerpt": "Mitu ya zokambirana ndi zokambirana zikuphatikizapo Wikimedia projects monga Wikipedia, ena wikis, mapulogalamu otseg..."
+            }
+          ]
+        },
+        "wikimedia": {
+          "description": "Wikimedia project mentions",
+          "total_occurrences": 46,
+          "matching_lines": 40,
+          "examples": [
+            {
+              "line_number": 5121,
+              "excerpt": "Msonkhano wautali kwambiri unachitikira ku Museo Soumaya ku Mexico City kuyambira June 9 mpaka 12, 2016, kumene anthu..."
+            },
+            {
+              "line_number": 8436,
+              "excerpt": "Gulu la bungwe la Wikimedia México, AC, lachigawo cha Mexican lomwe likuimira zofuna ndi zolinga za Wikimedia Foundat..."
+            },
+            {
+              "line_number": 12039,
+              "excerpt": "Ndiye wamkulu wamkulu yemwe akubwera wa Wikimedia Foundation."
+            },
+            {
+              "line_number": 16187,
+              "excerpt": "Wiki Amakonda Dziko Lapansi (Mu chingerezi Wiki Loves Earth) ndi mpikisano wapachaka wapadziko lonse wojambula zithun..."
+            },
+            {
+              "line_number": 16188,
+              "excerpt": "Ophunzira amatenga zithunzi za zolengedwa zakumaloko komanso mawonekedwe owoneka bwino m'maiko awo, ndikuziyika ku Wi..."
+            }
+          ]
+        },
+        "url_http": {
+          "description": "HTTP(S) URLs",
+          "total_occurrences": 86,
+          "matching_lines": 69,
+          "examples": [
+            {
+              "line_number": 3487,
+              "excerpt": "http://www.satellitecitymaps.com/europe-map/bosnia-and-herzegovina-map/federation-of-bosnia-and-herzegovina-map/%C5%A..."
+            },
+            {
+              "line_number": 8789,
+              "excerpt": "Iye ndi munthu woyamba kulandira digiti ya doctorate mu chinenero cha Twi , chimodzi mwa mitundu ya chinenero cha Aka..."
+            },
+            {
+              "line_number": 9952,
+              "excerpt": "+Miss Grand Internationalมิสแกรนด์อินเตอร์เนชันแนล 135px Miss Grand International Organisation Chidule: MGI kapena MG..."
+            },
+            {
+              "line_number": 12871,
+              "excerpt": "Posinthana ndi mgwirizanowu, Meng adagwirizana ndi zomwe ananena kuti wanena zabodza ku HSBC kuti zithandizire ku US,..."
+            },
+            {
+              "line_number": 15154,
+              "excerpt": "GK1 Ray ClemenceRB2 Chris LawlerCB5 Larry LloydCB4 Tommy Smith (c)LB3 Alec LindsayCM6 Emlyn HughesCM8 Peter CormackCM..."
+            }
+          ]
+        },
+        "url_www": {
+          "description": "www. hostnames",
+          "total_occurrences": 41,
+          "matching_lines": 34,
+          "examples": [
+            {
+              "line_number": 209,
+              "excerpt": "Pa Zambiri za nyengo ya ku Malawi,chitani click apa www.bbc.com/weather ."
+            },
+            {
+              "line_number": 3487,
+              "excerpt": "http://www.satellitecitymaps.com/europe-map/bosnia-and-herzegovina-map/federation-of-bosnia-and-herzegovina-map/%C5%A..."
+            },
+            {
+              "line_number": 6123,
+              "excerpt": "Iye anali mwini wa Premier League football club Leicester City kuyambira 2010.https://www.bbc.co.uk/news/uk-england-l..."
+            },
+            {
+              "line_number": 9749,
+              "excerpt": "http://www.health.gov.sk.ca/."
+            },
+            {
+              "line_number": 12872,
+              "excerpt": "Meng adachoka ku Canada kupita ku China pa 24 Seputembara 2021.https://www.reuters.com/technology/huawei-cfo-meng-app..."
+            }
+          ]
+        },
+        "html_tag": {
+          "description": "Simple HTML tag remnants",
+          "total_occurrences": 0,
+          "matching_lines": 0,
+          "examples": []
+        },
+        "wiki_link_brackets": {
+          "description": "Wiki-style double-bracket links",
+          "total_occurrences": 0,
+          "matching_lines": 0,
+          "examples": []
+        },
+        "wiki_template": {
+          "description": "Wiki-style template braces",
+          "total_occurrences": 0,
+          "matching_lines": 0,
+          "examples": []
+        },
+        "in_german_meta": {
+          "description": "Explicit German-language meta marker",
+          "total_occurrences": 3,
+          "matching_lines": 3,
+          "examples": [
+            {
+              "line_number": 13924,
+              "excerpt": "(in German) In: Rathauskorrespondenz, 27 May 2009Edita Gruberova ausgezeichnet (image) In: Rathauskorrespondenz, 27 M..."
+            },
+            {
+              "line_number": 13928,
+              "excerpt": "Juni 2014 (in German) Musiktheaterpreis, retrieved 4 April 2015"
+            },
+            {
+              "line_number": 13929,
+              "excerpt": "2016: Ehrenplakette of the in Garmisch-PartenkirchenEröffnungsprogramm der Richard-Strauss-Festivals 2016 (in German)..."
+            }
+          ]
+        },
+        "image_meta": {
+          "description": "Image metadata parenthetical",
+          "total_occurrences": 1,
+          "matching_lines": 1,
+          "examples": [
+            {
+              "line_number": 13924,
+              "excerpt": "(in German) In: Rathauskorrespondenz, 27 May 2009Edita Gruberova ausgezeichnet (image) In: Rathauskorrespondenz, 27 M..."
+            }
+          ]
+        }
+      },
+      "within_source_duplication": {
+        "repeated_exact_lines": 621,
+        "repeated_ws_normalized_lines": 627,
+        "repeated_casefold_lines": 632,
+        "top_repeated_exact_lines": [
+          {
+            "count": 163,
+            "excerpt": "Zolemba"
+          },
+          {
+            "count": 116,
+            "excerpt": "Zolemba"
+          },
+          {
+            "count": 95,
+            "excerpt": "Category:Malaŵi"
+          },
+          {
+            "count": 90,
+            "excerpt": "Category:Anthu amoyo"
+          },
+          {
+            "count": 76,
+            "excerpt": "Zolemba"
+          },
+          {
+            "count": 74,
+            "excerpt": "Category:Boma la Machinga"
+          },
+          {
+            "count": 74,
+            "excerpt": "Category:Chigawo cha Kummwela"
+          },
+          {
+            "count": 74,
+            "excerpt": "Category:Malo opezeka mu boma la Machinga"
+          },
+          {
+            "count": 67,
+            "excerpt": "Malifalensi"
+          },
+          {
+            "count": 53,
+            "excerpt": "thumb"
+          },
+          {
+            "count": 37,
+            "excerpt": "Category:Oimba"
+          },
+          {
+            "count": 36,
+            "excerpt": "() •"
+          },
+          {
+            "count": 34,
+            "excerpt": "Link"
+          },
+          {
+            "count": 32,
+            "excerpt": "Category:Boma"
+          },
+          {
+            "count": 26,
+            "excerpt": "pl."
+          }
+        ],
+        "top_repeated_ws_normalized_lines": [
+          {
+            "count": 361,
+            "excerpt": "Zolemba"
+          },
+          {
+            "count": 95,
+            "excerpt": "Category:Malaŵi"
+          },
+          {
+            "count": 90,
+            "excerpt": "Category:Anthu amoyo"
+          },
+          {
+            "count": 74,
+            "excerpt": "Category:Boma la Machinga"
+          },
+          {
+            "count": 74,
+            "excerpt": "Category:Chigawo cha Kummwela"
+          },
+          {
+            "count": 74,
+            "excerpt": "Category:Malo opezeka mu boma la Machinga"
+          },
+          {
+            "count": 71,
+            "excerpt": "Malifalensi"
+          },
+          {
+            "count": 60,
+            "excerpt": "thumb"
+          },
+          {
+            "count": 53,
+            "excerpt": "() •"
+          },
+          {
+            "count": 50,
+            "excerpt": "Link"
+          },
+          {
+            "count": 42,
+            "excerpt": "Mbiri"
+          },
+          {
+            "count": 37,
+            "excerpt": "Category:Oimba"
+          },
+          {
+            "count": 32,
+            "excerpt": "Category:Boma"
+          },
+          {
+            "count": 29,
+            "excerpt": "Demographics"
+          },
+          {
+            "count": 28,
+            "excerpt": "pl."
+          }
+        ],
+        "repeated_exact_paragraphs": 1,
+        "repeated_ws_normalized_paragraphs": 1,
+        "top_repeated_paragraphs": [
+          {
+            "count": 3,
+            "excerpt": "External links"
+          }
+        ]
+      },
+      "paragraph_count": 92,
+      "shingle_count": 201679,
+      "unique_shingle_count": 192965
+    }
+  },
+  "pairwise_overlap": {
+    "bible__vs__existing_corpus": {
+      "source_a": "bible",
+      "source_b": "existing_corpus",
+      "units": {
+        "nonempty_lines": {
+          "exact": {
+            "comparison_mode": "exact",
+            "unit_count_a": 30876,
+            "unit_count_b": 48941,
+            "shared_units": 30864,
+            "coverage_a_by_b": 0.999611,
+            "coverage_b_by_a": 0.630637,
+            "jaccard": 0.630482,
+            "directionality_note": "bible_substantially_covered_by_existing_corpus",
+            "examples": [
+              {
+                "key_preview": "Inu Yehova Mulungu Wamphamvuzonse, Mulungu wa Israeli, dzidzutseni nokha kuti...",
+                "example_excerpt": "Inu Yehova Mulungu Wamphamvuzonse, Mulungu wa Israeli, dzidzutseni nokha kuti mulange anthu a mitundu ina yonse; musa..."
+              },
+              {
+                "key_preview": "Ndani angakuchitireni zoyipa ngati muchita changu kuchita zabwino?",
+                "example_excerpt": "Ndani angakuchitireni zoyipa ngati muchita changu kuchita zabwino?"
+              },
+              {
+                "key_preview": "Yefita analumbira kwa Yehova kuti, “Ngati mupereka Aamoni mʼmanja mwanga,",
+                "example_excerpt": "Yefita analumbira kwa Yehova kuti, “Ngati mupereka Aamoni mʼmanja mwanga,"
+              },
+              {
+                "key_preview": "ndipo analamula ena mwa asilikali amphamvu kwambiri mʼgulu lake lankhondo kut...",
+                "example_excerpt": "ndipo analamula ena mwa asilikali amphamvu kwambiri mʼgulu lake lankhondo kuti amange Sadirake, Mesaki ndi Abedenego ..."
+              },
+              {
+                "key_preview": "“Ine Ambuye Yehova ndikuti: Ndidzalolanso Aisraeli kuti andipemphe zoti ndiwa...",
+                "example_excerpt": "“Ine Ambuye Yehova ndikuti: Ndidzalolanso Aisraeli kuti andipemphe zoti ndiwachitire: Ndidzachulukitsa anthu awo ngat..."
+              }
+            ]
+          },
+          "whitespace_normalized": {
+            "comparison_mode": "whitespace_normalized",
+            "unit_count_a": 30876,
+            "unit_count_b": 48798,
+            "shared_units": 30864,
+            "coverage_a_by_b": 0.999611,
+            "coverage_b_by_a": 0.632485,
+            "jaccard": 0.632329,
+            "directionality_note": "bible_substantially_covered_by_existing_corpus",
+            "examples": [
+              {
+                "key_preview": "Abale a ku Lusitra ndi Ikoniya anamuchitira iye umboni wabwino.",
+                "example_excerpt": "Abale a ku Lusitra ndi Ikoniya anamuchitira iye umboni wabwino."
+              },
+              {
+                "key_preview": "Davide anatumiza mawu kwa Tamara ku nyumba yaufumu kuti, “Pita ku nyumba ya m...",
+                "example_excerpt": "Davide anatumiza mawu kwa Tamara ku nyumba yaufumu kuti, “Pita ku nyumba ya mlongo wako Amnoni ndipo ukamukonzere cha..."
+              },
+              {
+                "key_preview": "Kenaka Ine ndidzathyola uta wa mʼdzanja lako lamanzere ndipo ndidzagwetsa miv...",
+                "example_excerpt": "Kenaka Ine ndidzathyola uta wa mʼdzanja lako lamanzere ndipo ndidzagwetsa mivi ya mʼdzanja lako lamanja."
+              },
+              {
+                "key_preview": "Munthu wosauka uno anayitana, ndipo Yehova anamumva; Yehova anamupulumutsa ku...",
+                "example_excerpt": "Munthu wosauka uno anayitana, ndipo Yehova anamumva; Yehova anamupulumutsa ku mavuto ake onse."
+              },
+              {
+                "key_preview": "Ndipo musatitengere kokatiyesa; koma mutipulumutse kwa woyipayo.’",
+                "example_excerpt": "Ndipo musatitengere kokatiyesa; koma mutipulumutse kwa woyipayo.’"
+              }
+            ]
+          },
+          "casefold_whitespace_normalized": {
+            "comparison_mode": "casefold_whitespace_normalized",
+            "unit_count_a": 30864,
+            "unit_count_b": 48785,
+            "shared_units": 30864,
+            "coverage_a_by_b": 1.0,
+            "coverage_b_by_a": 0.632653,
+            "jaccard": 0.632653,
+            "directionality_note": "bible_substantially_covered_by_existing_corpus",
+            "examples": [
+              {
+                "key_preview": "anthu aamuna a ku mikimasi 122",
+                "example_excerpt": "Anthu aamuna a ku Mikimasi 122"
+              },
+              {
+                "key_preview": "gulu lalikulu la anthu ndiye ulemerero wa mfumu, koma popanda anthu kalonga a...",
+                "example_excerpt": "Gulu lalikulu la anthu ndiye ulemerero wa mfumu, koma popanda anthu kalonga amawonongeka."
+              },
+              {
+                "key_preview": "kenaka balaki anawuza balaamu kuti, “tiye tipite limodzi ku malo ena komwe un...",
+                "example_excerpt": "Kenaka Balaki anawuza Balaamu kuti, “Tiye tipite limodzi ku malo ena komwe ungawaone. Udzangoona gulu limodzi osati o..."
+              },
+              {
+                "key_preview": "mbiyayo inali yochindikala ngati chikhatho ndipo mkombero wake unali ngati mk...",
+                "example_excerpt": "Mbiyayo inali yochindikala ngati chikhatho ndipo mkombero wake unali ngati mkombero wa chikho, ngati duwa lokongola k..."
+              },
+              {
+                "key_preview": "wogulitsa sadzazipezanso zinthu zimene anagulitsa kwa wina chinkana onse awir...",
+                "example_excerpt": "Wogulitsa sadzazipezanso zinthu zimene anagulitsa kwa wina chinkana onse awiri akanali ndi moyo, pakuti chilango chid..."
+              }
+            ]
+          }
+        },
+        "paragraphs": {
+          "exact": {
+            "comparison_mode": "exact",
+            "unit_count_a": 1,
+            "unit_count_b": 88,
+            "shared_units": 0,
+            "coverage_a_by_b": 0.0,
+            "coverage_b_by_a": 0.0,
+            "jaccard": 0.0,
+            "directionality_note": "neither_substantially_contained",
+            "examples": []
+          },
+          "whitespace_normalized": {
+            "comparison_mode": "whitespace_normalized",
+            "unit_count_a": 1,
+            "unit_count_b": 88,
+            "shared_units": 0,
+            "coverage_a_by_b": 0.0,
+            "coverage_b_by_a": 0.0,
+            "jaccard": 0.0,
+            "directionality_note": "neither_substantially_contained",
+            "examples": []
+          },
+          "casefold_whitespace_normalized": {
+            "comparison_mode": "casefold_whitespace_normalized",
+            "unit_count_a": 1,
+            "unit_count_b": 88,
+            "shared_units": 0,
+            "coverage_a_by_b": 0.0,
+            "coverage_b_by_a": 0.0,
+            "jaccard": 0.0,
+            "directionality_note": "neither_substantially_contained",
+            "examples": []
+          }
+        },
+        "token_shingles": {
+          "exact": {
+            "comparison_mode": "exact",
+            "unit_count_a": 429052,
+            "unit_count_b": 621933,
+            "shared_units": 429031,
+            "coverage_a_by_b": 0.999951,
+            "coverage_b_by_a": 0.689835,
+            "jaccard": 0.689811,
+            "directionality_note": "bible_substantially_covered_by_existing_corpus",
+            "examples": [
+              {
+                "key_preview": "Onani tsopano kukuda Gonani konkuno",
+                "example_excerpt": "Onani tsopano kukuda Gonani konkuno"
+              },
+              {
+                "key_preview": "ake osati zochita za Israeli",
+                "example_excerpt": "ake osati zochita za Israeli"
+              },
+              {
+                "key_preview": "chotchinga khoma la udani lotilekanitsa",
+                "example_excerpt": "chotchinga khoma la udani lotilekanitsa"
+              },
+              {
+                "key_preview": "mbawala pakati pa mapiri azigwembezigwembe",
+                "example_excerpt": "mbawala pakati pa mapiri azigwembezigwembe"
+              },
+              {
+                "key_preview": "waufumu Chipinda cha Chilungamo modzaweruziramo",
+                "example_excerpt": "waufumu Chipinda cha Chilungamo modzaweruziramo"
+              }
+            ]
+          },
+          "whitespace_normalized": {
+            "comparison_mode": "whitespace_normalized",
+            "unit_count_a": 429052,
+            "unit_count_b": 621933,
+            "shared_units": 429031,
+            "coverage_a_by_b": 0.999951,
+            "coverage_b_by_a": 0.689835,
+            "jaccard": 0.689811,
+            "directionality_note": "bible_substantially_covered_by_existing_corpus",
+            "examples": [
+              {
+                "key_preview": "Abisalomu anapita ku nyumba yake",
+                "example_excerpt": "Abisalomu anapita ku nyumba yake"
+              },
+              {
+                "key_preview": "Yehova kuti Sindidzakupha iwe ndi",
+                "example_excerpt": "Yehova kuti Sindidzakupha iwe ndi"
+              },
+              {
+                "key_preview": "anga Davide Tsopano Yehova akubwezera",
+                "example_excerpt": "anga Davide Tsopano Yehova akubwezera"
+              },
+              {
+                "key_preview": "lamba wachikopa mʼchiwuno mwake Mfumu",
+                "example_excerpt": "lamba wachikopa mʼchiwuno mwake Mfumu"
+              },
+              {
+                "key_preview": "mwa mwambo wa maliro wa",
+                "example_excerpt": "mwa mwambo wa maliro wa"
+              }
+            ]
+          },
+          "casefold_whitespace_normalized": {
+            "comparison_mode": "casefold_whitespace_normalized",
+            "unit_count_a": 427780,
+            "unit_count_b": 620480,
+            "shared_units": 427780,
+            "coverage_a_by_b": 1.0,
+            "coverage_b_by_a": 0.689434,
+            "jaccard": 0.689434,
+            "directionality_note": "bible_substantially_covered_by_existing_corpus",
+            "examples": [
+              {
+                "key_preview": "amene ndakutuma ukadzatulutsa anthu anga",
+                "example_excerpt": "amene ndakutuma Ukadzatulutsa anthu anga"
+              },
+              {
+                "key_preview": "chifukwa ndakhala ndili mnaziri wopatulikira",
+                "example_excerpt": "chifukwa ndakhala ndili Mnaziri wopatulikira"
+              },
+              {
+                "key_preview": "koma inu muzifunafuna kumalo kumene",
+                "example_excerpt": "Koma inu muzifunafuna kumalo kumene"
+              },
+              {
+                "key_preview": "mivi yawo ili ngati ya",
+                "example_excerpt": "Mivi yawo ili ngati ya"
+              },
+              {
+                "key_preview": "zodabwitsa zazikulu ndi zoopsa pa",
+                "example_excerpt": "zodabwitsa zazikulu ndi zoopsa pa"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "bible__vs__wikipedia": {
+      "source_a": "bible",
+      "source_b": "wikipedia",
+      "units": {
+        "nonempty_lines": {
+          "exact": {
+            "comparison_mode": "exact",
+            "unit_count_a": 30876,
+            "unit_count_b": 18078,
+            "shared_units": 0,
+            "coverage_a_by_b": 0.0,
+            "coverage_b_by_a": 0.0,
+            "jaccard": 0.0,
+            "directionality_note": "neither_substantially_contained",
+            "examples": []
+          },
+          "whitespace_normalized": {
+            "comparison_mode": "whitespace_normalized",
+            "unit_count_a": 30876,
+            "unit_count_b": 17935,
+            "shared_units": 0,
+            "coverage_a_by_b": 0.0,
+            "coverage_b_by_a": 0.0,
+            "jaccard": 0.0,
+            "directionality_note": "neither_substantially_contained",
+            "examples": []
+          },
+          "casefold_whitespace_normalized": {
+            "comparison_mode": "casefold_whitespace_normalized",
+            "unit_count_a": 30864,
+            "unit_count_b": 17921,
+            "shared_units": 0,
+            "coverage_a_by_b": 0.0,
+            "coverage_b_by_a": 0.0,
+            "jaccard": 0.0,
+            "directionality_note": "neither_substantially_contained",
+            "examples": []
+          }
+        },
+        "paragraphs": {
+          "exact": {
+            "comparison_mode": "exact",
+            "unit_count_a": 1,
+            "unit_count_b": 90,
+            "shared_units": 0,
+            "coverage_a_by_b": 0.0,
+            "coverage_b_by_a": 0.0,
+            "jaccard": 0.0,
+            "directionality_note": "neither_substantially_contained",
+            "examples": []
+          },
+          "whitespace_normalized": {
+            "comparison_mode": "whitespace_normalized",
+            "unit_count_a": 1,
+            "unit_count_b": 90,
+            "shared_units": 0,
+            "coverage_a_by_b": 0.0,
+            "coverage_b_by_a": 0.0,
+            "jaccard": 0.0,
+            "directionality_note": "neither_substantially_contained",
+            "examples": []
+          },
+          "casefold_whitespace_normalized": {
+            "comparison_mode": "casefold_whitespace_normalized",
+            "unit_count_a": 1,
+            "unit_count_b": 90,
+            "shared_units": 0,
+            "coverage_a_by_b": 0.0,
+            "coverage_b_by_a": 0.0,
+            "jaccard": 0.0,
+            "directionality_note": "neither_substantially_contained",
+            "examples": []
+          }
+        },
+        "token_shingles": {
+          "exact": {
+            "comparison_mode": "exact",
+            "unit_count_a": 429052,
+            "unit_count_b": 192965,
+            "shared_units": 63,
+            "coverage_a_by_b": 0.000147,
+            "coverage_b_by_a": 0.000326,
+            "jaccard": 0.000101,
+            "directionality_note": "neither_substantially_contained",
+            "examples": [
+              {
+                "key_preview": "Yesu wa ku Nazareti ndi",
+                "example_excerpt": "Yesu wa ku Nazareti ndi"
+              },
+              {
+                "key_preview": "anthu ena asanu ndi awiri",
+                "example_excerpt": "anthu ena asanu ndi awiri"
+              },
+              {
+                "key_preview": "ku nyumba ya ufumu ya",
+                "example_excerpt": "ku nyumba ya ufumu ya"
+              },
+              {
+                "key_preview": "ndi miyezi isanu ndi umodzi",
+                "example_excerpt": "ndi miyezi isanu ndi umodzi"
+              },
+              {
+                "key_preview": "tsiku lachisanu ndi chiwiri la",
+                "example_excerpt": "tsiku lachisanu ndi chiwiri la"
+              }
+            ]
+          },
+          "whitespace_normalized": {
+            "comparison_mode": "whitespace_normalized",
+            "unit_count_a": 429052,
+            "unit_count_b": 192965,
+            "shared_units": 63,
+            "coverage_a_by_b": 0.000147,
+            "coverage_b_by_a": 0.000326,
+            "jaccard": 0.000101,
+            "directionality_note": "neither_substantially_contained",
+            "examples": [
+              {
+                "key_preview": "chifukwa cha chikondi chanu ndi",
+                "example_excerpt": "chifukwa cha chikondi chanu ndi"
+              },
+              {
+                "key_preview": "mayiko ena pakati pa anthu",
+                "example_excerpt": "mayiko ena pakati pa anthu"
+              },
+              {
+                "key_preview": "ndi akuluakulu ena a ku",
+                "example_excerpt": "ndi akuluakulu ena a ku"
+              },
+              {
+                "key_preview": "ntchito za tsiku ndi tsiku",
+                "example_excerpt": "ntchito za tsiku ndi tsiku"
+              },
+              {
+                "key_preview": "zaka zitatu ndi theka kuti",
+                "example_excerpt": "zaka zitatu ndi theka kuti"
+              }
+            ]
+          },
+          "casefold_whitespace_normalized": {
+            "comparison_mode": "casefold_whitespace_normalized",
+            "unit_count_a": 427780,
+            "unit_count_b": 192773,
+            "shared_units": 73,
+            "coverage_a_by_b": 0.000171,
+            "coverage_b_by_a": 0.000379,
+            "jaccard": 0.000118,
+            "directionality_note": "neither_substantially_contained",
+            "examples": [
+              {
+                "key_preview": "anati kwa gulu la anthu",
+                "example_excerpt": "anati kwa gulu la anthu"
+              },
+              {
+                "key_preview": "ku bwalo la milandu ndipo",
+                "example_excerpt": "ku bwalo la milandu ndipo"
+              },
+              {
+                "key_preview": "kuti yesu wa ku nazareti",
+                "example_excerpt": "kuti Yesu wa ku Nazareti"
+              },
+              {
+                "key_preview": "kwa anthu amene ali ndi",
+                "example_excerpt": "kwa anthu amene ali ndi"
+              },
+              {
+                "key_preview": "ndi miyezi isanu ndi umodzi",
+                "example_excerpt": "ndi miyezi isanu ndi umodzi"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "existing_corpus__vs__wikipedia": {
+      "source_a": "existing_corpus",
+      "source_b": "wikipedia",
+      "units": {
+        "nonempty_lines": {
+          "exact": {
+            "comparison_mode": "exact",
+            "unit_count_a": 48941,
+            "unit_count_b": 18078,
+            "shared_units": 18077,
+            "coverage_a_by_b": 0.369363,
+            "coverage_b_by_a": 0.999945,
+            "jaccard": 0.369356,
+            "directionality_note": "wikipedia_substantially_covered_by_existing_corpus",
+            "examples": [
+              {
+                "key_preview": "Madzi akumwa",
+                "example_excerpt": "Madzi akumwa"
+              },
+              {
+                "key_preview": "Segal, Alan F.",
+                "example_excerpt": "Segal, Alan F."
+              },
+              {
+                "key_preview": "Bankier.pl, Powierzchnia Polski wzrosła o 1643 ha",
+                "example_excerpt": "Bankier.pl, Powierzchnia Polski wzrosła o 1643 ha"
+              },
+              {
+                "key_preview": "Lavigne ndi Sum 41 omwe amatsogolera nyimbo / katswiri wa guitar Deryck Whibl...",
+                "example_excerpt": "Lavigne ndi Sum 41 omwe amatsogolera nyimbo / katswiri wa guitar Deryck Whibley anayamba chibwenzi pamene Lavigne ana..."
+              },
+              {
+                "key_preview": "Malo amene achitsamunda anakhazikikako amasiyana ndi malo amene anthuwo sanap...",
+                "example_excerpt": "Malo amene achitsamunda anakhazikikako amasiyana ndi malo amene anthuwo sanapiteko ngati gulu pochoka kwawo, koma ant..."
+              }
+            ]
+          },
+          "whitespace_normalized": {
+            "comparison_mode": "whitespace_normalized",
+            "unit_count_a": 48798,
+            "unit_count_b": 17935,
+            "shared_units": 17934,
+            "coverage_a_by_b": 0.367515,
+            "coverage_b_by_a": 0.999944,
+            "jaccard": 0.367508,
+            "directionality_note": "wikipedia_substantially_covered_by_existing_corpus",
+            "examples": [
+              {
+                "key_preview": "Boma la Britain linakhazikhitsa Nyasaland Protectorate mu chaka cha 1907.",
+                "example_excerpt": "Boma la Britain linakhazikhitsa Nyasaland Protectorate mu chaka cha 1907."
+              },
+              {
+                "key_preview": "Liverpool Football Club ndi kalabu yamasewera ophunzitsidwa bwino yomwe ili k...",
+                "example_excerpt": "Liverpool Football Club ndi kalabu yamasewera ophunzitsidwa bwino yomwe ili ku Liverpool, England."
+              },
+              {
+                "key_preview": "M'chigawo cha m'mphepete mwa nyanja ku Algeria, nyengo yachisanu imakhala yop...",
+                "example_excerpt": "M'chigawo cha m'mphepete mwa nyanja ku Algeria, nyengo yachisanu imakhala yopanda mvula ndipo nyengo yotentha imakhal..."
+              },
+              {
+                "key_preview": "Malowa anawonongeka ogwiritsa ntchito mamiliyoni 7 ku United States ndi Canad...",
+                "example_excerpt": "Malowa anawonongeka ogwiritsa ntchito mamiliyoni 7 ku United States ndi Canada mu May 2011 poyerekezera ndi chiwereng..."
+              },
+              {
+                "key_preview": "Mzindawu ndi Lusaka, kum'mwera kwa dziko la Zambia.",
+                "example_excerpt": "Mzindawu ndi Lusaka, kum'mwera kwa dziko la Zambia."
+              }
+            ]
+          },
+          "casefold_whitespace_normalized": {
+            "comparison_mode": "casefold_whitespace_normalized",
+            "unit_count_a": 48785,
+            "unit_count_b": 17921,
+            "shared_units": 17921,
+            "coverage_a_by_b": 0.367347,
+            "coverage_b_by_a": 1.0,
+            "jaccard": 0.367347,
+            "directionality_note": "wikipedia_substantially_covered_by_existing_corpus",
+            "examples": [
+              {
+                "key_preview": "category: radio malo okhazikika mu 1985",
+                "example_excerpt": "Category: Radio malo okhazikika mu 1985"
+              },
+              {
+                "key_preview": "koma padziko lonse, pafupifupi munthu m’modzi pa anthu 100 aliwonse akudwala ...",
+                "example_excerpt": "Koma padziko lonse, pafupifupi munthu m’modzi pa anthu 100 aliwonse akudwala matenda a PTSD kapena anadwalapo matendawa."
+              },
+              {
+                "key_preview": "kuthandiza kwadziko lina m’nkhondoyi kuphatikizapo kutumizidwa kwa zida kucho...",
+                "example_excerpt": "Kuthandiza kwadziko lina m’nkhondoyi kuphatikizapo kutumizidwa kwa zida kuchokera ku China, Russia, ndi Turkey, ndi U..."
+              },
+              {
+                "key_preview": "ngakhale kuti m’zaka za m’ma 1800, mmishonale wina wa ku scotland, dzina lake...",
+                "example_excerpt": "Ngakhale kuti m’zaka za m’ma 1800, mmishonale wina wa ku Scotland, dzina lake Livingstone ankadziwa za malo ena a ku ..."
+              },
+              {
+                "key_preview": "zochitika za mwezi wa meyi zinayamba mwalamulo ndi sonsio grand prix pa njanj...",
+                "example_excerpt": "Zochitika za mwezi wa Meyi zinayamba mwalamulo ndi Sonsio Grand Prix pa njanji yoyikidwa pamodzi."
+              }
+            ]
+          }
+        },
+        "paragraphs": {
+          "exact": {
+            "comparison_mode": "exact",
+            "unit_count_a": 88,
+            "unit_count_b": 90,
+            "shared_units": 19,
+            "coverage_a_by_b": 0.215909,
+            "coverage_b_by_a": 0.211111,
+            "jaccard": 0.119497,
+            "directionality_note": "neither_substantially_contained",
+            "examples": [
+              {
+                "key_preview": "; (Hungarian)",
+                "example_excerpt": "; (Hungarian)"
+              },
+              {
+                "key_preview": "External links",
+                "example_excerpt": "External links"
+              },
+              {
+                "key_preview": "Man of the Match: Antoine Griezmann (France) Assistant referees: Hernán Maida...",
+                "example_excerpt": "Man of the Match: Antoine Griezmann (France) Assistant referees: Hernán Maidana (Argentina) Juan Pablo Belatti (Argen..."
+              },
+              {
+                "key_preview": "• () • () • () • () • () • () • () • () • () • () • () • () • () • () 500,000...",
+                "example_excerpt": "• () • () • () • () • () • () • () • () • () • () • () • () • () • () 500,000 nkhani kapena zambiri"
+              },
+              {
+                "key_preview": "• () • () • () • () • () • () • () • () • () • () • () • () • () • () • () • ...",
+                "example_excerpt": "• () • () • () • () • () • () • () • () • () • () • () • () • () • () • () • () • () • () • () • () • () • () • () • ..."
+              }
+            ]
+          },
+          "whitespace_normalized": {
+            "comparison_mode": "whitespace_normalized",
+            "unit_count_a": 88,
+            "unit_count_b": 90,
+            "shared_units": 19,
+            "coverage_a_by_b": 0.215909,
+            "coverage_b_by_a": 0.211111,
+            "jaccard": 0.119497,
+            "directionality_note": "neither_substantially_contained",
+            "examples": [
+              {
+                "key_preview": "Birds of The Gambia by Barlow, Wacher and Disley,",
+                "example_excerpt": "Birds of The Gambia by Barlow, Wacher and Disley,"
+              },
+              {
+                "key_preview": "Maboma a South Africa Durban - wamdziko 595 061 (2011) Cape Town - wamdziko 3...",
+                "example_excerpt": "Maboma a South Africa Durban - wamdziko 595 061 (2011) Cape Town - wamdziko 3 740 026 (2011) Johannesburg - wamdziko ..."
+              },
+              {
+                "key_preview": "Man of the Match: Antoine Griezmann (France) Assistant referees: Hernán Maida...",
+                "example_excerpt": "Man of the Match: Antoine Griezmann (France) Assistant referees: Hernán Maidana (Argentina) Juan Pablo Belatti (Argen..."
+              },
+              {
+                "key_preview": "Other editions: (German); (Dutch)",
+                "example_excerpt": "Other editions: (German); (Dutch)"
+              },
+              {
+                "key_preview": "ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ αβγδεζηθικλμνξοπρσ/ςτυφχψω",
+                "example_excerpt": "ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ αβγδεζηθικλμνξοπρσ/ςτυφχψω"
+              }
+            ]
+          },
+          "casefold_whitespace_normalized": {
+            "comparison_mode": "casefold_whitespace_normalized",
+            "unit_count_a": 88,
+            "unit_count_b": 90,
+            "shared_units": 19,
+            "coverage_a_by_b": 0.215909,
+            "coverage_b_by_a": 0.211111,
+            "jaccard": 0.119497,
+            "directionality_note": "neither_substantially_contained",
+            "examples": [
+              {
+                "key_preview": "() • () • () • () • () 100,000 nkhani kapena zambiri",
+                "example_excerpt": "() • () • () • () • () 100,000 nkhani kapena zambiri"
+              },
+              {
+                "key_preview": "birds of the gambia by barlow, wacher and disley,",
+                "example_excerpt": "Birds of The Gambia by Barlow, Wacher and Disley,"
+              },
+              {
+                "key_preview": "kuwerenga kwina",
+                "example_excerpt": "Kuwerenga kwina"
+              },
+              {
+                "key_preview": "maboma a south africa durban - wamdziko 595 061 (2011) cape town - wamdziko 3...",
+                "example_excerpt": "Maboma a South Africa Durban - wamdziko 595 061 (2011) Cape Town - wamdziko 3 740 026 (2011) Johannesburg - wamdziko ..."
+              },
+              {
+                "key_preview": "post traumatic stress disorder information from the national child traumatic ...",
+                "example_excerpt": "Post traumatic stress disorder information from The National Child Traumatic Stress Network Information resources fro..."
+              }
+            ]
+          }
+        },
+        "token_shingles": {
+          "exact": {
+            "comparison_mode": "exact",
+            "unit_count_a": 621933,
+            "unit_count_b": 192965,
+            "shared_units": 192965,
+            "coverage_a_by_b": 0.310267,
+            "coverage_b_by_a": 1.0,
+            "jaccard": 0.310267,
+            "directionality_note": "wikipedia_substantially_covered_by_existing_corpus",
+            "examples": [
+              {
+                "key_preview": "35 166 ta ata km²",
+                "example_excerpt": "35 166 ta ata km²"
+              },
+              {
+                "key_preview": "Adamwalira ku New York pa",
+                "example_excerpt": "Adamwalira ku New York pa"
+              },
+              {
+                "key_preview": "angatanthauzidwe kuti amachokera ku Malambo",
+                "example_excerpt": "angatanthauzidwe kuti amachokera ku Malambo"
+              },
+              {
+                "key_preview": "of Saint Michael ndi Saint",
+                "example_excerpt": "of Saint Michael ndi Saint"
+              },
+              {
+                "key_preview": "yakumanzereChipani cha NdalePrime Minister Malawi",
+                "example_excerpt": "yakumanzereChipani cha NdalePrime Minister Malawi"
+              }
+            ]
+          },
+          "whitespace_normalized": {
+            "comparison_mode": "whitespace_normalized",
+            "unit_count_a": 621933,
+            "unit_count_b": 192965,
+            "shared_units": 192965,
+            "coverage_a_by_b": 0.310267,
+            "coverage_b_by_a": 1.0,
+            "jaccard": 0.310267,
+            "directionality_note": "wikipedia_substantially_covered_by_existing_corpus",
+            "examples": [
+              {
+                "key_preview": "FA Cups ndi maudindo 2",
+                "example_excerpt": "FA Cups ndi maudindo 2"
+              },
+              {
+                "key_preview": "alembe ndi kulemba nyimbo za",
+                "example_excerpt": "alembe ndi kulemba nyimbo za"
+              },
+              {
+                "key_preview": "anasamukira ku Chilanga mission station",
+                "example_excerpt": "anasamukira ku Chilanga mission station"
+              },
+              {
+                "key_preview": "imasunthira mbali inayo ya mzere",
+                "example_excerpt": "imasunthira mbali inayo ya mzere"
+              },
+              {
+                "key_preview": "rupee zaku Pakistani pafupifupi madola",
+                "example_excerpt": "rupee zaku Pakistani pafupifupi madola"
+              }
+            ]
+          },
+          "casefold_whitespace_normalized": {
+            "comparison_mode": "casefold_whitespace_normalized",
+            "unit_count_a": 620480,
+            "unit_count_b": 192773,
+            "shared_units": 192773,
+            "coverage_a_by_b": 0.310684,
+            "coverage_b_by_a": 1.0,
+            "jaccard": 0.310684,
+            "directionality_note": "wikipedia_substantially_covered_by_existing_corpus",
+            "examples": [
+              {
+                "key_preview": "anamwalira miyezi 6 pamaso muhammad",
+                "example_excerpt": "anamwalira miyezi 6 pamaso Muhammad"
+              },
+              {
+                "key_preview": "malamulo ndi bata pamene dziko",
+                "example_excerpt": "malamulo ndi bata pamene dziko"
+              },
+              {
+                "key_preview": "opambana pa 6 november 2024",
+                "example_excerpt": "opambana pa 6 November 2024"
+              },
+              {
+                "key_preview": "pomaliza kukhala wapampando wa komiti",
+                "example_excerpt": "pomaliza kukhala wapampando wa Komiti"
+              },
+              {
+                "key_preview": "wa amayi ndi zimene akatswiriwa",
+                "example_excerpt": "wa amayi ndi zimene akatswiriwa"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "warnings": [
+    "Language-signal categories are heuristics, not language identification.",
+    "Term lists are provisional and require native-speaker review.",
+    "Exact overlap does not capture near-duplicates or paraphrases.",
+    "No licensing or training-eligibility decision is made by this tool.",
+    "Raw corpus files must remain byte-identical after the audit.",
+    "Chichewa, English, and German term lists are small, provisional, and must be reviewed by a native speaker / domain expert before being treated as reliable filters."
+  ],
+  "limitations": [
+    "No external language identification.",
+    "No content modification or cleaning.",
+    "Normalization used only for in-memory comparison keys and observations."
+  ],
+  "samples_path": "data/reports/source_audit_samples.jsonl",
+  "pre_audit_checksums": {
+    "bible": "55445a0e0a5359e243f1773de623af1716bf4d3cd835afd83c4407cbaf85fc89",
+    "wikipedia": "cf7c5ba6d8c0d4770eee3306bab9f4be1dfc9570930a9aa7f3613c0ffb4587b7",
+    "existing_corpus": "32e65edccb4c341d45e55de3d35edc1dd8768cd6e47cfafeb22d21216c2c8932"
+  },
+  "post_audit_checksums": {
+    "bible": "55445a0e0a5359e243f1773de623af1716bf4d3cd835afd83c4407cbaf85fc89",
+    "wikipedia": "cf7c5ba6d8c0d4770eee3306bab9f4be1dfc9570930a9aa7f3613c0ffb4587b7",
+    "existing_corpus": "32e65edccb4c341d45e55de3d35edc1dd8768cd6e47cfafeb22d21216c2c8932"
+  },
+  "raw_files_unchanged": true
+}

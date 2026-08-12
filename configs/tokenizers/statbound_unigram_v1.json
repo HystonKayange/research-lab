@@ -1,0 +1,88 @@
+{
+  "version": "1.0.0",
+  "tokenizer_id": "statbound_unigram_v1",
+  "decision_log_entry": "D-0010",
+  "status": "frozen_pre_evaluation",
+  "description": "StatBound-Unigram V1: SentencePiece Unigram-8000 foundation + corpus-only statistical boundary re-ranking. No morphology-constrained BPE. No morph gold in learning.",
+  "spec": "docs/research/MTHANDIZI_TOKENIZER_V1_SPEC.md",
+  "corpus": {
+    "corpus_version": "chichewa_corpus_v0.1",
+    "split_version": "v0.1",
+    "train_text": "data/splits/chichewa_corpus_v0.1/train/combined.txt",
+    "allowed_path_substrings": ["/train/"],
+    "forbidden_path_substrings": [
+      "/validation/",
+      "/test/",
+      "/locked/",
+      "morphology_benchmark",
+      "annotator_",
+      "self_review"
+    ]
+  },
+  "normalization": {
+    "policy": "identity",
+    "note": "Same as Unigram-8000 baseline: SentencePiece normalization_rule_name=identity; no extra lowercasing."
+  },
+  "base_unigram": {
+    "model_file": "data/tokenizers/chichewa_corpus_v0.1/baselines_v0.1/unigram/vocab_8000/model.model",
+    "vocab_size": 8000,
+    "must_match_baseline": true
+  },
+  "boundary_discovery": {
+    "source": "train_corpus_only",
+    "max_affix_context_length": 6,
+    "min_type_support": 5,
+    "min_productivity": 3,
+    "min_affix_len_for_full_weight": 2,
+    "length_one_affix_weight": 0.15,
+    "score_range": [0.0, 1.0],
+    "formula_id": "statbound_v1_branch_productivity_log",
+    "notes": "See MTHANDIZI_TOKENIZER_V1_SPEC.md section 4 for mathematics."
+  },
+  "reranking": {
+    "nbest_size": 16,
+    "lambda": 0.5,
+    "lambda_search_space": [0.0, 0.25, 0.5, 1.0, 2.0],
+    "lambda_0_must_match_unigram": true,
+    "score_equation": "unigram_score(S|w) + lambda * boundary_compatibility(S,w)",
+    "unigram_score_definition": "sum of SentencePiece get_score(piece_id) over pieces (log-prob pieces)",
+    "tie_break_order": [
+      "higher_combined_score",
+      "higher_unigram_score",
+      "higher_boundary_compatibility",
+      "fewer_pieces",
+      "lexicographically_smaller_pieces_joined"
+    ]
+  },
+  "vocabulary_accounting": {
+    "target_scale": 8000,
+    "lexical_pieces_from_base_model": 8000,
+    "no_extra_learned_lexical_pieces": true,
+    "boundary_stats_not_in_vocab": true,
+    "residual": "character_and_unk_from_base_sentencepiece_model_only",
+    "note": "V1 does not enlarge vocabulary beyond base Unigram-8000. Boundary stats are side tables only."
+  },
+  "leakage_guard": {
+    "forbid_path_substrings": [
+      "/validation/",
+      "/test/",
+      "/locked/",
+      "morphology_benchmark",
+      "annotator_a",
+      "annotator_b",
+      "self_review",
+      "ai_annotator"
+    ],
+    "forbid_morphology_labels_for_boundary_learning": true
+  },
+  "outputs": {
+    "boundary_stats_default": "data/tokenizers/chichewa_corpus_v0.1/statbound_unigram_v1/boundary_stats.json",
+    "artifact_dir": "data/tokenizers/chichewa_corpus_v0.1/statbound_unigram_v1"
+  },
+  "hyperparameter_policy": {
+    "search_space_frozen": true,
+    "post_hoc_expansion_forbidden": true,
+    "mandatory_control": "lambda=0.0",
+    "note": "Do not add lambda values after seeing Mthandizi results."
+  }
+}

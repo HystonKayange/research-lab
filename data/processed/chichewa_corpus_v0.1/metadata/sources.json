@@ -1,0 +1,40 @@
+{
+  "corpus_name": "chichewa_corpus",
+  "corpus_version": "v0.1",
+  "sources": {
+    "bible": {
+      "source_id": "bible",
+      "output_path": "corpus/bible.txt",
+      "n_lines_in": 31099,
+      "n_lines_out": 30876,
+      "sha256": "b4b259f5adda711e8637a97f3f43d3c09014267e9d35e66045d58a6b0efabd25",
+      "input_sha256": "55445a0e0a5359e243f1773de623af1716bf4d3cd835afd83c4407cbaf85fc89",
+      "eligibility": {
+        "provenance_status": "verified",
+        "license_status": "verified",
+        "allowed_for_training": true,
+        "allowed_for_redistribution": true,
+        "attribution_required": true
+      }
+    },
+    "wikipedia": {
+      "source_id": "wikipedia",
+      "output_path": "corpus/wikipedia.txt",
+      "n_lines_in": 17973,
+      "n_lines_out": 16698,
+      "sha256": "90d533f25dcbf54545b691c28d7f257dcc5f658c0d5c25565b531790d22c1af2",
+      "input_sha256": "69aac9abb9bc79e713b3d5d769f149aaaddda9fea9225b6ef554cb2ed7a99e0b",
+      "eligibility": {
+        "provenance_status": "verified",
+        "license_status": "verified",
+        "allowed_for_training": true,
+        "allowed_for_redistribution": true,
+        "attribution_required": true
+      }
+    }
+  },
+  "excluded": [
+    "existing_corpus"
+  ],
+  "redistribution_mode": "exportable"
+}

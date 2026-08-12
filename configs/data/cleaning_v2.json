@@ -1,0 +1,230 @@
+{
+  "version": "2.0.0",
+  "description": "Precision-first cleaning policy v2. Ambiguous text kept. Whole-line delete requires strong evidence. Outputs under data/interim/cleaning_v2/. Does not overwrite v1.",
+  "policy_notes": [
+    "Short lines: only removed with noise conditions, never length alone.",
+    "English: high-confidence foreign only; mixed Chichewa retained.",
+    "URLs: strip and keep remainder; delete only URL-only/meta remainder.",
+    "Long lines: no length-only delete; table-dump heuristic only.",
+    "Full exact dedupe deferred (high false-removal vs human labels); optional later in processed/."
+  ],
+  "random_seed": 42,
+  "excerpt_length": 120,
+  "sample_count": 5,
+  "percentiles": [50, 90, 95, 99],
+  "short_line_threshold": 20,
+  "long_line_threshold": 500,
+  "output": {
+    "interim_root": "data/interim/cleaning_v2",
+    "cleaned_filename": "cleaned.txt",
+    "removal_log_filename": "removal_log.jsonl",
+    "transform_log_filename": "transform_log.jsonl",
+    "summary_filename": "summary.json",
+    "report_filename": "before_after_report.md",
+    "readme_filename": "README.md"
+  },
+  "language_signal": {
+    "min_matches_for_signal": 2,
+    "min_english_hits": 3,
+    "min_german_hits": 2,
+    "max_chichewa_hits": 0,
+    "dominance_margin": 3,
+    "notes": "High-confidence foreign requires strong EN/DE with little/no Chichewa signal."
+  },
+  "chichewa_signal_terms": [
+    "ndi", "ndipo", "kuti", "wa", "ya", "za", "pa", "mu", "ku", "ali",
+    "anali", "chifukwa", "koma", "ine", "iye", "anthu", "mulungu", "dziko",
+    "mwana", "ntchito"
+  ],
+  "english_signal_terms": [
+    "the", "and", "of", "to", "in", "is", "for", "that", "with", "was",
+    "were", "from", "this", "are", "by", "on", "as", "at", "be", "or"
+  ],
+  "german_signal_terms": [
+    "der", "die", "das", "und", "ist", "von", "zu", "mit", "auf", "für",
+    "den", "dem", "ein", "eine", "nicht", "sich", "auch", "als", "nach", "bei"
+  ],
+  "boilerplate_patterns_for_metrics": [
+    {"id": "category_prefix", "pattern": "Category\\s*:", "flags": "i"},
+    {"id": "wikipedia_muzinenero", "pattern": "Wikipedia\\s+Muzinenero\\s+Zina", "flags": "i"},
+    {"id": "mu_nkhani", "pattern": "Mu\\s+nkhani", "flags": "i"},
+    {"id": "wikipedia_word", "pattern": "\\bWikipedia\\b", "flags": "i"},
+    {"id": "wikimedia", "pattern": "\\bWikimedia\\b", "flags": "i"},
+    {"id": "url_http", "pattern": "https?://", "flags": "i"},
+    {"id": "url_www", "pattern": "\\bwww\\.", "flags": "i"},
+    {"id": "in_german_meta", "pattern": "\\(in German\\)", "flags": "i"}
+  ],
+  "sources": {
+    "bible": {
+      "enabled": true,
+      "source_id": "bible",
+      "input_path": "data/raw/bible/bible_clean.txt",
+      "output_subdir": "bible",
+      "notes": "Light-touch; unchanged policy from v1.",
+      "rules": [
+        {
+          "id": "drop_blank",
+          "type": "drop_blank",
+          "enabled": true,
+          "description": "Remove empty or whitespace-only lines"
+        },
+        {
+          "id": "drop_digit_only",
+          "type": "drop_digit_only",
+          "enabled": true,
+          "description": "Remove digit-only lines"
+        },
+        {
+          "id": "strip_edges",
+          "type": "transform_strip",
+          "enabled": true,
+          "description": "Strip leading/trailing whitespace"
+        }
+      ]
+    },
+    "wikipedia": {
+      "enabled": true,
+      "source_id": "wikipedia",
+      "input_path": "data/raw/wikipedia/wiki_clean.txt",
+      "output_subdir": "wikipedia",
+      "notes": "v2 precision-first: protect valid/mixed Chichewa; strong evidence for delete.",
+      "rules": [
+        {
+          "id": "drop_blank",
+          "type": "drop_blank",
+          "enabled": true,
+          "description": "Remove empty or whitespace-only lines"
+        },
+        {
+          "id": "drop_category",
+          "type": "drop_regex",
+          "enabled": true,
+          "pattern": "Category\\s*:",
+          "flags": "i",
+          "description": "Remove Wikipedia Category: lines (v1 precision 100%)"
+        },
+        {
+          "id": "drop_wikipedia_muzinenero",
+          "type": "drop_regex_fullmatch",
+          "enabled": true,
+          "pattern": "Wikipedia\\s+Muzinenero\\s+Zina",
+          "flags": "i",
+          "description": "Exact other-languages nav only"
+        },
+        {
+          "id": "drop_mu_nkhani_nav",
+          "type": "drop_regex_fullmatch",
+          "enabled": true,
+          "pattern": "Mu\\s+nkhani",
+          "flags": "i",
+          "description": "Exact article-contents nav header only (not inline 'mu nkhani')"
+        },
+        {
+          "id": "drop_in_german_meta",
+          "type": "drop_regex",
+          "enabled": true,
+          "pattern": "\\(in German\\)",
+          "flags": "i",
+          "description": "Explicit German meta markers"
+        },
+        {
+          "id": "drop_image_meta",
+          "type": "drop_regex",
+          "enabled": true,
+          "pattern": "\\(image\\)",
+          "flags": "i",
+          "description": "Image metadata parentheticals"
+        },
+        {
+          "id": "drop_html_tags",
+          "type": "drop_regex",
+          "enabled": true,
+          "pattern": "</?[a-zA-Z][^>]*>",
+          "flags": "",
+          "description": "HTML tag remnants"
+        },
+        {
+          "id": "drop_wiki_brackets",
+          "type": "drop_regex",
+          "enabled": true,
+          "pattern": "\\[\\[[^\\]]+\\]\\]",
+          "flags": "",
+          "description": "Wiki double-bracket links"
+        },
+        {
+          "id": "drop_wikimedia_chrome",
+          "type": "drop_wikimedia_chrome",
+          "enabled": true,
+          "max_length": 80,
+          "description": "Wikimedia logo/thumb/short chrome only — not full prose"
+        },
+        {
+          "id": "strip_urls",
+          "type": "transform_strip_urls",
+          "enabled": true,
+          "description": "Strip URL tokens; keep remaining text (transform, not removal)"
+        },
+        {
+          "id": "drop_url_only",
+          "type": "drop_url_only",
+          "enabled": true,
+          "description": "Remove if line is URL-only (after strip empty/punct)"
+        },
+        {
+          "id": "drop_digit_only",
+          "type": "drop_digit_only",
+          "enabled": true,
+          "description": "Digit-only lines"
+        },
+        {
+          "id": "drop_punctuation_only",
+          "type": "drop_punctuation_only",
+          "enabled": true,
+          "description": "Punctuation-only lines"
+        },
+        {
+          "id": "drop_short_conditional",
+          "type": "drop_short_conditional",
+          "enabled": true,
+          "max_length": 20,
+          "boilerplate_patterns": [
+            {"pattern": "Category\\s*:", "flags": "i"},
+            {"pattern": "^thumb\\b", "flags": "i"},
+            {"pattern": "^link\\b", "flags": "i"},
+            {"pattern": "retrieved\\s+\\d", "flags": "i"}
+          ],
+          "description": "Short lines only if also numeric/punct/URL-only/meta/boilerplate — never length alone"
+        },
+        {
+          "id": "drop_high_confidence_foreign",
+          "type": "drop_high_confidence_foreign",
+          "enabled": true,
+          "min_english_hits": 3,
+          "min_german_hits": 2,
+          "max_chichewa_hits": 0,
+          "dominance_margin": 3,
+          "description": "High-confidence EN/DE with little/no Chichewa; ambiguous mixed kept"
+        },
+        {
+          "id": "drop_long_table_dump",
+          "type": "drop_long_table_dump",
+          "enabled": true,
+          "min_length": 500,
+          "description": "Long lines only if table/scoreboard/capacity dump heuristic matches"
+        },
+        {
+          "id": "strip_edges",
+          "type": "transform_strip",
+          "enabled": true,
+          "description": "Strip leading/trailing whitespace on survivors"
+        }
+      ]
+    }
+  },
+  "disclaimers": [
+    "v2 is interim only; not approved training data.",
+    "Licensing still unresolved.",
+    "Human validation labels are frozen and must not be modified.",
+    "Do not promote to data/processed/ without meeting target criteria."
+  ]
+}

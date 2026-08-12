@@ -1,0 +1,7 @@
+# Minimal pins for tokenizer + LM baseline laboratory
+# Install: python3 -m venv .venv && .venv/bin/pip install -r requirements-tokenizers.txt
+# Torch CUDA wheel (RTX 5070 / cu128): 
+#   .venv/bin/pip install torch --index-url https://download.pytorch.org/whl/cu128
+sentencepiece==0.2.0
+numpy>=1.26
+matplotlib>=3.8

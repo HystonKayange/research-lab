@@ -1,0 +1,329 @@
+{
+  "matrix_id": "lm_baselines_v0_1_final_matrix_r2",
+  "supersedes": "lm_baselines_v0_1_final_matrix",
+  "updated_at": "2026-08-05T08:34:26.526171Z",
+  "canary_accepted": true,
+  "canary_role": "systems_validation_only",
+  "canary_excluded_from_final_statistics": true,
+  "calibration_excluded_from_final_statistics": true,
+  "currently_running": null,
+  "scientific_run_count": 36,
+  "completed_scientific_runs": 0,
+  "runs": {
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__character__seed42__chars_e30": {
+      "status": "completed",
+      "finished_at": "2026-08-05T07:09:43.878671Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/character/seed_42/final/fixed_characters_e30",
+      "validation_bpc": 1.485549631910996,
+      "runtime_s": 401.03550416699727
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__character__seed42__updates_u4000": {
+      "status": "completed",
+      "finished_at": "2026-08-05T07:11:18.023456Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/character/seed_42/final/fixed_updates_u4000",
+      "validation_bpc": 1.8772380253125969,
+      "runtime_s": 95.61218333400029
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__character__seed1337__chars_e30": {
+      "status": "completed",
+      "finished_at": "2026-08-05T07:17:45.888536Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/character/seed_1337/final/fixed_characters_e30",
+      "validation_bpc": 1.4717174719617532,
+      "runtime_s": 409.3885940230102
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__character__seed1337__updates_u4000": {
+      "status": "completed",
+      "finished_at": "2026-08-05T07:19:28.984245Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/character/seed_1337/final/fixed_updates_u4000",
+      "validation_bpc": 1.8843258181818257,
+      "runtime_s": 104.36300158599624
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__character__seed2026__chars_e30": {
+      "status": "completed",
+      "finished_at": "2026-08-05T07:25:55.483748Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/character/seed_2026/final/fixed_characters_e30",
+      "validation_bpc": 1.4762954087385072,
+      "runtime_s": 406.9474825649959
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__character__seed2026__updates_u4000": {
+      "status": "completed",
+      "finished_at": "2026-08-05T07:27:29.037806Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/character/seed_2026/final/fixed_updates_u4000",
+      "validation_bpc": 1.8987876179076932,
+      "runtime_s": 94.91602137200243
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__bpe_8000__seed42__chars_e30": {
+      "status": "completed",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/bpe_8000/seed_42/final/fixed_characters_e30",
+      "skipped_resume": true
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__bpe_8000__seed42__updates_u4000": {
+      "status": "completed",
+      "finished_at": "2026-08-05T07:29:14.237209Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/bpe_8000/seed_42/final/fixed_updates_u4000",
+      "validation_bpc": 1.4584313829247735,
+      "runtime_s": 108.79017849698721
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__bpe_8000__seed1337__chars_e30": {
+      "status": "completed",
+      "finished_at": "2026-08-05T07:31:00.590932Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/bpe_8000/seed_1337/final/fixed_characters_e30",
+      "validation_bpc": 1.439966637183555,
+      "runtime_s": 107.89569042201038
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__bpe_8000__seed1337__updates_u4000": {
+      "status": "completed",
+      "finished_at": "2026-08-05T07:32:46.654301Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/bpe_8000/seed_1337/final/fixed_updates_u4000",
+      "validation_bpc": 1.4563571521032426,
+      "runtime_s": 109.88703215699934
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__bpe_8000__seed2026__chars_e30": {
+      "status": "completed",
+      "finished_at": "2026-08-05T07:34:35.842938Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/bpe_8000/seed_2026/final/fixed_characters_e30",
+      "validation_bpc": 1.4367888941333573,
+      "runtime_s": 112.74944135401165
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__bpe_8000__seed2026__updates_u4000": {
+      "status": "completed",
+      "finished_at": "2026-08-05T07:36:30.524328Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/bpe_8000/seed_2026/final/fixed_updates_u4000",
+      "validation_bpc": 1.45532197350949,
+      "runtime_s": 115.85757203999674
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__unigram_8000__seed42__chars_e30": {
+      "status": "completed",
+      "finished_at": "2026-08-05T07:38:17.858533Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/unigram_8000/seed_42/final/fixed_characters_e30",
+      "validation_bpc": 1.4309637303326443,
+      "runtime_s": 111.7792781600001
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__unigram_8000__seed42__updates_u4000": {
+      "status": "completed",
+      "finished_at": "2026-08-05T07:40:06.926081Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/unigram_8000/seed_42/final/fixed_updates_u4000",
+      "validation_bpc": 1.4423002957801767,
+      "runtime_s": 113.3609640620125
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__unigram_8000__seed1337__chars_e30": {
+      "status": "completed",
+      "finished_at": "2026-08-05T07:41:57.268913Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/unigram_8000/seed_1337/final/fixed_characters_e30",
+      "validation_bpc": 1.432025169918867,
+      "runtime_s": 112.41534798200883
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__unigram_8000__seed1337__updates_u4000": {
+      "status": "completed",
+      "finished_at": "2026-08-05T07:43:41.778893Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/unigram_8000/seed_1337/final/fixed_updates_u4000",
+      "validation_bpc": 1.4448921445269196,
+      "runtime_s": 108.00926914101001
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__unigram_8000__seed2026__chars_e30": {
+      "status": "completed",
+      "finished_at": "2026-08-05T07:45:26.809038Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/unigram_8000/seed_2026/final/fixed_characters_e30",
+      "validation_bpc": 1.4309492399904677,
+      "runtime_s": 107.9119371889974
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__unigram_8000__seed2026__updates_u4000": {
+      "status": "completed",
+      "finished_at": "2026-08-05T07:47:16.706561Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/unigram_8000/seed_2026/final/fixed_updates_u4000",
+      "validation_bpc": 1.4428717481894078,
+      "runtime_s": 111.84359674000007
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__character__seed42__chars_e30": {
+      "status": "completed",
+      "finished_at": "2026-08-05T07:53:50.190536Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/character/seed_42/final/fixed_characters_e30",
+      "validation_bpc": 1.485549631910996,
+      "runtime_s": 414.7658493589988
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__character__seed42__updates_u4000": {
+      "status": "completed",
+      "finished_at": "2026-08-05T07:55:30.726021Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/character/seed_42/final/fixed_updates_u4000",
+      "validation_bpc": 1.8772380253125969,
+      "runtime_s": 103.56652733300871
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__character__seed1337__chars_e30": {
+      "status": "completed",
+      "finished_at": "2026-08-05T08:01:57.188124Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/character/seed_1337/final/fixed_characters_e30",
+      "validation_bpc": 1.4717174719617532,
+      "runtime_s": 408.36905903699517
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__character__seed1337__updates_u4000": {
+      "status": "completed",
+      "finished_at": "2026-08-05T08:03:38.170811Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/character/seed_1337/final/fixed_updates_u4000",
+      "validation_bpc": 1.8843258181818257,
+      "runtime_s": 102.90551399999822
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__character__seed2026__chars_e30": {
+      "status": "completed",
+      "finished_at": "2026-08-05T08:10:17.506241Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/character/seed_2026/final/fixed_characters_e30",
+      "validation_bpc": 1.4762954087385072,
+      "runtime_s": 427.27654166500724
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__character__seed2026__updates_u4000": {
+      "status": "completed",
+      "finished_at": "2026-08-05T08:12:00.805328Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/character/seed_2026/final/fixed_updates_u4000",
+      "validation_bpc": 1.8987876179076932,
+      "runtime_s": 106.14631065500726
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__bpe_8000__seed42__chars_e30": {
+      "status": "completed",
+      "finished_at": "2026-08-05T08:13:49.962413Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/bpe_8000/seed_42/final/fixed_characters_e30",
+      "validation_bpc": 1.4446522104461974,
+      "runtime_s": 111.34329532399715
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__bpe_8000__seed42__updates_u4000": {
+      "status": "completed",
+      "finished_at": "2026-08-05T08:15:32.125502Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/bpe_8000/seed_42/final/fixed_updates_u4000",
+      "validation_bpc": 1.4975025557896113,
+      "runtime_s": 106.51322835500468
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__bpe_8000__seed1337__chars_e30": {
+      "status": "completed",
+      "finished_at": "2026-08-05T08:17:16.521253Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/bpe_8000/seed_1337/final/fixed_characters_e30",
+      "validation_bpc": 1.4464671984757287,
+      "runtime_s": 107.88134526800422
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__bpe_8000__seed1337__updates_u4000": {
+      "status": "completed",
+      "finished_at": "2026-08-05T08:18:59.865683Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/bpe_8000/seed_1337/final/fixed_updates_u4000",
+      "validation_bpc": 1.4983353760942155,
+      "runtime_s": 105.60191278500133
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__bpe_8000__seed2026__chars_e30": {
+      "status": "completed",
+      "finished_at": "2026-08-05T08:20:39.453128Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/bpe_8000/seed_2026/final/fixed_characters_e30",
+      "validation_bpc": 1.447723194028557,
+      "runtime_s": 104.51657904099557
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__bpe_8000__seed2026__updates_u4000": {
+      "status": "completed",
+      "finished_at": "2026-08-05T08:22:23.599155Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/bpe_8000/seed_2026/final/fixed_updates_u4000",
+      "validation_bpc": 1.5004037337025877,
+      "runtime_s": 106.79925808800908
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__unigram_8000__seed42__chars_e30": {
+      "status": "completed",
+      "finished_at": "2026-08-05T08:24:02.216128Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/unigram_8000/seed_42/final/fixed_characters_e30",
+      "validation_bpc": 1.4377220985956776,
+      "runtime_s": 102.09860359699815
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__unigram_8000__seed42__updates_u4000": {
+      "status": "completed",
+      "finished_at": "2026-08-05T08:25:41.901437Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/unigram_8000/seed_42/final/fixed_updates_u4000",
+      "validation_bpc": 1.4800099138122642,
+      "runtime_s": 105.73153642599937
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__unigram_8000__seed1337__chars_e30": {
+      "status": "completed",
+      "finished_at": "2026-08-05T08:27:22.985057Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/unigram_8000/seed_1337/final/fixed_characters_e30",
+      "validation_bpc": 1.436836690240743,
+      "runtime_s": 104.40601917399908
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__unigram_8000__seed1337__updates_u4000": {
+      "status": "completed",
+      "finished_at": "2026-08-05T08:29:01.098395Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/unigram_8000/seed_1337/final/fixed_updates_u4000",
+      "validation_bpc": 1.4808837805435897,
+      "runtime_s": 103.92724207800347
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__unigram_8000__seed2026__chars_e30": {
+      "status": "completed",
+      "finished_at": "2026-08-05T08:30:42.057968Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/unigram_8000/seed_2026/final/fixed_characters_e30",
+      "validation_bpc": 1.436624633552363,
+      "runtime_s": 104.58706976499525
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__unigram_8000__seed2026__updates_u4000": {
+      "status": "completed",
+      "finished_at": "2026-08-05T08:32:24.106436Z",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/unigram_8000/seed_2026/final/fixed_updates_u4000",
+      "validation_bpc": 1.4770234366722568,
+      "runtime_s": 106.79564303100051
+    }
+  },
+  "artifacts": {
+    "accepted_systems_canary": {
+      "role": "systems_validation_only",
+      "excluded_from_final_statistics": true,
+      "run_id": "lm_baselines_v0_1_final_matrix__final__arch__bpe_8000__seed42__chars",
+      "tokenizer": "bpe_8000",
+      "seed": 42,
+      "track": "architecture_matched",
+      "budget_policy": "fixed_characters",
+      "train_characters": 4000000,
+      "path": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/bpe_8000/seed_42/final/fixed_characters",
+      "note": "Accepted canary used pre-calibration 4M-char budget. Not a final 30-epoch scientific run. Do not overwrite."
+    },
+    "budget_calibration": {
+      "role": "budget_selection_only",
+      "excluded_from_final_statistics": true,
+      "run_id": "lm_budget_calibration_v0_1__calibration__arch__bpe_8000__seed42__chars",
+      "path": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/bpe_8000/seed_42/calibration/fixed_characters",
+      "best_effective_epochs": 30.00573465036266,
+      "best_characters_processed": 138740485.8706122,
+      "best_step": 3964,
+      "best_validation_bpc": 1.4426772869165279,
+      "best_validation_bpb": 1.4287043822191223,
+      "observed_epoch_bpcs": {
+        "1": 2.4504472311,
+        "2": 2.0683138555,
+        "5": 1.7486082125,
+        "10": 1.5837024633,
+        "15": 1.4977728711,
+        "20": 1.4594816619,
+        "30": 1.4426772869,
+        "40": 1.4655061494
+      },
+      "budget_selection_reason": "Selected from the BPE-8000 seed-42 architecture-matched calibration run. Validation BPC improved through approximately 30 effective epochs and degraded by 40 epochs."
+    }
+  },
+  "migration": {
+    "at": "2026-08-05T06:53:58.477179Z",
+    "from_status": "data/metadata/lm_baselines_v0_1_matrix_status.json",
+    "from_status_backup": "data/metadata/lm_baselines_v0_1_matrix_status.pre_r2_migration_20260805T065358Z.json",
+    "old_completed_not_carried_as_scientific": true,
+    "reason": "r2 calibrated fixed-character budget 30×4623799=138713970; old 4M canary is systems validation only",
+    "old_status_snapshot_counts": {
+      "pending": 35,
+      "completed": 1,
+      "failed": 0,
+      "running": 0,
+      "blocked": 0
+    }
+  },
+  "failure_history": [
+    {
+      "run_id": "lm_baselines_v0_1_final_matrix__final__arch__bpe_8000__seed42__chars",
+      "recorded_at": "2026-08-05T06:19:18.053454Z",
+      "previous_status_entry": {
+        "status": "failed",
+        "finished_at": "2026-08-05T06:14:14.025926Z",
+        "exit_code": 1,
+        "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/bpe_8000/seed_42/final/fixed_characters"
+      },
+      "reason": "empty_run_directory_blocked_retry; directory moved to backup; status reset to pending",
+      "empty_dir_backup": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/bpe_8000/seed_42/final/fixed_characters_empty_backup_20260805T061918Z",
+      "status_file_backup": "data/metadata/lm_baselines_v0_1_matrix_status.pre_canary_repair_20260805T061918Z.json"
+    }
+  ]
+}

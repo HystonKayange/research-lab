@@ -1,0 +1,193 @@
+{
+  "version": "0.2.0",
+  "matrix_id": "lm_baselines_v0_1_final_matrix_r2",
+  "supersedes": "lm_baselines_v0_1_final_matrix",
+  "description": "Amended final multi-seed dual-budget dual-track LM matrix after BPE-8000 calibration. Fixed-character budget = 30 effective epochs. Old 4M canary is systems-validation only; calibration is budget-selection only.",
+  "parent_config": "configs/models/lm_baselines_v0_1.json",
+  "experiment_id": "lm_baselines_v0.1",
+  "split_root": "data/splits/chichewa_corpus_v0.1",
+  "tokenizer_root": "data/tokenizers/chichewa_corpus_v0.1/baselines_v0.1",
+  "output_root": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1",
+  "status_path": "data/metadata/lm_baselines_v0_1_matrix_r2_status.json",
+  "execution_plan_path": "data/reports/lm_baselines_v0_1_execution_plan.md",
+  "canary_report_path": "data/reports/lm_baselines_v0_1_canary_report.md",
+  "canary_acceptance_path": "data/metadata/lm_baselines_v0_1_canary_acceptance.json",
+  "parameter_report_path": "data/reports/lm_baselines_v0_1_parameter_matching.md",
+  "budget_decision_path": "data/reports/lm_budget_decision_v0_1.md",
+  "tokenizers": ["character", "bpe_8000", "unigram_8000"],
+  "seeds": [42, 1337, 2026],
+  "tracks": ["architecture_matched", "parameter_matched"],
+  "budget_policies": ["fixed_characters", "fixed_updates"],
+  "budget_path_slugs": {
+    "fixed_characters": "fixed_characters_e30",
+    "fixed_updates": "fixed_updates_u4000"
+  },
+  "canary": {
+    "role": "systems_validation_only",
+    "excluded_from_final_statistics": true,
+    "run_id": "lm_baselines_v0_1_final_matrix__final__arch__bpe_8000__seed42__chars",
+    "tokenizer": "bpe_8000",
+    "seed": 42,
+    "track": "architecture_matched",
+    "budget_policy": "fixed_characters",
+    "train_characters": 4000000,
+    "path": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/bpe_8000/seed_42/final/fixed_characters",
+    "note": "Accepted canary used pre-calibration 4M-char budget. Not a final 30-epoch scientific run. Do not overwrite."
+  },
+  "calibration": {
+    "role": "budget_selection_only",
+    "excluded_from_final_statistics": true,
+    "run_id": "lm_budget_calibration_v0_1__calibration__arch__bpe_8000__seed42__chars",
+    "path": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/bpe_8000/seed_42/calibration/fixed_characters",
+    "best_effective_epochs": 30.00573465036266,
+    "best_characters_processed": 138740485.8706122,
+    "best_step": 3964,
+    "best_validation_bpc": 1.4426772869165279,
+    "best_validation_bpb": 1.4287043822191223,
+    "observed_epoch_bpcs": {
+      "1": 2.4504472311,
+      "2": 2.0683138555,
+      "5": 1.7486082125,
+      "10": 1.5837024633,
+      "15": 1.4977728711,
+      "20": 1.4594816619,
+      "30": 1.4426772869,
+      "40": 1.4655061494
+    },
+    "budget_selection_reason": "Selected from the BPE-8000 seed-42 architecture-matched calibration run. Validation BPC improved through approximately 30 effective epochs and degraded by 40 epochs."
+  },
+  "corpus": {
+    "frozen_training_corpus_character_count": 4623799,
+    "character_count_definition": "sum(len(line)) over train/combined.txt splitlines(); newlines not counted"
+  },
+  "budgets": {
+    "fixed_characters": {
+      "train_characters": 138713970,
+      "effective_epoch_target": 30,
+      "frozen_training_corpus_character_count": 4623799,
+      "character_overshoot_tolerance": 0.02,
+      "max_optimizer_steps_cap": 100000,
+      "validation_effective_epoch_checkpoints": [1, 2, 5, 10, 15, 20, 22, 24, 26, 28, 30],
+      "validation_character_checkpoints": [4623799, 9247598, 23118995, 46237990, 69356985, 92475980, 101723578, 110971176, 120218774, 129466372, 138713970],
+      "stop_policy": "stop_when_characters_ge_target_after_optimizer_step",
+      "early_stopping": {
+        "enabled": false,
+        "reason": "Fairness: all successful fixed-character runs must reach the full 30-epoch character budget. Validation BPC is used only for best-checkpoint selection, not to shorten exposure.",
+        "safety_only_nan_inf_or_oom": true
+      },
+      "checkpoint_reporting": {
+        "report_final_budget_metrics": true,
+        "report_best_validation_checkpoint_metrics": true,
+        "lock_best_by": "validation_bpc"
+      },
+      "budget_selection_reason": "Selected from the BPE-8000 seed-42 architecture-matched calibration run. Validation BPC improved through approximately 30 effective epochs and degraded by 40 epochs."
+    },
+    "fixed_updates": {
+      "optimizer_updates": 4000,
+      "previous_optimizer_updates": 2000,
+      "validation_update_checkpoints": [250, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000],
+      "stop_policy": "stop_when_updates_ge_target",
+      "early_stopping": {
+        "enabled": false,
+        "reason": "Equal update count across tokenizers; do not shorten by validation patience."
+      },
+      "exposure_review": {
+        "measured_at_context_256_micro16_accum2": {
+          "character": {
+            "chars_per_optimizer_update_approx": 8094.4,
+            "effective_epochs_at_2000_updates_approx": 3.501,
+            "effective_epochs_at_4000_updates_approx": 7.002,
+            "updates_for_30_epochs_approx": 17137.0
+          },
+          "bpe_8000": {
+            "chars_per_optimizer_update_approx": 34999.6,
+            "effective_epochs_at_2000_updates_approx": 15.139,
+            "effective_epochs_at_4000_updates_approx": 30.278,
+            "updates_for_30_epochs_approx": 3963.3
+          },
+          "unigram_8000": {
+            "chars_per_optimizer_update_approx": 35276.3,
+            "effective_epochs_at_2000_updates_approx": 15.259,
+            "effective_epochs_at_4000_updates_approx": 30.518,
+            "updates_for_30_epochs_approx": 3932.2
+          }
+        },
+        "decision": "Revise fixed-update target from 2000 to 4000 so subword models receive ~30 effective epochs of text under equal updates (aligned with calibration). Character remains intentionally shorter in character exposure under equal updates (~7 epochs). 2000 updates would leave subword models undertrained relative to the calibrated 30-epoch region (~15 epochs).",
+        "not_per_tokenizer_epoch_matching": true
+      }
+    }
+  },
+  "architecture_matched": {
+    "n_layer": 4,
+    "n_embd": 256,
+    "n_head": 4,
+    "n_inner": 1024,
+    "dropout": 0.1,
+    "context_length": 256,
+    "pre_ln": true,
+    "tie_embeddings": true,
+    "positional_encoding": "learned"
+  },
+  "parameter_matched": {
+    "tolerance_fraction": 0.05,
+    "target_reference": "character_architecture_matched",
+    "overrides": {
+      "character": {"n_layer": 4, "n_embd": 256, "n_head": 4, "n_inner": 1024},
+      "bpe_8000": {"n_layer": 4, "n_embd": 192, "n_head": 4, "n_inner": 768},
+      "unigram_8000": {"n_layer": 4, "n_embd": 192, "n_head": 4, "n_inner": 768}
+    },
+    "context_length": 256,
+    "dropout": 0.1,
+    "pre_ln": true,
+    "tie_embeddings": true,
+    "positional_encoding": "learned"
+  },
+  "training": {
+    "optimizer": "adamw",
+    "learning_rate": 3e-4,
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "weight_decay": 0.1,
+    "grad_clip": 1.0,
+    "warmup_steps": 200,
+    "schedule": "cosine",
+    "micro_batch_size": 16,
+    "grad_accum_steps": 2,
+    "dtype": "bfloat16",
+    "amp": true,
+    "log_every": 50,
+    "packing": {
+      "method": "line_pack_with_eos",
+      "eos_between_lines": true,
+      "character_accounting": "proportional_per_content_token_plus_zero_for_eos_pad",
+      "document_note": "Lines packed in order with EOS between lines. Character exposure counts original line characters attributed proportionally to content tokens (EOS/PAD contribute 0)."
+    }
+  },
+  "evaluation": {
+    "eval_batch_size": 16,
+    "primary_metric": "bits_per_character",
+    "secondary_confirm": "bits_per_byte",
+    "test_access": false
+  },
+  "launcher": {
+    "max_consecutive_systemic_failures": 3,
+    "allow_isolated_seed_failure": true,
+    "lock_file_name": ".run.lock",
+    "require_canary_acceptance_for_full": true,
+    "canary_acceptance_means": "systems_validation_only_not_scientific_completion",
+    "pilot_excluded_from_final_aggregation": true,
+    "canary_excluded_from_final_aggregation": true,
+    "calibration_excluded_from_final_aggregation": true
+  },
+  "expected_run_count": 36,
+  "canary_run_count": 0,
+  "scientific_run_count": 36,
+  "notes": [
+    "Matrix r2 supersedes r1 4M-character fixed budget.",
+    "Accepted 4M canary is systems validation only; path fixed_characters must not be overwritten.",
+    "Calibration path calibration/fixed_characters is budget-selection only.",
+    "Final fixed-character paths use fixed_characters_e30.",
+    "Final fixed-update paths use fixed_updates_u4000.",
+    "Do not evaluate test until explicit authorization after all scientific runs lock."
+  ]
+}

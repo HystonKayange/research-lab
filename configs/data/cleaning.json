@@ -1,0 +1,219 @@
+{
+  "version": "1.0.0",
+  "description": "Config-driven interim cleaning for Bible and Wikipedia. Writes only under data/interim/. Does not modify data/raw/. Does not approve training eligibility.",
+  "random_seed": 42,
+  "excerpt_length": 120,
+  "sample_count": 5,
+  "percentiles": [50, 90, 95, 99],
+  "short_line_threshold": 20,
+  "long_line_threshold": 500,
+  "output": {
+    "interim_root": "data/interim/cleaning",
+    "cleaned_filename": "cleaned.txt",
+    "removal_log_filename": "removal_log.jsonl",
+    "transform_log_filename": "transform_log.jsonl",
+    "summary_filename": "summary.json",
+    "report_filename": "before_after_report.md",
+    "readme_filename": "README.md"
+  },
+  "language_signal": {
+    "min_matches_for_signal": 2,
+    "notes": "Heuristic term lists only — not authoritative language identification."
+  },
+  "chichewa_signal_terms": [
+    "ndi", "ndipo", "kuti", "wa", "ya", "za", "pa", "mu", "ku", "ali",
+    "anali", "chifukwa", "koma", "ine", "iye", "anthu", "mulungu", "dziko",
+    "mwana", "ntchito"
+  ],
+  "english_signal_terms": [
+    "the", "and", "of", "to", "in", "is", "for", "that", "with", "was",
+    "were", "from", "this", "are", "by", "on", "as", "at", "be", "or"
+  ],
+  "german_signal_terms": [
+    "der", "die", "das", "und", "ist", "von", "zu", "mit", "auf", "für",
+    "den", "dem", "ein", "eine", "nicht", "sich", "auch", "als", "nach", "bei"
+  ],
+  "boilerplate_patterns_for_metrics": [
+    {"id": "category_prefix", "pattern": "Category\\s*:", "flags": "i"},
+    {"id": "wikipedia_muzinenero", "pattern": "Wikipedia\\s+Muzinenero\\s+Zina", "flags": "i"},
+    {"id": "mu_nkhani", "pattern": "Mu\\s+nkhani", "flags": "i"},
+    {"id": "wikipedia_word", "pattern": "\\bWikipedia\\b", "flags": "i"},
+    {"id": "wikimedia", "pattern": "\\bWikimedia\\b", "flags": "i"},
+    {"id": "url_http", "pattern": "https?://", "flags": "i"},
+    {"id": "url_www", "pattern": "\\bwww\\.", "flags": "i"},
+    {"id": "in_german_meta", "pattern": "\\(in German\\)", "flags": "i"}
+  ],
+  "sources": {
+    "bible": {
+      "enabled": true,
+      "source_id": "bible",
+      "input_path": "data/raw/bible/bible_clean.txt",
+      "output_subdir": "bible",
+      "notes": "Light-touch cleaning. Bible is relatively homogeneous; avoid aggressive language filters.",
+      "rules": [
+        {
+          "id": "drop_blank",
+          "type": "drop_blank",
+          "enabled": true,
+          "description": "Remove empty or whitespace-only lines"
+        },
+        {
+          "id": "drop_digit_only",
+          "type": "drop_digit_only",
+          "enabled": true,
+          "description": "Remove lines that contain only digits (and optional surrounding whitespace)"
+        },
+        {
+          "id": "strip_edges",
+          "type": "transform_strip",
+          "enabled": true,
+          "description": "Strip leading/trailing whitespace on kept lines (does not collapse internal spaces)"
+        }
+      ]
+    },
+    "wikipedia": {
+      "enabled": true,
+      "source_id": "wikipedia",
+      "input_path": "data/raw/wikipedia/wiki_clean.txt",
+      "output_subdir": "wikipedia",
+      "notes": "Stronger filters for navigation, categories, URLs, foreign-signal lines, and within-source exact duplicates.",
+      "rules": [
+        {
+          "id": "drop_blank",
+          "type": "drop_blank",
+          "enabled": true,
+          "description": "Remove empty or whitespace-only lines"
+        },
+        {
+          "id": "drop_category",
+          "type": "drop_regex",
+          "enabled": true,
+          "pattern": "Category\\s*:",
+          "flags": "i",
+          "description": "Remove Wikipedia Category: lines"
+        },
+        {
+          "id": "drop_mu_nkhani",
+          "type": "drop_regex",
+          "enabled": true,
+          "pattern": "Mu\\s+nkhani",
+          "flags": "i",
+          "description": "Remove article-contents navigation headers"
+        },
+        {
+          "id": "drop_wikipedia_muzinenero",
+          "type": "drop_regex",
+          "enabled": true,
+          "pattern": "Wikipedia\\s+Muzinenero\\s+Zina",
+          "flags": "i",
+          "description": "Remove other-languages navigation"
+        },
+        {
+          "id": "drop_wikimedia",
+          "type": "drop_regex",
+          "enabled": true,
+          "pattern": "\\bWikimedia\\b",
+          "flags": "i",
+          "description": "Remove Wikimedia project chrome lines"
+        },
+        {
+          "id": "drop_in_german_meta",
+          "type": "drop_regex",
+          "enabled": true,
+          "pattern": "\\(in German\\)",
+          "flags": "i",
+          "description": "Remove explicit German meta markers"
+        },
+        {
+          "id": "drop_image_meta",
+          "type": "drop_regex",
+          "enabled": true,
+          "pattern": "\\(image\\)",
+          "flags": "i",
+          "description": "Remove image metadata parentheticals"
+        },
+        {
+          "id": "drop_html_tags",
+          "type": "drop_regex",
+          "enabled": true,
+          "pattern": "</?[a-zA-Z][^>]*>",
+          "flags": "",
+          "description": "Remove lines containing HTML tag remnants"
+        },
+        {
+          "id": "drop_wiki_brackets",
+          "type": "drop_regex",
+          "enabled": true,
+          "pattern": "\\[\\[[^\\]]+\\]\\]",
+          "flags": "",
+          "description": "Remove lines with wiki double-bracket links"
+        },
+        {
+          "id": "drop_url",
+          "type": "drop_url",
+          "enabled": true,
+          "description": "Remove lines containing http(s) or www. URLs"
+        },
+        {
+          "id": "drop_digit_only",
+          "type": "drop_digit_only",
+          "enabled": true,
+          "description": "Remove digit-only lines"
+        },
+        {
+          "id": "drop_min_length",
+          "type": "drop_min_length",
+          "enabled": true,
+          "min_length": 20,
+          "description": "Remove very short lines (length < 20)"
+        },
+        {
+          "id": "drop_max_length",
+          "type": "drop_max_length",
+          "enabled": true,
+          "max_length": 500,
+          "description": "Remove extremely long lines (length > 500)"
+        },
+        {
+          "id": "drop_english_signal",
+          "type": "drop_language_signal",
+          "enabled": true,
+          "signals": ["english_signal"],
+          "description": "Remove lines with heuristic english_signal (not authoritative LID)"
+        },
+        {
+          "id": "drop_german_signal",
+          "type": "drop_language_signal",
+          "enabled": true,
+          "signals": ["german_signal"],
+          "description": "Remove lines with heuristic german_signal"
+        },
+        {
+          "id": "drop_mixed_signal",
+          "type": "drop_language_signal",
+          "enabled": true,
+          "signals": ["mixed_signal"],
+          "description": "Remove lines with mixed-language heuristic signal"
+        },
+        {
+          "id": "dedupe_exact",
+          "type": "dedupe_exact",
+          "enabled": true,
+          "description": "Drop exact duplicate lines within this source (keep first occurrence)"
+        },
+        {
+          "id": "strip_edges",
+          "type": "transform_strip",
+          "enabled": true,
+          "description": "Strip leading/trailing whitespace on kept lines"
+        }
+      ]
+    }
+  },
+  "disclaimers": [
+    "Interim cleaned outputs are not final processed training data.",
+    "Licensing and allowed_for_training remain unresolved until human review.",
+    "Language-signal filters are transparent heuristics, not authoritative language identification.",
+    "Raw files under data/raw/ must remain byte-identical."
+  ]
+}

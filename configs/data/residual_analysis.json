@@ -1,0 +1,190 @@
+{
+  "version": "1.0.0",
+  "description": "Residual decomposition of existing_corpus after subtracting Bible and Wikipedia. Analysis only — not a cleaning pipeline or training approval.",
+  "subtraction_comparison_mode": "whitespace_normalized",
+  "case_fold_diagnostic": true,
+  "use_casefold_for_residual": false,
+  "short_line_threshold": 20,
+  "long_line_threshold": 500,
+  "sample_count": 8,
+  "max_examples_per_category": 8,
+  "excerpt_length": 120,
+  "random_seed": 42,
+  "max_repeated_lines_report": 15,
+  "percentiles": [50, 90, 95, 99],
+  "chichewa_chars": ["ŵ", "Ŵ"],
+  "unusual_codepoint_min": 256,
+  "max_unusual_codepoints_report": 30,
+  "replacement_char": "\ufffd",
+  "write_candidate_file": true,
+  "candidate_output_path": "data/interim/existing_corpus/residual_candidates.txt",
+  "candidate_file_header": [
+    "###############################################################################",
+    "# RESIDUAL CANDIDATES — REVIEW ONLY",
+    "#",
+    "# Source: data/raw/existing_corpus/chichewa_corpus.txt",
+    "# After subtracting lines attributable to Bible and Wikipedia",
+    "#   (comparison mode configured in residual_analysis.json).",
+    "#",
+    "# STATUS:",
+    "#   - UNCLEANED",
+    "#   - UNLICENSED (provenance/license not verified)",
+    "#   - NOT APPROVED FOR TRAINING",
+    "#   - GENERATED ONLY FOR HUMAN REVIEW",
+    "#",
+    "# Do not use this file as training data.",
+    "# Do not treat this as a cleaned or final corpus.",
+    "###############################################################################",
+    ""
+  ],
+  "language_signal": {
+    "min_matches_for_signal": 2,
+    "notes": "Provisional whole-word heuristics only. Not language identification."
+  },
+  "chichewa_signal_terms": [
+    "ndi",
+    "ndipo",
+    "kuti",
+    "wa",
+    "ya",
+    "za",
+    "pa",
+    "mu",
+    "ku",
+    "ali",
+    "anali",
+    "chifukwa",
+    "koma",
+    "ine",
+    "iye",
+    "anthu",
+    "mulungu",
+    "dziko",
+    "mwana",
+    "ntchito"
+  ],
+  "english_signal_terms": [
+    "the",
+    "and",
+    "of",
+    "to",
+    "in",
+    "is",
+    "for",
+    "that",
+    "with",
+    "was",
+    "were",
+    "from",
+    "this",
+    "are",
+    "by",
+    "on",
+    "as",
+    "at",
+    "be",
+    "or"
+  ],
+  "german_signal_terms": [
+    "der",
+    "die",
+    "das",
+    "und",
+    "ist",
+    "von",
+    "zu",
+    "mit",
+    "auf",
+    "für",
+    "den",
+    "dem",
+    "ein",
+    "eine",
+    "nicht",
+    "sich",
+    "auch",
+    "als",
+    "nach",
+    "bei"
+  ],
+  "boilerplate_patterns": [
+    {
+      "id": "category_prefix",
+      "description": "Wikipedia-style Category lines",
+      "pattern": "Category\\s*:",
+      "flags": "i"
+    },
+    {
+      "id": "wikipedia_muzinenero",
+      "description": "Chichewa Wikipedia other-languages nav",
+      "pattern": "Wikipedia\\s+Muzinenero\\s+Zina",
+      "flags": "i"
+    },
+    {
+      "id": "mu_nkhani",
+      "description": "Chichewa Wikipedia article-contents nav",
+      "pattern": "Mu\\s+nkhani",
+      "flags": "i"
+    },
+    {
+      "id": "wikipedia_word",
+      "description": "Mentions of Wikipedia",
+      "pattern": "\\bWikipedia\\b",
+      "flags": "i"
+    },
+    {
+      "id": "wikimedia",
+      "description": "Wikimedia project mentions",
+      "pattern": "\\bWikimedia\\b",
+      "flags": "i"
+    },
+    {
+      "id": "url_http",
+      "description": "HTTP(S) URLs",
+      "pattern": "https?://",
+      "flags": "i"
+    },
+    {
+      "id": "url_www",
+      "description": "www. hostnames",
+      "pattern": "\\bwww\\.",
+      "flags": "i"
+    },
+    {
+      "id": "html_tag",
+      "description": "Simple HTML tag remnants",
+      "pattern": "</?[a-zA-Z][^>]*>",
+      "flags": ""
+    },
+    {
+      "id": "wiki_link_brackets",
+      "description": "Wiki-style double-bracket links",
+      "pattern": "\\[\\[[^\\]]+\\]\\]",
+      "flags": ""
+    },
+    {
+      "id": "wiki_template",
+      "description": "Wiki-style template braces",
+      "pattern": "\\{\\{[^}]+\\}\\}",
+      "flags": ""
+    },
+    {
+      "id": "in_german_meta",
+      "description": "Explicit German-language meta marker",
+      "pattern": "\\(in German\\)",
+      "flags": "i"
+    },
+    {
+      "id": "image_meta",
+      "description": "Image metadata parenthetical",
+      "pattern": "\\(image\\)",
+      "flags": "i"
+    }
+  ],
+  "source_paths": {
+    "bible": "data/raw/bible/bible_clean.txt",
+    "wikipedia": "data/raw/wikipedia/wiki_clean.txt",
+    "existing_corpus": "data/raw/existing_corpus/chichewa_corpus.txt"
+  },
+  "term_list_disclaimer": "Language-signal term lists are provisional heuristics copied for residual review; they require native-speaker review and are not authoritative language labels."
+}

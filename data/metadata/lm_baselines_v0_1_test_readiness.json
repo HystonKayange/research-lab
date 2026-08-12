@@ -1,0 +1,28 @@
+{
+  "all_36_completed": true,
+  "all_36_audited": true,
+  "all_manifests_valid": true,
+  "all_selection_locks_valid": true,
+  "all_checkpoint_checksums_valid": true,
+  "all_budget_exposures_valid": true,
+  "no_nan_inf": true,
+  "no_test_access_detected": true,
+  "canary_excluded": true,
+  "calibration_excluded": true,
+  "pilots_excluded": true,
+  "validation_aggregation_complete": true,
+  "source_validation_complete": true,
+  "figures_complete": true,
+  "checkpoint_reload_ok_all": true,
+  "test_ready": true,
+  "generated_at": "2026-08-05T08:49:45.189208Z",
+  "matrix_id": "lm_baselines_v0_1_final_matrix_r2",
+  "n_expected": 36,
+  "n_valid": 36,
+  "n_failed_audit": 0,
+  "failed_run_ids": [],
+  "tool": {
+    "name": "audit_lm_validation_results",
+    "version": "0.1.0"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-08-04T08:39:49.308911Z",
+  "role": "extension_locked",
+  "locked": true,
+  "n_records": 170,
+  "path": "data/reports/cleaning_holdout_extension_pool.jsonl",
+  "chunk_size": 40,
+  "release_policy": {
+    "description": "After stage-1 labels are complete, evaluate metrics with Wilson CIs. Stop or release next 40 from the locked extension pool.",
+    "stop_if_all": [
+      {
+        "metric": "removal_precision",
+        "op": "ge",
+        "value": 0.9,
+        "ci_low_ge": 0.8
+      },
+      {
+        "metric": "false_removal_rate",
+        "op": "le",
+        "value": 0.1,
+        "ci_high_le": 0.2
+      },
+      {
+        "metric": "useful_text_retention",
+        "op": "ge",
+        "value": 0.9,
+        "ci_low_ge": 0.8
+      }
+    ],
+    "release_next_if": "any_target_unclear_or_missed",
+    "never_release_full_250_at_once": true,
+    "max_extension_chunks": 5
+  },
+  "warning": "Do not label this file until summarize_cleaning_holdout_stage.py recommends releasing the next chunk.",
+  "counts": {
+    "total": 170,
+    "removed": 80,
+    "kept": 90
+  }
+}

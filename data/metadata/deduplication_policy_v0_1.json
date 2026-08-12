@@ -1,0 +1,32 @@
+{
+  "version": "0.1.0",
+  "description": "Exact-only deduplication policy for processed corpus v0.1. No fuzzy, MinHash, or embedding similarity.",
+  "within_source_exact": {
+    "enabled_default": true,
+    "description": "Drop exact duplicate lines within a single source, keeping the first occurrence in file order."
+  },
+  "cross_source_exact": {
+    "enabled_default": false,
+    "description": "Optional: when true, drop exact duplicate lines across sources according to source_priority, while recording all source attributions in metadata."
+  },
+  "source_priority": [
+    "bible",
+    "wikipedia"
+  ],
+  "forbidden_for_v0_1": [
+    "minhash",
+    "simhash",
+    "embedding_similarity",
+    "fuzzy_string_similarity",
+    "near_deduplication_across_bible_wikipedia"
+  ],
+  "logging": {
+    "deduplication_log": "metadata/deduplication_log.jsonl",
+    "deduplication_report": "reports/deduplication_report.md"
+  },
+  "notes": [
+    "Preserve source boundaries in corpus/ (do not merge into one anonymous file).",
+    "If cross-source exact dedup retains only one text instance, still record all source IDs that contained the line.",
+    "Do not run processed-level deduplication against real outputs unless eligibility gates pass."
+  ]
+}

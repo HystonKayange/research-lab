@@ -1,0 +1,2414 @@
+{
+  "character": {
+    "tokenizer_id": "character",
+    "vocab_size": 915,
+    "n_lines": 5258,
+    "coverage": {
+      "unknown_token_count": 70,
+      "unknown_token_rate": 0.00011032152420217837,
+      "lines_with_unknown": 10,
+      "pct_lines_with_unknown": 0.001901863826550019,
+      "character_coverage_note": "Character coverage of the tokenizer alphabet is 1.0 for char models on train; for SentencePiece, character_coverage training param is recorded in config."
+    },
+    "sequence_efficiency": {
+      "total_encoded_tokens": 634509,
+      "tokens_per_line": 120.6749714720426,
+      "tokens_per_word": 7.14191326272188,
+      "characters_per_token": 1.0,
+      "bytes_per_token": 1.0098611682419005,
+      "tokens_per_character": 1.0,
+      "tokens_per_byte": 0.9902351248349631,
+      "avg_sequence_length_expansion_vs_words": 7.14191326272188,
+      "sequence_length_percentiles": {
+        "p50": 114.0,
+        "p90": 207.0,
+        "p95": 242.0,
+        "p99": 306.4300000000003
+      }
+    },
+    "fertility": {
+      "definition": "subword_or_char_tokens / whitespace_delimited_words",
+      "overall": 7.14191326272188,
+      "percentiles": {
+        "p50": 7.12,
+        "p90": 8.333333333333334,
+        "p95": 8.76923076923077,
+        "p99": 10.043000000000028
+      },
+      "note": "Character tokenizer fertility is tokens-per-word at character granularity and is not directly comparable to subword fertility for 'winner' selection."
+    },
+    "vocabulary_usage": {
+      "total_vocabulary_size": 915,
+      "tokens_observed": 214,
+      "unused_vocabulary_entries": 701,
+      "utilization": 0.23387978142076501,
+      "rare_token_pct_observed": 0.1588785046728972,
+      "pct_single_character_types": 1.0,
+      "pct_multi_character_types": 0.0,
+      "average_token_length_chars": 1.0,
+      "longest_tokens": [
+        "<unk>",
+        "M",
+        "o",
+        "t",
+        "e",
+        "r",
+        " ",
+        "i",
+        "y",
+        "a",
+        "n",
+        ",",
+        "“",
+        "I",
+        "d",
+        "w",
+        "c",
+        "h",
+        "A",
+        "b"
+      ],
+      "types_with_punctuation": 21,
+      "types_with_digits": 11,
+      "types_with_w_hat": 1,
+      "types_english_looking_diagnostic": 0,
+      "top_tokens": [
+        {
+          "token": "a",
+          "count": 90247
+        },
+        {
+          "token": " ",
+          "count": 83587
+        },
+        {
+          "token": "i",
+          "count": 48160
+        },
+        {
+          "token": "n",
+          "count": 42910
+        },
+        {
+          "token": "u",
+          "count": 32309
+        },
+        {
+          "token": "e",
+          "count": 31609
+        },
+        {
+          "token": "o",
+          "count": 30934
+        },
+        {
+          "token": "m",
+          "count": 27438
+        },
+        {
+          "token": "k",
+          "count": 25797
+        },
+        {
+          "token": "t",
+          "count": 18973
+        },
+        {
+          "token": "d",
+          "count": 18920
+        },
+        {
+          "token": "l",
+          "count": 17312
+        },
+        {
+          "token": "w",
+          "count": 17138
+        },
+        {
+          "token": "h",
+          "count": 16533
+        },
+        {
+          "token": "s",
+          "count": 13336
+        },
+        {
+          "token": "z",
+          "count": 13142
+        },
+        {
+          "token": "r",
+          "count": 11873
+        },
+        {
+          "token": "p",
+          "count": 11648
+        },
+        {
+          "token": "y",
+          "count": 9354
+        },
+        {
+          "token": "c",
+          "count": 7474
+        },
+        {
+          "token": "b",
+          "count": 7115
+        },
+        {
+          "token": "g",
+          "count": 7102
+        },
+        {
+          "token": ",",
+          "count": 6291
+        },
+        {
+          "token": ".",
+          "count": 5836
+        },
+        {
+          "token": "f",
+          "count": 3256
+        },
+        {
+          "token": "M",
+          "count": 2547
+        },
+        {
+          "token": "v",
+          "count": 2190
+        },
+        {
+          "token": "A",
+          "count": 2187
+        },
+        {
+          "token": "I",
+          "count": 1867
+        },
+        {
+          "token": "Y",
+          "count": 1759
+        },
+        {
+          "token": "N",
+          "count": 1365
+        },
+        {
+          "token": "1",
+          "count": 1331
+        },
+        {
+          "token": "ʼ",
+          "count": 1292
+        },
+        {
+          "token": "j",
+          "count": 1275
+        },
+        {
+          "token": "K",
+          "count": 1254
+        },
+        {
+          "token": "0",
+          "count": 1252
+        },
+        {
+          "token": "S",
+          "count": 941
+        },
+        {
+          "token": "P",
+          "count": 930
+        },
+        {
+          "token": "C",
+          "count": 884
+        },
+        {
+          "token": "2",
+          "count": 879
+        }
+      ]
+    },
+    "totals": {
+      "words": 88843,
+      "characters": 634509,
+      "bytes": 640766
+    },
+    "by_source": {
+      "bible": {
+        "n_lines": 3430,
+        "total_tokens": 457231,
+        "total_words": 63497,
+        "total_characters": 457231,
+        "total_bytes": 462232,
+        "unk_tokens": 0,
+        "unk_rate": 0.0,
+        "fertility": 7.20082838559302,
+        "tokens_per_character": 1.0,
+        "characters_per_token": 1.0
+      },
+      "wikipedia": {
+        "n_lines": 1828,
+        "total_tokens": 177278,
+        "total_words": 25346,
+        "total_characters": 177278,
+        "total_bytes": 178534,
+        "unk_tokens": 70,
+        "unk_rate": 0.00039486005031645215,
+        "fertility": 6.994318630158605,
+        "tokens_per_character": 1.0,
+        "characters_per_token": 1.0
+      }
+    }
+  },
+  "bpe_1000": {
+    "tokenizer_id": "bpe_1000",
+    "vocab_size": 1000,
+    "n_lines": 5258,
+    "coverage": {
+      "unknown_token_count": 34,
+      "unknown_token_rate": 8.945038003257047e-05,
+      "lines_with_unknown": 10,
+      "pct_lines_with_unknown": 0.001901863826550019,
+      "character_coverage_note": "Character coverage of the tokenizer alphabet is 1.0 for char models on train; for SentencePiece, character_coverage training param is recorded in config."
+    },
+    "sequence_efficiency": {
+      "total_encoded_tokens": 380099,
+      "tokens_per_line": 72.28965386078357,
+      "tokens_per_word": 4.2783224339565304,
+      "characters_per_token": 1.6693256230613602,
+      "bytes_per_token": 1.6857871238808837,
+      "tokens_per_character": 0.5990443003960543,
+      "tokens_per_byte": 0.59319470758436,
+      "avg_sequence_length_expansion_vs_words": 4.2783224339565304,
+      "sequence_length_percentiles": {
+        "p50": 68.0,
+        "p90": 122.0,
+        "p95": 142.0,
+        "p99": 185.4300000000003
+      }
+    },
+    "fertility": {
+      "definition": "subword_or_char_tokens / whitespace_delimited_words",
+      "overall": 4.2783224339565304,
+      "percentiles": {
+        "p50": 4.3,
+        "p90": 5.5,
+        "p95": 6.0,
+        "p99": 7.590500000000004
+      },
+      "note": "Character tokenizer fertility is tokens-per-word at character granularity and is not directly comparable to subword fertility for 'winner' selection."
+    },
+    "vocabulary_usage": {
+      "total_vocabulary_size": 1000,
+      "tokens_observed": 329,
+      "unused_vocabulary_entries": 671,
+      "utilization": 0.329,
+      "rare_token_pct_observed": 0.182370820668693,
+      "pct_single_character_types": 0.7325227963525835,
+      "pct_multi_character_types": 0.2674772036474164,
+      "average_token_length_chars": 1.5071099897658242,
+      "longest_tokens": [
+        "Հայաստան",
+        "▁ndipo",
+        "▁kuti",
+        "Արցախ",
+        "ოდერძ",
+        "▁ana",
+        "▁ndi",
+        "▁kwa",
+        "mene",
+        "▁chi",
+        "რებე",
+        "chi",
+        "▁wa",
+        "ali",
+        "tsa",
+        "iri",
+        "era",
+        "▁an",
+        "ira",
+        "ana"
+      ],
+      "types_with_punctuation": 21,
+      "types_with_digits": 11,
+      "types_with_w_hat": 1,
+      "types_english_looking_diagnostic": 21,
+      "top_tokens": [
+        {
+          "token": "▁",
+          "count": 21929
+        },
+        {
+          "token": "o",
+          "count": 16104
+        },
+        {
+          "token": "a",
+          "count": 15860
+        },
+        {
+          "token": "e",
+          "count": 12411
+        },
+        {
+          "token": "u",
+          "count": 12095
+        },
+        {
+          "token": "i",
+          "count": 9605
+        },
+        {
+          "token": "▁m",
+          "count": 7990
+        },
+        {
+          "token": "▁a",
+          "count": 7338
+        },
+        {
+          "token": "an",
+          "count": 6521
+        },
+        {
+          "token": "p",
+          "count": 6300
+        },
+        {
+          "token": ",",
+          "count": 6291
+        },
+        {
+          "token": ".",
+          "count": 5836
+        },
+        {
+          "token": "t",
+          "count": 5493
+        },
+        {
+          "token": "▁ndi",
+          "count": 5398
+        },
+        {
+          "token": "w",
+          "count": 4961
+        },
+        {
+          "token": "on",
+          "count": 4944
+        },
+        {
+          "token": "am",
+          "count": 4863
+        },
+        {
+          "token": "b",
+          "count": 4637
+        },
+        {
+          "token": "m",
+          "count": 4621
+        },
+        {
+          "token": "g",
+          "count": 4565
+        },
+        {
+          "token": "d",
+          "count": 4397
+        },
+        {
+          "token": "▁ku",
+          "count": 4380
+        },
+        {
+          "token": "ka",
+          "count": 4205
+        },
+        {
+          "token": "l",
+          "count": 4061
+        },
+        {
+          "token": "s",
+          "count": 4046
+        },
+        {
+          "token": "k",
+          "count": 3765
+        },
+        {
+          "token": "n",
+          "count": 3649
+        },
+        {
+          "token": "wa",
+          "count": 3615
+        },
+        {
+          "token": "h",
+          "count": 3597
+        },
+        {
+          "token": "ti",
+          "count": 3474
+        },
+        {
+          "token": "r",
+          "count": 3411
+        },
+        {
+          "token": "ul",
+          "count": 3402
+        },
+        {
+          "token": "ku",
+          "count": 3298
+        },
+        {
+          "token": "▁n",
+          "count": 3233
+        },
+        {
+          "token": "y",
+          "count": 3219
+        },
+        {
+          "token": "un",
+          "count": 3122
+        },
+        {
+          "token": "en",
+          "count": 3033
+        },
+        {
+          "token": "er",
+          "count": 2998
+        },
+        {
+          "token": "kh",
+          "count": 2760
+        },
+        {
+          "token": "ma",
+          "count": 2720
+        }
+      ]
+    },
+    "totals": {
+      "words": 88843,
+      "characters": 634509,
+      "bytes": 640766
+    },
+    "by_source": {
+      "bible": {
+        "n_lines": 3430,
+        "total_tokens": 263440,
+        "total_words": 63497,
+        "total_characters": 457231,
+        "total_bytes": 462232,
+        "unk_tokens": 0,
+        "unk_rate": 0.0,
+        "fertility": 4.148857426335103,
+        "tokens_per_character": 0.5761639083964123,
+        "characters_per_token": 1.7356172183419374
+      },
+      "wikipedia": {
+        "n_lines": 1828,
+        "total_tokens": 116659,
+        "total_words": 25346,
+        "total_characters": 177278,
+        "total_bytes": 178534,
+        "unk_tokens": 34,
+        "unk_rate": 0.00029144772370755793,
+        "fertility": 4.602659196717431,
+        "tokens_per_character": 0.6580568372838141,
+        "characters_per_token": 1.5196255753949546
+      }
+    }
+  },
+  "bpe_2000": {
+    "tokenizer_id": "bpe_2000",
+    "vocab_size": 2000,
+    "n_lines": 5258,
+    "coverage": {
+      "unknown_token_count": 34,
+      "unknown_token_rate": 0.00016541470439419297,
+      "lines_with_unknown": 10,
+      "pct_lines_with_unknown": 0.001901863826550019,
+      "character_coverage_note": "Character coverage of the tokenizer alphabet is 1.0 for char models on train; for SentencePiece, character_coverage training param is recorded in config."
+    },
+    "sequence_efficiency": {
+      "total_encoded_tokens": 205544,
+      "tokens_per_line": 39.09166983643971,
+      "tokens_per_word": 2.313564377609941,
+      "characters_per_token": 3.0869740785427937,
+      "bytes_per_token": 3.1174152492896896,
+      "tokens_per_character": 0.3239418195801793,
+      "tokens_per_byte": 0.320778568151244,
+      "avg_sequence_length_expansion_vs_words": 2.313564377609941,
+      "sequence_length_percentiles": {
+        "p50": 36.0,
+        "p90": 65.0,
+        "p95": 77.0,
+        "p99": 105.0
+      }
+    },
+    "fertility": {
+      "definition": "subword_or_char_tokens / whitespace_delimited_words",
+      "overall": 2.313564377609941,
+      "percentiles": {
+        "p50": 2.3,
+        "p90": 3.25,
+        "p95": 3.9682575757575718,
+        "p99": 5.0
+      },
+      "note": "Character tokenizer fertility is tokens-per-word at character granularity and is not directly comparable to subword fertility for 'winner' selection."
+    },
+    "vocabulary_usage": {
+      "total_vocabulary_size": 2000,
+      "tokens_observed": 1325,
+      "unused_vocabulary_entries": 675,
+      "utilization": 0.6625,
+      "rare_token_pct_observed": 0.047547169811320754,
+      "pct_single_character_types": 0.21056603773584906,
+      "pct_multi_character_types": 0.789433962264151,
+      "average_token_length_chars": 2.6869867279025414,
+      "longest_tokens": [
+        "▁chilichonse",
+        "▁akuluakulu",
+        "▁Yerusalemu",
+        "khulupirira",
+        "▁kuchokera",
+        "▁anayankha",
+        "▁kuyambira",
+        "▁adzakhala",
+        "▁kwambiri",
+        "▁ndiponso",
+        "▁ngakhale",
+        "▁zimenezi",
+        "▁anakhala",
+        "▁chifukwa",
+        "▁chakudya",
+        "▁anabwera",
+        "▁malamulo",
+        "▁kumeneko",
+        "▁ankhondo",
+        "▁aliyense"
+      ],
+      "types_with_punctuation": 34,
+      "types_with_digits": 29,
+      "types_with_w_hat": 1,
+      "types_english_looking_diagnostic": 802,
+      "top_tokens": [
+        {
+          "token": ",",
+          "count": 6116
+        },
+        {
+          "token": ".",
+          "count": 5186
+        },
+        {
+          "token": "▁ndi",
+          "count": 4533
+        },
+        {
+          "token": "▁ku",
+          "count": 2911
+        },
+        {
+          "token": "▁m",
+          "count": 2376
+        },
+        {
+          "token": "▁a",
+          "count": 2048
+        },
+        {
+          "token": "▁kuti",
+          "count": 1558
+        },
+        {
+          "token": "▁wa",
+          "count": 1444
+        },
+        {
+          "token": "▁ana",
+          "count": 1396
+        },
+        {
+          "token": "▁",
+          "count": 1372
+        },
+        {
+          "token": "▁pa",
+          "count": 1355
+        },
+        {
+          "token": "s",
+          "count": 1340
+        },
+        {
+          "token": "ka",
+          "count": 1333
+        },
+        {
+          "token": "ʼ",
+          "count": 1292
+        },
+        {
+          "token": "wa",
+          "count": 1260
+        },
+        {
+          "token": "▁ndipo",
+          "count": 1169
+        },
+        {
+          "token": "▁ya",
+          "count": 1143
+        },
+        {
+          "token": "tsa",
+          "count": 1083
+        },
+        {
+          "token": "▁la",
+          "count": 1062
+        },
+        {
+          "token": "▁A",
+          "count": 1060
+        },
+        {
+          "token": "u",
+          "count": 1048
+        },
+        {
+          "token": "▁chi",
+          "count": 1042
+        },
+        {
+          "token": "o",
+          "count": 1010
+        },
+        {
+          "token": "▁kwa",
+          "count": 1008
+        },
+        {
+          "token": "ku",
+          "count": 945
+        },
+        {
+          "token": "▁ma",
+          "count": 928
+        },
+        {
+          "token": "▁mu",
+          "count": 922
+        },
+        {
+          "token": "ti",
+          "count": 916
+        },
+        {
+          "token": "▁o",
+          "count": 891
+        },
+        {
+          "token": "ma",
+          "count": 864
+        },
+        {
+          "token": "▁za",
+          "count": 864
+        },
+        {
+          "token": "a",
+          "count": 862
+        },
+        {
+          "token": "d",
+          "count": 861
+        },
+        {
+          "token": "▁“",
+          "count": 857
+        },
+        {
+          "token": "k",
+          "count": 857
+        },
+        {
+          "token": "i",
+          "count": 854
+        },
+        {
+          "token": "e",
+          "count": 850
+        },
+        {
+          "token": "zi",
+          "count": 847
+        },
+        {
+          "token": "m",
+          "count": 846
+        },
+        {
+          "token": "▁Yehova",
+          "count": 842
+        }
+      ]
+    },
+    "totals": {
+      "words": 88843,
+      "characters": 634509,
+      "bytes": 640766
+    },
+    "by_source": {
+      "bible": {
+        "n_lines": 3430,
+        "total_tokens": 137006,
+        "total_words": 63497,
+        "total_characters": 457231,
+        "total_bytes": 462232,
+        "unk_tokens": 0,
+        "unk_rate": 0.0,
+        "fertility": 2.157676740633416,
+        "tokens_per_character": 0.2996428501129626,
+        "characters_per_token": 3.33730639534035
+      },
+      "wikipedia": {
+        "n_lines": 1828,
+        "total_tokens": 68538,
+        "total_words": 25346,
+        "total_characters": 177278,
+        "total_bytes": 178534,
+        "unk_tokens": 34,
+        "unk_rate": 0.0004960751699786979,
+        "fertility": 2.7040953207606724,
+        "tokens_per_character": 0.38661311612269994,
+        "characters_per_token": 2.5865651171612827
+      }
+    }
+  },
+  "bpe_4000": {
+    "tokenizer_id": "bpe_4000",
+    "vocab_size": 4000,
+    "n_lines": 5258,
+    "coverage": {
+      "unknown_token_count": 34,
+      "unknown_token_rate": 0.00020529665366454526,
+      "lines_with_unknown": 10,
+      "pct_lines_with_unknown": 0.001901863826550019,
+      "character_coverage_note": "Character coverage of the tokenizer alphabet is 1.0 for char models on train; for SentencePiece, character_coverage training param is recorded in config."
+    },
+    "sequence_efficiency": {
+      "total_encoded_tokens": 165614,
+      "tokens_per_line": 31.497527577025483,
+      "tokens_per_word": 1.8641198518735298,
+      "characters_per_token": 3.8312521888246165,
+      "bytes_per_token": 3.869032811235765,
+      "tokens_per_character": 0.26101127013170816,
+      "tokens_per_byte": 0.2584625276622043,
+      "avg_sequence_length_expansion_vs_words": 1.8641198518735298,
+      "sequence_length_percentiles": {
+        "p50": 29.0,
+        "p90": 53.0,
+        "p95": 62.0,
+        "p99": 85.0
+      }
+    },
+    "fertility": {
+      "definition": "subword_or_char_tokens / whitespace_delimited_words",
+      "overall": 1.8641198518735298,
+      "percentiles": {
+        "p50": 1.8333333333333333,
+        "p90": 2.625,
+        "p95": 3.111111111111111,
+        "p99": 4.5
+      },
+      "note": "Character tokenizer fertility is tokens-per-word at character granularity and is not directly comparable to subword fertility for 'winner' selection."
+    },
+    "vocabulary_usage": {
+      "total_vocabulary_size": 4000,
+      "tokens_observed": 3246,
+      "unused_vocabulary_entries": 754,
+      "utilization": 0.8115,
+      "rare_token_pct_observed": 0.034195933456561925,
+      "pct_single_character_types": 0.08995686999383858,
+      "pct_multi_character_types": 0.9100431300061614,
+      "average_token_length_chars": 3.3296943495115148,
+      "longest_tokens": [
+        "▁Wamphamvuzonse",
+        "▁Nebukadinezara",
+        "▁chikhulupiriro",
+        "▁kuphatikizapo",
+        "▁chikondwerero",
+        "▁osiyanasiyana",
+        "▁chiwerengero",
+        "▁chizindikiro",
+        "▁makilogalamu",
+        "▁Chiwerengero",
+        "▁chiyembekezo",
+        "▁chipulumutso",
+        "khazikitsidwa",
+        "▁chilichonse",
+        "▁zizindikiro",
+        "▁analamulira",
+        "▁anayankhula",
+        "▁anayimirira",
+        "▁kuphatikiza",
+        "siyanasiyana"
+      ],
+      "types_with_punctuation": 70,
+      "types_with_digits": 92,
+      "types_with_w_hat": 2,
+      "types_english_looking_diagnostic": 2510,
+      "top_tokens": [
+        {
+          "token": ",",
+          "count": 5789
+        },
+        {
+          "token": ".",
+          "count": 4962
+        },
+        {
+          "token": "▁ndi",
+          "count": 4336
+        },
+        {
+          "token": "▁ku",
+          "count": 2363
+        },
+        {
+          "token": "▁kuti",
+          "count": 1558
+        },
+        {
+          "token": "▁a",
+          "count": 1546
+        },
+        {
+          "token": "▁m",
+          "count": 1513
+        },
+        {
+          "token": "ʼ",
+          "count": 1292
+        },
+        {
+          "token": "▁wa",
+          "count": 1259
+        },
+        {
+          "token": "▁pa",
+          "count": 1229
+        },
+        {
+          "token": "▁ndipo",
+          "count": 1169
+        },
+        {
+          "token": "▁ya",
+          "count": 1040
+        },
+        {
+          "token": "▁ana",
+          "count": 971
+        },
+        {
+          "token": "▁kwa",
+          "count": 956
+        },
+        {
+          "token": "▁la",
+          "count": 953
+        },
+        {
+          "token": "▁“",
+          "count": 857
+        },
+        {
+          "token": "▁Yehova",
+          "count": 842
+        },
+        {
+          "token": "▁anthu",
+          "count": 801
+        },
+        {
+          "token": "▁amene",
+          "count": 781
+        },
+        {
+          "token": "▁mu",
+          "count": 724
+        },
+        {
+          "token": "▁cha",
+          "count": 661
+        },
+        {
+          "token": "ka",
+          "count": 635
+        },
+        {
+          "token": "▁za",
+          "count": 634
+        },
+        {
+          "token": "wa",
+          "count": 618
+        },
+        {
+          "token": "▁o",
+          "count": 609
+        },
+        {
+          "token": "s",
+          "count": 529
+        },
+        {
+          "token": "▁Mulungu",
+          "count": 523
+        },
+        {
+          "token": "▁wo",
+          "count": 522
+        },
+        {
+          "token": "▁",
+          "count": 522
+        },
+        {
+          "token": "▁chi",
+          "count": 504
+        },
+        {
+          "token": ";",
+          "count": 473
+        },
+        {
+          "token": "▁ngati",
+          "count": 470
+        },
+        {
+          "token": "ti",
+          "count": 469
+        },
+        {
+          "token": ".”",
+          "count": 463
+        },
+        {
+          "token": "▁ma",
+          "count": 444
+        },
+        {
+          "token": "▁zo",
+          "count": 443
+        },
+        {
+          "token": "▁ake",
+          "count": 422
+        },
+        {
+          "token": "▁A",
+          "count": 421
+        },
+        {
+          "token": "▁mwa",
+          "count": 420
+        },
+        {
+          "token": "▁M",
+          "count": 416
+        }
+      ]
+    },
+    "totals": {
+      "words": 88843,
+      "characters": 634509,
+      "bytes": 640766
+    },
+    "by_source": {
+      "bible": {
+        "n_lines": 3430,
+        "total_tokens": 110168,
+        "total_words": 63497,
+        "total_characters": 457231,
+        "total_bytes": 462232,
+        "unk_tokens": 0,
+        "unk_rate": 0.0,
+        "fertility": 1.7350111028867505,
+        "tokens_per_character": 0.2409460425911629,
+        "characters_per_token": 4.150306804153656
+      },
+      "wikipedia": {
+        "n_lines": 1828,
+        "total_tokens": 55446,
+        "total_words": 25346,
+        "total_characters": 177278,
+        "total_bytes": 178534,
+        "unk_tokens": 34,
+        "unk_rate": 0.0006132092486383148,
+        "fertility": 2.187564112680502,
+        "tokens_per_character": 0.3127630049978001,
+        "characters_per_token": 3.197309093532446
+      }
+    }
+  },
+  "bpe_8000": {
+    "tokenizer_id": "bpe_8000",
+    "vocab_size": 8000,
+    "n_lines": 5258,
+    "coverage": {
+      "unknown_token_count": 34,
+      "unknown_token_rate": 0.00023452481134548264,
+      "lines_with_unknown": 10,
+      "pct_lines_with_unknown": 0.001901863826550019,
+      "character_coverage_note": "Character coverage of the tokenizer alphabet is 1.0 for char models on train; for SentencePiece, character_coverage training param is recorded in config."
+    },
+    "sequence_efficiency": {
+      "total_encoded_tokens": 144974,
+      "tokens_per_line": 27.572080639026247,
+      "tokens_per_word": 1.631799916707,
+      "characters_per_token": 4.376708927117966,
+      "bytes_per_token": 4.419868390194104,
+      "tokens_per_character": 0.2284821807098087,
+      "tokens_per_byte": 0.22625108073774203,
+      "avg_sequence_length_expansion_vs_words": 1.631799916707,
+      "sequence_length_percentiles": {
+        "p50": 25.0,
+        "p90": 46.0,
+        "p95": 54.0,
+        "p99": 74.0
+      }
+    },
+    "fertility": {
+      "definition": "subword_or_char_tokens / whitespace_delimited_words",
+      "overall": 1.631799916707,
+      "percentiles": {
+        "p50": 1.6,
+        "p90": 2.25,
+        "p95": 2.719642857142844,
+        "p99": 4.0
+      },
+      "note": "Character tokenizer fertility is tokens-per-word at character granularity and is not directly comparable to subword fertility for 'winner' selection."
+    },
+    "vocabulary_usage": {
+      "total_vocabulary_size": 8000,
+      "tokens_observed": 6660,
+      "unused_vocabulary_entries": 1340,
+      "utilization": 0.8325,
+      "rare_token_pct_observed": 0.09054054054054055,
+      "pct_single_character_types": 0.04504504504504504,
+      "pct_multi_character_types": 0.954954954954955,
+      "average_token_length_chars": 3.8018541255673433,
+      "longest_tokens": [
+        "▁Wammwambamwamba",
+        "▁anasonkhanitsa",
+        "▁ndikukupatsani",
+        "▁Wamphamvuzonse",
+        "▁sizinalembedwe",
+        "▁Nebukadinezara",
+        "▁osakhulupirika",
+        "▁anakhulupirira",
+        "▁chikhulupiriro",
+        "▁amakhulupirira",
+        "▁zosiyanasiyana",
+        "▁yosiyanasiyana",
+        "▁mokhulupirika",
+        "▁kukhulupirika",
+        "▁ndidzakupatsa",
+        "▁kuphatikizapo",
+        "▁chosasinthika",
+        "▁ndikukuwuzani",
+        "▁chimodzimodzi",
+        "▁chikondwerero"
+      ],
+      "types_with_punctuation": 127,
+      "types_with_digits": 211,
+      "types_with_w_hat": 3,
+      "types_english_looking_diagnostic": 5657,
+      "top_tokens": [
+        {
+          "token": ",",
+          "count": 5746
+        },
+        {
+          "token": ".",
+          "count": 4932
+        },
+        {
+          "token": "▁ndi",
+          "count": 4263
+        },
+        {
+          "token": "▁ku",
+          "count": 1874
+        },
+        {
+          "token": "▁kuti",
+          "count": 1558
+        },
+        {
+          "token": "▁a",
+          "count": 1333
+        },
+        {
+          "token": "ʼ",
+          "count": 1292
+        },
+        {
+          "token": "▁m",
+          "count": 1202
+        },
+        {
+          "token": "▁wa",
+          "count": 1195
+        },
+        {
+          "token": "▁ndipo",
+          "count": 1169
+        },
+        {
+          "token": "▁pa",
+          "count": 1163
+        },
+        {
+          "token": "▁ya",
+          "count": 989
+        },
+        {
+          "token": "▁kwa",
+          "count": 930
+        },
+        {
+          "token": "▁la",
+          "count": 915
+        },
+        {
+          "token": "▁“",
+          "count": 857
+        },
+        {
+          "token": "▁Yehova",
+          "count": 840
+        },
+        {
+          "token": "▁anthu",
+          "count": 793
+        },
+        {
+          "token": "▁amene",
+          "count": 753
+        },
+        {
+          "token": "▁ana",
+          "count": 657
+        },
+        {
+          "token": "▁mu",
+          "count": 645
+        },
+        {
+          "token": "▁cha",
+          "count": 625
+        },
+        {
+          "token": "▁za",
+          "count": 574
+        },
+        {
+          "token": "▁Mulungu",
+          "count": 522
+        },
+        {
+          "token": ";",
+          "count": 473
+        },
+        {
+          "token": "▁ngati",
+          "count": 470
+        },
+        {
+          "token": ".”",
+          "count": 463
+        },
+        {
+          "token": "▁ake",
+          "count": 415
+        },
+        {
+          "token": "▁mwa",
+          "count": 380
+        },
+        {
+          "token": "▁anali",
+          "count": 363
+        },
+        {
+          "token": "▁o",
+          "count": 348
+        },
+        {
+          "token": "▁Iye",
+          "count": 343
+        },
+        {
+          "token": "s",
+          "count": 342
+        },
+        {
+          "token": "▁dziko",
+          "count": 331
+        },
+        {
+          "token": "▁chifukwa",
+          "count": 331
+        },
+        {
+          "token": ":",
+          "count": 326
+        },
+        {
+          "token": "'",
+          "count": 319
+        },
+        {
+          "token": "wa",
+          "count": 315
+        },
+        {
+          "token": "▁wo",
+          "count": 311
+        },
+        {
+          "token": "▁mwana",
+          "count": 296
+        },
+        {
+          "token": "▁onse",
+          "count": 284
+        }
+      ]
+    },
+    "totals": {
+      "words": 88843,
+      "characters": 634509,
+      "bytes": 640766
+    },
+    "by_source": {
+      "bible": {
+        "n_lines": 3430,
+        "total_tokens": 97577,
+        "total_words": 63497,
+        "total_characters": 457231,
+        "total_bytes": 462232,
+        "unk_tokens": 0,
+        "unk_rate": 0.0,
+        "fertility": 1.5367182701544955,
+        "tokens_per_character": 0.21340853966594567,
+        "characters_per_token": 4.685848099449665
+      },
+      "wikipedia": {
+        "n_lines": 1828,
+        "total_tokens": 47397,
+        "total_words": 25346,
+        "total_characters": 177278,
+        "total_bytes": 178534,
+        "unk_tokens": 34,
+        "unk_rate": 0.0007173449796400616,
+        "fertility": 1.8699992109208554,
+        "tokens_per_character": 0.2673597400692697,
+        "characters_per_token": 3.7402789206067895
+      }
+    }
+  },
+  "unigram_1000": {
+    "tokenizer_id": "unigram_1000",
+    "vocab_size": 1000,
+    "n_lines": 5258,
+    "coverage": {
+      "unknown_token_count": 34,
+      "unknown_token_rate": 9.13546279179743e-05,
+      "lines_with_unknown": 10,
+      "pct_lines_with_unknown": 0.001901863826550019,
+      "character_coverage_note": "Character coverage of the tokenizer alphabet is 1.0 for char models on train; for SentencePiece, character_coverage training param is recorded in config."
+    },
+    "sequence_efficiency": {
+      "total_encoded_tokens": 372176,
+      "tokens_per_line": 70.78280715100799,
+      "tokens_per_word": 4.189142644890425,
+      "characters_per_token": 1.7048627531060574,
+      "bytes_per_token": 1.7216746915437857,
+      "tokens_per_character": 0.586557479878142,
+      "tokens_per_byte": 0.5808298193100133,
+      "avg_sequence_length_expansion_vs_words": 4.189142644890425,
+      "sequence_length_percentiles": {
+        "p50": 66.0,
+        "p90": 118.0,
+        "p95": 139.14999999999964,
+        "p99": 180.0
+      }
+    },
+    "fertility": {
+      "definition": "subword_or_char_tokens / whitespace_delimited_words",
+      "overall": 4.189142644890425,
+      "percentiles": {
+        "p50": 4.2,
+        "p90": 5.444444444444445,
+        "p95": 6.0,
+        "p99": 7.576547619047623
+      },
+      "note": "Character tokenizer fertility is tokens-per-word at character granularity and is not directly comparable to subword fertility for 'winner' selection."
+    },
+    "vocabulary_usage": {
+      "total_vocabulary_size": 1000,
+      "tokens_observed": 328,
+      "unused_vocabulary_entries": 672,
+      "utilization": 0.328,
+      "rare_token_pct_observed": 0.18292682926829268,
+      "pct_single_character_types": 0.7195121951219512,
+      "pct_multi_character_types": 0.2804878048780488,
+      "average_token_length_chars": 1.5493368728773484,
+      "longest_tokens": [
+        "Հայաստան",
+        "▁ndipo",
+        "▁amene",
+        "▁anthu",
+        "▁kuti",
+        "Արցախ",
+        "ოდერძ",
+        "▁ana",
+        "▁ndi",
+        "▁kwa",
+        "mene",
+        "▁chi",
+        "▁cha",
+        "რებე",
+        "▁wa",
+        "chi",
+        "tsa",
+        "nga",
+        "nso",
+        "▁wo"
+      ],
+      "types_with_punctuation": 21,
+      "types_with_digits": 11,
+      "types_with_w_hat": 1,
+      "types_english_looking_diagnostic": 22,
+      "top_tokens": [
+        {
+          "token": "▁",
+          "count": 25704
+        },
+        {
+          "token": "o",
+          "count": 14579
+        },
+        {
+          "token": "a",
+          "count": 12300
+        },
+        {
+          "token": "h",
+          "count": 10797
+        },
+        {
+          "token": "u",
+          "count": 10071
+        },
+        {
+          "token": "n",
+          "count": 10051
+        },
+        {
+          "token": "e",
+          "count": 9686
+        },
+        {
+          "token": "▁a",
+          "count": 7460
+        },
+        {
+          "token": "i",
+          "count": 7003
+        },
+        {
+          "token": "t",
+          "count": 6396
+        },
+        {
+          "token": ",",
+          "count": 6291
+        },
+        {
+          "token": "m",
+          "count": 5980
+        },
+        {
+          "token": ".",
+          "count": 5836
+        },
+        {
+          "token": "b",
+          "count": 5835
+        },
+        {
+          "token": "na",
+          "count": 5764
+        },
+        {
+          "token": "d",
+          "count": 5740
+        },
+        {
+          "token": "ka",
+          "count": 5273
+        },
+        {
+          "token": "▁ndi",
+          "count": 5247
+        },
+        {
+          "token": "▁m",
+          "count": 5186
+        },
+        {
+          "token": "li",
+          "count": 5033
+        },
+        {
+          "token": "ra",
+          "count": 5000
+        },
+        {
+          "token": "s",
+          "count": 4646
+        },
+        {
+          "token": "▁ku",
+          "count": 4380
+        },
+        {
+          "token": "ma",
+          "count": 4327
+        },
+        {
+          "token": "wa",
+          "count": 4279
+        },
+        {
+          "token": "k",
+          "count": 3827
+        },
+        {
+          "token": "ti",
+          "count": 3474
+        },
+        {
+          "token": "la",
+          "count": 3425
+        },
+        {
+          "token": "ku",
+          "count": 3298
+        },
+        {
+          "token": "p",
+          "count": 3136
+        },
+        {
+          "token": "▁ana",
+          "count": 3032
+        },
+        {
+          "token": "▁pa",
+          "count": 2800
+        },
+        {
+          "token": "ko",
+          "count": 2766
+        },
+        {
+          "token": "nga",
+          "count": 2625
+        },
+        {
+          "token": "mu",
+          "count": 2624
+        },
+        {
+          "token": "c",
+          "count": 2563
+        },
+        {
+          "token": "▁wa",
+          "count": 2523
+        },
+        {
+          "token": "sa",
+          "count": 2460
+        },
+        {
+          "token": "ri",
+          "count": 2456
+        },
+        {
+          "token": "lu",
+          "count": 2443
+        }
+      ]
+    },
+    "totals": {
+      "words": 88843,
+      "characters": 634509,
+      "bytes": 640766
+    },
+    "by_source": {
+      "bible": {
+        "n_lines": 3430,
+        "total_tokens": 256998,
+        "total_words": 63497,
+        "total_characters": 457231,
+        "total_bytes": 462232,
+        "unk_tokens": 0,
+        "unk_rate": 0.0,
+        "fertility": 4.047403814353434,
+        "tokens_per_character": 0.5620747499622729,
+        "characters_per_token": 1.7791227947299202
+      },
+      "wikipedia": {
+        "n_lines": 1828,
+        "total_tokens": 115178,
+        "total_words": 25346,
+        "total_characters": 177278,
+        "total_bytes": 178534,
+        "unk_tokens": 34,
+        "unk_rate": 0.0002951952629842505,
+        "fertility": 4.544227886056971,
+        "tokens_per_character": 0.6497027267906903,
+        "characters_per_token": 1.5391654656271163
+      }
+    }
+  },
+  "unigram_2000": {
+    "tokenizer_id": "unigram_2000",
+    "vocab_size": 2000,
+    "n_lines": 5258,
+    "coverage": {
+      "unknown_token_count": 34,
+      "unknown_token_rate": 0.0001717848445347157,
+      "lines_with_unknown": 10,
+      "pct_lines_with_unknown": 0.001901863826550019,
+      "character_coverage_note": "Character coverage of the tokenizer alphabet is 1.0 for char models on train; for SentencePiece, character_coverage training param is recorded in config."
+    },
+    "sequence_efficiency": {
+      "total_encoded_tokens": 197922,
+      "tokens_per_line": 37.64206922784329,
+      "tokens_per_word": 2.2277725875983476,
+      "characters_per_token": 3.205853821202292,
+      "bytes_per_token": 3.237467285092107,
+      "tokens_per_character": 0.31192938161633643,
+      "tokens_per_byte": 0.3088834301445457,
+      "avg_sequence_length_expansion_vs_words": 2.2277725875983476,
+      "sequence_length_percentiles": {
+        "p50": 34.0,
+        "p90": 63.0,
+        "p95": 74.0,
+        "p99": 101.86000000000058
+      }
+    },
+    "fertility": {
+      "definition": "subword_or_char_tokens / whitespace_delimited_words",
+      "overall": 2.2277725875983476,
+      "percentiles": {
+        "p50": 2.210526315789474,
+        "p90": 3.2222222222222223,
+        "p95": 4.0,
+        "p99": 5.0
+      },
+      "note": "Character tokenizer fertility is tokens-per-word at character granularity and is not directly comparable to subword fertility for 'winner' selection."
+    },
+    "vocabulary_usage": {
+      "total_vocabulary_size": 2000,
+      "tokens_observed": 1326,
+      "unused_vocabulary_entries": 674,
+      "utilization": 0.663,
+      "rare_token_pct_observed": 0.04675716440422323,
+      "pct_single_character_types": 0.19457013574660634,
+      "pct_multi_character_types": 0.8054298642533937,
+      "average_token_length_chars": 2.799501823950849,
+      "longest_tokens": [
+        "▁Wamphamvuzonse",
+        "▁chikhulupiriro",
+        "▁chizindikiro",
+        "▁Chiwerengero",
+        "khazikitsidwa",
+        "▁chilichonse",
+        "▁zizindikiro",
+        "▁Purezidenti",
+        "khulupirika",
+        "mlengalenga",
+        "▁akuluakulu",
+        "sonkhanitsa",
+        "▁atsogoleri",
+        "gwiritsidwa",
+        "▁mtsogoleri",
+        "▁Yerusalemu",
+        "▁pafupifupi",
+        "▁chachikulu",
+        "khulupirira",
+        "▁maphunziro"
+      ],
+      "types_with_punctuation": 32,
+      "types_with_digits": 37,
+      "types_with_w_hat": 1,
+      "types_english_looking_diagnostic": 823,
+      "top_tokens": [
+        {
+          "token": ",",
+          "count": 6267
+        },
+        {
+          "token": ".",
+          "count": 5230
+        },
+        {
+          "token": "▁ndi",
+          "count": 4626
+        },
+        {
+          "token": "▁ku",
+          "count": 3372
+        },
+        {
+          "token": "▁",
+          "count": 3161
+        },
+        {
+          "token": "▁a",
+          "count": 2262
+        },
+        {
+          "token": "▁m",
+          "count": 1848
+        },
+        {
+          "token": "▁ana",
+          "count": 1733
+        },
+        {
+          "token": "n",
+          "count": 1705
+        },
+        {
+          "token": "▁wa",
+          "count": 1649
+        },
+        {
+          "token": "ka",
+          "count": 1642
+        },
+        {
+          "token": "ni",
+          "count": 1640
+        },
+        {
+          "token": "li",
+          "count": 1635
+        },
+        {
+          "token": "ra",
+          "count": 1600
+        },
+        {
+          "token": "ma",
+          "count": 1580
+        },
+        {
+          "token": "▁pa",
+          "count": 1577
+        },
+        {
+          "token": "▁kuti",
+          "count": 1558
+        },
+        {
+          "token": "u",
+          "count": 1479
+        },
+        {
+          "token": "wa",
+          "count": 1403
+        },
+        {
+          "token": "i",
+          "count": 1336
+        },
+        {
+          "token": "ʼ",
+          "count": 1292
+        },
+        {
+          "token": "la",
+          "count": 1275
+        },
+        {
+          "token": "▁ya",
+          "count": 1269
+        },
+        {
+          "token": "▁ndipo",
+          "count": 1169
+        },
+        {
+          "token": "re",
+          "count": 1146
+        },
+        {
+          "token": "▁la",
+          "count": 1146
+        },
+        {
+          "token": "sa",
+          "count": 1116
+        },
+        {
+          "token": "na",
+          "count": 1097
+        },
+        {
+          "token": "zi",
+          "count": 1087
+        },
+        {
+          "token": "mu",
+          "count": 1075
+        },
+        {
+          "token": "s",
+          "count": 1074
+        },
+        {
+          "token": "▁A",
+          "count": 1063
+        },
+        {
+          "token": "▁kwa",
+          "count": 1046
+        },
+        {
+          "token": "ku",
+          "count": 1011
+        },
+        {
+          "token": "ti",
+          "count": 948
+        },
+        {
+          "token": "▁za",
+          "count": 941
+        },
+        {
+          "token": "▁mu",
+          "count": 917
+        },
+        {
+          "token": "ya",
+          "count": 916
+        },
+        {
+          "token": "a",
+          "count": 865
+        },
+        {
+          "token": "▁“",
+          "count": 857
+        }
+      ]
+    },
+    "totals": {
+      "words": 88843,
+      "characters": 634509,
+      "bytes": 640766
+    },
+    "by_source": {
+      "bible": {
+        "n_lines": 3430,
+        "total_tokens": 130413,
+        "total_words": 63497,
+        "total_characters": 457231,
+        "total_bytes": 462232,
+        "unk_tokens": 0,
+        "unk_rate": 0.0,
+        "fertility": 2.0538450635463095,
+        "tokens_per_character": 0.2852234428549245,
+        "characters_per_token": 3.50602317253648
+      },
+      "wikipedia": {
+        "n_lines": 1828,
+        "total_tokens": 67509,
+        "total_words": 25346,
+        "total_characters": 177278,
+        "total_bytes": 178534,
+        "unk_tokens": 34,
+        "unk_rate": 0.0005036365521634153,
+        "fertility": 2.6634971987690363,
+        "tokens_per_character": 0.3808086733830481,
+        "characters_per_token": 2.625990608659586
+      }
+    }
+  },
+  "unigram_4000": {
+    "tokenizer_id": "unigram_4000",
+    "vocab_size": 4000,
+    "n_lines": 5258,
+    "coverage": {
+      "unknown_token_count": 34,
+      "unknown_token_rate": 0.00020831673947540943,
+      "lines_with_unknown": 10,
+      "pct_lines_with_unknown": 0.001901863826550019,
+      "character_coverage_note": "Character coverage of the tokenizer alphabet is 1.0 for char models on train; for SentencePiece, character_coverage training param is recorded in config."
+    },
+    "sequence_efficiency": {
+      "total_encoded_tokens": 163213,
+      "tokens_per_line": 31.040890072270827,
+      "tokens_per_word": 1.837094650113121,
+      "characters_per_token": 3.8876131190530168,
+      "bytes_per_token": 3.9259495260794175,
+      "tokens_per_character": 0.2572272418515734,
+      "tokens_per_byte": 0.25471544994584605,
+      "avg_sequence_length_expansion_vs_words": 1.837094650113121,
+      "sequence_length_percentiles": {
+        "p50": 28.0,
+        "p90": 52.0,
+        "p95": 61.0,
+        "p99": 85.0
+      }
+    },
+    "fertility": {
+      "definition": "subword_or_char_tokens / whitespace_delimited_words",
+      "overall": 1.837094650113121,
+      "percentiles": {
+        "p50": 1.8,
+        "p90": 2.6666666666666665,
+        "p95": 3.202352941176465,
+        "p99": 4.675625000000006
+      },
+      "note": "Character tokenizer fertility is tokens-per-word at character granularity and is not directly comparable to subword fertility for 'winner' selection."
+    },
+    "vocabulary_usage": {
+      "total_vocabulary_size": 4000,
+      "tokens_observed": 3250,
+      "unused_vocabulary_entries": 750,
+      "utilization": 0.8125,
+      "rare_token_pct_observed": 0.043076923076923075,
+      "pct_single_character_types": 0.08615384615384615,
+      "pct_multi_character_types": 0.9138461538461539,
+      "average_token_length_chars": 3.3848039065515616,
+      "longest_tokens": [
+        "▁Wammwambamwamba",
+        "▁Wamphamvuzonse",
+        "▁Nebukadinezara",
+        "▁chikhulupiriro",
+        "▁zosiyanasiyana",
+        "▁yosiyanasiyana",
+        "mtengowapatali",
+        "▁kuphatikizapo",
+        "▁chosasinthika",
+        "▁ndikukuwuzani",
+        "▁chimodzimodzi",
+        "▁chikondwerero",
+        "▁osiyanasiyana",
+        "▁sizinalembedw",
+        "chikhulupiriro",
+        "▁International",
+        "▁chakumadzulo",
+        "kwaniritsidwa",
+        "▁chiwerengero",
+        "▁chizindikiro"
+      ],
+      "types_with_punctuation": 47,
+      "types_with_digits": 126,
+      "types_with_w_hat": 1,
+      "types_english_looking_diagnostic": 2567,
+      "top_tokens": [
+        {
+          "token": ",",
+          "count": 6130
+        },
+        {
+          "token": ".",
+          "count": 5214
+        },
+        {
+          "token": "▁ndi",
+          "count": 4482
+        },
+        {
+          "token": "▁ku",
+          "count": 2758
+        },
+        {
+          "token": "▁a",
+          "count": 1824
+        },
+        {
+          "token": "▁kuti",
+          "count": 1558
+        },
+        {
+          "token": "▁",
+          "count": 1522
+        },
+        {
+          "token": "▁wa",
+          "count": 1455
+        },
+        {
+          "token": "▁m",
+          "count": 1421
+        },
+        {
+          "token": "▁pa",
+          "count": 1330
+        },
+        {
+          "token": "ʼ",
+          "count": 1292
+        },
+        {
+          "token": "▁ndipo",
+          "count": 1169
+        },
+        {
+          "token": "▁ana",
+          "count": 1158
+        },
+        {
+          "token": "▁ya",
+          "count": 1136
+        },
+        {
+          "token": "▁la",
+          "count": 1021
+        },
+        {
+          "token": "▁kwa",
+          "count": 950
+        },
+        {
+          "token": "ni",
+          "count": 937
+        },
+        {
+          "token": "▁“",
+          "count": 857
+        },
+        {
+          "token": "▁Yehova",
+          "count": 842
+        },
+        {
+          "token": "▁anthu",
+          "count": 801
+        },
+        {
+          "token": "ra",
+          "count": 790
+        },
+        {
+          "token": "▁amene",
+          "count": 782
+        },
+        {
+          "token": "n",
+          "count": 774
+        },
+        {
+          "token": "ka",
+          "count": 765
+        },
+        {
+          "token": "wa",
+          "count": 758
+        },
+        {
+          "token": "▁za",
+          "count": 753
+        },
+        {
+          "token": "▁mu",
+          "count": 752
+        },
+        {
+          "token": "li",
+          "count": 747
+        },
+        {
+          "token": "▁cha",
+          "count": 728
+        },
+        {
+          "token": "i",
+          "count": 682
+        },
+        {
+          "token": "ma",
+          "count": 652
+        },
+        {
+          "token": "la",
+          "count": 652
+        },
+        {
+          "token": "▁o",
+          "count": 650
+        },
+        {
+          "token": "ti",
+          "count": 627
+        },
+        {
+          "token": "s",
+          "count": 623
+        },
+        {
+          "token": "na",
+          "count": 597
+        },
+        {
+          "token": "u",
+          "count": 595
+        },
+        {
+          "token": "re",
+          "count": 590
+        },
+        {
+          "token": "▁wo",
+          "count": 574
+        },
+        {
+          "token": "▁A",
+          "count": 574
+        }
+      ]
+    },
+    "totals": {
+      "words": 88843,
+      "characters": 634509,
+      "bytes": 640766
+    },
+    "by_source": {
+      "bible": {
+        "n_lines": 3430,
+        "total_tokens": 108074,
+        "total_words": 63497,
+        "total_characters": 457231,
+        "total_bytes": 462232,
+        "unk_tokens": 0,
+        "unk_rate": 0.0,
+        "fertility": 1.7020331669212718,
+        "tokens_per_character": 0.2363663006226612,
+        "characters_per_token": 4.230721542646705
+      },
+      "wikipedia": {
+        "n_lines": 1828,
+        "total_tokens": 55139,
+        "total_words": 25346,
+        "total_characters": 177278,
+        "total_bytes": 178534,
+        "unk_tokens": 34,
+        "unk_rate": 0.0006166234425724079,
+        "fertility": 2.1754517478103055,
+        "tokens_per_character": 0.31103126163426936,
+        "characters_per_token": 3.215110901539745
+      }
+    }
+  },
+  "unigram_8000": {
+    "tokenizer_id": "unigram_8000",
+    "vocab_size": 8000,
+    "n_lines": 5258,
+    "coverage": {
+      "unknown_token_count": 34,
+      "unknown_token_rate": 0.00023491532684322166,
+      "lines_with_unknown": 10,
+      "pct_lines_with_unknown": 0.001901863826550019,
+      "character_coverage_note": "Character coverage of the tokenizer alphabet is 1.0 for char models on train; for SentencePiece, character_coverage training param is recorded in config."
+    },
+    "sequence_efficiency": {
+      "total_encoded_tokens": 144733,
+      "tokens_per_line": 27.52624572080639,
+      "tokens_per_word": 1.629087266301228,
+      "characters_per_token": 4.383996738822521,
+      "bytes_per_token": 4.427228068235993,
+      "tokens_per_character": 0.22810235946219834,
+      "tokens_per_byte": 0.2258749683971996,
+      "avg_sequence_length_expansion_vs_words": 1.629087266301228,
+      "sequence_length_percentiles": {
+        "p50": 25.0,
+        "p90": 46.0,
+        "p95": 54.0,
+        "p99": 73.43000000000029
+      }
+    },
+    "fertility": {
+      "definition": "subword_or_char_tokens / whitespace_delimited_words",
+      "overall": 1.629087266301228,
+      "percentiles": {
+        "p50": 1.588235294117647,
+        "p90": 2.25,
+        "p95": 2.75,
+        "p99": 4.0
+      },
+      "note": "Character tokenizer fertility is tokens-per-word at character granularity and is not directly comparable to subword fertility for 'winner' selection."
+    },
+    "vocabulary_usage": {
+      "total_vocabulary_size": 8000,
+      "tokens_observed": 6373,
+      "unused_vocabulary_entries": 1627,
+      "utilization": 0.796625,
+      "rare_token_pct_observed": 0.12866781735446414,
+      "pct_single_character_types": 0.045661383963596425,
+      "pct_multi_character_types": 0.9543386160364036,
+      "average_token_length_chars": 3.8136015974242223,
+      "longest_tokens": [
+        "ulukirachulukira",
+        "kundithamangitsa",
+        "▁zimagwiritsidwa",
+        "▁chithunzithunzi",
+        "▁Wammwambamwamba",
+        "▁ndikukupemphani",
+        "▁chiwombankhanga",
+        "dzawasonkhanitsa",
+        "chiwongoladzanja",
+        "▁zamumlengalenga",
+        "Chimodzimodzinso",
+        "watsatanetsatane",
+        "mobwerezabwereza",
+        "zojambulajambula",
+        "idakhazikitsidwa",
+        "▁miyandamiyanda",
+        "▁anasonkhanitsa",
+        "▁ndikukupatsani",
+        "▁Wamphamvuzonse",
+        "▁Nebukadinezara"
+      ],
+      "types_with_punctuation": 75,
+      "types_with_digits": 240,
+      "types_with_w_hat": 4,
+      "types_english_looking_diagnostic": 5491,
+      "top_tokens": [
+        {
+          "token": ",",
+          "count": 6088
+        },
+        {
+          "token": ".",
+          "count": 5218
+        },
+        {
+          "token": "▁ndi",
+          "count": 4408
+        },
+        {
+          "token": "▁ku",
+          "count": 2324
+        },
+        {
+          "token": "▁a",
+          "count": 1626
+        },
+        {
+          "token": "▁kuti",
+          "count": 1557
+        },
+        {
+          "token": "▁wa",
+          "count": 1341
+        },
+        {
+          "token": "▁m",
+          "count": 1324
+        },
+        {
+          "token": "ʼ",
+          "count": 1292
+        },
+        {
+          "token": "▁pa",
+          "count": 1255
+        },
+        {
+          "token": "▁ndipo",
+          "count": 1169
+        },
+        {
+          "token": "▁ya",
+          "count": 1069
+        },
+        {
+          "token": "▁",
+          "count": 1032
+        },
+        {
+          "token": "▁la",
+          "count": 959
+        },
+        {
+          "token": "▁kwa",
+          "count": 931
+        },
+        {
+          "token": "▁ana",
+          "count": 874
+        },
+        {
+          "token": "▁“",
+          "count": 857
+        },
+        {
+          "token": "▁Yehova",
+          "count": 842
+        },
+        {
+          "token": "▁anthu",
+          "count": 793
+        },
+        {
+          "token": "▁amene",
+          "count": 765
+        },
+        {
+          "token": "▁mu",
+          "count": 700
+        },
+        {
+          "token": "▁za",
+          "count": 678
+        },
+        {
+          "token": "▁cha",
+          "count": 664
+        },
+        {
+          "token": "ni",
+          "count": 557
+        },
+        {
+          "token": "▁Mulungu",
+          "count": 523
+        },
+        {
+          "token": "nso",
+          "count": 487
+        },
+        {
+          "token": ";",
+          "count": 473
+        },
+        {
+          "token": "▁ngati",
+          "count": 470
+        },
+        {
+          "token": "s",
+          "count": 470
+        },
+        {
+          "token": "wa",
+          "count": 466
+        },
+        {
+          "token": ".”",
+          "count": 463
+        },
+        {
+          "token": "i",
+          "count": 451
+        },
+        {
+          "token": "▁mwa",
+          "count": 417
+        },
+        {
+          "token": "▁ake",
+          "count": 416
+        },
+        {
+          "token": "▁o",
+          "count": 398
+        },
+        {
+          "token": "▁wo",
+          "count": 396
+        },
+        {
+          "token": "a",
+          "count": 380
+        },
+        {
+          "token": "▁anali",
+          "count": 362
+        },
+        {
+          "token": "n",
+          "count": 362
+        },
+        {
+          "token": "▁Iye",
+          "count": 345
+        }
+      ]
+    },
+    "totals": {
+      "words": 88843,
+      "characters": 634509,
+      "bytes": 640766
+    },
+    "by_source": {
+      "bible": {
+        "n_lines": 3430,
+        "total_tokens": 97282,
+        "total_words": 63497,
+        "total_characters": 457231,
+        "total_bytes": 462232,
+        "unk_tokens": 0,
+        "unk_rate": 0.0,
+        "fertility": 1.5320723813723482,
+        "tokens_per_character": 0.21276335156627613,
+        "characters_per_token": 4.700057564605991
+      },
+      "wikipedia": {
+        "n_lines": 1828,
+        "total_tokens": 47451,
+        "total_words": 25346,
+        "total_characters": 177278,
+        "total_bytes": 178534,
+        "unk_tokens": 34,
+        "unk_rate": 0.0007165286295336241,
+        "fertility": 1.8721297246113786,
+        "tokens_per_character": 0.26766434639379955,
+        "characters_per_token": 3.7360224231312302
+      }
+    }
+  }
+}

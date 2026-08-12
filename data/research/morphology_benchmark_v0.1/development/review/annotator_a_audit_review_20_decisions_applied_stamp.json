@@ -1,0 +1,26 @@
+{
+  "applied_at": "2026-08-11T08:18:49.112975Z",
+  "reviewed_output": "data/research/morphology_benchmark_v0.1/development/annotations/annotator_a_full_200_reviewed_v0_1.jsonl",
+  "item_ids": [
+    "morph_dev_0095",
+    "morph_dev_0097",
+    "morph_dev_0117",
+    "morph_dev_0133",
+    "morph_dev_0176",
+    "morph_dev_0012",
+    "morph_dev_0018",
+    "morph_dev_0020",
+    "morph_dev_0024",
+    "morph_dev_0030",
+    "morph_dev_0033",
+    "morph_dev_0038",
+    "morph_dev_0054",
+    "morph_dev_0065",
+    "morph_dev_0088",
+    "morph_dev_0108",
+    "morph_dev_0125",
+    "morph_dev_0140",
+    "morph_dev_0171",
+    "morph_dev_0197"
+  ]
+}

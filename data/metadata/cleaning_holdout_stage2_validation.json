@@ -1,0 +1,208 @@
+{
+  "generated_at": "2026-08-05T00:52:13.335119Z",
+  "tool": {
+    "name": "summarize_cleaning_holdout",
+    "version": "1.0.0"
+  },
+  "dataset_role": "blind_holdout",
+  "development_set_role": "development_validation",
+  "annotation_status": "complete",
+  "n_records": 40,
+  "n_labeled": 40,
+  "n_unlabeled": 0,
+  "n_invalid_labels": 0,
+  "invalid_labels": [],
+  "overall_label_counts": {
+    "boilerplate_or_noise": 40
+  },
+  "metrics": {
+    "removal_precision": 1.0,
+    "false_removal_rate": 0.0,
+    "useful_text_retention": null,
+    "noise_removal_recall": 1.0,
+    "foreign_language_removal_recall": null,
+    "boilerplate_removal_recall": 1.0,
+    "kept_noise_rate": null,
+    "foreign_language_leakage": null,
+    "boilerplate_leakage": null,
+    "useful_text_rate_among_kept_labeled": null,
+    "n_removed_reviewed": 40,
+    "n_kept_reviewed": 0,
+    "n_rm_correct": 40,
+    "n_rm_false": 0,
+    "n_rm_uncertain": 0,
+    "n_useful_labels": 0,
+    "n_useful_retained": 0,
+    "n_noise_labels": 40,
+    "n_noise_removed": 40
+  },
+  "confidence_intervals": {
+    "removal_precision": {
+      "p": 1.0,
+      "low": 0.912375,
+      "high": 1.0,
+      "n": 40,
+      "successes": 40,
+      "z": 1.96
+    },
+    "false_removal_rate": {
+      "p": 0.0,
+      "low": 0.0,
+      "high": 0.087625,
+      "n": 40,
+      "successes": 0,
+      "z": 1.96
+    },
+    "useful_text_retention": {
+      "low": null,
+      "high": null,
+      "n": 0,
+      "p": null
+    },
+    "noise_removal_recall": {
+      "p": 1.0,
+      "low": 0.912375,
+      "high": 1.0,
+      "n": 40,
+      "successes": 40,
+      "z": 1.96
+    }
+  },
+  "confusion_matrix": {
+    "human_useful_v2_remove": 0,
+    "human_useful_v2_keep": 0,
+    "human_noise_v2_remove": 40,
+    "human_noise_v2_keep": 0
+  },
+  "rule_metrics": {
+    "drop_blank": {
+      "n": 3,
+      "correct": 3,
+      "false": 0,
+      "uncertain": 0,
+      "unlabeled": 0,
+      "removal_precision": 1.0,
+      "false_removal_rate": 0.0,
+      "precision_ci": {
+        "p": 1.0,
+        "low": 0.438494,
+        "high": 1.0,
+        "n": 3,
+        "successes": 3,
+        "z": 1.96
+      }
+    },
+    "drop_category": {
+      "n": 33,
+      "correct": 33,
+      "false": 0,
+      "uncertain": 0,
+      "unlabeled": 0,
+      "removal_precision": 1.0,
+      "false_removal_rate": 0.0,
+      "precision_ci": {
+        "p": 1.0,
+        "low": 0.895727,
+        "high": 1.0,
+        "n": 33,
+        "successes": 33,
+        "z": 1.96
+      }
+    },
+    "drop_digit_only": {
+      "n": 4,
+      "correct": 4,
+      "false": 0,
+      "uncertain": 0,
+      "unlabeled": 0,
+      "removal_precision": 1.0,
+      "false_removal_rate": 0.0,
+      "precision_ci": {
+        "p": 1.0,
+        "low": 0.5101,
+        "high": 1.0,
+        "n": 4,
+        "successes": 4,
+        "z": 1.96
+      }
+    }
+  },
+  "targets": {
+    "removal_precision_ge": 0.9,
+    "false_removal_rate_le": 0.1,
+    "useful_text_retention_ge": 0.9
+  },
+  "targets_met": {
+    "removal_precision": true,
+    "false_removal_rate": false,
+    "useful_text_retention": false
+  },
+  "all_targets_met": false,
+  "note": "Development set (original 367) informed v2 design. Holdout estimates generalization; do not retune v2 on holdout before labeling is complete.",
+  "stage": 2,
+  "sequential_evaluation": true,
+  "combined_with_stage1": {
+    "n": 120,
+    "metrics": {
+      "removal_precision": 0.9875,
+      "false_removal_rate": 0.0125,
+      "useful_text_retention": 0.954545,
+      "noise_removal_recall": 0.806122,
+      "foreign_language_removal_recall": 0.733333,
+      "boilerplate_removal_recall": 0.819277,
+      "kept_noise_rate": 0.475,
+      "foreign_language_leakage": 0.1,
+      "boilerplate_leakage": 0.375,
+      "useful_text_rate_among_kept_labeled": 0.525,
+      "n_removed_reviewed": 80,
+      "n_kept_reviewed": 40,
+      "n_rm_correct": 79,
+      "n_rm_false": 1,
+      "n_rm_uncertain": 0,
+      "n_useful_labels": 22,
+      "n_useful_retained": 21,
+      "n_noise_labels": 98,
+      "n_noise_removed": 79
+    },
+    "confidence_intervals": {
+      "removal_precision": {
+        "p": 0.9875,
+        "low": 0.932536,
+        "high": 0.99779,
+        "n": 80,
+        "successes": 79,
+        "z": 1.96
+      },
+      "false_removal_rate": {
+        "p": 0.0125,
+        "low": 0.00221,
+        "high": 0.067464,
+        "n": 80,
+        "successes": 1,
+        "z": 1.96
+      },
+      "useful_text_retention": {
+        "p": 0.954545,
+        "low": 0.782015,
+        "high": 0.991931,
+        "n": 22,
+        "successes": 21,
+        "z": 1.96
+      },
+      "noise_removal_recall": {
+        "p": 0.806122,
+        "low": 0.71693,
+        "high": 0.87222,
+        "n": 98,
+        "successes": 79,
+        "z": 1.96
+      }
+    },
+    "targets_met": {
+      "removal_precision": true,
+      "false_removal_rate": true,
+      "useful_text_retention": true
+    },
+    "all_targets_met": true
+  }
+}

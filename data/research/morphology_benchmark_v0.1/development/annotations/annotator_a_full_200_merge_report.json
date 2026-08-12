@@ -1,0 +1,22 @@
+{
+  "tool": {
+    "name": "merge_annotator_a_full_200",
+    "version": "0.1.0"
+  },
+  "generated_at": "2026-08-11T07:47:32.169690Z",
+  "n_total": 200,
+  "n_unique_ids": 200,
+  "n_pilot": 40,
+  "n_remaining": 160,
+  "n_filled": 200,
+  "n_remaining_filled": 160,
+  "pilot_source_preserved": "/home/cyai/projects/research/transformer-lab/data/research/morphology_benchmark_v0.1/development/annotations/annotator_a_annotations.jsonl",
+  "outputs": {
+    "jsonl": "/home/cyai/projects/research/transformer-lab/data/research/morphology_benchmark_v0.1/development/annotations/annotator_a_full_200.jsonl",
+    "csv": "/home/cyai/projects/research/transformer-lab/data/research/morphology_benchmark_v0.1/development/annotations/annotator_a_full_200.csv"
+  },
+  "errors": [],
+  "status": "complete",
+  "annotator_count": 1,
+  "annotator_id": "annotator_a"
+}

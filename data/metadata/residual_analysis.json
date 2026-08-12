@@ -1,0 +1,276 @@
+{
+  "generated_at": "2026-08-04T03:55:23.929617Z",
+  "tool": {
+    "name": "analyze_residual_corpus",
+    "version": "1.0.0"
+  },
+  "config": {
+    "version": "1.0.0",
+    "subtraction_comparison_mode": "whitespace_normalized",
+    "case_fold_diagnostic": true,
+    "use_casefold_for_residual": false,
+    "short_line_threshold": 20,
+    "long_line_threshold": 500,
+    "sample_count": 8,
+    "random_seed": 42,
+    "excerpt_length": 120,
+    "write_candidate_file": true,
+    "term_list_disclaimer": "Language-signal term lists are provisional heuristics copied for residual review; they require native-speaker review and are not authoritative language labels."
+  },
+  "source_paths": {
+    "bible": "data/raw/bible/bible_clean.txt",
+    "wikipedia": "data/raw/wikipedia/wiki_clean.txt",
+    "existing_corpus": "data/raw/existing_corpus/chichewa_corpus.txt"
+  },
+  "source_sizes": {
+    "bible_lines": 31099,
+    "wikipedia_lines": 20579,
+    "existing_corpus_lines": 50752
+  },
+  "decompositions": {
+    "exact": {
+      "comparison_mode": "exact",
+      "bible_key_count": 30876,
+      "wikipedia_key_count": 18078,
+      "bible_wikipedia_key_intersection": 0,
+      "total_lines": 50752,
+      "category_counts": {
+        "duplicate_of_bible": 30864,
+        "duplicate_of_wikipedia": 19682,
+        "duplicate_of_both": 0,
+        "unique_candidate": 0,
+        "blank": 206,
+        "unresolved": 0
+      },
+      "attributed_to_bible_or_wikipedia": 50546,
+      "unique_candidate_lines": 0,
+      "blank_lines": 206,
+      "unique_candidate_percentage_of_total": 0.0,
+      "unique_candidate_percentage_of_nonblank": 0.0
+    },
+    "whitespace_normalized": {
+      "comparison_mode": "whitespace_normalized",
+      "bible_key_count": 30876,
+      "wikipedia_key_count": 17935,
+      "bible_wikipedia_key_intersection": 0,
+      "total_lines": 50752,
+      "category_counts": {
+        "duplicate_of_bible": 30864,
+        "duplicate_of_wikipedia": 19682,
+        "duplicate_of_both": 0,
+        "unique_candidate": 0,
+        "blank": 206,
+        "unresolved": 0
+      },
+      "attributed_to_bible_or_wikipedia": 50546,
+      "unique_candidate_lines": 0,
+      "blank_lines": 206,
+      "unique_candidate_percentage_of_total": 0.0,
+      "unique_candidate_percentage_of_nonblank": 0.0
+    },
+    "casefold_whitespace_normalized": {
+      "comparison_mode": "casefold_whitespace_normalized",
+      "bible_key_count": 30864,
+      "wikipedia_key_count": 17921,
+      "bible_wikipedia_key_intersection": 0,
+      "total_lines": 50752,
+      "category_counts": {
+        "duplicate_of_bible": 30864,
+        "duplicate_of_wikipedia": 19682,
+        "duplicate_of_both": 0,
+        "unique_candidate": 0,
+        "blank": 206,
+        "unresolved": 0
+      },
+      "attributed_to_bible_or_wikipedia": 50546,
+      "unique_candidate_lines": 0,
+      "blank_lines": 206,
+      "unique_candidate_percentage_of_total": 0.0,
+      "unique_candidate_percentage_of_nonblank": 0.0
+    }
+  },
+  "primary_decomposition": {
+    "comparison_mode": "whitespace_normalized",
+    "bible_key_count": 30876,
+    "wikipedia_key_count": 17935,
+    "bible_wikipedia_key_intersection": 0,
+    "total_lines": 50752,
+    "category_counts": {
+      "duplicate_of_bible": 30864,
+      "duplicate_of_wikipedia": 19682,
+      "duplicate_of_both": 0,
+      "unique_candidate": 0,
+      "blank": 206,
+      "unresolved": 0
+    },
+    "attributed_to_bible_or_wikipedia": 50546,
+    "unique_candidate_lines": 0,
+    "blank_lines": 206,
+    "unique_candidate_percentage_of_total": 0.0,
+    "unique_candidate_percentage_of_nonblank": 0.0
+  },
+  "residual_quality": {
+    "total_residual_lines": 0,
+    "character_count": 0,
+    "estimated_word_token_count": 0,
+    "unique_exact_lines": 0,
+    "unique_ws_normalized_lines": 0,
+    "exact_duplicate_line_occurrences": 0,
+    "exact_duplicate_percentage": 0.0,
+    "ws_normalized_duplicate_line_occurrences": 0,
+    "min_line_length": null,
+    "max_line_length": null,
+    "median_line_length": null,
+    "mean_line_length": null,
+    "line_length_percentiles": {
+      "p50": null,
+      "p90": null,
+      "p95": null,
+      "p99": null
+    },
+    "very_short_lines": 0,
+    "very_long_lines": 0,
+    "short_line_threshold": 20,
+    "long_line_threshold": 500,
+    "url_containing_lines": 0,
+    "digit_only_lines": 0,
+    "unusual_unicode_lines": 0,
+    "replacement_char_lines": 0,
+    "boilerplate_matching_any_pattern": 0,
+    "boilerplate": {
+      "category_prefix": {
+        "description": "Wikipedia-style Category lines",
+        "matching_lines": 0,
+        "total_occurrences": 0
+      },
+      "wikipedia_muzinenero": {
+        "description": "Chichewa Wikipedia other-languages nav",
+        "matching_lines": 0,
+        "total_occurrences": 0
+      },
+      "mu_nkhani": {
+        "description": "Chichewa Wikipedia article-contents nav",
+        "matching_lines": 0,
+        "total_occurrences": 0
+      },
+      "wikipedia_word": {
+        "description": "Mentions of Wikipedia",
+        "matching_lines": 0,
+        "total_occurrences": 0
+      },
+      "wikimedia": {
+        "description": "Wikimedia project mentions",
+        "matching_lines": 0,
+        "total_occurrences": 0
+      },
+      "url_http": {
+        "description": "HTTP(S) URLs",
+        "matching_lines": 0,
+        "total_occurrences": 0
+      },
+      "url_www": {
+        "description": "www. hostnames",
+        "matching_lines": 0,
+        "total_occurrences": 0
+      },
+      "html_tag": {
+        "description": "Simple HTML tag remnants",
+        "matching_lines": 0,
+        "total_occurrences": 0
+      },
+      "wiki_link_brackets": {
+        "description": "Wiki-style double-bracket links",
+        "matching_lines": 0,
+        "total_occurrences": 0
+      },
+      "wiki_template": {
+        "description": "Wiki-style template braces",
+        "matching_lines": 0,
+        "total_occurrences": 0
+      },
+      "in_german_meta": {
+        "description": "Explicit German-language meta marker",
+        "matching_lines": 0,
+        "total_occurrences": 0
+      },
+      "image_meta": {
+        "description": "Image metadata parenthetical",
+        "matching_lines": 0,
+        "total_occurrences": 0
+      }
+    },
+    "language_signals": {
+      "disclaimer": "Heuristic term-list signals only — not authoritative language labels.",
+      "counts": {
+        "chichewa_signal": 0,
+        "english_signal": 0,
+        "german_signal": 0,
+        "mixed_signal": 0,
+        "insufficient_signal": 0
+      },
+      "percentages": {
+        "chichewa_signal": 0.0,
+        "english_signal": 0.0,
+        "german_signal": 0.0,
+        "mixed_signal": 0.0,
+        "insufficient_signal": 0.0
+      }
+    },
+    "chichewa_char_counts": {
+      "ŵ": 0,
+      "Ŵ": 0
+    },
+    "unusual_codepoints": [],
+    "top_repeated_exact_lines": [],
+    "top_repeated_ws_normalized_lines": []
+  },
+  "recommendation": {
+    "option": "discard residual",
+    "allowed_options": [
+      "discard residual",
+      "preserve for manual review",
+      "clean as a separate source"
+    ],
+    "rationale": "No unique candidate lines remain after subtraction; residual is empty.",
+    "supporting_metrics": {
+      "unique_candidate_lines": 0,
+      "unique_percentage_of_total": 0.0,
+      "chichewa_signal_rate": 0.0,
+      "foreign_signal_rate": 0.0,
+      "boilerplate_rate": 0.0,
+      "url_lines": 0,
+      "very_short_lines": 0
+    },
+    "training_eligibility": "not decided — residual is not approved training data",
+    "note": "This recommendation is analytical only. Licensing, provenance, and native-speaker review remain required before any training use."
+  },
+  "sample_preview": [],
+  "sample_record_count": 0,
+  "limitations": [
+    "Exact/normalized line equality misses paraphrase and near-duplicates.",
+    "Language-signal categories are heuristics, not language identification.",
+    "Term lists are provisional and require native-speaker review.",
+    "No licensing or training-eligibility decision is made.",
+    "Paragraph- or document-level attribution is not modeled.",
+    "Case-fold mode is diagnostic unless use_casefold_for_residual is true.",
+    "Residual candidate files under data/interim/ are not training corpora."
+  ],
+  "warnings": [
+    "existing_corpus must not be treated as an independent training source.",
+    "Residual content remains uncleaned and unlicensed until human review."
+  ],
+  "pre_checksums": {
+    "bible": "55445a0e0a5359e243f1773de623af1716bf4d3cd835afd83c4407cbaf85fc89",
+    "wikipedia": "cf7c5ba6d8c0d4770eee3306bab9f4be1dfc9570930a9aa7f3613c0ffb4587b7",
+    "existing_corpus": "32e65edccb4c341d45e55de3d35edc1dd8768cd6e47cfafeb22d21216c2c8932"
+  },
+  "post_checksums": {
+    "bible": "55445a0e0a5359e243f1773de623af1716bf4d3cd835afd83c4407cbaf85fc89",
+    "wikipedia": "cf7c5ba6d8c0d4770eee3306bab9f4be1dfc9570930a9aa7f3613c0ffb4587b7",
+    "existing_corpus": "32e65edccb4c341d45e55de3d35edc1dd8768cd6e47cfafeb22d21216c2c8932"
+  },
+  "raw_files_unchanged": true,
+  "samples_path": "data/reports/residual_samples.jsonl",
+  "candidate_file": "data/interim/existing_corpus/residual_candidates.txt",
+  "candidate_file_disclaimer": "UNCLEANED, UNLICENSED, NOT APPROVED FOR TRAINING — review only."
+}

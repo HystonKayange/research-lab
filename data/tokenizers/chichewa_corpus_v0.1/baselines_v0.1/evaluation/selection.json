@@ -1,0 +1,124 @@
+{
+  "selected_bpe": "bpe_8000",
+  "selected_unigram": "unigram_8000",
+  "selected_character": "character",
+  "scores": {
+    "character": {
+      "score": null,
+      "eligible": false,
+      "reason": "character not in BPE/Unigram selection"
+    },
+    "bpe_1000": {
+      "score": 6.922242240299391,
+      "eligible": true,
+      "details": {
+        "fertility_component": 0.7216775660434696,
+        "unk_component": 0.9910549619967429,
+        "util_component": 0.329,
+        "p95_component": 1.29,
+        "token_len_component": 1.0,
+        "vocab_size": 1000
+      }
+    },
+    "bpe_2000": {
+      "score": 11.626441277906304,
+      "eligible": true,
+      "details": {
+        "fertility_component": 2.686435622390059,
+        "unk_component": 0.9834585295605807,
+        "util_component": 0.6625,
+        "p95_component": 1.615,
+        "token_len_component": 1.0,
+        "vocab_size": 2000
+      }
+    },
+    "bpe_4000": {
+      "score": 12.756310189042466,
+      "eligible": true,
+      "details": {
+        "fertility_component": 3.1358801481264704,
+        "unk_component": 0.9794703346335455,
+        "util_component": 0.8115,
+        "p95_component": 1.69,
+        "token_len_component": 1.0,
+        "vocab_size": 4000
+      }
+    },
+    "bpe_8000": {
+      "score": 13.172570500960132,
+      "eligible": true,
+      "details": {
+        "fertility_component": 3.368200083293,
+        "unk_component": 0.9765475188654518,
+        "util_component": 0.8325,
+        "p95_component": 1.73,
+        "token_len_component": 1.0,
+        "vocab_size": 8000
+      }
+    },
+    "unigram_1000": {
+      "score": 7.1127805440659815,
+      "eligible": true,
+      "details": {
+        "fertility_component": 0.810857355109575,
+        "unk_component": 0.9908645372082026,
+        "util_component": 0.328,
+        "p95_component": 1.304250000000002,
+        "token_len_component": 1.0,
+        "vocab_size": 1000
+      }
+    },
+    "unigram_2000": {
+      "score": 11.811863815887333,
+      "eligible": true,
+      "details": {
+        "fertility_component": 2.7722274124016524,
+        "unk_component": 0.9828215155465284,
+        "util_component": 0.663,
+        "p95_component": 1.63,
+        "token_len_component": 1.0,
+        "vocab_size": 2000
+      }
+    },
+    "unigram_4000": {
+      "score": 12.815954566820025,
+      "eligible": true,
+      "details": {
+        "fertility_component": 3.162905349886879,
+        "unk_component": 0.9791683260524591,
+        "util_component": 0.8125,
+        "p95_component": 1.695,
+        "token_len_component": 1.0,
+        "vocab_size": 4000
+      }
+    },
+    "unigram_8000": {
+      "score": 13.124066147122358,
+      "eligible": true,
+      "details": {
+        "fertility_component": 3.370912733698772,
+        "unk_component": 0.9765084673156779,
+        "util_component": 0.796625,
+        "p95_component": 1.73,
+        "token_len_component": 1.0,
+        "vocab_size": 8000
+      }
+    }
+  },
+  "bpe_rationale": "Highest multi-criteria validation score (13.172570500960132). fertility=1.631799916707, unk_rate=0.00023452481134548264, util=0.8325, vocab_size=8000. Test data was not used for this choice.",
+  "unigram_rationale": "Highest multi-criteria validation score (13.124066147122358). fertility=1.629087266301228, unk_rate=0.00023491532684322166, util=0.796625, vocab_size=8000. Test data was not used for this choice.",
+  "rubric": {
+    "use_split": "validation",
+    "forbid_test_for_selection": true,
+    "criteria": [
+      "lower fertility preferred among subword models (not compared to character as winner)",
+      "reasonable p95 sequence length",
+      "unk rate near zero preferred",
+      "vocabulary utilization (observed/vocab) not extremely low",
+      "avoid excessive whole-line memorization (very large average token length + low fertility at huge vocab)",
+      "practical embedding size (prefer smaller among near-ties)",
+      "balanced bible vs wikipedia fertility gap not extreme"
+    ],
+    "weights_note": "Multi-criteria qualitative score on validation; not a single metric. Test evaluated only after selection."
+  }
+}

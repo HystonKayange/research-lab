@@ -1,0 +1,237 @@
+{
+  "generated_at": "2026-08-05T00:09:55.228286Z",
+  "tool": {
+    "name": "summarize_cleaning_holdout_stage",
+    "version": "1.0.0"
+  },
+  "dataset_role": "blind_holdout",
+  "development_set_role": "development_validation",
+  "annotation_status": "complete",
+  "n_records": 80,
+  "n_labeled": 80,
+  "n_unlabeled": 0,
+  "n_invalid_labels": 0,
+  "invalid_labels": [],
+  "overall_label_counts": {
+    "boilerplate_or_noise": 28,
+    "foreign_language": 11,
+    "useful_mixed_chichewa": 1
+  },
+  "metrics": {
+    "removal_precision": 0.975,
+    "false_removal_rate": 0.025,
+    "useful_text_retention": 0.954545,
+    "noise_removal_recall": 0.672414,
+    "foreign_language_removal_recall": 0.733333,
+    "boilerplate_removal_recall": 0.651163,
+    "kept_noise_rate": 0.475,
+    "foreign_language_leakage": 0.1,
+    "boilerplate_leakage": 0.375,
+    "useful_text_rate_among_kept_labeled": 0.525,
+    "n_removed_reviewed": 40,
+    "n_kept_reviewed": 40,
+    "n_rm_correct": 39,
+    "n_rm_false": 1,
+    "n_rm_uncertain": 0,
+    "n_useful_labels": 22,
+    "n_useful_retained": 21,
+    "n_noise_labels": 58,
+    "n_noise_removed": 39
+  },
+  "confidence_intervals": {
+    "removal_precision": {
+      "p": 0.975,
+      "low": 0.871183,
+      "high": 0.995573,
+      "n": 40,
+      "successes": 39,
+      "z": 1.96
+    },
+    "false_removal_rate": {
+      "p": 0.025,
+      "low": 0.004427,
+      "high": 0.128817,
+      "n": 40,
+      "successes": 1,
+      "z": 1.96
+    },
+    "useful_text_retention": {
+      "p": 0.954545,
+      "low": 0.782015,
+      "high": 0.991931,
+      "n": 22,
+      "successes": 21,
+      "z": 1.96
+    },
+    "noise_removal_recall": {
+      "p": 0.672414,
+      "low": 0.544238,
+      "high": 0.779169,
+      "n": 58,
+      "successes": 39,
+      "z": 1.96
+    }
+  },
+  "confusion_matrix": {
+    "human_useful_v2_remove": 1,
+    "human_useful_v2_keep": 21,
+    "human_noise_v2_remove": 39,
+    "human_noise_v2_keep": 19
+  },
+  "rule_metrics": {
+    "drop_category": {
+      "n": 3,
+      "correct": 3,
+      "false": 0,
+      "uncertain": 0,
+      "unlabeled": 0,
+      "removal_precision": 1.0,
+      "false_removal_rate": 0.0,
+      "precision_ci": {
+        "p": 1.0,
+        "low": 0.438494,
+        "high": 1.0,
+        "n": 3,
+        "successes": 3,
+        "z": 1.96
+      }
+    },
+    "drop_high_confidence_foreign": {
+      "n": 12,
+      "correct": 11,
+      "false": 1,
+      "uncertain": 0,
+      "unlabeled": 0,
+      "removal_precision": 0.916667,
+      "false_removal_rate": 0.083333,
+      "precision_ci": {
+        "p": 0.916667,
+        "low": 0.646114,
+        "high": 0.985135,
+        "n": 12,
+        "successes": 11,
+        "z": 1.96
+      }
+    },
+    "drop_long_table_dump": {
+      "n": 2,
+      "correct": 2,
+      "false": 0,
+      "uncertain": 0,
+      "unlabeled": 0,
+      "removal_precision": 1.0,
+      "false_removal_rate": 0.0,
+      "precision_ci": {
+        "p": 1.0,
+        "low": 0.342372,
+        "high": 1.0,
+        "n": 2,
+        "successes": 2,
+        "z": 1.96
+      }
+    },
+    "drop_short_conditional": {
+      "n": 10,
+      "correct": 10,
+      "false": 0,
+      "uncertain": 0,
+      "unlabeled": 0,
+      "removal_precision": 1.0,
+      "false_removal_rate": 0.0,
+      "precision_ci": {
+        "p": 1.0,
+        "low": 0.72246,
+        "high": 1.0,
+        "n": 10,
+        "successes": 10,
+        "z": 1.96
+      }
+    },
+    "drop_url_only": {
+      "n": 8,
+      "correct": 8,
+      "false": 0,
+      "uncertain": 0,
+      "unlabeled": 0,
+      "removal_precision": 1.0,
+      "false_removal_rate": 0.0,
+      "precision_ci": {
+        "p": 1.0,
+        "low": 0.675584,
+        "high": 1.0,
+        "n": 8,
+        "successes": 8,
+        "z": 1.96
+      }
+    },
+    "drop_wikimedia_chrome": {
+      "n": 5,
+      "correct": 5,
+      "false": 0,
+      "uncertain": 0,
+      "unlabeled": 0,
+      "removal_precision": 1.0,
+      "false_removal_rate": 0.0,
+      "precision_ci": {
+        "p": 1.0,
+        "low": 0.565509,
+        "high": 1.0,
+        "n": 5,
+        "successes": 5,
+        "z": 1.96
+      }
+    }
+  },
+  "targets": {
+    "removal_precision_ge": 0.9,
+    "false_removal_rate_le": 0.1,
+    "useful_text_retention_ge": 0.9
+  },
+  "targets_met": {
+    "removal_precision": true,
+    "false_removal_rate": true,
+    "useful_text_retention": true
+  },
+  "all_targets_met": true,
+  "note": "Development set (original 367) informed v2 design. Holdout estimates generalization; do not retune v2 on holdout before labeling is complete.",
+  "stage": 1,
+  "sequential_evaluation": true,
+  "cleaning_policy": "configs/data/cleaning_v2.json",
+  "cleaning_policy_sha256": "c2f734aa5115be3b7a4a5f5bce813018b189d9b08a69133b2991514ab0ad29cb",
+  "stopping_recommendation": {
+    "decision": "release_next_chunk",
+    "action": "Targets unclear or missed. Release the next 40 records from the locked extension pool (not the entire remainder). Do not modify Cleaning Policy v2. Re-evaluate after the new chunk is labeled.",
+    "checks": [
+      {
+        "metric": "removal_precision",
+        "point": 0.975,
+        "required_op": "ge",
+        "required_value": 0.9,
+        "ci_low": 0.871183,
+        "ci_low_ge": 0.8,
+        "passed": true
+      },
+      {
+        "metric": "false_removal_rate",
+        "point": 0.025,
+        "required_op": "le",
+        "required_value": 0.1,
+        "ci_high": 0.128817,
+        "ci_high_le": 0.2,
+        "passed": true
+      },
+      {
+        "metric": "useful_text_retention",
+        "point": 0.954545,
+        "required_op": "ge",
+        "required_value": 0.9,
+        "ci_low": 0.782015,
+        "ci_low_ge": 0.8,
+        "passed": false
+      }
+    ],
+    "all_stop_criteria_passed": false,
+    "never_release_full_250_at_once": true
+  },
+  "sample_path": "data/reports/cleaning_holdout_stage1_sample.jsonl"
+}

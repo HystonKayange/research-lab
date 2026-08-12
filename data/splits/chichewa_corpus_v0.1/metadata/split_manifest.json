@@ -1,0 +1,214 @@
+{
+  "tool": {
+    "name": "build_corpus_splits",
+    "version": "0.1.0"
+  },
+  "created_at": "2026-08-05T04:09:01.057702Z",
+  "frozen": true,
+  "split_version": "v0.1",
+  "corpus_name": "chichewa_corpus",
+  "corpus_version": "v0.1",
+  "config_path": "configs/data/split_v0_1.json",
+  "config_sha256": "89ebdbb1ffb32f86f87b25b598cfe03780bfdc38f0b8d07a20000d90a4fac5e4",
+  "processed_corpus_root": "data/processed/chichewa_corpus_v0.1",
+  "processed_build_manifest_sha256": "99045afafc9217378b8fed4036010b928084a6f02e7a1a8f14671d581a245c2b",
+  "output_root": "data/splits/chichewa_corpus_v0.1",
+  "git_commit": null,
+  "assignment": {
+    "method": "sha256_group_hash",
+    "salt": "chichewa_corpus_v0.1_split_v0.1",
+    "bucket_modulus": 10000,
+    "note": "group_id is hashed with salt via SHA-256; first 8 bytes interpreted as big-endian uint64; bucket = value % modulus. Train [0, train_end), validation [train_end, val_end), test [val_end, modulus)."
+  },
+  "proportions_target": {
+    "train": 0.8,
+    "validation": 0.1,
+    "test": 0.1
+  },
+  "grouping": {
+    "strategy": "contiguous_char_blocks",
+    "target_group_characters": 5000,
+    "n_groups": 1160
+  },
+  "input_line_total": 47574,
+  "output_line_total": 47574,
+  "input_character_total": 5889338,
+  "output_character_total": 5889338,
+  "stats": {
+    "train": {
+      "totals": {
+        "groups": 911,
+        "lines": 37248,
+        "words": 642903,
+        "characters": 4623799,
+        "bytes": 4666553
+      },
+      "by_source": {
+        "bible": {
+          "groups": 644,
+          "lines": 24433,
+          "words": 453692,
+          "characters": 3267529,
+          "bytes": 3304081
+        },
+        "wikipedia": {
+          "groups": 267,
+          "lines": 12815,
+          "words": 189211,
+          "characters": 1356270,
+          "bytes": 1362472
+        }
+      }
+    },
+    "validation": {
+      "totals": {
+        "groups": 125,
+        "lines": 5258,
+        "words": 88843,
+        "characters": 634509,
+        "bytes": 640766
+      },
+      "by_source": {
+        "bible": {
+          "groups": 90,
+          "lines": 3430,
+          "words": 63497,
+          "characters": 457231,
+          "bytes": 462232
+        },
+        "wikipedia": {
+          "groups": 35,
+          "lines": 1828,
+          "words": 25346,
+          "characters": 177278,
+          "bytes": 178534
+        }
+      }
+    },
+    "test": {
+      "totals": {
+        "groups": 124,
+        "lines": 5068,
+        "words": 88142,
+        "characters": 631030,
+        "bytes": 637246
+      },
+      "by_source": {
+        "bible": {
+          "groups": 79,
+          "lines": 3013,
+          "words": 56119,
+          "characters": 401536,
+          "bytes": 406269
+        },
+        "wikipedia": {
+          "groups": 45,
+          "lines": 2055,
+          "words": 32023,
+          "characters": 229494,
+          "bytes": 230977
+        }
+      }
+    },
+    "all": {
+      "totals": {
+        "groups": 1160,
+        "lines": 47574,
+        "words": 819888,
+        "characters": 5889338,
+        "bytes": 5944565
+      },
+      "by_source": {
+        "bible": {
+          "groups": 813,
+          "lines": 30876,
+          "words": 573308,
+          "characters": 4126296,
+          "bytes": 4172582
+        },
+        "wikipedia": {
+          "groups": 347,
+          "lines": 16698,
+          "words": 246580,
+          "characters": 1763042,
+          "bytes": 1771983
+        }
+      }
+    }
+  },
+  "leakage": {
+    "normalization": "unicode_nfc_whitespace_collapse_strip",
+    "exact_cross_split_count": 0,
+    "normalized_cross_split_count": 0,
+    "exact_reassign_events": 0,
+    "normalized_reassign_events": 0
+  },
+  "shingle_diagnostics": {
+    "enabled": true,
+    "shingle_size": 5,
+    "pairs": [
+      {
+        "split_a": "train",
+        "split_b": "test",
+        "shingle_size": 5,
+        "intersection": 2866,
+        "union": 710580,
+        "jaccard": 0.004033,
+        "size_a": 626773,
+        "size_b": 86673
+      },
+      {
+        "split_a": "train",
+        "split_b": "validation",
+        "shingle_size": 5,
+        "intersection": 2215,
+        "union": 712529,
+        "jaccard": 0.003109,
+        "size_a": 626773,
+        "size_b": 87971
+      },
+      {
+        "split_a": "validation",
+        "split_b": "test",
+        "shingle_size": 5,
+        "intersection": 258,
+        "union": 174386,
+        "jaccard": 0.001479,
+        "size_a": 87971,
+        "size_b": 86673
+      }
+    ],
+    "note": "Diagnostic only. High overlap may reflect formulaic religious language rather than exact-line leakage. No fuzzy matches are removed."
+  },
+  "tokenizer_policy": {
+    "train_tokenizer_on": [
+      "train"
+    ],
+    "forbid_tokenizer_on": [
+      "validation",
+      "test"
+    ],
+    "vocabulary_from": [
+      "train"
+    ],
+    "validation_for": "model_selection_only",
+    "test_for": "final_comparison_only",
+    "primary_cross_tokenizer_metric": "bits_per_character_or_bits_per_byte",
+    "raw_perplexity_not_directly_comparable": true
+  },
+  "file_checksums": {
+    "train/bible.txt": "eb4bb9308de68213433fa686a580d69af8506c7512f11e1e2a45a9daad7bc9de",
+    "train/wikipedia.txt": "061ba04e3f67a3741aa220f3099fe2bc316f08b0a582955a09ea936029e33b6a",
+    "train/combined.txt": "40ac7798b7dd1b98b1aa60f139a9794eefa75db751497166f1190c8da6ccc81d",
+    "metadata/train_documents.jsonl": "1c3a5d2860128499cef21b0d28836913029f25000edf051e183ebd3773c8cc1f",
+    "validation/bible.txt": "fd6f19b7ca81db03ed4c5dc36aae20447fabeec0592df0f37f0786aeac654d30",
+    "validation/wikipedia.txt": "7345621d16ebac80f39b20fa681aa654b8db8736c743369c85926a096702708b",
+    "validation/combined.txt": "d2de8aa56c5df64830502945544fac9335e91fbc100435f9c2491cd68d763665",
+    "metadata/validation_documents.jsonl": "1924ae84aa9bd6515e66108f27a538abfcb298654b55e106642cf72bd02a5a3b",
+    "test/bible.txt": "2c5a0fda5cff00e9d5dcc66449e585db7b997ba2c73739ce799c077644021c74",
+    "test/wikipedia.txt": "f6a3e029cb7cabb2d941019a845e14b72f25d14bcbc77a78d59c6973484ed84a",
+    "test/combined.txt": "e130719ff6a68d195bd5595f12ff30a124aba822c92b25057189d3586d687068",
+    "metadata/test_documents.jsonl": "1af677c688cb6e4ddc80ecc09b88338671aef529f6db6c930d7c9b0291952a67",
+    "metadata/split_assignments.jsonl": "10e061a45dbe9441087b5ac346cbfd4d33657f710f8bf424a5482f4e33dad026"
+  }
+}

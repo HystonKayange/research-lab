@@ -1,0 +1,97 @@
+{
+  "source_id": "wikipedia",
+  "source_name": "Chichewa Wikipedia",
+  "language": "Chichewa",
+  "language_codes": ["ny", "nya"],
+  "project": {
+    "database": "nywiki",
+    "project_url": "https://ny.wikipedia.org/",
+    "dump_type": "pages-articles.xml.bz2"
+  },
+  "acquisition": {
+    "method": "manual_download",
+    "automatic_download_in_repo": false,
+    "stated_local_download_date": "2026-04-03",
+    "stated_local_download_date_provenance": "Human-reported acquisition date; not independently proven by a retained dump archive in this repository.",
+    "original_artifact_name": "nywiki-latest-pages-articles.xml.bz2",
+    "original_download_url_moving": "https://dumps.wikimedia.org/nywiki/latest/nywiki-latest-pages-articles.xml.bz2",
+    "original_download_url_immutable_dated": null,
+    "url_class": "moving_latest",
+    "url_reproducibility_note": "The /latest/ URL is a moving target. An immutable dated snapshot URL (e.g. https://dumps.wikimedia.org/nywiki/YYYYMMDD/nywiki-YYYYMMDD-pages-articles.xml.bz2) could not be derived because the original .bz2 archive is not retained in this repository and no dump-generation timestamp was preserved."
+  },
+  "archive_evidence_in_repository": {
+    "original_bz2_present": false,
+    "original_xml_present": false,
+    "original_artifact_sha256": null,
+    "original_artifact_size_bytes": null,
+    "xml_header_dbname": null,
+    "xml_header_base": null,
+    "xml_generator": null,
+    "xml_dump_timestamp": null,
+    "reported_but_unverified_xml_header": {
+      "dbname": "nywiki",
+      "base": "https://ny.wikipedia.org/",
+      "generator": "MediaWiki 1.46.0-wmf.21",
+      "status": "reported_by_operator_not_verified_from_retained_archive"
+    },
+    "local_raw_text_path": "data/raw/wikipedia/wiki_clean.txt",
+    "local_raw_text_sha256": "cf7c5ba6d8c0d4770eee3306bab9f4be1dfc9570930a9aa7f3613c0ffb4587b7",
+    "local_raw_text_size_bytes": 1938045,
+    "local_raw_line_count": 20579,
+    "local_raw_notes": "Repository retains extracted/cleaned text only, not the Wikimedia XML dump."
+  },
+  "extraction_and_cleaning": {
+    "extraction_method": "Manual dump download followed by offline extraction to line-oriented text (not automated in this repository).",
+    "cleaning_policy": "configs/data/cleaning_v2.json",
+    "cleaning_policy_version": "2.0.0",
+    "interim_cleaned_path": "data/interim/cleaning_v2/wikipedia/cleaned.txt",
+    "interim_cleaned_sha256": "69aac9abb9bc79e713b3d5d769f149aaaddda9fea9225b6ef554cb2ed7a99e0b",
+    "modifications_performed": [
+      "XML/wiki markup extraction to plain text (prior to repository raw snapshot)",
+      "Cleaning Policy v2 line-level removals and transforms (boilerplate, foreign-language heuristics, URL handling, short-line rules, etc.)"
+    ],
+    "modification_notice_required": true
+  },
+  "license": {
+    "license_name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "license_identifier": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "also_available_under": ["GFDL (unversioned, no invariant sections) for compatible text; reusers may comply with CC BY-SA and/or GFDL per Wikimedia Terms of Use"],
+    "copyright_holders": "Individual Chichewa Wikipedia contributors retain copyright in their contributions; Wikimedia Foundation hosts the project and does not own all article copyrights.",
+    "attribution_required": true,
+    "share_alike_required": true,
+    "commercial_reuse_permitted_under_license_terms": true,
+    "source_page_references": [
+      "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+      "https://creativecommons.org/licenses/by-sa/4.0/",
+      "https://ny.wikipedia.org/",
+      "https://dumps.wikimedia.org/nywiki/"
+    ]
+  },
+  "attribution_requirements": [
+    "Identify Chichewa Wikipedia (ny.wikipedia.org / nywiki) as the source",
+    "Provide CC BY-SA 4.0 license notice and link",
+    "Indicate that extraction and cleaning modifications were performed",
+    "Provide a reasonable attribution route to contributors (project URL and/or article history mechanism)",
+    "Do not imply endorsement by Wikimedia Foundation or Wikipedia",
+    "Do not claim Wikimedia Foundation owns all article copyrights"
+  ],
+  "known_uncertainties": [
+    "Exact dated Wikimedia dump snapshot (YYYYMMDD) cannot be proven from retained repository artifacts",
+    "Original nywiki-latest-pages-articles.xml.bz2 is not present; SHA-256 of the dump cannot be computed here",
+    "Reported MediaWiki generator and XML header fields are operator-reported, not re-read from a local archive",
+    "Local raw file is post-extraction text; pre-cleaning extraction pipeline is outside this repository's automated scripts"
+  ],
+  "permissions_for_this_project": {
+    "allowed_for_training": true,
+    "allowed_for_redistribution": true,
+    "redistribution_conditions": [
+      "attribution",
+      "license_notice",
+      "modification_notice",
+      "share_alike_for_adapted_material"
+    ],
+    "model_weight_licensing_status": "unresolved_legal_interpretation",
+    "model_weight_note": "CC BY-SA obligations for redistributed cleaned text do not automatically determine whether trained model weights are adapted material. No qualified legal advice has been obtained on that point."
+  }
+}

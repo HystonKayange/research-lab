@@ -1,0 +1,16 @@
+{
+  "train/bible.txt": "eb4bb9308de68213433fa686a580d69af8506c7512f11e1e2a45a9daad7bc9de",
+  "train/wikipedia.txt": "061ba04e3f67a3741aa220f3099fe2bc316f08b0a582955a09ea936029e33b6a",
+  "train/combined.txt": "40ac7798b7dd1b98b1aa60f139a9794eefa75db751497166f1190c8da6ccc81d",
+  "metadata/train_documents.jsonl": "1c3a5d2860128499cef21b0d28836913029f25000edf051e183ebd3773c8cc1f",
+  "validation/bible.txt": "fd6f19b7ca81db03ed4c5dc36aae20447fabeec0592df0f37f0786aeac654d30",
+  "validation/wikipedia.txt": "7345621d16ebac80f39b20fa681aa654b8db8736c743369c85926a096702708b",
+  "validation/combined.txt": "d2de8aa56c5df64830502945544fac9335e91fbc100435f9c2491cd68d763665",
+  "metadata/validation_documents.jsonl": "1924ae84aa9bd6515e66108f27a538abfcb298654b55e106642cf72bd02a5a3b",
+  "test/bible.txt": "2c5a0fda5cff00e9d5dcc66449e585db7b997ba2c73739ce799c077644021c74",
+  "test/wikipedia.txt": "f6a3e029cb7cabb2d941019a845e14b72f25d14bcbc77a78d59c6973484ed84a",
+  "test/combined.txt": "e130719ff6a68d195bd5595f12ff30a124aba822c92b25057189d3586d687068",
+  "metadata/test_documents.jsonl": "1af677c688cb6e4ddc80ecc09b88338671aef529f6db6c930d7c9b0291952a67",
+  "metadata/split_assignments.jsonl": "10e061a45dbe9441087b5ac346cbfd4d33657f710f8bf424a5482f4e33dad026",
+  "README.md": "0dd420572f2d1bce02dbf9042e5c0caa2991f0d5569b98eb4a87106352a12318"
+}

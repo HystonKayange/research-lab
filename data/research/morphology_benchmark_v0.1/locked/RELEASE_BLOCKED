@@ -1,0 +1,3 @@
+MORPHOLOGY HOLDOUT LOCKED
+Do not open holdout_payload.sealed.json for method design.
+Release only after method freeze via release_morphology_holdout.py --confirm-method-freeze

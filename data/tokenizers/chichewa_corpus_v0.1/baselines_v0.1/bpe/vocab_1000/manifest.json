@@ -1,0 +1,240 @@
+{
+  "tool": {
+    "name": "train_sentencepiece_baselines",
+    "version": "0.1.0"
+  },
+  "created_at": "2026-08-05T04:48:14.991658Z",
+  "experiment_id": "baselines_v0.1",
+  "tokenizer_id": "bpe_1000",
+  "model_type": "bpe",
+  "requested_vocab_size": 1000,
+  "training_input": "data/splits/chichewa_corpus_v0.1/train/combined.txt",
+  "training_input_sha256": "40ac7798b7dd1b98b1aa60f139a9794eefa75db751497166f1190c8da6ccc81d",
+  "config_path": "configs/tokenizers/baselines_v0_1.json",
+  "config_sha256": "23e3ebb67bb21b51eb02126cca2d3a3b92452313c463386a47dcb694c79306f8",
+  "training_kwargs": {
+    "input": "/home/cyai/projects/research/transformer-lab/data/splits/chichewa_corpus_v0.1/train/combined.txt",
+    "model_prefix": "/home/cyai/projects/research/transformer-lab/data/tokenizers/chichewa_corpus_v0.1/baselines_v0.1/bpe/vocab_1000/model",
+    "vocab_size": 1000,
+    "model_type": "bpe",
+    "character_coverage": 1.0,
+    "normalization_rule_name": "identity",
+    "byte_fallback": false,
+    "split_by_unicode_script": true,
+    "split_by_number": true,
+    "split_by_whitespace": true,
+    "treat_whitespace_as_suffix": false,
+    "allow_whitespace_only_pieces": false,
+    "remove_extra_whitespaces": false,
+    "add_dummy_prefix": true,
+    "hard_vocab_limit": true,
+    "input_sentence_size": 0,
+    "shuffle_input_sentence": false,
+    "num_threads": 1,
+    "max_sentence_length": 8192,
+    "pad_id": 0,
+    "unk_id": 1,
+    "bos_id": 2,
+    "eos_id": 3,
+    "pad_piece": "<pad>",
+    "unk_piece": "<unk>",
+    "bos_piece": "<bos>",
+    "eos_piece": "<eos>",
+    "unk_surface": "<unk>",
+    "required_chars": "",
+    "train_extremely_large_corpus": false,
+    "seed": null,
+    "seed_note": "sentencepiece 0.2.0 TrainerSpec has no seed field; determinism via shuffle_input_sentence=false, num_threads=1, full corpus, fixed config.",
+    "determinism_controls": {
+      "shuffle_input_sentence": false,
+      "num_threads": 1,
+      "input_sentence_size": 0
+    }
+  },
+  "special_token_ids": {
+    "pad_id": 0,
+    "unk_id": 1,
+    "bos_id": 2,
+    "eos_id": 3,
+    "vocab_size_actual": 1000
+  },
+  "normalization_audit": {
+    "policy": "identity",
+    "n_sampled": 30,
+    "n_changed": 0,
+    "samples": [
+      {
+        "before_sha256": "b1a89a34b7090933bac991b34afa786badb640c404f119825838f501585ac7b4",
+        "after_sha256": "b1a89a34b7090933bac991b34afa786badb640c404f119825838f501585ac7b4",
+        "unchanged": true,
+        "before_preview": "Mtsinje wothirira mundawo unkatuluka mu Edeni; kuchokera apo unkagawikana kukhala mitsinje inayi.",
+        "after_preview": "Mtsinje wothirira mundawo unkatuluka mu Edeni; kuchokera apo unkagawikana kukhala mitsinje inayi."
+      },
+      {
+        "before_sha256": "29fa7555a923f84e8eb8c72ea6fae81f7bcc47ec75b35dabbd76c43e9330a0d6",
+        "after_sha256": "29fa7555a923f84e8eb8c72ea6fae81f7bcc47ec75b35dabbd76c43e9330a0d6",
+        "unchanged": true,
+        "before_preview": "Dzina la mtsinje woyamba ndi Pisoni; uwu umazungulira dziko lonse la Havila, kumene kuli golide.",
+        "after_preview": "Dzina la mtsinje woyamba ndi Pisoni; uwu umazungulira dziko lonse la Havila, kumene kuli golide."
+      },
+      {
+        "before_sha256": "7e78087fa117a428fc41e7423f6254d0a9a6d1d309d4fcab2b2e46aaf59969f4",
+        "after_sha256": "7e78087fa117a428fc41e7423f6254d0a9a6d1d309d4fcab2b2e46aaf59969f4",
+        "unchanged": true,
+        "before_preview": "(Golide wa ku dziko ili ndi wabwino. Kulinso miyala yokongola ya bedola ndi onikisi).",
+        "after_preview": "(Golide wa ku dziko ili ndi wabwino. Kulinso miyala yokongola ya bedola ndi onikisi)."
+      },
+      {
+        "before_sha256": "1d15955d10c18fb01d7e817cbf19c9f3ccd1df90cf059d3495408dfe309a71f3",
+        "after_sha256": "1d15955d10c18fb01d7e817cbf19c9f3ccd1df90cf059d3495408dfe309a71f3",
+        "unchanged": true,
+        "before_preview": "Dzina la mtsinje wachiwiri ndi Gihoni; uwu umazungulira dziko lonse la Kusi.",
+        "after_preview": "Dzina la mtsinje wachiwiri ndi Gihoni; uwu umazungulira dziko lonse la Kusi."
+      },
+      {
+        "before_sha256": "8cfda4b6a9432d1ae9809837eaa5108928eeca5603a9ed0fc3101e55137b69d1",
+        "after_sha256": "8cfda4b6a9432d1ae9809837eaa5108928eeca5603a9ed0fc3101e55137b69d1",
+        "unchanged": true,
+        "before_preview": "Dzina la mtsinje wachitatu ndi Tigirisi; umayenda chakummawa kwa Asiriya. Ndipo mtsinje wachinayi ndi Yufurate.",
+        "after_preview": "Dzina la mtsinje wachitatu ndi Tigirisi; umayenda chakummawa kwa Asiriya. Ndipo mtsinje wachinayi ndi Yufurate."
+      },
+      {
+        "before_sha256": "629781aaab6a6c5f19465d4638f836f82d4bf1212752d6f3620fd49a91734b67",
+        "after_sha256": "629781aaab6a6c5f19465d4638f836f82d4bf1212752d6f3620fd49a91734b67",
+        "unchanged": true,
+        "before_preview": "Yehova Mulungu anatenga munthu uja ndi kumuyika mʼmunda wa Edeni kuti awulime ndi kuwusamalira.",
+        "after_preview": "Yehova Mulungu anatenga munthu uja ndi kumuyika mʼmunda wa Edeni kuti awulime ndi kuwusamalira."
+      },
+      {
+        "before_sha256": "9317262694ece8115573e4ad143329d7148f51a9235c3b21643106d8dd15e578",
+        "after_sha256": "9317262694ece8115573e4ad143329d7148f51a9235c3b21643106d8dd15e578",
+        "unchanged": true,
+        "before_preview": "Ndipo Yehova Mulungu analamula munthu uja kuti, “Uzidya zipatso za mu mtengo wina uliwonse mʼmundamu;",
+        "after_preview": "Ndipo Yehova Mulungu analamula munthu uja kuti, “Uzidya zipatso za mu mtengo wina uliwonse mʼmundamu;"
+      },
+      {
+        "before_sha256": "c21587908bf2dbfbbce551450329aabe8fc74e2cfc4a79b61d57fd3c1d9255c1",
+        "after_sha256": "c21587908bf2dbfbbce551450329aabe8fc74e2cfc4a79b61d57fd3c1d9255c1",
+        "unchanged": true,
+        "before_preview": "koma usadye zipatso za mu mtengo wodziwitsa chabwino ndi choyipa, popeza ukadzadya za mu mtengowu udzafa ndithu.”",
+        "after_preview": "koma usadye zipatso za mu mtengo wodziwitsa chabwino ndi choyipa, popeza ukadzadya za mu mtengowu udzafa ndithu.”"
+      },
+      {
+        "before_sha256": "3c073c650efd3213eb85418b9bbcde0c42f84260a160404cabe4cb1503822228",
+        "after_sha256": "3c073c650efd3213eb85418b9bbcde0c42f84260a160404cabe4cb1503822228",
+        "unchanged": true,
+        "before_preview": "Ndipo Yehova Mulungu anati, “Sibwino kuti munthu akhale yekha. Ndidzamupangira mnzake womuthandiza.”",
+        "after_preview": "Ndipo Yehova Mulungu anati, “Sibwino kuti munthu akhale yekha. Ndidzamupangira mnzake womuthandiza.”"
+      },
+      {
+        "before_sha256": "f8a61827552238e8bed5e9ad2365b42f072d1707f7fa215e090acb2dd70c609a",
+        "after_sha256": "f8a61827552238e8bed5e9ad2365b42f072d1707f7fa215e090acb2dd70c609a",
+        "unchanged": true,
+        "before_preview": "Kenaka Yehova Mulungu anawumba ndi dothi nyama zonse zakuthengo ndi mbalame zonse zamlengalenga. Ndipo Iye anapita nazo ",
+        "after_preview": "Kenaka Yehova Mulungu anawumba ndi dothi nyama zonse zakuthengo ndi mbalame zonse zamlengalenga. Ndipo Iye anapita nazo "
+      },
+      {
+        "before_sha256": "e43676bd47b9fb15d23bce5512194594cc933e3932394ef24f287079c7dbf778",
+        "after_sha256": "e43676bd47b9fb15d23bce5512194594cc933e3932394ef24f287079c7dbf778",
+        "unchanged": true,
+        "before_preview": "Choncho Adamu anazitcha mayina ziweto zonse, mbalame zamlengalenga ndi nyama zakuthengo zonse. Komabe munthu uja analibe",
+        "after_preview": "Choncho Adamu anazitcha mayina ziweto zonse, mbalame zamlengalenga ndi nyama zakuthengo zonse. Komabe munthu uja analibe"
+      },
+      {
+        "before_sha256": "2325471d48fa61446ed2f5b19a7d47220ab6f3b9afedac11e6b268db9304bd4f",
+        "after_sha256": "2325471d48fa61446ed2f5b19a7d47220ab6f3b9afedac11e6b268db9304bd4f",
+        "unchanged": true,
+        "before_preview": "Tsono Yehova Mulungu anamugonetsa munthu uja tulo tofa nato; ali mtulo chomwecho, Mulungu anachotsa imodzi mwa nthiti za",
+        "after_preview": "Tsono Yehova Mulungu anamugonetsa munthu uja tulo tofa nato; ali mtulo chomwecho, Mulungu anachotsa imodzi mwa nthiti za"
+      },
+      {
+        "before_sha256": "b99c90b1468086a90125ffe1bb7206133395cbe4b87dae79ef9706c2bdba9f76",
+        "after_sha256": "b99c90b1468086a90125ffe1bb7206133395cbe4b87dae79ef9706c2bdba9f76",
+        "unchanged": true,
+        "before_preview": "Motero Yehova Mulungu anapanga mkazi ndi nthiti ija imene anatenga kwa munthu uja nabwera naye kwa iye.",
+        "after_preview": "Motero Yehova Mulungu anapanga mkazi ndi nthiti ija imene anatenga kwa munthu uja nabwera naye kwa iye."
+      },
+      {
+        "before_sha256": "cdf7468202d07a562d1b2331aa45f61a9f4e38c84652a95e7007606982f0f203",
+        "after_sha256": "cdf7468202d07a562d1b2331aa45f61a9f4e38c84652a95e7007606982f0f203",
+        "unchanged": true,
+        "before_preview": "Munthu uja anati, “Uyu ndiye fupa lochokera ku mafupa anga ndi mnofu wochokera ku mnofu wanga; adzatchedwa ‘mkazi,’ pope",
+        "after_preview": "Munthu uja anati, “Uyu ndiye fupa lochokera ku mafupa anga ndi mnofu wochokera ku mnofu wanga; adzatchedwa ‘mkazi,’ pope"
+      },
+      {
+        "before_sha256": "ac8441b9fd7706bdc9d11b7550fc6948f190a8c915c9ad6b8afb8188efb58290",
+        "after_sha256": "ac8441b9fd7706bdc9d11b7550fc6948f190a8c915c9ad6b8afb8188efb58290",
+        "unchanged": true,
+        "before_preview": "Nʼchifukwa chake, mwamuna amasiya abambo ndi amayi ake nakaphatikana ndi mkazi wake ndipo awiriwo amakhala thupi limodzi",
+        "after_preview": "Nʼchifukwa chake, mwamuna amasiya abambo ndi amayi ake nakaphatikana ndi mkazi wake ndipo awiriwo amakhala thupi limodzi"
+      },
+      {
+        "before_sha256": "7dc256955f0d5cc66684ce31b8a57cec26a7a56b4be6cef4e739b14393a590a2",
+        "after_sha256": "7dc256955f0d5cc66684ce31b8a57cec26a7a56b4be6cef4e739b14393a590a2",
+        "unchanged": true,
+        "before_preview": "Munthu uja ndi mkazi wakeyo, onse awiri anali maliseche ndipo analibe manyazi.",
+        "after_preview": "Munthu uja ndi mkazi wakeyo, onse awiri anali maliseche ndipo analibe manyazi."
+      },
+      {
+        "before_sha256": "5c1a2c9aac3b2a38096d60dbf0a3c97d22b3e74c111b61b73dc668ecf116fdca",
+        "after_sha256": "5c1a2c9aac3b2a38096d60dbf0a3c97d22b3e74c111b61b73dc668ecf116fdca",
+        "unchanged": true,
+        "before_preview": "Ndipo njoka inali yochenjera kuposa nyama yakuthengo iliyonse imene Yehova Mulungu anapanga. Njokayo inati kwa mkaziyo, ",
+        "after_preview": "Ndipo njoka inali yochenjera kuposa nyama yakuthengo iliyonse imene Yehova Mulungu anapanga. Njokayo inati kwa mkaziyo, "
+      },
+      {
+        "before_sha256": "2829e29573223b02a4dcae3384b749ff85435df515fa82da4bbdcc0cf84602ae",
+        "after_sha256": "2829e29573223b02a4dcae3384b749ff85435df515fa82da4bbdcc0cf84602ae",
+        "unchanged": true,
+        "before_preview": "Mkaziyo anati kwa njokayo, “Tikhoza kudya zipatso za mʼmitengo ya mʼmundawu,",
+        "after_preview": "Mkaziyo anati kwa njokayo, “Tikhoza kudya zipatso za mʼmitengo ya mʼmundawu,"
+      },
+      {
+        "before_sha256": "da0fa690850586fa761136f8a8849856392f5d677e11ef43b7653088d605359d",
+        "after_sha256": "da0fa690850586fa761136f8a8849856392f5d677e11ef43b7653088d605359d",
+        "unchanged": true,
+        "before_preview": "koma Mulungu anati, ‘Musadye zipatso za mu mtengo umene uli pakati pa munda, ndipo musadzawukhudze kuti mungadzafe.’ ”",
+        "after_preview": "koma Mulungu anati, ‘Musadye zipatso za mu mtengo umene uli pakati pa munda, ndipo musadzawukhudze kuti mungadzafe.’ ”"
+      },
+      {
+        "before_sha256": "af29c3fe1a1483c80fb99c825e222f4cd3a8a873f43a49459c963dea7a51e196",
+        "after_sha256": "af29c3fe1a1483c80fb99c825e222f4cd3a8a873f43a49459c963dea7a51e196",
+        "unchanged": true,
+        "before_preview": "“Ndithudi simudzafa,” inatero njokayo kwa mkaziyo.",
+        "after_preview": "“Ndithudi simudzafa,” inatero njokayo kwa mkaziyo."
+      }
+    ],
+    "conclusion": "Identity normalization: training text is passed through unchanged."
+  },
+  "platform": {
+    "python_version": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "processor": "x86_64",
+    "sentencepiece_version": "0.2.0",
+    "git_commit": null
+  },
+  "input_sentence_sampling": {
+    "input_sentence_size": 0,
+    "shuffle_input_sentence": false,
+    "policy": "all_sentences"
+  },
+  "byte_fallback": false,
+  "split_by_whitespace": true,
+  "treatment_of_digits": "split_by_number=True",
+  "treatment_of_punctuation": "handled_via_unicode_script_and_pieces",
+  "artifacts": {
+    "model.model": "4d784454b575138c30317808f63f840f5572976ddff40d0df96a20a645b2f7f6",
+    "model.vocab": "4ae7ad5cf2ca5712b79cf384c7511ebac43291b876d7b76103da2243f3a4e286",
+    "training_config.json": "1a85c1ff94241b9b5fb1d9c3ccedc710c027572c4d1bad3ff80727e790ce1ba1"
+  },
+  "frozen_split_check": {
+    "verified": true,
+    "split_root": "data/splits/chichewa_corpus_v0.1"
+  },
+  "disclaimers": [
+    "Trained on train split only.",
+    "Segmentation is not claimed to be linguistically correct.",
+    "Not MthandiziTokenizer / morphology-aware."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "accepted": true,
+  "run_id": "lm_baselines_v0_1_final_matrix__final__arch__bpe_8000__seed42__chars",
+  "accepted_at": "2026-08-05T06:26:33.078323Z",
+  "report_summary": {
+    "status": "completed",
+    "validation_bpc": 2.413509798534404,
+    "validation_bpb": 2.3901339939057373,
+    "characters_processed": 4009606.818601813,
+    "character_overshoot": 9606.818601813167,
+    "optimizer_steps": 112,
+    "runtime_s": 4.465069457000936,
+    "peak_vram_gb": 0.7370014190673828,
+    "checkpoint_reload_ok": true,
+    "nan_or_inf_detected": false
+  },
+  "statement": "Canary accepted; --stage full may proceed."
+}

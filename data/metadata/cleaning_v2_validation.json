@@ -1,0 +1,173 @@
+{
+  "generated_at": "2026-08-04T08:19:09.211504Z",
+  "tool": {
+    "name": "evaluate_cleaning_policy",
+    "version": "1.0.0"
+  },
+  "policy_name": "cleaning_v2",
+  "config_path": "configs/data/cleaning_v2.json",
+  "n_validation_records": 367,
+  "confusion_matrix": {
+    "true_positive_removal": 109,
+    "false_positive_removal": 4,
+    "true_negative_keep": 189,
+    "false_negative_keep": 65
+  },
+  "metrics": {
+    "removal_precision": 0.964602,
+    "false_removal_rate": 0.035398,
+    "useful_text_retention": 0.979275,
+    "noise_removal_recall": 0.626437,
+    "kept_noise_rate_on_human_kept_decision": 0.1375,
+    "foreign_language_leakage_on_human_kept_decision": 0.05,
+    "boilerplate_leakage_on_human_kept_decision": 0.0875,
+    "n_useful_labels": 193,
+    "n_useful_retained": 189,
+    "n_noise_labels": 174,
+    "n_noise_removed": 109,
+    "n_policy_removals_in_sample": 113,
+    "n_false_removals": 4,
+    "n_correct_removals": 109
+  },
+  "false_positives_by_rule": {
+    "drop_high_confidence_foreign": 3,
+    "drop_long_table_dump": 1
+  },
+  "true_positives_by_rule": {
+    "drop_blank": 10,
+    "drop_category": 25,
+    "drop_digit_only": 20,
+    "drop_high_confidence_foreign": 31,
+    "drop_in_german_meta": 3,
+    "drop_long_table_dump": 6,
+    "drop_short_conditional": 3,
+    "drop_url_only": 2,
+    "drop_wikimedia_chrome": 5,
+    "drop_mu_nkhani_nav": 1,
+    "drop_blank_after_transform": 2,
+    "drop_wikipedia_muzinenero": 1
+  },
+  "false_positive_examples": [
+    {
+      "line": 19800,
+      "label": "useful_mixed_chichewa",
+      "rule": "drop_high_confidence_foreign",
+      "excerpt": "Adawonekera m'mafilimu a The Little Engine That Could (2011), Scary or Die (2012), Namwino 3D (2013), Shuga (2013), The Monkey's Paw (2013), Walk."
+    },
+    {
+      "line": 10357,
+      "label": "useful_mixed_chichewa",
+      "rule": "drop_long_table_dump",
+      "excerpt": "+Districts of MalawiRegionNamePopulation Total Area (km2)CapitalIndexCentralDedza830,5123,754Dedza1Dowa772,5693,077Dowa2Kasungu842,9538,017Kasungu3Lilongwe2,626"
+    },
+    {
+      "line": 11757,
+      "label": "useful_mixed_chichewa",
+      "rule": "drop_high_confidence_foreign",
+      "excerpt": "Wosankhidwa kukhala PurezidentiWothamanga mnzakePhwando 1.Edgar LunguNkandu LuoPatriotic Front2.Enock TongaBright Chomba3rd Liberation Movement3.Sean TemboHenry"
+    },
+    {
+      "line": 1355,
+      "label": "useful_mixed_chichewa",
+      "rule": "drop_high_confidence_foreign",
+      "excerpt": "He was the third son of John Johnson, a lawyer of Ryde, and Mary Percival, his second wife, ...\" - Baibulo, Buku Lopatulika ndilo Mau a Mulungu, anatanthauzirid"
+    }
+  ],
+  "false_negative_examples": [
+    {
+      "line": 2581,
+      "label": "duplicate",
+      "excerpt": "Kuchuluka: 3,372 ta’ata/km²"
+    },
+    {
+      "line": 9572,
+      "label": "boilerplate_or_noise",
+      "excerpt": "World Health Organization."
+    },
+    {
+      "line": 9704,
+      "label": "boilerplate_or_noise",
+      "excerpt": "Weekly epidemiological record."
+    },
+    {
+      "line": 9741,
+      "label": "boilerplate_or_noise",
+      "excerpt": "Retrieved 22 April 2014."
+    },
+    {
+      "line": 10714,
+      "label": "boilerplate_or_noise",
+      "excerpt": "† Adamwalira muofesi"
+    },
+    {
+      "line": 16064,
+      "label": "duplicate",
+      "excerpt": "Tsatanetsatane wamasewera"
+    },
+    {
+      "line": 155,
+      "label": "foreign_language",
+      "excerpt": "All one, Strong and Free.Vesi lachiwiriAfrica is our own motherland,"
+    },
+    {
+      "line": 653,
+      "label": "foreign_language",
+      "excerpt": "Hills and valleys, soil so rich and rare"
+    },
+    {
+      "line": 6629,
+      "label": "foreign_language",
+      "excerpt": "On This Winter's Night (2012)"
+    },
+    {
+      "line": 6974,
+      "label": "foreign_language",
+      "excerpt": "Zelly and Me (1988) as Co-Co"
+    },
+    {
+      "line": 9279,
+      "label": "foreign_language",
+      "excerpt": "\"Tuberculosis vaccines and prevention of infection\"."
+    },
+    {
+      "line": 9468,
+      "label": "foreign_language",
+      "excerpt": "\"Natural History of Hepatitis B Virus Infection: an Update for Clinicians\"."
+    },
+    {
+      "line": 9669,
+      "label": "foreign_language",
+      "excerpt": "\"Update on pertussis in children\"."
+    },
+    {
+      "line": 10692,
+      "label": "foreign_language",
+      "excerpt": "Current World Leaders: biography and news, Volumes 20-21, Almanac of Current World Leaders, 1977, page 2"
+    },
+    {
+      "line": 12353,
+      "label": "foreign_language",
+      "excerpt": "History of Tennis – An Authoritative Encyclopedia and Record Book (New Chapter Press, 2010)"
+    }
+  ],
+  "targets": {
+    "removal_precision_ge": 0.9,
+    "false_removal_rate_le": 0.1,
+    "useful_text_retention_ge": 0.9
+  },
+  "raw_sha256": "cf7c5ba6d8c0d4770eee3306bab9f4be1dfc9570930a9aa7f3613c0ffb4587b7",
+  "raw_files_unchanged": true,
+  "human_labels_unchanged": true,
+  "targets_met": {
+    "removal_precision": true,
+    "false_removal_rate": true,
+    "useful_text_retention": true
+  },
+  "all_targets_met": true,
+  "n_lines_removed_full_corpus": 2606,
+  "v1_comparison": {
+    "removal_precision": 0.567944,
+    "false_removal_rate": 0.432056,
+    "useful_text_rate": 0.8625
+  }
+}

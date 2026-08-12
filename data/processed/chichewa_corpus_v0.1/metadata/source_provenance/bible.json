@@ -1,0 +1,103 @@
+{
+  "source_id": "bible",
+  "source_name": "Biblica Chichewa Bible (extracted/processed text)",
+  "official_translation_title": "Biblica® Tsekulani Mawu a Mulungu mu Chichewa Chalero",
+  "english_title_variant": "Biblica® Open God's Word in Contemporary Chichewa",
+  "abbreviation": "TCCl",
+  "language": "Chichewa",
+  "language_region": "Malawi",
+  "language_identifier": "nya",
+  "copyright_holder": "Biblica, Inc.",
+  "copyright_notice": "Copyright © 2002, 2016 by Biblica, Inc.",
+  "acquisition": {
+    "method": "manual_download",
+    "automatic_download_in_repo": false,
+    "original_archive_name": "nya_vpl.zip",
+    "extracted_source_name": "nya_vpl.txt",
+    "original_download_url": "https://ebible.org/Scriptures/nya_vpl.zip",
+    "official_source_page": "https://ebible.org/details.php?id=nya",
+    "source_page_last_updated_stated": "2025-05-20",
+    "format_at_source": "VPL — verse per line (e.g. GEN 1:1 ...)",
+    "url_class": "stable_product_url"
+  },
+  "archive_evidence_in_repository": {
+    "original_zip_present": false,
+    "original_vpl_txt_present": false,
+    "original_artifact_sha256": null,
+    "original_artifact_size_bytes": null,
+    "nya_about_htm_present": false,
+    "local_raw_text_path": "data/raw/bible/bible_clean.txt",
+    "local_raw_text_sha256": "55445a0e0a5359e243f1773de623af1716bf4d3cd835afd83c4407cbaf85fc89",
+    "local_raw_text_size_bytes": 4218603,
+    "local_raw_line_count": 31099,
+    "local_raw_notes": "Repository retains extracted/cleaned verse text without VPL book/chapter prefixes. Original nya_vpl.zip is not retained in-repo; checksum of the zip cannot be computed here."
+  },
+  "extraction_and_cleaning": {
+    "extraction_method": "Manual download of nya_vpl.zip and offline extraction to text; verse-reference prefixes appear to have been stripped prior to or during placement under data/raw/.",
+    "cleaning_policy": "configs/data/cleaning_v2.json (Bible path is light-touch; raw and interim cleaned checksums currently match)",
+    "interim_cleaned_path": "data/interim/cleaning_v2/bible/cleaned.txt",
+    "interim_cleaned_sha256": "55445a0e0a5359e243f1773de623af1716bf4d3cd835afd83c4407cbaf85fc89",
+    "treated_as_modified_derivative": true,
+    "modifications_performed": [
+      "Archive extraction from nya_vpl.zip",
+      "Removal or absence of VPL verse markers in local raw text",
+      "Light-touch cleaning under project cleaning tools",
+      "Packaging into Chichewa Corpus v0.1 as a derived research artifact"
+    ],
+    "modification_notice_required": true
+  },
+  "license": {
+    "license_name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "license_identifier": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "copyright_holder": "Biblica, Inc.",
+    "attribution_required": true,
+    "share_alike_required": true,
+    "commercial_reuse_permitted_under_license_terms": true,
+    "source_page_references": [
+      "https://ebible.org/details.php?id=nya",
+      "https://ebible.org/Scriptures/nya_vpl.zip",
+      "https://creativecommons.org/licenses/by-sa/4.0/",
+      "https://open.bible/",
+      "https://www.biblica.com/"
+    ]
+  },
+  "trademark_conditions": {
+    "trademark": "Biblica®",
+    "unmodified_redistribution_may_retain_trademark": true,
+    "modified_or_adapted_text_must_remove_trademark_unless_written_permission": true,
+    "processed_corpus_is_treated_as_modified_derivative": true,
+    "do_not_use_biblica_as_processed_corpus_brand": true,
+    "no_endorsement_implied": true,
+    "official_derivative_attribution_wording": "The original work by Biblica, Inc. is available for free at www.biblica.com and open.bible.",
+    "official_english_license_excerpt_summary": "Under CC BY-SA, unmodified copies may keep the Biblica® trademark intact; modified/translated derivatives must remove the Biblica® trademark, indicate changes, attribute the original work, and release the derivative under CC BY-SA 4.0."
+  },
+  "attribution_requirements": [
+    "Attribute the original work to Biblica, Inc.",
+    "Preserve copyright notice Copyright © 2002, 2016 by Biblica, Inc.",
+    "Name the original translation title only in provenance/attribution, not as the processed corpus brand",
+    "State that extraction/formatting/cleaning modifications were made",
+    "State that modifications are not necessarily endorsed by Biblica, Inc.",
+    "Link or reference CC BY-SA 4.0",
+    "Do not use Biblica® as the brand for Chichewa Corpus v0.1"
+  ],
+  "required_attribution_text": "The original Chichewa Bible work by Biblica, Inc. (Biblica® Tsekulani Mawu a Mulungu mu Chichewa Chalero / Open God's Word in Contemporary Chichewa) is available free from Biblica/open.bible and eBible.org (https://ebible.org/details.php?id=nya). Copyright © 2002, 2016 by Biblica, Inc. Licensed under Creative Commons Attribution-ShareAlike 4.0 International (https://creativecommons.org/licenses/by-sa/4.0/). This corpus contains extracted and processed text; formatting/extraction/cleaning changes were made. These modifications are not necessarily endorsed by Biblica, Inc. Because this is a modified/derived artifact, the Biblica® trademark is not used as a brand for Chichewa Corpus v0.1.",
+  "known_uncertainties": [
+    "Original nya_vpl.zip is not retained; archive SHA-256 unavailable",
+    "nya_about.htm not present in repository; attribution follows official eBible details page wording verified 2026-08-05",
+    "Exact intermediate extraction scripts that produced bible_clean.txt are not versioned in this repository"
+  ],
+  "permissions_for_this_project": {
+    "allowed_for_training": true,
+    "allowed_for_redistribution": true,
+    "redistribution_conditions": [
+      "attribution",
+      "license_notice",
+      "modification_notice",
+      "share_alike_for_adapted_material",
+      "biblica_trademark_conditions_for_derivatives"
+    ],
+    "model_weight_licensing_status": "unresolved_legal_interpretation",
+    "model_weight_note": "CC BY-SA obligations for redistributed cleaned text do not automatically determine whether trained model weights are adapted material. No qualified legal advice has been obtained on that point."
+  }
+}

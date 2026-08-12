@@ -1,0 +1,44 @@
+{
+  "generated_at": "2026-08-05T01:33:32.161297Z",
+  "tool": {
+    "name": "promote_processed_corpus",
+    "version": "0.1.0"
+  },
+  "corpus_name": "chichewa_corpus",
+  "corpus_version": "v0.1",
+  "git_commit": null,
+  "promotion_config_version": "0.1.0",
+  "redistribution_mode": "exportable",
+  "eligible_sources": [
+    "bible",
+    "wikipedia"
+  ],
+  "deduplication": {
+    "within_source_exact": true,
+    "cross_source_exact": false,
+    "source_priority": [
+      "bible",
+      "wikipedia"
+    ],
+    "n_log_entries": 1498
+  },
+  "eligibility_snapshot_sha256": "2a69f596d7b5e81a55361d88efc3362ba6fd8c5a6e0256cc3ecf1e40fcf939a5",
+  "input_checksums": {
+    "bible": "55445a0e0a5359e243f1773de623af1716bf4d3cd835afd83c4407cbaf85fc89",
+    "wikipedia": "69aac9abb9bc79e713b3d5d769f149aaaddda9fea9225b6ef554cb2ed7a99e0b"
+  },
+  "output_checksums": {
+    "bible": "b4b259f5adda711e8637a97f3f43d3c09014267e9d35e66045d58a6b0efabd25",
+    "wikipedia": "90d533f25dcbf54545b691c28d7f257dcc5f658c0d5c25565b531790d22c1af2"
+  },
+  "cleaning_config_checksums": {
+    "bible": {
+      "path": "configs/data/cleaning_v2.json",
+      "sha256": "c2f734aa5115be3b7a4a5f5bce813018b189d9b08a69133b2991514ab0ad29cb"
+    },
+    "wikipedia": {
+      "path": "configs/data/cleaning_v2.json",
+      "sha256": "c2f734aa5115be3b7a4a5f5bce813018b189d9b08a69133b2991514ab0ad29cb"
+    }
+  }
+}

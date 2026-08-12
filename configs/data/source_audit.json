@@ -1,0 +1,184 @@
+{
+  "version": "1.0.0",
+  "description": "Provisional source-audit configuration for Chichewa corpus inspection. Term lists and patterns require native-speaker and domain review; they are heuristic only.",
+  "short_line_threshold": 20,
+  "long_line_threshold": 500,
+  "sample_count": 5,
+  "excerpt_length": 120,
+  "random_seed": 42,
+  "max_examples_per_category": 8,
+  "max_repeated_lines_report": 15,
+  "case_fold_comparison": true,
+  "percentiles": [50, 90, 95, 99],
+  "chichewa_chars": ["ŵ", "Ŵ"],
+  "unusual_codepoint_min": 256,
+  "max_unusual_codepoints_report": 40,
+  "replacement_char": "\ufffd",
+  "language_signal": {
+    "min_matches_for_signal": 2,
+    "notes": "A line needs at least min_matches_for_signal hits from a term list to count as that language signal. Matching is case-insensitive whole-word. These are provisional heuristics, not language identification."
+  },
+  "chichewa_signal_terms": [
+    "ndi",
+    "ndipo",
+    "kuti",
+    "wa",
+    "ya",
+    "za",
+    "pa",
+    "mu",
+    "ku",
+    "ali",
+    "anali",
+    "chifukwa",
+    "koma",
+    "ine",
+    "iye",
+    "anthu",
+    "mulungu",
+    "dziko",
+    "mwana",
+    "ntchito"
+  ],
+  "english_signal_terms": [
+    "the",
+    "and",
+    "of",
+    "to",
+    "in",
+    "is",
+    "for",
+    "that",
+    "with",
+    "was",
+    "were",
+    "from",
+    "this",
+    "are",
+    "by",
+    "on",
+    "as",
+    "at",
+    "be",
+    "or"
+  ],
+  "german_signal_terms": [
+    "der",
+    "die",
+    "das",
+    "und",
+    "ist",
+    "von",
+    "zu",
+    "mit",
+    "auf",
+    "für",
+    "den",
+    "dem",
+    "ein",
+    "eine",
+    "nicht",
+    "sich",
+    "auch",
+    "als",
+    "nach",
+    "bei"
+  ],
+  "boilerplate_patterns": [
+    {
+      "id": "category_prefix",
+      "description": "Wikipedia-style Category lines",
+      "pattern": "Category\\s*:",
+      "flags": "i"
+    },
+    {
+      "id": "wikipedia_muzinenero",
+      "description": "Chichewa Wikipedia other-languages nav",
+      "pattern": "Wikipedia\\s+Muzinenero\\s+Zina",
+      "flags": "i"
+    },
+    {
+      "id": "mu_nkhani",
+      "description": "Chichewa Wikipedia article-contents nav",
+      "pattern": "Mu\\s+nkhani",
+      "flags": "i"
+    },
+    {
+      "id": "wikipedia_word",
+      "description": "Mentions of Wikipedia",
+      "pattern": "\\bWikipedia\\b",
+      "flags": "i"
+    },
+    {
+      "id": "wikimedia",
+      "description": "Wikimedia project mentions",
+      "pattern": "\\bWikimedia\\b",
+      "flags": "i"
+    },
+    {
+      "id": "url_http",
+      "description": "HTTP(S) URLs",
+      "pattern": "https?://",
+      "flags": "i"
+    },
+    {
+      "id": "url_www",
+      "description": "www. hostnames",
+      "pattern": "\\bwww\\.",
+      "flags": "i"
+    },
+    {
+      "id": "html_tag",
+      "description": "Simple HTML tag remnants",
+      "pattern": "</?[a-zA-Z][^>]*>",
+      "flags": ""
+    },
+    {
+      "id": "wiki_link_brackets",
+      "description": "Wiki-style double-bracket links",
+      "pattern": "\\[\\[[^\\]]+\\]\\]",
+      "flags": ""
+    },
+    {
+      "id": "wiki_template",
+      "description": "Wiki-style template braces",
+      "pattern": "\\{\\{[^}]+\\}\\}",
+      "flags": ""
+    },
+    {
+      "id": "in_german_meta",
+      "description": "Explicit German-language meta marker",
+      "pattern": "\\(in German\\)",
+      "flags": "i"
+    },
+    {
+      "id": "image_meta",
+      "description": "Image metadata parenthetical",
+      "pattern": "\\(image\\)",
+      "flags": "i"
+    }
+  ],
+  "shingles": {
+    "mode": "token",
+    "window_size": 5,
+    "stride": 1,
+    "min_tokens_in_unit": 5,
+    "notes": "Token shingles use Unicode alphanumeric tokenization. Used only for in-memory overlap diagnostics."
+  },
+  "paragraph": {
+    "separator": "blank_line",
+    "notes": "Paragraphs are sequences of non-empty lines separated by one or more blank lines."
+  },
+  "candidate_reasons": [
+    "english_signal",
+    "german_signal",
+    "mixed_signal",
+    "boilerplate",
+    "url_containing",
+    "extremely_short",
+    "extremely_long",
+    "unusual_unicode",
+    "cross_source_duplicate"
+  ],
+  "term_list_disclaimer": "Chichewa, English, and German term lists are small, provisional, and must be reviewed by a native speaker / domain expert before being treated as reliable filters."
+}

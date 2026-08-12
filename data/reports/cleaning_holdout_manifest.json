@@ -1,0 +1,140 @@
+{
+  "generated_at": "2026-08-04T08:27:25.960119Z",
+  "tool": {
+    "name": "build_cleaning_holdout_sample",
+    "version": "1.0.0"
+  },
+  "config_version": "1.0.0",
+  "dataset_role": "blind_holdout",
+  "development_set": {
+    "path": "data/reports/cleaning_review_sample.jsonl",
+    "role": "development_validation",
+    "n_records": 367,
+    "n_unique_hashes": 348
+  },
+  "targets": {
+    "removed_total": 120,
+    "kept_total": 130
+  },
+  "counts": {
+    "total": 250,
+    "removed": 120,
+    "kept": 130,
+    "by_v2_rule": {
+      "drop_blank": 3,
+      "drop_category": 36,
+      "drop_digit_only": 8,
+      "drop_high_confidence_foreign": 28,
+      "drop_long_table_dump": 2,
+      "drop_short_conditional": 20,
+      "drop_url_only": 15,
+      "drop_wikimedia_chrome": 8,
+      "kept": 130
+    },
+    "by_primary_stratum": {
+      "drop_blank": 3,
+      "drop_category": 36,
+      "drop_digit_only": 8,
+      "drop_high_confidence_foreign": 28,
+      "drop_long_table_dump": 2,
+      "drop_short_conditional": 20,
+      "drop_url_only": 15,
+      "drop_wikimedia_chrome": 8,
+      "chichewa_signal": 46,
+      "insufficient_signal": 58,
+      "mixed_signal": 26
+    }
+  },
+  "removed_sampling": {
+    "requested": {
+      "drop_high_confidence_foreign": 28,
+      "drop_category": 22,
+      "drop_short_conditional": 20,
+      "drop_url_only": 15,
+      "drop_long_table_dump": 9,
+      "drop_blank": 8,
+      "drop_digit_only": 8,
+      "drop_wikimedia_chrome": 8,
+      "drop_nav_exact": 2
+    },
+    "sampled": {
+      "drop_high_confidence_foreign": 28,
+      "drop_category": 36,
+      "drop_short_conditional": 20,
+      "drop_url_only": 15,
+      "drop_long_table_dump": 2,
+      "drop_blank": 3,
+      "drop_digit_only": 8,
+      "drop_wikimedia_chrome": 8,
+      "drop_nav_exact": 0
+    },
+    "pool_sizes": {
+      "drop_wikimedia_chrome": 111,
+      "drop_category": 1027,
+      "drop_high_confidence_foreign": 204,
+      "drop_short_conditional": 170,
+      "drop_digit_only": 81,
+      "drop_blank_after_transform": 8,
+      "drop_url_only": 69,
+      "drop_long_table_dump": 2,
+      "drop_blank": 3
+    },
+    "shortfalls": {
+      "drop_long_table_dump": 7,
+      "drop_blank": 5,
+      "drop_nav_exact": 2
+    },
+    "backfill_remaining_shortfall": 0
+  },
+  "kept_sampling": {
+    "requested": {
+      "chichewa_signal": 30,
+      "mixed_signal": 20,
+      "insufficient_signal": 20,
+      "short_retained": 12,
+      "long_retained": 12,
+      "url_stripped_retained": 12,
+      "english_names_institutions": 14,
+      "near_threshold": 10
+    },
+    "sampled": {
+      "chichewa_signal": 30,
+      "mixed_signal": 20,
+      "insufficient_signal": 20,
+      "short_retained": 12,
+      "long_retained": 12,
+      "url_stripped_retained": 12,
+      "english_names_institutions": 14,
+      "near_threshold": 10
+    },
+    "pool_sizes": {
+      "chichewa_signal": 9430,
+      "insufficient_signal": 7465,
+      "near_threshold": 1496,
+      "short_retained": 2384,
+      "english_names_institutions": 445,
+      "mixed_signal": 414,
+      "url_stripped_retained": 38,
+      "long_retained": 29
+    },
+    "shortfalls": {}
+  },
+  "exclusion": {
+    "excluded_removed_candidates": 931,
+    "excluded_kept_candidates": 664,
+    "overlap_with_development": {
+      "hash_overlap": 0,
+      "line_overlap": 0,
+      "review_id_overlap": 0
+    }
+  },
+  "annotation_status": "pending_human_labels",
+  "note": "Original 367-record set is the development validation set only. This holdout is unlabeled and must be labeled before generalization claims.",
+  "input_checksums": {
+    "raw_wikipedia": "cf7c5ba6d8c0d4770eee3306bab9f4be1dfc9570930a9aa7f3613c0ffb4587b7",
+    "cleaning_v2_config": "c2f734aa5115be3b7a4a5f5bce813018b189d9b08a69133b2991514ab0ad29cb",
+    "development_review_sample": "f41fccb5793acf7573ae479f0ca23ea4dac12957a7c99b7f55f2924cc42bc8bd"
+  },
+  "sample_path": "data/reports/cleaning_holdout_sample.jsonl",
+  "instructions_path": "data/reports/cleaning_holdout_instructions.md"
+}

@@ -1,0 +1,96 @@
+{
+  "pilot_runs": [
+    {
+      "tokenizer": "bpe_8000",
+      "params": {
+        "total": 5273088,
+        "embedding": 2113536,
+        "non_embedding": 3159552,
+        "tied_embeddings": true
+      },
+      "best": {
+        "step": 6,
+        "validation_bpc": 2.9847004919256985,
+        "validation_bpb": 2.955792477706445,
+        "characters_processed": 210816,
+        "wall_time_s": 0.6649262610008009
+      },
+      "exposure": {
+        "characters_processed": 210816,
+        "tokens_processed": 48960,
+        "optimizer_steps": 6,
+        "target_characters": 200000,
+        "bytes_processed_approx": 212765
+      },
+      "runtime": {
+        "wall_clock_s": 0.7759115649969317,
+        "peak_gpu_memory_gb": 0.7365312576293945,
+        "tokens_per_second": 63099.97454438459,
+        "characters_per_second": 271701.06686170306
+      },
+      "device": "cuda"
+    },
+    {
+      "tokenizer": "unigram_8000",
+      "params": {
+        "total": 5273088,
+        "embedding": 2113536,
+        "non_embedding": 3159552,
+        "tied_embeddings": true
+      },
+      "best": {
+        "step": 6,
+        "validation_bpc": 2.9799633744458855,
+        "validation_bpb": 2.951101241098041,
+        "characters_processed": 212484,
+        "wall_time_s": 0.6493433569994522
+      },
+      "exposure": {
+        "characters_processed": 212484,
+        "tokens_processed": 48960,
+        "optimizer_steps": 6,
+        "target_characters": 200000,
+        "bytes_processed_approx": 214448
+      },
+      "runtime": {
+        "wall_clock_s": 0.7605042229988612,
+        "peak_gpu_memory_gb": 0.7365312576293945,
+        "tokens_per_second": 64378.340736805236,
+        "characters_per_second": 279398.8429967182
+      },
+      "device": "cuda"
+    },
+    {
+      "tokenizer": "character",
+      "params": {
+        "total": 3459328,
+        "embedding": 299776,
+        "non_embedding": 3159552,
+        "tied_embeddings": true
+      },
+      "best": {
+        "step": 25,
+        "validation_bpc": 7.258415630949383,
+        "validation_bpb": 7.188114981743084,
+        "characters_processed": 203150,
+        "wall_time_s": 1.4198675480001839
+      },
+      "exposure": {
+        "characters_processed": 203150,
+        "tokens_processed": 204000,
+        "optimizer_steps": 25,
+        "target_characters": 200000,
+        "bytes_processed_approx": 205028
+      },
+      "runtime": {
+        "wall_clock_s": 1.5173193869995885,
+        "peak_gpu_memory_gb": 0.3841896057128906,
+        "tokens_per_second": 134447.6329425924,
+        "characters_per_second": 133887.43447199828
+      },
+      "device": "cuda"
+    }
+  ],
+  "phase": "pilot",
+  "final_not_run": true
+}

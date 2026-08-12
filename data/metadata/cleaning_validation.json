@@ -1,0 +1,310 @@
+{
+  "generated_at": "2026-08-04T08:13:10.334488Z",
+  "tool": {
+    "name": "summarize_cleaning_review",
+    "version": "1.0.0"
+  },
+  "config_version": "1.0.0",
+  "include_uncertain_in_precision": false,
+  "annotation_status": "complete",
+  "n_records": 367,
+  "n_labeled": 367,
+  "n_unlabeled": 0,
+  "n_invalid_labels": 0,
+  "invalid_labels": [],
+  "overall_label_counts": {
+    "duplicate": 2,
+    "valid_chichewa": 125,
+    "boilerplate_or_noise": 127,
+    "foreign_language": 45,
+    "useful_mixed_chichewa": 68
+  },
+  "removed": {
+    "overall": {
+      "n_records": 287,
+      "n_labeled": 287,
+      "n_unlabeled": 0,
+      "n_uncertain": 0,
+      "n_decisive": 287,
+      "n_correct_removal": 163,
+      "n_false_removal": 124,
+      "n_other_decisive": 0,
+      "removal_precision": 0.567944,
+      "false_removal_rate": 0.432056,
+      "label_counts": {
+        "duplicate": 2,
+        "valid_chichewa": 56,
+        "boilerplate_or_noise": 120,
+        "foreign_language": 41,
+        "useful_mixed_chichewa": 68
+      }
+    },
+    "by_rule": {
+      "dedupe_exact": {
+        "n_records": 25,
+        "n_labeled": 25,
+        "n_unlabeled": 0,
+        "n_uncertain": 0,
+        "n_decisive": 25,
+        "n_correct_removal": 6,
+        "n_false_removal": 19,
+        "n_other_decisive": 0,
+        "removal_precision": 0.24,
+        "false_removal_rate": 0.76,
+        "label_counts": {
+          "duplicate": 2,
+          "valid_chichewa": 19,
+          "boilerplate_or_noise": 4
+        }
+      },
+      "drop_blank": {
+        "n_records": 10,
+        "n_labeled": 10,
+        "n_unlabeled": 0,
+        "n_uncertain": 0,
+        "n_decisive": 10,
+        "n_correct_removal": 10,
+        "n_false_removal": 0,
+        "n_other_decisive": 0,
+        "removal_precision": 1.0,
+        "false_removal_rate": 0.0,
+        "label_counts": {
+          "boilerplate_or_noise": 10
+        }
+      },
+      "drop_category": {
+        "n_records": 25,
+        "n_labeled": 25,
+        "n_unlabeled": 0,
+        "n_uncertain": 0,
+        "n_decisive": 25,
+        "n_correct_removal": 25,
+        "n_false_removal": 0,
+        "n_other_decisive": 0,
+        "removal_precision": 1.0,
+        "false_removal_rate": 0.0,
+        "label_counts": {
+          "boilerplate_or_noise": 25
+        }
+      },
+      "drop_digit_only": {
+        "n_records": 20,
+        "n_labeled": 20,
+        "n_unlabeled": 0,
+        "n_uncertain": 0,
+        "n_decisive": 20,
+        "n_correct_removal": 20,
+        "n_false_removal": 0,
+        "n_other_decisive": 0,
+        "removal_precision": 1.0,
+        "false_removal_rate": 0.0,
+        "label_counts": {
+          "boilerplate_or_noise": 20
+        }
+      },
+      "drop_english_signal": {
+        "n_records": 40,
+        "n_labeled": 40,
+        "n_unlabeled": 0,
+        "n_uncertain": 0,
+        "n_decisive": 40,
+        "n_correct_removal": 35,
+        "n_false_removal": 5,
+        "n_other_decisive": 0,
+        "removal_precision": 0.875,
+        "false_removal_rate": 0.125,
+        "label_counts": {
+          "foreign_language": 35,
+          "useful_mixed_chichewa": 5
+        }
+      },
+      "drop_german_signal": {
+        "n_records": 2,
+        "n_labeled": 2,
+        "n_unlabeled": 0,
+        "n_uncertain": 0,
+        "n_decisive": 2,
+        "n_correct_removal": 2,
+        "n_false_removal": 0,
+        "n_other_decisive": 0,
+        "removal_precision": 1.0,
+        "false_removal_rate": 0.0,
+        "label_counts": {
+          "foreign_language": 2
+        }
+      },
+      "drop_in_german_meta": {
+        "n_records": 3,
+        "n_labeled": 3,
+        "n_unlabeled": 0,
+        "n_uncertain": 0,
+        "n_decisive": 3,
+        "n_correct_removal": 3,
+        "n_false_removal": 0,
+        "n_other_decisive": 0,
+        "removal_precision": 1.0,
+        "false_removal_rate": 0.0,
+        "label_counts": {
+          "foreign_language": 3
+        }
+      },
+      "drop_max_length": {
+        "n_records": 30,
+        "n_labeled": 30,
+        "n_unlabeled": 0,
+        "n_uncertain": 0,
+        "n_decisive": 30,
+        "n_correct_removal": 17,
+        "n_false_removal": 13,
+        "n_other_decisive": 0,
+        "removal_precision": 0.566667,
+        "false_removal_rate": 0.433333,
+        "label_counts": {
+          "valid_chichewa": 5,
+          "boilerplate_or_noise": 17,
+          "useful_mixed_chichewa": 8
+        }
+      },
+      "drop_min_length": {
+        "n_records": 40,
+        "n_labeled": 40,
+        "n_unlabeled": 0,
+        "n_uncertain": 0,
+        "n_decisive": 40,
+        "n_correct_removal": 20,
+        "n_false_removal": 20,
+        "n_other_decisive": 0,
+        "removal_precision": 0.5,
+        "false_removal_rate": 0.5,
+        "label_counts": {
+          "valid_chichewa": 20,
+          "boilerplate_or_noise": 20
+        }
+      },
+      "drop_mixed_signal": {
+        "n_records": 40,
+        "n_labeled": 40,
+        "n_unlabeled": 0,
+        "n_uncertain": 0,
+        "n_decisive": 40,
+        "n_correct_removal": 1,
+        "n_false_removal": 39,
+        "n_other_decisive": 0,
+        "removal_precision": 0.025,
+        "false_removal_rate": 0.975,
+        "label_counts": {
+          "useful_mixed_chichewa": 39,
+          "boilerplate_or_noise": 1
+        }
+      },
+      "drop_mu_nkhani": {
+        "n_records": 6,
+        "n_labeled": 6,
+        "n_unlabeled": 0,
+        "n_uncertain": 0,
+        "n_decisive": 6,
+        "n_correct_removal": 1,
+        "n_false_removal": 5,
+        "n_other_decisive": 0,
+        "removal_precision": 0.166667,
+        "false_removal_rate": 0.833333,
+        "label_counts": {
+          "boilerplate_or_noise": 1,
+          "useful_mixed_chichewa": 4,
+          "valid_chichewa": 1
+        }
+      },
+      "drop_url": {
+        "n_records": 25,
+        "n_labeled": 25,
+        "n_unlabeled": 0,
+        "n_uncertain": 0,
+        "n_decisive": 25,
+        "n_correct_removal": 13,
+        "n_false_removal": 12,
+        "n_other_decisive": 0,
+        "removal_precision": 0.52,
+        "false_removal_rate": 0.48,
+        "label_counts": {
+          "useful_mixed_chichewa": 12,
+          "boilerplate_or_noise": 12,
+          "foreign_language": 1
+        }
+      },
+      "drop_wikimedia": {
+        "n_records": 20,
+        "n_labeled": 20,
+        "n_unlabeled": 0,
+        "n_uncertain": 0,
+        "n_decisive": 20,
+        "n_correct_removal": 9,
+        "n_false_removal": 11,
+        "n_other_decisive": 0,
+        "removal_precision": 0.45,
+        "false_removal_rate": 0.55,
+        "label_counts": {
+          "valid_chichewa": 11,
+          "boilerplate_or_noise": 9
+        }
+      },
+      "drop_wikipedia_muzinenero": {
+        "n_records": 1,
+        "n_labeled": 1,
+        "n_unlabeled": 0,
+        "n_uncertain": 0,
+        "n_decisive": 1,
+        "n_correct_removal": 1,
+        "n_false_removal": 0,
+        "n_other_decisive": 0,
+        "removal_precision": 1.0,
+        "false_removal_rate": 0.0,
+        "label_counts": {
+          "boilerplate_or_noise": 1
+        }
+      }
+    }
+  },
+  "kept": {
+    "n_records": 80,
+    "n_labeled": 80,
+    "n_unlabeled": 0,
+    "n_uncertain": 0,
+    "n_decisive": 80,
+    "n_useful": 69,
+    "n_noise": 7,
+    "n_foreign": 4,
+    "n_boilerplate": 7,
+    "useful_text_rate": 0.8625,
+    "kept_noise_rate": 0.0875,
+    "foreign_language_leakage": 0.05,
+    "boilerplate_leakage": 0.0875,
+    "label_counts": {
+      "valid_chichewa": 69,
+      "boilerplate_or_noise": 7,
+      "foreign_language": 4
+    }
+  },
+  "human_annotation_remaining": 0,
+  "definitions": {
+    "false_removal": [
+      "useful_mixed_chichewa",
+      "valid_chichewa"
+    ],
+    "correct_removal": [
+      "boilerplate_or_noise",
+      "duplicate",
+      "foreign_language"
+    ],
+    "useful_kept": [
+      "useful_mixed_chichewa",
+      "valid_chichewa"
+    ],
+    "noise_kept": [
+      "boilerplate_or_noise",
+      "duplicate"
+    ],
+    "uncertain_handling": "excluded_from_precision"
+  },
+  "sample_path": "data/reports/cleaning_review_sample.jsonl",
+  "source_id": "wikipedia"
+}

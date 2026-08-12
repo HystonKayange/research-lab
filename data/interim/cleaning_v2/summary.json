@@ -1,0 +1,1217 @@
+{
+  "generated_at": "2026-08-04T08:19:08.836730Z",
+  "tool": {
+    "name": "clean_sources",
+    "version": "2.0.0"
+  },
+  "config": {
+    "version": "2.0.0",
+    "path": "configs/data/cleaning_v2.json",
+    "random_seed": 42
+  },
+  "output": {
+    "interim_root": "data/interim/cleaning_v2"
+  },
+  "pre_checksums": {
+    "bible": "55445a0e0a5359e243f1773de623af1716bf4d3cd835afd83c4407cbaf85fc89",
+    "wikipedia": "cf7c5ba6d8c0d4770eee3306bab9f4be1dfc9570930a9aa7f3613c0ffb4587b7"
+  },
+  "post_checksums": {
+    "bible": "55445a0e0a5359e243f1773de623af1716bf4d3cd835afd83c4407cbaf85fc89",
+    "wikipedia": "cf7c5ba6d8c0d4770eee3306bab9f4be1dfc9570930a9aa7f3613c0ffb4587b7"
+  },
+  "raw_files_unchanged": true,
+  "sources": {
+    "bible": {
+      "source_id": "bible",
+      "input_path": "data/raw/bible/bible_clean.txt",
+      "output_dir": "data/interim/cleaning_v2/bible",
+      "cleaned_path": "data/interim/cleaning_v2/bible/cleaned.txt",
+      "removal_log_path": "data/interim/cleaning_v2/bible/removal_log.jsonl",
+      "transform_log_path": "data/interim/cleaning_v2/bible/transform_log.jsonl",
+      "notes": "Light-touch; unchanged policy from v1.",
+      "raw_sha256": "55445a0e0a5359e243f1773de623af1716bf4d3cd835afd83c4407cbaf85fc89",
+      "cleaned_sha256": "55445a0e0a5359e243f1773de623af1716bf4d3cd835afd83c4407cbaf85fc89",
+      "before": {
+        "total_lines": 31099,
+        "blank_lines": 0,
+        "non_empty_lines": 31099,
+        "unique_exact_nonempty": 30876,
+        "duplicate_line_percentage": 1.1222,
+        "character_count_estimate": 4172214,
+        "estimated_word_token_count": 575455,
+        "min_line_length": 13,
+        "max_line_length": 437,
+        "mean_line_length": 133.1591,
+        "median_line_length": 124,
+        "line_length_percentiles": {
+          "p50": 124.0,
+          "p90": 212.0,
+          "p95": 241.0,
+          "p99": 296.0
+        },
+        "very_short_lines": 21,
+        "very_long_lines": 0,
+        "url_containing_lines": 0,
+        "digit_only_lines": 0,
+        "language_signals": {
+          "disclaimer": "Heuristic term-list signals only — not authoritative language labels.",
+          "counts": {
+            "chichewa_signal": 25904,
+            "english_signal": 0,
+            "german_signal": 0,
+            "mixed_signal": 0,
+            "insufficient_signal": 5195
+          },
+          "percentages": {
+            "chichewa_signal": 83.2953,
+            "english_signal": 0.0,
+            "german_signal": 0.0,
+            "mixed_signal": 0.0,
+            "insufficient_signal": 16.7047
+          }
+        },
+        "boilerplate_matching_lines": {
+          "category_prefix": 0,
+          "wikipedia_muzinenero": 0,
+          "mu_nkhani": 0,
+          "wikipedia_word": 0,
+          "wikimedia": 0,
+          "url_http": 0,
+          "url_www": 0,
+          "in_german_meta": 0
+        }
+      },
+      "after": {
+        "total_lines": 31099,
+        "blank_lines": 0,
+        "non_empty_lines": 31099,
+        "unique_exact_nonempty": 30876,
+        "duplicate_line_percentage": 1.1222,
+        "character_count_estimate": 4172214,
+        "estimated_word_token_count": 575455,
+        "min_line_length": 13,
+        "max_line_length": 437,
+        "mean_line_length": 133.1591,
+        "median_line_length": 124,
+        "line_length_percentiles": {
+          "p50": 124.0,
+          "p90": 212.0,
+          "p95": 241.0,
+          "p99": 296.0
+        },
+        "very_short_lines": 21,
+        "very_long_lines": 0,
+        "url_containing_lines": 0,
+        "digit_only_lines": 0,
+        "language_signals": {
+          "disclaimer": "Heuristic term-list signals only — not authoritative language labels.",
+          "counts": {
+            "chichewa_signal": 25904,
+            "english_signal": 0,
+            "german_signal": 0,
+            "mixed_signal": 0,
+            "insufficient_signal": 5195
+          },
+          "percentages": {
+            "chichewa_signal": 83.2953,
+            "english_signal": 0.0,
+            "german_signal": 0.0,
+            "mixed_signal": 0.0,
+            "insufficient_signal": 16.7047
+          }
+        },
+        "boilerplate_matching_lines": {
+          "category_prefix": 0,
+          "wikipedia_muzinenero": 0,
+          "mu_nkhani": 0,
+          "wikipedia_word": 0,
+          "wikimedia": 0,
+          "url_http": 0,
+          "url_www": 0,
+          "in_german_meta": 0
+        }
+      },
+      "removed_line_count": 0,
+      "transform_event_count": 0,
+      "kept_line_count": 31099,
+      "rule_counts": {},
+      "rules_configured": [
+        {
+          "id": "drop_blank",
+          "type": "drop_blank",
+          "enabled": true,
+          "description": "Remove empty or whitespace-only lines"
+        },
+        {
+          "id": "drop_digit_only",
+          "type": "drop_digit_only",
+          "enabled": true,
+          "description": "Remove digit-only lines"
+        },
+        {
+          "id": "strip_edges",
+          "type": "transform_strip",
+          "enabled": true,
+          "description": "Strip leading/trailing whitespace"
+        }
+      ],
+      "removal_samples": []
+    },
+    "wikipedia": {
+      "source_id": "wikipedia",
+      "input_path": "data/raw/wikipedia/wiki_clean.txt",
+      "output_dir": "data/interim/cleaning_v2/wikipedia",
+      "cleaned_path": "data/interim/cleaning_v2/wikipedia/cleaned.txt",
+      "removal_log_path": "data/interim/cleaning_v2/wikipedia/removal_log.jsonl",
+      "transform_log_path": "data/interim/cleaning_v2/wikipedia/transform_log.jsonl",
+      "notes": "v2 precision-first: protect valid/mixed Chichewa; strong evidence for delete.",
+      "raw_sha256": "cf7c5ba6d8c0d4770eee3306bab9f4be1dfc9570930a9aa7f3613c0ffb4587b7",
+      "cleaned_sha256": "69aac9abb9bc79e713b3d5d769f149aaaddda9fea9225b6ef554cb2ed7a99e0b",
+      "before": {
+        "total_lines": 20579,
+        "blank_lines": 208,
+        "non_empty_lines": 20371,
+        "unique_exact_nonempty": 18078,
+        "duplicate_line_percentage": 14.3046,
+        "character_count_estimate": 1928042,
+        "estimated_word_token_count": 273158,
+        "min_line_length": 1,
+        "max_line_length": 3055,
+        "mean_line_length": 93.626,
+        "median_line_length": 75,
+        "line_length_percentiles": {
+          "p50": 75.0,
+          "p90": 198.0,
+          "p95": 240.0,
+          "p99": 355.2999999999993
+        },
+        "very_short_lines": 3818,
+        "very_long_lines": 77,
+        "url_containing_lines": 74,
+        "digit_only_lines": 111,
+        "language_signals": {
+          "disclaimer": "Heuristic term-list signals only — not authoritative language labels.",
+          "counts": {
+            "chichewa_signal": 9611,
+            "english_signal": 446,
+            "german_signal": 2,
+            "mixed_signal": 276,
+            "insufficient_signal": 10036
+          },
+          "percentages": {
+            "chichewa_signal": 47.1798,
+            "english_signal": 2.1894,
+            "german_signal": 0.0098,
+            "mixed_signal": 1.3549,
+            "insufficient_signal": 49.2661
+          }
+        },
+        "boilerplate_matching_lines": {
+          "category_prefix": 1547,
+          "wikipedia_muzinenero": 1,
+          "mu_nkhani": 6,
+          "wikipedia_word": 72,
+          "wikimedia": 40,
+          "url_http": 69,
+          "url_www": 34,
+          "in_german_meta": 3
+        }
+      },
+      "after": {
+        "total_lines": 17973,
+        "blank_lines": 0,
+        "non_empty_lines": 17973,
+        "unique_exact_nonempty": 16698,
+        "duplicate_line_percentage": 9.4141,
+        "character_count_estimate": 1817397,
+        "estimated_word_token_count": 257284,
+        "min_line_length": 2,
+        "max_line_length": 2546,
+        "mean_line_length": 100.1182,
+        "median_line_length": 86,
+        "line_length_percentiles": {
+          "p50": 86.0,
+          "p90": 203.0,
+          "p95": 244.0,
+          "p99": 354.27999999999884
+        },
+        "very_short_lines": 2884,
+        "very_long_lines": 54,
+        "url_containing_lines": 0,
+        "digit_only_lines": 0,
+        "language_signals": {
+          "disclaimer": "Heuristic term-list signals only — not authoritative language labels.",
+          "counts": {
+            "chichewa_signal": 9546,
+            "english_signal": 207,
+            "german_signal": 0,
+            "mixed_signal": 266,
+            "insufficient_signal": 7954
+          },
+          "percentages": {
+            "chichewa_signal": 53.113,
+            "english_signal": 1.1517,
+            "german_signal": 0.0,
+            "mixed_signal": 1.48,
+            "insufficient_signal": 44.2553
+          }
+        },
+        "boilerplate_matching_lines": {
+          "category_prefix": 0,
+          "wikipedia_muzinenero": 0,
+          "mu_nkhani": 5,
+          "wikipedia_word": 39,
+          "wikimedia": 30,
+          "url_http": 0,
+          "url_www": 0,
+          "in_german_meta": 0
+        }
+      },
+      "removed_line_count": 2606,
+      "transform_event_count": 3201,
+      "kept_line_count": 17973,
+      "rule_counts": {
+        "drop_mu_nkhani_nav": 1,
+        "drop_blank": 208,
+        "transform:strip_edges": 3127,
+        "drop_wikipedia_muzinenero": 1,
+        "drop_wikimedia_chrome": 168,
+        "drop_short_conditional": 205,
+        "drop_category": 1547,
+        "drop_high_confidence_foreign": 238,
+        "transform:strip_urls": 74,
+        "drop_digit_only": 111,
+        "drop_blank_after_transform": 10,
+        "drop_long_table_dump": 9,
+        "drop_url_only": 105,
+        "drop_in_german_meta": 3
+      },
+      "rules_configured": [
+        {
+          "id": "drop_blank",
+          "type": "drop_blank",
+          "enabled": true,
+          "description": "Remove empty or whitespace-only lines"
+        },
+        {
+          "id": "drop_category",
+          "type": "drop_regex",
+          "enabled": true,
+          "description": "Remove Wikipedia Category: lines (v1 precision 100%)"
+        },
+        {
+          "id": "drop_wikipedia_muzinenero",
+          "type": "drop_regex_fullmatch",
+          "enabled": true,
+          "description": "Exact other-languages nav only"
+        },
+        {
+          "id": "drop_mu_nkhani_nav",
+          "type": "drop_regex_fullmatch",
+          "enabled": true,
+          "description": "Exact article-contents nav header only (not inline 'mu nkhani')"
+        },
+        {
+          "id": "drop_in_german_meta",
+          "type": "drop_regex",
+          "enabled": true,
+          "description": "Explicit German meta markers"
+        },
+        {
+          "id": "drop_image_meta",
+          "type": "drop_regex",
+          "enabled": true,
+          "description": "Image metadata parentheticals"
+        },
+        {
+          "id": "drop_html_tags",
+          "type": "drop_regex",
+          "enabled": true,
+          "description": "HTML tag remnants"
+        },
+        {
+          "id": "drop_wiki_brackets",
+          "type": "drop_regex",
+          "enabled": true,
+          "description": "Wiki double-bracket links"
+        },
+        {
+          "id": "drop_wikimedia_chrome",
+          "type": "drop_wikimedia_chrome",
+          "enabled": true,
+          "description": "Wikimedia logo/thumb/short chrome only — not full prose"
+        },
+        {
+          "id": "strip_urls",
+          "type": "transform_strip_urls",
+          "enabled": true,
+          "description": "Strip URL tokens; keep remaining text (transform, not removal)"
+        },
+        {
+          "id": "drop_url_only",
+          "type": "drop_url_only",
+          "enabled": true,
+          "description": "Remove if line is URL-only (after strip empty/punct)"
+        },
+        {
+          "id": "drop_digit_only",
+          "type": "drop_digit_only",
+          "enabled": true,
+          "description": "Digit-only lines"
+        },
+        {
+          "id": "drop_punctuation_only",
+          "type": "drop_punctuation_only",
+          "enabled": true,
+          "description": "Punctuation-only lines"
+        },
+        {
+          "id": "drop_short_conditional",
+          "type": "drop_short_conditional",
+          "enabled": true,
+          "description": "Short lines only if also numeric/punct/URL-only/meta/boilerplate — never length alone"
+        },
+        {
+          "id": "drop_high_confidence_foreign",
+          "type": "drop_high_confidence_foreign",
+          "enabled": true,
+          "description": "High-confidence EN/DE with little/no Chichewa; ambiguous mixed kept"
+        },
+        {
+          "id": "drop_long_table_dump",
+          "type": "drop_long_table_dump",
+          "enabled": true,
+          "description": "Long lines only if table/scoreboard/capacity dump heuristic matches"
+        },
+        {
+          "id": "strip_edges",
+          "type": "transform_strip",
+          "enabled": true,
+          "description": "Strip leading/trailing whitespace on survivors"
+        }
+      ],
+      "removal_samples": [
+        {
+          "source_id": "wikipedia",
+          "line_number": 5556,
+          "rule_id": "drop_blank",
+          "rule_type": "drop_blank",
+          "rule_description": "Remove empty or whitespace-only lines",
+          "excerpt": "",
+          "metrics": {
+            "length": 1,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 4,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 5558,
+          "rule_id": "drop_blank",
+          "rule_type": "drop_blank",
+          "rule_description": "Remove empty or whitespace-only lines",
+          "excerpt": "",
+          "metrics": {
+            "length": 1,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 4,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 5969,
+          "rule_id": "drop_blank",
+          "rule_type": "drop_blank",
+          "rule_description": "Remove empty or whitespace-only lines",
+          "excerpt": "",
+          "metrics": {
+            "length": 1,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 4,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 6334,
+          "rule_id": "drop_blank",
+          "rule_type": "drop_blank",
+          "rule_description": "Remove empty or whitespace-only lines",
+          "excerpt": "",
+          "metrics": {
+            "length": 1,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 4,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 13453,
+          "rule_id": "drop_blank",
+          "rule_type": "drop_blank",
+          "rule_description": "Remove empty or whitespace-only lines",
+          "excerpt": "",
+          "metrics": {
+            "length": 1,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 3,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 1316,
+          "rule_id": "drop_blank_after_transform",
+          "rule_type": "drop_blank_after_transform",
+          "rule_description": "Line became blank after transforms",
+          "excerpt": "http://el.wikipedia.org/wiki/Πύλη:Κύρια",
+          "metrics": {}
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 3485,
+          "rule_id": "drop_blank_after_transform",
+          "rule_type": "drop_blank_after_transform",
+          "rule_description": "Line became blank after transforms",
+          "excerpt": "http://opstinakotorvaros.com/",
+          "metrics": {}
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 3488,
+          "rule_id": "drop_blank_after_transform",
+          "rule_type": "drop_blank_after_transform",
+          "rule_description": "Line became blank after transforms",
+          "excerpt": "http://www.distancesfrom.com/distance-from-Siprage-to-Banja-Luka-Bosna-i-Hercegovina/DistanceHistory/5243320.aspx",
+          "metrics": {}
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 3490,
+          "rule_id": "drop_blank_after_transform",
+          "rule_type": "drop_blank_after_transform",
+          "rule_description": "Line became blank after transforms",
+          "excerpt": "http://www.satellitecitymaps.com/europe-map/bosnia-and-herzegovina-map/federation-of-bosnia-and-herzegovina-map/%C5%A...",
+          "metrics": {}
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 9749,
+          "rule_id": "drop_blank_after_transform",
+          "rule_type": "drop_blank_after_transform",
+          "rule_description": "Line became blank after transforms",
+          "excerpt": "http://www.health.gov.sk.ca/.",
+          "metrics": {}
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 382,
+          "rule_id": "drop_category",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove Wikipedia Category: lines (v1 precision 100%)",
+          "excerpt": "Category:Nyasa zinenero",
+          "metrics": {
+            "length": 23,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 3,
+              "german": 0
+            },
+            "pattern": "Category\\s*:"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 481,
+          "rule_id": "drop_category",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove Wikipedia Category: lines (v1 precision 100%)",
+          "excerpt": "Category:ziPani za ndale za ku Malaŵi",
+          "metrics": {
+            "length": 37,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 3,
+              "german": 0
+            },
+            "pattern": "Category\\s*:"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 8534,
+          "rule_id": "drop_category",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove Wikipedia Category: lines (v1 precision 100%)",
+          "excerpt": "Category:Anthu amoyo",
+          "metrics": {
+            "length": 20,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 33,
+              "german": 0
+            },
+            "pattern": "Category\\s*:"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 13714,
+          "rule_id": "drop_category",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove Wikipedia Category: lines (v1 precision 100%)",
+          "excerpt": "Category:1939 Kubadwa",
+          "metrics": {
+            "length": 21,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 3,
+              "german": 0
+            },
+            "pattern": "Category\\s*:"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 16185,
+          "rule_id": "drop_category",
+          "rule_type": "drop_regex",
+          "rule_description": "Remove Wikipedia Category: lines (v1 precision 100%)",
+          "excerpt": "Category:Boma la United Kingdom",
+          "metrics": {
+            "length": 31,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 5,
+              "german": 0
+            },
+            "pattern": "Category\\s*:"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 3849,
+          "rule_id": "drop_digit_only",
+          "rule_type": "drop_digit_only",
+          "rule_description": "Digit-only lines",
+          "excerpt": "1983",
+          "metrics": {
+            "length": 5,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 4,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 8334,
+          "rule_id": "drop_digit_only",
+          "rule_type": "drop_digit_only",
+          "rule_description": "Digit-only lines",
+          "excerpt": "2005",
+          "metrics": {
+            "length": 6,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 33,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 8940,
+          "rule_id": "drop_digit_only",
+          "rule_type": "drop_digit_only",
+          "rule_description": "Digit-only lines",
+          "excerpt": "3",
+          "metrics": {
+            "length": 1,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 33,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 16816,
+          "rule_id": "drop_digit_only",
+          "rule_type": "drop_digit_only",
+          "rule_description": "Digit-only lines",
+          "excerpt": "2",
+          "metrics": {
+            "length": 2,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 5,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 16833,
+          "rule_id": "drop_digit_only",
+          "rule_type": "drop_digit_only",
+          "rule_description": "Digit-only lines",
+          "excerpt": "3",
+          "metrics": {
+            "length": 2,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 5,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 1806,
+          "rule_id": "drop_high_confidence_foreign",
+          "rule_type": "drop_high_confidence_foreign",
+          "rule_description": "High-confidence EN/DE with little/no Chichewa; ambiguous mixed kept",
+          "excerpt": "\"Towards a unified slavic language\", Fourth Language Creation Conference, Groningen.MEYER, Anna-Maria (2012): \"Slavis...",
+          "metrics": {
+            "length": 153,
+            "category": "high_conf_german",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 0,
+              "german": 2
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 5380,
+          "rule_id": "drop_high_confidence_foreign",
+          "rule_type": "drop_high_confidence_foreign",
+          "rule_description": "High-confidence EN/DE with little/no Chichewa; ambiguous mixed kept",
+          "excerpt": "The aphids will then feed on the inner parts of the plant as well as the young stems and shoots.",
+          "metrics": {
+            "length": 96,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 9,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 9791,
+          "rule_id": "drop_high_confidence_foreign",
+          "rule_type": "drop_high_confidence_foreign",
+          "rule_description": "High-confidence EN/DE with little/no Chichewa; ambiguous mixed kept",
+          "excerpt": "\"Global, regional, and national age-sex specific all-cause and cause-specific mortality for 240 causes of death, 1990...",
+          "metrics": {
+            "length": 191,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 7,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 9935,
+          "rule_id": "drop_high_confidence_foreign",
+          "rule_type": "drop_high_confidence_foreign",
+          "rule_description": "High-confidence EN/DE with little/no Chichewa; ambiguous mixed kept",
+          "excerpt": "Chisenga Muyoya is a Mandela Washington Fellow, a recipient of the Chevening Scholarship and MILEAD (Moremi Initiativ...",
+          "metrics": {
+            "length": 166,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 5,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 10672,
+          "rule_id": "drop_high_confidence_foreign",
+          "rule_type": "drop_high_confidence_foreign",
+          "rule_description": "High-confidence EN/DE with little/no Chichewa; ambiguous mixed kept",
+          "excerpt": "In most cases where the head of government is a different person from the head of state, its term of office is identi...",
+          "metrics": {
+            "length": 293,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 18,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 13924,
+          "rule_id": "drop_in_german_meta",
+          "rule_type": "drop_regex",
+          "rule_description": "Explicit German meta markers",
+          "excerpt": "(in German) In: Rathauskorrespondenz, 27 May 2009Edita Gruberova ausgezeichnet (image) In: Rathauskorrespondenz, 27 M...",
+          "metrics": {
+            "length": 124,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 3,
+              "german": 0
+            },
+            "pattern": "\\(in German\\)"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 13928,
+          "rule_id": "drop_in_german_meta",
+          "rule_type": "drop_regex",
+          "rule_description": "Explicit German meta markers",
+          "excerpt": "Juni 2014 (in German) Musiktheaterpreis, retrieved 4 April 2015",
+          "metrics": {
+            "length": 63,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 3,
+              "german": 0
+            },
+            "pattern": "\\(in German\\)"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 13929,
+          "rule_id": "drop_in_german_meta",
+          "rule_type": "drop_regex",
+          "rule_description": "Explicit German meta markers",
+          "excerpt": "2016: Ehrenplakette of the in Garmisch-PartenkirchenEröffnungsprogramm der Richard-Strauss-Festivals 2016 (in German)...",
+          "metrics": {
+            "length": 167,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 3,
+              "german": 0
+            },
+            "pattern": "\\(in German\\)"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 3892,
+          "rule_id": "drop_long_table_dump",
+          "rule_type": "drop_long_table_dump",
+          "rule_description": "Long lines only if table/scoreboard/capacity dump heuristic matches",
+          "excerpt": "Portrait Name Took office Left office Political party 80px Kenneth Kaunda 22 January 1964 24 October 1964 UNIP 80px R...",
+          "metrics": {
+            "length": 1200,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 5,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 5894,
+          "rule_id": "drop_long_table_dump",
+          "rule_type": "drop_long_table_dump",
+          "rule_description": "Long lines only if table/scoreboard/capacity dump heuristic matches",
+          "excerpt": "ChiwerengeroGuluGawoPldWDLGFGAGDMfundo1843336411235+771052839265811137+74833835223108645+41694833185105942+1759583018...",
+          "metrics": {
+            "length": 543,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 4,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 10357,
+          "rule_id": "drop_long_table_dump",
+          "rule_type": "drop_long_table_dump",
+          "rule_description": "Long lines only if table/scoreboard/capacity dump heuristic matches",
+          "excerpt": "+Districts of MalawiRegionNamePopulation Total Area (km2)CapitalIndexCentralDedza830,5123,754Dedza1Dowa772,5693,077Do...",
+          "metrics": {
+            "length": 873,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 10,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 11893,
+          "rule_id": "drop_long_table_dump",
+          "rule_type": "drop_long_table_dump",
+          "rule_description": "Long lines only if table/scoreboard/capacity dump heuristic matches",
+          "excerpt": "Season League Attendance % Full2002–03First Division29,23091%2003–04Premier League30,98396%2004–05Championship24,1377...",
+          "metrics": {
+            "length": 574,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 3,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 19863,
+          "rule_id": "drop_long_table_dump",
+          "rule_type": "drop_long_table_dump",
+          "rule_description": "Long lines only if table/scoreboard/capacity dump heuristic matches",
+          "excerpt": "TeamLocationStadiumCapacityArsenalLondon Emirates StadiumAston VillaBirminghamVilla ParkBournemouthBournemouthDean Co...",
+          "metrics": {
+            "length": 782,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 5,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 2,
+          "rule_id": "drop_mu_nkhani_nav",
+          "rule_type": "drop_regex_fullmatch",
+          "rule_description": "Exact article-contents nav header only (not inline 'mu nkhani')",
+          "excerpt": "Mu nkhani",
+          "metrics": {
+            "length": 9,
+            "pattern": "Mu\\s+nkhani"
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 2208,
+          "rule_id": "drop_short_conditional",
+          "rule_type": "drop_short_conditional",
+          "rule_description": "Short lines only if also numeric/punct/URL-only/meta/boilerplate — never length alone",
+          "excerpt": "thumb 250px Paris",
+          "metrics": {
+            "length": 17,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 8,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 2229,
+          "rule_id": "drop_short_conditional",
+          "rule_type": "drop_short_conditional",
+          "rule_description": "Short lines only if also numeric/punct/URL-only/meta/boilerplate — never length alone",
+          "excerpt": "thumb Cairo",
+          "metrics": {
+            "length": 11,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 8,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 2452,
+          "rule_id": "drop_short_conditional",
+          "rule_type": "drop_short_conditional",
+          "rule_description": "Short lines only if also numeric/punct/URL-only/meta/boilerplate — never length alone",
+          "excerpt": "Link",
+          "metrics": {
+            "length": 6,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 8,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 2985,
+          "rule_id": "drop_short_conditional",
+          "rule_type": "drop_short_conditional",
+          "rule_description": "Short lines only if also numeric/punct/URL-only/meta/boilerplate — never length alone",
+          "excerpt": "thumb India",
+          "metrics": {
+            "length": 11,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 8,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 11316,
+          "rule_id": "drop_short_conditional",
+          "rule_type": "drop_short_conditional",
+          "rule_description": "Short lines only if also numeric/punct/URL-only/meta/boilerplate — never length alone",
+          "excerpt": "thumb Sophocles",
+          "metrics": {
+            "length": 15,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 4,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 4012,
+          "rule_id": "drop_url_only",
+          "rule_type": "drop_url_only",
+          "rule_description": "Remove if line is URL-only (after strip empty/punct)",
+          "excerpt": "()",
+          "metrics": {
+            "length": 4,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 5,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 4033,
+          "rule_id": "drop_url_only",
+          "rule_type": "drop_url_only",
+          "rule_description": "Remove if line is URL-only (after strip empty/punct)",
+          "excerpt": "() •",
+          "metrics": {
+            "length": 8,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 5,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 4051,
+          "rule_id": "drop_url_only",
+          "rule_type": "drop_url_only",
+          "rule_description": "Remove if line is URL-only (after strip empty/punct)",
+          "excerpt": "() •",
+          "metrics": {
+            "length": 8,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 5,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 7887,
+          "rule_id": "drop_url_only",
+          "rule_type": "drop_url_only",
+          "rule_description": "Remove if line is URL-only (after strip empty/punct)",
+          "excerpt": "\"",
+          "metrics": {
+            "length": 1,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 3,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 18615,
+          "rule_id": "drop_url_only",
+          "rule_type": "drop_url_only",
+          "rule_description": "Remove if line is URL-only (after strip empty/punct)",
+          "excerpt": "!",
+          "metrics": {
+            "length": 1,
+            "category": "english_dominant",
+            "term_hits": {
+              "chichewa": 1,
+              "english": 8,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 3902,
+          "rule_id": "drop_wikimedia_chrome",
+          "rule_type": "drop_wikimedia_chrome",
+          "rule_description": "Wikimedia logo/thumb/short chrome only — not full prose",
+          "excerpt": "thumb 319x319px Jaynagar Majilpur Municipality",
+          "metrics": {
+            "length": 46,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 8,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 13934,
+          "rule_id": "drop_wikimedia_chrome",
+          "rule_type": "drop_wikimedia_chrome",
+          "rule_description": "Wikimedia logo/thumb/short chrome only — not full prose",
+          "excerpt": "thumb 346x346px Jorge Carlos de Almeida Fonseca mu 2018",
+          "metrics": {
+            "length": 55,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 3,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 16023,
+          "rule_id": "drop_wikimedia_chrome",
+          "rule_type": "drop_wikimedia_chrome",
+          "rule_description": "Wikimedia logo/thumb/short chrome only — not full prose",
+          "excerpt": "thumb 397x397px",
+          "metrics": {
+            "length": 15,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 3,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 17517,
+          "rule_id": "drop_wikimedia_chrome",
+          "rule_type": "drop_wikimedia_chrome",
+          "rule_description": "Wikimedia logo/thumb/short chrome only — not full prose",
+          "excerpt": "thumb 355x355px Angelina Jolie",
+          "metrics": {
+            "length": 30,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 4,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 20527,
+          "rule_id": "drop_wikimedia_chrome",
+          "rule_type": "drop_wikimedia_chrome",
+          "rule_description": "Wikimedia logo/thumb/short chrome only — not full prose",
+          "excerpt": "thumb",
+          "metrics": {
+            "length": 5,
+            "category": "high_conf_english",
+            "term_hits": {
+              "chichewa": 0,
+              "english": 3,
+              "german": 0
+            }
+          }
+        },
+        {
+          "source_id": "wikipedia",
+          "line_number": 14,
+          "rule_id": "drop_wikipedia_muzinenero",
+          "rule_type": "drop_regex_fullmatch",
+          "rule_description": "Exact other-languages nav only",
+          "excerpt": "Wikipedia Muzinenero Zina",
+          "metrics": {
+            "length": 26,
+            "pattern": "Wikipedia\\s+Muzinenero\\s+Zina"
+          }
+        }
+      ]
+    }
+  },
+  "disclaimers": [
+    "v2 is interim only; not approved training data.",
+    "Licensing still unresolved.",
+    "Human validation labels are frozen and must not be modified.",
+    "Do not promote to data/processed/ without meeting target criteria."
+  ],
+  "warnings": [
+    "Language-signal filters are heuristics, not language identification.",
+    "Interim outputs must not be treated as licensed training data.",
+    "existing_corpus is intentionally not cleaned here (redundant composite)."
+  ]
+}

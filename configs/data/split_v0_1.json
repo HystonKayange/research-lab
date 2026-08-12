@@ -1,0 +1,71 @@
+{
+  "version": "0.1.0",
+  "split_version": "v0.1",
+  "corpus_name": "chichewa_corpus",
+  "corpus_version": "v0.1",
+  "description": "Leakage-safe deterministic train/validation/test splits for Chichewa Corpus v0.1. Tokenizer training must use train only.",
+  "processed_corpus_root": "data/processed/chichewa_corpus_v0.1",
+  "output_root": "data/splits/chichewa_corpus_v0.1",
+  "report_path": "data/reports/split_v0_1_report.md",
+  "manifest_path": "data/metadata/split_v0_1_manifest.json",
+  "proportions": {
+    "train": 0.80,
+    "validation": 0.10,
+    "test": 0.10
+  },
+  "volume_metric": "unicode_characters",
+  "assignment": {
+    "method": "sha256_group_hash",
+    "salt": "chichewa_corpus_v0.1_split_v0.1",
+    "bucket_modulus": 10000,
+    "note": "group_id is hashed with salt via SHA-256; first 8 bytes interpreted as big-endian uint64; bucket = value % modulus. Train [0, train_end), validation [train_end, val_end), test [val_end, modulus)."
+  },
+  "grouping": {
+    "strategy": "contiguous_char_blocks",
+    "rationale": "Book/chapter/verse and Wikipedia article boundaries are not preserved in the processed corpus. documents.jsonl is line-level only (source_id:line_index). No blank-line article separators remain. Do not invent structural metadata.",
+    "target_group_characters": 5000,
+    "min_group_characters": 1,
+    "sources": {
+      "bible": {
+        "preferred": "book_or_chapter",
+        "available": "contiguous_char_blocks",
+        "limitation": "VPL book/chapter/verse markers were stripped before or during raw placement; processed bible.txt is sequential verse-like lines without recoverable identifiers."
+      },
+      "wikipedia": {
+        "preferred": "article_document",
+        "available": "contiguous_char_blocks",
+        "limitation": "Article boundaries were not retained through extraction/cleaning; documents.jsonl has no article IDs; no blank-line document separators remain."
+      }
+    }
+  },
+  "sources": ["bible", "wikipedia"],
+  "combined_source_order": ["bible", "wikipedia"],
+  "leakage": {
+    "forbid_exact_cross_split": true,
+    "forbid_normalized_cross_split": true,
+    "normalization": "unicode_nfc_whitespace_collapse_strip",
+    "on_conflict": "reassign_non_train_groups_to_train",
+    "report_formulaic_repetition_separately": true,
+    "optional_shingle_diagnostics": {
+      "enabled": true,
+      "shingle_size": 5,
+      "max_report_pairs": 20
+    }
+  },
+  "frozen": true,
+  "tokenizer_policy": {
+    "train_tokenizer_on": ["train"],
+    "forbid_tokenizer_on": ["validation", "test"],
+    "vocabulary_from": ["train"],
+    "validation_for": "model_selection_only",
+    "test_for": "final_comparison_only",
+    "primary_cross_tokenizer_metric": "bits_per_character_or_bits_per_byte",
+    "raw_perplexity_not_directly_comparable": true
+  },
+  "disclaimers": [
+    "Do not train tokenizers or models on validation or test.",
+    "Do not invent document boundaries.",
+    "Contiguous blocks are a leakage-reduction fallback, not recovered Bible chapters or Wikipedia articles.",
+    "Formulaic religious phrasing may yield high shingle overlap without exact-line leakage."
+  ]
+}

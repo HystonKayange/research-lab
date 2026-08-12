@@ -1,0 +1,88 @@
+{
+  "generated_at": "2026-08-04T04:27:38.074766Z",
+  "tool": {
+    "name": "build_cleaning_review_sample",
+    "version": "1.0.0"
+  },
+  "config_version": "1.0.0",
+  "input_checksums": {
+    "raw": "cf7c5ba6d8c0d4770eee3306bab9f4be1dfc9570930a9aa7f3613c0ffb4587b7",
+    "cleaned": "aa5550fd242069a13ce146756d1aa883d1b3ae8a82e90506d92fa6a6040db332",
+    "removal_log": "f0e0761fe108971cb30175498a1c7f5b5ad5a41626a96bd36943dccdeb3cb19f"
+  },
+  "sample_stats": {
+    "removed": {
+      "population_by_rule": {
+        "dedupe_exact": 292,
+        "drop_blank": 208,
+        "drop_category": 1547,
+        "drop_digit_only": 111,
+        "drop_english_signal": 413,
+        "drop_german_signal": 2,
+        "drop_in_german_meta": 3,
+        "drop_max_length": 56,
+        "drop_min_length": 3167,
+        "drop_mixed_signal": 267,
+        "drop_mu_nkhani": 6,
+        "drop_url": 74,
+        "drop_wikimedia": 34,
+        "drop_wikipedia_muzinenero": 1
+      },
+      "requested_by_rule": {
+        "drop_min_length": 40,
+        "drop_english_signal": 40,
+        "drop_mixed_signal": 40,
+        "drop_max_length": 30,
+        "drop_category": 25,
+        "drop_url": 25,
+        "drop_digit_only": 20,
+        "dedupe_exact": 25,
+        "drop_blank": 10,
+        "drop_wikimedia": 20,
+        "drop_mu_nkhani": 6,
+        "drop_in_german_meta": 3,
+        "drop_german_signal": 2,
+        "drop_wikipedia_muzinenero": 1,
+        "drop_html_tags": 10,
+        "drop_wiki_brackets": 10,
+        "drop_image_meta": 5
+      },
+      "sampled_by_rule": {
+        "drop_min_length": 40,
+        "drop_english_signal": 40,
+        "drop_mixed_signal": 40,
+        "drop_max_length": 30,
+        "drop_category": 25,
+        "drop_url": 25,
+        "drop_digit_only": 20,
+        "dedupe_exact": 25,
+        "drop_blank": 10,
+        "drop_wikimedia": 20,
+        "drop_mu_nkhani": 6,
+        "drop_in_german_meta": 3,
+        "drop_german_signal": 2,
+        "drop_wikipedia_muzinenero": 1,
+        "drop_html_tags": 0,
+        "drop_wiki_brackets": 0,
+        "drop_image_meta": 0
+      },
+      "missing_rules": [
+        "drop_html_tags",
+        "drop_wiki_brackets",
+        "drop_image_meta"
+      ]
+    },
+    "removed_total": 287,
+    "kept": {
+      "kept_population_nonblank": 14398,
+      "cleaned_nonempty_lines": 14398,
+      "requested": 80,
+      "sampled": 80
+    },
+    "total": 367
+  },
+  "sample_path": "data/reports/cleaning_review_sample.jsonl",
+  "instructions_path": "data/reports/cleaning_review_instructions.md",
+  "annotation_status": "pending_human_labels",
+  "note": "review_label fields are null until human annotation. Run summarize_cleaning_review.py after labeling."
+}

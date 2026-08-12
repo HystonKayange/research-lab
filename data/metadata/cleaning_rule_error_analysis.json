@@ -1,0 +1,701 @@
+{
+  "generated_at": "2026-08-04T08:16:18.948292Z",
+  "sample_path": "data/reports/cleaning_review_sample.jsonl",
+  "n_records": 367,
+  "n_removed_reviewed": 287,
+  "n_kept_reviewed": 80,
+  "definitions": {
+    "false_removal_labels": [
+      "useful_mixed_chichewa",
+      "valid_chichewa"
+    ],
+    "correct_removal_labels": [
+      "boilerplate_or_noise",
+      "duplicate",
+      "foreign_language"
+    ]
+  },
+  "overall_removed": {
+    "correct": 163,
+    "false": 124
+  },
+  "rules": {
+    "drop_english_signal": {
+      "reviewed_removals": 40,
+      "correct_removals": 35,
+      "false_removals": 5,
+      "removal_precision": 0.875,
+      "false_removal_rate": 0.125,
+      "label_distribution": {
+        "foreign_language": 35,
+        "useful_mixed_chichewa": 5
+      },
+      "false_removal_examples": [
+        {
+          "line": 13065,
+          "label": "useful_mixed_chichewa",
+          "excerpt": "Pa 1 Okutobala 2021, a Doumbouya adalumbira ngati purezidenti wanthawi yayitali.Guinea swears in coup leader Mamady Doumbouya as interim president"
+        },
+        {
+          "line": 13217,
+          "label": "useful_mixed_chichewa",
+          "excerpt": "Munthawi yoyamba ya Abe, Suga adakhala Minister of Internal Affairs and Communications kuyambira 2006 mpaka 2007."
+        },
+        {
+          "line": 14514,
+          "label": "useful_mixed_chichewa",
+          "excerpt": "Mu 1990, Soviet of the Crimea Oblast anaganiza zobwezeretsa Crimea ASSR."
+        },
+        {
+          "line": 14824,
+          "label": "useful_mixed_chichewa",
+          "excerpt": "Anapatsidwa mphoto ya North Harbour's 2013 Māori Colts Senior Player of the Year adakali pasukulu."
+        },
+        {
+          "line": 19800,
+          "label": "useful_mixed_chichewa",
+          "excerpt": "Adawonekera m'mafilimu a The Little Engine That Could (2011), Scary or Die (2012), Namwino 3D (2013), Shuga (2013), The Monkey's Paw (2013), Walk."
+        }
+      ],
+      "correct_removal_examples": [
+        {
+          "line": 151,
+          "label": "foreign_language",
+          "excerpt": "ChibembaChinyanjaChitongaChingereziVesi WoyambaStand and sing for Zambia, proud and free,"
+        },
+        {
+          "line": 155,
+          "label": "foreign_language",
+          "excerpt": "All one, Strong and Free.Vesi lachiwiriAfrica is our own motherland,"
+        },
+        {
+          "line": 653,
+          "label": "foreign_language",
+          "excerpt": "Hills and valleys, soil so rich and rare"
+        },
+        {
+          "line": 2114,
+          "label": "foreign_language",
+          "excerpt": "Peter Mtuze notes that the orthography of Xhosa names has changed since the time of Mandela's schooling, and that it would now be written Rholihlahla."
+        },
+        {
+          "line": 3409,
+          "label": "foreign_language",
+          "excerpt": "Shoemaker,The Death of a Prophet: The End of Muhammad's Life and the Beginnings of Islam, University of Pennsylvania Press, 2011."
+        }
+      ]
+    },
+    "drop_min_length": {
+      "reviewed_removals": 40,
+      "correct_removals": 20,
+      "false_removals": 20,
+      "removal_precision": 0.5,
+      "false_removal_rate": 0.5,
+      "label_distribution": {
+        "valid_chichewa": 20,
+        "boilerplate_or_noise": 20
+      },
+      "false_removal_examples": [
+        {
+          "line": 72,
+          "label": "valid_chichewa",
+          "excerpt": "Mzuzu"
+        },
+        {
+          "line": 254,
+          "label": "valid_chichewa",
+          "excerpt": "Nyimbo ya Solomo"
+        },
+        {
+          "line": 260,
+          "label": "valid_chichewa",
+          "excerpt": "Hoseya"
+        },
+        {
+          "line": 293,
+          "label": "valid_chichewa",
+          "excerpt": "3 Yohane"
+        },
+        {
+          "line": 684,
+          "label": "valid_chichewa",
+          "excerpt": "India"
+        }
+      ],
+      "correct_removal_examples": [
+        {
+          "line": 1021,
+          "label": "boilerplate_or_noise",
+          "excerpt": "GA Gabon"
+        },
+        {
+          "line": 1039,
+          "label": "boilerplate_or_noise",
+          "excerpt": "GY Guyana"
+        },
+        {
+          "line": 1153,
+          "label": "boilerplate_or_noise",
+          "excerpt": "SV Salvador"
+        },
+        {
+          "line": 2368,
+          "label": "boilerplate_or_noise",
+          "excerpt": "Link"
+        },
+        {
+          "line": 2722,
+          "label": "boilerplate_or_noise",
+          "excerpt": "Link"
+        }
+      ]
+    },
+    "drop_mixed_signal": {
+      "reviewed_removals": 40,
+      "correct_removals": 1,
+      "false_removals": 39,
+      "removal_precision": 0.025,
+      "false_removal_rate": 0.975,
+      "label_distribution": {
+        "useful_mixed_chichewa": 39,
+        "boilerplate_or_noise": 1
+      },
+      "false_removal_examples": [
+        {
+          "line": 218,
+          "label": "useful_mixed_chichewa",
+          "excerpt": "Blantyre ndi mzinda wofunika kwa dziko la Malawi chifukwa ndi mzinda omwe kumapezeka malo ofunika ngati Malawi Polytechnic,yomwe ndi sukulu ya za ukachenjede ku"
+        },
+        {
+          "line": 1355,
+          "label": "useful_mixed_chichewa",
+          "excerpt": "He was the third son of John Johnson, a lawyer of Ryde, and Mary Percival, his second wife, ...\" - Baibulo, Buku Lopatulika ndilo Mau a Mulungu, anatanthauzirid"
+        },
+        {
+          "line": 2062,
+          "label": "useful_mixed_chichewa",
+          "excerpt": "Koma malowa anatchulidwa dzina lina ndi John II of Portugal ngati \"Cape of Good Hope\" (Cabo da Boa Esperança) chifukwa cha chiyembekezo chimene chinalipo chopez"
+        },
+        {
+          "line": 2093,
+          "label": "useful_mixed_chichewa",
+          "excerpt": "Anaphunzira zamalamulo ku University of Fort Hare komanso University of Witwatersrand asanagwire ntchito ngati loya ku Johannesburg."
+        },
+        {
+          "line": 3799,
+          "label": "useful_mixed_chichewa",
+          "excerpt": "Pansi pa Pulezidenti Michael Sata, Lungu anatumikira monga Minister of Justice ndi Minister of Defence."
+        }
+      ],
+      "correct_removal_examples": [
+        {
+          "line": 8314,
+          "label": "boilerplate_or_noise",
+          "excerpt": "The osiyanasiyana wochitachita wa Nikon D3200 ( Expeed 3 dzina lake Expeed 2 mtundu, 14 Tinthu yafupika kuti Akamva 12 ) kuposa ngakhale zonse chimango DSLRs ng"
+        }
+      ]
+    },
+    "drop_max_length": {
+      "reviewed_removals": 30,
+      "correct_removals": 17,
+      "false_removals": 13,
+      "removal_precision": 0.566667,
+      "false_removal_rate": 0.433333,
+      "label_distribution": {
+        "valid_chichewa": 5,
+        "boilerplate_or_noise": 17,
+        "useful_mixed_chichewa": 8
+      },
+      "false_removal_examples": [
+        {
+          "line": 192,
+          "label": "valid_chichewa",
+          "excerpt": "Anthu ambiri ochoka ku mayikao a ku ulaya,South Africa ndi anthu akunja,ogwira ntchito kunja amakhala ku Lilongwe, ndiponso kuli ma NGOs ngati (Care Internation"
+        },
+        {
+          "line": 326,
+          "label": "valid_chichewa",
+          "excerpt": "Ndi povuta kunena tsiku leni leni lomwe Yesu anabadwa chifukwa zolembalemba zina zokhudza nkhaniyi zinasowa kapena kuonongeka ndiponso zaka 1900 zinadutsa chile"
+        },
+        {
+          "line": 3946,
+          "label": "valid_chichewa",
+          "excerpt": "Mapulogalamu ena akhalapo kwa zaka zoposa 2,000 ndipo adasintha kwambiri kuyambira nthawi imeneyo monga chinenero (cholembedwa m'zinenero zamitundu yonse kapena"
+        },
+        {
+          "line": 7160,
+          "label": "useful_mixed_chichewa",
+          "excerpt": "+ Mafilimu ndi kanema Chaka Mutu Udindo Mfundo 2002 Sabrina, Mnyamata Wachinyamata Iyemwini Maonekedwe a Cameo ; adachita \"Sk8er Boi\" 2003 Loweruka Usiku Umoyo "
+        },
+        {
+          "line": 7891,
+          "label": "useful_mixed_chichewa",
+          "excerpt": "Nick Lorena 2002 Mkazi wa Lehi Kelly Filimu yochepa 2003 Carolina Christen 2007 Tortilla Kumwamba Chicana 2008 Wing'ombe Wamwamuna Wanda Filimu yochepa 2008 Bat"
+        }
+      ],
+      "correct_removal_examples": [
+        {
+          "line": 3888,
+          "label": "boilerplate_or_noise",
+          "excerpt": "Portrait Name Term of office Monarch Took office Left office Time in office 1 60px Sir Herbert Stanley 1924 1927 George V – 60px Richard Allmond Jeffrey Goode 1"
+        },
+        {
+          "line": 3892,
+          "label": "boilerplate_or_noise",
+          "excerpt": "Portrait Name Took office Left office Political party 80px Kenneth Kaunda 22 January 1964 24 October 1964 UNIP 80px Reuben Kamanga 24 October 1964 October 1967 "
+        },
+        {
+          "line": 5911,
+          "label": "boilerplate_or_noise",
+          "excerpt": "MoscowSaint PetersburgSochiLuzhniki StadiumOtkritie ArenaKrestovsky StadiumFisht Olympic StadiumCapacity: 78,011Capacity: 44,190Capacity: 64,468Capacity: 44,287"
+        },
+        {
+          "line": 6802,
+          "label": "boilerplate_or_noise",
+          "excerpt": "Osakwatira Tchati Peak udindo \"Ndibwererenso\" US Hot Country Singles ( Billboard ) 1 US Hot 100 ( Billboard ) 3 US Easy Listening ( Billboard ) 2 Canada Country"
+        },
+        {
+          "line": 7898,
+          "label": "boilerplate_or_noise",
+          "excerpt": "Holly RainesRecurring role, 4 episodes2006The New Adventures of Old ChristineBelindaEpisode: \"Some of My Best Friends Are Portuguese\"2008Army WivesSandyEpisode:"
+        }
+      ]
+    },
+    "dedupe_exact": {
+      "reviewed_removals": 25,
+      "correct_removals": 6,
+      "false_removals": 19,
+      "removal_precision": 0.24,
+      "false_removal_rate": 0.76,
+      "label_distribution": {
+        "duplicate": 2,
+        "valid_chichewa": 19,
+        "boilerplate_or_noise": 4
+      },
+      "false_removal_examples": [
+        {
+          "line": 2988,
+          "label": "valid_chichewa",
+          "excerpt": "Delhi ndi boma lina la dziko la India."
+        },
+        {
+          "line": 7009,
+          "label": "valid_chichewa",
+          "excerpt": "Zogwirizana zakunja"
+        },
+        {
+          "line": 7715,
+          "label": "valid_chichewa",
+          "excerpt": "Inabweretsedwa pa September 2, 2006 ."
+        },
+        {
+          "line": 9421,
+          "label": "valid_chichewa",
+          "excerpt": "Kenako mu 1986 panapangidwa mtundu wina wa katemera womwe ndi wabwino poyerekezera ndi woyamba uja."
+        },
+        {
+          "line": 9457,
+          "label": "valid_chichewa",
+          "excerpt": "M'madera amene matendawa si ofala kwenikweni, matendawa amafala kwambiri chifukwa chogwiritsira ntchito mankhwala ozunguza bongo ndiponso kudzera m'kugonana."
+        }
+      ],
+      "correct_removal_examples": [
+        {
+          "line": 2581,
+          "label": "duplicate",
+          "excerpt": "Kuchuluka: 3,372 ta’ata/km²"
+        },
+        {
+          "line": 9572,
+          "label": "boilerplate_or_noise",
+          "excerpt": "World Health Organization."
+        },
+        {
+          "line": 9704,
+          "label": "boilerplate_or_noise",
+          "excerpt": "Weekly epidemiological record."
+        },
+        {
+          "line": 9741,
+          "label": "boilerplate_or_noise",
+          "excerpt": "Retrieved 22 April 2014."
+        },
+        {
+          "line": 10714,
+          "label": "boilerplate_or_noise",
+          "excerpt": "† Adamwalira muofesi"
+        }
+      ]
+    },
+    "drop_category": {
+      "reviewed_removals": 25,
+      "correct_removals": 25,
+      "false_removals": 0,
+      "removal_precision": 1.0,
+      "false_removal_rate": 0.0,
+      "label_distribution": {
+        "boilerplate_or_noise": 25
+      },
+      "false_removal_examples": [],
+      "correct_removal_examples": [
+        {
+          "line": 388,
+          "label": "boilerplate_or_noise",
+          "excerpt": "Category:Zambia"
+        },
+        {
+          "line": 932,
+          "label": "boilerplate_or_noise",
+          "excerpt": "Category:"
+        },
+        {
+          "line": 1849,
+          "label": "boilerplate_or_noise",
+          "excerpt": "Category: Media ku Calabria"
+        },
+        {
+          "line": 2733,
+          "label": "boilerplate_or_noise",
+          "excerpt": "Category:India"
+        },
+        {
+          "line": 2757,
+          "label": "boilerplate_or_noise",
+          "excerpt": "Category:United States"
+        }
+      ]
+    },
+    "drop_url": {
+      "reviewed_removals": 25,
+      "correct_removals": 13,
+      "false_removals": 12,
+      "removal_precision": 0.52,
+      "false_removal_rate": 0.48,
+      "label_distribution": {
+        "useful_mixed_chichewa": 12,
+        "boilerplate_or_noise": 12,
+        "foreign_language": 1
+      },
+      "false_removal_examples": [
+        {
+          "line": 209,
+          "label": "useful_mixed_chichewa",
+          "excerpt": "Pa Zambiri za nyengo ya ku Malawi,chitani click apa www.bbc.com/weather ."
+        },
+        {
+          "line": 2127,
+          "label": "useful_mixed_chichewa",
+          "excerpt": "George Washington ndi mtsogoleri wa dziko la United States kuyambira 1789 mpaka 1797.https://www.mountvernon.org/library/digitalhistory/digital-encyclopedia/art"
+        },
+        {
+          "line": 3158,
+          "label": "useful_mixed_chichewa",
+          "excerpt": "Pa May 28, 1995, boma la Taiwan unachitikira maliro chachikulu kwa iye kuti azikumbukira chachikulu Taiwanese woimba.https://repositories.lib.utexas.edu/handle/"
+        },
+        {
+          "line": 4942,
+          "label": "useful_mixed_chichewa",
+          "excerpt": "Ku United States, Tsiku la Columbus ndilo tchuthi limene limakondwerera kubwera kwa Columbus ku New World pa October 12, 1492.http://www.history.com/topics/colu"
+        },
+        {
+          "line": 7282,
+          "label": "useful_mixed_chichewa",
+          "excerpt": "Nyimbo zake ndi kwaito ndipo reggae anauziridwa.https://www.lusakatimes.com/2015/03/14/luyanna-and-mampi-walilowelela-official-music-video/"
+        }
+      ],
+      "correct_removal_examples": [
+        {
+          "line": 1316,
+          "label": "boilerplate_or_noise",
+          "excerpt": "http://el.wikipedia.org/wiki/Πύλη:Κύρια"
+        },
+        {
+          "line": 1795,
+          "label": "boilerplate_or_noise",
+          "excerpt": "Archive.org: https://web.archive.org/web/20091002215506/http://ls78.sweb.cz/lydnevi.htm%26gt;BERGER, Tilman (2004)."
+        },
+        {
+          "line": 3729,
+          "label": "boilerplate_or_noise",
+          "excerpt": "www.edirne.bel.tr"
+        },
+        {
+          "line": 9894,
+          "label": "foreign_language",
+          "excerpt": "She has gained recognition and multiple awards from Born n Bred \"Recognition award\" in 2012, Mosi Lager Zambian Music Awards as the \"Best female Vocalist\" 2013,"
+        },
+        {
+          "line": 15154,
+          "label": "boilerplate_or_noise",
+          "excerpt": "GK1 Ray ClemenceRB2 Chris LawlerCB5 Larry LloydCB4 Tommy Smith (c)LB3 Alec LindsayCM6 Emlyn HughesCM8 Peter CormackCM11 Ian CallaghanRW7 Kevin KeeganCF9 John To"
+        }
+      ]
+    },
+    "drop_digit_only": {
+      "reviewed_removals": 20,
+      "correct_removals": 20,
+      "false_removals": 0,
+      "removal_precision": 1.0,
+      "false_removal_rate": 0.0,
+      "label_distribution": {
+        "boilerplate_or_noise": 20
+      },
+      "false_removal_examples": [],
+      "correct_removal_examples": [
+        {
+          "line": 331,
+          "label": "boilerplate_or_noise",
+          "excerpt": "9"
+        },
+        {
+          "line": 1881,
+          "label": "boilerplate_or_noise",
+          "excerpt": "3"
+        },
+        {
+          "line": 3848,
+          "label": "boilerplate_or_noise",
+          "excerpt": "1978"
+        },
+        {
+          "line": 8343,
+          "label": "boilerplate_or_noise",
+          "excerpt": "2006"
+        },
+        {
+          "line": 8372,
+          "label": "boilerplate_or_noise",
+          "excerpt": "2009"
+        }
+      ]
+    },
+    "drop_wikimedia": {
+      "reviewed_removals": 20,
+      "correct_removals": 9,
+      "false_removals": 11,
+      "removal_precision": 0.45,
+      "false_removal_rate": 0.55,
+      "label_distribution": {
+        "valid_chichewa": 11,
+        "boilerplate_or_noise": 9
+      },
+      "false_removal_examples": [
+        {
+          "line": 20,
+          "label": "valid_chichewa",
+          "excerpt": "Ntchito zina za Wikimedia"
+        },
+        {
+          "line": 5117,
+          "label": "valid_chichewa",
+          "excerpt": "Zigawo za Wikipedia zakhala zikuchitika ku Wikimedia chapitukulu, maphunziro ovomerezedwa monga Sonoma State University, Arizona State University, Middlebury Co"
+        },
+        {
+          "line": 6551,
+          "label": "valid_chichewa",
+          "excerpt": "Makampani ena athandiza Wikimedia mwa kupereka ma kompyuta, komanso pogwiritsa ntchito ma seva."
+        },
+        {
+          "line": 6552,
+          "label": "valid_chichewa",
+          "excerpt": "Popeza anthu amatha kulemba ma wikis, Wikimedia amapanga kugwiritsa ntchito."
+        },
+        {
+          "line": 6553,
+          "label": "valid_chichewa",
+          "excerpt": "Patricio Lorente ndi Pulezidenti wamakono wa Wikimedia Foundation Board."
+        }
+      ],
+      "correct_removal_examples": [
+        {
+          "line": 6541,
+          "label": "boilerplate_or_noise",
+          "excerpt": "thumb Wikimedia Foundation logo"
+        },
+        {
+          "line": 6542,
+          "label": "boilerplate_or_noise",
+          "excerpt": "Wikimedia Foundation ndi maziko osapindulitsa."
+        },
+        {
+          "line": 6547,
+          "label": "boilerplate_or_noise",
+          "excerpt": "Amaphatikizapo Wikimedia Foundation wiki, MediaWiki wiki, Test Wikipedia, Wikimedia Incubator, Bugzilla, ndi Wikimania wiki."
+        },
+        {
+          "line": 8442,
+          "label": "boilerplate_or_noise",
+          "excerpt": "Pamsonkhanowu, adalengezedwa kuti Catherine Maher, yemwe ndi Executive Director wa Wikimedia Foundation, adasankhidwa kukhazikika."
+        },
+        {
+          "line": 8455,
+          "label": "boilerplate_or_noise",
+          "excerpt": "Wikimania 2019, Wikimedia Conference, yomwe idzachitike ku Stockholm, Sweden, kuyambira 14 mpaka 18 August 2019."
+        }
+      ]
+    },
+    "drop_blank": {
+      "reviewed_removals": 10,
+      "correct_removals": 10,
+      "false_removals": 0,
+      "removal_precision": 1.0,
+      "false_removal_rate": 0.0,
+      "label_distribution": {
+        "boilerplate_or_noise": 10
+      },
+      "false_removal_examples": [],
+      "correct_removal_examples": [
+        {
+          "line": 16,
+          "label": "boilerplate_or_noise",
+          "excerpt": ""
+        },
+        {
+          "line": 3779,
+          "label": "boilerplate_or_noise",
+          "excerpt": ""
+        },
+        {
+          "line": 5567,
+          "label": "boilerplate_or_noise",
+          "excerpt": ""
+        },
+        {
+          "line": 5568,
+          "label": "boilerplate_or_noise",
+          "excerpt": ""
+        },
+        {
+          "line": 5598,
+          "label": "boilerplate_or_noise",
+          "excerpt": ""
+        }
+      ]
+    },
+    "drop_mu_nkhani": {
+      "reviewed_removals": 6,
+      "correct_removals": 1,
+      "false_removals": 5,
+      "removal_precision": 0.166667,
+      "false_removal_rate": 0.833333,
+      "label_distribution": {
+        "boilerplate_or_noise": 1,
+        "useful_mixed_chichewa": 4,
+        "valid_chichewa": 1
+      },
+      "false_removal_examples": [
+        {
+          "line": 1908,
+          "label": "useful_mixed_chichewa",
+          "excerpt": "Mu nkhani ya United States - ndipo malinga ndi US Census Bureau matanthauzo - kudera ndi: New England, Mid-Atlantic, East North pakati States, West North pakati"
+        },
+        {
+          "line": 7597,
+          "label": "useful_mixed_chichewa",
+          "excerpt": "Chigumula chimayambira koyamba kupyola pakati pa Halo: Combat Evolved , mu nkhani ya \"343 Guilty Spark\"."
+        },
+        {
+          "line": 7885,
+          "label": "useful_mixed_chichewa",
+          "excerpt": "Mu nkhani ya USA Today , Ortiz amanenanso kuti malo otsiriza ochokera ku Ugly Betty ndi mutu wakuti \" Mmene Betty Anakhumudwitsiranso \", pamene Hilda adakhala p"
+        },
+        {
+          "line": 8100,
+          "label": "useful_mixed_chichewa",
+          "excerpt": "Kuwonanso gawo mu nkhaniyi ndi chigumula chomwe chimadziwika kuti \" Gravemind \"."
+        },
+        {
+          "line": 11348,
+          "label": "valid_chichewa",
+          "excerpt": "Pomaliza, nthawi ya Chingerezi (1385-1400) imathera mu Nkhani zaku Canterbury."
+        }
+      ],
+      "correct_removal_examples": [
+        {
+          "line": 2,
+          "label": "boilerplate_or_noise",
+          "excerpt": "Mu nkhani"
+        }
+      ]
+    },
+    "drop_in_german_meta": {
+      "reviewed_removals": 3,
+      "correct_removals": 3,
+      "false_removals": 0,
+      "removal_precision": 1.0,
+      "false_removal_rate": 0.0,
+      "label_distribution": {
+        "foreign_language": 3
+      },
+      "false_removal_examples": [],
+      "correct_removal_examples": [
+        {
+          "line": 13924,
+          "label": "foreign_language",
+          "excerpt": "(in German) In: Rathauskorrespondenz, 27 May 2009Edita Gruberova ausgezeichnet (image) In: Rathauskorrespondenz, 27 May 2009"
+        },
+        {
+          "line": 13928,
+          "label": "foreign_language",
+          "excerpt": "Juni 2014 (in German) Musiktheaterpreis, retrieved 4 April 2015"
+        },
+        {
+          "line": 13929,
+          "label": "foreign_language",
+          "excerpt": "2016: Ehrenplakette of the in Garmisch-PartenkirchenEröffnungsprogramm der Richard-Strauss-Festivals 2016 (in German) Richard-Strauss-Festival, retrieved 6 Apri"
+        }
+      ]
+    },
+    "drop_german_signal": {
+      "reviewed_removals": 2,
+      "correct_removals": 2,
+      "false_removals": 0,
+      "removal_precision": 1.0,
+      "false_removal_rate": 0.0,
+      "label_distribution": {
+        "foreign_language": 2
+      },
+      "false_removal_examples": [],
+      "correct_removal_examples": [
+        {
+          "line": 1806,
+          "label": "foreign_language",
+          "excerpt": "\"Towards a unified slavic language\", Fourth Language Creation Conference, Groningen.MEYER, Anna-Maria (2012): \"Slavische Plansprachen auf dem Weg ins 21."
+        },
+        {
+          "line": 18984,
+          "label": "foreign_language",
+          "excerpt": "Tsygankov, Daniel Beruf, Verbannung, Schicksal: Iwan Iljin und Deutschland // Archiv fuer Rechts- und Sozialphilosophie."
+        }
+      ]
+    },
+    "drop_wikipedia_muzinenero": {
+      "reviewed_removals": 1,
+      "correct_removals": 1,
+      "false_removals": 0,
+      "removal_precision": 1.0,
+      "false_removal_rate": 0.0,
+      "label_distribution": {
+        "boilerplate_or_noise": 1
+      },
+      "false_removal_examples": [],
+      "correct_removal_examples": [
+        {
+          "line": 14,
+          "label": "boilerplate_or_noise",
+          "excerpt": "Wikipedia Muzinenero Zina"
+        }
+      ]
+    }
+  },
+  "kept_label_distribution": {
+    "valid_chichewa": 69,
+    "boilerplate_or_noise": 7,
+    "foreign_language": 4
+  },
+  "v1_headline_metrics": {
+    "removal_precision": 0.567944,
+    "false_removal_rate": 0.432056,
+    "useful_text_rate_kept": 0.8625
+  }
+}

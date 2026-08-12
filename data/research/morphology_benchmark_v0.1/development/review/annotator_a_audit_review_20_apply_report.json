@@ -1,0 +1,53 @@
+{
+  "tool": {
+    "name": "apply_morphology_human_review",
+    "version": "0.1.0"
+  },
+  "generated_at": "2026-08-11T08:18:49.108786Z",
+  "immutable_full_path": "data/research/morphology_benchmark_v0.1/development/annotations/annotator_a_full_200.jsonl",
+  "immutable_full_sha256": "d0d672e18819f4fa038ad2431b0b677aaa8642a2a7888840ef5364202b9eba45",
+  "decisions_path": "data/research/morphology_benchmark_v0.1/development/review/annotator_a_audit_review_20_decisions.jsonl",
+  "decisions_sha256": "8e6b208577a3c2304a3ebf1bac56d3304de64ff8c3a4feb8079a39b76e1db68f",
+  "queue_ids": [
+    "morph_dev_0095",
+    "morph_dev_0097",
+    "morph_dev_0117",
+    "morph_dev_0133",
+    "morph_dev_0176",
+    "morph_dev_0012",
+    "morph_dev_0018",
+    "morph_dev_0020",
+    "morph_dev_0024",
+    "morph_dev_0030",
+    "morph_dev_0033",
+    "morph_dev_0038",
+    "morph_dev_0054",
+    "morph_dev_0065",
+    "morph_dev_0088",
+    "morph_dev_0108",
+    "morph_dev_0125",
+    "morph_dev_0140",
+    "morph_dev_0171",
+    "morph_dev_0197"
+  ],
+  "n_decisions": 20,
+  "n_applied": 20,
+  "missing_decisions": [],
+  "extra_decisions": [],
+  "decision_counts": {
+    "EXCLUDE": 5,
+    "WHOLE": 0,
+    "KEEP": 13,
+    "UNCERTAIN": 0,
+    "REVISE": 2
+  },
+  "dry_run": false,
+  "output_path": "data/research/morphology_benchmark_v0.1/development/annotations/annotator_a_full_200_reviewed_v0_1.jsonl",
+  "output_written": true,
+  "original_full_overwritten": false,
+  "morphology_holdout_accessed": false,
+  "lm_test_evaluations": 0,
+  "status": "applied",
+  "output_sha256": "7f6d0190e30ddd3d31a484ee7a90e3d0468c49a601d276195fd5b7570c457d4a",
+  "n_output_rows": 200
+}

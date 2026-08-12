@@ -1,0 +1,227 @@
+{
+  "generated_at": "2026-08-04T08:19:09.836275Z",
+  "tool": {
+    "name": "evaluate_cleaning_policy",
+    "version": "1.0.0"
+  },
+  "policy_name": "cleaning_v1",
+  "config_path": "configs/data/cleaning.json",
+  "n_validation_records": 367,
+  "confusion_matrix": {
+    "true_positive_removal": 163,
+    "false_positive_removal": 124,
+    "true_negative_keep": 69,
+    "false_negative_keep": 11
+  },
+  "metrics": {
+    "removal_precision": 0.567944,
+    "false_removal_rate": 0.432056,
+    "useful_text_retention": 0.357513,
+    "noise_removal_recall": 0.936782,
+    "kept_noise_rate_on_human_kept_decision": 0.1375,
+    "foreign_language_leakage_on_human_kept_decision": 0.05,
+    "boilerplate_leakage_on_human_kept_decision": 0.0875,
+    "n_useful_labels": 193,
+    "n_useful_retained": 69,
+    "n_noise_labels": 174,
+    "n_noise_removed": 163,
+    "n_policy_removals_in_sample": 287,
+    "n_false_removals": 124,
+    "n_correct_removals": 163
+  },
+  "false_positives_by_rule": {
+    "dedupe_exact": 19,
+    "drop_english_signal": 5,
+    "drop_max_length": 13,
+    "drop_min_length": 20,
+    "drop_mixed_signal": 39,
+    "drop_mu_nkhani": 5,
+    "drop_url": 12,
+    "drop_wikimedia": 11
+  },
+  "true_positives_by_rule": {
+    "dedupe_exact": 6,
+    "drop_blank": 10,
+    "drop_category": 25,
+    "drop_digit_only": 20,
+    "drop_english_signal": 35,
+    "drop_german_signal": 2,
+    "drop_in_german_meta": 3,
+    "drop_max_length": 17,
+    "drop_min_length": 20,
+    "drop_mixed_signal": 1,
+    "drop_mu_nkhani": 1,
+    "drop_url": 13,
+    "drop_wikimedia": 9,
+    "drop_wikipedia_muzinenero": 1
+  },
+  "false_positive_examples": [
+    {
+      "line": 2988,
+      "label": "valid_chichewa",
+      "rule": "dedupe_exact",
+      "excerpt": "Delhi ndi boma lina la dziko la India."
+    },
+    {
+      "line": 7009,
+      "label": "valid_chichewa",
+      "rule": "dedupe_exact",
+      "excerpt": "Zogwirizana zakunja"
+    },
+    {
+      "line": 7715,
+      "label": "valid_chichewa",
+      "rule": "dedupe_exact",
+      "excerpt": "Inabweretsedwa pa September 2, 2006 ."
+    },
+    {
+      "line": 9421,
+      "label": "valid_chichewa",
+      "rule": "dedupe_exact",
+      "excerpt": "Kenako mu 1986 panapangidwa mtundu wina wa katemera womwe ndi wabwino poyerekezera ndi woyamba uja."
+    },
+    {
+      "line": 9457,
+      "label": "valid_chichewa",
+      "rule": "dedupe_exact",
+      "excerpt": "M'madera amene matendawa si ofala kwenikweni, matendawa amafala kwambiri chifukwa chogwiritsira ntchito mankhwala ozunguza bongo ndiponso kudzera m'kugonana."
+    },
+    {
+      "line": 9466,
+      "label": "valid_chichewa",
+      "rule": "dedupe_exact",
+      "excerpt": "Matendawa ali m'gulu la matenda a hepataitisi omwe amayambitsidwa ndi mavailasi awa: A, B, C, D, ndi E."
+    },
+    {
+      "line": 9549,
+      "label": "valid_chichewa",
+      "rule": "dedupe_exact",
+      "excerpt": "Nthawi zambiri zizindikiro za matendawa zimaonekera kwa milungu 8 ndipo zina mwa zizindikirozo ndi: nseru, kusanza, kutsegula m'mimba, khungu kuchita chikasu, f"
+    },
+    {
+      "line": 9563,
+      "label": "valid_chichewa",
+      "rule": "dedupe_exact",
+      "excerpt": "Zizindikiro za hepataitisi A n'zofanana ndi zizindikiro za matenda ena ambiri choncho pamafunika kuyeza magazi kuti madokotala atsimikizire ngati munthu ali ndi"
+    },
+    {
+      "line": 9576,
+      "label": "valid_chichewa",
+      "rule": "dedupe_exact",
+      "excerpt": "Matendawa angapewedwe mosavuta potsatira njira zaukhondo monga kusamba m'manja komanso kuphika zakudya m'njira yabwino."
+    },
+    {
+      "line": 9619,
+      "label": "valid_chichewa",
+      "rule": "dedupe_exact",
+      "excerpt": "Koma katemera wa tizigawo tamaselo nthawi zina amangochititsa kuti mkono umene wabiyidwawo utupe pang'ono komanso kwa nthawi yochepa basi."
+    },
+    {
+      "line": 9716,
+      "label": "valid_chichewa",
+      "rule": "dedupe_exact",
+      "excerpt": "Pamakhala mavuto ochepa kwambiri oyambitsidwa ndi katemerayu ndipo mavutowo si oopsa komanso sakhalitsa."
+    },
+    {
+      "line": 9717,
+      "label": "valid_chichewa",
+      "rule": "dedupe_exact",
+      "excerpt": "Mavuto ake angakhale kumva ululu pamalo amene mwabayidwa jakisoni komanso kutentha thupi."
+    },
+    {
+      "line": 9730,
+      "label": "valid_chichewa",
+      "rule": "dedupe_exact",
+      "excerpt": "Katemera wa chikuku anayamba kuperekedwa kwa anthu mu 1963."
+    },
+    {
+      "line": 9796,
+      "label": "valid_chichewa",
+      "rule": "dedupe_exact",
+      "excerpt": "Ambiri mwa anthu amene amadwala matendawa komanso kumwalira ndi matendawa ndi ana osakwanitsa zaka 5."
+    },
+    {
+      "line": 13207,
+      "label": "valid_chichewa",
+      "rule": "dedupe_exact",
+      "excerpt": "Chifukwa cha mliri wa COVID-19, mpikisanowu udasinthidwa kuyambira Epulo mpaka Okutobala kuti uwonjezere mwayi woti achitepo kanthu pagulu."
+    }
+  ],
+  "false_negative_examples": [
+    {
+      "line": 5234,
+      "label": "boilerplate_or_noise",
+      "excerpt": "Mbalameyi nthawi zambiri imakhala yokhazikika pakati pawo (ngakhale kuti amuna 8% ndi amodzi), ali ndi maubwenzi apamwamba."
+    },
+    {
+      "line": 6979,
+      "label": "boilerplate_or_noise",
+      "excerpt": "Adventures mu Paradaiso (1961) monga Esther Holmes"
+    },
+    {
+      "line": 9308,
+      "label": "foreign_language",
+      "excerpt": "Weekly epidemiological record."
+    },
+    {
+      "line": 9356,
+      "label": "foreign_language",
+      "excerpt": "\"Community-acquired bacterial meningitis in adults\"."
+    },
+    {
+      "line": 10601,
+      "label": "boilerplate_or_noise",
+      "excerpt": "201331 Disembala 198721 Novembala 2017ZANU-PF3Phelekezela Mphoko(wobadwa 1940)201721 Novembala 201724 Novembala 2017Odziyimira pawokha4Emmerson Mnangagwa(wobadw"
+    },
+    {
+      "line": 11026,
+      "label": "boilerplate_or_noise",
+      "excerpt": "Bhutan ( Thimphu ) (AS)"
+    },
+    {
+      "line": 12221,
+      "label": "foreign_language",
+      "excerpt": "Parks and Wildlife Tasmania – Tasmanian Devil – vocalisation, movie, FAQ"
+    },
+    {
+      "line": 14414,
+      "label": "boilerplate_or_noise",
+      "excerpt": "BreakdownOphedwaNthawiUmboniCivilians2,000+ ophedwa24 February – 2 March 2022Ukrainian government331 ophedwa24 February – 3 March 2022United NationsUAF, NGU, an"
+    },
+    {
+      "line": 16018,
+      "label": "boilerplate_or_noise",
+      "excerpt": "TeamPrevious final appearances (bold indicates winners) Tottenham HotspurNone Liverpool8 (1977, 1978, 1981, 1984, 1985, 2005, 2007, 2018)"
+    },
+    {
+      "line": 18047,
+      "label": "boilerplate_or_noise",
+      "excerpt": "Maracanã, Rio de Janeiro3–0"
+    },
+    {
+      "line": 19093,
+      "label": "foreign_language",
+      "excerpt": "Cấu tạo phân tử: Một số nước thanh khiết pha sữa có cụm phân tử siêu nhỏ chỉ 0,5nm giúp dễ thẩm thấu và hấp thu, trong khi đó nước tinh khiết có cụm phân tử lớn"
+    }
+  ],
+  "targets": {
+    "removal_precision_ge": 0.9,
+    "false_removal_rate_le": 0.1,
+    "useful_text_retention_ge": 0.9
+  },
+  "raw_sha256": "cf7c5ba6d8c0d4770eee3306bab9f4be1dfc9570930a9aa7f3613c0ffb4587b7",
+  "raw_files_unchanged": true,
+  "human_labels_unchanged": true,
+  "targets_met": {
+    "removal_precision": false,
+    "false_removal_rate": false,
+    "useful_text_retention": false
+  },
+  "all_targets_met": false,
+  "n_lines_removed_full_corpus": 6181,
+  "v1_comparison": {
+    "removal_precision": 0.567944,
+    "false_removal_rate": 0.432056,
+    "useful_text_rate": 0.8625
+  }
+}

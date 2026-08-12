@@ -1,0 +1,51 @@
+{
+  "tool": {
+    "name": "measure_annotation_self_consistency",
+    "version": "0.1.0"
+  },
+  "generated_at": "2026-08-06T06:10:22.699323Z",
+  "status": "awaiting_pass2_reannotation",
+  "n_self_review_items": 25,
+  "self_review_item_ids": [
+    "morph_dev_0001",
+    "morph_dev_0007",
+    "morph_dev_0017",
+    "morph_dev_0018",
+    "morph_dev_0028",
+    "morph_dev_0030",
+    "morph_dev_0042",
+    "morph_dev_0059",
+    "morph_dev_0071",
+    "morph_dev_0083",
+    "morph_dev_0086",
+    "morph_dev_0100",
+    "morph_dev_0102",
+    "morph_dev_0110",
+    "morph_dev_0117",
+    "morph_dev_0118",
+    "morph_dev_0152",
+    "morph_dev_0180",
+    "morph_dev_0181",
+    "morph_dev_0185",
+    "morph_dev_0187",
+    "morph_dev_0189",
+    "morph_dev_0190",
+    "morph_dev_0196",
+    "morph_dev_0199"
+  ],
+  "pass1_path": "/home/cyai/projects/research/transformer-lab/data/research/morphology_benchmark_v0.1/development/annotations/annotator_a_full_200.jsonl",
+  "pass2_path": "/home/cyai/projects/research/transformer-lab/data/research/morphology_benchmark_v0.1/development/annotations/annotator_a_self_review_25_annotations.jsonl",
+  "pass2_present": false,
+  "comparison_run": false,
+  "note": "Do not run self-consistency comparison before Annotator A re-annotates the 25 blinded items.",
+  "framing": {
+    "development_benchmark": "single_native_speaker_annotation",
+    "annotator_count": 1,
+    "annotator_id": "annotator_a",
+    "human_ai_pilot": "exploratory_only_not_gold",
+    "human_human_iaa_claim": false,
+    "morphology_holdout_locked": true,
+    "multi_annotator_validation": "future_work"
+  },
+  "metrics": null
+}

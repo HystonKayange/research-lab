@@ -1,0 +1,19 @@
+{
+  "n_total_records": 200,
+  "n_with_human_segments": 0,
+  "system_key": "bpe_tokens",
+  "mean_boundary_precision": null,
+  "mean_boundary_recall": null,
+  "mean_boundary_f1": null,
+  "exact_segmentation_accuracy": null,
+  "over_segmentation_rate": null,
+  "under_segmentation_rate": null,
+  "per_item": [],
+  "note": "Metrics undefined until human_segments are filled.",
+  "tool": {
+    "name": "evaluate_morphology_boundaries",
+    "version": "0.1.0"
+  },
+  "generated_at": "2026-08-06T00:06:55.928573Z",
+  "annotations_path": "/home/cyai/projects/research/transformer-lab/data/research/morphology_benchmark_v0.1/development/annotation_candidates.jsonl"
+}

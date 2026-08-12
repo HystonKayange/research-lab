@@ -1,0 +1,12 @@
+{
+  "corpus/bible.txt": "b4b259f5adda711e8637a97f3f43d3c09014267e9d35e66045d58a6b0efabd25",
+  "input/bible": "55445a0e0a5359e243f1773de623af1716bf4d3cd835afd83c4407cbaf85fc89",
+  "corpus/wikipedia.txt": "90d533f25dcbf54545b691c28d7f257dcc5f658c0d5c25565b531790d22c1af2",
+  "input/wikipedia": "69aac9abb9bc79e713b3d5d769f149aaaddda9fea9225b6ef554cb2ed7a99e0b",
+  "metadata/eligibility_snapshot.json": "2a69f596d7b5e81a55361d88efc3362ba6fd8c5a6e0256cc3ecf1e40fcf939a5",
+  "README.md": "12cd7a939f05772b7c37996b795dbc953dfd2ac2c86d797fd02c847df53040fc",
+  "reports/CORPUS_CARD.md": "f90e315812bc8f9f5405148550faa0624930ec4055c75bc33cd941ac90740f6e",
+  "metadata/sources.json": "6bb888871c85afc79c286ca3e60796c6f9f66acb164412daeed6288ca8996246",
+  "metadata/documents.jsonl": "788da135666e9733a54b6c359f692e3af82bd63dbfbd5dfbfe3b2acec33ef0a7",
+  "metadata/build_manifest.json": "99045afafc9217378b8fed4036010b928084a6f02e7a1a8f14671d581a245c2b"
+}

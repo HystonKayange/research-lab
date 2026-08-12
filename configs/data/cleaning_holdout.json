@@ -1,0 +1,112 @@
+{
+  "version": "1.0.0",
+  "description": "Blind holdout sampling for Cleaning Policy v2. Development set (original 367) is excluded. Do not tune v2 against this set before labeling.",
+  "source_id": "wikipedia",
+  "dataset_role": "blind_holdout",
+  "development_set_path": "data/reports/cleaning_review_sample.jsonl",
+  "development_set_role": "development_validation",
+  "random_seed": 20260804,
+  "excerpt_length": 200,
+  "include_uncertain_in_precision": false,
+  "paths": {
+    "raw": "data/raw/wikipedia/wiki_clean.txt",
+    "cleaned": "data/interim/cleaning_v2/wikipedia/cleaned.txt",
+    "removal_log": "data/interim/cleaning_v2/wikipedia/removal_log.jsonl",
+    "transform_log": "data/interim/cleaning_v2/wikipedia/transform_log.jsonl",
+    "cleaning_config": "configs/data/cleaning_v2.json",
+    "sample_output": "data/reports/cleaning_holdout_sample.jsonl",
+    "instructions_output": "data/reports/cleaning_holdout_instructions.md",
+    "manifest_output": "data/reports/cleaning_holdout_manifest.json",
+    "validation_json": "data/metadata/cleaning_holdout_validation.json",
+    "validation_report": "data/reports/cleaning_holdout_validation_report.md",
+    "backup_dir": "data/reports/cleaning_holdout_backups"
+  },
+  "targets": {
+    "removed_total": 120,
+    "kept_total": 130
+  },
+  "removed_strata_quotas": {
+    "drop_high_confidence_foreign": 28,
+    "drop_category": 22,
+    "drop_short_conditional": 20,
+    "drop_url_only": 15,
+    "drop_long_table_dump": 9,
+    "drop_blank": 8,
+    "drop_digit_only": 8,
+    "drop_wikimedia_chrome": 8,
+    "drop_nav_exact": 2
+  },
+  "removed_rule_aliases": {
+    "drop_nav_exact": ["drop_mu_nkhani_nav", "drop_wikipedia_muzinenero"]
+  },
+  "kept_strata_quotas": {
+    "chichewa_signal": 30,
+    "mixed_signal": 20,
+    "insufficient_signal": 20,
+    "short_retained": 12,
+    "long_retained": 12,
+    "url_stripped_retained": 12,
+    "english_names_institutions": 14,
+    "near_threshold": 10
+  },
+  "short_line_threshold": 20,
+  "long_line_threshold": 500,
+  "near_threshold_short_min": 15,
+  "near_threshold_short_max": 25,
+  "near_threshold_long_min": 450,
+  "near_threshold_long_max": 550,
+  "language_signal": {
+    "min_matches_for_signal": 2
+  },
+  "chichewa_signal_terms": [
+    "ndi", "ndipo", "kuti", "wa", "ya", "za", "pa", "mu", "ku", "ali",
+    "anali", "chifukwa", "koma", "ine", "iye", "anthu", "mulungu", "dziko",
+    "mwana", "ntchito"
+  ],
+  "english_signal_terms": [
+    "the", "and", "of", "to", "in", "is", "for", "that", "with", "was",
+    "were", "from", "this", "are", "by", "on", "as", "at", "be", "or"
+  ],
+  "german_signal_terms": [
+    "der", "die", "das", "und", "ist", "von", "zu", "mit", "auf", "für",
+    "den", "dem", "ein", "eine", "nicht", "sich", "auch", "als", "nach", "bei"
+  ],
+  "institution_name_patterns": [
+    "University",
+    "Ministry",
+    "President",
+    "International",
+    "Foundation",
+    "Hospital",
+    "College",
+    "Institute",
+    "United Nations",
+    "World Health",
+    "Parliament",
+    "Commission"
+  ],
+  "allowed_labels": [
+    "valid_chichewa",
+    "useful_mixed_chichewa",
+    "boilerplate_or_noise",
+    "foreign_language",
+    "duplicate",
+    "uncertain"
+  ],
+  "false_removal_labels": ["valid_chichewa", "useful_mixed_chichewa"],
+  "correct_removal_labels": [
+    "boilerplate_or_noise",
+    "foreign_language",
+    "duplicate"
+  ],
+  "useful_kept_labels": ["valid_chichewa", "useful_mixed_chichewa"],
+  "noise_kept_labels": ["boilerplate_or_noise", "duplicate"],
+  "foreign_kept_labels": ["foreign_language"],
+  "boilerplate_kept_labels": ["boilerplate_or_noise"],
+  "wilson_z": 1.96,
+  "generalization_targets": {
+    "removal_precision_ge": 0.9,
+    "false_removal_rate_le": 0.1,
+    "useful_text_retention_ge": 0.9
+  }
+}

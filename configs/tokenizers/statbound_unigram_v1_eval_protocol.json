@@ -1,0 +1,205 @@
+{
+  "version": "0.1.0",
+  "protocol_id": "statbound_unigram_v1_eval_protocol",
+  "status": "frozen_pre_results",
+  "decision_log_entry": "D-0011",
+  "document": "docs/research/MTHANDIZI_TOKENIZER_EVALUATION_PROTOCOL_v0_1.md",
+  "parent_success_criteria": "configs/tokenizers/mthandizi_success_criteria_v0_1.json",
+  "v1_algorithm_config": "configs/tokenizers/statbound_unigram_v1.json",
+  "scientific_results_inspected": false,
+  "morphology_holdout_accessed": false,
+  "lm_test_evaluated": false,
+  "lm_models_trained": 0,
+  "reproducibility_snapshot": {
+    "recorded_at_note": "Protocol freeze; artifacts hashed in place without modification.",
+    "git": {
+      "commit": null,
+      "branch": null,
+      "dirty": null,
+      "note": "Workspace is not a git repository (no .git directory at freeze time)."
+    },
+    "environment": {
+      "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+      "sentencepiece": "0.2.0",
+      "torch": "2.11.0+cu128",
+      "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+      "python_executable_note": ".venv/bin/python"
+    },
+    "artifacts": {
+      "lm_train_corpus": {
+        "path": "data/splits/chichewa_corpus_v0.1/train/combined.txt",
+        "sha256": "40ac7798b7dd1b98b1aa60f139a9794eefa75db751497166f1190c8da6ccc81d",
+        "bytes": 4703801
+      },
+      "lm_validation_corpus": {
+        "path": "data/splits/chichewa_corpus_v0.1/validation/combined.txt",
+        "sha256": "d2de8aa56c5df64830502945544fac9335e91fbc100435f9c2491cd68d763665",
+        "bytes": 646024
+      },
+      "unigram_8000_model": {
+        "path": "data/tokenizers/chichewa_corpus_v0.1/baselines_v0.1/unigram/vocab_8000/model.model",
+        "sha256": "230646c68ff9212ddbe35f01f688db43bba63cadb32d96f820b85cab572414be",
+        "bytes": 132073
+      },
+      "statbound_unigram_v1_config": {
+        "path": "configs/tokenizers/statbound_unigram_v1.json",
+        "sha256": "95df313888f929c3fa63371a843d7d8edac3ca3d03ee96a31e8e1e1bdcc00a46",
+        "bytes": 3152
+      },
+      "boundary_stats": {
+        "path": "data/tokenizers/chichewa_corpus_v0.1/statbound_unigram_v1/boundary_stats.json",
+        "sha256": "4744460d14bd30b8941c0e92d753cbdc54ead8471f43bb78dead922941bd721f",
+        "bytes": 12155990
+      },
+      "v1_spec": {
+        "path": "docs/research/MTHANDIZI_TOKENIZER_V1_SPEC.md",
+        "sha256": "348c0bc4be60be6c5f61cbe4e0d6778087c4b926c84c0e62fc1ea816dc3c1ec6",
+        "bytes": 12057
+      },
+      "success_criteria_config": {
+        "path": "configs/tokenizers/mthandizi_success_criteria_v0_1.json",
+        "sha256": "fc1a90c830dc74ea6f014636105c1b805be9ebb91627cbb8ff8ad65c8c6d83dd",
+        "bytes": 9169
+      },
+      "success_criteria_doc": {
+        "path": "docs/research/MTHANDIZI_TOKENIZER_SUCCESS_CRITERIA_v0_1.md",
+        "sha256": "4f88f4cbeae3029e7189fc3b828c7e5e7f8f2082aa8fc11453ef2a65ec3d447d",
+        "bytes": 12046
+      },
+      "active_morphology_development_pre_self_review": {
+        "path": "data/research/morphology_benchmark_v0.1/development/annotations/annotator_a_active_195_v0_1.jsonl",
+        "sha256": "665ee2fc464448696d78dc646455c4fa2bcadbcdbb4fac4de2c9f200ca1df0b1",
+        "bytes": 224007,
+        "n_rows": 195,
+        "status": "pre_self_review_not_final_until_phase_B"
+      }
+    }
+  },
+  "lambda": {
+    "candidates": [0.0, 0.25, 0.5, 1.0, 2.0],
+    "mandatory_control": 0.0,
+    "control_cannot_be_proposed_method": true,
+    "grid_expansion_after_results_forbidden": true,
+    "selection_uses_lm_bpc": false,
+    "selection_uses_holdout": false,
+    "selection_uses_lm_test": false,
+    "selection_uses_masakhner": false
+  },
+  "lambda_selection_rule": {
+    "description": "Efficiency gate then max development boundary F1; ties by lower tokens/char then smaller lambda.",
+    "efficiency_metric": "tokens_per_character",
+    "efficiency_corpus": "data/splits/chichewa_corpus_v0.1/validation/combined.txt",
+    "efficiency_baseline": "unigram_8000",
+    "max_relative_tokens_per_character": 1.10,
+    "morphology_metric": "boundary_f1",
+    "morphology_set": "final_frozen_morphology_development_after_self_review",
+    "eligible_lambdas": [0.25, 0.5, 1.0, 2.0],
+    "steps": [
+      "A: eligible = nonzero lambda with tpc <= 1.10 * unigram_tpc",
+      "B: among eligible, maximize development boundary F1",
+      "C: tie -> lower tokens_per_character",
+      "D: remaining tie -> smaller lambda",
+      "E: if eligible empty -> record SC5 failed for all; still pick max F1 among nonzero for diagnostic; do not change 1.10 threshold"
+    ],
+    "development_f1_is_confirmatory": false,
+    "confirmatory_morphology": "morphology_holdout_phase_I_only"
+  },
+  "self_review_gate": {
+    "required_before_phase_C": true,
+    "items": 25,
+    "tokenizer_outputs_shown_during_self_review": false,
+    "after_completion": [
+      "freeze_final_active_morphology_development_file",
+      "record_n_rows_and_sha256",
+      "never_modify_based_on_tokenizer_outputs"
+    ]
+  },
+  "morphology_phase_C": {
+    "systems": [
+      "bpe_8000",
+      "unigram_8000",
+      "statbound_lambda_0_0",
+      "statbound_lambda_0_25",
+      "statbound_lambda_0_5",
+      "statbound_lambda_1_0",
+      "statbound_lambda_2_0"
+    ],
+    "character_as_equivalent_morph_baseline": false,
+    "metrics": [
+      "boundary_precision",
+      "boundary_recall",
+      "boundary_f1",
+      "exact_segmentation_match",
+      "boundary_jaccard"
+    ],
+    "require_lambda0_equals_unigram": true,
+    "sc4_development": {
+      "reference": "max(bpe_8000_boundary_f1, unigram_8000_boundary_f1)",
+      "target": "selected_statbound_boundary_f1 >= reference + 0.03",
+      "margin_absolute": 0.03,
+      "confirmatory": false
+    },
+    "efficiency_metrics_on_lm_validation": [
+      "tokens_per_character",
+      "word_fertility",
+      "sequence_length_expansion",
+      "single_character_fragment_rate",
+      "whole_word_rate"
+    ]
+  },
+  "lm_phase_F": {
+    "train_only_selected_nonzero_lambda_star": true,
+    "forbid_training_all_lambdas_then_picking_by_bpc": true,
+    "seeds": [42, 1337, 2026],
+    "matrix_config": "configs/models/lm_baselines_v0_1_final_matrix.json",
+    "conditions": [
+      {
+        "track": "parameter_matched",
+        "budget_policy": "fixed_characters",
+        "role": "primary_SC1"
+      },
+      {
+        "track": "architecture_matched",
+        "budget_policy": "fixed_characters",
+        "role": "SC2"
+      },
+      {
+        "track": "parameter_matched",
+        "budget_policy": "fixed_updates",
+        "role": "SC3"
+      },
+      {
+        "track": "architecture_matched",
+        "budget_policy": "fixed_updates",
+        "role": "SC3"
+      }
+    ],
+    "primary_baseline": "unigram_8000",
+    "retrain_baselines": false,
+    "retrain_baselines_only_if_reproducibility_failure_documented": true
+  },
+  "phases": {
+    "A": "self_review_25",
+    "B": "freeze_final_morphology_development",
+    "C": "morphology_dev_and_efficiency_for_all_lambdas",
+    "D": "select_lambda_star",
+    "E": "freeze_final_statbound_tokenizer",
+    "F": "train_lm_matrix_lambda_star_only",
+    "G": "analyze_validation_SC1_SC7",
+    "H": "freeze_conclusions_and_ablations",
+    "I": "unlock_morphology_holdout_once",
+    "J": "unlock_lm_test_once"
+  },
+  "masakhner": {
+    "in_development_loop": false,
+    "role": "later_external_downstream_only"
+  },
+  "execution_status_at_protocol_freeze": {
+    "phase_A_started": false,
+    "phase_C_metrics_run": false,
+    "lambda_star_selected": false,
+    "lm_training_started": false,
+    "holdout_unlocked": false,
+    "lm_test_unlocked": false
+  }
+}

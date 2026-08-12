@@ -1,0 +1,1600 @@
+{
+  "tool": {
+    "name": "morphology_annotation_audit",
+    "version": "0.1.0",
+    "mode": "read_only"
+  },
+  "generated_at": "2026-08-11T07:56:49.381806Z",
+  "input": "data/research/morphology_benchmark_v0.1/development/annotations/annotator_a_full_200.jsonl",
+  "scope": {
+    "annotator_id_expected": "annotator_a",
+    "annotator_id_observed": {
+      "annotator_a": 200
+    },
+    "partitions": {
+      "pilot_40": 40,
+      "remaining_160": 160,
+      "other": 0
+    },
+    "morphology_holdout": "locked_not_accessed",
+    "lm_test": "not_accessed",
+    "judging_policy": "Flag structural/schema/consistency suspects only. No claim that any annotation is linguistically wrong. No BPE/Unigram/Claude/model outputs used to judge correctness."
+  },
+  "summary": {
+    "total_audited": 200,
+    "unique_item_ids": 200,
+    "duplicate_item_ids": [],
+    "reconstruction_failures": 0,
+    "missing_field_issues": 0,
+    "repeated_surface_forms_exact": 0,
+    "repeated_surface_form_inconsistencies": 0,
+    "suspicious_boundary_pattern_cases": 2,
+    "suspicious_one_char_segment_flags": 0,
+    "high_segment_count_flags": 9,
+    "items_recommended_for_human_review": 20,
+    "weak_affix_heuristic_examples_not_in_primary_review": 30,
+    "files_modified": [],
+    "morphology_holdout_released": false,
+    "lm_test_evaluations": 0,
+    "bpe_unigram_used_to_judge": false,
+    "annotations_modified": false
+  },
+  "checks": {
+    "unique_ids": {
+      "n_rows": 200,
+      "n_unique_ids": 200,
+      "n_missing_ids": 0,
+      "duplicate_ids": [],
+      "pass": true
+    },
+    "reconstruction": {
+      "n_failures": 0,
+      "failures": [],
+      "pass": true
+    },
+    "missing_or_empty_fields": {
+      "n_issues": 0,
+      "issues": [],
+      "boundary_positions_notes": {
+        "n_with_issues_or_missing_on_multseg": 0,
+        "examples": [],
+        "note": "boundary_positions soft-check; not treated as gold failure"
+      }
+    },
+    "segment_count_distribution": {
+      "min": 1,
+      "max": 5,
+      "mean": 2.625,
+      "median": 3.0,
+      "distribution": {
+        "1": 40,
+        "2": 50,
+        "3": 64,
+        "4": 37,
+        "5": 9
+      },
+      "n_with_plus_delimiter": 160
+    },
+    "whole_no_segmentation": {
+      "n": 40,
+      "rate": 0.2,
+      "item_ids_sample": [
+        "morph_dev_0013",
+        "morph_dev_0014",
+        "morph_dev_0019",
+        "morph_dev_0026",
+        "morph_dev_0031",
+        "morph_dev_0068",
+        "morph_dev_0077",
+        "morph_dev_0079",
+        "morph_dev_0080",
+        "morph_dev_0086",
+        "morph_dev_0095",
+        "morph_dev_0096",
+        "morph_dev_0097",
+        "morph_dev_0104",
+        "morph_dev_0107",
+        "morph_dev_0110",
+        "morph_dev_0113",
+        "morph_dev_0117",
+        "morph_dev_0120",
+        "morph_dev_0127",
+        "morph_dev_0133",
+        "morph_dev_0136",
+        "morph_dev_0139",
+        "morph_dev_0145",
+        "morph_dev_0146",
+        "morph_dev_0147",
+        "morph_dev_0149",
+        "morph_dev_0153",
+        "morph_dev_0154",
+        "morph_dev_0161"
+      ],
+      "n_no_segmentation_required_flag": 40
+    },
+    "uncertain": {
+      "n": 3,
+      "items": [
+        {
+          "item_id": "morph_dev_0095",
+          "surface_form": "tursk",
+          "current_segmentation": "tursk",
+          "reason": "uncertain=true",
+          "category": "uncertain",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0097",
+          "surface_form": "Clairol",
+          "current_segmentation": "Clairol",
+          "reason": "uncertain=true",
+          "category": "uncertain",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0133",
+          "surface_form": "trompe-l'œil",
+          "current_segmentation": "trompe-l'œil",
+          "reason": "uncertain=true",
+          "category": "uncertain",
+          "benchmark_partition": "remaining_160"
+        }
+      ]
+    },
+    "alternative_segmentation": {
+      "n": 33,
+      "items": [
+        {
+          "item_id": "morph_dev_0002",
+          "surface_form": "imafunsidwa",
+          "current_segmentation": "i+ma+funsidwa",
+          "alternative_segmentation": "i+ma+funs+idwa",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0007",
+          "surface_form": "Tikukudalitsani",
+          "current_segmentation": "Ti+ku+ku+dalitsani",
+          "alternative_segmentation": "Ti+ku+kudalitsani",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0018",
+          "surface_form": "matsiriziro",
+          "current_segmentation": "ma+tsirizi+ro",
+          "alternative_segmentation": "ma+tsiriziro",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0020",
+          "surface_form": "anakakamizika",
+          "current_segmentation": "a+na+ka+kamizika",
+          "alternative_segmentation": "a+na+kakamizika",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0022",
+          "surface_form": "masuleni",
+          "current_segmentation": "ma+suleni",
+          "alternative_segmentation": "masule+ni",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0023",
+          "surface_form": "Davideyo",
+          "current_segmentation": "Davide+yo",
+          "alternative_segmentation": "Davideyo",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0025",
+          "surface_form": "kuphwanyaphwanya",
+          "current_segmentation": "ku+phwanya+phwanya",
+          "alternative_segmentation": "kuphwanya+phwanya",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0039",
+          "surface_form": "mudzamumvera",
+          "current_segmentation": "mu+dza+mu+mvera",
+          "alternative_segmentation": "mudza+mu+mvera",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0040",
+          "surface_form": "ndinawalamulira",
+          "current_segmentation": "ndi+na+wa+lamulira",
+          "alternative_segmentation": "ndinawa+lamulira",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0041",
+          "surface_form": "adzamubweretsa",
+          "current_segmentation": "a+dza+mu+bweretsa",
+          "alternative_segmentation": "adzamu+bweretsa",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0042",
+          "surface_form": "wolonjezedwa",
+          "current_segmentation": "wo+lonje+zedwa",
+          "alternative_segmentation": "wo+lonjezedwa",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0049",
+          "surface_form": "munkachitira",
+          "current_segmentation": "mu+n+ka+chitira",
+          "alternative_segmentation": "mu+nka+chitira",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0054",
+          "surface_form": "adapita",
+          "current_segmentation": "ada+pita",
+          "alternative_segmentation": "a+da+pita",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0057",
+          "surface_form": "pita",
+          "current_segmentation": "pi+ta",
+          "alternative_segmentation": "pita",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0058",
+          "surface_form": "inkayenda",
+          "current_segmentation": "i+n+ka+yenda",
+          "alternative_segmentation": "i+nka+yenda",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0060",
+          "surface_form": "Nena",
+          "current_segmentation": "Ne+na",
+          "alternative_segmentation": "Nena",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0061",
+          "surface_form": "tinachita",
+          "current_segmentation": "ti+na+chita",
+          "alternative_segmentation": "tina+chita",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0071",
+          "surface_form": "M’nthaŵi",
+          "current_segmentation": "M’+nthaŵi",
+          "alternative_segmentation": "M+’+nthaŵi",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0087",
+          "surface_form": "Mudzateteza",
+          "current_segmentation": "Mu+dza+teteza",
+          "alternative_segmentation": "Mudza+teteza",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0088",
+          "surface_form": "ananeneza",
+          "current_segmentation": "a+na+neneza",
+          "alternative_segmentation": "ana+neneza",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0098",
+          "surface_form": "zalembedwera",
+          "current_segmentation": "za+lembe+dwera",
+          "alternative_segmentation": "za+lembedwera",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0102",
+          "surface_form": "amavulala",
+          "current_segmentation": "a+ma+vula+la",
+          "alternative_segmentation": "a+ma+vulala",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0106",
+          "surface_form": "m'gululi",
+          "current_segmentation": "m'+gulu+li",
+          "alternative_segmentation": "m'+gululi",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0108",
+          "surface_form": "amatsamwitsidwa",
+          "current_segmentation": "a+ma+tsamwitsidwa",
+          "alternative_segmentation": "a+ma+tsamwits+idwa",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0131",
+          "surface_form": "linatsimikiziranso",
+          "current_segmentation": "lina+tsimikizira+nso",
+          "alternative_segmentation": "li+na+tsimikizira+nso",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0132",
+          "surface_form": "kudzathira",
+          "current_segmentation": "ku+dza+thira",
+          "alternative_segmentation": "kudza+thira",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0135",
+          "surface_form": "zoonadi",
+          "current_segmentation": "zoona+di",
+          "alternative_segmentation": "zo+onadi",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0138",
+          "surface_form": "zikadzatha",
+          "current_segmentation": "zi+ka+dza+tha",
+          "alternative_segmentation": "zi+kadza+tha",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0148",
+          "surface_form": "ndidzadziwa",
+          "current_segmentation": "ndi+dza+dziwa",
+          "alternative_segmentation": "ndidza+dziwa",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0150",
+          "surface_form": "Anaphunzira",
+          "current_segmentation": "A+na+phunzira",
+          "alternative_segmentation": "Ana+phunzira",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0157",
+          "surface_form": "ndidzakhazika",
+          "current_segmentation": "ndi+dza+khazika",
+          "alternative_segmentation": "ndidza+khazika",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0188",
+          "surface_form": "kuwabalalitsira",
+          "current_segmentation": "ku+wa+balalitsira",
+          "alternative_segmentation": "kuwa+balalitsira",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        },
+        {
+          "item_id": "morph_dev_0192",
+          "surface_form": "wasungunulidwa",
+          "current_segmentation": "wa+sungunulidwa",
+          "alternative_segmentation": "wa+sungunul+idwa",
+          "reason": "alternative_segmentation present",
+          "category": "alternative_analysis"
+        }
+      ]
+    },
+    "mixed_language_name_ocr": {
+      "n_mixed_language": 35,
+      "n_spelling_or_ocr_issue": 1,
+      "n_insufficient_context": 1,
+      "n_name_or_non_chichewa_tagged": 39,
+      "mixed_language_items": [
+        {
+          "item_id": "morph_dev_0013",
+          "surface_form": "manoma",
+          "current_segmentation": "manoma",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0014",
+          "surface_form": "SantillanaManager",
+          "current_segmentation": "SantillanaManager",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0019",
+          "surface_form": "Darussalam",
+          "current_segmentation": "Darussalam",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0023",
+          "surface_form": "Davideyo",
+          "current_segmentation": "Davide+yo",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0026",
+          "surface_form": "Yekoliya",
+          "current_segmentation": "Yekoliya",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0031",
+          "surface_form": "Sarisekimu",
+          "current_segmentation": "Sarisekimu",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0068",
+          "surface_form": "Khweŵa",
+          "current_segmentation": "Khweŵa",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0077",
+          "surface_form": "Remaliya",
+          "current_segmentation": "Remaliya",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0079",
+          "surface_form": "Karl",
+          "current_segmentation": "Karl",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0080",
+          "surface_form": "Michel",
+          "current_segmentation": "Michel",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "pilot_40"
+        },
+        {
+          "item_id": "morph_dev_0086",
+          "surface_form": "oral",
+          "current_segmentation": "oral",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0095",
+          "surface_form": "tursk",
+          "current_segmentation": "tursk",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0096",
+          "surface_form": "Adaliya",
+          "current_segmentation": "Adaliya",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0097",
+          "surface_form": "Clairol",
+          "current_segmentation": "Clairol",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0104",
+          "surface_form": "Sergetsev",
+          "current_segmentation": "Sergetsev",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0107",
+          "surface_form": "Ngonis",
+          "current_segmentation": "Ngonis",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0110",
+          "surface_form": "observations",
+          "current_segmentation": "observations",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0117",
+          "surface_form": "lmmaculate",
+          "current_segmentation": "lmmaculate",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "pilot_40"
+        },
+        {
+          "item_id": "morph_dev_0127",
+          "surface_form": "Never",
+          "current_segmentation": "Never",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0133",
+          "surface_form": "trompe-l'œil",
+          "current_segmentation": "trompe-l'œil",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0136",
+          "surface_form": "aloe",
+          "current_segmentation": "aloe",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0139",
+          "surface_form": "Ted",
+          "current_segmentation": "Ted",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0145",
+          "surface_form": "Kde",
+          "current_segmentation": "Kde",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0146",
+          "surface_form": "Bogopil",
+          "current_segmentation": "Bogopil",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0147",
+          "surface_form": "heliometer",
+          "current_segmentation": "heliometer",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0154",
+          "surface_form": "Gruberová",
+          "current_segmentation": "Gruberová",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0164",
+          "surface_form": "Tome",
+          "current_segmentation": "Tome",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "pilot_40"
+        },
+        {
+          "item_id": "morph_dev_0170",
+          "surface_form": "Yoyakini",
+          "current_segmentation": "Yoyakini",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "pilot_40"
+        },
+        {
+          "item_id": "morph_dev_0175",
+          "surface_form": "Koninkrijk",
+          "current_segmentation": "Koninkrijk",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "pilot_40"
+        },
+        {
+          "item_id": "morph_dev_0177",
+          "surface_form": "over",
+          "current_segmentation": "over",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0179",
+          "surface_form": "Kees",
+          "current_segmentation": "Kees",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0180",
+          "surface_form": "Orinoco",
+          "current_segmentation": "Orinoco",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0182",
+          "surface_form": "Also",
+          "current_segmentation": "Also",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0184",
+          "surface_form": "Iliza",
+          "current_segmentation": "Iliza",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0198",
+          "surface_form": "PVC",
+          "current_segmentation": "PVC",
+          "reason": "mixed_language=true",
+          "category": "mixed_language",
+          "benchmark_partition": "remaining_160"
+        }
+      ],
+      "ocr_items": [
+        {
+          "item_id": "morph_dev_0117",
+          "surface_form": "lmmaculate",
+          "current_segmentation": "lmmaculate",
+          "reason": "spelling_or_ocr_issue=true",
+          "category": "ocr_spelling",
+          "benchmark_partition": "pilot_40"
+        }
+      ],
+      "phenomenon_tag_counts": {
+        "apparent_stem_or_root": 162,
+        "apparent_prefix": 157,
+        "apparent_inflectional_boundary": 150,
+        "no_meaningful_segmentation": 40,
+        "non_chichewa_or_mixed": 35,
+        "apparent_suffix": 9,
+        "noun_class_like": 7,
+        "multiple_plausible_analyses": 4,
+        "negation_like": 4,
+        "locative_like": 4,
+        "unresolved_analysis": 3,
+        "apparent_derivational_boundary": 2,
+        "spelling_or_ocr_issue": 1,
+        "numeral_or_code": 1,
+        "insufficient_context": 1
+      }
+    },
+    "repeated_surface_forms": {
+      "n_exact_duplicates": 0,
+      "n_case_insensitive_duplicates": 0,
+      "inconsistencies": []
+    },
+    "affix_boundary_consistency": {
+      "method": "Among multi-segment items sharing orthographic prefix length 2–4 with group size ≥5 and majority first-boundary rate ≥60%, flag minority first cuts. Weak frequent-token fused examples listed separately and excluded from primary review.",
+      "n_prefix_boundary_minority_flags": 2,
+      "prefix_boundary_flags": [
+        {
+          "item_id": "morph_dev_0054",
+          "surface_form": "adapita",
+          "current_segmentation": "ada+pita",
+          "reason": "orthographic prefix 'ad' (len=2, n=5) has majority first-boundary after 1 chars (4/5=80%); this item first segment 'ada' (len=3)",
+          "category": "boundary_pattern_inconsistency",
+          "benchmark_partition": "pilot_40"
+        },
+        {
+          "item_id": "morph_dev_0033",
+          "surface_form": "sizidzamvekanso",
+          "current_segmentation": "sizidza+mveka+nso",
+          "reason": "orthographic prefix 'si' (len=2, n=10) has majority first-boundary after 2 chars (9/10=90%); this item first segment 'sizidza' (len=7)",
+          "category": "boundary_pattern_inconsistency",
+          "benchmark_partition": "pilot_40"
+        }
+      ],
+      "n_weak_frequent_segment_fused_examples": 30,
+      "weak_frequent_segment_fused_examples": [
+        {
+          "item_id": "morph_dev_0001",
+          "surface_form": "Analigawa",
+          "current_segmentation": "Anali+gawa",
+          "reason": "weak heuristic: frequent segment token 'a' (n_as_segment≈30) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "pilot_40"
+        },
+        {
+          "item_id": "morph_dev_0002",
+          "surface_form": "imafunsidwa",
+          "current_segmentation": "i+ma+funsidwa",
+          "reason": "weak heuristic: frequent segment token 'a' (n_as_segment≈30) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0003",
+          "surface_form": "nditenga",
+          "current_segmentation": "ndi+tenga",
+          "reason": "weak heuristic: frequent segment token 'a' (n_as_segment≈30) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0001",
+          "surface_form": "Analigawa",
+          "current_segmentation": "Anali+gawa",
+          "reason": "weak heuristic: frequent segment token 'na' (n_as_segment≈30) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "pilot_40"
+        },
+        {
+          "item_id": "morph_dev_0009",
+          "surface_form": "inasandukanso",
+          "current_segmentation": "ina+sanduka+nso",
+          "reason": "weak heuristic: frequent segment token 'na' (n_as_segment≈30) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "pilot_40"
+        },
+        {
+          "item_id": "morph_dev_0010",
+          "surface_form": "chikulimbana",
+          "current_segmentation": "chi+ku+limbana",
+          "reason": "weak heuristic: frequent segment token 'na' (n_as_segment≈30) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0036",
+          "surface_form": "silinakule",
+          "current_segmentation": "si+li+na+kule",
+          "reason": "weak heuristic: frequent segment token 'ku' (n_as_segment≈26) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0076",
+          "surface_form": "yaikulu",
+          "current_segmentation": "ya+i+kulu",
+          "reason": "weak heuristic: frequent segment token 'ku' (n_as_segment≈26) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0168",
+          "surface_form": "wokunthidwa",
+          "current_segmentation": "wo+kunthidwa",
+          "reason": "weak heuristic: frequent segment token 'ku' (n_as_segment≈26) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0033",
+          "surface_form": "sizidzamvekanso",
+          "current_segmentation": "sizidza+mveka+nso",
+          "reason": "weak heuristic: frequent segment token 'dza' (n_as_segment≈21) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "pilot_40"
+        },
+        {
+          "item_id": "morph_dev_0050",
+          "surface_form": "Kundipembedza",
+          "current_segmentation": "Ku+ndi+pembedza",
+          "reason": "weak heuristic: frequent segment token 'dza' (n_as_segment≈21) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "pilot_40"
+        },
+        {
+          "item_id": "morph_dev_0030",
+          "surface_form": "sadzawathandizanso",
+          "current_segmentation": "sa+dza+wa+thandiza+nso",
+          "reason": "weak heuristic: frequent segment token 'ndi' (n_as_segment≈17) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0016",
+          "surface_form": "akanamasulidwa",
+          "current_segmentation": "a+kana+masulidwa",
+          "reason": "weak heuristic: frequent segment token 'ma' (n_as_segment≈15) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0078",
+          "surface_form": "kumadzulo",
+          "current_segmentation": "ku+madzulo",
+          "reason": "weak heuristic: frequent segment token 'ma' (n_as_segment≈15) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "pilot_40"
+        },
+        {
+          "item_id": "morph_dev_0081",
+          "surface_form": "komanso",
+          "current_segmentation": "koma+nso",
+          "reason": "weak heuristic: frequent segment token 'ma' (n_as_segment≈15) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0021",
+          "surface_form": "Matimu",
+          "current_segmentation": "Ma+timu",
+          "reason": "weak heuristic: frequent segment token 'mu' (n_as_segment≈14) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0034",
+          "surface_form": "sidzapulumuka",
+          "current_segmentation": "si+dza+pulumuka",
+          "reason": "weak heuristic: frequent segment token 'mu' (n_as_segment≈14) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "pilot_40"
+        },
+        {
+          "item_id": "morph_dev_0040",
+          "surface_form": "ndinawalamulira",
+          "current_segmentation": "ndi+na+wa+lamulira",
+          "reason": "weak heuristic: frequent segment token 'mu' (n_as_segment≈14) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "pilot_40"
+        },
+        {
+          "item_id": "morph_dev_0001",
+          "surface_form": "Analigawa",
+          "current_segmentation": "Anali+gawa",
+          "reason": "weak heuristic: frequent segment token 'wa' (n_as_segment≈12) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "pilot_40"
+        },
+        {
+          "item_id": "morph_dev_0002",
+          "surface_form": "imafunsidwa",
+          "current_segmentation": "i+ma+funsidwa",
+          "reason": "weak heuristic: frequent segment token 'wa' (n_as_segment≈12) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0006",
+          "surface_form": "azigonekedwa",
+          "current_segmentation": "a+zi+gonekedwa",
+          "reason": "weak heuristic: frequent segment token 'wa' (n_as_segment≈12) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0018",
+          "surface_form": "matsiriziro",
+          "current_segmentation": "ma+tsirizi+ro",
+          "reason": "weak heuristic: frequent segment token 'zi' (n_as_segment≈11) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0020",
+          "surface_form": "anakakamizika",
+          "current_segmentation": "a+na+ka+kamizika",
+          "reason": "weak heuristic: frequent segment token 'zi' (n_as_segment≈11) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0033",
+          "surface_form": "sizidzamvekanso",
+          "current_segmentation": "sizidza+mveka+nso",
+          "reason": "weak heuristic: frequent segment token 'zi' (n_as_segment≈11) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "pilot_40"
+        },
+        {
+          "item_id": "morph_dev_0005",
+          "surface_form": "ndikuwunikanso",
+          "current_segmentation": "ndi+ku+wunika+nso",
+          "reason": "weak heuristic: frequent segment token 'ka' (n_as_segment≈11) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0009",
+          "surface_form": "inasandukanso",
+          "current_segmentation": "ina+sanduka+nso",
+          "reason": "weak heuristic: frequent segment token 'ka' (n_as_segment≈11) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "pilot_40"
+        },
+        {
+          "item_id": "morph_dev_0016",
+          "surface_form": "akanamasulidwa",
+          "current_segmentation": "a+kana+masulidwa",
+          "reason": "weak heuristic: frequent segment token 'ka' (n_as_segment≈11) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0015",
+          "surface_form": "matchalitchi",
+          "current_segmentation": "ma+tchalitchi",
+          "reason": "weak heuristic: frequent segment token 'chi' (n_as_segment≈10) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0049",
+          "surface_form": "munkachitira",
+          "current_segmentation": "mu+n+ka+chitira",
+          "reason": "weak heuristic: frequent segment token 'chi' (n_as_segment≈10) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0052",
+          "surface_form": "idzachita",
+          "current_segmentation": "i+dza+chita",
+          "reason": "weak heuristic: frequent segment token 'chi' (n_as_segment≈10) not used as a segment here",
+          "category": "affix_token_treatment_weak",
+          "benchmark_partition": "remaining_160"
+        }
+      ],
+      "frequent_segment_tokens_top": [
+        [
+          "a",
+          30
+        ],
+        [
+          "na",
+          30
+        ],
+        [
+          "ku",
+          29
+        ],
+        [
+          "dza",
+          21
+        ],
+        [
+          "ndi",
+          17
+        ],
+        [
+          "ma",
+          15
+        ],
+        [
+          "mu",
+          15
+        ],
+        [
+          "wa",
+          12
+        ],
+        [
+          "nso",
+          11
+        ],
+        [
+          "zi",
+          11
+        ],
+        [
+          "ka",
+          11
+        ],
+        [
+          "chi",
+          10
+        ],
+        [
+          "sa",
+          9
+        ],
+        [
+          "si",
+          9
+        ],
+        [
+          "i",
+          8
+        ],
+        [
+          "ti",
+          8
+        ],
+        [
+          "u",
+          6
+        ],
+        [
+          "li",
+          6
+        ],
+        [
+          "ya",
+          4
+        ],
+        [
+          "zo",
+          4
+        ],
+        [
+          "ni",
+          4
+        ],
+        [
+          "tenga",
+          3
+        ],
+        [
+          "limbana",
+          3
+        ],
+        [
+          "yo",
+          3
+        ],
+        [
+          "khala",
+          3
+        ],
+        [
+          "wo",
+          3
+        ],
+        [
+          "po",
+          3
+        ],
+        [
+          "m’",
+          3
+        ],
+        [
+          "la",
+          3
+        ],
+        [
+          "nenedwa",
+          2
+        ]
+      ]
+    },
+    "one_character_segments": {
+      "n_occurrences": 46,
+      "n_items_with_any": 45,
+      "char_counts": {
+        "i": 8,
+        "U": 1,
+        "a": 27,
+        "n": 2,
+        "u": 5,
+        "A": 3
+      },
+      "allowlist": [
+        "A",
+        "E",
+        "I",
+        "N",
+        "O",
+        "U",
+        "a",
+        "e",
+        "i",
+        "n",
+        "o",
+        "u"
+      ],
+      "suspicious": [],
+      "note": "Most 1-char segments are common SC markers (a/i/u/n). Only non-allowlist 1-char segments are flagged suspicious."
+    },
+    "high_segment_counts": {
+      "threshold": 5,
+      "max_observed": 5,
+      "flags": [
+        {
+          "item_id": "morph_dev_0012",
+          "surface_form": "mudzandipezadi",
+          "current_segmentation": "mu+dza+ndi+peza+di",
+          "reason": "unusually high segment count n=5 (threshold>=5)",
+          "category": "high_segment_count",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0024",
+          "surface_form": "anakazichotsa",
+          "current_segmentation": "a+na+ka+zi+chotsa",
+          "reason": "unusually high segment count n=5 (threshold>=5)",
+          "category": "high_segment_count",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0030",
+          "surface_form": "sadzawathandizanso",
+          "current_segmentation": "sa+dza+wa+thandiza+nso",
+          "reason": "unusually high segment count n=5 (threshold>=5)",
+          "category": "high_segment_count",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0038",
+          "surface_form": "sikukupezekanso",
+          "current_segmentation": "si+ku+ku+pezeka+nso",
+          "reason": "unusually high segment count n=5 (threshold>=5)",
+          "category": "high_segment_count",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0065",
+          "surface_form": "unalikuŵalira",
+          "current_segmentation": "u+na+li+ku+ŵalira",
+          "reason": "unusually high segment count n=5 (threshold>=5)",
+          "category": "high_segment_count",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0125",
+          "surface_form": "sizinachitikepo",
+          "current_segmentation": "si+zi+na+chitike+po",
+          "reason": "unusually high segment count n=5 (threshold>=5)",
+          "category": "high_segment_count",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0140",
+          "surface_form": "zidzakusokonezani",
+          "current_segmentation": "zi+dza+ku+sokoneza+ni",
+          "reason": "unusually high segment count n=5 (threshold>=5)",
+          "category": "high_segment_count",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0171",
+          "surface_form": "ndikanakupatsa",
+          "current_segmentation": "ndi+ka+na+ku+patsa",
+          "reason": "unusually high segment count n=5 (threshold>=5)",
+          "category": "high_segment_count",
+          "benchmark_partition": "remaining_160"
+        },
+        {
+          "item_id": "morph_dev_0197",
+          "surface_form": "Anawapitikitsabe",
+          "current_segmentation": "A+na+wa+pitikitsa+be",
+          "reason": "unusually high segment count n=5 (threshold>=5)",
+          "category": "high_segment_count",
+          "benchmark_partition": "pilot_40"
+        }
+      ]
+    },
+    "pilot_vs_remaining": {
+      "note": "Descriptive only. Tokenizer fields may appear on pilot-merge rows for provenance; they were NOT used to judge annotation correctness.",
+      "pilot_40": {
+        "n": 40,
+        "n_whole": 5,
+        "n_uncertain": 0,
+        "n_mixed_language": 5,
+        "n_alternative_segmentation": 20,
+        "n_ocr_spelling": 1,
+        "n_insufficient_context": 1,
+        "segment_count_mean": 2.625,
+        "segment_count_median": 3.0,
+        "segment_count_distribution": {
+          "1": 5,
+          "2": 11,
+          "3": 19,
+          "4": 4,
+          "5": 1
+        },
+        "confidence_value_counts": {
+          "4": 28,
+          "5": 10,
+          "3": 2
+        },
+        "confidence_python_type_counts": {
+          "int": 40
+        },
+        "top_phenomenon_tags": {
+          "apparent_stem_or_root": 35,
+          "apparent_prefix": 34,
+          "apparent_inflectional_boundary": 29,
+          "apparent_suffix": 6,
+          "non_chichewa_or_mixed": 5,
+          "no_meaningful_segmentation": 5,
+          "locative_like": 4,
+          "noun_class_like": 4,
+          "negation_like": 3,
+          "multiple_plausible_analyses": 2,
+          "apparent_derivational_boundary": 1,
+          "spelling_or_ocr_issue": 1
+        },
+        "n_with_notes": 40,
+        "n_source_bible": 28,
+        "n_source_wikipedia": 12,
+        "n_tokenizer_fields_present": 40
+      },
+      "remaining_160": {
+        "n": 160,
+        "n_whole": 35,
+        "n_uncertain": 3,
+        "n_mixed_language": 30,
+        "n_alternative_segmentation": 13,
+        "n_ocr_spelling": 0,
+        "n_insufficient_context": 0,
+        "segment_count_mean": 2.625,
+        "segment_count_median": 3.0,
+        "segment_count_distribution": {
+          "1": 35,
+          "2": 39,
+          "3": 45,
+          "4": 33,
+          "5": 8
+        },
+        "confidence_value_counts": {
+          "4": 79,
+          "5": 15,
+          "3": 4,
+          "2": 2,
+          "high": 59,
+          "low": 1
+        },
+        "confidence_python_type_counts": {
+          "int": 100,
+          "str": 60
+        },
+        "top_phenomenon_tags": {
+          "apparent_stem_or_root": 127,
+          "apparent_prefix": 123,
+          "apparent_inflectional_boundary": 121,
+          "no_meaningful_segmentation": 35,
+          "non_chichewa_or_mixed": 30,
+          "apparent_suffix": 3,
+          "noun_class_like": 3,
+          "unresolved_analysis": 3,
+          "multiple_plausible_analyses": 2,
+          "negation_like": 1,
+          "apparent_derivational_boundary": 1,
+          "numeral_or_code": 1
+        },
+        "n_with_notes": 160,
+        "n_source_bible": 97,
+        "n_source_wikipedia": 63,
+        "n_tokenizer_fields_present": 0
+      },
+      "notable_differences": [
+        "alternative_segmentation rate pilot=50.00% vs remaining=8.12%",
+        "confidence value types differ: pilot={'int': 40} remaining={'int': 100, 'str': 60} (schema storage inconsistency, not a linguistic judgment)",
+        "tokenizer provenance fields present on 40/pilot vs 0/remaining (merge provenance only)"
+      ]
+    },
+    "confidence_storage": {
+      "value_counts": {
+        "4": 107,
+        "5": 25,
+        "3": 6,
+        "2": 2,
+        "high": 59,
+        "low": 1
+      },
+      "python_type_counts": {
+        "int": 140,
+        "str": 60
+      },
+      "note": "Schema inconsistency (int Likert vs string high/low); not a linguistic error."
+    }
+  },
+  "recommended_human_review": [
+    {
+      "item_id": "morph_dev_0095",
+      "surface_form": "tursk",
+      "current_segmentation": "tursk",
+      "reasons": [
+        "annotator marked uncertain=true",
+        "phenomenon_tags includes unresolved_analysis"
+      ],
+      "categories": [
+        "uncertain",
+        "unresolved_analysis"
+      ],
+      "priority": 2
+    },
+    {
+      "item_id": "morph_dev_0097",
+      "surface_form": "Clairol",
+      "current_segmentation": "Clairol",
+      "reasons": [
+        "annotator marked uncertain=true",
+        "phenomenon_tags includes unresolved_analysis"
+      ],
+      "categories": [
+        "uncertain",
+        "unresolved_analysis"
+      ],
+      "priority": 2
+    },
+    {
+      "item_id": "morph_dev_0117",
+      "surface_form": "lmmaculate",
+      "current_segmentation": "lmmaculate",
+      "reasons": [
+        "spelling_or_ocr_issue=true"
+      ],
+      "categories": [
+        "ocr_spelling"
+      ],
+      "priority": 2
+    },
+    {
+      "item_id": "morph_dev_0133",
+      "surface_form": "trompe-l'œil",
+      "current_segmentation": "trompe-l'œil",
+      "reasons": [
+        "annotator marked uncertain=true",
+        "phenomenon_tags includes unresolved_analysis"
+      ],
+      "categories": [
+        "uncertain",
+        "unresolved_analysis"
+      ],
+      "priority": 2
+    },
+    {
+      "item_id": "morph_dev_0176",
+      "surface_form": "Achikaladi",
+      "current_segmentation": "A+chikaladi",
+      "reasons": [
+        "insufficient_context=true"
+      ],
+      "categories": [
+        "insufficient_context"
+      ],
+      "priority": 2
+    },
+    {
+      "item_id": "morph_dev_0012",
+      "surface_form": "mudzandipezadi",
+      "current_segmentation": "mu+dza+ndi+peza+di",
+      "reasons": [
+        "unusually high segment count n=5 (threshold>=5)"
+      ],
+      "categories": [
+        "high_segment_count"
+      ],
+      "priority": 3
+    },
+    {
+      "item_id": "morph_dev_0018",
+      "surface_form": "matsiriziro",
+      "current_segmentation": "ma+tsirizi+ro",
+      "reasons": [
+        "phenomenon_tags includes multiple_plausible_analyses"
+      ],
+      "categories": [
+        "multiple_analyses"
+      ],
+      "priority": 3
+    },
+    {
+      "item_id": "morph_dev_0020",
+      "surface_form": "anakakamizika",
+      "current_segmentation": "a+na+ka+kamizika",
+      "reasons": [
+        "phenomenon_tags includes multiple_plausible_analyses"
+      ],
+      "categories": [
+        "multiple_analyses"
+      ],
+      "priority": 3
+    },
+    {
+      "item_id": "morph_dev_0024",
+      "surface_form": "anakazichotsa",
+      "current_segmentation": "a+na+ka+zi+chotsa",
+      "reasons": [
+        "unusually high segment count n=5 (threshold>=5)"
+      ],
+      "categories": [
+        "high_segment_count"
+      ],
+      "priority": 3
+    },
+    {
+      "item_id": "morph_dev_0030",
+      "surface_form": "sadzawathandizanso",
+      "current_segmentation": "sa+dza+wa+thandiza+nso",
+      "reasons": [
+        "unusually high segment count n=5 (threshold>=5)"
+      ],
+      "categories": [
+        "high_segment_count"
+      ],
+      "priority": 3
+    },
+    {
+      "item_id": "morph_dev_0033",
+      "surface_form": "sizidzamvekanso",
+      "current_segmentation": "sizidza+mveka+nso",
+      "reasons": [
+        "orthographic prefix 'si' (len=2, n=10) has majority first-boundary after 2 chars (9/10=90%); this item first segment 'sizidza' (len=7)"
+      ],
+      "categories": [
+        "boundary_pattern_inconsistency"
+      ],
+      "priority": 3
+    },
+    {
+      "item_id": "morph_dev_0038",
+      "surface_form": "sikukupezekanso",
+      "current_segmentation": "si+ku+ku+pezeka+nso",
+      "reasons": [
+        "unusually high segment count n=5 (threshold>=5)"
+      ],
+      "categories": [
+        "high_segment_count"
+      ],
+      "priority": 3
+    },
+    {
+      "item_id": "morph_dev_0054",
+      "surface_form": "adapita",
+      "current_segmentation": "ada+pita",
+      "reasons": [
+        "orthographic prefix 'ad' (len=2, n=5) has majority first-boundary after 1 chars (4/5=80%); this item first segment 'ada' (len=3)"
+      ],
+      "categories": [
+        "boundary_pattern_inconsistency"
+      ],
+      "priority": 3
+    },
+    {
+      "item_id": "morph_dev_0065",
+      "surface_form": "unalikuŵalira",
+      "current_segmentation": "u+na+li+ku+ŵalira",
+      "reasons": [
+        "unusually high segment count n=5 (threshold>=5)"
+      ],
+      "categories": [
+        "high_segment_count"
+      ],
+      "priority": 3
+    },
+    {
+      "item_id": "morph_dev_0088",
+      "surface_form": "ananeneza",
+      "current_segmentation": "a+na+neneza",
+      "reasons": [
+        "phenomenon_tags includes multiple_plausible_analyses"
+      ],
+      "categories": [
+        "multiple_analyses"
+      ],
+      "priority": 3
+    },
+    {
+      "item_id": "morph_dev_0108",
+      "surface_form": "amatsamwitsidwa",
+      "current_segmentation": "a+ma+tsamwitsidwa",
+      "reasons": [
+        "phenomenon_tags includes multiple_plausible_analyses"
+      ],
+      "categories": [
+        "multiple_analyses"
+      ],
+      "priority": 3
+    },
+    {
+      "item_id": "morph_dev_0125",
+      "surface_form": "sizinachitikepo",
+      "current_segmentation": "si+zi+na+chitike+po",
+      "reasons": [
+        "unusually high segment count n=5 (threshold>=5)"
+      ],
+      "categories": [
+        "high_segment_count"
+      ],
+      "priority": 3
+    },
+    {
+      "item_id": "morph_dev_0140",
+      "surface_form": "zidzakusokonezani",
+      "current_segmentation": "zi+dza+ku+sokoneza+ni",
+      "reasons": [
+        "unusually high segment count n=5 (threshold>=5)"
+      ],
+      "categories": [
+        "high_segment_count"
+      ],
+      "priority": 3
+    },
+    {
+      "item_id": "morph_dev_0171",
+      "surface_form": "ndikanakupatsa",
+      "current_segmentation": "ndi+ka+na+ku+patsa",
+      "reasons": [
+        "unusually high segment count n=5 (threshold>=5)"
+      ],
+      "categories": [
+        "high_segment_count"
+      ],
+      "priority": 3
+    },
+    {
+      "item_id": "morph_dev_0197",
+      "surface_form": "Anawapitikitsabe",
+      "current_segmentation": "A+na+wa+pitikitsa+be",
+      "reasons": [
+        "unusually high segment count n=5 (threshold>=5)"
+      ],
+      "categories": [
+        "high_segment_count"
+      ],
+      "priority": 3
+    }
+  ],
+  "constraints_respected": {
+    "annotations_modified": false,
+    "annotations_normalized": false,
+    "annotations_adjudicated": false,
+    "auto_corrected": false,
+    "morphology_holdout_released": false,
+    "lm_test_evaluations": 0,
+    "mthandizi_implemented": false,
+    "model_outputs_used_as_judge": false
+  }
+}

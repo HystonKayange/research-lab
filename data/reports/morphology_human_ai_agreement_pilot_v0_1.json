@@ -1,0 +1,595 @@
+{
+  "tool": {
+    "name": "measure_morphology_annotation_agreement",
+    "version": "0.1.0"
+  },
+  "generated_at": "2026-08-06T05:58:08.708910Z",
+  "annotator_a_path": "/home/cyai/projects/research/transformer-lab/data/research/morphology_benchmark_v0.1/development/annotations/annotator_a_annotations.jsonl",
+  "annotator_b_path": "/home/cyai/projects/research/transformer-lab/data/research/morphology_benchmark_v0.1/development/ai_annotator_b_bundle/outputs/claude_ai_b/claude_ai_b_annotations.jsonl",
+  "n_items_a": 40,
+  "n_items_b": 40,
+  "n_common": 40,
+  "only_in_a": [],
+  "only_in_b": [],
+  "exact_segmentation_agreement": {
+    "n_agree": 30,
+    "n_common": 40,
+    "rate": 0.75,
+    "note": "Includes pairs where both left segmentation empty. Pairs with only one side segmented count as disagreement."
+  },
+  "boundary_agreement_when_both_segmented": {
+    "n_pairs": 40,
+    "mean_precision": 0.8774509803921569,
+    "mean_recall": 0.9714285714285714,
+    "mean_f1": 0.9186274509803922,
+    "note": "Treating annotator A as reference, B as prediction (symmetric F1)."
+  },
+  "phenomenon_tag_agreement": {
+    "mean_jaccard": 0.7911309523809524,
+    "n": 40,
+    "note": "Multi-label Jaccard over phenomenon_tags sets."
+  },
+  "uncertainty_agreement": {
+    "n_agree": 24,
+    "n_compared": 40,
+    "rate": 0.6,
+    "note": "Only items where both provided true/false for uncertain."
+  },
+  "adjudication": {
+    "n_requiring_adjudication": 23,
+    "percentage": 57.5,
+    "item_ids": [
+      "morph_dev_0001",
+      "morph_dev_0009",
+      "morph_dev_0025",
+      "morph_dev_0033",
+      "morph_dev_0054",
+      "morph_dev_0071",
+      "morph_dev_0073",
+      "morph_dev_0078",
+      "morph_dev_0082",
+      "morph_dev_0088",
+      "morph_dev_0106",
+      "morph_dev_0108",
+      "morph_dev_0114",
+      "morph_dev_0117",
+      "morph_dev_0131",
+      "morph_dev_0135",
+      "morph_dev_0170",
+      "morph_dev_0172",
+      "morph_dev_0176",
+      "morph_dev_0185",
+      "morph_dev_0188",
+      "morph_dev_0192",
+      "morph_dev_0197"
+    ]
+  },
+  "cohens_kappa": {
+    "reported": false,
+    "reason": "Cohen's kappa is not reported by default for multi-label tags or structured segmentations with many rare categories and empty cells; assumptions of single categorical labels and adequate marginals often fail. Prefer exact match, boundary F1, and tag Jaccard. Kappa may be added later for a pre-registered binary field (e.g. uncertain) with adequate cell counts."
+  },
+  "per_item": [
+    {
+      "item_id": "morph_dev_0001",
+      "exact_segmentation_agreement": false,
+      "boundary": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5
+      },
+      "boundary_set_jaccard": 0.3333333333333333,
+      "phenomenon_tag_jaccard": 0.75,
+      "uncertainty_agreement": false,
+      "needs_adjudication": true
+    },
+    {
+      "item_id": "morph_dev_0009",
+      "exact_segmentation_agreement": false,
+      "boundary": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8
+      },
+      "boundary_set_jaccard": 0.6666666666666666,
+      "phenomenon_tag_jaccard": 0.6,
+      "uncertainty_agreement": false,
+      "needs_adjudication": true
+    },
+    {
+      "item_id": "morph_dev_0025",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 0.5,
+      "uncertainty_agreement": true,
+      "needs_adjudication": true
+    },
+    {
+      "item_id": "morph_dev_0033",
+      "exact_segmentation_agreement": false,
+      "boundary": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666
+      },
+      "boundary_set_jaccard": 0.5,
+      "phenomenon_tag_jaccard": 0.8333333333333334,
+      "uncertainty_agreement": false,
+      "needs_adjudication": true
+    },
+    {
+      "item_id": "morph_dev_0034",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 1.0,
+      "uncertainty_agreement": true,
+      "needs_adjudication": false
+    },
+    {
+      "item_id": "morph_dev_0039",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 1.0,
+      "uncertainty_agreement": true,
+      "needs_adjudication": false
+    },
+    {
+      "item_id": "morph_dev_0040",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 1.0,
+      "uncertainty_agreement": true,
+      "needs_adjudication": false
+    },
+    {
+      "item_id": "morph_dev_0041",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 1.0,
+      "uncertainty_agreement": true,
+      "needs_adjudication": false
+    },
+    {
+      "item_id": "morph_dev_0050",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 1.0,
+      "uncertainty_agreement": true,
+      "needs_adjudication": false
+    },
+    {
+      "item_id": "morph_dev_0054",
+      "exact_segmentation_agreement": false,
+      "boundary": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666
+      },
+      "boundary_set_jaccard": 0.5,
+      "phenomenon_tag_jaccard": 1.0,
+      "uncertainty_agreement": true,
+      "needs_adjudication": true
+    },
+    {
+      "item_id": "morph_dev_0061",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 1.0,
+      "uncertainty_agreement": true,
+      "needs_adjudication": false
+    },
+    {
+      "item_id": "morph_dev_0063",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 1.0,
+      "uncertainty_agreement": true,
+      "needs_adjudication": false
+    },
+    {
+      "item_id": "morph_dev_0069",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 1.0,
+      "uncertainty_agreement": true,
+      "needs_adjudication": false
+    },
+    {
+      "item_id": "morph_dev_0071",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 0.5,
+      "uncertainty_agreement": false,
+      "needs_adjudication": true
+    },
+    {
+      "item_id": "morph_dev_0073",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 0.42857142857142855,
+      "uncertainty_agreement": false,
+      "needs_adjudication": true
+    },
+    {
+      "item_id": "morph_dev_0078",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 0.5,
+      "uncertainty_agreement": false,
+      "needs_adjudication": true
+    },
+    {
+      "item_id": "morph_dev_0080",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 1.0,
+      "uncertainty_agreement": true,
+      "needs_adjudication": false
+    },
+    {
+      "item_id": "morph_dev_0082",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 0.75,
+      "uncertainty_agreement": true,
+      "needs_adjudication": true
+    },
+    {
+      "item_id": "morph_dev_0087",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 1.0,
+      "uncertainty_agreement": true,
+      "needs_adjudication": false
+    },
+    {
+      "item_id": "morph_dev_0088",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 0.75,
+      "uncertainty_agreement": true,
+      "needs_adjudication": true
+    },
+    {
+      "item_id": "morph_dev_0106",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 0.6,
+      "uncertainty_agreement": false,
+      "needs_adjudication": true
+    },
+    {
+      "item_id": "morph_dev_0108",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 0.6666666666666666,
+      "uncertainty_agreement": false,
+      "needs_adjudication": true
+    },
+    {
+      "item_id": "morph_dev_0114",
+      "exact_segmentation_agreement": false,
+      "boundary": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666
+      },
+      "boundary_set_jaccard": 0.5,
+      "phenomenon_tag_jaccard": 0.6,
+      "uncertainty_agreement": false,
+      "needs_adjudication": true
+    },
+    {
+      "item_id": "morph_dev_0117",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 1.0,
+      "uncertainty_agreement": false,
+      "needs_adjudication": true
+    },
+    {
+      "item_id": "morph_dev_0131",
+      "exact_segmentation_agreement": false,
+      "boundary": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8
+      },
+      "boundary_set_jaccard": 0.6666666666666666,
+      "phenomenon_tag_jaccard": 1.0,
+      "uncertainty_agreement": true,
+      "needs_adjudication": true
+    },
+    {
+      "item_id": "morph_dev_0132",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 1.0,
+      "uncertainty_agreement": true,
+      "needs_adjudication": false
+    },
+    {
+      "item_id": "morph_dev_0135",
+      "exact_segmentation_agreement": false,
+      "boundary": {
+        "precision": null,
+        "recall": 0.0,
+        "f1": null
+      },
+      "boundary_set_jaccard": 0.0,
+      "phenomenon_tag_jaccard": 0.0,
+      "uncertainty_agreement": true,
+      "needs_adjudication": true
+    },
+    {
+      "item_id": "morph_dev_0138",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 1.0,
+      "uncertainty_agreement": true,
+      "needs_adjudication": false
+    },
+    {
+      "item_id": "morph_dev_0148",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 1.0,
+      "uncertainty_agreement": true,
+      "needs_adjudication": false
+    },
+    {
+      "item_id": "morph_dev_0150",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 1.0,
+      "uncertainty_agreement": true,
+      "needs_adjudication": false
+    },
+    {
+      "item_id": "morph_dev_0157",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 1.0,
+      "uncertainty_agreement": true,
+      "needs_adjudication": false
+    },
+    {
+      "item_id": "morph_dev_0164",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 1.0,
+      "uncertainty_agreement": true,
+      "needs_adjudication": false
+    },
+    {
+      "item_id": "morph_dev_0170",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 0.5,
+      "uncertainty_agreement": true,
+      "needs_adjudication": true
+    },
+    {
+      "item_id": "morph_dev_0172",
+      "exact_segmentation_agreement": false,
+      "boundary": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666
+      },
+      "boundary_set_jaccard": 0.5,
+      "phenomenon_tag_jaccard": 0.6,
+      "uncertainty_agreement": false,
+      "needs_adjudication": true
+    },
+    {
+      "item_id": "morph_dev_0175",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 1.0,
+      "uncertainty_agreement": true,
+      "needs_adjudication": false
+    },
+    {
+      "item_id": "morph_dev_0176",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 0.6666666666666666,
+      "uncertainty_agreement": false,
+      "needs_adjudication": true
+    },
+    {
+      "item_id": "morph_dev_0185",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 0.5,
+      "uncertainty_agreement": false,
+      "needs_adjudication": true
+    },
+    {
+      "item_id": "morph_dev_0188",
+      "exact_segmentation_agreement": false,
+      "boundary": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8
+      },
+      "boundary_set_jaccard": 0.6666666666666666,
+      "phenomenon_tag_jaccard": 0.5,
+      "uncertainty_agreement": false,
+      "needs_adjudication": true
+    },
+    {
+      "item_id": "morph_dev_0192",
+      "exact_segmentation_agreement": false,
+      "boundary": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666
+      },
+      "boundary_set_jaccard": 0.5,
+      "phenomenon_tag_jaccard": 0.6,
+      "uncertainty_agreement": false,
+      "needs_adjudication": true
+    },
+    {
+      "item_id": "morph_dev_0197",
+      "exact_segmentation_agreement": true,
+      "boundary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "boundary_set_jaccard": 1.0,
+      "phenomenon_tag_jaccard": 0.8,
+      "uncertainty_agreement": false,
+      "needs_adjudication": true
+    }
+  ],
+  "locked_holdout_used": false,
+  "test_split_used": false
+}
