@@ -1,0 +1,2082 @@
+{
+  "schema_version": "phase_f_lm_results_v0_1",
+  "phase": "F",
+  "generated_at": "2026-08-14T09:10:29.887016Z",
+  "lambda_star": 0.25,
+  "tokenizer_id": "statbound_lambda_0_25",
+  "matrix_id": "lm_baselines_v0_1_final_matrix_r2",
+  "conditions": {
+    "parameter_matched_x_fixed_characters": {
+      "track": "parameter_matched",
+      "budget_policy": "fixed_characters",
+      "role": "primary_SC1",
+      "statbound": {
+        "validation_bpc": {
+          "n": 3,
+          "mean": 1.4374023266934866,
+          "std": 0.001559459226725099,
+          "values": [
+            1.437744448517068,
+            1.4387623201808566,
+            1.4357002113825348
+          ],
+          "min": 1.4357002113825348,
+          "max": 1.4387623201808566
+        },
+        "validation_bpb": {
+          "n": 3,
+          "mean": 1.423480512088888,
+          "std": 0.001544355242381471,
+          "values": [
+            1.4238193203262095,
+            1.424827333497124,
+            1.4217948824433304
+          ],
+          "min": 1.4217948824433304,
+          "max": 1.424827333497124
+        },
+        "per_seed": [
+          {
+            "seed": 42,
+            "statbound_validation_bpc": 1.437744448517068,
+            "unigram_validation_bpc": 1.4377220985956776,
+            "delta_bpc_statbound_minus_unigram": 2.234992139049652e-05,
+            "statbound_validation_bpb": 1.4238193203262095,
+            "unigram_validation_bpb": 1.4237971868727182,
+            "statbound_updates": 3932,
+            "statbound_characters_processed": 138743958.41398185,
+            "statbound_tokens_processed": 32085120,
+            "statbound_runtime_s": 107.41353174801043,
+            "statbound_parameter_count": 3364992,
+            "statbound_selected_checkpoint": "best.pt",
+            "statbound_run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_42/final/fixed_characters_e30",
+            "seed_beats_unigram": false
+          },
+          {
+            "seed": 1337,
+            "statbound_validation_bpc": 1.4387623201808566,
+            "unigram_validation_bpc": 1.436836690240743,
+            "delta_bpc_statbound_minus_unigram": 0.0019256299401135824,
+            "statbound_validation_bpb": 1.424827333497124,
+            "unigram_validation_bpb": 1.4229203540507,
+            "statbound_updates": 3932,
+            "statbound_characters_processed": 138746935.49500448,
+            "statbound_tokens_processed": 32085120,
+            "statbound_runtime_s": 109.88498749998689,
+            "statbound_parameter_count": 3364992,
+            "statbound_selected_checkpoint": "best.pt",
+            "statbound_run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_1337/final/fixed_characters_e30",
+            "seed_beats_unigram": false
+          },
+          {
+            "seed": 2026,
+            "statbound_validation_bpc": 1.4357002113825348,
+            "unigram_validation_bpc": 1.436624633552363,
+            "delta_bpc_statbound_minus_unigram": -0.0009244221698281319,
+            "statbound_validation_bpb": 1.4217948824433304,
+            "unigram_validation_bpb": 1.4227103512158907,
+            "statbound_updates": 3932,
+            "statbound_characters_processed": 138743452.61583975,
+            "statbound_tokens_processed": 32085120,
+            "statbound_runtime_s": 107.24934860599751,
+            "statbound_parameter_count": 3364992,
+            "statbound_selected_checkpoint": "best.pt",
+            "statbound_run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_2026/final/fixed_characters_e30",
+            "seed_beats_unigram": true
+          }
+        ],
+        "mean_updates": 3932,
+        "mean_characters_processed": 138744782.17494202,
+        "mean_tokens_processed": 32085120,
+        "mean_runtime_s": 108.18262261799828,
+        "parameter_counts": [
+          3364992
+        ]
+      },
+      "unigram_8000": {
+        "validation_bpc": {
+          "n": 3,
+          "mean": 1.4370611407962612,
+          "stdev": 0.000582143383736956,
+          "median": 1.436836690240743,
+          "min": 1.436624633552363,
+          "max": 1.4377220985956776,
+          "values": [
+            1.4377220985956776,
+            1.436836690240743,
+            1.436624633552363
+          ]
+        },
+        "validation_bpb": {
+          "n": 3,
+          "mean": 1.423142630713103,
+          "stdev": 0.0005765050929737048,
+          "median": 1.4229203540507,
+          "min": 1.4227103512158907,
+          "max": 1.4237971868727182,
+          "values": [
+            1.4237971868727182,
+            1.4229203540507,
+            1.4227103512158907
+          ]
+        },
+        "per_seed": {
+          "42": {
+            "validation_bpc": 1.4377220985956776,
+            "validation_bpb": 1.4237971868727182,
+            "best_step": 3933,
+            "best_effective_epochs": 30.005486339109556,
+            "final_budget_bpc": 1.4377220985956776,
+            "best_vs_final_bpc_gap": 0.0,
+            "characters_processed": 138739337.72928843,
+            "optimizer_steps": 3933,
+            "effective_epochs": 30.005486339109556,
+            "runtime_s": 102.09860359699815,
+            "peak_vram_gb": 0.6693544387817383,
+            "total_parameters": 3364992,
+            "embedding_parameters": 1585152,
+            "non_embedding_parameters": 1779840,
+            "source_validation": {
+              "combined_validation_bpc": 1.4377003454649757,
+              "combined_validation_bpb": 1.4237756444297598,
+              "bible_validation_bpc": 1.2463249938292171,
+              "bible_validation_bpb": 1.2329400251305904,
+              "wikipedia_validation_bpc": 1.927220187307196,
+              "wikipedia_validation_bpb": 1.9137994636777294
+            }
+          },
+          "1337": {
+            "validation_bpc": 1.436836690240743,
+            "validation_bpb": 1.4229203540507,
+            "best_step": 3933,
+            "best_effective_epochs": 30.00662624333696,
+            "final_budget_bpc": 1.436836690240743,
+            "best_vs_final_bpc_gap": 0.0,
+            "characters_processed": 138744608.41731519,
+            "optimizer_steps": 3933,
+            "effective_epochs": 30.00662624333696,
+            "runtime_s": 104.40601917399908,
+            "peak_vram_gb": 0.6693544387817383,
+            "total_parameters": 3364992,
+            "embedding_parameters": 1585152,
+            "non_embedding_parameters": 1779840,
+            "source_validation": {
+              "combined_validation_bpc": 1.4368012021154886,
+              "combined_validation_bpb": 1.4228852096420872,
+              "bible_validation_bpc": 1.2441668762782983,
+              "bible_validation_bpb": 1.2308050847894763,
+              "wikipedia_validation_bpc": 1.9298418292363824,
+              "wikipedia_validation_bpb": 1.916402849088009
+            }
+          },
+          "2026": {
+            "validation_bpc": 1.436624633552363,
+            "validation_bpb": 1.4227103512158907,
+            "best_step": 3933,
+            "best_effective_epochs": 30.0054026478203,
+            "final_budget_bpc": 1.436624633552363,
+            "best_vs_final_bpc_gap": 0.0,
+            "characters_processed": 138738950.75758886,
+            "optimizer_steps": 3933,
+            "effective_epochs": 30.0054026478203,
+            "runtime_s": 104.58706976499525,
+            "peak_vram_gb": 0.6693544387817383,
+            "total_parameters": 3364992,
+            "embedding_parameters": 1585152,
+            "non_embedding_parameters": 1779840,
+            "source_validation": {
+              "combined_validation_bpc": 1.4366147765961956,
+              "combined_validation_bpb": 1.4227005897282736,
+              "bible_validation_bpc": 1.246030464571455,
+              "bible_validation_bpb": 1.2326486589843084,
+              "wikipedia_validation_bpc": 1.9258258490338775,
+              "wikipedia_validation_bpb": 1.912414835259432
+            }
+          }
+        }
+      },
+      "delta": {
+        "mean_bpc_statbound_minus_unigram": 0.00034118589722531567,
+        "mean_bpb_statbound_minus_unigram": 0.00033788137578505406,
+        "seeds_beating_unigram": 1,
+        "n_seeds": 3
+      }
+    },
+    "architecture_matched_x_fixed_characters": {
+      "track": "architecture_matched",
+      "budget_policy": "fixed_characters",
+      "role": "secondary_SC2",
+      "statbound": {
+        "validation_bpc": {
+          "n": 3,
+          "mean": 1.4307764437611032,
+          "std": 0.001353791907350777,
+          "values": [
+            1.429219606242459,
+            1.4316771132210961,
+            1.4314326118197547
+          ],
+          "min": 1.429219606242459,
+          "max": 1.4316771132210961
+        },
+        "validation_bpb": {
+          "n": 3,
+          "mean": 1.4169188034743443,
+          "std": 0.0013406798929916739,
+          "values": [
+            1.4153770445477556,
+            1.4178107495915337,
+            1.4175686162837433
+          ],
+          "min": 1.4153770445477556,
+          "max": 1.4178107495915337
+        },
+        "per_seed": [
+          {
+            "seed": 42,
+            "statbound_validation_bpc": 1.429219606242459,
+            "unigram_validation_bpc": 1.4309637303326443,
+            "delta_bpc_statbound_minus_unigram": -0.0017441240901854282,
+            "statbound_validation_bpb": 1.4153770445477556,
+            "unigram_validation_bpb": 1.4171042761007715,
+            "statbound_updates": 3932,
+            "statbound_characters_processed": 138743958.41398185,
+            "statbound_tokens_processed": 32085120,
+            "statbound_runtime_s": 115.7179876369919,
+            "statbound_parameter_count": 5273088,
+            "statbound_selected_checkpoint": "best.pt",
+            "statbound_run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_42/final/fixed_characters_e30",
+            "seed_beats_unigram": true
+          },
+          {
+            "seed": 1337,
+            "statbound_validation_bpc": 1.4316771132210961,
+            "unigram_validation_bpc": 1.432025169918867,
+            "delta_bpc_statbound_minus_unigram": -0.0003480566977709376,
+            "statbound_validation_bpb": 1.4178107495915337,
+            "unigram_validation_bpb": 1.418155435221422,
+            "statbound_updates": 3932,
+            "statbound_characters_processed": 138746935.49500448,
+            "statbound_tokens_processed": 32085120,
+            "statbound_runtime_s": 115.64593293100188,
+            "statbound_parameter_count": 5273088,
+            "statbound_selected_checkpoint": "best.pt",
+            "statbound_run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_1337/final/fixed_characters_e30",
+            "seed_beats_unigram": true
+          },
+          {
+            "seed": 2026,
+            "statbound_validation_bpc": 1.4314326118197547,
+            "unigram_validation_bpc": 1.4309492399904677,
+            "delta_bpc_statbound_minus_unigram": 0.0004833718292869271,
+            "statbound_validation_bpb": 1.4175686162837433,
+            "unigram_validation_bpb": 1.417089926103336,
+            "statbound_updates": 3932,
+            "statbound_characters_processed": 138743452.61583975,
+            "statbound_tokens_processed": 32085120,
+            "statbound_runtime_s": 118.10042519400304,
+            "statbound_parameter_count": 5273088,
+            "statbound_selected_checkpoint": "best.pt",
+            "statbound_run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_2026/final/fixed_characters_e30",
+            "seed_beats_unigram": false
+          }
+        ],
+        "mean_updates": 3932,
+        "mean_characters_processed": 138744782.17494202,
+        "mean_tokens_processed": 32085120,
+        "mean_runtime_s": 116.48811525399894,
+        "parameter_counts": [
+          5273088
+        ]
+      },
+      "unigram_8000": {
+        "validation_bpc": {
+          "n": 3,
+          "mean": 1.4313127134139931,
+          "stdev": 0.000617047968967632,
+          "median": 1.4309637303326443,
+          "min": 1.4309492399904677,
+          "max": 1.432025169918867,
+          "values": [
+            1.4309637303326443,
+            1.432025169918867,
+            1.4309492399904677
+          ]
+        },
+        "validation_bpb": {
+          "n": 3,
+          "mean": 1.4174498791418433,
+          "stdev": 0.0006110716133806374,
+          "median": 1.4171042761007715,
+          "min": 1.417089926103336,
+          "max": 1.418155435221422,
+          "values": [
+            1.4171042761007715,
+            1.418155435221422,
+            1.417089926103336
+          ]
+        },
+        "per_seed": {
+          "42": {
+            "validation_bpc": 1.4309637303326443,
+            "validation_bpb": 1.4171042761007715,
+            "best_step": 3146,
+            "best_effective_epochs": 24.002401075285686,
+            "final_budget_bpc": 1.4337089829146474,
+            "best_vs_final_bpc_gap": 0.002745252582003088,
+            "characters_processed": 138739337.72928843,
+            "optimizer_steps": 3933,
+            "effective_epochs": 30.005486339109556,
+            "runtime_s": 111.7792781600001,
+            "peak_vram_gb": 0.7370014190673828,
+            "total_parameters": 5273088,
+            "embedding_parameters": 2113536,
+            "non_embedding_parameters": 3159552,
+            "source_validation": {
+              "combined_validation_bpc": 1.43093593221877,
+              "combined_validation_bpb": 1.4170767472227128,
+              "bible_validation_bpc": 1.2388910431890237,
+              "bible_validation_bpb": 1.2255859117696932,
+              "wikipedia_validation_bpc": 1.9223021060123708,
+              "wikipedia_validation_bpb": 1.9089156307839328
+            }
+          },
+          "1337": {
+            "validation_bpc": 1.432025169918867,
+            "validation_bpb": 1.418155435221422,
+            "best_step": 3408,
+            "best_effective_epochs": 26.002059722825503,
+            "final_budget_bpc": 1.4359300991196389,
+            "best_vs_final_bpc_gap": 0.0039049292007717895,
+            "characters_processed": 138744608.41731519,
+            "optimizer_steps": 3933,
+            "effective_epochs": 30.00662624333696,
+            "runtime_s": 112.41534798200883,
+            "peak_vram_gb": 0.7370014190673828,
+            "total_parameters": 5273088,
+            "embedding_parameters": 2113536,
+            "non_embedding_parameters": 3159552,
+            "source_validation": {
+              "combined_validation_bpc": 1.432012027310644,
+              "combined_validation_bpb": 1.418142419904599,
+              "bible_validation_bpc": 1.2379232028353886,
+              "bible_validation_bpb": 1.2246284655852377,
+              "wikipedia_validation_bpc": 1.9273337077405508,
+              "wikipedia_validation_bpb": 1.9139121935805719
+            }
+          },
+          "2026": {
+            "validation_bpc": 1.4309492399904677,
+            "validation_bpb": 1.417089926103336,
+            "best_step": 3671,
+            "best_effective_epochs": 28.007156357593697,
+            "final_budget_bpc": 1.4368191124426801,
+            "best_vs_final_bpc_gap": 0.005869872452212377,
+            "characters_processed": 138738950.75758886,
+            "optimizer_steps": 3933,
+            "effective_epochs": 30.0054026478203,
+            "runtime_s": 107.9119371889974,
+            "peak_vram_gb": 0.7370014190673828,
+            "total_parameters": 5273088,
+            "embedding_parameters": 2113536,
+            "non_embedding_parameters": 3159552,
+            "source_validation": {
+              "combined_validation_bpc": 1.4309133863033896,
+              "combined_validation_bpb": 1.4170544196735115,
+              "bible_validation_bpc": 1.2356266624666021,
+              "bible_validation_bpb": 1.2223565890249308,
+              "wikipedia_validation_bpc": 1.93116765495893,
+              "wikipedia_validation_bpb": 1.9177194420613775
+            }
+          }
+        }
+      },
+      "delta": {
+        "mean_bpc_statbound_minus_unigram": -0.0005362696528898869,
+        "mean_bpb_statbound_minus_unigram": -0.0005310756674989925,
+        "seeds_beating_unigram": 2,
+        "n_seeds": 3
+      }
+    },
+    "parameter_matched_x_fixed_updates": {
+      "track": "parameter_matched",
+      "budget_policy": "fixed_updates",
+      "role": "diagnostic_SC3",
+      "statbound": {
+        "validation_bpc": {
+          "n": 3,
+          "mean": 1.4799036799313057,
+          "std": 0.002453894743613414,
+          "values": [
+            1.4795644348884225,
+            1.4825095462856575,
+            1.477637058619837
+          ],
+          "min": 1.477637058619837,
+          "max": 1.4825095462856575
+        },
+        "validation_bpb": {
+          "n": 3,
+          "mean": 1.465570222775952,
+          "std": 0.002430127794690787,
+          "values": [
+            1.465234263456561,
+            1.4681508502757423,
+            1.4633255545955526
+          ],
+          "min": 1.4633255545955526,
+          "max": 1.4681508502757423
+        },
+        "per_seed": [
+          {
+            "seed": 42,
+            "statbound_validation_bpc": 1.4795644348884225,
+            "unigram_validation_bpc": 1.4800099138122642,
+            "delta_bpc_statbound_minus_unigram": -0.0004454789238417245,
+            "statbound_validation_bpb": 1.465234263456561,
+            "unigram_validation_bpb": 1.4656754277394195,
+            "statbound_updates": 4000,
+            "statbound_characters_processed": 141144801.849276,
+            "statbound_tokens_processed": 32640000,
+            "statbound_runtime_s": 112.34414559800643,
+            "statbound_parameter_count": 3364992,
+            "statbound_selected_checkpoint": "best.pt",
+            "statbound_run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_42/final/fixed_updates_u4000",
+            "seed_beats_unigram": true
+          },
+          {
+            "seed": 1337,
+            "statbound_validation_bpc": 1.4825095462856575,
+            "unigram_validation_bpc": 1.4808837805435897,
+            "delta_bpc_statbound_minus_unigram": 0.0016257657420677418,
+            "statbound_validation_bpb": 1.4681508502757423,
+            "unigram_validation_bpb": 1.466540830723055,
+            "statbound_updates": 4000,
+            "statbound_characters_processed": 141144742.54916406,
+            "statbound_tokens_processed": 32640000,
+            "statbound_runtime_s": 112.90271339700848,
+            "statbound_parameter_count": 3364992,
+            "statbound_selected_checkpoint": "best.pt",
+            "statbound_run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_1337/final/fixed_updates_u4000",
+            "seed_beats_unigram": false
+          },
+          {
+            "seed": 2026,
+            "statbound_validation_bpc": 1.477637058619837,
+            "unigram_validation_bpc": 1.4770234366722568,
+            "delta_bpc_statbound_minus_unigram": 0.0006136219475803006,
+            "statbound_validation_bpb": 1.4633255545955526,
+            "unigram_validation_bpb": 1.4627178758211765,
+            "statbound_updates": 4000,
+            "statbound_characters_processed": 141145421.28168088,
+            "statbound_tokens_processed": 32640000,
+            "statbound_runtime_s": 114.84914367100282,
+            "statbound_parameter_count": 3364992,
+            "statbound_selected_checkpoint": "best.pt",
+            "statbound_run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_2026/final/fixed_updates_u4000",
+            "seed_beats_unigram": false
+          }
+        ],
+        "mean_updates": 4000,
+        "mean_characters_processed": 141144988.56004032,
+        "mean_tokens_processed": 32640000,
+        "mean_runtime_s": 113.36533422200591,
+        "parameter_counts": [
+          3364992
+        ]
+      },
+      "unigram_8000": {
+        "validation_bpc": {
+          "n": 3,
+          "mean": 1.4793057103427036,
+          "stdev": 0.00202422592517248,
+          "median": 1.4800099138122642,
+          "min": 1.4770234366722568,
+          "max": 1.4808837805435897,
+          "values": [
+            1.4800099138122642,
+            1.4808837805435897,
+            1.4770234366722568
+          ]
+        },
+        "validation_bpb": {
+          "n": 3,
+          "mean": 1.464978044761217,
+          "stdev": 0.0020046204900589205,
+          "median": 1.4656754277394195,
+          "min": 1.4627178758211765,
+          "max": 1.466540830723055,
+          "values": [
+            1.4656754277394195,
+            1.466540830723055,
+            1.4627178758211765
+          ]
+        },
+        "per_seed": {
+          "42": {
+            "validation_bpc": 1.4800099138122642,
+            "validation_bpb": 1.4656754277394195,
+            "best_step": 4000,
+            "best_effective_epochs": 30.51596971801875,
+            "final_budget_bpc": 1.4800099138122642,
+            "best_vs_final_bpc_gap": 0.0,
+            "characters_processed": 141099710.26620537,
+            "optimizer_steps": 4000,
+            "effective_epochs": 30.51596971801875,
+            "runtime_s": 105.73153642599937,
+            "peak_vram_gb": 0.6693544387817383,
+            "total_parameters": 3364992,
+            "embedding_parameters": 1585152,
+            "non_embedding_parameters": 1779840,
+            "source_validation": {
+              "combined_validation_bpc": 1.4799737496178536,
+              "combined_validation_bpb": 1.46563961380965,
+              "bible_validation_bpc": 1.2933190022183536,
+              "bible_validation_bpb": 1.2794293390504465,
+              "wikipedia_validation_bpc": 1.9574333205350274,
+              "wikipedia_validation_bpb": 1.9438021995084698
+            }
+          },
+          "1337": {
+            "validation_bpc": 1.4808837805435897,
+            "validation_bpb": 1.466540830723055,
+            "best_step": 4000,
+            "best_effective_epochs": 30.517614632016798,
+            "final_budget_bpc": 1.4808837805435897,
+            "best_vs_final_bpc_gap": 0.0,
+            "characters_processed": 141107316.01790464,
+            "optimizer_steps": 4000,
+            "effective_epochs": 30.517614632016798,
+            "runtime_s": 103.92724207800347,
+            "peak_vram_gb": 0.6693544387817383,
+            "total_parameters": 3364992,
+            "embedding_parameters": 1585152,
+            "non_embedding_parameters": 1779840,
+            "source_validation": {
+              "combined_validation_bpc": 1.480854381445101,
+              "combined_validation_bpb": 1.466511716366556,
+              "bible_validation_bpc": 1.293839442652974,
+              "bible_validation_bpb": 1.2799441901893684,
+              "wikipedia_validation_bpc": 1.96057351057678,
+              "wikipedia_validation_bpb": 1.9469205219800445
+            }
+          },
+          "2026": {
+            "validation_bpc": 1.4770234366722568,
+            "validation_bpb": 1.4627178758211765,
+            "best_step": 4000,
+            "best_effective_epochs": 30.51726168894272,
+            "final_budget_bpc": 1.4770234366722568,
+            "best_vs_final_bpc_gap": 0.0,
+            "characters_processed": 141105684.08007166,
+            "optimizer_steps": 4000,
+            "effective_epochs": 30.51726168894272,
+            "runtime_s": 106.79564303100051,
+            "peak_vram_gb": 0.6693544387817383,
+            "total_parameters": 3364992,
+            "embedding_parameters": 1585152,
+            "non_embedding_parameters": 1779840,
+            "source_validation": {
+              "combined_validation_bpc": 1.4769945352663716,
+              "combined_validation_bpb": 1.4626892543369299,
+              "bible_validation_bpc": 1.2919738174708049,
+              "bible_validation_bpb": 1.278098600980794,
+              "wikipedia_validation_bpc": 1.9519843299012514,
+              "wikipedia_validation_bpb": 1.9383911544077663
+            }
+          }
+        }
+      },
+      "delta": {
+        "mean_bpc_statbound_minus_unigram": 0.000597969588602032,
+        "mean_bpb_statbound_minus_unigram": 0.0005921780147348787,
+        "seeds_beating_unigram": 1,
+        "n_seeds": 3
+      }
+    },
+    "architecture_matched_x_fixed_updates": {
+      "track": "architecture_matched",
+      "budget_policy": "fixed_updates",
+      "role": "diagnostic_SC3",
+      "statbound": {
+        "validation_bpc": {
+          "n": 3,
+          "mean": 1.4433480965336924,
+          "std": 0.001938389033272681,
+          "values": [
+            1.4413033161948425,
+            1.4451588438992546,
+            1.4435821295069804
+          ],
+          "min": 1.4413033161948425,
+          "max": 1.4451588438992546
+        },
+        "validation_bpb": {
+          "n": 3,
+          "mean": 1.4293686947777031,
+          "std": 0.0019196149626790448,
+          "values": [
+            1.4273437189516578,
+            1.431161904333112,
+            1.4296004610483393
+          ],
+          "min": 1.4273437189516578,
+          "max": 1.431161904333112
+        },
+        "per_seed": [
+          {
+            "seed": 42,
+            "statbound_validation_bpc": 1.4413033161948425,
+            "unigram_validation_bpc": 1.4423002957801767,
+            "delta_bpc_statbound_minus_unigram": -0.000996979585334179,
+            "statbound_validation_bpb": 1.4273437189516578,
+            "unigram_validation_bpb": 1.4283310423922275,
+            "statbound_updates": 4000,
+            "statbound_characters_processed": 141144801.849276,
+            "statbound_tokens_processed": 32640000,
+            "statbound_runtime_s": 118.30657782699564,
+            "statbound_parameter_count": 5273088,
+            "statbound_selected_checkpoint": "best.pt",
+            "statbound_run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_42/final/fixed_updates_u4000",
+            "seed_beats_unigram": true
+          },
+          {
+            "seed": 1337,
+            "statbound_validation_bpc": 1.4451588438992546,
+            "unigram_validation_bpc": 1.4448921445269196,
+            "delta_bpc_statbound_minus_unigram": 0.00026669937233503305,
+            "statbound_validation_bpb": 1.431161904333112,
+            "unigram_validation_bpb": 1.4308977880505271,
+            "statbound_updates": 4000,
+            "statbound_characters_processed": 141144742.54916406,
+            "statbound_tokens_processed": 32640000,
+            "statbound_runtime_s": 119.3732373679959,
+            "statbound_parameter_count": 5273088,
+            "statbound_selected_checkpoint": "best.pt",
+            "statbound_run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_1337/final/fixed_updates_u4000",
+            "seed_beats_unigram": false
+          },
+          {
+            "seed": 2026,
+            "statbound_validation_bpc": 1.4435821295069804,
+            "unigram_validation_bpc": 1.4428717481894078,
+            "delta_bpc_statbound_minus_unigram": 0.000710381317572617,
+            "statbound_validation_bpb": 1.4296004610483393,
+            "unigram_validation_bpb": 1.4288969600570456,
+            "statbound_updates": 4000,
+            "statbound_characters_processed": 141145421.28168088,
+            "statbound_tokens_processed": 32640000,
+            "statbound_runtime_s": 116.35156306999852,
+            "statbound_parameter_count": 5273088,
+            "statbound_selected_checkpoint": "best.pt",
+            "statbound_run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_2026/final/fixed_updates_u4000",
+            "seed_beats_unigram": false
+          }
+        ],
+        "mean_updates": 4000,
+        "mean_characters_processed": 141144988.56004032,
+        "mean_tokens_processed": 32640000,
+        "mean_runtime_s": 118.01045942166336,
+        "parameter_counts": [
+          5273088
+        ]
+      },
+      "unigram_8000": {
+        "validation_bpc": {
+          "n": 3,
+          "mean": 1.4433547294988347,
+          "stdev": 0.0013617537187171512,
+          "median": 1.4428717481894078,
+          "min": 1.4423002957801767,
+          "max": 1.4448921445269196,
+          "values": [
+            1.4423002957801767,
+            1.4448921445269196,
+            1.4428717481894078
+          ]
+        },
+        "validation_bpb": {
+          "n": 3,
+          "mean": 1.4293752634999335,
+          "stdev": 0.0013485645910406927,
+          "median": 1.4288969600570456,
+          "min": 1.4283310423922275,
+          "max": 1.4308977880505271,
+          "values": [
+            1.4283310423922275,
+            1.4308977880505271,
+            1.4288969600570456
+          ]
+        },
+        "per_seed": {
+          "42": {
+            "validation_bpc": 1.4423002957801767,
+            "validation_bpb": 1.4283310423922275,
+            "best_step": 4000,
+            "best_effective_epochs": 30.51596971801875,
+            "final_budget_bpc": 1.4423002957801767,
+            "best_vs_final_bpc_gap": 0.0,
+            "characters_processed": 141099710.26620537,
+            "optimizer_steps": 4000,
+            "effective_epochs": 30.51596971801875,
+            "runtime_s": 113.3609640620125,
+            "peak_vram_gb": 0.7370014190673828,
+            "total_parameters": 5273088,
+            "embedding_parameters": 2113536,
+            "non_embedding_parameters": 3159552,
+            "source_validation": {
+              "combined_validation_bpc": 1.4422799366292007,
+              "combined_validation_bpb": 1.4283108804277456,
+              "bible_validation_bpc": 1.255080622416735,
+              "bible_validation_bpb": 1.2416016222133555,
+              "wikipedia_validation_bpc": 1.9211091358188803,
+              "wikipedia_validation_bpb": 1.9077309681638948
+            }
+          },
+          "1337": {
+            "validation_bpc": 1.4448921445269196,
+            "validation_bpb": 1.4308977880505271,
+            "best_step": 4000,
+            "best_effective_epochs": 30.517614632016798,
+            "final_budget_bpc": 1.4448921445269196,
+            "best_vs_final_bpc_gap": 0.0,
+            "characters_processed": 141107316.01790464,
+            "optimizer_steps": 4000,
+            "effective_epochs": 30.517614632016798,
+            "runtime_s": 108.00926914101001,
+            "peak_vram_gb": 0.7370014190673828,
+            "total_parameters": 5273088,
+            "embedding_parameters": 2113536,
+            "non_embedding_parameters": 3159552,
+            "source_validation": {
+              "combined_validation_bpc": 1.4448874869169344,
+              "combined_validation_bpb": 1.4308931755513516,
+              "bible_validation_bpc": 1.2557535879143225,
+              "bible_validation_bpb": 1.2422673603648133,
+              "wikipedia_validation_bpc": 1.9277256637780684,
+              "wikipedia_validation_bpb": 1.9143014201252744
+            }
+          },
+          "2026": {
+            "validation_bpc": 1.4428717481894078,
+            "validation_bpb": 1.4288969600570456,
+            "best_step": 4000,
+            "best_effective_epochs": 30.51726168894272,
+            "final_budget_bpc": 1.4428717481894078,
+            "best_vs_final_bpc_gap": 0.0,
+            "characters_processed": 141105684.08007166,
+            "optimizer_steps": 4000,
+            "effective_epochs": 30.51726168894272,
+            "runtime_s": 111.84359674000007,
+            "peak_vram_gb": 0.7370014190673828,
+            "total_parameters": 5273088,
+            "embedding_parameters": 2113536,
+            "non_embedding_parameters": 3159552,
+            "source_validation": {
+              "combined_validation_bpc": 1.4428797905495336,
+              "combined_validation_bpb": 1.4289049245237073,
+              "bible_validation_bpc": 1.254543902161975,
+              "bible_validation_bpb": 1.2410706660922248,
+              "wikipedia_validation_bpc": 1.9247590874386598,
+              "wikipedia_validation_bpb": 1.9113555023496558
+            }
+          }
+        }
+      },
+      "delta": {
+        "mean_bpc_statbound_minus_unigram": -6.632965142250313e-06,
+        "mean_bpb_statbound_minus_unigram": -6.568722230371193e-06,
+        "seeds_beating_unigram": 1,
+        "n_seeds": 3
+      }
+    }
+  },
+  "statbound_seed_records": [
+    {
+      "track": "parameter_matched",
+      "budget_policy": "fixed_characters",
+      "role": "primary_SC1",
+      "seed": 42,
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__statbound_lambda_0_25__seed42__chars_e30",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_42/final/fixed_characters_e30",
+      "status": "completed",
+      "validation_bpc": 1.437744448517068,
+      "validation_bpb": 1.4238193203262095,
+      "best_checkpoint_step": 3932,
+      "best_checkpoint_effective_epochs": 30.00648566557107,
+      "updates": 3932,
+      "characters_processed": 138743958.41398185,
+      "tokens_processed": 32085120,
+      "effective_epochs": 30.00648566557107,
+      "runtime_s": 107.41353174801043,
+      "peak_gpu_memory_gb": 0.6693544387817383,
+      "tokens_per_second": 298706.49887270184,
+      "characters_per_second": 1291680.4443174987,
+      "parameter_count": 3364992,
+      "embedding_parameters": 1585152,
+      "non_embedding_parameters": 1779840,
+      "selected_checkpoint": "best.pt",
+      "selected_checkpoint_sha256": "ac376c43659436768249590bb361d99ca71a0ccf38fc0e22ec409529c88efdc4",
+      "source_validation": {
+        "combined_validation": {
+          "bits_per_character": 1.4377128186105819,
+          "bits_per_byte": 1.4237879967679778,
+          "n_chars": 639767,
+          "n_bytes": 646024,
+          "n_pred_tokens": 149403,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 586,
+            "n_tokens": 149989,
+            "n_characters_in_source_text": 634509,
+            "n_bytes_in_source_text": 640766,
+            "n_words_in_source_text": 88843,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "5f7f7c6fb7f5b796da5d4f903579e771eba172d28d1a8d5ae6bd521b21f7f940"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/combined.txt"
+        },
+        "bible_validation": {
+          "bits_per_character": 1.2467531258791957,
+          "bits_per_byte": 1.233363559235317,
+          "n_chars": 460661,
+          "n_bytes": 465662,
+          "n_pred_tokens": 100318,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 394,
+            "n_tokens": 100712,
+            "n_characters_in_source_text": 457231,
+            "n_bytes_in_source_text": 462232,
+            "n_words_in_source_text": 63497,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "f099128196ed23fd0e3ed6e047aeee48040376385edf16988e8b241d6a7e937a"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/bible.txt"
+        },
+        "wikipedia_validation": {
+          "bits_per_character": 1.9262248708768122,
+          "bits_per_byte": 1.9128110784048873,
+          "n_chars": 179106,
+          "n_bytes": 180362,
+          "n_pred_tokens": 49084,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 193,
+            "n_tokens": 49277,
+            "n_characters_in_source_text": 177278,
+            "n_bytes_in_source_text": 178534,
+            "n_words_in_source_text": 25346,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "ea59bd5028836f43d4b9512ca4e73a23b790f4b5c350c801d8b844c450acdce1"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/wikipedia.txt"
+        }
+      }
+    },
+    {
+      "track": "parameter_matched",
+      "budget_policy": "fixed_characters",
+      "role": "primary_SC1",
+      "seed": 1337,
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__statbound_lambda_0_25__seed1337__chars_e30",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_1337/final/fixed_characters_e30",
+      "status": "completed",
+      "validation_bpc": 1.4387623201808566,
+      "validation_bpb": 1.424827333497124,
+      "best_checkpoint_step": 3932,
+      "best_checkpoint_effective_epochs": 30.007129525960032,
+      "updates": 3932,
+      "characters_processed": 138746935.49500448,
+      "tokens_processed": 32085120,
+      "effective_epochs": 30.007129525960032,
+      "runtime_s": 109.88498749998689,
+      "peak_gpu_memory_gb": 0.6708364486694336,
+      "tokens_per_second": 291988.2026651168,
+      "characters_per_second": 1262655.9701344192,
+      "parameter_count": 3364992,
+      "embedding_parameters": 1585152,
+      "non_embedding_parameters": 1779840,
+      "selected_checkpoint": "best.pt",
+      "selected_checkpoint_sha256": "c02b2159ec80b47684d917d0caa5f5f51e4735c2a2812a249e32bb21bab4e2bd",
+      "source_validation": {
+        "combined_validation": {
+          "bits_per_character": 1.438709536136536,
+          "bits_per_byte": 1.424775060687317,
+          "n_chars": 639767,
+          "n_bytes": 646024,
+          "n_pred_tokens": 149403,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 586,
+            "n_tokens": 149989,
+            "n_characters_in_source_text": 634509,
+            "n_bytes_in_source_text": 640766,
+            "n_words_in_source_text": 88843,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "5f7f7c6fb7f5b796da5d4f903579e771eba172d28d1a8d5ae6bd521b21f7f940"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/combined.txt"
+        },
+        "bible_validation": {
+          "bits_per_character": 1.2472638283939732,
+          "bits_per_byte": 1.233868777035266,
+          "n_chars": 460661,
+          "n_bytes": 465662,
+          "n_pred_tokens": 100318,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 394,
+            "n_tokens": 100712,
+            "n_characters_in_source_text": 457231,
+            "n_bytes_in_source_text": 462232,
+            "n_words_in_source_text": 63497,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "f099128196ed23fd0e3ed6e047aeee48040376385edf16988e8b241d6a7e937a"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/bible.txt"
+        },
+        "wikipedia_validation": {
+          "bits_per_character": 1.9299313666388545,
+          "bits_per_byte": 1.9164917629723481,
+          "n_chars": 179106,
+          "n_bytes": 180362,
+          "n_pred_tokens": 49084,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 193,
+            "n_tokens": 49277,
+            "n_characters_in_source_text": 177278,
+            "n_bytes_in_source_text": 178534,
+            "n_words_in_source_text": 25346,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "ea59bd5028836f43d4b9512ca4e73a23b790f4b5c350c801d8b844c450acdce1"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/wikipedia.txt"
+        }
+      }
+    },
+    {
+      "track": "parameter_matched",
+      "budget_policy": "fixed_characters",
+      "role": "primary_SC1",
+      "seed": 2026,
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__statbound_lambda_0_25__seed2026__chars_e30",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_2026/final/fixed_characters_e30",
+      "status": "completed",
+      "validation_bpc": 1.4357002113825348,
+      "validation_bpb": 1.4217948824433304,
+      "best_checkpoint_step": 3932,
+      "best_checkpoint_effective_epochs": 30.00637627540465,
+      "updates": 3932,
+      "characters_processed": 138743452.61583975,
+      "tokens_processed": 32085120,
+      "effective_epochs": 30.00637627540465,
+      "runtime_s": 107.24934860599751,
+      "peak_gpu_memory_gb": 0.6708364486694336,
+      "tokens_per_second": 299163.7750441849,
+      "characters_per_second": 1293653.1029716767,
+      "parameter_count": 3364992,
+      "embedding_parameters": 1585152,
+      "non_embedding_parameters": 1779840,
+      "selected_checkpoint": "best.pt",
+      "selected_checkpoint_sha256": "799d3240f25d39053d32fde7fabe39e524eb4ad28ff0300db0554ef72ca5c5f2",
+      "source_validation": {
+        "combined_validation": {
+          "bits_per_character": 1.4356832281729808,
+          "bits_per_byte": 1.421778063722932,
+          "n_chars": 639767,
+          "n_bytes": 646024,
+          "n_pred_tokens": 149403,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 586,
+            "n_tokens": 149989,
+            "n_characters_in_source_text": 634509,
+            "n_bytes_in_source_text": 640766,
+            "n_words_in_source_text": 88843,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "5f7f7c6fb7f5b796da5d4f903579e771eba172d28d1a8d5ae6bd521b21f7f940"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/combined.txt"
+        },
+        "bible_validation": {
+          "bits_per_character": 1.2464377842644832,
+          "bits_per_byte": 1.2330516042474178,
+          "n_chars": 460661,
+          "n_bytes": 465662,
+          "n_pred_tokens": 100318,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 394,
+            "n_tokens": 100712,
+            "n_characters_in_source_text": 457231,
+            "n_bytes_in_source_text": 462232,
+            "n_words_in_source_text": 63497,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "f099128196ed23fd0e3ed6e047aeee48040376385edf16988e8b241d6a7e937a"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/bible.txt"
+        },
+        "wikipedia_validation": {
+          "bits_per_character": 1.9202048031867058,
+          "bits_per_byte": 1.9068329330987577,
+          "n_chars": 179106,
+          "n_bytes": 180362,
+          "n_pred_tokens": 49084,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 193,
+            "n_tokens": 49277,
+            "n_characters_in_source_text": 177278,
+            "n_bytes_in_source_text": 178534,
+            "n_words_in_source_text": 25346,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "ea59bd5028836f43d4b9512ca4e73a23b790f4b5c350c801d8b844c450acdce1"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/wikipedia.txt"
+        }
+      }
+    },
+    {
+      "track": "architecture_matched",
+      "budget_policy": "fixed_characters",
+      "role": "secondary_SC2",
+      "seed": 42,
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__statbound_lambda_0_25__seed42__chars_e30",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_42/final/fixed_characters_e30",
+      "status": "completed",
+      "validation_bpc": 1.429219606242459,
+      "validation_bpb": 1.4153770445477556,
+      "best_checkpoint_step": 3670,
+      "best_checkpoint_effective_epochs": 28.0060443671149,
+      "updates": 3932,
+      "characters_processed": 138743958.41398185,
+      "tokens_processed": 32085120,
+      "effective_epochs": 30.00648566557107,
+      "runtime_s": 115.7179876369919,
+      "peak_gpu_memory_gb": 0.7361044883728027,
+      "tokens_per_second": 277269.9444156533,
+      "characters_per_second": 1198983.5050469646,
+      "parameter_count": 5273088,
+      "embedding_parameters": 2113536,
+      "non_embedding_parameters": 3159552,
+      "selected_checkpoint": "best.pt",
+      "selected_checkpoint_sha256": "e8415b494e515656bce9e007769395f6bd7e4d0cd383a972da254f7f5550e9e5",
+      "source_validation": {
+        "combined_validation": {
+          "bits_per_character": 1.429195761041078,
+          "bits_per_byte": 1.4153534302966566,
+          "n_chars": 639767,
+          "n_bytes": 646024,
+          "n_pred_tokens": 149403,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 586,
+            "n_tokens": 149989,
+            "n_characters_in_source_text": 634509,
+            "n_bytes_in_source_text": 640766,
+            "n_words_in_source_text": 88843,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "5f7f7c6fb7f5b796da5d4f903579e771eba172d28d1a8d5ae6bd521b21f7f940"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/combined.txt"
+        },
+        "bible_validation": {
+          "bits_per_character": 1.2351601812404576,
+          "bits_per_byte": 1.2218951175969062,
+          "n_chars": 460661,
+          "n_bytes": 465662,
+          "n_pred_tokens": 100318,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 394,
+            "n_tokens": 100712,
+            "n_characters_in_source_text": 457231,
+            "n_bytes_in_source_text": 462232,
+            "n_words_in_source_text": 63497,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "f099128196ed23fd0e3ed6e047aeee48040376385edf16988e8b241d6a7e937a"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/bible.txt"
+        },
+        "wikipedia_validation": {
+          "bits_per_character": 1.9277995381207873,
+          "bits_per_byte": 1.9143747800238504,
+          "n_chars": 179106,
+          "n_bytes": 180362,
+          "n_pred_tokens": 49084,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 193,
+            "n_tokens": 49277,
+            "n_characters_in_source_text": 177278,
+            "n_bytes_in_source_text": 178534,
+            "n_words_in_source_text": 25346,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "ea59bd5028836f43d4b9512ca4e73a23b790f4b5c350c801d8b844c450acdce1"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/wikipedia.txt"
+        }
+      }
+    },
+    {
+      "track": "architecture_matched",
+      "budget_policy": "fixed_characters",
+      "role": "secondary_SC2",
+      "seed": 1337,
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__statbound_lambda_0_25__seed1337__chars_e30",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_1337/final/fixed_characters_e30",
+      "status": "completed",
+      "validation_bpc": 1.4316771132210961,
+      "validation_bpb": 1.4178107495915337,
+      "best_checkpoint_step": 3670,
+      "best_checkpoint_effective_epochs": 28.006957745734486,
+      "updates": 3932,
+      "characters_processed": 138746935.49500448,
+      "tokens_processed": 32085120,
+      "effective_epochs": 30.007129525960032,
+      "runtime_s": 115.64593293100188,
+      "peak_gpu_memory_gb": 0.7361044883728027,
+      "tokens_per_second": 277442.7010688134,
+      "characters_per_second": 1199756.2904160703,
+      "parameter_count": 5273088,
+      "embedding_parameters": 2113536,
+      "non_embedding_parameters": 3159552,
+      "selected_checkpoint": "best.pt",
+      "selected_checkpoint_sha256": "e863380bb413650e5d9ad64ae36c184a24035fa12a10dc603d07fb6fd52fdd98",
+      "source_validation": {
+        "combined_validation": {
+          "bits_per_character": 1.4316585246225686,
+          "bits_per_byte": 1.417792341030994,
+          "n_chars": 639767,
+          "n_bytes": 646024,
+          "n_pred_tokens": 149403,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 586,
+            "n_tokens": 149989,
+            "n_characters_in_source_text": 634509,
+            "n_bytes_in_source_text": 640766,
+            "n_words_in_source_text": 88843,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "5f7f7c6fb7f5b796da5d4f903579e771eba172d28d1a8d5ae6bd521b21f7f940"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/combined.txt"
+        },
+        "bible_validation": {
+          "bits_per_character": 1.237911715515373,
+          "bits_per_byte": 1.2246171016338614,
+          "n_chars": 460661,
+          "n_bytes": 465662,
+          "n_pred_tokens": 100318,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 394,
+            "n_tokens": 100712,
+            "n_characters_in_source_text": 457231,
+            "n_bytes_in_source_text": 462232,
+            "n_words_in_source_text": 63497,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "f099128196ed23fd0e3ed6e047aeee48040376385edf16988e8b241d6a7e937a"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/bible.txt"
+        },
+        "wikipedia_validation": {
+          "bits_per_character": 1.9274373811785888,
+          "bits_per_byte": 1.914015145060336,
+          "n_chars": 179106,
+          "n_bytes": 180362,
+          "n_pred_tokens": 49084,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 193,
+            "n_tokens": 49277,
+            "n_characters_in_source_text": 177278,
+            "n_bytes_in_source_text": 178534,
+            "n_words_in_source_text": 25346,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "ea59bd5028836f43d4b9512ca4e73a23b790f4b5c350c801d8b844c450acdce1"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/wikipedia.txt"
+        }
+      }
+    },
+    {
+      "track": "architecture_matched",
+      "budget_policy": "fixed_characters",
+      "role": "secondary_SC2",
+      "seed": 2026,
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__statbound_lambda_0_25__seed2026__chars_e30",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_2026/final/fixed_characters_e30",
+      "status": "completed",
+      "validation_bpc": 1.4314326118197547,
+      "validation_bpb": 1.4175686162837433,
+      "best_checkpoint_step": 3670,
+      "best_checkpoint_effective_epochs": 28.005752313569573,
+      "updates": 3932,
+      "characters_processed": 138743452.61583975,
+      "tokens_processed": 32085120,
+      "effective_epochs": 30.00637627540465,
+      "runtime_s": 118.10042519400304,
+      "peak_gpu_memory_gb": 0.7361044883728027,
+      "tokens_per_second": 271676.5832747335,
+      "characters_per_second": 1174792.1515771556,
+      "parameter_count": 5273088,
+      "embedding_parameters": 2113536,
+      "non_embedding_parameters": 3159552,
+      "selected_checkpoint": "best.pt",
+      "selected_checkpoint_sha256": "5b6773512df3430aa6d9f346e3f413c8603eeef5abcfb2a5906707fab3418191",
+      "source_validation": {
+        "combined_validation": {
+          "bits_per_character": 1.431408777629272,
+          "bits_per_byte": 1.417545012936898,
+          "n_chars": 639767,
+          "n_bytes": 646024,
+          "n_pred_tokens": 149403,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 586,
+            "n_tokens": 149989,
+            "n_characters_in_source_text": 634509,
+            "n_bytes_in_source_text": 640766,
+            "n_words_in_source_text": 88843,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "5f7f7c6fb7f5b796da5d4f903579e771eba172d28d1a8d5ae6bd521b21f7f940"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/combined.txt"
+        },
+        "bible_validation": {
+          "bits_per_character": 1.2372535495762402,
+          "bits_per_byte": 1.223966004100271,
+          "n_chars": 460661,
+          "n_bytes": 465662,
+          "n_pred_tokens": 100318,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 394,
+            "n_tokens": 100712,
+            "n_characters_in_source_text": 457231,
+            "n_bytes_in_source_text": 462232,
+            "n_words_in_source_text": 63497,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "f099128196ed23fd0e3ed6e047aeee48040376385edf16988e8b241d6a7e937a"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/bible.txt"
+        },
+        "wikipedia_validation": {
+          "bits_per_character": 1.929766935238749,
+          "bits_per_byte": 1.9163284766351636,
+          "n_chars": 179106,
+          "n_bytes": 180362,
+          "n_pred_tokens": 49084,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 193,
+            "n_tokens": 49277,
+            "n_characters_in_source_text": 177278,
+            "n_bytes_in_source_text": 178534,
+            "n_words_in_source_text": 25346,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "ea59bd5028836f43d4b9512ca4e73a23b790f4b5c350c801d8b844c450acdce1"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/wikipedia.txt"
+        }
+      }
+    },
+    {
+      "track": "parameter_matched",
+      "budget_policy": "fixed_updates",
+      "role": "diagnostic_SC3",
+      "seed": 42,
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__statbound_lambda_0_25__seed42__updates_u4000",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_42/final/fixed_updates_u4000",
+      "status": "completed",
+      "validation_bpc": 1.4795644348884225,
+      "validation_bpb": 1.465234263456561,
+      "best_checkpoint_step": 4000,
+      "best_checkpoint_effective_epochs": 30.52572178186725,
+      "updates": 4000,
+      "characters_processed": 141144801.849276,
+      "tokens_processed": 32640000,
+      "effective_epochs": 30.52572178186725,
+      "runtime_s": 112.34414559800643,
+      "peak_gpu_memory_gb": 0.7361044883728027,
+      "tokens_per_second": 290535.83367658104,
+      "characters_per_second": 1256360.9887988737,
+      "parameter_count": 3364992,
+      "embedding_parameters": 1585152,
+      "non_embedding_parameters": 1779840,
+      "selected_checkpoint": "best.pt",
+      "selected_checkpoint_sha256": "4576bb19c890f148fab8eaafc8b70d1e65b4939ff050e0d0f4836911330b4cbb",
+      "source_validation": {
+        "combined_validation": {
+          "bits_per_character": 1.4795619023818112,
+          "bits_per_byte": 1.4652317554782859,
+          "n_chars": 639767,
+          "n_bytes": 646024,
+          "n_pred_tokens": 149403,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 586,
+            "n_tokens": 149989,
+            "n_characters_in_source_text": 634509,
+            "n_bytes_in_source_text": 640766,
+            "n_words_in_source_text": 88843,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "5f7f7c6fb7f5b796da5d4f903579e771eba172d28d1a8d5ae6bd521b21f7f940"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/combined.txt"
+        },
+        "bible_validation": {
+          "bits_per_character": 1.2929078442434778,
+          "bits_per_byte": 1.2790225967269064,
+          "n_chars": 460661,
+          "n_bytes": 465662,
+          "n_pred_tokens": 100318,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 394,
+            "n_tokens": 100712,
+            "n_characters_in_source_text": 457231,
+            "n_bytes_in_source_text": 462232,
+            "n_words_in_source_text": 63497,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "f099128196ed23fd0e3ed6e047aeee48040376385edf16988e8b241d6a7e937a"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/bible.txt"
+        },
+        "wikipedia_validation": {
+          "bits_per_character": 1.9578311885061757,
+          "bits_per_byte": 1.94419729681744,
+          "n_chars": 179106,
+          "n_bytes": 180362,
+          "n_pred_tokens": 49084,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 193,
+            "n_tokens": 49277,
+            "n_characters_in_source_text": 177278,
+            "n_bytes_in_source_text": 178534,
+            "n_words_in_source_text": 25346,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "ea59bd5028836f43d4b9512ca4e73a23b790f4b5c350c801d8b844c450acdce1"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/wikipedia.txt"
+        }
+      }
+    },
+    {
+      "track": "parameter_matched",
+      "budget_policy": "fixed_updates",
+      "role": "diagnostic_SC3",
+      "seed": 1337,
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__statbound_lambda_0_25__seed1337__updates_u4000",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_1337/final/fixed_updates_u4000",
+      "status": "completed",
+      "validation_bpc": 1.4825095462856575,
+      "validation_bpb": 1.4681508502757423,
+      "best_checkpoint_step": 4000,
+      "best_checkpoint_effective_epochs": 30.525708956891087,
+      "updates": 4000,
+      "characters_processed": 141144742.54916406,
+      "tokens_processed": 32640000,
+      "effective_epochs": 30.525708956891087,
+      "runtime_s": 112.90271339700848,
+      "peak_gpu_memory_gb": 0.7361044883728027,
+      "tokens_per_second": 289098.4549257506,
+      "characters_per_second": 1250144.8220544173,
+      "parameter_count": 3364992,
+      "embedding_parameters": 1585152,
+      "non_embedding_parameters": 1779840,
+      "selected_checkpoint": "best.pt",
+      "selected_checkpoint_sha256": "68dc76e50ec01360c543808adc8ec181051e953d1eae344ef2460965d8854cf4",
+      "source_validation": {
+        "combined_validation": {
+          "bits_per_character": 1.4824778921551947,
+          "bits_per_byte": 1.468119502728153,
+          "n_chars": 639767,
+          "n_bytes": 646024,
+          "n_pred_tokens": 149403,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 586,
+            "n_tokens": 149989,
+            "n_characters_in_source_text": 634509,
+            "n_bytes_in_source_text": 640766,
+            "n_words_in_source_text": 88843,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "5f7f7c6fb7f5b796da5d4f903579e771eba172d28d1a8d5ae6bd521b21f7f940"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/combined.txt"
+        },
+        "bible_validation": {
+          "bits_per_character": 1.2962235937164281,
+          "bits_per_byte": 1.2823027365449693,
+          "n_chars": 460661,
+          "n_bytes": 465662,
+          "n_pred_tokens": 100318,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 394,
+            "n_tokens": 100712,
+            "n_characters_in_source_text": 457231,
+            "n_bytes_in_source_text": 462232,
+            "n_words_in_source_text": 63497,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "f099128196ed23fd0e3ed6e047aeee48040376385edf16988e8b241d6a7e937a"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/bible.txt"
+        },
+        "wikipedia_validation": {
+          "bits_per_character": 1.960677560608678,
+          "bits_per_byte": 1.9470238474311545,
+          "n_chars": 179106,
+          "n_bytes": 180362,
+          "n_pred_tokens": 49084,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 193,
+            "n_tokens": 49277,
+            "n_characters_in_source_text": 177278,
+            "n_bytes_in_source_text": 178534,
+            "n_words_in_source_text": 25346,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "ea59bd5028836f43d4b9512ca4e73a23b790f4b5c350c801d8b844c450acdce1"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/wikipedia.txt"
+        }
+      }
+    },
+    {
+      "track": "parameter_matched",
+      "budget_policy": "fixed_updates",
+      "role": "diagnostic_SC3",
+      "seed": 2026,
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__param__statbound_lambda_0_25__seed2026__updates_u4000",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_2026/final/fixed_updates_u4000",
+      "status": "completed",
+      "validation_bpc": 1.477637058619837,
+      "validation_bpb": 1.4633255545955526,
+      "best_checkpoint_step": 4000,
+      "best_checkpoint_effective_epochs": 30.525855747985776,
+      "updates": 4000,
+      "characters_processed": 141145421.28168088,
+      "tokens_processed": 32640000,
+      "effective_epochs": 30.525855747985776,
+      "runtime_s": 114.84914367100282,
+      "peak_gpu_memory_gb": 0.7361044883728027,
+      "tokens_per_second": 284198.8974119009,
+      "characters_per_second": 1228963.6367338223,
+      "parameter_count": 3364992,
+      "embedding_parameters": 1585152,
+      "non_embedding_parameters": 1779840,
+      "selected_checkpoint": "best.pt",
+      "selected_checkpoint_sha256": "3b8ac8a270be86620002b37b4555e2c095086c51428f825467657137c6c7b9b9",
+      "source_validation": {
+        "combined_validation": {
+          "bits_per_character": 1.4776062347111067,
+          "bits_per_byte": 1.4632950292286675,
+          "n_chars": 639767,
+          "n_bytes": 646024,
+          "n_pred_tokens": 149403,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 586,
+            "n_tokens": 149989,
+            "n_characters_in_source_text": 634509,
+            "n_bytes_in_source_text": 640766,
+            "n_words_in_source_text": 88843,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "5f7f7c6fb7f5b796da5d4f903579e771eba172d28d1a8d5ae6bd521b21f7f940"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/combined.txt"
+        },
+        "bible_validation": {
+          "bits_per_character": 1.2925554655027296,
+          "bits_per_byte": 1.2786740023750123,
+          "n_chars": 460661,
+          "n_bytes": 465662,
+          "n_pred_tokens": 100318,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 394,
+            "n_tokens": 100712,
+            "n_characters_in_source_text": 457231,
+            "n_bytes_in_source_text": 462232,
+            "n_words_in_source_text": 63497,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "f099128196ed23fd0e3ed6e047aeee48040376385edf16988e8b241d6a7e937a"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/bible.txt"
+        },
+        "wikipedia_validation": {
+          "bits_per_character": 1.9521591594216303,
+          "bits_per_byte": 1.9385647664550765,
+          "n_chars": 179106,
+          "n_bytes": 180362,
+          "n_pred_tokens": 49084,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 193,
+            "n_tokens": 49277,
+            "n_characters_in_source_text": 177278,
+            "n_bytes_in_source_text": 178534,
+            "n_words_in_source_text": 25346,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "ea59bd5028836f43d4b9512ca4e73a23b790f4b5c350c801d8b844c450acdce1"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/wikipedia.txt"
+        }
+      }
+    },
+    {
+      "track": "architecture_matched",
+      "budget_policy": "fixed_updates",
+      "role": "diagnostic_SC3",
+      "seed": 42,
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__statbound_lambda_0_25__seed42__updates_u4000",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_42/final/fixed_updates_u4000",
+      "status": "completed",
+      "validation_bpc": 1.4413033161948425,
+      "validation_bpb": 1.4273437189516578,
+      "best_checkpoint_step": 4000,
+      "best_checkpoint_effective_epochs": 30.52572178186725,
+      "updates": 4000,
+      "characters_processed": 141144801.849276,
+      "tokens_processed": 32640000,
+      "effective_epochs": 30.52572178186725,
+      "runtime_s": 118.30657782699564,
+      "peak_gpu_memory_gb": 0.7361044883728027,
+      "tokens_per_second": 275893.36619753094,
+      "characters_per_second": 1193042.723758586,
+      "parameter_count": 5273088,
+      "embedding_parameters": 2113536,
+      "non_embedding_parameters": 3159552,
+      "selected_checkpoint": "best.pt",
+      "selected_checkpoint_sha256": "e8b9a5b52f1f404d4d27d5e311dc1e77e83ae602ca5678b3cf07e1a290e47b52",
+      "source_validation": {
+        "combined_validation": {
+          "bits_per_character": 1.4412950624254692,
+          "bits_per_byte": 1.4273355451233316,
+          "n_chars": 639767,
+          "n_bytes": 646024,
+          "n_pred_tokens": 149403,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 586,
+            "n_tokens": 149989,
+            "n_characters_in_source_text": 634509,
+            "n_bytes_in_source_text": 640766,
+            "n_words_in_source_text": 88843,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "5f7f7c6fb7f5b796da5d4f903579e771eba172d28d1a8d5ae6bd521b21f7f940"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/combined.txt"
+        },
+        "bible_validation": {
+          "bits_per_character": 1.2543719899526875,
+          "bits_per_byte": 1.240900600142582,
+          "n_chars": 460661,
+          "n_bytes": 465662,
+          "n_pred_tokens": 100318,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 394,
+            "n_tokens": 100712,
+            "n_characters_in_source_text": 457231,
+            "n_bytes_in_source_text": 462232,
+            "n_words_in_source_text": 63497,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "f099128196ed23fd0e3ed6e047aeee48040376385edf16988e8b241d6a7e937a"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/bible.txt"
+        },
+        "wikipedia_validation": {
+          "bits_per_character": 1.9218440002309871,
+          "bits_per_byte": 1.9084607151471549,
+          "n_chars": 179106,
+          "n_bytes": 180362,
+          "n_pred_tokens": 49084,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 193,
+            "n_tokens": 49277,
+            "n_characters_in_source_text": 177278,
+            "n_bytes_in_source_text": 178534,
+            "n_words_in_source_text": 25346,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "ea59bd5028836f43d4b9512ca4e73a23b790f4b5c350c801d8b844c450acdce1"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/wikipedia.txt"
+        }
+      }
+    },
+    {
+      "track": "architecture_matched",
+      "budget_policy": "fixed_updates",
+      "role": "diagnostic_SC3",
+      "seed": 1337,
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__statbound_lambda_0_25__seed1337__updates_u4000",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_1337/final/fixed_updates_u4000",
+      "status": "completed",
+      "validation_bpc": 1.4451588438992546,
+      "validation_bpb": 1.431161904333112,
+      "best_checkpoint_step": 4000,
+      "best_checkpoint_effective_epochs": 30.525708956891087,
+      "updates": 4000,
+      "characters_processed": 141144742.54916406,
+      "tokens_processed": 32640000,
+      "effective_epochs": 30.525708956891087,
+      "runtime_s": 119.3732373679959,
+      "peak_gpu_memory_gb": 0.7361044883728027,
+      "tokens_per_second": 273428.1210735667,
+      "characters_per_second": 1182381.7939531321,
+      "parameter_count": 5273088,
+      "embedding_parameters": 2113536,
+      "non_embedding_parameters": 3159552,
+      "selected_checkpoint": "best.pt",
+      "selected_checkpoint_sha256": "46c77a74a9b1ce803523dc90116a2e163599d3ee3517c14835e8a9ce4cb640be",
+      "source_validation": {
+        "combined_validation": {
+          "bits_per_character": 1.445095687588726,
+          "bits_per_byte": 1.4310993597166304,
+          "n_chars": 639767,
+          "n_bytes": 646024,
+          "n_pred_tokens": 149403,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 586,
+            "n_tokens": 149989,
+            "n_characters_in_source_text": 634509,
+            "n_bytes_in_source_text": 640766,
+            "n_words_in_source_text": 88843,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "5f7f7c6fb7f5b796da5d4f903579e771eba172d28d1a8d5ae6bd521b21f7f940"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/combined.txt"
+        },
+        "bible_validation": {
+          "bits_per_character": 1.2570972281739565,
+          "bits_per_byte": 1.2435965705336554,
+          "n_chars": 460661,
+          "n_bytes": 465662,
+          "n_pred_tokens": 100318,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 394,
+            "n_tokens": 100712,
+            "n_characters_in_source_text": 457231,
+            "n_bytes_in_source_text": 462232,
+            "n_words_in_source_text": 63497,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "f099128196ed23fd0e3ed6e047aeee48040376385edf16988e8b241d6a7e937a"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/bible.txt"
+        },
+        "wikipedia_validation": {
+          "bits_per_character": 1.926519929215942,
+          "bits_per_byte": 1.913104082024764,
+          "n_chars": 179106,
+          "n_bytes": 180362,
+          "n_pred_tokens": 49084,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 193,
+            "n_tokens": 49277,
+            "n_characters_in_source_text": 177278,
+            "n_bytes_in_source_text": 178534,
+            "n_words_in_source_text": 25346,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "ea59bd5028836f43d4b9512ca4e73a23b790f4b5c350c801d8b844c450acdce1"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/wikipedia.txt"
+        }
+      }
+    },
+    {
+      "track": "architecture_matched",
+      "budget_policy": "fixed_updates",
+      "role": "diagnostic_SC3",
+      "seed": 2026,
+      "run_id": "lm_baselines_v0_1_final_matrix_r2__final__arch__statbound_lambda_0_25__seed2026__updates_u4000",
+      "run_dir": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_2026/final/fixed_updates_u4000",
+      "status": "completed",
+      "validation_bpc": 1.4435821295069804,
+      "validation_bpb": 1.4296004610483393,
+      "best_checkpoint_step": 4000,
+      "best_checkpoint_effective_epochs": 30.525855747985776,
+      "updates": 4000,
+      "characters_processed": 141145421.28168088,
+      "tokens_processed": 32640000,
+      "effective_epochs": 30.525855747985776,
+      "runtime_s": 116.35156306999852,
+      "peak_gpu_memory_gb": 0.7361044883728027,
+      "tokens_per_second": 280529.1062601658,
+      "characters_per_second": 1213094.3285804084,
+      "parameter_count": 5273088,
+      "embedding_parameters": 2113536,
+      "non_embedding_parameters": 3159552,
+      "selected_checkpoint": "best.pt",
+      "selected_checkpoint_sha256": "6a79a5333a384583884a0291c60b23aa387eb5069cf8b19f0ae8347f4941f7bc",
+      "source_validation": {
+        "combined_validation": {
+          "bits_per_character": 1.4435785707846465,
+          "bits_per_byte": 1.42959693679365,
+          "n_chars": 639767,
+          "n_bytes": 646024,
+          "n_pred_tokens": 149403,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 586,
+            "n_tokens": 149989,
+            "n_characters_in_source_text": 634509,
+            "n_bytes_in_source_text": 640766,
+            "n_words_in_source_text": 88843,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "5f7f7c6fb7f5b796da5d4f903579e771eba172d28d1a8d5ae6bd521b21f7f940"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/combined.txt"
+        },
+        "bible_validation": {
+          "bits_per_character": 1.2565675758629018,
+          "bits_per_byte": 1.2430726064497,
+          "n_chars": 460661,
+          "n_bytes": 465662,
+          "n_pred_tokens": 100318,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 394,
+            "n_tokens": 100712,
+            "n_characters_in_source_text": 457231,
+            "n_bytes_in_source_text": 462232,
+            "n_words_in_source_text": 63497,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "f099128196ed23fd0e3ed6e047aeee48040376385edf16988e8b241d6a7e937a"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/bible.txt"
+        },
+        "wikipedia_validation": {
+          "bits_per_character": 1.922515276327437,
+          "bits_per_byte": 1.909127316629345,
+          "n_chars": 179106,
+          "n_bytes": 180362,
+          "n_pred_tokens": 49084,
+          "nan_detected": false,
+          "packing": {
+            "n_sequences": 193,
+            "n_tokens": 49277,
+            "n_characters_in_source_text": 177278,
+            "n_bytes_in_source_text": 178534,
+            "n_words_in_source_text": 25346,
+            "truncation_events": 0,
+            "packing_method": "line_pack_with_eos_nonoverlap_windows_char_credits",
+            "encoding_sha256": "ea59bd5028836f43d4b9512ca4e73a23b790f4b5c350c801d8b844c450acdce1"
+          },
+          "source_path": "data/splits/chichewa_corpus_v0.1/validation/wikipedia.txt"
+        }
+      }
+    }
+  ],
+  "source_specific_primary": {
+    "bible_validation": {
+      "statbound_bpc": {
+        "n": 3,
+        "mean": 1.2468182461792174,
+        "std": 0.00041685455025995124,
+        "values": [
+          1.2467531258791957,
+          1.2472638283939732,
+          1.2464377842644832
+        ],
+        "min": 1.2464377842644832,
+        "max": 1.2472638283939732
+      },
+      "unigram_bpc": {
+        "n": 3,
+        "mean": 1.2455074448929901,
+        "std": 0.0011702692121653801,
+        "values": [
+          1.2463249938292171,
+          1.2441668762782983,
+          1.246030464571455
+        ],
+        "min": 1.2441668762782983,
+        "max": 1.2463249938292171
+      },
+      "mean_delta_bpc_statbound_minus_unigram": 0.0013108012862272922,
+      "max_allowed_absolute_regression": 0.02,
+      "pass": true,
+      "per_seed": [
+        {
+          "seed": 42,
+          "statbound_bpc": 1.2467531258791957,
+          "unigram_bpc": 1.2463249938292171,
+          "delta_bpc": 0.0004281320499786023
+        },
+        {
+          "seed": 1337,
+          "statbound_bpc": 1.2472638283939732,
+          "unigram_bpc": 1.2441668762782983,
+          "delta_bpc": 0.0030969521156749558
+        },
+        {
+          "seed": 2026,
+          "statbound_bpc": 1.2464377842644832,
+          "unigram_bpc": 1.246030464571455,
+          "delta_bpc": 0.00040731969302809645
+        }
+      ]
+    },
+    "wikipedia_validation": {
+      "statbound_bpc": {
+        "n": 3,
+        "mean": 1.9254536802341242,
+        "std": 0.004908926603922233,
+        "values": [
+          1.9262248708768122,
+          1.9299313666388545,
+          1.9202048031867058
+        ],
+        "min": 1.9202048031867058,
+        "max": 1.9299313666388545
+      },
+      "unigram_bpc": {
+        "n": 3,
+        "mean": 1.9276292885258186,
+        "std": 0.0020390064006855393,
+        "values": [
+          1.927220187307196,
+          1.9298418292363824,
+          1.9258258490338775
+        ],
+        "min": 1.9258258490338775,
+        "max": 1.9298418292363824
+      },
+      "mean_delta_bpc_statbound_minus_unigram": -0.0021756082916943864,
+      "max_allowed_absolute_regression": 0.02,
+      "pass": true,
+      "per_seed": [
+        {
+          "seed": 42,
+          "statbound_bpc": 1.9262248708768122,
+          "unigram_bpc": 1.927220187307196,
+          "delta_bpc": -0.0009953164303837525
+        },
+        {
+          "seed": 1337,
+          "statbound_bpc": 1.9299313666388545,
+          "unigram_bpc": 1.9298418292363824,
+          "delta_bpc": 8.953740247208408e-05
+        },
+        {
+          "seed": 2026,
+          "statbound_bpc": 1.9202048031867058,
+          "unigram_bpc": 1.9258258490338775,
+          "delta_bpc": -0.005621045847171713
+        }
+      ]
+    }
+  },
+  "success_criteria": {
+    "SC1": {
+      "status": "FAIL",
+      "mean_bpc_strictly_lower": false,
+      "seeds_beating_unigram": 1,
+      "required_seeds": 2
+    },
+    "SC2": {
+      "status": "PASS",
+      "role": "secondary evidence; does not replace SC1",
+      "mean_delta_bpc": -0.0005362696528898869
+    },
+    "SC3": {
+      "status": "DIAGNOSTIC_ONLY",
+      "conditions": [
+        "parameter_matched_x_fixed_updates",
+        "architecture_matched_x_fixed_updates"
+      ]
+    },
+    "SC4": {
+      "status": "FAIL",
+      "status_source": "frozen Phase-C result",
+      "development_boundary_f1": 0.5550808080808081,
+      "threshold_margin": 0.03,
+      "rerun": false
+    },
+    "SC5": {
+      "status": "PASS",
+      "statbound_lambda_0_25_tpc": 0.2280992074186497,
+      "unigram_8000_tpc": 0.22810235946219834,
+      "absolute_delta": -3.1520435486431797e-06,
+      "relative_delta": -1.3818548637878267e-05,
+      "sc5_threshold_relative": 0.1,
+      "sc5_pass": true,
+      "source": "data/reports/phase_c_lambda_selection_v0_2.json"
+    },
+    "SC6": {
+      "status": "PASS",
+      "threshold_absolute_regression": 0.02,
+      "sources": {
+        "bible_validation": {
+          "statbound_bpc": {
+            "n": 3,
+            "mean": 1.2468182461792174,
+            "std": 0.00041685455025995124,
+            "values": [
+              1.2467531258791957,
+              1.2472638283939732,
+              1.2464377842644832
+            ],
+            "min": 1.2464377842644832,
+            "max": 1.2472638283939732
+          },
+          "unigram_bpc": {
+            "n": 3,
+            "mean": 1.2455074448929901,
+            "std": 0.0011702692121653801,
+            "values": [
+              1.2463249938292171,
+              1.2441668762782983,
+              1.246030464571455
+            ],
+            "min": 1.2441668762782983,
+            "max": 1.2463249938292171
+          },
+          "mean_delta_bpc_statbound_minus_unigram": 0.0013108012862272922,
+          "max_allowed_absolute_regression": 0.02,
+          "pass": true,
+          "per_seed": [
+            {
+              "seed": 42,
+              "statbound_bpc": 1.2467531258791957,
+              "unigram_bpc": 1.2463249938292171,
+              "delta_bpc": 0.0004281320499786023
+            },
+            {
+              "seed": 1337,
+              "statbound_bpc": 1.2472638283939732,
+              "unigram_bpc": 1.2441668762782983,
+              "delta_bpc": 0.0030969521156749558
+            },
+            {
+              "seed": 2026,
+              "statbound_bpc": 1.2464377842644832,
+              "unigram_bpc": 1.246030464571455,
+              "delta_bpc": 0.00040731969302809645
+            }
+          ]
+        },
+        "wikipedia_validation": {
+          "statbound_bpc": {
+            "n": 3,
+            "mean": 1.9254536802341242,
+            "std": 0.004908926603922233,
+            "values": [
+              1.9262248708768122,
+              1.9299313666388545,
+              1.9202048031867058
+            ],
+            "min": 1.9202048031867058,
+            "max": 1.9299313666388545
+          },
+          "unigram_bpc": {
+            "n": 3,
+            "mean": 1.9276292885258186,
+            "std": 0.0020390064006855393,
+            "values": [
+              1.927220187307196,
+              1.9298418292363824,
+              1.9258258490338775
+            ],
+            "min": 1.9258258490338775,
+            "max": 1.9298418292363824
+          },
+          "mean_delta_bpc_statbound_minus_unigram": -0.0021756082916943864,
+          "max_allowed_absolute_regression": 0.02,
+          "pass": true,
+          "per_seed": [
+            {
+              "seed": 42,
+              "statbound_bpc": 1.9262248708768122,
+              "unigram_bpc": 1.927220187307196,
+              "delta_bpc": -0.0009953164303837525
+            },
+            {
+              "seed": 1337,
+              "statbound_bpc": 1.9299313666388545,
+              "unigram_bpc": 1.9298418292363824,
+              "delta_bpc": 8.953740247208408e-05
+            },
+            {
+              "seed": 2026,
+              "statbound_bpc": 1.9202048031867058,
+              "unigram_bpc": 1.9258258490338775,
+              "delta_bpc": -0.005621045847171713
+            }
+          ]
+        }
+      }
+    }
+  },
+  "integrity": {
+    "expected_runs": 12,
+    "completed_run_records": 12,
+    "runner_failures": [],
+    "all_required_runs_present": true,
+    "all_checkpoints_reload_ok": true,
+    "all_source_evaluations_validation_only": true
+  },
+  "historical_metrics": {
+    "exact_agreement": 0.52,
+    "boundary_f1": 0.841,
+    "description": "Historical measurements of the original underspecified annotation protocol.",
+    "recomputed": false
+  },
+  "restricted_materials": {
+    "morphology_holdout": "LOCKED / UNTOUCHED",
+    "lm_test": "LOCKED / UNTOUCHED",
+    "lm_test_accessed": false,
+    "morphology_holdout_accessed": false,
+    "phase_c_rerun": false,
+    "v2_experiment": false,
+    "post_hoc_lambda": false,
+    "ablations": false
+  },
+  "required_protocol_note": "StatBound V1 entered LM evaluation despite failing SC4 because the pre-registered protocol evaluates the selected λ* on the remaining independent criteria; Phase-C morphology failure was not used to modify the method."
+}

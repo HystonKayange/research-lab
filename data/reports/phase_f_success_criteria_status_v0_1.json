@@ -1,0 +1,141 @@
+{
+  "SC1": {
+    "status": "FAIL",
+    "mean_bpc_strictly_lower": false,
+    "seeds_beating_unigram": 1,
+    "required_seeds": 2
+  },
+  "SC2": {
+    "status": "PASS",
+    "role": "secondary evidence; does not replace SC1",
+    "mean_delta_bpc": -0.0005362696528898869
+  },
+  "SC3": {
+    "status": "DIAGNOSTIC_ONLY",
+    "conditions": [
+      "parameter_matched_x_fixed_updates",
+      "architecture_matched_x_fixed_updates"
+    ]
+  },
+  "SC4": {
+    "status": "FAIL",
+    "status_source": "frozen Phase-C result",
+    "development_boundary_f1": 0.5550808080808081,
+    "threshold_margin": 0.03,
+    "rerun": false
+  },
+  "SC5": {
+    "status": "PASS",
+    "statbound_lambda_0_25_tpc": 0.2280992074186497,
+    "unigram_8000_tpc": 0.22810235946219834,
+    "absolute_delta": -3.1520435486431797e-06,
+    "relative_delta": -1.3818548637878267e-05,
+    "sc5_threshold_relative": 0.1,
+    "sc5_pass": true,
+    "source": "data/reports/phase_c_lambda_selection_v0_2.json"
+  },
+  "SC6": {
+    "status": "PASS",
+    "threshold_absolute_regression": 0.02,
+    "sources": {
+      "bible_validation": {
+        "statbound_bpc": {
+          "n": 3,
+          "mean": 1.2468182461792174,
+          "std": 0.00041685455025995124,
+          "values": [
+            1.2467531258791957,
+            1.2472638283939732,
+            1.2464377842644832
+          ],
+          "min": 1.2464377842644832,
+          "max": 1.2472638283939732
+        },
+        "unigram_bpc": {
+          "n": 3,
+          "mean": 1.2455074448929901,
+          "std": 0.0011702692121653801,
+          "values": [
+            1.2463249938292171,
+            1.2441668762782983,
+            1.246030464571455
+          ],
+          "min": 1.2441668762782983,
+          "max": 1.2463249938292171
+        },
+        "mean_delta_bpc_statbound_minus_unigram": 0.0013108012862272922,
+        "max_allowed_absolute_regression": 0.02,
+        "pass": true,
+        "per_seed": [
+          {
+            "seed": 42,
+            "statbound_bpc": 1.2467531258791957,
+            "unigram_bpc": 1.2463249938292171,
+            "delta_bpc": 0.0004281320499786023
+          },
+          {
+            "seed": 1337,
+            "statbound_bpc": 1.2472638283939732,
+            "unigram_bpc": 1.2441668762782983,
+            "delta_bpc": 0.0030969521156749558
+          },
+          {
+            "seed": 2026,
+            "statbound_bpc": 1.2464377842644832,
+            "unigram_bpc": 1.246030464571455,
+            "delta_bpc": 0.00040731969302809645
+          }
+        ]
+      },
+      "wikipedia_validation": {
+        "statbound_bpc": {
+          "n": 3,
+          "mean": 1.9254536802341242,
+          "std": 0.004908926603922233,
+          "values": [
+            1.9262248708768122,
+            1.9299313666388545,
+            1.9202048031867058
+          ],
+          "min": 1.9202048031867058,
+          "max": 1.9299313666388545
+        },
+        "unigram_bpc": {
+          "n": 3,
+          "mean": 1.9276292885258186,
+          "std": 0.0020390064006855393,
+          "values": [
+            1.927220187307196,
+            1.9298418292363824,
+            1.9258258490338775
+          ],
+          "min": 1.9258258490338775,
+          "max": 1.9298418292363824
+        },
+        "mean_delta_bpc_statbound_minus_unigram": -0.0021756082916943864,
+        "max_allowed_absolute_regression": 0.02,
+        "pass": true,
+        "per_seed": [
+          {
+            "seed": 42,
+            "statbound_bpc": 1.9262248708768122,
+            "unigram_bpc": 1.927220187307196,
+            "delta_bpc": -0.0009953164303837525
+          },
+          {
+            "seed": 1337,
+            "statbound_bpc": 1.9299313666388545,
+            "unigram_bpc": 1.9298418292363824,
+            "delta_bpc": 8.953740247208408e-05
+          },
+          {
+            "seed": 2026,
+            "statbound_bpc": 1.9202048031867058,
+            "unigram_bpc": 1.9258258490338775,
+            "delta_bpc": -0.005621045847171713
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "schema_version": "phase_f_provenance_v0_1",
+  "phase": "F",
+  "generated_at": "2026-08-14T09:10:29.887016Z",
+  "benchmark_version": "morphology_benchmark_v0.2",
+  "lambda_star": 0.25,
+  "matrix_config": "configs/models/lm_baselines_v0_1_final_matrix_r2.json",
+  "git_commit": "71d54852eea1a22b18ef364b7ef3221d0940b49a",
+  "environment": {
+    "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "torch": "2.11.0+cu128",
+    "cuda_available_at_report": false
+  },
+  "input_hashes": {
+    "configs/models/lm_baselines_v0_1_final_matrix_r2.json": "7956fea6eaf8c2f81e25a09e30d4e532dab6ef57d596be96eb8bca0de066891a",
+    "configs/tokenizers/statbound_unigram_v1.json": "95df313888f929c3fa63371a843d7d8edac3ca3d03ee96a31e8e1e1bdcc00a46",
+    "configs/tokenizers/statbound_unigram_v1_eval_protocol.json": "9685709a9c7c7aa08e7e24d0f1be8514fe046c81c65d406cc0d83a6adb8a8c61",
+    "data/tokenizers/chichewa_corpus_v0.1/statbound_unigram_v1/boundary_stats.json": "4744460d14bd30b8941c0e92d753cbdc54ead8471f43bb78dead922941bd721f",
+    "data/tokenizers/chichewa_corpus_v0.1/baselines_v0.1/unigram/vocab_8000/model.model": "230646c68ff9212ddbe35f01f688db43bba63cadb32d96f820b85cab572414be",
+    "data/research/morphology_benchmark_v0.2/development/annotations/annotator_a_level_b_adjudicated_v0_2.jsonl": "73b948d782b6e979814de051ffad315ca282cbff5fc7f8c5de15b0c864852f67",
+    "scripts/models/run_phase_f_statbound_v1.py": "90b1771b70240377be171665e34c4b42d6d115aa52d97af7a6449aef0b7138c8",
+    "data/reports/phase_c_lambda_selection_v0_2.json": "1b2cc9100290577a9fda3ca52b68b83e4ffbd1eded0000bc61ecd81fc494089c"
+  },
+  "baseline_provenance": {
+    "validation_summary": "data/reports/lm_baselines_v0_1_validation_summary.json",
+    "validation_summary_sha256": "d50cb3549aa540939e38a9a0d04d84b51c08844ec6995d8a9b24ca51fadb77fe",
+    "r2_status": "data/metadata/lm_baselines_v0_1_matrix_r2_status.json",
+    "r2_status_sha256": "fb3f37a36a2a1405442833ad476dd78c2b0830b50c30132dc3cc1c043cc6ebef",
+    "baseline_retraining": false,
+    "baseline_audit_valid_runs": 36
+  },
+  "statbound_runs": {
+    "lm_baselines_v0_1_final_matrix_r2__final__param__statbound_lambda_0_25__seed42__chars_e30": {
+      "manifest": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_42/final/fixed_characters_e30/manifest.json",
+      "manifest_sha256": "887cc22b17f8ccf365f73456408ee7d4fae061bce37ac36e5b9f12fb25c30454",
+      "checkpoint": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_42/final/fixed_characters_e30/best.pt",
+      "checkpoint_sha256": "ac376c43659436768249590bb361d99ca71a0ccf38fc0e22ec409529c88efdc4",
+      "source_validation_metrics": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_42/final/fixed_characters_e30/source_validation_metrics.json",
+      "source_validation_metrics_sha256": "87facc5708603b5bd9eaea0d431b3cc74ae893d2042c24b77e0d1e30acca4700"
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__statbound_lambda_0_25__seed1337__chars_e30": {
+      "manifest": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_1337/final/fixed_characters_e30/manifest.json",
+      "manifest_sha256": "33d213e248ae1f9b7f39fcbeefb8f58d1a3b2f5bdec26cb903cb298cb2cfeedf",
+      "checkpoint": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_1337/final/fixed_characters_e30/best.pt",
+      "checkpoint_sha256": "c02b2159ec80b47684d917d0caa5f5f51e4735c2a2812a249e32bb21bab4e2bd",
+      "source_validation_metrics": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_1337/final/fixed_characters_e30/source_validation_metrics.json",
+      "source_validation_metrics_sha256": "a7ff5f8f07263b392e2e2bc2a8a5102865fec81f2109daeb8ba8448f3d290433"
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__statbound_lambda_0_25__seed2026__chars_e30": {
+      "manifest": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_2026/final/fixed_characters_e30/manifest.json",
+      "manifest_sha256": "7c58dcbdffa908d37198ea04e68dbf2b1845f89cf374c102364aa034c5ee11a5",
+      "checkpoint": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_2026/final/fixed_characters_e30/best.pt",
+      "checkpoint_sha256": "799d3240f25d39053d32fde7fabe39e524eb4ad28ff0300db0554ef72ca5c5f2",
+      "source_validation_metrics": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_2026/final/fixed_characters_e30/source_validation_metrics.json",
+      "source_validation_metrics_sha256": "e65cd6a1963f37ce47194afba05597813c09a83bca5d4b1b808e2816bfcb8ae0"
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__statbound_lambda_0_25__seed42__chars_e30": {
+      "manifest": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_42/final/fixed_characters_e30/manifest.json",
+      "manifest_sha256": "b24098e6e26167b6d12d894034a32e4fa7d54c7f0bd5b0a11c3a96321186591f",
+      "checkpoint": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_42/final/fixed_characters_e30/best.pt",
+      "checkpoint_sha256": "e8415b494e515656bce9e007769395f6bd7e4d0cd383a972da254f7f5550e9e5",
+      "source_validation_metrics": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_42/final/fixed_characters_e30/source_validation_metrics.json",
+      "source_validation_metrics_sha256": "93154971fef0ea08ca6d81cf4a4f65f4155554dce66c60f583c0348c50227a94"
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__statbound_lambda_0_25__seed1337__chars_e30": {
+      "manifest": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_1337/final/fixed_characters_e30/manifest.json",
+      "manifest_sha256": "e4023bdea1608dec0e6f46696969562fca4850f3bb43a2f5624951db4661ef48",
+      "checkpoint": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_1337/final/fixed_characters_e30/best.pt",
+      "checkpoint_sha256": "e863380bb413650e5d9ad64ae36c184a24035fa12a10dc603d07fb6fd52fdd98",
+      "source_validation_metrics": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_1337/final/fixed_characters_e30/source_validation_metrics.json",
+      "source_validation_metrics_sha256": "9b884960acb9bb14c661c160e010dc7b0b05236ac6f859b8e61fadd1015c7486"
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__statbound_lambda_0_25__seed2026__chars_e30": {
+      "manifest": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_2026/final/fixed_characters_e30/manifest.json",
+      "manifest_sha256": "c3eb72ed9d0c75b5533fa6c2afb6dfd030cb49eb6b0f637b8f3fa3d6143d07b3",
+      "checkpoint": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_2026/final/fixed_characters_e30/best.pt",
+      "checkpoint_sha256": "5b6773512df3430aa6d9f346e3f413c8603eeef5abcfb2a5906707fab3418191",
+      "source_validation_metrics": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_2026/final/fixed_characters_e30/source_validation_metrics.json",
+      "source_validation_metrics_sha256": "fdbb712cd801bb541b25b5901b516b1dd2359bfb8827bbc1e1cf78731ec3a1bb"
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__statbound_lambda_0_25__seed42__updates_u4000": {
+      "manifest": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_42/final/fixed_updates_u4000/manifest.json",
+      "manifest_sha256": "b511e7d7a4dfdb4c14cf98e9015a6d20d19ee9cb1bacf7955855fea2a9d59a1e",
+      "checkpoint": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_42/final/fixed_updates_u4000/best.pt",
+      "checkpoint_sha256": "4576bb19c890f148fab8eaafc8b70d1e65b4939ff050e0d0f4836911330b4cbb",
+      "source_validation_metrics": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_42/final/fixed_updates_u4000/source_validation_metrics.json",
+      "source_validation_metrics_sha256": "8f665a43ff7240e8b1fd0cc57563f5fd2e9500f6d46ff6ad6d5a7a89e97a7e5f"
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__statbound_lambda_0_25__seed1337__updates_u4000": {
+      "manifest": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_1337/final/fixed_updates_u4000/manifest.json",
+      "manifest_sha256": "abc0a569f3a2cf08932bfac02555c7cc593c87896e7594057029c046102ad7a4",
+      "checkpoint": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_1337/final/fixed_updates_u4000/best.pt",
+      "checkpoint_sha256": "68dc76e50ec01360c543808adc8ec181051e953d1eae344ef2460965d8854cf4",
+      "source_validation_metrics": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_1337/final/fixed_updates_u4000/source_validation_metrics.json",
+      "source_validation_metrics_sha256": "fc1ee299231192c068226804e7309a679dfa289ba7f366a8d9ddb90d24506ff8"
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__param__statbound_lambda_0_25__seed2026__updates_u4000": {
+      "manifest": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_2026/final/fixed_updates_u4000/manifest.json",
+      "manifest_sha256": "d1da6d29411392177216a3d0727124c86dbca94ddb5bc4fd1967180832caea62",
+      "checkpoint": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_2026/final/fixed_updates_u4000/best.pt",
+      "checkpoint_sha256": "3b8ac8a270be86620002b37b4555e2c095086c51428f825467657137c6c7b9b9",
+      "source_validation_metrics": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/parameter_matched/statbound_lambda_0_25/seed_2026/final/fixed_updates_u4000/source_validation_metrics.json",
+      "source_validation_metrics_sha256": "2207ffcb9c741073eee5afd2cfd0714d61f93b1d409bb5514279ce3d419fbde3"
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__statbound_lambda_0_25__seed42__updates_u4000": {
+      "manifest": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_42/final/fixed_updates_u4000/manifest.json",
+      "manifest_sha256": "0561c63a6100c6adde7f8e430b61c98acb0f7036b28f99dfa592fcf2fbd807ec",
+      "checkpoint": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_42/final/fixed_updates_u4000/best.pt",
+      "checkpoint_sha256": "e8b9a5b52f1f404d4d27d5e311dc1e77e83ae602ca5678b3cf07e1a290e47b52",
+      "source_validation_metrics": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_42/final/fixed_updates_u4000/source_validation_metrics.json",
+      "source_validation_metrics_sha256": "1d56a77523dfc447f2459a577ded00d1009b36f2f237d41c7820a7f1a30c4e6d"
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__statbound_lambda_0_25__seed1337__updates_u4000": {
+      "manifest": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_1337/final/fixed_updates_u4000/manifest.json",
+      "manifest_sha256": "33b539474f524a443bb37b39ae2d5b7e3cc9d8d99be27c8977e6bd4822c9e964",
+      "checkpoint": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_1337/final/fixed_updates_u4000/best.pt",
+      "checkpoint_sha256": "46c77a74a9b1ce803523dc90116a2e163599d3ee3517c14835e8a9ce4cb640be",
+      "source_validation_metrics": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_1337/final/fixed_updates_u4000/source_validation_metrics.json",
+      "source_validation_metrics_sha256": "8ffe5f26722af3ab977bd90dbe5723950aa3b3ea41bc5deeb3080445e1109bef"
+    },
+    "lm_baselines_v0_1_final_matrix_r2__final__arch__statbound_lambda_0_25__seed2026__updates_u4000": {
+      "manifest": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_2026/final/fixed_updates_u4000/manifest.json",
+      "manifest_sha256": "393e682922f634a7ce31a6a1b96289e30a1fb8ced14e9a33a84a80b2bfdc1b3b",
+      "checkpoint": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_2026/final/fixed_updates_u4000/best.pt",
+      "checkpoint_sha256": "6a79a5333a384583884a0291c60b23aa387eb5069cf8b19f0ae8347f4941f7bc",
+      "source_validation_metrics": "data/models/chichewa_corpus_v0.1/lm_baselines_v0.1/architecture_matched/statbound_lambda_0_25/seed_2026/final/fixed_updates_u4000/source_validation_metrics.json",
+      "source_validation_metrics_sha256": "397b1f4c795c38c0ee9a218be38881d24d0e3fe7b00035a64065836753ba4bfa"
+    }
+  },
+  "output_hashes": {
+    "results_json": "8005808ba1fa2341faa85fc520d72d7f1a9670d53cf6b207a3d5a45cb44d38c2",
+    "report_md": "821fcd501512a3e578ec917bf17264b4fecb724cf5fc31dc55b90de775d0d6fe",
+    "success_json": "788d65a511601848801aeab0f796ec92aff31060b97732f7b21ec7609417ebff",
+    "success_md": "7fcaa8a2ce010f5a68c5461fa107182b588371b5311d941e047a428b431b2c30"
+  },
+  "restricted_materials": {
+    "morphology_holdout_accessed": false,
+    "lm_test_accessed": false,
+    "lm_test_file_opened_by_statbound_runner": false,
+    "phase_c_rerun": false,
+    "post_hoc_lambda": false,
+    "v2_experiment": false,
+    "ablations": false,
+    "holdout_status": "LOCKED / UNTOUCHED",
+    "lm_test_status": "LOCKED / UNTOUCHED"
+  },
+  "historical_metrics_preserved": {
+    "exact_agreement": 0.52,
+    "boundary_f1": 0.841,
+    "recomputed": false
+  }
+}

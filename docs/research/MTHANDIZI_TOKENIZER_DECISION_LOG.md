@@ -338,6 +338,35 @@ Every material research decision is recorded here.
 
 ---
 
+---
+
+## D-0014 — Complete Phase-F validation of StatBound V1 λ*=0.25
+
+- **date:** 2026-08-14
+- **evidence considered:**
+  - Frozen Phase-C λ-selection and morphology result
+  - Existing audited Unigram8k baseline matrix `lm_baselines_v0_1_final_matrix_r2`
+  - Twelve validation-only StatBound V1 λ*=0.25 runs across the four preregistered LM regimes
+  - Phase-F result, success-criteria, provenance, and integrity artifacts
+- **decision:**
+  - Preserve StatBound V1 λ*=0.25 as the evaluated frozen V1 method; no λ, algorithm, benchmark, n-best, score scaling, or success criterion was changed
+  - Record SC1 primary parameter-matched × fixed-character as **FAIL**: StatBound mean validation BPC `1.4374023267` versus Unigram8k `1.4370611408` (Δ `+0.0003411859`), with `1/3` seeds beating Unigram
+  - Record SC2 architecture-matched × fixed-character as **PASS** secondary evidence (mean Δ `-0.0005362697`), without replacing SC1
+  - Record fixed-update regimes as diagnostic only; no additional criterion or method decision was made from them
+  - Record SC4 as the frozen Phase-C morphology-development **FAIL**; it was not rerun or reinterpreted
+  - Record SC5 efficiency as **PASS** and SC6 source-specific validation as **PASS** under the frozen thresholds
+  - Stop after Phase-F validation; do not proceed automatically to later experiments
+  - StatBound V1 entered LM evaluation despite failing SC4 because the pre-registered protocol evaluates the selected λ* on the remaining independent criteria; Phase-C morphology failure was not used to modify the method
+- **rejected alternatives:**
+  - Changing λ, rescaling the StatBound score, changing n-best or boundary statistics, modifying the algorithm, changing the benchmark, or altering success criteria
+  - Using SC2 or fixed-update diagnostics to replace the failed primary SC1 gate
+  - Accessing the morphology holdout or LM test, running post-hoc λ values, V2 fixes, or ablations
+  - Recomputing or overwriting historical exact agreement `0.52` and boundary F1 `0.841`
+- **unresolved questions:**
+  - None within the completed preregistered Phase-F validation; any method improvement is outside this frozen V1 record and requires a separately authorized experiment
+- **approval status:** frozen_phase_f_validation_complete
+- **changes_registered_eval_protocol:** no (evaluation followed the frozen protocol; no outcome-driven method or criterion changes)
+
 ## Template for new entries
 
 ```markdown
