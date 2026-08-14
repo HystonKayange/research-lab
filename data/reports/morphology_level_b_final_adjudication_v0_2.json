@@ -1,0 +1,207 @@
+{
+  "report_version": "morphology_level_b_final_adjudication_v0_2",
+  "benchmark_version": "morphology_benchmark_v0.2",
+  "policy_version": "v0.2",
+  "source_items": 195,
+  "active_final_benchmark": 162,
+  "excluded": 33,
+  "unresolved_human_review": 0,
+  "reconstruction_failures": 0,
+  "original_keep_items_retained": 18,
+  "policy_revisions_accepted": 133,
+  "native_speaker_adjudications": 11,
+  "deviations_from_provisional_policy": [
+    {
+      "item_id": "morph_dev_0043",
+      "surface_form": "pakatipa",
+      "provisional_policy_result": "HUMAN_REVIEW",
+      "provisional_segmentation": "pa+katipa",
+      "human_decision": "CHANGE",
+      "final_segmentation": "pakati+pa",
+      "human_note": "Native-speaker judgment: pakati means “middle”; final pa contributes the relational/pointing sense in pakatipa, roughly “in the middle of”. Rejects the provisional pa+katipa. The item remains in the benchmark."
+    },
+    {
+      "item_id": "morph_dev_0064",
+      "surface_form": "m’Chicheŵa",
+      "provisional_policy_result": "HUMAN_REVIEW",
+      "provisional_segmentation": "m’+Chicheŵa",
+      "human_decision": "ACCEPT",
+      "final_segmentation": "m’+Chicheŵa",
+      "human_note": "m’ is the contracted form corresponding to mu in this construction; the phrase means “in Chichewa”. Full “mu Chicheŵa” is not the natural surface form here. Exact apostrophe and orthography are preserved."
+    },
+    {
+      "item_id": "morph_dev_0071",
+      "surface_form": "M’nthaŵi",
+      "provisional_policy_result": "HUMAN_REVIEW",
+      "provisional_segmentation": "M’+nthaŵi",
+      "human_decision": "ACCEPT",
+      "final_segmentation": "M’+nthaŵi",
+      "human_note": "M’ is contracted mu in the expression meaning approximately “in/at the time”. Capitalization and ŵ are preserved exactly."
+    },
+    {
+      "item_id": "morph_dev_0078",
+      "surface_form": "kumadzulo",
+      "provisional_policy_result": "HUMAN_REVIEW",
+      "provisional_segmentation": "ku+madzulo",
+      "human_decision": "ACCEPT",
+      "final_segmentation": "ku+madzulo",
+      "human_note": "madzulo independently means “evening”; ku contributes locative/temporal/directional meaning such as “at/in/toward”, with contextual interpretation including west/westward."
+    },
+    {
+      "item_id": "morph_dev_0106",
+      "surface_form": "m'gululi",
+      "provisional_policy_result": "HUMAN_REVIEW",
+      "provisional_segmentation": "m'+gulu+li",
+      "human_decision": "ACCEPT",
+      "final_segmentation": "m'+gulu+li",
+      "human_note": "m’ is contracted mu meaning “in”; gulu means “group”; li contributes the proximal/“this” interpretation, yielding approximately “in this group”. The exact apostrophe character found in surface_form is preserved."
+    },
+    {
+      "item_id": "morph_dev_0136",
+      "surface_form": "aloe",
+      "provisional_policy_result": "HUMAN_REVIEW",
+      "provisional_segmentation": "aloe",
+      "human_decision": "KEEP_WHOLE",
+      "final_segmentation": "aloe",
+      "human_note": "Native speaker recognizes aloe as the plant name. There is no defensible internal Chichewa morphological boundary for this benchmark. This is not an EXCLUDE item."
+    },
+    {
+      "item_id": "morph_dev_0155",
+      "surface_form": "watiwona",
+      "provisional_policy_result": "HUMAN_REVIEW",
+      "provisional_segmentation": "wa+ti+won+a",
+      "human_decision": "CHANGE",
+      "final_segmentation": "wa+ti+wona",
+      "human_note": "Native-speaker lexical judgment identifies wona as the meaningful Chichewa verb “see”. The finer won+a decomposition is not preferred for this conservative Level-B benchmark in this ambiguous case. This is a lexical-integrity resolution and does not remove independently supported final-vowel boundaries elsewhere."
+    },
+    {
+      "item_id": "morph_dev_0181",
+      "surface_form": "chitambasulire",
+      "provisional_policy_result": "HUMAN_REVIEW",
+      "provisional_segmentation": "chi+tambasulire",
+      "human_decision": "ACCEPT",
+      "final_segmentation": "chi+tambasulire",
+      "human_note": "chi- is the clear grammatical/class element. The lexical family is associated with tambasula, with meanings related to unfolding/explaining/translation-like usage. No finer internal split of tambasulire is forced without stronger independent evidence."
+    },
+    {
+      "item_id": "morph_dev_0183",
+      "surface_form": "m’nyumbazo",
+      "provisional_policy_result": "HUMAN_REVIEW",
+      "provisional_segmentation": "m’+nyumba+zo",
+      "human_decision": "ACCEPT",
+      "final_segmentation": "m’+nyumba+zo",
+      "human_note": "m’ is contracted mu meaning “in”; nyumba is “house”; zo supplies the relevant noun-class/deictic meaning, roughly “in those houses”. Exact orthography is preserved."
+    },
+    {
+      "item_id": "morph_dev_0185",
+      "surface_form": "movutika",
+      "provisional_policy_result": "HUMAN_REVIEW",
+      "provisional_segmentation": "mo+vutika",
+      "human_decision": "ACCEPT",
+      "final_segmentation": "mo+vutika",
+      "human_note": "vutika is the verb “to struggle / have difficulty”. mo- contributes a descriptive/manner-like interpretation in context, e.g. akuyenda movutika “walking with difficulty”. The finer vut+ik+a analysis is not forced; vutika is retained as the lexical unit."
+    },
+    {
+      "item_id": "morph_dev_0196",
+      "surface_form": "ndidzamwenso",
+      "provisional_policy_result": "HUMAN_REVIEW",
+      "provisional_segmentation": "ndi+dza+mwe+nso",
+      "human_decision": "CHANGE",
+      "final_segmentation": "ndi+dzamwe+nso",
+      "human_note": "Native-speaker judgment identifies ndi as the 1SG participant, dzamwe as the meaningful construction “come and drink / come to drink”, and nso as “again”. The lexical verb is kumwa “to drink”. Do not describe mwa as meaning “drink”, and do not treat dza as simply future TAM in this context. The conservative native-speaker unit is dzamwe."
+    }
+  ],
+  "policy_v01_to_v02_clarification": "When source-grounded analyses permit multiple defensible granularities, prefer the segmentation that preserves the smallest lexical or grammatical unit recognized by the native annotator, unless a finer boundary is independently established by a productive grammatical paradigm. Native-speaker lexical intuition does NOT imply that every morpheme must be a standalone word. Bound grammatical morphology remains valid when independently motivated. This clarification applies only where the frozen Level-B policy left genuine ambiguity.",
+  "clarification_provenance": "Introduced during adjudication of the 11 previously flagged HUMAN_REVIEW cases, before Phase C, without consulting tokenizer outputs or evaluation results; benchmark-instrument clarification rather than outcome-driven tuning.",
+  "validation": {
+    "source_items": 195,
+    "active_items": 162,
+    "excluded_items": 33,
+    "reconstruction_failures": [],
+    "empty_segments": [],
+    "whitespace_corruption": [],
+    "capitalization_or_orthography_failures": [],
+    "apostrophe_failures": [],
+    "w_orthography_failures": [],
+    "duplicate_active_ids": [],
+    "duplicate_excluded_ids": [],
+    "overlap_ids": [],
+    "union_missing_ids": [],
+    "union_extra_ids": [],
+    "unresolved_human_review": [],
+    "blank_active_final_segmentations": [],
+    "policy_conformity_failures": [],
+    "human_case_reconstruction": {
+      "morph_dev_0043": {
+        "segmentation": "pakati+pa",
+        "reconstructed": true
+      },
+      "morph_dev_0064": {
+        "segmentation": "m’+Chicheŵa",
+        "reconstructed": true
+      },
+      "morph_dev_0071": {
+        "segmentation": "M’+nthaŵi",
+        "reconstructed": true
+      },
+      "morph_dev_0078": {
+        "segmentation": "ku+madzulo",
+        "reconstructed": true
+      },
+      "morph_dev_0106": {
+        "segmentation": "m'+gulu+li",
+        "reconstructed": true
+      },
+      "morph_dev_0136": {
+        "segmentation": "aloe",
+        "reconstructed": true
+      },
+      "morph_dev_0155": {
+        "segmentation": "wa+ti+wona",
+        "reconstructed": true
+      },
+      "morph_dev_0181": {
+        "segmentation": "chi+tambasulire",
+        "reconstructed": true
+      },
+      "morph_dev_0183": {
+        "segmentation": "m’+nyumba+zo",
+        "reconstructed": true
+      },
+      "morph_dev_0185": {
+        "segmentation": "mo+vutika",
+        "reconstructed": true
+      },
+      "morph_dev_0196": {
+        "segmentation": "ndi+dzamwe+nso",
+        "reconstructed": true
+      }
+    },
+    "source_v01_files_byte_for_byte_unchanged": {
+      "data/research/morphology_benchmark_v0.1/development/annotations/annotator_a_active_195_v0_1.jsonl": true,
+      "data/research/morphology_benchmark_v0.1/development/annotations/annotator_a_full_200_canonical_v0_1.jsonl": true,
+      "data/research/morphology_benchmark_v0.1/development/annotations/annotator_a_full_200_reviewed_v0_1.jsonl": true
+    },
+    "passed": true
+  },
+  "restricted_materials_accessed": {
+    "BPE_outputs_accessed": false,
+    "Unigram_outputs_accessed": false,
+    "StatBound_outputs_accessed": false,
+    "tokenizer_metrics_accessed": false,
+    "tokenizer_efficiency_results_accessed": false,
+    "morphology_holdout_accessed": false,
+    "LM_test_accessed": false,
+    "Phase_C_run": false,
+    "tokenizer_evaluation_run": false
+  },
+  "historical_measurements": {
+    "exact_agreement": 0.52,
+    "boundary_f1": 0.841,
+    "description": "Historical measurements of the original underspecified annotation protocol."
+  },
+  "provenance_statement": "Native-speaker adjudicated under a frozen source-grounded Level-B conservative morphology framework, with computational linguistic assistance used for research and proposal generation.",
+  "computational_assistance_note": "This record does not describe computational assistants as independent human annotators and does not claim human-human IAA.",
+  "freeze_manifest": "data/research/morphology_benchmark_v0.2/MORPHOLOGY_BENCHMARK_FREEZE_MANIFEST_v0_2.json",
+  "gold_status": "No separate gold benchmark was created or modified; this is the final adjudicated development benchmark."
+}

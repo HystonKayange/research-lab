@@ -1,0 +1,32 @@
+{
+  "benchmark_version": "morphology_benchmark_v0.2",
+  "policy_version": "v0.2",
+  "active_count": 162,
+  "excluded_count": 33,
+  "freeze_timestamp": "2026-08-14T07:02:54.496Z",
+  "git_commit_if_available": null,
+  "hashes": {
+    "data/research/morphology_benchmark_v0.2/development/annotations/annotator_a_level_b_adjudicated_v0_2.jsonl": "73b948d782b6e979814de051ffad315ca282cbff5fc7f8c5de15b0c864852f67",
+    "data/research/morphology_benchmark_v0.2/development/excluded_items_v0_2.jsonl": "5d1d615adb1592969baa560e36b42b49430ccf48b84111cc438c3b4bb3da6ef9",
+    "docs/research/CHICHEWA_LEVEL_B_ADJUDICATION_POLICY_v0_2.md": "08f1742975ce2346b2935d3ae34bc173e757d3b5c906f577a79bfb71824cb587",
+    "data/reports/morphology_level_b_human_exceptions_adjudicated_v0_2.csv": "afa2adcf28304b6855e284a1ca652760c993e42f0eb4b4ca136c7f12307f2774",
+    "data/reports/morphology_level_b_final_adjudication_v0_2.json": "76c294bdb00da18622938ddb7dc809ab36192261841493f7857396320cadf641"
+  },
+  "restricted_materials_accessed": {
+    "BPE_outputs_accessed": false,
+    "Unigram_outputs_accessed": false,
+    "StatBound_outputs_accessed": false,
+    "tokenizer_metrics_accessed": false,
+    "tokenizer_efficiency_results_accessed": false,
+    "morphology_holdout_accessed": false,
+    "LM_test_accessed": false,
+    "Phase_C_run": false,
+    "tokenizer_evaluation_run": false
+  },
+  "holdout_status": "LOCKED / UNTOUCHED",
+  "LM_test_status": "LOCKED / UNTOUCHED",
+  "Phase_C_status": "NOT_STARTED",
+  "source_v01_annotation_files_unchanged": true,
+  "validation_passed": true,
+  "gold_status": "No separate gold benchmark was created or modified."
+}

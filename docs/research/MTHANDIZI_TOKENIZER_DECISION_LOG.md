@@ -287,6 +287,30 @@ Every material research decision is recorded here.
 
 ---
 
+## D-0012 — Freeze Chichewa Level-B morphology development benchmark v0.2 after native-speaker adjudication
+
+- **date:** 2026-08-14
+- **evidence considered:**
+  - Frozen Level-B policy v0.1 and policy application v0.1
+  - Native-speaker adjudication of all 11 previously unresolved HUMAN_REVIEW cases
+  - Source-grounded Level-B re-audit of the active 195-item development set
+- **decision:**
+  - Version the policy clarification as `docs/research/CHICHEWA_LEVEL_B_ADJUDICATION_POLICY_v0_2.md`
+  - Freeze the native-speaker adjudicated Chichewa morphology development benchmark v0.2 with 162 active items and 33 excluded items
+  - Record the completed human exceptions and hashes in the v0.2 freeze manifest
+  - Preserve exact agreement 0.52 and boundary F1 0.841 as historical measurements of the original underspecified annotation protocol
+  - Keep the morphology holdout locked/untouched, keep the LM test locked/untouched, and leave Phase C not started
+- **rejected alternatives:**
+  - Reinterpreting historical self-review measurements after adjudication
+  - Using tokenizer outputs, tokenizer metrics, LM results, or holdout behavior to resolve morphology
+  - Creating benchmark gold changes beyond this adjudicated development benchmark
+- **unresolved questions:**
+  - None among the 11 HUMAN_REVIEW cases; future scientific evaluation remains outside this decision
+- **approval status:** frozen_pre_evaluation
+- **changes_registered_eval_protocol:** no (the morphology instrument was frozen before Phase C; no tokenizer evaluation was accessed)
+
+---
+
 ## Template for new entries
 
 ```markdown
