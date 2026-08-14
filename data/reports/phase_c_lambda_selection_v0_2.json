@@ -1,0 +1,130 @@
+{
+  "schema_version": "phase_c_lambda_selection_v0_2",
+  "protocol": "configs/tokenizers/statbound_unigram_v1_eval_protocol.json",
+  "selection": {
+    "lambda_star": 0.25,
+    "selected": {
+      "system_id": "statbound_lambda_0_25",
+      "lambda": 0.25,
+      "boundary_f1": 0.5550808080808081,
+      "tokens_per_character": 0.2280992074186497
+    },
+    "eligible_count": 4,
+    "sc5_failed_all_nonzero": false,
+    "tpc_threshold": 0.2509125954084182,
+    "unigram_tpc": 0.22810235946219834,
+    "max_relative_tpc": 1.1,
+    "selection_used_lm_bpc": false,
+    "pool": "eligible",
+    "schema_version": "phase_c_lambda_selection_v0_1",
+    "candidates": [
+      {
+        "system_id": "statbound_lambda_0_0",
+        "lambda": 0.0,
+        "boundary_f1": 0.5550808080808081,
+        "tokens_per_character": 0.2280992074186497
+      },
+      {
+        "system_id": "statbound_lambda_0_25",
+        "lambda": 0.25,
+        "boundary_f1": 0.5550808080808081,
+        "tokens_per_character": 0.2280992074186497
+      },
+      {
+        "system_id": "statbound_lambda_0_5",
+        "lambda": 0.5,
+        "boundary_f1": 0.5550808080808081,
+        "tokens_per_character": 0.2280992074186497
+      },
+      {
+        "system_id": "statbound_lambda_1_0",
+        "lambda": 1.0,
+        "boundary_f1": 0.5550808080808081,
+        "tokens_per_character": 0.22815121613720216
+      },
+      {
+        "system_id": "statbound_lambda_2_0",
+        "lambda": 2.0,
+        "boundary_f1": 0.5550808080808081,
+        "tokens_per_character": 0.22827414583559885
+      }
+    ],
+    "systems_evaluated": [
+      "bpe_8000",
+      "unigram_8000",
+      "statbound_lambda_0_0",
+      "statbound_lambda_0_25",
+      "statbound_lambda_0_5",
+      "statbound_lambda_1_0",
+      "statbound_lambda_2_0"
+    ],
+    "candidate_records": [
+      {
+        "lambda": 0.25,
+        "system_id": "statbound_lambda_0_25",
+        "boundary_f1": 0.5550808080808081,
+        "tokens_per_character": 0.2280992074186497,
+        "eligible": true,
+        "eligibility_reason": "TPC <= 1.10 × Unigram8k TPC (0.2509125954)"
+      },
+      {
+        "lambda": 0.5,
+        "system_id": "statbound_lambda_0_5",
+        "boundary_f1": 0.5550808080808081,
+        "tokens_per_character": 0.2280992074186497,
+        "eligible": true,
+        "eligibility_reason": "TPC <= 1.10 × Unigram8k TPC (0.2509125954)"
+      },
+      {
+        "lambda": 1.0,
+        "system_id": "statbound_lambda_1_0",
+        "boundary_f1": 0.5550808080808081,
+        "tokens_per_character": 0.22815121613720216,
+        "eligible": true,
+        "eligibility_reason": "TPC <= 1.10 × Unigram8k TPC (0.2509125954)"
+      },
+      {
+        "lambda": 2.0,
+        "system_id": "statbound_lambda_2_0",
+        "boundary_f1": 0.5550808080808081,
+        "tokens_per_character": 0.22827414583559885,
+        "eligible": true,
+        "eligibility_reason": "TPC <= 1.10 × Unigram8k TPC (0.2509125954)"
+      }
+    ],
+    "lm_bpc_accessed": false,
+    "eligible_lambdas": [
+      0.25,
+      0.5,
+      1.0,
+      2.0
+    ],
+    "winner_rule": "maximum morphology-development boundary F1 among eligible nonzero lambdas; tie lower TPC; tie smaller lambda"
+  },
+  "selected_lambda": 0.25,
+  "selected_system": "statbound_lambda_0_25",
+  "morphology_development_f1_not_confirmatory": true,
+  "sc4_development": {
+    "reference_system": "max(bpe_8000, unigram_8000)",
+    "reference_f1": 0.5550808080808081,
+    "selected_system": "statbound_lambda_0_25",
+    "selected_f1": 0.5550808080808081,
+    "margin": 0.0,
+    "threshold": 0.03,
+    "passes_provisionally": false,
+    "confirmatory": false
+  },
+  "input_hashes": {
+    "active_benchmark": "73b948d782b6e979814de051ffad315ca282cbff5fc7f8c5de15b0c864852f67",
+    "validation_text": "d2de8aa56c5df64830502945544fac9335e91fbc100435f9c2491cd68d763665",
+    "bpe_8000_model": "0ecaec484ce0ee162dcd1d248dfecc4b93adc4615a441b60129eeb4fe8673f34",
+    "unigram_8000_model": "230646c68ff9212ddbe35f01f688db43bba63cadb32d96f820b85cab572414be",
+    "statbound_config": "95df313888f929c3fa63371a843d7d8edac3ca3d03ee96a31e8e1e1bdcc00a46",
+    "statbound_eval_protocol": "9685709a9c7c7aa08e7e24d0f1be8514fe046c81c65d406cc0d83a6adb8a8c61",
+    "phase_c_protocol": "26bc17ef259965dd28a17a9cc933b02f59efab5e68f30746085c9983e4356a98",
+    "boundary_stats": "4744460d14bd30b8941c0e92d753cbdc54ead8471f43bb78dead922941bd721f"
+  },
+  "lm_bpc_used": false,
+  "holdout_accessed": false,
+  "lm_test_accessed": false
+}

@@ -311,6 +311,33 @@ Every material research decision is recorded here.
 
 ---
 
+## D-0013 — Freeze Phase-C negative morphology result and StatBound V1 λ*=0.25 before Phase F
+
+- **date:** 2026-08-14
+- **evidence considered:**
+  - Frozen Phase-C results in `data/reports/phase_c_morphology_v0_2_results.json`
+  - Frozen λ-selection record in `data/reports/phase_c_lambda_selection_v0_2.json`
+  - Post-Phase-C failure diagnostic in `data/reports/phase_c_statbound_failure_diagnostic_v0_1.json`
+  - Frozen Level-B development benchmark v0.2 and its SHA-256 provenance
+- **decision:**
+  - Preserve the Phase-C result, λ-selection, provenance, and failure-diagnostic artifacts as the scientific record
+  - Record Unigram8k as the strongest standard morphology comparator (development boundary F1 `0.5551`)
+  - Record all StatBound candidates at development boundary F1 `0.5551`; SC4 development criterion **NOT MET**
+  - Freeze StatBound V1 `lambda_star = 0.25`, selected by the pre-registered nonzero-candidate tie-break rule
+  - Enter LM evaluation despite failing SC4 because the pre-registered protocol evaluates the selected λ* on the remaining independent criteria; Phase-C morphology failure was not used to modify the method
+  - Proceed to Phase F using only λ*=0.25 under the four frozen LM regimes; keep the morphology holdout and LM test locked/untouched
+- **rejected alternatives:**
+  - Changing λ after the morphology result
+  - Rescaling the StatBound score, changing n-best, changing boundary statistics, or modifying the tokenizer algorithm
+  - Altering the benchmark or success criteria
+  - Running V2 fixes, post-hoc λ values, holdout evaluation, LM-test evaluation, or LM-BPC-based method changes
+- **unresolved questions:**
+  - Whether StatBound λ*=0.25 improves validation BPC under the pre-registered primary and secondary LM regimes
+- **approval status:** frozen_pre_lm_evaluation
+- **changes_registered_eval_protocol:** no (Phase-C result and λ* are recorded under the frozen protocol; no criteria or method changes)
+
+---
+
 ## Template for new entries
 
 ```markdown
