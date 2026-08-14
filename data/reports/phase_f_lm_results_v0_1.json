@@ -1,7 +1,7 @@
 {
   "schema_version": "phase_f_lm_results_v0_1",
   "phase": "F",
-  "generated_at": "2026-08-14T09:10:29.887016Z",
+  "generated_at": "2026-08-14T09:10:59.784371Z",
   "lambda_star": 0.25,
   "tokenizer_id": "statbound_lambda_0_25",
   "matrix_id": "lm_baselines_v0_1_final_matrix_r2",

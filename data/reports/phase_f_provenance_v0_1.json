@@ -1,11 +1,11 @@
 {
   "schema_version": "phase_f_provenance_v0_1",
   "phase": "F",
-  "generated_at": "2026-08-14T09:10:29.887016Z",
+  "generated_at": "2026-08-14T09:10:59.784371Z",
   "benchmark_version": "morphology_benchmark_v0.2",
   "lambda_star": 0.25,
   "matrix_config": "configs/models/lm_baselines_v0_1_final_matrix_r2.json",
-  "git_commit": "71d54852eea1a22b18ef364b7ef3221d0940b49a",
+  "git_commit": "963c0b78b28ccd614f4ff2a95bed2e2f9f0b288c",
   "environment": {
     "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
     "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
@@ -129,7 +129,7 @@
     }
   },
   "output_hashes": {
-    "results_json": "8005808ba1fa2341faa85fc520d72d7f1a9670d53cf6b207a3d5a45cb44d38c2",
+    "results_json": "a695ba65c639d16a64f3726771e77dc4f21834c74044432c168f98269e0d5599",
     "report_md": "821fcd501512a3e578ec917bf17264b4fecb724cf5fc31dc55b90de775d0d6fe",
     "success_json": "788d65a511601848801aeab0f796ec92aff31060b97732f7b21ec7609417ebff",
     "success_md": "7fcaa8a2ce010f5a68c5461fa107182b588371b5311d941e047a428b431b2c30"
