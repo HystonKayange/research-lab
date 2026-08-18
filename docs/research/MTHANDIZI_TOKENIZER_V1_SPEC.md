@@ -1,10 +1,11 @@
 # MthandiziTokenizer Prototype V1 — Executable Specification
 
 **ID:** `statbound_unigram_v1`  
-**Status:** `frozen_pre_evaluation`  
-**Decision log:** `D-0010`  
+**Status:** `closed_negative` (algorithm remains the frozen V1 definition; do not edit after results)  
+**Decision log:** `D-0010` (spec), `D-0013`–`D-0015` (evaluation and close)  
 **Config:** `configs/tokenizers/statbound_unigram_v1.json`  
-**Novelty claim:** provisional (composition; not a new primitive)
+**Novelty claim:** provisional (composition; not a new primitive)  
+**Scientific outcome:** negative on SC4 and SC1. Do not change this specification to chase those results.
 
 Two independent implementations following this document and the frozen config must produce **identical** encodings on the same train corpus, base model, and hyperparameters (within floating-point tolerances documented below).
 

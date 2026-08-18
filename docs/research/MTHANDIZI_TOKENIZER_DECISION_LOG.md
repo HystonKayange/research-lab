@@ -367,6 +367,65 @@ Every material research decision is recorded here.
 - **approval status:** frozen_phase_f_validation_complete
 - **changes_registered_eval_protocol:** no (evaluation followed the frozen protocol; no outcome-driven method or criterion changes)
 
+---
+
+## D-0015 — Close StatBound-Unigram V1 as a completed negative method
+
+- **date:** 2026-08-18
+- **evidence considered:**
+  - Frozen Phase-C negative morphology result and λ*=0.25 (D-0013)
+  - Frozen Phase-F validation: SC1 fail, SC4 fail (D-0014)
+  - Analysis-only Unigram n-best oracle and compat-alignment on the frozen 162-item development set (`data/reports/unigram_nbest_oracle_v0_1.md`)
+  - Independent review that V1 must not be silently retuned
+- **decision:**
+  - Close **StatBound-Unigram V1** as a completed **negative** experiment. The method is finished. Do not revise λ, n-best, the compatibility formula, or the V1 score after seeing results
+  - Record the oracle as analysis-only, not as a tokenizer and not as V2: Unigram n-best=16 has large unused Level-B room (macro F1 0.5551 → 0.7913, Δ **+0.2362**), but V1 `compat` does not select it
+  - Record that a compat-oracle is **worse** than Unigram (macro F1 0.5169). Recalibrating `u + λb` or any RelBound-style use of the **same** `b` is therefore not an authorized next method
+  - Pre-declared family decision from the oracle stands: `do_not_calibrate_wrong_signal`
+  - Do **not** start RelBound, MorphCand, TrainBias, Morfessor, or any other successor in this decision
+  - Do **not** unlock morphology holdout or LM test
+  - Any later method must be a **separately named, separately pre-registered** experiment, and only after the research question is restated (see `docs/research/STATBOUND_V1_CLOSEOUT_AND_RETHINK_v0_1.md`)
+- **rejected alternatives:**
+  - Increasing λ or introducing α and calling that V1 or V1b
+  - Implementing RelBound-Unigram V2 with V1 compatibility
+  - Treating SC2/SC5/SC6 as a morphological or LM success
+  - Using oracle choices or ΔF1 to set hyperparameters
+  - Unlocking holdout or LM test to look for a positive story
+  - Immediately starting a new tokenizer implementation
+- **unresolved questions:**
+  - What single claim the research program should make next (LM BPC vs Level-B morphology vs benchmark/resource)
+  - Whether Level-B granularity is the right target construct for a tokenizer, as opposed to an evaluation instrument
+  - What unsupervised or lightly linguistic signal, if any, actually prefers the unused n-best alternatives
+- **approval status:** approved
+- **changes_registered_eval_protocol:** no (closes a finished method; does not change SC1–SC9, locks, or V1)
+
+---
+
+## D-0016 — Pivot from method-hunting to empirical consolidation
+
+- **date:** 2026-08-18
+- **evidence considered:**
+  - Closed StatBound-Unigram V1 negative result (D-0015)
+  - Frozen Phase C/F numbers and Unigram n-best oracle / error anatomy
+  - Decision to produce a small empirical paper / technical report rather than a successor tokenizer
+- **decision:**
+  - The active project goal is now **consolidation of existing evidence** into a reproducible Git research record and an eventual 6–8 page empirical paper / technical report
+  - **No new tokenizer or V2** is authorized in this phase
+  - Prefix-stack recovery is **future work only**, not required for the current project to be finished
+  - Morphology holdout and LM test remain **locked** while the repository and paper draft are developed
+  - The central story is Unigram vs BPE on Level-B morphology, undersegmentation anatomy, n-best availability vs selection, and the StatBound V1 negative result — not “does a proposed method win?”
+  - Charter: `docs/research/EMPIRICAL_PAPER_CHARTER_v0_1.md`
+- **rejected alternatives:**
+  - Implementing RelBound, Morfessor-as-V2, or any other successor before consolidation
+  - Treating prefix recovery as necessary for the current paper
+  - Unlocking holdout or LM test during drafting
+  - Reframing V1 as a partial success
+- **unresolved questions:**
+  - Venue (technical report vs AfricaNLP / Findings-style short paper) after the draft exists
+  - Whether a later, separately registered prefix-recovery probe is ever run
+- **approval status:** approved
+- **changes_registered_eval_protocol:** no
+
 ## Template for new entries
 
 ```markdown

@@ -1,0 +1,133 @@
+{
+  "schema_version": "paper_artifacts_v0_1",
+  "restricted": {
+    "morphology_holdout_accessed": false,
+    "lm_test_accessed": false,
+    "new_training": false,
+    "v2_authorized": false
+  },
+  "T1_standard_tokenizers": {
+    "source": "data/reports/phase_c_morphology_v0_2_results.json",
+    "n_items": 162,
+    "rows": [
+      {
+        "system": "BPE8k",
+        "boundary_precision": 0.7015250544662309,
+        "boundary_recall": 0.37635416666666666,
+        "boundary_f1": 0.46217807211184697,
+        "exact_match_rate": 0.05555555555555555,
+        "exact_match_count": 9,
+        "tokens_per_character": 0.2284821807098087
+      },
+      {
+        "system": "Unigram8k",
+        "boundary_precision": 0.8430921052631579,
+        "boundary_recall": 0.4502083333333333,
+        "boundary_f1": 0.5550808080808081,
+        "exact_match_rate": 0.08024691358024691,
+        "exact_match_count": 13,
+        "tokens_per_character": 0.22810235946219834
+      }
+    ]
+  },
+  "T2_statbound_v1": {
+    "morphology_source": "data/reports/phase_c_morphology_v0_2_results.json",
+    "lm_source": "data/reports/phase_f_lm_results_v0_1.json",
+    "unigram_f1": 0.5550808080808081,
+    "statbound_f1": 0.5550808080808081,
+    "benchmark_words_changed": 0,
+    "unigram_bpc": 1.4370611407962612,
+    "unigram_bpc_std": 0.000582143383736956,
+    "statbound_bpc": 1.4374023266934866,
+    "statbound_bpc_std": 0.001559459226725099,
+    "delta_bpc": 0.00034118589722531567,
+    "seeds_beating_unigram": 1,
+    "n_seeds": 3,
+    "sc4": "FAIL",
+    "sc1": "FAIL",
+    "per_seed": [
+      {
+        "seed": 42,
+        "unigram_bpc": 1.4377220985956776,
+        "statbound_bpc": 1.437744448517068,
+        "delta_bpc": 2.234992139049652e-05,
+        "statbound_beats_unigram": false
+      },
+      {
+        "seed": 1337,
+        "unigram_bpc": 1.436836690240743,
+        "statbound_bpc": 1.4387623201808566,
+        "delta_bpc": 0.0019256299401135824,
+        "statbound_beats_unigram": false
+      },
+      {
+        "seed": 2026,
+        "unigram_bpc": 1.436624633552363,
+        "statbound_bpc": 1.4357002113825348,
+        "delta_bpc": -0.0009244221698281319,
+        "statbound_beats_unigram": true
+      }
+    ]
+  },
+  "T3_nbest_oracle": {
+    "source": "data/reports/unigram_nbest_oracle_v0_1.json",
+    "nbest_size": 16,
+    "delta_f1": 0.23620075757575754,
+    "gold_in_nbest": 22,
+    "rows": [
+      {
+        "system": "Unigram top-1",
+        "boundary_precision": 0.8430921052631579,
+        "boundary_recall": 0.4502083333333333,
+        "boundary_f1": 0.5550808080808081,
+        "exact_match_rate": 0.08024691358024691,
+        "exact_match_count": 13,
+        "tokens_per_character": null
+      },
+      {
+        "system": "Best-of-16 F1 oracle",
+        "boundary_precision": 0.8315108759553205,
+        "boundary_recall": 0.8107291666666667,
+        "boundary_f1": 0.7912815656565656,
+        "exact_match_rate": 0.13580246913580246,
+        "exact_match_count": 22,
+        "tokens_per_character": null
+      }
+    ],
+    "note": "Oracle uses gold only to score frozen Unigram candidates. It is not a tokenizer."
+  },
+  "anatomy": {
+    "unigram_gold_misses": {
+      "left_edge": 129,
+      "right_edge": 93,
+      "internal": 70,
+      "total": 292
+    },
+    "oracle_gold_misses": {
+      "left_edge": 2,
+      "right_edge": 71,
+      "internal": 41,
+      "total": 114
+    },
+    "change_classes": {
+      "unchanged": 37,
+      "clean_prefix": 66,
+      "mixed_gold": 28,
+      "junk_fp": 31
+    },
+    "n_oracle_differs": 125,
+    "n_oracle_adds_or_keeps_piece_count": 125,
+    "definitions": {
+      "left_edge": "cut offset <= 4",
+      "right_edge": "remaining characters <= 2",
+      "clean_prefix": "only left-edge gold cuts added; no removals; no false-positive cuts",
+      "junk_fp": "at least one added cut is not gold",
+      "mixed_gold": "other gold-improving oracle changes"
+    }
+  },
+  "figures": {
+    "F1": "data/reports/figures/paper_v0_1/f1_missed_boundaries_by_location.png",
+    "F2": "data/reports/figures/paper_v0_1/f2_oracle_change_types.png",
+    "F3": "data/reports/figures/paper_v0_1/f3_primary_lm_bpc.png"
+  }
+}
