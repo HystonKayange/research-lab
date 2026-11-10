@@ -114,6 +114,10 @@ Language in tags is deliberately cautious (**apparent**). Do not claim dictionar
 
 6. **Boundary positions (optional):** for surface `abcde` with split `ab+cde`, boundaries = `2` (after index 2). Multiple: `2,4`.
 
+7. **Granularity (self-review / adjudication):** Add a boundary only when there is a defensible grammatical, inflectional, derivational, or reusable lexical morphological function. Do not split merely because a substring is pronounceable, syllabic, or can be decomposed into smaller character chunks. When two analyses are linguistically plausible and there is no strong evidence for the finer analysis, prefer the coarser segmentation.
+
+   This is a **human review principle**, not an automatic segmentation algorithm. It is **not** applied retroactively by software.
+
 ---
 
 ## 7. Decision flowchart (summary)

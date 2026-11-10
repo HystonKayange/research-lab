@@ -1,0 +1,2349 @@
+{
+  "report_version": "morphology_level_b_policy_diff_v0_1",
+  "source_application": "data/reports/morphology_level_b_policy_application_v0_1.json",
+  "proposed_only": true,
+  "benchmark_gold_modified": false,
+  "criteria": [
+    "original segmentation differs from policy proposed segmentation",
+    "status changes to EXCLUDE",
+    "item enters HUMAN_REVIEW"
+  ],
+  "total_diff_items": 177,
+  "items": [
+    {
+      "item_id": "morph_dev_0001",
+      "surface_form": "Analigawa",
+      "original_segmentation": "Anali+gawa",
+      "policy_proposed_segmentation": "A+na+li+gaw+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0002",
+      "surface_form": "imafunsidwa",
+      "original_segmentation": "i+ma+funsidwa",
+      "policy_proposed_segmentation": "i+ma+funs+idw+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0003",
+      "surface_form": "nditenga",
+      "original_segmentation": "ndi+tenga",
+      "policy_proposed_segmentation": "ndi+teng+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0004",
+      "surface_form": "Ugone",
+      "original_segmentation": "U+gone",
+      "policy_proposed_segmentation": "U+gon+e",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0005",
+      "surface_form": "ndikuwunikanso",
+      "original_segmentation": "ndi+ku+wunika+nso",
+      "policy_proposed_segmentation": "ndi+ku+wunik+a+nso",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0006",
+      "surface_form": "azigonekedwa",
+      "original_segmentation": "a+zi+gonekedwa",
+      "policy_proposed_segmentation": "a+zi+gonek+edw+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0007",
+      "surface_form": "Tikukudalitsani",
+      "original_segmentation": "Ti+ku+ku+dalitsani",
+      "policy_proposed_segmentation": "Ti+ku+ku+dalits+a+ni",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0008",
+      "surface_form": "imanenedwa",
+      "original_segmentation": "i+ma+nenedwa",
+      "policy_proposed_segmentation": "i+ma+nen+edw+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0009",
+      "surface_form": "inasandukanso",
+      "original_segmentation": "ina+sanduka+nso",
+      "policy_proposed_segmentation": "i+na+sanduk+a+nso",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0010",
+      "surface_form": "chikulimbana",
+      "original_segmentation": "chi+ku+limbana",
+      "policy_proposed_segmentation": "chi+ku+limban+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0011",
+      "surface_form": "inalimbana",
+      "original_segmentation": "i+na+limbana",
+      "policy_proposed_segmentation": "i+na+limban+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0012",
+      "surface_form": "mudzandipezadi",
+      "original_segmentation": "mu+dza+ndi+peza+di",
+      "policy_proposed_segmentation": "mu+dza+ndi+pez+a+di",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0013",
+      "surface_form": "manoma",
+      "original_segmentation": "manoma",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0014",
+      "surface_form": "SantillanaManager",
+      "original_segmentation": "SantillanaManager",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0016",
+      "surface_form": "akanamasulidwa",
+      "original_segmentation": "a+kana+masulidwa",
+      "policy_proposed_segmentation": "a+kana+masul+idw+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0017",
+      "surface_form": "kagwire",
+      "original_segmentation": "ka+gwire",
+      "policy_proposed_segmentation": "ka+gwir+e",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0018",
+      "surface_form": "matsiriziro",
+      "original_segmentation": "ma+tsirizi+ro",
+      "policy_proposed_segmentation": "ma+tsiriziro",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0019",
+      "surface_form": "Darussalam",
+      "original_segmentation": "Darussalam",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0020",
+      "surface_form": "anakakamizika",
+      "original_segmentation": "a+na+ka+kamizika",
+      "policy_proposed_segmentation": "a+na+kakamiz+ik+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0022",
+      "surface_form": "masuleni",
+      "original_segmentation": "ma+suleni",
+      "policy_proposed_segmentation": "masul+e+ni",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0024",
+      "surface_form": "anakazichotsa",
+      "original_segmentation": "a+na+ka+zi+chotsa",
+      "policy_proposed_segmentation": "a+na+ka+zi+chots+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0026",
+      "surface_form": "Yekoliya",
+      "original_segmentation": "Yekoliya",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0027",
+      "surface_form": "cholimbana",
+      "original_segmentation": "cho+limbana",
+      "policy_proposed_segmentation": "cho+limban+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0028",
+      "surface_form": "sanawalenge",
+      "original_segmentation": "sa+na+wa+lenge",
+      "policy_proposed_segmentation": "s+a+na+wa+leng+e",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0029",
+      "surface_form": "silingathe",
+      "original_segmentation": "si+li+nga+the",
+      "policy_proposed_segmentation": "si+li+nga+th+e",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0030",
+      "surface_form": "sadzawathandizanso",
+      "original_segmentation": "sa+dza+wa+thandiza+nso",
+      "policy_proposed_segmentation": "s+a+dza+wa+thandiz+a+nso",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0031",
+      "surface_form": "Sarisekimu",
+      "original_segmentation": "Sarisekimu",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0032",
+      "surface_form": "sindikhalanso",
+      "original_segmentation": "si+ndi+khala+nso",
+      "policy_proposed_segmentation": "si+ndi+khal+a+nso",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0033",
+      "surface_form": "sizidzamvekanso",
+      "original_segmentation": "si+zi+dza+mveka+nso",
+      "policy_proposed_segmentation": "si+zi+dza+mvek+a+nso",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0034",
+      "surface_form": "sidzapulumuka",
+      "original_segmentation": "si+dza+pulumuka",
+      "policy_proposed_segmentation": "si+dza+pulumuk+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0035",
+      "surface_form": "sadzalowamo",
+      "original_segmentation": "sa+dza+lowa+mo",
+      "policy_proposed_segmentation": "s+a+dza+low+a+mo",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0036",
+      "surface_form": "silinakule",
+      "original_segmentation": "si+li+na+kule",
+      "policy_proposed_segmentation": "si+li+na+kul+e",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0037",
+      "surface_form": "sanakonde",
+      "original_segmentation": "sa+na+konde",
+      "policy_proposed_segmentation": "s+a+na+kond+e",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0038",
+      "surface_form": "sikukupezekanso",
+      "original_segmentation": "si+ku+ku+pezeka+nso",
+      "policy_proposed_segmentation": "si+ku+ku+pez+ek+a+nso",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0039",
+      "surface_form": "mudzamumvera",
+      "original_segmentation": "mu+dza+mu+mvera",
+      "policy_proposed_segmentation": "mu+dza+mu+mver+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0040",
+      "surface_form": "ndinawalamulira",
+      "original_segmentation": "ndi+na+wa+lamulira",
+      "policy_proposed_segmentation": "ndi+na+wa+lamulir+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0041",
+      "surface_form": "adzamubweretsa",
+      "original_segmentation": "a+dza+mu+bweretsa",
+      "policy_proposed_segmentation": "a+dza+mu+bwer+ets+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0042",
+      "surface_form": "wolonjezedwa",
+      "original_segmentation": "wo+lonje+zedwa",
+      "policy_proposed_segmentation": "wo+lonjez+edw+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0043",
+      "surface_form": "pakatipa",
+      "original_segmentation": "pa+katipa",
+      "policy_proposed_segmentation": "pa+katipa",
+      "reaudit_recommendation": "UNCERTAIN",
+      "policy_result": "HUMAN_REVIEW",
+      "reasons": [
+        "entered_HUMAN_REVIEW"
+      ],
+      "confidence": "LOW",
+      "human_review_question": "Is pa- a benchmark-level locative boundary here, or is pakatipa lexicalized as a single adverbial item?"
+    },
+    {
+      "item_id": "morph_dev_0044",
+      "surface_form": "kuchipereka",
+      "original_segmentation": "ku+chi+pereka",
+      "policy_proposed_segmentation": "ku+chi+perek+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0045",
+      "surface_form": "mudzakhalako",
+      "original_segmentation": "mu+dza+khala+ko",
+      "policy_proposed_segmentation": "mu+dza+khal+a+ko",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0046",
+      "surface_form": "mumayitanira",
+      "original_segmentation": "mu+ma+yitanira",
+      "policy_proposed_segmentation": "mu+ma+yitanir+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0047",
+      "surface_form": "kunanenedwa",
+      "original_segmentation": "ku+na+nenedwa",
+      "policy_proposed_segmentation": "ku+na+nen+edw+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0048",
+      "surface_form": "mudzaziyese",
+      "original_segmentation": "mu+dza+zi+yese",
+      "policy_proposed_segmentation": "mu+dza+zi+yes+e",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0049",
+      "surface_form": "munkachitira",
+      "original_segmentation": "mu+n+ka+chitira",
+      "policy_proposed_segmentation": "mu+nka+chit+ir+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0050",
+      "surface_form": "Kundipembedza",
+      "original_segmentation": "Ku+ndi+pembedza",
+      "policy_proposed_segmentation": "Ku+ndi+pembedz+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0051",
+      "surface_form": "kuwadyetsa",
+      "original_segmentation": "ku+wa+dyetsa",
+      "policy_proposed_segmentation": "ku+wa+dyets+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0052",
+      "surface_form": "idzachita",
+      "original_segmentation": "i+dza+chita",
+      "policy_proposed_segmentation": "i+dza+chit+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0053",
+      "surface_form": "anamutenga",
+      "original_segmentation": "a+na+mu+tenga",
+      "policy_proposed_segmentation": "a+na+mu+teng+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0054",
+      "surface_form": "adapita",
+      "original_segmentation": "a+da+pita",
+      "policy_proposed_segmentation": "a+da+pit+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0055",
+      "surface_form": "anatengapo",
+      "original_segmentation": "a+na+tenga+po",
+      "policy_proposed_segmentation": "a+na+teng+a+po",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0056",
+      "surface_form": "chofuna",
+      "original_segmentation": "cho+funa",
+      "policy_proposed_segmentation": "cho+fun+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0057",
+      "surface_form": "pita",
+      "original_segmentation": "pi+ta",
+      "policy_proposed_segmentation": "pit+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0058",
+      "surface_form": "inkayenda",
+      "original_segmentation": "i+n+ka+yenda",
+      "policy_proposed_segmentation": "i+nka+yend+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0059",
+      "surface_form": "anabwerako",
+      "original_segmentation": "a+na+bwera+ko",
+      "policy_proposed_segmentation": "a+na+bwer+a+ko",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0060",
+      "surface_form": "Nena",
+      "original_segmentation": "Ne+na",
+      "policy_proposed_segmentation": "Nen+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0061",
+      "surface_form": "tinachita",
+      "original_segmentation": "ti+na+chita",
+      "policy_proposed_segmentation": "ti+na+chit+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0062",
+      "surface_form": "amaphunzira",
+      "original_segmentation": "a+ma+phunzira",
+      "policy_proposed_segmentation": "a+ma+phunzir+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0063",
+      "surface_form": "mumakhala",
+      "original_segmentation": "mu+ma+khala",
+      "policy_proposed_segmentation": "mu+ma+khal+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0064",
+      "surface_form": "m’Chicheŵa",
+      "original_segmentation": "m’+Chicheŵa",
+      "policy_proposed_segmentation": "m’+Chicheŵa",
+      "reaudit_recommendation": "UNCERTAIN",
+      "policy_result": "HUMAN_REVIEW",
+      "reasons": [
+        "entered_HUMAN_REVIEW"
+      ],
+      "confidence": "LOW",
+      "human_review_question": "Is m’ a benchmark-level locative boundary before Chicheŵa, or should the contracted phrase be treated as one orthographic/phrase-level unit?"
+    },
+    {
+      "item_id": "morph_dev_0065",
+      "surface_form": "unalikuŵalira",
+      "original_segmentation": "u+na+li+ku+ŵalira",
+      "policy_proposed_segmentation": "u+na+li+ku+ŵalir+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0067",
+      "surface_form": "adziŵa",
+      "original_segmentation": "a+dziŵa",
+      "policy_proposed_segmentation": "a+dziŵ+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0068",
+      "surface_form": "Khweŵa",
+      "original_segmentation": "Khweŵa",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0069",
+      "surface_form": "sanaloŵe",
+      "original_segmentation": "sa+na+loŵe",
+      "policy_proposed_segmentation": "s+a+na+loŵ+e",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0070",
+      "surface_form": "ameneŵa",
+      "original_segmentation": "a+meneŵa",
+      "policy_proposed_segmentation": "a+mene+ŵa",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0071",
+      "surface_form": "M’nthaŵi",
+      "original_segmentation": "M’+nthaŵi",
+      "policy_proposed_segmentation": "M’+nthaŵi",
+      "reaudit_recommendation": "UNCERTAIN",
+      "policy_result": "HUMAN_REVIEW",
+      "reasons": [
+        "entered_HUMAN_REVIEW"
+      ],
+      "confidence": "LOW",
+      "human_review_question": "Is M’ an independent locative boundary before nthaŵi in this construction, or only an orthographic contraction?"
+    },
+    {
+      "item_id": "morph_dev_0073",
+      "surface_form": "chikuloŵera",
+      "original_segmentation": "chi+ku+loŵera",
+      "policy_proposed_segmentation": "chi+ku+loŵer+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0074",
+      "surface_form": "chigaŵanike",
+      "original_segmentation": "chi+gaŵanike",
+      "policy_proposed_segmentation": "chi+gaŵan+ik+e",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0076",
+      "surface_form": "yaikulu",
+      "original_segmentation": "ya+i+kulu",
+      "policy_proposed_segmentation": "ya+ikulu",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0077",
+      "surface_form": "Remaliya",
+      "original_segmentation": "Remaliya",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0078",
+      "surface_form": "kumadzulo",
+      "original_segmentation": "ku+madzulo",
+      "policy_proposed_segmentation": "ku+madzulo",
+      "reaudit_recommendation": "UNCERTAIN",
+      "policy_result": "HUMAN_REVIEW",
+      "reasons": [
+        "entered_HUMAN_REVIEW"
+      ],
+      "confidence": "LOW",
+      "human_review_question": "Is ku- an independent locative/directional boundary in kumadzulo here, or is the expression lexicalized?"
+    },
+    {
+      "item_id": "morph_dev_0079",
+      "surface_form": "Karl",
+      "original_segmentation": "Karl",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0080",
+      "surface_form": "Michel",
+      "original_segmentation": "Michel",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0083",
+      "surface_form": "anasankha",
+      "original_segmentation": "a+na+sankha",
+      "policy_proposed_segmentation": "a+na+sankh+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0084",
+      "surface_form": "ndikutsitsimutseni",
+      "original_segmentation": "ndi+ku+tsitsimutseni",
+      "policy_proposed_segmentation": "ndi+ku+tsitsimuts+e+ni",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0085",
+      "surface_form": "sichikugwira",
+      "original_segmentation": "si+chi+ku+gwira",
+      "policy_proposed_segmentation": "si+chi+ku+gwir+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0086",
+      "surface_form": "oral",
+      "original_segmentation": "oral",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0087",
+      "surface_form": "Mudzateteza",
+      "original_segmentation": "Mu+dza+teteza",
+      "policy_proposed_segmentation": "Mu+dza+tetez+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0088",
+      "surface_form": "ananeneza",
+      "original_segmentation": "a+na+neneza",
+      "policy_proposed_segmentation": "a+na+nenez+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0089",
+      "surface_form": "potengera",
+      "original_segmentation": "po+tengera",
+      "policy_proposed_segmentation": "po+tenger+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0090",
+      "surface_form": "amalonjeza",
+      "original_segmentation": "a+ma+lonjeza",
+      "policy_proposed_segmentation": "a+ma+lonjez+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0091",
+      "surface_form": "akutchinjirize",
+      "original_segmentation": "a+ku+tchinjirize",
+      "policy_proposed_segmentation": "a+ku+tchinjiriz+e",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0092",
+      "surface_form": "umapewa",
+      "original_segmentation": "u+ma+pewa",
+      "policy_proposed_segmentation": "u+ma+pew+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0093",
+      "surface_form": "adzakuyikira",
+      "original_segmentation": "a+dza+ku+yikira",
+      "policy_proposed_segmentation": "a+dza+ku+yik+ir+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0094",
+      "surface_form": "anyonga",
+      "original_segmentation": "a+nyonga",
+      "policy_proposed_segmentation": "a+nyong+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0096",
+      "surface_form": "Adaliya",
+      "original_segmentation": "Adaliya",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0098",
+      "surface_form": "zalembedwera",
+      "original_segmentation": "za+lembe+dwera",
+      "policy_proposed_segmentation": "za+lemb+edw+er+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0099",
+      "surface_form": "adzatitulutse",
+      "original_segmentation": "a+dza+ti+tulutse",
+      "policy_proposed_segmentation": "a+dza+ti+tuluts+e",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0100",
+      "surface_form": "sindilola",
+      "original_segmentation": "si+ndi+lola",
+      "policy_proposed_segmentation": "si+ndi+lol+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0101",
+      "surface_form": "yamilandu",
+      "original_segmentation": "ya+milandu",
+      "policy_proposed_segmentation": "ya+mi+landu",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0102",
+      "surface_form": "amavulala",
+      "original_segmentation": "a+ma+vula+la",
+      "policy_proposed_segmentation": "a+ma+vulal+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0103",
+      "surface_form": "nʼzolekana",
+      "original_segmentation": "nʼ+zolekana",
+      "policy_proposed_segmentation": "nʼ+zo+lekan+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0104",
+      "surface_form": "Sergetsev",
+      "original_segmentation": "Sergetsev",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0105",
+      "surface_form": "yachinkhoswe",
+      "original_segmentation": "ya+chinkhoswe",
+      "policy_proposed_segmentation": "ya+chi+nkhoswe",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0106",
+      "surface_form": "m'gululi",
+      "original_segmentation": "m'+gulu+li",
+      "policy_proposed_segmentation": "m'+gulu+li",
+      "reaudit_recommendation": "UNCERTAIN",
+      "policy_result": "HUMAN_REVIEW",
+      "reasons": [
+        "entered_HUMAN_REVIEW"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": "In m'gululi, is m' + gulu + li the appropriate benchmark morphology, or should the contracted locative/demonstrative construction remain coarser?"
+    },
+    {
+      "item_id": "morph_dev_0107",
+      "surface_form": "Ngonis",
+      "original_segmentation": "Ngonis",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0108",
+      "surface_form": "amatsamwitsidwa",
+      "original_segmentation": "a+ma+tsamwitsidwa",
+      "policy_proposed_segmentation": "a+ma+tsamwits+idw+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0109",
+      "surface_form": "anakupanga",
+      "original_segmentation": "a+na+ku+panga",
+      "policy_proposed_segmentation": "a+na+ku+pang+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0110",
+      "surface_form": "observations",
+      "original_segmentation": "observations",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0112",
+      "surface_form": "anakuchitirani",
+      "original_segmentation": "a+na+ku+chitirani",
+      "policy_proposed_segmentation": "a+na+ku+chit+ir+a+ni",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0113",
+      "surface_form": "1871",
+      "original_segmentation": "1871",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0114",
+      "surface_form": "titumize",
+      "original_segmentation": "ti+tumize",
+      "policy_proposed_segmentation": "ti+tumiz+e",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0115",
+      "surface_form": "nakamanganso",
+      "original_segmentation": "na+ka+manga+nso",
+      "policy_proposed_segmentation": "na+ka+mang+a+nso",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0118",
+      "surface_form": "Ndidzamupangira",
+      "original_segmentation": "Ndi+dza+mu+pangira",
+      "policy_proposed_segmentation": "Ndi+dza+mu+pang+ir+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0119",
+      "surface_form": "anawapachika",
+      "original_segmentation": "a+na+wa+pachika",
+      "policy_proposed_segmentation": "a+na+wa+pachik+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0120",
+      "surface_form": "msonkhano",
+      "original_segmentation": "msonkhano",
+      "policy_proposed_segmentation": "m+sonkhano",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0122",
+      "surface_form": "Tikukulemberani",
+      "original_segmentation": "Ti+ku+ku+lemberani",
+      "policy_proposed_segmentation": "Ti+ku+ku+lember+a+ni",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0123",
+      "surface_form": "ndisananene",
+      "original_segmentation": "ndi+sa+na+nene",
+      "policy_proposed_segmentation": "ndi+sana+nen+e",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0124",
+      "surface_form": "ndidzawayeretsa",
+      "original_segmentation": "ndi+dza+wa+yeretsa",
+      "policy_proposed_segmentation": "ndi+dza+wa+yer+ets+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0125",
+      "surface_form": "sizinachitikepo",
+      "original_segmentation": "si+zi+na+chitike+po",
+      "policy_proposed_segmentation": "si+zi+na+chit+ik+e+po",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0126",
+      "surface_form": "zosafunika",
+      "original_segmentation": "zo+sa+funika",
+      "policy_proposed_segmentation": "zo+sa+funik+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0127",
+      "surface_form": "Never",
+      "original_segmentation": "Never",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0128",
+      "surface_form": "Khululukirani",
+      "original_segmentation": "Khululuki+ra+ni",
+      "policy_proposed_segmentation": "Khululuk+ir+a+ni",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0129",
+      "surface_form": "namupeza",
+      "original_segmentation": "na+mu+peza",
+      "policy_proposed_segmentation": "na+mu+pez+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0130",
+      "surface_form": "atchulidwa",
+      "original_segmentation": "a+tchuli+dwa",
+      "policy_proposed_segmentation": "a+tchul+idw+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0131",
+      "surface_form": "linatsimikiziranso",
+      "original_segmentation": "lina+tsimikizira+nso",
+      "policy_proposed_segmentation": "li+na+tsimikizir+a+nso",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0132",
+      "surface_form": "kudzathira",
+      "original_segmentation": "ku+dza+thira",
+      "policy_proposed_segmentation": "ku+dza+thir+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0134",
+      "surface_form": "kwamgwirizano",
+      "original_segmentation": "kwa+mgwirizano",
+      "policy_proposed_segmentation": "kwa+m+gwirizano",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0136",
+      "surface_form": "aloe",
+      "original_segmentation": "aloe",
+      "policy_proposed_segmentation": "aloe",
+      "reaudit_recommendation": "UNCERTAIN",
+      "policy_result": "HUMAN_REVIEW",
+      "reasons": [
+        "entered_HUMAN_REVIEW"
+      ],
+      "confidence": "LOW",
+      "human_review_question": "Is aloe an accepted Chichewa-integrated loan/plant name that should remain whole, or is it outside the frozen benchmark scope?"
+    },
+    {
+      "item_id": "morph_dev_0137",
+      "surface_form": "uchitira",
+      "original_segmentation": "u+chitira",
+      "policy_proposed_segmentation": "u+chit+ir+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0138",
+      "surface_form": "zikadzatha",
+      "original_segmentation": "zi+ka+dza+tha",
+      "policy_proposed_segmentation": "zi+ka+dza+th+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0139",
+      "surface_form": "Ted",
+      "original_segmentation": "Ted",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0140",
+      "surface_form": "zidzakusokonezani",
+      "original_segmentation": "zi+dza+ku+sokoneza+ni",
+      "policy_proposed_segmentation": "zi+dza+ku+sokonez+a+ni",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0141",
+      "surface_form": "sakakhulupirira",
+      "original_segmentation": "sa+ka+khulupirira",
+      "policy_proposed_segmentation": "s+a+ka+khulupirir+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0142",
+      "surface_form": "anandibweretsera",
+      "original_segmentation": "a+na+ndi+bweretsera",
+      "policy_proposed_segmentation": "a+na+ndi+bwer+ets+er+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0143",
+      "surface_form": "zidatumizidwa",
+      "original_segmentation": "zi+da+tumizidwa",
+      "policy_proposed_segmentation": "zi+da+tumiz+idw+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0144",
+      "surface_form": "wachisomo",
+      "original_segmentation": "wa+chisomo",
+      "policy_proposed_segmentation": "wa+chi+somo",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0145",
+      "surface_form": "Kde",
+      "original_segmentation": "Kde",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0146",
+      "surface_form": "Bogopil",
+      "original_segmentation": "Bogopil",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0147",
+      "surface_form": "heliometer",
+      "original_segmentation": "heliometer",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0148",
+      "surface_form": "ndidzadziwa",
+      "original_segmentation": "ndi+dza+dziwa",
+      "policy_proposed_segmentation": "ndi+dza+dziw+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0149",
+      "surface_form": "325",
+      "original_segmentation": "325",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0150",
+      "surface_form": "Anaphunzira",
+      "original_segmentation": "A+na+phunzira",
+      "policy_proposed_segmentation": "A+na+phunzir+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0151",
+      "surface_form": "tilimbane",
+      "original_segmentation": "ti+limbane",
+      "policy_proposed_segmentation": "ti+limban+e",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0152",
+      "surface_form": "ukatenge",
+      "original_segmentation": "u+ka+tenge",
+      "policy_proposed_segmentation": "u+ka+teng+e",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0153",
+      "surface_form": "14,500",
+      "original_segmentation": "14,500",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0154",
+      "surface_form": "Gruberová",
+      "original_segmentation": "Gruberová",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0155",
+      "surface_form": "watiwona",
+      "original_segmentation": "wa+ti+wona",
+      "policy_proposed_segmentation": "wa+ti+won+a",
+      "reaudit_recommendation": "UNCERTAIN",
+      "policy_result": "HUMAN_REVIEW",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "entered_HUMAN_REVIEW"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": "What clause-level TAM and argument structure is intended for watiwona, and does wa-ti-won-a apply in the missing context?"
+    },
+    {
+      "item_id": "morph_dev_0156",
+      "surface_form": "yopserezayo",
+      "original_segmentation": "yo+psereza+yo",
+      "policy_proposed_segmentation": "yo+pserez+a+yo",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0157",
+      "surface_form": "ndidzakhazika",
+      "original_segmentation": "ndi+dza+khazika",
+      "policy_proposed_segmentation": "ndi+dza+khazik+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0158",
+      "surface_form": "mukawuze",
+      "original_segmentation": "mu+ka+wuze",
+      "policy_proposed_segmentation": "mu+ka+wuz+e",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0160",
+      "surface_form": "kubwezera",
+      "original_segmentation": "ku+bwezera",
+      "policy_proposed_segmentation": "ku+bwezer+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0163",
+      "surface_form": "zidzadyera",
+      "original_segmentation": "zi+dza+dyera",
+      "policy_proposed_segmentation": "zi+dza+dyer+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0164",
+      "surface_form": "Tome",
+      "original_segmentation": "Tome",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0165",
+      "surface_form": "lawimake",
+      "original_segmentation": "lawi+make",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0166",
+      "surface_form": "Mdima",
+      "original_segmentation": "Mdima",
+      "policy_proposed_segmentation": "M+dima",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0168",
+      "surface_form": "wokunthidwa",
+      "original_segmentation": "wo+kunthidwa",
+      "policy_proposed_segmentation": "wo+kunth+idw+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0169",
+      "surface_form": "ikuphatikizira",
+      "original_segmentation": "i+ku+phatikizira",
+      "policy_proposed_segmentation": "i+ku+phatikizir+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0170",
+      "surface_form": "Yoyakini",
+      "original_segmentation": "Yoyakini",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0171",
+      "surface_form": "ndikanakupatsa",
+      "original_segmentation": "ndi+ka+na+ku+patsa",
+      "policy_proposed_segmentation": "ndi+ka+na+ku+pats+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0172",
+      "surface_form": "ukwapule",
+      "original_segmentation": "u+kwapule",
+      "policy_proposed_segmentation": "u+kwapul+e",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0173",
+      "surface_form": "Kwezani",
+      "original_segmentation": "Kweza+ni",
+      "policy_proposed_segmentation": "Kwez+a+ni",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0174",
+      "surface_form": "lidasungidwa",
+      "original_segmentation": "li+da+sungidwa",
+      "policy_proposed_segmentation": "li+da+sung+idw+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0175",
+      "surface_form": "Koninkrijk",
+      "original_segmentation": "Koninkrijk",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0177",
+      "surface_form": "over",
+      "original_segmentation": "over",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0179",
+      "surface_form": "Kees",
+      "original_segmentation": "Kees",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0180",
+      "surface_form": "Orinoco",
+      "original_segmentation": "Orinoco",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0181",
+      "surface_form": "chitambasulire",
+      "original_segmentation": "chi+tambasulire",
+      "policy_proposed_segmentation": "chi+tambasulire",
+      "reaudit_recommendation": "UNCERTAIN",
+      "policy_result": "HUMAN_REVIEW",
+      "reasons": [
+        "entered_HUMAN_REVIEW"
+      ],
+      "confidence": "LOW",
+      "human_review_question": "Is chi- productive class/agreement morphology in chitambasulire, and is -ir- plus final -e recoverable, or should tambasulire remain the safest stem?"
+    },
+    {
+      "item_id": "morph_dev_0182",
+      "surface_form": "Also",
+      "original_segmentation": "Also",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0183",
+      "surface_form": "m’nyumbazo",
+      "original_segmentation": "m’+nyumba+zo",
+      "policy_proposed_segmentation": "m’+nyumba+zo",
+      "reaudit_recommendation": "UNCERTAIN",
+      "policy_result": "HUMAN_REVIEW",
+      "reasons": [
+        "entered_HUMAN_REVIEW"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": "Is m’ an independent locative boundary in m’nyumbazo, with nyumba+zo, or should the contracted locative remain unresolved?"
+    },
+    {
+      "item_id": "morph_dev_0184",
+      "surface_form": "Iliza",
+      "original_segmentation": "Iliza",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0185",
+      "surface_form": "movutika",
+      "original_segmentation": "mo+vutika",
+      "policy_proposed_segmentation": "mo+vutika",
+      "reaudit_recommendation": "UNCERTAIN",
+      "policy_result": "HUMAN_REVIEW",
+      "reasons": [
+        "entered_HUMAN_REVIEW"
+      ],
+      "confidence": "LOW",
+      "human_review_question": "Is mo- an independent locative/adverbial element in movutika, and is -ik- productive or lexicalized?"
+    },
+    {
+      "item_id": "morph_dev_0186",
+      "surface_form": "sichidzikuza",
+      "original_segmentation": "si+chi+dzi+kuza",
+      "policy_proposed_segmentation": "si+chi+dzi+kuz+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0187",
+      "surface_form": "mwayankhulawa",
+      "original_segmentation": "mwa+yankhula+wa",
+      "policy_proposed_segmentation": "mwa+yankhul+a+wa",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0188",
+      "surface_form": "kuwabalalitsira",
+      "original_segmentation": "ku+wa+balalitsira",
+      "policy_proposed_segmentation": "ku+wa+balalits+ir+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0189",
+      "surface_form": "itamaliza",
+      "original_segmentation": "i+ta+maliza",
+      "policy_proposed_segmentation": "i+ta+maliz+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0190",
+      "surface_form": "zimawonjezeka",
+      "original_segmentation": "zi+ma+wonjezeka",
+      "policy_proposed_segmentation": "zi+ma+wonjez+ek+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0191",
+      "surface_form": "yampoto",
+      "original_segmentation": "ya+mpoto",
+      "policy_proposed_segmentation": "ya+m+poto",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0192",
+      "surface_form": "wasungunulidwa",
+      "original_segmentation": "wa+sungunulidwa",
+      "policy_proposed_segmentation": "wa+sungunul+idw+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0193",
+      "surface_form": "linkatchedwa",
+      "original_segmentation": "li+nka+tchedwa",
+      "policy_proposed_segmentation": "li+nka+tchedw+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0194",
+      "surface_form": "natisamala",
+      "original_segmentation": "na+ti+samala",
+      "policy_proposed_segmentation": "na+ti+samal+a",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0195",
+      "surface_form": "sanayipeze",
+      "original_segmentation": "sa+na+yi+peze",
+      "policy_proposed_segmentation": "s+a+na+yi+pez+e",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0196",
+      "surface_form": "ndidzamwenso",
+      "original_segmentation": "ndi+dza+mwe+nso",
+      "policy_proposed_segmentation": "ndi+dza+mwe+nso",
+      "reaudit_recommendation": "UNCERTAIN",
+      "policy_result": "HUMAN_REVIEW",
+      "reasons": [
+        "entered_HUMAN_REVIEW"
+      ],
+      "confidence": "LOW",
+      "human_review_question": "Does the context support a final vowel before -nso in ndidzamwenso, and is the lexical stem mwe/mwa resolved by the intended orthography or dialect?"
+    },
+    {
+      "item_id": "morph_dev_0197",
+      "surface_form": "Anawapitikitsabe",
+      "original_segmentation": "A+na+wa+pitikitsa+be",
+      "policy_proposed_segmentation": "A+na+wa+pitikits+a+be",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "MEDIUM",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0198",
+      "surface_form": "PVC",
+      "original_segmentation": "PVC",
+      "policy_proposed_segmentation": "",
+      "reaudit_recommendation": "EXCLUDE",
+      "policy_result": "EXCLUDE",
+      "reasons": [
+        "original_vs_policy_segmentation",
+        "status_changed_to_EXCLUDE"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0199",
+      "surface_form": "amuyike",
+      "original_segmentation": "a+mu+yike",
+      "policy_proposed_segmentation": "a+mu+yik+e",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    },
+    {
+      "item_id": "morph_dev_0200",
+      "surface_form": "laulendowu",
+      "original_segmentation": "la+ulendo+wu",
+      "policy_proposed_segmentation": "la+u+lendo+wu",
+      "reaudit_recommendation": "REVISE",
+      "policy_result": "ACCEPT_REVISION",
+      "reasons": [
+        "original_vs_policy_segmentation"
+      ],
+      "confidence": "HIGH",
+      "human_review_question": ""
+    }
+  ]
+}

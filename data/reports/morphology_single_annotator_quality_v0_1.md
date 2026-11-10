@@ -1,24 +1,21 @@
 # Morphology single-annotator quality v0.1
 
-_Generated 2026-08-06T06:10:22.699323Z_
+_Generated 2026-08-14T00:22:22.866413Z_
 
 ## Research framing
 
-- Development benchmark: **single native-speaker annotation** (`annotator_a`)
-- Annotator count: **1**
-- Human–AI pilot (chat / Claude assist): **exploratory only**, not gold
-- **No human–human IAA claim** in this phase
+- Development benchmark: **single native-speaker annotation**
+- Annotator count: **1** (`annotator_a`)
+- Human–AI pilot: **exploratory only** (not gold)
+- **No human–human IAA claim**
 - Morphology holdout: **locked**
-- Stronger multi-annotator validation: **future work**
+- Multi-annotator validation: **future work**
 
-## Self-consistency review
+## Self-consistency (pass1 vs delayed pass2)
 
-- Blinded re-annotation set: **25** items (`self_review_25_blinded.jsonl`)
-- Status: **awaiting pass-2 re-annotation**
-- Comparison **not run** (pass-2 file missing or empty)
-
-After Annotator A completes pass-2, re-run:
-
-```bash
-.venv/bin/python scripts/tokenizers/measure_annotation_self_consistency.py
-```
+- Items compared: **25** / 25
+- Exact segmentation agreement: **0.52**
+- Mean boundary F1 (both segmented): **0.8414502164502164**
+- Uncertainty consistency: **1.0**
+- Mean tag Jaccard: **0.9259999999999999**
+- Requiring manual reconsideration: **13** (52.0%)
