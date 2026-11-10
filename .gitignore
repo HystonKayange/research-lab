@@ -1,5 +1,6 @@
 # Virtual environments
 .venv/
+.venv-security/
 venv/
 env/
 
@@ -25,6 +26,37 @@ htmlcov/
 .env
 .env.*
 !.env.example
+.aws/
+.ssh/
+.azure/
+.config/gcloud/
+.netrc
+.pypirc
+.npmrc
+.git-credentials
+credentials
+credentials.*
+service-account*.json
+service_account*.json
+*-service-account.json
+secrets.json
+secrets.yaml
+secrets.yml
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+id_rsa*
+id_ed25519*
+
+# Private research artifacts: keep local copies outside the public Git tree.
+data/splits/**/test/
+data/splits/**/metadata/test_documents.jsonl
+data/tokenizers/**/evaluation/test_metrics.json
+data/research/morphology_benchmark_*/locked/*
+!data/research/morphology_benchmark_*/locked/README.md
+!data/research/morphology_benchmark_*/locked/RELEASE_BLOCKED
 
 # Model checkpoints & training outputs (large binaries)
 data/models/

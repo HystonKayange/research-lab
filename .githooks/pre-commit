@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+if [ -x .venv-security/bin/python ]; then
+    exec .venv-security/bin/python scripts/security/check_public_repository.py --staged
+fi
+if [ -x .venv/bin/python ] && .venv/bin/python -c 'import detect_secrets' >/dev/null 2>&1; then
+    exec .venv/bin/python scripts/security/check_public_repository.py --staged
+fi
+exec python3 scripts/security/check_public_repository.py --staged

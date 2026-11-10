@@ -312,4 +312,8 @@ That is **not** required for this project to be finished. No successor tokenizer
 
 ## Data and redistribution
 
-This repository is currently **private**. Source corpora may have their own licenses. Publishing this code does not relicense third-party data. No project-wide open-source license is declared here.
+This repository is **public**. Source corpora may have their own licenses. Publishing this code does not relicense third-party data. No project-wide open-source license is declared here.
+
+Credentials, LM-test split files, and the sealed morphology-holdout artifacts belong in private local storage and are excluded from new commits. The research locks remain in force. Older commits previously included the protected research files; removing them from the current tree does not erase those historical copies. See [SECURITY.md](SECURITY.md) for the safeguards and remaining exposure limits.
+
+Before committing, install `requirements-security.txt` in a separate `.venv-security` environment as described in [SECURITY.md](SECURITY.md). To enable the check automatically for local commits, set `git config core.hooksPath .githooks`. GitHub also runs the public-repository check on pushes and pull requests.

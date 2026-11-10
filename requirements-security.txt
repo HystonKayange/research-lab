@@ -1,0 +1,2 @@
+# Separate from frozen scientific dependencies; used only for publication checks.
+detect-secrets==1.5.0
