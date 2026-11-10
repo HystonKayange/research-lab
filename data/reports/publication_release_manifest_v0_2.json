@@ -1,0 +1,73 @@
+{
+  "schema_version": "publication_release_manifest_v0_2",
+  "prepared_on": "2026-11-10",
+  "presentation_checks_passed": true,
+  "formal_release_ready": false,
+  "paper_status": "working_draft_requires_author_review",
+  "paper_pages": 7,
+  "code_license": "owner_choice_pending",
+  "remaining_owner_decisions": [
+    "code_license",
+    "annotation_license_and_redistribution_permission",
+    "author_approval_and_venue_specific_disclosures"
+  ],
+  "frozen_input_sha256": {
+    "phase_c": "d0d22cfa29ae92c73a08133794d8a6d7d507529522641de7c823b9fa81ac14eb",
+    "phase_f": "a695ba65c639d16a64f3726771e77dc4f21834c74044432c168f98269e0d5599",
+    "oracle": "55c8896c8e84ab3563f40e26e0cd68508ed2605424056a2e0241ee151a9a7c75",
+    "diagnostic": "eed5ce85953e110ee350639292e61ad1c9740e88b5311f36133bfa3fda91cf70",
+    "adjudication": "76c294bdb00da18622938ddb7dc809ab36192261841493f7857396320cadf641",
+    "canonical": "0f90120717130a0db6544bc6fa32965a6d4944ee15e3a69affcc10afcfad14d5",
+    "active_v01": "665ee2fc464448696d78dc646455c4fa2bcadbcdbb4fac4de2c9f200ca1df0b1",
+    "gold": "73b948d782b6e979814de051ffad315ca282cbff5fc7f8c5de15b0c864852f67"
+  },
+  "artifact_sha256": {
+    "README.md": "2af6f54953a8021607a5b31f673334113bce3edc2e30083f7ca3276485dc891c",
+    "DATA_AND_LICENSES.md": "c54cfb311ed2a723a809787328bfd45d3a04104b385fc0379840e02c9bba5e91",
+    "docs/research/PUBLIC_REPRODUCIBILITY_v0_2.md": "73a38096d3fd005dfe0e4ac524e33a959ca2c16d371b24182b44e5a7875b20f7",
+    "docs/research/PUBLICATION_REVIEW_v0_2.md": "06520ee128599827e4519cc2b639102e6230d603637ad013f8a07a8d8630ad3f",
+    "docs/research/papers/unigram_undersegments_chichewa_v0_2.md": "c33ffadb7a55ece28badb89e837235ffa372ff7741750a4cc1edafbb396a1c2b",
+    "CITATION.cff": "13060a6e5158bab82042a98f30069e16b5c33f377d45f1807205b8fe35994e43",
+    "requirements-publication.txt": "241ddc6f10838eaaa8def9d07e0b35b92739ae0ee271c366509d8db7d849acb5",
+    ".gitattributes": "bfacc327388ff4a68d39d27366402bf2f47bdc404cb2858b04c9821c84d73b01",
+    "docs/research/papers/references_v0_2.bib": "958124239e006a5b8223e9b0a1e28c688fcce1306715e881b9024e87e6fa4b45",
+    "docs/research/papers/unigram_undersegments_chichewa_v0_2.pdf": "c61e5248558d4dd96058437ff7cea7d2f5133eeb7d666aff9122df568b77d538",
+    "data/reports/publication_snapshot_v0_2.json": "509eb68ce0e9b7884e5d2ac345a7110d8f9463e7e6767b904fc4c6268c8ec15f",
+    "scripts/publication/build_publication_snapshot.py": "edd8374c2aea7691cbc4af9cbe25db2440a326f739e59606fd010d57e5c20670",
+    "scripts/publication/build_paper_pdf.py": "85721304c0996a655a1ab55063c82dc49825cb158afe579249a9f79aa1bc3f93",
+    "scripts/publication/check_publication_release.py": "291afcb23c778a8a99e6ac54e5c04a9feed8e9404c81f93664a157f52a668c26",
+    "tests/test_publication_snapshot.py": "fe506ae780cf547d7aba67cdef6003629ad2876af653ba8f729eba0f2352df72",
+    ".github/workflows/repository-security.yml": "9f43e793373aa9530e8d77c41fd785f5466c0028465a96870da225797709c107",
+    "data/reports/figures/paper_v0_2/f1_candidate_availability.png": "4b81b1a7a901d2a9639a27e0f7056084da69b25929cb19fe49fc75c085bbd25b",
+    "data/reports/figures/paper_v0_2/f1_candidate_availability.svg": "5c8356c66df34759f3875c1b63881563852a1565090f40a4f41135b8ba272f92",
+    "data/reports/figures/paper_v0_2/f2_oracle_changes.png": "7550da4075cdbb4a4ac41e6a137d621cf2015ab1405802387d28302b2ad60f57",
+    "data/reports/figures/paper_v0_2/f2_oracle_changes.svg": "51c911bb8c9c420822f6e97a58ab1b4e0169c4b84ffe968680a87b0f95f5d5f6",
+    "data/reports/figures/paper_v0_2/f3_primary_lm.png": "0a3258ef2614ade8fce45b65b8bf1e095513c1194db7f739dba294b01446c100",
+    "data/reports/figures/paper_v0_2/f3_primary_lm.svg": "dbf70ea74f6f7e112fa37cabc2a2ca3012cf958b03fb42941b65873fc4b3324c"
+  },
+  "environment": {
+    "python": "3.12.3",
+    "dependencies": {
+      "matplotlib": "3.11.1",
+      "numpy": "2.5.1",
+      "Pillow": "12.3.0",
+      "reportlab": "5.0.0"
+    }
+  },
+  "font_sha256": {
+    "DejaVuSerif.ttf": "8f2c103bfa3fd5de71f1b92b18f21906b5a26871fb7e19a9a4c9af539c3cc7ab",
+    "DejaVuSerif-Bold.ttf": "847b33e13925f19ff87e4d934d6b3cf7cac35ce16424f6f670e40c2f377cf2df",
+    "DejaVuSans.ttf": "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280",
+    "DejaVuSans-Bold.ttf": "5c1247acef7f2b8522a31742c76d6adcb5569bacc0be7ceaa4dc39dd252ce895",
+    "DejaVuSansMono.ttf": "c805f9436dbc268644c1d9584f01a601a653e028e08fd74b9b949f6cf8304d88"
+  },
+  "local_publication_links_valid": true,
+  "table_values_match_frozen_sources": true,
+  "historical_metrics_recomputed": false,
+  "scoring_rules_changed": false,
+  "tokenizer_changed": false,
+  "lambda_selection_changed": false,
+  "holdout_accessed": false,
+  "lm_test_accessed": false,
+  "scientific_evaluation_run": false
+}

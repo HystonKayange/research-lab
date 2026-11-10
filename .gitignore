@@ -1,6 +1,7 @@
 # Virtual environments
 .venv/
 .venv-security/
+.venv-publication/
 venv/
 env/
 

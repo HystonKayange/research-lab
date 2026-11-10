@@ -183,3 +183,13 @@ Among 125 oracle≠Unigram items:
 4. V1 `compat` failed because it does not fire on those left-edge grammatical cuts (strength 0 at the disputed positions).
 
 This anatomy, not another ACL method, should constrain any later experiment.
+
+## Publication addendum — 2026-11-10
+
+This close-out is retained as the historical rationale for closing V1. The
+publication review found that the 2/71/41 misses of the selected oracle cannot be
+read as absence from every candidate. Stored-candidate union absence is 0/27/22
+for the same left/right/internal bins. The v0.2 paper also qualifies conditional
+macro averages and avoids inferring that every mixed weighting must fail from
+the maximum-compatibility result. No V1 result, scoring rule, or closure decision
+is changed; any successor remains a separate research decision.

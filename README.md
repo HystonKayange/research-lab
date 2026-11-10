@@ -1,10 +1,10 @@
 # Mthandizi — controlled Chichewa tokenization experiments
 
-A reproducible research record for **tokenization of Chichewa**, a low-resource Bantu language, under frozen data, compute, and evaluation locks.
+A research record for **tokenization of Chichewa**, a low-resource Bantu language, under frozen data, compute, and evaluation locks. Paper artifacts can be rebuilt from the published result files; full experimental reproduction has additional data and checkpoint requirements.
 
 The active goal is **not** to invent another tokenizer. It is to document what the finished experiments already show, and to support a small empirical paper / technical report.
 
-> **One-sentence finding.** Unigram substantially outperforms BPE on a conservative native-speaker Chichewa morphology benchmark but undersegments; its n-best list already contains most missing prefix/TAM/NEG structure, while many final-vowel and internal boundaries are absent, and a pre-registered unsupervised boundary-productivity reranker fails both to select the unused alternatives and to improve matched LM BPC.
+> **Finding.** Unigram has higher logged morphology F1 than BPE on the frozen Chichewa development instrument and still undersegments. Stored candidates contain all missed left-edge offsets and many missed right-edge/internal offsets, but availability is different from selecting a good complete path. StatBound V1 changes none of the development segmentations and fails the primary LM criterion. The v0.2 report discloses conditional scoring denominators, normalization warnings, and prior public test-artifact exposure.
 
 **Status:** unpublished research repository.  
 **Direction:** D-0016 — empirical consolidation; no V2.  
@@ -46,11 +46,11 @@ Morphological faithfulness and efficient LM tokenization are **not** treated as 
 
 ## 3. One-sentence finding
 
-Unigram substantially outperforms BPE on a conservative native-speaker Chichewa morphology benchmark but undersegments; its n-best list already contains most missing prefix/TAM/NEG structure, while many final-vowel and internal boundaries are absent, and a pre-registered unsupervised boundary-productivity reranker fails both to select the unused alternatives and to improve matched LM BPC.
+Unigram has higher logged development boundary F1 than BPE (0.5551 versus 0.4622), but misses 292 gold offsets. All 129 missed left-edge offsets occur somewhere in its stored candidate list. Of the 93 right-edge and 70 internal misses, 27 and 22 respectively are absent from every candidate. A gold-selected path can still omit an available boundary. StatBound's frozen λ*=0.25 changes no development segmentation and fails primary LM validation.
 
-Working paper draft: [`docs/research/papers/unigram_undersegments_chichewa_v0_1.md`](docs/research/papers/unigram_undersegments_chichewa_v0_1.md) · [PDF](docs/research/papers/unigram_undersegments_chichewa_v0_1.pdf)
+Current working paper: [v0.2 Markdown](docs/research/papers/unigram_undersegments_chichewa_v0_2.md) · [seven-page PDF](docs/research/papers/unigram_undersegments_chichewa_v0_2.pdf). The [v0.1 draft](docs/research/papers/unigram_undersegments_chichewa_v0_1.md) is retained as a historical version; its stronger candidate-absence wording is corrected in v0.2.
 
-Paper-facing tables and figures: [`data/reports/paper_artifacts_v0_1.md`](data/reports/paper_artifacts_v0_1.md)
+Current data summary and figures: [publication snapshot v0.2](data/reports/publication_snapshot_v0_2.json) · [figures](data/reports/figures/paper_v0_2/). Historical T1–T3/F1–F3: [v0.1 artifacts](data/reports/paper_artifacts_v0_1.md).
 
 ---
 
@@ -65,7 +65,7 @@ Paper-facing tables and figures: [`data/reports/paper_artifacts_v0_1.md`](data/r
 
 Train text is the only source for Unigram/BPE training and for StatBound boundary statistics.  
 **Validation** is used for LM BPC and efficiency.  
-**Test is locked** and has not been used for scientific claims.
+**LM test remains procedurally locked**; the paper reports LM validation results. Test artifacts were previously public and were removed from published history. This is not a claim that historical confidentiality or an unseen test set was restored.
 
 Provenance notes live under [`data/`](data/). Third-party corpora keep their own licenses.
 
@@ -78,15 +78,19 @@ A conservative **Level-B** development benchmark: split namable grammatical morp
 | Fact | Status |
 |------|--------|
 | Annotated development records | 200 |
+| Excluded before Level-B review | 5 |
+| Active Level-B source records | 195 |
 | Annotator | Single native Chichewa speaker (`annotator_a`) |
 | Level-B active items | **162** |
-| Excluded (non-Chichewa / noise) | **33** |
+| Further excluded under Level-B scope/source criteria | **33** |
 | Unresolved / reconstruction failures | 0 |
 | Policy | [`docs/research/CHICHEWA_LEVEL_B_ADJUDICATION_POLICY_v0_2.md`](docs/research/CHICHEWA_LEVEL_B_ADJUDICATION_POLICY_v0_2.md) |
 | Active file SHA-256 | `73b948d782b6e979814de051ffad315ca282cbff5fc7f8c5de15b0c864852f67` |
 | Morphology holdout | **Locked / unused** |
 
 This is a **single-annotator development instrument**. It is not multi-annotator gold and does not report human–human IAA. Historical Stage-1 self-review numbers (exact 0.52, boundary F1 0.841) are preserved as measurements of the earlier protocol and are **not** recomputed as current gold quality.
+
+Finalization retained 18 original analyses, accepted 133 frozen-policy revisions, and incorporated explicit native-speaker decisions on 11 flagged exceptions. This is not evidence of an independent human reannotation of every policy revision.
 
 Tokenizer outputs were not used to write the Level-B gold.
 
@@ -98,7 +102,7 @@ Tokenizer outputs were not used to write the Level-B gold.
 |----------|------|
 | [`docs/research/MTHANDIZI_TOKENIZER_SUCCESS_CRITERIA_v0_1.md`](docs/research/MTHANDIZI_TOKENIZER_SUCCESS_CRITERIA_v0_1.md) | SC1–SC9, frozen before StatBound implementation |
 | [`docs/research/MTHANDIZI_TOKENIZER_EVALUATION_PROTOCOL_v0_1.md`](docs/research/MTHANDIZI_TOKENIZER_EVALUATION_PROTOCOL_v0_1.md) | Phase order, λ selection, locks |
-| [`docs/research/MTHANDIZI_TOKENIZER_DECISION_LOG.md`](docs/research/MTHANDIZI_TOKENIZER_DECISION_LOG.md) | Dated decisions D-0001–D-0016 |
+| [`docs/research/MTHANDIZI_TOKENIZER_DECISION_LOG.md`](docs/research/MTHANDIZI_TOKENIZER_DECISION_LOG.md) | Dated research, publication, and provenance decisions |
 | [`docs/research/EMPIRICAL_PAPER_CHARTER_v0_1.md`](docs/research/EMPIRICAL_PAPER_CHARTER_v0_1.md) | Current paper/repo direction |
 
 In force:
@@ -129,7 +133,7 @@ In force:
 | BPE8k | 0.7015 | 0.3764 | 0.4622 | 0.0556 | 0.2285 |
 | Unigram8k | 0.8431 | 0.4502 | **0.5551** | 0.0802 | 0.2281 |
 
-Unigram’s dominant failure is **undersegmentation**: high precision, low recall.
+Unigram’s dominant logged error is **undersegmentation**: 292 false-negative boundaries versus 64 false positives. Macro P/R/F1 omit undefined values separately: Unigram uses 152/160/150 items; exact match uses 162. The frozen integrity record also flags one BPE and three Unigram empty normalized pieces despite exact surface reconstruction. Scores and rules are preserved, with these qualifications disclosed in the v0.2 paper.
 
 Source: [`data/reports/phase_c_morphology_v0_2_results.json`](data/reports/phase_c_morphology_v0_2_results.json)
 
@@ -176,34 +180,34 @@ Gold was used **only** to score already generated Unigram n-best=16 candidates. 
 | Unigram top-1 | 0.8431 | 0.4502 | 0.5551 | 13/162 |
 | Best-of-16 F1 oracle | 0.8315 | 0.8107 | 0.7913 | 22/162 |
 
-Oracle ΔF1 = **+0.2362**. Exact gold appears in n-best for only 22/162 items. This ceiling is **not** a realistic method target: some F1 gains are linguistically poor oversegmentations.
+Logged oracle ΔF1 = **+0.2362**, with the conditional-denominator caveat above. Exact gold appears in n-best for 22/162 items. This is an analysis ceiling, not a deployable method target: some selected paths add non-gold boundaries.
 
-**F1. Where Unigram misses gold cuts**
+**F1. Candidate availability versus selected-path misses**
 
-![Missed gold boundaries by location](data/reports/figures/paper_v0_1/f1_missed_boundaries_by_location.png)
+![Candidate availability versus selected-path misses](data/reports/figures/paper_v0_2/f1_candidate_availability.png)
 
-| zone | Unigram misses | still missing after best-of-16 |
-|------|---------------:|-------------------------------:|
-| Left edge (prefix / TAM / NEG) | 129 | **2** |
-| Right edge (mostly final `-a`/`-e`) | 93 | **71** |
-| Internal (extensions etc.) | 70 | 41 |
+| Positional bin | Unigram misses | Selected oracle still misses | Absent from every candidate |
+|------|---------------:|-------------------------------:|---:|
+| Left edge (offset ≤4) | 129 | **2** | **0** |
+| Right edge (≤2 characters remain) | 93 | **71** | **27** |
+| Internal | 70 | 41 | **22** |
 
 **F2. What the oracle actually changes** (125 words)
 
-![Oracle change types](data/reports/figures/paper_v0_1/f2_oracle_change_types.png)
+![Oracle change types](data/reports/figures/paper_v0_2/f2_oracle_changes.png)
 
-- **66** clean prefix-only gold adds  
-- **28** other gold-improving changes  
-- **31** F1 gains that introduce false-positive cuts  
-- **124/125** oracle changes only add splits; the oracle effectively never merges  
+- **66** paths add only gold left-edge offsets
+- **28** other changes without new non-gold cuts
+- **31** paths introduce an additional non-gold boundary
+- **124/125** changes only add boundaries; one also removes a boundary
 
-**Interpretation.** Prefix-stack alternatives are mostly a **selection** problem (already in n-best). Many final-vowel and internal cuts are a **generation** problem (absent from n-best=16).
+**Interpretation.** These coordinate bins are not independently labelled grammatical categories. Candidate absence is 0/27/22, not the selected oracle's 2/71/41 misses. Union coverage does not establish that all cuts coexist in one candidate. Of 125 changed paths, 115 strictly improve defined F1; ten have undefined baseline F1. The 31 extra-cut cases are a mechanical gold comparison, not 31 independent native-speaker judgments.
 
 **F3. Primary LM (parameter-matched × fixed characters)**
 
-![Primary LM BPC](data/reports/figures/paper_v0_1/f3_primary_lm_bpc.png)
+![Primary LM BPC](data/reports/figures/paper_v0_2/f3_primary_lm.png)
 
-StatBound did not improve mean BPC (1/3 seeds better). Because it changed 0/162 development segmentations, this is not evidence about “more morphological tokenization” as an LM intervention.
+StatBound did not improve mean BPC (1/3 seeds better). It changed 0/162 development segmentations, so these results do not establish the LM effect of improved morphology. Broader-text encoding was not completely identical.
 
 Oracle report: [`data/reports/unigram_nbest_oracle_v0_1.md`](data/reports/unigram_nbest_oracle_v0_1.md)
 
@@ -213,8 +217,8 @@ Oracle report: [`data/reports/unigram_nbest_oracle_v0_1.md`](data/reports/unigra
 
 1. **Unigram ≫ BPE** on this conservative Chichewa Level-B development instrument.  
 2. Unigram **undersegments** (P 0.84, R 0.45).  
-3. Its n-best list already contains **most missing left-edge inflection**; many **final-vowel** and some **internal** gold cuts are not in that list.  
-4. Some high-F1 n-best paths are **linguistically bad**. Do not imitate the oracle.  
+3. Its stored candidate union contains all missed left-edge offsets; **27 right-edge** and **22 internal** gold offsets are absent. Joint selection remains a separate problem.
+4. Some higher-F1 n-best paths introduce **non-gold cuts**. The oracle is not a pseudo-gold training target.
 5. A simple unsupervised **productivity reranker fails** to select the unused alternatives and fails primary LM BPC.  
 6. Morphological boundary F1 and LM BPC should **not** be treated as one objective.
 
@@ -225,43 +229,33 @@ Oracle report: [`data/reports/unigram_nbest_oracle_v0_1.md`](data/reports/unigra
 - Single annotator; N=162; Bible-heavy development sample  
 - Morphology numbers are **development** evidence; holdout unused  
 - Level-B is a conservative linguistic rubric, not automatically the right LM unit  
-- V1 was a scientific no-op on the benchmark, so Phase F does not test morphologically different tokenization  
+- V1 changed no benchmark segmentation; the study does not establish the effect of a successful morphology intervention on LM quality
 - Small decoder LM, not a large pretrained model  
 - No multi-annotator IAA  
+- Conditional macro denominators and empty normalized-piece warnings in the frozen scorer
+- Prior public test-artifact exposure; procedural locks are not a confidentiality claim
+- Original archives and a proven immutable Wikipedia dump identifier are unavailable
 
 ---
 
 ## 12. Reproducibility
 
-Regenerate the six paper artifacts from frozen reports (no training):
+Build the current paper artifacts from frozen reports in a separate presentation environment:
 
 ```bash
-.venv/bin/python scripts/tokenizers/render_paper_artifacts_v0_1.py
+python3 -m venv .venv-publication
+.venv-publication/bin/python -m pip install -r requirements-publication.txt
+.venv-publication/bin/python scripts/publication/build_publication_snapshot.py
+.venv-publication/bin/python scripts/publication/build_paper_pdf.py
 ```
 
-Re-run the analysis-only n-best oracle (development gold only):
-
-```bash
-.venv/bin/python scripts/tokenizers/run_unigram_nbest_oracle_v0_1.py
-```
-
-Verify train-only boundary-stat regeneration:
-
-```bash
-.venv/bin/python scripts/tokenizers/verify_boundary_stats_repro.py
-```
-
-Unit tests:
-
-```bash
-.venv/bin/python -m unittest tests.test_unigram_nbest_oracle tests.test_statbound_unigram_v1 tests.test_phase_c_infra
-```
+The build does not tokenize text or rerun a scientific evaluation. See the [public reproducibility guide](docs/research/PUBLIC_REPRODUCIBILITY_v0_2.md) for prerequisites, exact input boundaries, metric qualifications, and historical Git-ID mapping. Historical evaluation entrypoints remain archived under their frozen protocols; they are not part of this presentation build.
 
 | Path | Contents |
 |------|----------|
 | [`configs/`](configs/) | Frozen criteria, StatBound config, eval protocol hashes |
 | [`data/reports/`](data/reports/) | Phase C/F, oracle, paper artifacts |
-| [`data/reports/figures/paper_v0_1/`](data/reports/figures/paper_v0_1/) | F1–F3 |
+| [`data/reports/figures/paper_v0_2/`](data/reports/figures/paper_v0_2/) | Corrected candidate-availability figure, oracle-change counts, paired LM plot |
 | [`docs/research/`](docs/research/) | Specs, protocol, decision log, charter |
 | [`scripts/tokenizers/`](scripts/tokenizers/) | Evaluation, oracle, artifact renderer |
 | [`src/tokenizers/statbound/`](src/tokenizers/statbound/) | Frozen V1 implementation |
@@ -292,7 +286,7 @@ That is **not** required for this project to be finished. No successor tokenizer
 | Phase C / Phase F | Complete |
 | N-best oracle + anatomy | Complete |
 | Paper artifacts T1–T3, F1–F3 | Generated from existing results |
-| Empirical paper draft | **Working draft v0.1** (markdown + PDF) |
+| Empirical paper draft | **Working draft v0.2** (single-source Markdown + seven-page PDF) |
 | Morphology holdout | **Locked** |
 | LM test | **Locked** |
 | V2 / new tokenizer | **Not authorized** |
@@ -312,7 +306,7 @@ That is **not** required for this project to be finished. No successor tokenizer
 
 ## Data and redistribution
 
-This repository is **public**. Source corpora may have their own licenses. Publishing this code does not relicense third-party data. No project-wide open-source license is declared here.
+This repository is **public**. Original-code licensing remains an owner decision; visibility alone is not an open-source license. Source-specific attribution and CC BY-SA records are linked in [DATA_AND_LICENSES.md](DATA_AND_LICENSES.md). Annotation rights, corpus text, trained artifacts, and the working paper have separate release considerations.
 
 Credentials, LM-test split files, and the sealed morphology-holdout artifacts belong in private local storage and are excluded from new commits. The research locks remain in force. On 2026-11-10, an owner-approved history rewrite removed eight protected artifacts from the published branch history and replaced historical commit emails with a GitHub noreply address. The frozen research files and their content hashes are unchanged; the [commit mapping](data/reports/public_history_rewrite_2026_11_10.json) preserves provenance across the changed Git IDs. Existing clones, downloads, or cached copies may retain earlier versions. See [SECURITY.md](SECURITY.md) for safeguards and exposure limits.
 

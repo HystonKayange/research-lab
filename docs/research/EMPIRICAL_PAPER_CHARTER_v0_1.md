@@ -245,3 +245,13 @@ At that point: **experiments are complete, findings are documented, the repo is 
 | **H. Next Git work** | Rewrite README to this story; add T1–T3/F1–F3 from existing JSON; keep the charter and D-0016 as the living plan; then draft the paper |
 | **I. Remain locked** | Morphology holdout; LM test |
 | **J. Finished** | §10 checklist |
+
+## Publication addendum — 2026-11-10
+
+The original charter above remains a record of D-0016. Use the v0.2 paper and
+`PUBLICATION_REVIEW_v0_2.md` for the current evidence wording: selected-oracle
+misses are not candidate-union absence, macro metric denominators differ, and
+native-speaker final decisions explicitly cover 11 exceptions rather than an
+independent reannotation of all policy revisions. Empty-piece scoring warnings
+and prior public test-artifact exposure are disclosed. These editorial
+qualifications do not reopen V1, alter the frozen protocol, or authorize V2.

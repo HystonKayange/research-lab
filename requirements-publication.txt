@@ -1,0 +1,5 @@
+# Presentation builds only; separate from the frozen scientific environment.
+matplotlib==3.11.1
+numpy==2.5.1
+Pillow==12.3.0
+reportlab==5.0.0

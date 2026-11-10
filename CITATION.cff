@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If referring to this repository, cite it as unpublished research. The v0.2 paper remains a working draft."
+title: "Mthandizi: Controlled Tokenization Experiments for Chichewa"
+type: software
+authors:
+  - family-names: Kayange
+    given-names: Hyston
+version: publication-draft-v0.2
+repository-code: "https://github.com/HystonKayange/research-lab"
+url: "https://github.com/HystonKayange/research-lab"
+abstract: "Frozen Chichewa development morphology and validation language-model experiments, including a negative StatBound V1 result and analysis of stored Unigram candidates."
+keywords:
+  - Chichewa
+  - tokenization
+  - morphology
+  - negative results

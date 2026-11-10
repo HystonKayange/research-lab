@@ -452,6 +452,33 @@ Every material research decision is recorded here.
 - **approval status:** approved_by_repository_owner
 - **changes_registered_eval_protocol:** no (publication/privacy maintenance only; scientific rules and historical measurements are unchanged)
 
+## D-0018 — Prepare publication v0.2 with corrected interpretation and preserved experiment records
+
+- **date:** 2026-11-10
+- **evidence considered:**
+  - Frozen Phase-C, Phase-F, failure-diagnostic, adjudication, and stored oracle reports
+  - Existing local policy/review/self-consistency records; their original bytes and historical measurements
+  - The owner-authorized publication-readiness review and primary publisher/ACL bibliographic records
+- **decision:**
+  - Preserve V1, λ*=0.25, gold, scoring rules, selection criteria, scientific results, and all historical measurements
+  - Correct current presentation to distinguish selected-oracle misses 2/71/41 from candidate-union absence 0/27/22; union coverage is not proof of joint path recoverability
+  - Report metric-specific undefined-value handling, recorded empty normalized-piece warnings, and the difference between 125 changed paths and 115 strict defined-F1 improvements
+  - State the actual label provenance: original native-speaker annotations, 133 accepted policy revisions, and explicit native-speaker decisions on 11 exceptions
+  - Produce a seven-page v0.2 working draft from one Markdown source, checked tables, corrected figures, verified reference links, and a public artifact-build guide
+  - Archive 26 pre-existing policy/review/self-review files without editing their contents or rerunning their analyses; do not interpret recommendations as a new gold file
+  - Preserve the original v0.1 draft and append dated qualifications to the historical charter/close-out instead of silently rewriting their earlier rationale
+  - Document prior public test-artifact exposure and separate presentation reproducibility from full training/source-acquisition reproducibility
+  - Keep code licensing, annotation redistribution permission, and author approval explicit as pending formal-release decisions
+- **rejected alternatives:**
+  - Silently fixing the scorer, altering annotations, rerunning scientific evaluations, or treating the document revision as a successor tokenizer experiment
+  - Using oracle paths as training labels or treating positional bins as independently adjudicated morpheme categories
+  - Imposing a code/dataset license without the owner's choice or describing a previously public set as restored to historical secrecy
+- **unresolved questions:**
+  - Owner licensing and annotation-permission decisions; author acceptance of the revised claims before submission
+  - Whether a future separately versioned methodology should change undefined-value or empty-piece handling (outside this revision)
+- **approval status:** editorial_improvements_authorized_by_owner; formal_submission_pending_author_review
+- **changes_registered_eval_protocol:** no (new summaries use stored outputs only; original scoring and outcomes are unchanged)
+
 ## Template for new entries
 
 ```markdown
