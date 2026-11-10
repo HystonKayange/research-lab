@@ -48,16 +48,35 @@ claim that the underlying source text is confidential or unrecoverable.
 
 ## Previously published history
 
-Earlier public commits included the protected research files. Removing them from
-the current branch does **not** erase them from older commits, existing clones,
-forks, downloads, or caches. Author identities and historical filesystem paths
-also remain in the historical record. No credentials were identified in the
-completed text/history scan; binary assets and locked contents were not inspected.
+Earlier public commits included the protected research files. On 2026-11-10 the
+repository owner approved removing all eight paths from published Git history and
+replacing historical author/committer emails with the owner's GitHub noreply
+address. Ten commits were rewritten. The only published ref was `main`; the
+morphology freeze tag existed only locally and was remapped locally without
+publishing a new tag. The push used an explicit lease on the original remote ID.
 
-Purging old copies requires a separately reviewed history rewrite, changing commit
-IDs and the research freeze tag. Such a rewrite has not been performed. Keep a
-private archival copy and provenance mapping if a rewrite is approved. Do not
-describe this cleanup as complete removal of already published data.
+All 4,940 retained file versions were verified byte-for-byte unchanged. The frozen
+development benchmark keeps its original SHA-256. Historical report bodies, result
+files, and scientific measurements remain unchanged. Their original Git IDs can
+be resolved using the [rewrite record](data/reports/public_history_rewrite_2026_11_10.json).
+Historical filesystem paths remain part of those reports. Names and commit dates
+were preserved; author and committer email fields now use the noreply address.
+
+A private original-history bundle, uncommitted-work archive, validation record,
+and commit map are stored outside public tracking under `.git/security-archive/`.
+Never publish these backups or merge an old branch into the rewritten history.
+Collaborators with older clones should make a fresh clone and transfer reviewed
+local changes rather than merge the old history.
+
+The rewrite removes these paths from the published branch history. It cannot
+recall existing clones, forks, downloads, or GitHub cached/unreferenced views. A
+GitHub Support request may be needed to address server-side cached references.
+Do not describe this as complete removal of already published data. See
+[GitHub's removal guidance](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository).
+
+No credentials were identified in the completed text/history scans. Binary assets
+and protected dataset contents were not inspected for secrets, and neither locked
+set was opened for scientific analysis or evaluation during the rewrite.
 
 ## Reporting an exposure
 

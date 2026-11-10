@@ -426,6 +426,32 @@ Every material research decision is recorded here.
 - **approval status:** approved
 - **changes_registered_eval_protocol:** no
 
+## D-0017 — Restrict public research artifacts and preserve provenance through the approved history rewrite
+
+- **date:** 2026-11-10
+- **evidence considered:**
+  - Owner approval to purge eight protected research artifacts and replace historical author/committer email fields
+  - Remote ref inventory: only `main` was published; the morphology freeze tag existed locally only
+  - Private original-history and uncommitted-work backups; complete old-to-new commit mapping
+  - Rewrite validation: 10 commits, 4,940 unchanged retained file versions, unchanged development benchmark SHA-256, and zero credential findings in 446 scanned historical text versions
+- **decision:**
+  - Remove the exact eight LM-test/morphology-holdout/test-metrics paths listed in `data/reports/public_history_rewrite_2026_11_10.json` from the published history
+  - Preserve every local private file and all pre-existing uncommitted work; do not open either locked set for analysis or evaluation
+  - Replace historical author/committer email fields with the owner's GitHub noreply address; preserve names, dates, messages, and all retained file bytes
+  - Publish rewritten `main` using an explicit force-with-lease; remap the local freeze tag without publishing a new tag
+  - Keep original Git IDs inside scientific reports as historical evidence and provide the commit mapping separately
+  - Preserve exact agreement `0.52` and boundary F1 `0.841` as historical measurements of the original annotation protocol; do not recompute or reinterpret them
+  - Keep development benchmark gold, algorithms, configurations, policies, evaluation results, and morphology/LM-test research locks unchanged
+  - Maintain credential ignore rules, the local publication hook, CI publication checks, GitHub secret scanning, and push protection
+- **rejected alternatives:**
+  - Rewriting scientific report bodies or changing data/content hashes to conceal the publication cleanup
+  - Opening or evaluating a locked set, rerunning experiments, or starting a successor tokenizer
+  - Claiming that previously downloaded/cloned data or cached GitHub views can be recalled by rewriting branch history
+- **unresolved questions:**
+  - Copies retained in older clones, forks, downloads, or server-side caches require separate handling outside the published branch refs
+- **approval status:** approved_by_repository_owner
+- **changes_registered_eval_protocol:** no (publication/privacy maintenance only; scientific rules and historical measurements are unchanged)
+
 ## Template for new entries
 
 ```markdown

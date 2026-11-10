@@ -1,0 +1,74 @@
+{
+  "schema_version": "public_history_rewrite_v0_1",
+  "date": "2026-11-10",
+  "owner_approved": true,
+  "purpose": "Remove protected research artifacts and historical personal email fields from published Git history while preserving scientific provenance.",
+  "published_branches_rewritten": ["main"],
+  "published_tags_before_rewrite": [],
+  "new_tags_published": false,
+  "commits_rewritten": 10,
+  "original_main": "e615136298c1685210f1841230fc4a87efc096bc",
+  "rewritten_main_before_documentation_commit": "236671d8d34f1de014218cf10ade65fac4710574",
+  "force_with_explicit_lease": true,
+  "historical_author_and_committer_email": "45289813+HystonKayange@users.noreply.github.com",
+  "removed_paths": [
+    "data/research/morphology_benchmark_v0.1/locked/holdout_checksums.json",
+    "data/research/morphology_benchmark_v0.1/locked/holdout_manifest.json",
+    "data/research/morphology_benchmark_v0.1/locked/holdout_payload.sealed.json",
+    "data/splits/chichewa_corpus_v0.1/metadata/test_documents.jsonl",
+    "data/splits/chichewa_corpus_v0.1/test/bible.txt",
+    "data/splits/chichewa_corpus_v0.1/test/combined.txt",
+    "data/splits/chichewa_corpus_v0.1/test/wikipedia.txt",
+    "data/tokenizers/chichewa_corpus_v0.1/baselines_v0.1/evaluation/test_metrics.json"
+  ],
+  "commit_map": {
+    "1498d79dc282b5bd5ea3df2454683fbd91ad8dc3": "f5badff3caea7d83e18a9b44edea19a9b1010f0c",
+    "547148b90942f7e9ba48084b0ea0a69351124e1e": "8d9804810bbcfee025fa7be3aa2f1220d906d287",
+    "0b3a19f8ec7edd4057695c1db7e5f6091033f13a": "f1e5ae85593b34a61bb1cc1922066832a7c3873e",
+    "a5078c26327b1ec7b687c2852a27939db9a7650a": "9818d27189b0d496ebca56e3503c212fbce79c79",
+    "71d54852eea1a22b18ef364b7ef3221d0940b49a": "e29228cff7069285515549afec65389edfa5bf8e",
+    "963c0b78b28ccd614f4ff2a95bed2e2f9f0b288c": "e7d3e42c2de883245b9637e02082c1b2240cd999",
+    "93a94d201a856af0acb06685b638dc6661b78cee": "9f81ff93a6d753cd934025722f1333311c6ec013",
+    "fa978afb31558093045adef1c152ca1f670f2afd": "19c8e82eb2c1f8ff285bc9c049cbe5f056314e82",
+    "3bd7a49e185d90f07d73941633164e7a093a4bbc": "ab234c553253cf22ebce809eb62bbbb7f699cdec",
+    "e615136298c1685210f1841230fc4a87efc096bc": "236671d8d34f1de014218cf10ade65fac4710574"
+  },
+  "local_freeze_tag": {
+    "name": "morphology-benchmark-v0.2-pre-phase-c",
+    "old_target": "a5078c26327b1ec7b687c2852a27939db9a7650a",
+    "new_target": "9818d27189b0d496ebca56e3503c212fbce79c79",
+    "published": false
+  },
+  "validation": {
+    "protected_paths_absent_from_all_rewritten_commits": true,
+    "removed_blobs_reachable_under_other_paths": false,
+    "retained_file_versions_verified_byte_identical": 4940,
+    "commit_names_dates_and_messages_preserved": true,
+    "rewritten_head_tree_identical_to_previous_head_tree": true,
+    "development_benchmark_items": 162,
+    "development_benchmark_sha256": "73b948d782b6e979814de051ffad315ca282cbff5fc7f8c5de15b0c864852f67",
+    "historical_text_versions_scanned": 446,
+    "credential_findings": 0,
+    "binary_or_locked_blobs_skipped": 88,
+    "uncommitted_files_preserved": 30,
+    "protected_local_artifacts_preserved": 8,
+    "working_tree_reset_or_checkout_used": false
+  },
+  "historical_measurements": {
+    "exact_agreement": 0.52,
+    "boundary_f1": 0.841,
+    "preserved": true,
+    "recomputed": false
+  },
+  "private_history_backup_and_commit_map_retained": true,
+  "scientific_report_git_ids_rewritten": false,
+  "scientific_evaluation_run": false,
+  "morphology_holdout": "LOCKED / UNTOUCHED",
+  "lm_test": "LOCKED / UNTOUCHED",
+  "known_exposure_limits": [
+    "Existing clones, forks, downloads, and cached or unreferenced GitHub views may retain earlier copies.",
+    "The underlying public source corpora are not made confidential by removing test split artifacts.",
+    "Historical filesystem paths in preserved scientific reports remain public.",
+    "No guarantee is made that binary assets or protected contents contain no secrets; they were not inspected."
+  ]
+}
