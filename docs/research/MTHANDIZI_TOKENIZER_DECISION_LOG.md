@@ -487,6 +487,17 @@ Every material research decision is recorded here.
 - **approval status:** approved_by_repository_owner
 - **changes_registered_eval_protocol:** no
 
+## D-0020 — Separate internal-boundary evaluator and archived-prediction measurement audit
+
+- **date:** 2026-11-11
+- **evidence considered:** Known empty-piece artifacts and metric-specific missing-value denominators in archived development scoring; owner approval for a separately versioned evaluator.
+- **decision:** Freeze `MORPHOLOGY_EVALUATOR_SPEC_v0_1.md`, its implementation, and synthetic tests before applying it to stored predictions. Remove only empty prediction pieces; require exact reconstruction and strictly internal offsets; explicitly score whole-word and one-sided-empty cases; report all-item macro and pooled micro metrics with denominators and strata.
+- **scope:** A post-hoc measurement audit of fixed archived paths, not preregistration of the original experiment, a new oracle selection, or replacement V1 results. Original scorer, gold, algorithms, λ selection, success criteria, reports, and historical self-review measurements remain unchanged. BPE new-version scores are unavailable without archived per-item predictions. StatBound path equality must be distinguished from independent rescoring.
+- **rejected alternatives:** Silently replacing historical scores, selecting new candidate paths, invoking tokenizers/models, or opening morphology holdout/LM test.
+- **unresolved questions:** Interpretation of separately labelled audit measurements after implementation; no new success threshold is introduced.
+- **approval status:** approved_by_repository_owner
+- **changes_registered_eval_protocol:** no (separate evaluator version; original registered rules and outcomes preserved)
+
 ## Template for new entries
 
 ```markdown
