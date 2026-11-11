@@ -21,7 +21,7 @@ DOCUMENTS = [
     "docs/research/PUBLICATION_REVIEW_v0_2.md", str(PAPER.relative_to(ROOT)),
 ]
 ARTIFACTS = DOCUMENTS + [
-    "CITATION.cff", "requirements-publication.txt", ".gitattributes",
+    "CITATION.cff", "LICENSE", "requirements-publication.txt", ".gitattributes",
     "docs/research/papers/references_v0_2.bib",
     "docs/research/papers/unigram_undersegments_chichewa_v0_2.pdf",
     "data/reports/publication_snapshot_v0_2.json",
@@ -94,7 +94,6 @@ def verify() -> dict:
     assert len(re.findall(r"^@", (ROOT / "docs/research/papers/references_v0_2.bib").read_text(), re.M)) == 13
     issues = check_links()
     assert not issues, "\n".join(issues)
-    license_file = ROOT / "LICENSE"
     return {
         "schema_version": "publication_release_manifest_v0_2",
         "prepared_on": "2026-11-10",
@@ -102,8 +101,9 @@ def verify() -> dict:
         "formal_release_ready": False,
         "paper_status": "working_draft_requires_author_review",
         "paper_pages": pages,
-        "code_license": "owner_choice_pending" if not license_file.exists() else "see_LICENSE_and_DATA_AND_LICENSES",
-        "remaining_owner_decisions": ["code_license", "annotation_license_and_redistribution_permission", "author_approval_and_venue_specific_disclosures"],
+        "code_license": "MIT",
+        "code_license_scope": "original_software_code_only; see LICENSE",
+        "remaining_owner_decisions": ["annotation_license_and_redistribution_permission", "author_approval_and_venue_specific_disclosures"],
         "frozen_input_sha256": snapshot["input_sha256"],
         "artifact_sha256": {p: sha(ROOT / p) for p in ARTIFACTS},
         "environment": {"python": platform.python_version(), "dependencies": {p: importlib.metadata.version(p) for p in ["matplotlib", "numpy", "Pillow", "reportlab"]}},
@@ -131,6 +131,8 @@ def main() -> int:
         existing = json.loads(MANIFEST.read_text())
         assert existing["frozen_input_sha256"] == result["frozen_input_sha256"]
         assert existing["artifact_sha256"] == result["artifact_sha256"], "Artifact hashes differ: rebuild and review before updating the manifest"
+        for key in ("code_license", "code_license_scope", "remaining_owner_decisions"):
+            assert existing[key] == result[key], f"Publication manifest status differs: {key}"
     print(json.dumps({k: result[k] for k in ["presentation_checks_passed", "paper_pages", "formal_release_ready", "code_license", "table_values_match_frozen_sources", "scientific_evaluation_run"]}, indent=2))
     return 0
 

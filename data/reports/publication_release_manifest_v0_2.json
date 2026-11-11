@@ -5,9 +5,9 @@
   "formal_release_ready": false,
   "paper_status": "working_draft_requires_author_review",
   "paper_pages": 7,
-  "code_license": "owner_choice_pending",
+  "code_license": "MIT",
+  "code_license_scope": "original_software_code_only; see LICENSE",
   "remaining_owner_decisions": [
-    "code_license",
     "annotation_license_and_redistribution_permission",
     "author_approval_and_venue_specific_disclosures"
   ],
@@ -22,12 +22,13 @@
     "gold": "73b948d782b6e979814de051ffad315ca282cbff5fc7f8c5de15b0c864852f67"
   },
   "artifact_sha256": {
-    "README.md": "2af6f54953a8021607a5b31f673334113bce3edc2e30083f7ca3276485dc891c",
-    "DATA_AND_LICENSES.md": "c54cfb311ed2a723a809787328bfd45d3a04104b385fc0379840e02c9bba5e91",
-    "docs/research/PUBLIC_REPRODUCIBILITY_v0_2.md": "73a38096d3fd005dfe0e4ac524e33a959ca2c16d371b24182b44e5a7875b20f7",
-    "docs/research/PUBLICATION_REVIEW_v0_2.md": "06520ee128599827e4519cc2b639102e6230d603637ad013f8a07a8d8630ad3f",
+    "README.md": "736838ef3d4e10e8068a6e53efb7116cf14eb9f9278efde5e96ff110d8db0dfd",
+    "DATA_AND_LICENSES.md": "48f553b5521ec3dfd0f8188b8ea8459944fcb1a3a56e41fb0e229059fb616bb4",
+    "docs/research/PUBLIC_REPRODUCIBILITY_v0_2.md": "bd9ecdadd9d61ca0324df6d63b25cdd4bd3babbf6524d9e2b7dc1c33a2a208ee",
+    "docs/research/PUBLICATION_REVIEW_v0_2.md": "c651977dc00d561ce71c3a57c4d0be155951fe020c4ac6a2098743e29d79130e",
     "docs/research/papers/unigram_undersegments_chichewa_v0_2.md": "c33ffadb7a55ece28badb89e837235ffa372ff7741750a4cc1edafbb396a1c2b",
     "CITATION.cff": "13060a6e5158bab82042a98f30069e16b5c33f377d45f1807205b8fe35994e43",
+    "LICENSE": "3589724d2a398414c08aaedee933bac0ba7258e09aede04ebfc4f451085d3e57",
     "requirements-publication.txt": "241ddc6f10838eaaa8def9d07e0b35b92739ae0ee271c366509d8db7d849acb5",
     ".gitattributes": "bfacc327388ff4a68d39d27366402bf2f47bdc404cb2858b04c9821c84d73b01",
     "docs/research/papers/references_v0_2.bib": "958124239e006a5b8223e9b0a1e28c688fcce1306715e881b9024e87e6fa4b45",
@@ -35,7 +36,7 @@
     "data/reports/publication_snapshot_v0_2.json": "509eb68ce0e9b7884e5d2ac345a7110d8f9463e7e6767b904fc4c6268c8ec15f",
     "scripts/publication/build_publication_snapshot.py": "edd8374c2aea7691cbc4af9cbe25db2440a326f739e59606fd010d57e5c20670",
     "scripts/publication/build_paper_pdf.py": "85721304c0996a655a1ab55063c82dc49825cb158afe579249a9f79aa1bc3f93",
-    "scripts/publication/check_publication_release.py": "291afcb23c778a8a99e6ac54e5c04a9feed8e9404c81f93664a157f52a668c26",
+    "scripts/publication/check_publication_release.py": "9340b507817ab9bafcdf08e6ec86abdb04c3ebe5b65a0e56fbf3022896e05d15",
     "tests/test_publication_snapshot.py": "fe506ae780cf547d7aba67cdef6003629ad2876af653ba8f729eba0f2352df72",
     ".github/workflows/repository-security.yml": "9f43e793373aa9530e8d77c41fd785f5466c0028465a96870da225797709c107",
     "data/reports/figures/paper_v0_2/f1_candidate_availability.png": "4b81b1a7a901d2a9639a27e0f7056084da69b25929cb19fe49fc75c085bbd25b",

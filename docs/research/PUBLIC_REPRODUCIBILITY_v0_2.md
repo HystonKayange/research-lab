@@ -99,8 +99,7 @@ set has been restored. Future confirmatory plans must account for this limitatio
 
 ## Publication and licensing decisions
 
-The report is a working draft requiring author approval. Code licensing remains
-an owner decision until a license is selected; public visibility alone is not an
-open-source license. Data and annotation rights are separate. See
-`DATA_AND_LICENSES.md` and the source-specific attribution records before
-redistributing text, annotations, or trained artifacts.
+The report is a working draft requiring author approval. Original software code
+is available under the [scoped MIT license](../../LICENSE). See
+[DATA_AND_LICENSES.md](../../DATA_AND_LICENSES.md) and the source-specific
+attribution records before redistributing text, annotations, or trained artifacts.

@@ -306,7 +306,7 @@ That is **not** required for this project to be finished. No successor tokenizer
 
 ## Data and redistribution
 
-This repository is **public**. Original-code licensing remains an owner decision; visibility alone is not an open-source license. Source-specific attribution and CC BY-SA records are linked in [DATA_AND_LICENSES.md](DATA_AND_LICENSES.md). Annotation rights, corpus text, trained artifacts, and the working paper have separate release considerations.
+Original software code is available under the [MIT License](LICENSE), within the scope stated there. Corpus text, annotations, trained artifacts, and the working paper are outside that grant. See [DATA_AND_LICENSES.md](DATA_AND_LICENSES.md) for source attribution and outstanding dataset and paper release decisions.
 
 Credentials, LM-test split files, and the sealed morphology-holdout artifacts belong in private local storage and are excluded from new commits. The research locks remain in force. On 2026-11-10, an owner-approved history rewrite removed eight protected artifacts from the published branch history and replaced historical commit emails with a GitHub noreply address. The frozen research files and their content hashes are unchanged; the [commit mapping](data/reports/public_history_rewrite_2026_11_10.json) preserves provenance across the changed Git IDs. Existing clones, downloads, or cached copies may retain earlier versions. See [SECURITY.md](SECURITY.md) for safeguards and exposure limits.
 

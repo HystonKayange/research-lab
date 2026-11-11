@@ -64,9 +64,9 @@ Presentation build and artifact consistency checks can be completed from public
 reports alone. The seven-page v0.2 draft is still a **working draft**, not a
 submission or an automatically issued dataset/software release.
 
-Owner decisions that remain before a formal release:
+The owner has selected [MIT for original software code](../../LICENSE). Dataset
+and paper release decisions remain separate:
 
-- Select the original-code license; none is silently imposed by this review.
 - Confirm annotation license/contributor permission and context redistribution.
 - Approve the revised scientific claims and venue-specific assistance disclosure.
 - Decide any future confirmatory protocol with awareness of prior public exposure.

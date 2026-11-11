@@ -479,6 +479,14 @@ Every material research decision is recorded here.
 - **approval status:** editorial_improvements_authorized_by_owner; formal_submission_pending_author_review
 - **changes_registered_eval_protocol:** no (new summaries use stored outputs only; original scoring and outcomes are unchanged)
 
+## D-0019 — License original software code under MIT
+
+- **date:** 2026-11-11
+- **decision:** Apply MIT to owner-controlled original software code under the paths listed in `LICENSE`. Corpus text, benchmark annotations and contexts, trained artifacts, figures, research reports, and the paper remain outside the grant.
+- **unresolved questions:** Annotation and context redistribution permissions, and author approval of the paper for submission.
+- **approval status:** approved_by_repository_owner
+- **changes_registered_eval_protocol:** no
+
 ## Template for new entries
 
 ```markdown

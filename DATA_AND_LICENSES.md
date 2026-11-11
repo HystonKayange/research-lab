@@ -2,14 +2,14 @@
 
 ## Original code and paper
 
-No project-wide license has yet been selected for original code. The repository is
-public, but should not be advertised as an open-source licensed release until the
-owner makes that choice. The v0.2 paper is an unpublished working draft. Its
-publication venue and final license remain undecided.
+The owner selected the [MIT License](LICENSE) for original software code in
+`src/`, `scripts/`, `tests/`, `.githooks/`, and `.github/workflows/`. The grant
+covers code the owner has rights to license. Third-party material retains its
+applicable terms.
 
-A future code license must not be represented as relicensing third-party text,
-figures, libraries, annotations whose rights are unresolved, or trained artifacts.
-Third-party packages retain their own licenses.
+The MIT grant does not cover corpus text, annotations, accompanying contexts,
+model artifacts, figures, research reports, or the paper. The v0.2 paper remains
+an unpublished working draft. Its venue and final license remain undecided.
 
 ## Included text sources
 
@@ -37,8 +37,8 @@ Authoritative references checked for this publication review on 2026-11-10:
 - [CC BY-SA 4.0 deed and legal-code link](https://creativecommons.org/licenses/by-sa/4.0/)
 
 These notices document source terms; they do not establish a new grant from this
-project for material it does not own. The status of model weights and other
-derived artifacts is not settled here by choosing a code license.
+project for material it does not own. The MIT code license does not determine
+the status of model weights or other derived artifacts.
 
 ## Annotation and benchmark rights
 
