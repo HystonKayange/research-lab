@@ -1,0 +1,29 @@
+name: Morphology evaluator audit
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  strict-evaluator:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Python 3.12
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+      - name: Test synthetic boundary conventions and fixed-path audit
+        run: |
+          python -m unittest discover -s tests -p test_morphology_boundaries_v0_1.py
+          python -m unittest discover -s tests -p test_morphology_evaluator_audit_v0_1.py
+      - name: Verify stored-path audit without models or locked sets
+        run: python scripts/evaluation/audit_morphology_evaluator_v0_1.py --check

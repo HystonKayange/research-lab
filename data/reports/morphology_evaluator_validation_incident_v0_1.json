@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1",
+  "incident_id": "morphology-evaluator-validation-metadata-access-2026-11-11",
+  "incident_date": "2026-11-11",
+  "recorded_date": "2026-11-12",
+  "status": "disclosed_to_owner; continuation_authorized; remediation_recorded",
+  "cause": "The new evaluator's validation command used broad unittest discovery instead of naming only its two synthetic-test files.",
+  "triggering_command": "python3 -m unittest discover -s tests -p 'test_morphology*py' -v",
+  "files_read_by_legacy_tests": [
+    "data/research/morphology_benchmark_v0.1/locked/holdout_manifest.json",
+    "data/research/morphology_benchmark_v0.1/locked/RELEASE_BLOCKED"
+  ],
+  "access_description": "An older test parsed the holdout manifest to check its schema and absence of surface forms. An older --status-only call also parsed the manifest and printed lock/count metadata. Another test read the lock marker. Metadata access violated the task's restricted-material boundary even though the payload was not decoded.",
+  "morphology_holdout_metadata_accessed": true,
+  "holdout_payload_decoded": false,
+  "holdout_evaluation_run": false,
+  "holdout_released": false,
+  "lm_test_accessed": false,
+  "lm_bpc_accessed": false,
+  "additional_test_execution": "The broad discovery also invoked an older tokenizer diagnostic dry-run, which failed because sentencepiece was unavailable, before encoding. No new tokenizer evaluation completed. A separate old test failed on an obsolete approval-status expectation. Neither old test is being changed or rerun here.",
+  "response": "Work stopped and the owner was notified. The evaluator specification commit b535f50 already existed; the audit implementation and generated reports remained uncommitted. The owner subsequently authorized incident documentation, exact-file test restriction, and completion of validation.",
+  "continuation_authorized_date": "2026-11-12",
+  "remediation": [
+    "Replace broad discovery in the new audit's instructions and CI with exact filenames for its two synthetic-test modules.",
+    "Disclose this metadata-access exception in the audit JSON, Markdown, console summary, and research decision log.",
+    "Distinguish the fixed-input audit runner's access scope from the broader validation session's incident.",
+    "Do not reopen or hash the restricted metadata to document the incident; use only the observed test output and reviewed test/source control flow.",
+    "Preserve the original scorer, frozen development gold, policies, stored results, lambda selection, and success criteria."
+  ],
+  "scientific_scope": "The reported audit scores are a post-hoc measurement audit of fixed archived development predictions. This record does not certify the broader session as free of holdout access and does not replace historical V1 outcomes."
+}

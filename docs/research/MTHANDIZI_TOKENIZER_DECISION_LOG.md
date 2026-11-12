@@ -498,6 +498,16 @@ Every material research decision is recorded here.
 - **approval status:** approved_by_repository_owner
 - **changes_registered_eval_protocol:** no (separate evaluator version; original registered rules and outcomes preserved)
 
+## D-0021 — Disclose validation metadata-access incident and complete the separate evaluator audit
+
+- **date:** 2026-11-12
+- **incident:** On 2026-11-11, broad `test_morphology*py` unittest discovery included older tests that read `locked/holdout_manifest.json` and `locked/RELEASE_BLOCKED`. A status-only call printed lock/count metadata. The sealed payload was not decoded, no holdout evaluation/release occurred, and LM test was not accessed. An older tokenizer dry-run failed on missing SentencePiece before encoding. Work stopped and the owner was notified; audit implementation/reports remained uncommitted.
+- **decision:** Following the owner's explicit authorization, record the incident in `data/reports/morphology_evaluator_validation_incident_v0_1.json`, correct the provisional audit's whole-session access statements, and use only the exact two new synthetic-test filenames in instructions and CI. Do not reopen or hash restricted metadata to document the incident. The fixed-input audit runner's narrower access scope must not be used to claim the broader session was untouched.
+- **measurement scope:** Post-hoc application of the separately committed strict evaluator to fixed archived development predictions only. No candidate reselection, algorithm/benchmark change, new success criterion, or replacement V1 score. BPE strict scores remain unavailable without stored per-item predictions. All StatBound paths remain identical to Unigram.
+- **preservation:** Original scorer, annotations, policy versions, Phase-C/F outputs, λ*=0.25, success criteria, and historical self-review measurements are unchanged. Morphology holdout remains locked, with the metadata-access exception explicitly recorded; LM test remains locked/untouched.
+- **approval status:** incident_disclosed; remediation_and_validation_authorized_by_repository_owner
+- **changes_registered_eval_protocol:** no (separate measurement audit and access-incident disclosure)
+
 ## Template for new entries
 
 ```markdown
